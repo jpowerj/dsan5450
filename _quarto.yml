@@ -1,0 +1,20 @@
+project:
+  type: website
+
+website:
+  title: "dsan5450"
+  sidebar:
+    title: "DSAN 5450<br>3:30-6:00pm, Walsh 498"
+    contents:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
