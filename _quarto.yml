@@ -7,9 +7,10 @@ website:
   sidebar:
     title: "DSAN 5450<br>3:30-6:00pm, Walsh 498"
     contents:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - text: "<i class='bi bi-house pe-1'></i> Home"
+        href: index.qmd
+      - text: "Syllabus"
+        href: syllabus.qmd
 
 format:
   html:
