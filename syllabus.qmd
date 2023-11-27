@@ -19,7 +19,10 @@ The course revolves around three "pillars", which we'll examine individually bef
 
 ### Data Science
 
-A portion of the course will focus on introductions to cutting-edge technologies like self-driving cars, ChatGPT, facial detection algorithms, and various applications of AI to police and military technologies.
+A portion of the course will focus on introductions to cutting-edge technologies like self-driving cars, ChatGPT, facial detection algorithms, and various applications of AI to police and military technologies. For this portion, we'll draw fairly often from the contents of the following books:
+
+* Catherine D'Ignazio and Lauren F. Klein (2020). <i><a href='https://data-feminism.mitpress.mit.edu/' target='_blank'>Data Feminism</a></i>. Cambridge, MA: MIT Press. [Free, open-source!]
+* Cathy O'Neil (2016). <i><a href='https://en.wikipedia.org/wiki/Weapons_of_Math_Destruction' target='_blank'>Weapons of Math Destruction</a></i>. New York, NY: Crown Books.
 
 Since there are plenty of in-depth resources available to you (e.g., other Georgetown courses!) for learning the *technical details* of these technologies, our goal in this course will be to learn just the particular *aspects* of each technology which are most relevant to the ethical and policy issues they present.
 
@@ -29,13 +32,17 @@ For example, we will look at Neural Netwok-based Machine Learning algorithms, bu
 
 For the ethics-focused portion of the course, we'll be reading selections from the following textbook:
 
-Lewis Vaughn and Louis P. Pojman (2021). <i><a href='https://global.oup.com/ushe/product/the-moral-life-9780197610060?cc=us&lang=en&' target='_blank'>The Moral Life: An Introductory Reader in Ethics and Literature</a></i>. Oxford, UK: Oxford University Press.
+* Lewis Vaughn and Louis P. Pojman (2021). <i><a href='https://global.oup.com/ushe/product/the-moral-life-9780197610060?cc=us&lang=en&' target='_blank'>The Moral Life: An Introductory Reader in Ethics and Literature</a></i>. Oxford, UK: Oxford University Press. [<a href='https://www.dropbox.com/scl/fi/edx5t4xedli9pcfxm3330/Louis-P.-Pojman-The-Moral-Life_-An-Introductory-Reader-in-Ethics-and-Literature.pdf?rlkey=6pwuvdfed6m8mzp3d0l5rsajv&dl=1' target='_blank'>PDF</a>]
 
 From the vast array of readings contained in this collection, we'll look at both "standard" ethical readings from e.g. Jeremy Bentham and Immanuel Kant plus readings from literary sources like Ursula Le Guin, Ambrose Bierce, Jesus' Sermon on the Mount, and Buddha's Four Noble Truths.
 
 ### Public Policy
 
 For the final piece of the course we will take the **technological developments** discussed the first portion, analyze them using the **ethical frameworks** discussed in the second portion, and come to **conclusions** as to what types of things lawmakers, governments, and civil society organizations (NGOs, for example, and Think Tanks) can do **in practice** to address the ethical issues raised by these technologies. This means that, specifically, the recommended final project for the course will be a **Policy Whitepaper**, where you will choose a particular institution and make a **recommendation** to them in terms of how they can use their power (for example, the power to pass laws) to most effectively address an ethical issue that you believe is important.
+
+For this portion of the class we'll have to draw on a wide range of different readings, depending on what particular subdomains of public policy are most interesting to you all, but as a general textbook on ethics in data science which does focus a good amount on **policy** specifically, we will look at:
+
+* Anne L. Washington (2023). <i><a href=' https://annewashington.com/book-ethical-data-science-prediction-in-the-public-interest/' target='_blank'>Ethical Data Science: Prediction in the Public Interest</a></i>. New York, NY: Oxford University Press.
 
 Now that you have an overview of the trajectory of the course, the following section contains the particulars of what we'll be reading and working on each week!
 
