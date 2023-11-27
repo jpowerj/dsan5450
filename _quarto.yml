@@ -3,9 +3,9 @@ project:
   output-dir: docs
 
 website:
-  title: "dsan5450"
+  title: "DSAN 5450"
   sidebar:
-    title: "DSAN 5450<br>3:30-6:00pm, Walsh 498"
+    title: "DSAN 5450<br>Weds, 3:30-6pm, Walsh 498"
     contents:
       - text: "<i class='bi bi-house pe-1'></i> Home"
         href: index.qmd

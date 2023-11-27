@@ -5,10 +5,11 @@ author: "Jeff Jacobs (<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj
 institute: "Georgetown University, Spring 2024"
 ---
 
-Homepage for DSAN 5450: Data Ethics and Policy, Georgetown University, Spring 2024. The course meets on Wednesdays from 3:30pm to 6:00pm in Walsh, Room 498.
+Welcome to the homepage for ***DSAN 5450: Data Ethics and Policy*** at Georgetown University, for the Spring 2024 semester! The course meets on **Wednesdays from 3:30pm to 6:00pm** in the **Walsh Building**, **Room 498**.
+
+Check out the [syllabus](syllabus.qmd) (or any other link in the sidebar) for more info!
 
 **Course Description:**
-
 
 This graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).
 
