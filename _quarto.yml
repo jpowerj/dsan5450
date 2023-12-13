@@ -4,6 +4,7 @@ project:
 
 website:
   title: "DSAN 5450"
+  favicon: favicon.png
   sidebar:
     title: "DSAN 5450"
     contents:
