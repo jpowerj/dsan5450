@@ -2,9 +2,7 @@
 title: "Syllabus"
 ---
 
-**Welcome to DSAN 5450: Data Ethics and Policy at Georgetown University!**
-
-**Wednesdays, 3:30-6pm, Walsh 498**
+**Welcome to DSAN 5450: Data Ethics and Policy at Georgetown University!** The course meets on **Wednesdays from 3:30-6pm in the <a href='https://maps.app.goo.gl/fVVfDFpp4MEuukXa9' target='_blank'>Walsh Building</a>, Room 498**
 
 ## Course Description
 
