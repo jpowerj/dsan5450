@@ -4,6 +4,15 @@ title: "Syllabus"
 
 **Welcome to DSAN 5450: Data Ethics and Policy at Georgetown University!** The course meets on **Wednesdays from 3:30-6pm in the <a href='https://maps.app.goo.gl/fVVfDFpp4MEuukXa9' target='_blank'>Walsh Building</a>, Room 498**
 
+## Course Staff
+
+* Prof. Jeff Jacobs, <a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>
+  * Office hours: TBD
+* TA 1
+  * Office hours: TBD
+* TA 2
+  * Office hours: TBD
+
 ## Course Description
 
 This graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).
