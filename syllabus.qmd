@@ -2,7 +2,9 @@
 title: "Syllabus"
 ---
 
-**Welcome to DSAN 5450: Data Ethics and Policy at Georgetown University!** The course meets on **Wednesdays from 3:30-6pm in the <a href='https://maps.app.goo.gl/fVVfDFpp4MEuukXa9' target='_blank'>Walsh Building</a>, Room 498**
+**Welcome to DSAN 5450: Data Ethics and Policy at Georgetown University!**
+
+The course meets on **Wednesdays from 3:30-6pm in the <a href='https://maps.app.goo.gl/fVVfDFpp4MEuukXa9' target='_blank'>Walsh Building</a>, Room 498**
 
 ## Course Staff
 
@@ -73,43 +75,55 @@ The following is a rough map of what we will work through together throughout th
     <td><span data-qmd="**Unit 1**: Data-Scientific Issues"></span></td>
     <td>1</td>
     <td><span data-qmd="Jan 17"></span></td>
-    <td>Intro to the Course</td>
+    <td>Course Intro; Machine Learning and Training Data</td>
 </tr>
 <tr>
     <td></td>
     <td>2</td>
     <td>Jan 24</td>
-    <td>Machine Learning and Training Data</td>
+    <td>Case Studies: Self-Driving Cars, Facial Recognition, and ChatGPT</td>
 </tr>
 <tr>
     <td></td>
     <td>3</td>
     <td>Jan 31</td>
-    <td>Applications Part 1: Self-Driving Cars, Facial Recognition, and ChatGPT</td>
+    <td>Case Studies: Police and Military Applications of AI</td>
 </tr>
 <tr>
     <td></td>
-    <td>4</td>
-    <td>Feb 7</td>
-    <td>Applications Part 2: Police and Military Applications of AI</td>
+    <td></td>
+    <td>Feb 2 (Friday)</td>
+    <td colspan="1"><span data-qmd="**Deliverable Due:** Data Science Assignment"></span></td>
 </tr>
 <tr>
     <td><span data-qmd="**Unit 2**: Ethical Frameworks"></span></td>
+    <td>4</td>
+    <td>Feb 7</td>
+    <td>Consequentialism</td>
+</tr>
+<tr>
+    <td></td>
     <td>5</td>
     <td>Feb 14</td>
-    <td>Consequentialism</td>
+    <td>Virtue Ethics</td>
 </tr>
 <tr>
     <td></td>
     <td>6</td>
     <td>Feb 21</td>
-    <td>Deontological Ethics</td>
+    <td>Virtue Ethics</td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td>Feb 23 (Friday)</td>
+    <td><span data-qmd="**Deliverable Due:** Ethical Frameworks Assignment"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>7</td>
     <td>Feb 28</td>
-    <td>Virtue Ethics</td>
+    <td>Midterm (Data Science and Ethics)</td>
 </tr>
 <tr>
     <td></td>
@@ -118,19 +132,19 @@ The following is a rough map of what we will work through together throughout th
     <td>No Class (Spring Break)</td>
 </tr>
 <tr>
-    <td></td>
+    <td><span data-qmd="**Unit 3:** Applying Ethical Frameworks"></span></td>
     <td>8</td>
     <td>Mar 13</td>
-    <td>Applying Our Ethical Frameworks to Self-Driving Cars, Facial Recognition, and ChatGPT</td>
+    <td>Applying Ethical Frameworks: Self-Driving Cars, Facial Recognition, and ChatGPT</td>
 </tr>
 <tr>
     <td></td>
     <td>9</td>
     <td>Mar 20</td>
-    <td>Applying Our Ethical Frameworks to Police and Military Applications of AI</td>
+    <td>Applying Ethical Frameworks: Police and Military Applications of AI</td>
 </tr>
 <tr>
-    <td><span data-qmd="**Unit 3**: Public Policy"></span></td>
+    <td><span data-qmd="**Unit 4**: Public Policy"></span></td>
     <td>10</td>
     <td>Mar 27</td>
     <td>Intro to Public Policy</td>
@@ -162,3 +176,18 @@ The following is a rough map of what we will work through together throughout th
 </tbody>
 </table>
 ```
+
+## Assignments and Grading
+
+The main assignment in the course will be your **policy whitepaper**, submitted at the end of the semester. However, there will also be a midterm exam and a series of assignments which exist to let you explore each of the modules of the course, in turn.
+
+| Assignment | Due Date | % of Grade |
+| - | - | - |
+| Data Science Overview Assignment | Friday, **February 2** | 10% |
+| Ethical Frameworks Assignment | Friday, **February 23** | 10% |
+| Midterm | Wednesday, **February 28** | 30% |
+| Applying Ethical Frameworks Assignment | Friday, **March 22** | 10% |
+| Public Policy Assignment | Friday, **April 5** | 10% |
+| Policy Whitepaper | Friday, **May 3** | 30% |
+
+: {tbl-colwidths="[55,25,20]"}
