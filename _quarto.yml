@@ -5,7 +5,7 @@ project:
 website:
   title: "DSAN 5450"
   sidebar:
-    title: "DSAN 5450<br>Weds, 3:30-6pm, Walsh 498"
+    title: "DSAN 5450"
     contents:
       - text: "<i class='bi bi-house pe-1'></i> Home"
         href: index.qmd
