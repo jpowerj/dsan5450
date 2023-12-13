@@ -7,9 +7,9 @@ institute: "Georgetown University, Spring 2024"
 
 Welcome to the homepage for ***DSAN 5450: Data Ethics and Policy*** at Georgetown University, for the Spring 2024 semester!
 
-The course meets on **Wednesdays from 3:30pm to 6:00pm** in the **<a href='https://maps.app.goo.gl/fVVfDFpp4MEuukXa9' target='_blank'>Walsh Building</a>**, **Room 498**.
+The course meets on **Wednesdays from 3:30pm to 6:00pm** in the **<a href='https://maps.app.goo.gl/fVVfDFpp4MEuukXa9' target='_blank'>Walsh Building<i class='bi bi-box-arrow-up-right ps-1'></i></a>**, **Room 498**.
 
-Check out the [syllabus](syllabus.qmd) (or any other link in the sidebar) for more info!
+Check out the [**syllabus**](syllabus.qmd) (or any other link in the sidebar) for more info!
 
 **Course Description:**
 

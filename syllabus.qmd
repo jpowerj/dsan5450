@@ -4,7 +4,7 @@ title: "Syllabus"
 
 **Welcome to DSAN 5450: Data Ethics and Policy at Georgetown University!**
 
-The course meets on **Wednesdays from 3:30-6pm in the <a href='https://maps.app.goo.gl/fVVfDFpp4MEuukXa9' target='_blank'>Walsh Building</a>, Room 498**
+The course meets on **Wednesdays from 3:30-6pm in the <a href='https://maps.app.goo.gl/fVVfDFpp4MEuukXa9' target='_blank'>Walsh Building<i class='bi bi-box-arrow-up-right ps-1'></i></a>, Room 498**
 
 ## Course Staff
 
@@ -61,9 +61,9 @@ Now that you have an overview of the trajectory of the course, the following sec
 The following is a rough map of what we will work through together throughout the semester; given that **everyone learns at a different pace**, my aim is to leave us with a good amount of **flexibility** in terms of how much time we spend on each topic: if I find that it takes me longer than a week to convey a certain topic in sufficient depth, for example, then I view it as a strength rather than a weakness of the course that we can then rearrange the calendar below by adding an extra week on that particular topic! Similarly, if it seems like I am spending too much time on a topic, to the point that students seem bored or impatient to move onto the next topic, we can move a topic intended for the next week to the current week!
 
 ```{=html}
-<table>
+<table class='sticky-table'>
 <thead>
-<tr>
+<tr class='sticky-head'>
     <th>Unit</th>
     <th>Week</th>
     <th>Date</th>
@@ -92,10 +92,10 @@ The following is a rough map of what we will work through together throughout th
 <tr>
     <td></td>
     <td></td>
-    <td>Feb 2 (Friday)</td>
-    <td colspan="1"><span data-qmd="**Deliverable Due:** Data Science Assignment"></span></td>
+    <td><span data-qmd="*Feb 2 (Friday)*"></span></td>
+    <td><span data-qmd="*Deliverable: Data Science*"></span></td>
 </tr>
-<tr>
+<tr class='new-unit'>
     <td><span data-qmd="**Unit 2**: Ethical Frameworks"></span></td>
     <td>4</td>
     <td>Feb 7</td>
@@ -116,8 +116,8 @@ The following is a rough map of what we will work through together throughout th
 <tr>
     <td></td>
     <td></td>
-    <td>Feb 23 (Friday)</td>
-    <td><span data-qmd="**Deliverable Due:** Ethical Frameworks Assignment"></span></td>
+    <td><span data-qmd="*Feb 23 (Friday)*"></span></td>
+    <td><span data-qmd="*Deliverable: Ethical Frameworks*"></span></td>
 </tr>
 <tr>
     <td></td>
@@ -128,10 +128,10 @@ The following is a rough map of what we will work through together throughout th
 <tr>
     <td></td>
     <td></td>
-    <td>Mar 6</td>
-    <td>No Class (Spring Break)</td>
+    <td><span data-qmd="*Mar 6*"></span></td>
+    <td><span data-qmd="*No Class (Spring Break)*"></span></td>
 </tr>
-<tr>
+<tr class='new-unit'>
     <td><span data-qmd="**Unit 3:** Applying Ethical Frameworks"></span></td>
     <td>8</td>
     <td>Mar 13</td>
@@ -144,6 +144,12 @@ The following is a rough map of what we will work through together throughout th
     <td>Applying Ethical Frameworks: Police and Military Applications of AI</td>
 </tr>
 <tr>
+    <td></td>
+    <td></td>
+    <td><span data-qmd="*Mar 22 (Friday)*"></span></td>
+    <td><span data-qmd="*Deliverable: Applying Ethical Frameworks*"></span></td>
+</tr>
+<tr class='new-unit'>
     <td><span data-qmd="**Unit 4**: Public Policy"></span></td>
     <td>10</td>
     <td>Mar 27</td>
@@ -154,6 +160,12 @@ The following is a rough map of what we will work through together throughout th
     <td>11</td>
     <td>Apr 3</td>
     <td>Authoring Policy Whitepapers</td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td><span data-qmd="*Apr 5 (Friday)*"></span></td>
+    <td><span data-qmd="*Deliverable: Public Policy*"></span></td>
 </tr>
 <tr>
     <td></td>
@@ -172,6 +184,12 @@ The following is a rough map of what we will work through together throughout th
     <td>14</td>
     <td>April 24</td>
     <td>Applications: Public Policy and International Law</td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td><span data-qmd="*May 3 (Friday)*"></span></td>
+    <td><span data-qmd="*Deliverable: Policy Whitepaper*"></span></td>
 </tr>
 </tbody>
 </table>
