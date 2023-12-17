@@ -7,5 +7,9 @@
   },
   "syllabus.qmd": {
     "syllabus.html": "6acd4bcc"
+  },
+  "w01/index.qmd": {
+    "slides.html": "25e9baf6",
+    "index.html": "6c9c423a"
   }
 }

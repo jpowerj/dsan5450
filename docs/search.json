@@ -47,5 +47,124 @@
     "title": "DSAN 5450: Data Ethics and Policy",
     "section": "",
     "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2024 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info!\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits."
+  },
+  {
+    "objectID": "w01/index.html",
+    "href": "w01/index.html",
+    "title": "Week 01: Introduction to the Course",
+    "section": "",
+    "text": "In the field of math before the 20th century (and in our general understanding of math today), math was (is) a domain dealing with truths\nThanks to figures like Georg Cantor, David Hilbert, and especially Bertrand Russell and Alfred North Whitehead, mathematicians no longer believe that theorems of mathematics are “true” in an absolute sense\nThat is: mathematicians today recognize that we cannot prove non-implicational statements! We will never be able to prove an (atomic) statement \\(q\\), only implicational statements: \\(p \\implies q\\) for some axiom(s) \\(q\\)."
+  },
+  {
+    "objectID": "w01/index.html#axiomatics",
+    "href": "w01/index.html#axiomatics",
+    "title": "Week 01: Introduction to the Course",
+    "section": "",
+    "text": "In the field of math before the 20th century (and in our general understanding of math today), math was (is) a domain dealing with truths\nThanks to figures like Georg Cantor, David Hilbert, and especially Bertrand Russell and Alfred North Whitehead, mathematicians no longer believe that theorems of mathematics are “true” in an absolute sense\nThat is: mathematicians today recognize that we cannot prove non-implicational statements! We will never be able to prove an (atomic) statement \\(q\\), only implicational statements: \\(p \\implies q\\) for some axiom(s) \\(q\\)."
+  },
+  {
+    "objectID": "w01/index.html#example-1-1-2",
+    "href": "w01/index.html#example-1-1-2",
+    "title": "Week 01: Introduction to the Course",
+    "section": "Example: \\(1 + 1 = 2\\)",
+    "text": "Example: \\(1 + 1 = 2\\)\n\n\n\n\nHow it’s taught: this is a rule, and if you don’t follow it you will be banished to eternal hellfire\nHow it’s proved: \\(ZFC \\implies [1 + 1 = 2]\\), where \\(ZFC\\) stands for the Zermelo-Fraenkel Axioms with the Axiom of Choice!\n\n\n\n\n\n\nWhitehead and Russell (1910), p. 83. See here for page in context"
+  },
+  {
+    "objectID": "w01/index.html#proving-1-1-2",
+    "href": "w01/index.html#proving-1-1-2",
+    "title": "Week 01: Introduction to the Course",
+    "section": "Proving \\(1 + 1 = 2\\)",
+    "text": "Proving \\(1 + 1 = 2\\)\n(A non-formal proof that still captures the gist:)\n\nAxiom 1: There is a type of thing that can hold other things, which we’ll call a set. We’ll represent it like: \\(\\{ \\langle \\text{\\textit{stuff in the set}} \\rangle \\}\\).\nAxiom 2: Start with the set with nothing in it, \\(\\{\\}\\), and call it “\\(0\\)”.\nAxiom 3: If we put this set \\(0\\) inside of another set, we get a new set \\(\\{0\\} = \\{\\{\\}\\}\\), which we’ll call “\\(1\\)”.\nAxiom 4: If we put this set \\(1\\) inside of another set, we get another new set \\(\\{1\\} = \\{\\{\\{\\}\\}\\}\\), which we’ll call “\\(2\\)”.\nAxiom 5: This operation, of creating a “next number” by adding the greatest existing number to an empty set, we’ll call succession: \\(S(x) = \\{x\\}\\)\nAxiom 6: We’ll define addition, \\(a + b\\), as taking the number \\(a\\) and applying this succession operation \\(S\\) to \\(a\\), \\(b\\) times\nResult: (Axioms 1-6) \\(\\implies 1 + 1 = S(1) = S(\\{\\{\\}\\}) = \\{\\{\\{\\}\\}\\} = 2. \\; \\blacksquare\\)"
+  },
+  {
+    "objectID": "w01/index.html#how-is-this-relevant-to-ethics",
+    "href": "w01/index.html#how-is-this-relevant-to-ethics",
+    "title": "Week 01: Introduction to the Course",
+    "section": "How Is This Relevant to Ethics?",
+    "text": "How Is This Relevant to Ethics?\n(Thank you for bearing with me on that 😅)\n\nJust as mathematicians slowly came to the realization that\n\n\\[\n\\textbf{mathematical results} \\neq \\textbf{(non-implicational) truths}\n\\]\n\nI hope to help you see how\n\n\\[\n\\textbf{ethical conclusions} \\neq \\textbf{(non-implicational) truths}\n\\]\n\nWhen someone says \\(1 + 1 = 2\\), you are allowed to question them, and ask, “On what basis? Please explain…”.\n\nHere the only valid answer is a collection of axioms which entail \\(1 + 1 = 2\\)\n\nWhen someone says Israel has the right to defend itself, you are allowed to question them, and ask, “On what basis? Please explain…”\n\nHere the only valid answer is an ethical framework which entails that Israel has the right to defend itself."
+  },
+  {
+    "objectID": "w01/index.html#axiomatic-systems-statements-can-be-true-and-false",
+    "href": "w01/index.html#axiomatic-systems-statements-can-be-true-and-false",
+    "title": "Week 01: Introduction to the Course",
+    "section": "Axiomatic Systems: Statements Can Be True And False",
+    "text": "Axiomatic Systems: Statements Can Be True And False\n\n\n\n\n\n\n\nΑἰτήματα\nPostulates\n\n\n\n\nα΄. Ἠιτήσθω ἀπὸ παντὸς σημείου ἐπὶ πᾶν σημεῖον εὐθεῖαν γραμμὴν ἀγαγεῖν.\n1. Let the following be postulated: to draw a straight line from any point to any point.\n\n\nβ΄. Καὶ πεπερασμένην εὐθεῖαν κατὰ τὸ συνεχὲς ἐπ᾿ εὐθείας ἐκβαλεῖν.\n2. To produce a finite straight line continuously in a straight line.\n\n\nγ΄. Καὶ παντὶ κέντρῳ καὶ διαστήματι κύκλον γράφεσθαι.\n3. To describe a circle with any centre and diameter.\n\n\nδ΄. Καὶ πάσας τὰς ὀρθὰς γωνίας ἴσας ἀλλήλαις εἴναι.\n4. All right angles are equal one to another.\n\n\nε΄. Καὶ ἐὰν εἰς δύο εὐθείας εὐθεῖα ἐμπίπτουσα τὰς ἐντὸς καὶ ἐπὶ τὰ αὐτὰ μέρη γωνίας δύο ὀρθῶν ἐλάσσονας ποιῇ, ἐκβαλλομένας τὰς δύο εὐθείας ἐπ᾿ ἄπειρον συμπίπτειν, ἐφ᾿ ἃ μέρη εἰσὶν αἱ τῶν δύο ὀρθῶν ἐλάσσονες.\n5. If a straight line falling on two straight lines make the interior angles on the same side less than two right angles, the two straight lines, if produced indefinitely, meet on that side on which are the angles less than two right angles."
+  },
+  {
+    "objectID": "w01/index.html#euclidean-vs.-non-euclidean-geometry",
+    "href": "w01/index.html#euclidean-vs.-non-euclidean-geometry",
+    "title": "Week 01: Introduction to the Course",
+    "section": "Euclidean vs. Non-Euclidean Geometry",
+    "text": "Euclidean vs. Non-Euclidean Geometry"
+  },
+  {
+    "objectID": "w01/index.html#descriptive-vs.-normative",
+    "href": "w01/index.html#descriptive-vs.-normative",
+    "title": "Week 01: Introduction to the Course",
+    "section": "Descriptive vs. Normative",
+    "text": "Descriptive vs. Normative\n\n\n\n \n  \n \n\n\n\n\n\n\n\n\n\n\n\n\n\nDescriptive Statement\nNormative Statement\n\n\n\n\n“Bin Laden attacked us because we had been bombing Iraq for 10 years”\n“Bin Laden attacked us because we had been bombing Iraq for 10 years, and that is a good justification”\n\n\nDescriptively True (empirically verifiable)\nNormatively True (entailed by premises + descriptive facts) in some ethical systems, Normatively False (not entailed by premises + descriptive facts) in others"
+  },
+  {
+    "objectID": "w01/index.html#references",
+    "href": "w01/index.html#references",
+    "title": "Week 01: Introduction to the Course",
+    "section": "References",
+    "text": "References\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press."
+  },
+  {
+    "objectID": "w01/slides.html#axiomatics",
+    "href": "w01/slides.html#axiomatics",
+    "title": "Week 01: Introduction to the Course",
+    "section": "Axiomatics",
+    "text": "Axiomatics\n\n\n\n\nIn the field of math before the 20th century (and in our general understanding of math today), math was (is) a domain dealing with truths\nThanks to figures like Georg Cantor, David Hilbert, and especially Bertrand Russell and Alfred North Whitehead, mathematicians no longer believe that theorems of mathematics are “true” in an absolute sense\nThat is: mathematicians today recognize that we cannot prove non-implicational statements! We will never be able to prove an (atomic) statement \\(q\\), only implicational statements: \\(p \\implies q\\) for some axiom(s) \\(q\\)."
+  },
+  {
+    "objectID": "w01/slides.html#example-1-1-2",
+    "href": "w01/slides.html#example-1-1-2",
+    "title": "Week 01: Introduction to the Course",
+    "section": "Example: \\(1 + 1 = 2\\)",
+    "text": "Example: \\(1 + 1 = 2\\)\n\n\n\n\nHow it’s taught: this is a rule, and if you don’t follow it you will be banished to eternal hellfire\nHow it’s proved: \\(ZFC \\implies [1 + 1 = 2]\\), where \\(ZFC\\) stands for the Zermelo-Fraenkel Axioms with the Axiom of Choice!\n\n\n\n\n\n\nWhitehead and Russell (1910), p. 83. See here for page in context"
+  },
+  {
+    "objectID": "w01/slides.html#proving-1-1-2",
+    "href": "w01/slides.html#proving-1-1-2",
+    "title": "Week 01: Introduction to the Course",
+    "section": "Proving \\(1 + 1 = 2\\)",
+    "text": "Proving \\(1 + 1 = 2\\)\n(A non-formal proof that still captures the gist:)\n\nAxiom 1: There is a type of thing that can hold other things, which we’ll call a set. We’ll represent it like: \\(\\{ \\langle \\text{\\textit{stuff in the set}} \\rangle \\}\\).\nAxiom 2: Start with the set with nothing in it, \\(\\{\\}\\), and call it “\\(0\\)”.\nAxiom 3: If we put this set \\(0\\) inside of another set, we get a new set \\(\\{0\\} = \\{\\{\\}\\}\\), which we’ll call “\\(1\\)”.\nAxiom 4: If we put this set \\(1\\) inside of another set, we get another new set \\(\\{1\\} = \\{\\{\\{\\}\\}\\}\\), which we’ll call “\\(2\\)”.\nAxiom 5: This operation, of creating a “next number” by adding the greatest existing number to an empty set, we’ll call succession: \\(S(x) = \\{x\\}\\)\nAxiom 6: We’ll define addition, \\(a + b\\), as taking the number \\(a\\) and applying this succession operation \\(S\\) to \\(a\\), \\(b\\) times\nResult: (Axioms 1-6) \\(\\implies 1 + 1 = S(1) = S(\\{\\{\\}\\}) = \\{\\{\\{\\}\\}\\} = 2. \\; \\blacksquare\\)"
+  },
+  {
+    "objectID": "w01/slides.html#how-is-this-relevant-to-ethics",
+    "href": "w01/slides.html#how-is-this-relevant-to-ethics",
+    "title": "Week 01: Introduction to the Course",
+    "section": "How Is This Relevant to Ethics?",
+    "text": "How Is This Relevant to Ethics?\n(Thank you for bearing with me on that 😅)\n\nJust as mathematicians slowly came to the realization that\n\n\\[\n\\textbf{mathematical results} \\neq \\textbf{(non-implicational) truths}\n\\]\n\nI hope to help you see how\n\n\\[\n\\textbf{ethical conclusions} \\neq \\textbf{(non-implicational) truths}\n\\]\n\nWhen someone says \\(1 + 1 = 2\\), you are allowed to question them, and ask, “On what basis? Please explain…”.\n\nHere the only valid answer is a collection of axioms which entail \\(1 + 1 = 2\\)\n\nWhen someone says Israel has the right to defend itself, you are allowed to question them, and ask, “On what basis? Please explain…”\n\nHere the only valid answer is an ethical framework which entails that Israel has the right to defend itself."
+  },
+  {
+    "objectID": "w01/slides.html#axiomatic-systems-statements-can-be-true-and-false",
+    "href": "w01/slides.html#axiomatic-systems-statements-can-be-true-and-false",
+    "title": "Week 01: Introduction to the Course",
+    "section": "Axiomatic Systems: Statements Can Be True And False",
+    "text": "Axiomatic Systems: Statements Can Be True And False\n\n\n\n\n\n\n\nΑἰτήματα\nPostulates\n\n\n\n\nα΄. Ἠιτήσθω ἀπὸ παντὸς σημείου ἐπὶ πᾶν σημεῖον εὐθεῖαν γραμμὴν ἀγαγεῖν.\n1. Let the following be postulated: to draw a straight line from any point to any point.\n\n\nβ΄. Καὶ πεπερασμένην εὐθεῖαν κατὰ τὸ συνεχὲς ἐπ᾿ εὐθείας ἐκβαλεῖν.\n2. To produce a finite straight line continuously in a straight line.\n\n\nγ΄. Καὶ παντὶ κέντρῳ καὶ διαστήματι κύκλον γράφεσθαι.\n3. To describe a circle with any centre and diameter.\n\n\nδ΄. Καὶ πάσας τὰς ὀρθὰς γωνίας ἴσας ἀλλήλαις εἴναι.\n4. All right angles are equal one to another.\n\n\nε΄. Καὶ ἐὰν εἰς δύο εὐθείας εὐθεῖα ἐμπίπτουσα τὰς ἐντὸς καὶ ἐπὶ τὰ αὐτὰ μέρη γωνίας δύο ὀρθῶν ἐλάσσονας ποιῇ, ἐκβαλλομένας τὰς δύο εὐθείας ἐπ᾿ ἄπειρον συμπίπτειν, ἐφ᾿ ἃ μέρη εἰσὶν αἱ τῶν δύο ὀρθῶν ἐλάσσονες.\n5. If a straight line falling on two straight lines make the interior angles on the same side less than two right angles, the two straight lines, if produced indefinitely, meet on that side on which are the angles less than two right angles."
+  },
+  {
+    "objectID": "w01/slides.html#euclidean-vs.-non-euclidean-geometry",
+    "href": "w01/slides.html#euclidean-vs.-non-euclidean-geometry",
+    "title": "Week 01: Introduction to the Course",
+    "section": "Euclidean vs. Non-Euclidean Geometry",
+    "text": "Euclidean vs. Non-Euclidean Geometry"
+  },
+  {
+    "objectID": "w01/slides.html#descriptive-vs.-normative",
+    "href": "w01/slides.html#descriptive-vs.-normative",
+    "title": "Week 01: Introduction to the Course",
+    "section": "Descriptive vs. Normative",
+    "text": "Descriptive vs. Normative\n\n\n\n \n  \n \n\n\n\n\n\n\n\n\n\n\n\n\n\nDescriptive Statement\nNormative Statement\n\n\n\n\n“Bin Laden attacked us because we had been bombing Iraq for 10 years”\n“Bin Laden attacked us because we had been bombing Iraq for 10 years, and that is a good justification”\n\n\nDescriptively True (empirically verifiable)\nNormatively True (entailed by premises + descriptive facts) in some ethical systems, Normatively False (not entailed by premises + descriptive facts) in others"
+  },
+  {
+    "objectID": "w01/slides.html#references",
+    "href": "w01/slides.html#references",
+    "title": "Week 01: Introduction to the Course",
+    "section": "References",
+    "text": "References\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press.\n\n\n\n\nDSAN 5450 Week 01: Introduction"
   }
 ]
