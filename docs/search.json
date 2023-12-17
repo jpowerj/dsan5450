@@ -53,14 +53,14 @@
     "href": "w01/index.html",
     "title": "Week 01: Introduction to the Course",
     "section": "",
-    "text": "In the field of math before the 20th century (and in our general understanding of math today), math was (is) a domain dealing with truths\nThanks to figures like Georg Cantor, David Hilbert, and especially Bertrand Russell and Alfred North Whitehead, mathematicians no longer believe that theorems of mathematics are “true” in an absolute sense\nThat is: mathematicians today recognize that we cannot prove non-implicational statements! We will never be able to prove an (atomic) statement \\(q\\), only implicational statements: \\(p \\implies q\\) for some axiom(s) \\(q\\)."
+    "text": "Open slides in new window →"
   },
   {
     "objectID": "w01/index.html#axiomatics",
     "href": "w01/index.html#axiomatics",
     "title": "Week 01: Introduction to the Course",
-    "section": "",
-    "text": "In the field of math before the 20th century (and in our general understanding of math today), math was (is) a domain dealing with truths\nThanks to figures like Georg Cantor, David Hilbert, and especially Bertrand Russell and Alfred North Whitehead, mathematicians no longer believe that theorems of mathematics are “true” in an absolute sense\nThat is: mathematicians today recognize that we cannot prove non-implicational statements! We will never be able to prove an (atomic) statement \\(q\\), only implicational statements: \\(p \\implies q\\) for some axiom(s) \\(q\\)."
+    "section": "Axiomatics",
+    "text": "Axiomatics\n\n\n\n\nIn the field of math before the 20th century (and in our general understanding of math today), math was (is) a domain dealing with truths\nThanks to figures like Georg Cantor, David Hilbert, and especially Bertrand Russell and Alfred North Whitehead, mathematicians no longer believe that theorems of mathematics are “true” in an absolute sense\nThat is: mathematicians today recognize that we cannot prove non-implicational statements! We will never be able to prove an (atomic) statement \\(q\\), only implicational statements: \\(p \\implies q\\) for some axiom(s) \\(q\\)."
   },
   {
     "objectID": "w01/index.html#example-1-1-2",

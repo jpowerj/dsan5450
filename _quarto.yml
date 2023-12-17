@@ -12,6 +12,9 @@ website:
         href: index.qmd
       - text: "Syllabus"
         href: syllabus.qmd
+      - "---"
+      - text: "Week 01"
+        href: "w01/index.qmd"
 
 format:
   html:

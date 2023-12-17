@@ -1,5 +1,6 @@
 ---
 title: "Week 01: Introduction to the Course"
+subtitle: "*DSAN 5450: Data Ethics and Policy*"
 author: "Jeff Jacobs"
 institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
 bibliography: "../_DSAN5450.bib"
@@ -16,6 +17,14 @@ format:
     output-file: "index.html"
     html-math-method: mathjax
 ---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
 
 ## Axiomatics {.smaller .crunch-title-0}
 
