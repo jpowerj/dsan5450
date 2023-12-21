@@ -13,7 +13,7 @@ website:
       - text: "Syllabus"
         href: syllabus.qmd
       - "---"
-      - text: "Week 01"
+      - text: "Week 1: Jan 17"
         href: "w01/index.qmd"
 
 format:
