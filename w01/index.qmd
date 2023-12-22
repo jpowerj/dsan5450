@@ -285,6 +285,22 @@ $\implies$ *Social Outcome*: No Union
 
 # Ethical Issues in Data Science {.title-11 .not-title-slide .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-title data-stack-name="Data Science"}
 
+## Data Science for Who?
+
+* What are the processes by which data is **measured**, **recorded**, and **distributed**?
+
+![The <a href='https://github.com/MimiOnuoha/missing-datasets' target='_blank'>Library of Missing Datasets</a>. From @dignazio_data_2020](images/missing-datasets.jpg){fig-align="center"}
+
+## Operationalization
+
+![@stiglitz_mismeasuring_2010](images/mismeasuring.jpg){fig-align="center"}
+
+## Implementation
+
+![From @dignazio_data_2020, Ch. 6 (<a href='https://www.insidehighered.com/news/2014/07/17/colleges-often-win-reduction-fines-federal-campus-safety-violations' target='_blank'>see also</a>)](images/clery.jpg)
+
+# Ethical Issues in *Applying* Data Science {.title-11 .not-title-slide .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-title data-stack-name="Data Science"}
+
 * Self-Driving Cars
 * Facial Recognition Algorithms
 * Large Language Models

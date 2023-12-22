@@ -133,6 +133,27 @@
     "text": "Takeaway for Policy Whitepapers\n\n\n\n\nYou cannot (just) say, “doing \\(x\\) will be better for society”\nYou must also justify benefits to individuals, or at minimum, the individual organization and its stakeholders!\n(Is this a normative or descriptive claim?)"
   },
   {
+    "objectID": "w01/index.html#data-science-for-who",
+    "href": "w01/index.html#data-science-for-who",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Data Science for Who?",
+    "text": "Data Science for Who?\n\nWhat are the processes by which data is measured, recorded, and distributed?\n\n\n\n\nThe Library of Missing Datasets. From D’Ignazio and Klein (2020)"
+  },
+  {
+    "objectID": "w01/index.html#operationalization",
+    "href": "w01/index.html#operationalization",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Operationalization",
+    "text": "Operationalization\n\n\n\nStiglitz, Sen, and Fitoussi (2010)"
+  },
+  {
+    "objectID": "w01/index.html#implementation",
+    "href": "w01/index.html#implementation",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Implementation",
+    "text": "Implementation\n\n\n\nFrom D’Ignazio and Klein (2020), Ch. 6 (see also)"
+  },
+  {
     "objectID": "w01/index.html#facial-recognition-algorithms",
     "href": "w01/index.html#facial-recognition-algorithms",
     "title": "Week 1: Introduction to the Course",
@@ -151,7 +172,7 @@
     "href": "w01/index.html#references",
     "title": "Week 1: Introduction to the Course",
     "section": "References",
-    "text": "References\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSenor, Dan, and Saul Singer. 2011. Start-up Nation: The Story of Israel’s Economic Miracle. Grand Central Publishing.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press."
+    "text": "References\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSenor, Dan, and Saul Singer. 2011. Start-up Nation: The Story of Israel’s Economic Miracle. Grand Central Publishing.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press."
   },
   {
     "objectID": "w01/slides.html#axiomatics",
@@ -231,6 +252,27 @@
     "text": "Takeaway for Policy Whitepapers\n\n\n\n\nYou cannot (just) say, “doing \\(x\\) will be better for society”\nYou must also justify benefits to individuals, or at minimum, the individual organization and its stakeholders!\n(Is this a normative or descriptive claim?)"
   },
   {
+    "objectID": "w01/slides.html#data-science-for-who",
+    "href": "w01/slides.html#data-science-for-who",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Data Science for Who?",
+    "text": "Data Science for Who?\n\nWhat are the processes by which data is measured, recorded, and distributed?\n\n\nThe Library of Missing Datasets. From D’Ignazio and Klein (2020)"
+  },
+  {
+    "objectID": "w01/slides.html#operationalization",
+    "href": "w01/slides.html#operationalization",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Operationalization",
+    "text": "Operationalization\n\nStiglitz, Sen, and Fitoussi (2010)"
+  },
+  {
+    "objectID": "w01/slides.html#implementation",
+    "href": "w01/slides.html#implementation",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Implementation",
+    "text": "Implementation\n\nFrom D’Ignazio and Klein (2020), Ch. 6 (see also)"
+  },
+  {
     "objectID": "w01/slides.html#facial-recognition-algorithms",
     "href": "w01/slides.html#facial-recognition-algorithms",
     "title": "Week 1: Introduction to the Course",
@@ -249,6 +291,6 @@
     "href": "w01/slides.html#references",
     "title": "Week 1: Introduction to the Course",
     "section": "References",
-    "text": "References\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSenor, Dan, and Saul Singer. 2011. Start-up Nation: The Story of Israel’s Economic Miracle. Grand Central Publishing.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press.\n\n\n\n\nDSAN 5450 Week 1: Introduction"
+    "text": "References\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSenor, Dan, and Saul Singer. 2011. Start-up Nation: The Story of Israel’s Economic Miracle. Grand Central Publishing.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press.\n\n\n\n\nDSAN 5450 Week 1: Introduction"
   }
 ]
