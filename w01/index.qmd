@@ -285,15 +285,52 @@ $\implies$ *Social Outcome*: No Union
 
 # Ethical Issues in Data Science {.title-11 .not-title-slide .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-title data-stack-name="Data Science"}
 
+* Data Science for Who?
+* Operationalization
+* Fair Comparisons
+* Implementation
+
 ## Data Science for Who?
 
 * What are the processes by which data is **measured**, **recorded**, and **distributed**?
 
 ![The <a href='https://github.com/MimiOnuoha/missing-datasets' target='_blank'>Library of Missing Datasets</a>. From @dignazio_data_2020](images/missing-datasets.jpg){fig-align="center"}
 
-## Operationalization
+## Example: Measuring "Freedom" and "Human Rights"
+
+::: {layout="[1,1]"}
+
+![](images/freedom_house_funding.jpeg){fig-align="center"}
+
+![](images/state_dept_human_rights.jpeg){fig-align="center"}
+
+:::
+
+## Operationalization {.smaller}
+
+::: {layout="[1,1]"}
+
+::: {#oper-text}
+
+* Think about claims commonly made on the basis of "data":
+  * Free markets cause economic prosperity
+  * A glass of wine in the evening prevents cancer
+  * Policing makes communities safer
+* How exactly are "prosperity", "preventing cancer", "policing", "community safety" being **measured**?
+
+:::
 
 ![@stiglitz_mismeasuring_2010](images/mismeasuring.jpg){fig-align="center"}
+
+:::
+
+## What Is Being Compared?
+
+* Are countries with 1 billion people comparable to countries with 10 million people?
+* Are countries which were colonized comparable to the colonizing countries?
+* When did the colonized countries gain independence?
+
+![Sen, "China and India"](images/china_india.png){fig-align="center"}
 
 ## Implementation
 
