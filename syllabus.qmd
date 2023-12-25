@@ -44,7 +44,7 @@ For the ethics-focused portion of the course, we'll be reading selections from t
 
 * Lewis Vaughn and Louis P. Pojman (2021). <i><a href='https://global.oup.com/ushe/product/the-moral-life-9780197610060?cc=us&lang=en&' target='_blank'>The Moral Life: An Introductory Reader in Ethics and Literature</a></i>. Oxford, UK: Oxford University Press. [<a href='https://www.dropbox.com/scl/fi/edx5t4xedli9pcfxm3330/Louis-P.-Pojman-The-Moral-Life_-An-Introductory-Reader-in-Ethics-and-Literature.pdf?rlkey=6pwuvdfed6m8mzp3d0l5rsajv&dl=1' target='_blank'>PDF</a>]
 
-From the vast array of readings contained in this collection, we'll look at both "standard" ethical readings from e.g. Jeremy Bentham and Immanuel Kant plus readings from literary sources like Ursula Le Guin, Ambrose Bierce, Jesus' Sermon on the Mount, and Buddha's Four Noble Truths.
+From the vast array of readings contained in this collection, we'll look at both "standard" ethical readings from e.g. Jeremy Bentham and Immanuel Kant plus readings from literary sources like Ursula Le Guin and Ambrose Bierce.
 
 ### Public Policy
 
@@ -75,43 +75,43 @@ The following is a rough map of what we will work through together throughout th
     <td><span data-qmd="**Unit 1**: Data-Scientific Issues"></span></td>
     <td>1</td>
     <td><span data-qmd="Jan 17"></span></td>
-    <td>Course Intro; Machine Learning and Training Data</td>
+    <td>Course Intro</td>
 </tr>
 <tr>
     <td></td>
     <td>2</td>
     <td>Jan 24</td>
-    <td>Case Studies: Self-Driving Cars, Facial Recognition, and ChatGPT</td>
+    <td>Machine Learning and Training Data</td>
 </tr>
 <tr>
     <td></td>
     <td>3</td>
     <td>Jan 31</td>
-    <td>Case Studies: Police and Military Applications of AI</td>
+    <td>Case Studies Part 1</td>
+</tr>
+<tr>
+    <td></td>
+    <td>4</td>
+    <td>Feb 7</td>
+    <td>Case Studies Part 2</td>
 </tr>
 <tr>
     <td></td>
     <td></td>
-    <td><span data-qmd="*Feb 2 (Friday)*"></span></td>
+    <td><span data-qmd="*Feb 9 (Friday)*"></span></td>
     <td><span data-qmd="*Deliverable: Data Science*"></span></td>
 </tr>
 <tr class='new-unit'>
     <td><span data-qmd="**Unit 2**: Ethical Frameworks"></span></td>
-    <td>4</td>
-    <td>Feb 7</td>
-    <td>Consequentialism</td>
-</tr>
-<tr>
-    <td></td>
     <td>5</td>
     <td>Feb 14</td>
-    <td>Virtue Ethics</td>
+    <td>Consequentialism</td>
 </tr>
 <tr>
     <td></td>
     <td>6</td>
     <td>Feb 21</td>
-    <td>Virtue Ethics</td>
+    <td>Deontological Ethics</td>
 </tr>
 <tr>
     <td></td>
