@@ -201,7 +201,7 @@ The main assignment in the course will be your **policy whitepaper**, submitted 
 
 | Assignment | Due Date | % of Grade |
 | - | - | - |
-| Data Science Overview Assignment | Friday, **February 2** | 10% |
+| Data Science Overview Assignment | Friday, **February 9** | 10% |
 | Ethical Frameworks Assignment | Friday, **February 23** | 10% |
 | Midterm | Wednesday, **February 28** | 30% |
 | Applying Ethical Frameworks Assignment | Friday, **March 22** | 10% |
