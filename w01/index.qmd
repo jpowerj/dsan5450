@@ -4,6 +4,10 @@ subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spri
 author: "Jeff Jacobs"
 institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
 bibliography: "../_DSAN5450.bib"
+date: 2024-01-17
+lecnum: 1
+categories:
+  - "Class Sessions"
 format:
   revealjs:
     df-print: kable
@@ -213,6 +217,22 @@ $\neg P_5 \implies T \neq 180^\circ$
 | - | - |
 | **Descriptive Statement**: "Bin Laden attacked us because we had been bombing Iraq for 10 years" | **Normative Statement**: "Bin Laden attacked us because we had been bombing Iraq for 10 years, **and that is a good justification**" |
 | **Descriptively True** (empirically verifiable) | **Normatively True** (entailed by axioms + descriptive facts) in some ethical systems, **Normatively False** (not entailed by axioms + descriptive facts) in others |
+
+## The *Is-Ought Distinction*
+
+::: {.callout-note title="Hume on *Is* vs. *Ought* [@hume_treatise_1739]" icon="false"}
+
+* *the author proceeds for some time in the ordinary way of reasoning*
+* *suddenly, instead of the usual copulations of propositions **is** and **is not**,*
+* *I meet with no proposition that is not connected with an **ought**, or an **ought not**.*
+* *This change is imperceptible; but is, however, of the last consequence.*
+
+:::
+
+| Descriptive (Is) | Normative (Ought) |
+| - | - |
+| Grass is green (true) | Grass ought to be green (?) |
+| Grass is blue (false) | Grass ought to be blue (?)
 
 ## What Happens When We Confuse The Two? {.crunch-title .title-08 .crunch-quarto-layout-panel .crunch-quarto-figure}
 

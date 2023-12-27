@@ -1,0 +1,149 @@
+---
+title: "Week 3: Ethical Frameworks"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2024, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
+bibliography: "../_DSAN5450.bib"
+date: 2024-01-30
+lecnum: 3
+categories:
+  - "Class Sessions"
+format:
+  revealjs:
+    df-print: kable
+    footer: "DSAN 5450 Week 3: Ethical Frameworks"
+    output-file: "slides.html"
+    html-math-method: mathjax
+    theme: ["../_jjslides.scss"]
+    scrollable: true
+    slide-number: true
+    simplemenu:
+      flat: true
+      barhtml:
+        header: "<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>"
+      scale: 0.5
+    revealjs-plugins:
+      - simplemenu
+  html:
+    df-print: kable
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
+
+# Ethical Frameworks {data-stack-name="Overview"}
+
+* Consequentialism
+* Deontology
+* Virtue Ethics
+
+## Reflective Equilibrium {.crunch-title .crunch-quarto-figure}
+
+* Most criticisms of any framework boil down to, "great in theory, but doesn't work in practice"
+* The way to take this seriously: **reflective equilibrium** 
+* Introduced by @rawls_outline_1951, but popularized by @rawls_theory_1971
+
+![From @awad_computational_2022](images/reflective.jpg){fig-align="center"}
+
+## Rawls vs. Everyone Else {.smaller .crunch-title .crunch-ul}
+
+* Q: What book had the greatest impact on modern (Anglophone) philosophy?
+* One approach: citations in a widely-used <a href='https://plato.stanford.edu/entries/reflective-equilibrium/' target='_blank'>encyclopedia of philosophy</a>^[Keep in mind, however, the dangers of *reification* we talked about last week!]... <a href='http://schwitzsplinters.blogspot.com/2020/07/the-233-most-cited-works-in-stanford.html' target='_blank'>The results</a>:
+
+```{=html}
+
+<table style='width: 100% !important;'>
+<thead>
+<tr>
+    <th style='width: 5% !important;'></th>
+    <th style='width: 45% !important;' class='split-table'>Book</th>
+    <th style='width: 5% !important;'></th>
+    <th style='width: 45% !important;'>Book</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>1</td>
+    <td class='split-table'><span data-qmd="Rawls 1972, *A Theory of Justice* (115)"></span></td>
+    <td>6</td>
+    <td><span data-qmd="Parfit 1984, *Reasons and Persons* (62)"></span></td>
+</tr>
+<tr>
+    <td>2</td>
+    <td class='split-table'><span data-qmd="Kripke 1980, *Naming and Necessity* (88)"></span></td>
+    <td>7</td>
+    <td><span data-qmd="Scanlon 1998, *What We Owe to Each Other* (56)"></span></td>
+</tr>
+<tr>
+    <td>3</td>
+    <td class='split-table'><span data-qmd="Lewis 1986, *On the Plurality of Worlds* (63)"></span></td>
+    <td>8</td>
+    <td><span data-qmd="Wittgenstein 1953, *Philosophical Investigations* (55)"></span></td>
+</tr>
+<tr>
+    <td>3</td>
+    <td class='split-table'><span data-qmd="Nozick 1974, *Anarchy, State and Utopia* (63)"></span></td>
+    <td>9</td>
+    <td><span data-qmd="Chalmers 1996, *The Conscious Mind* (53)"></span></td>
+</tr>
+<tr>
+    <td>3</td>
+    <td class='split-table'><span data-qmd="Quine 1960, *Word and Object* (63)"></span></td>
+    <td>10</td>
+    <td><span data-qmd="Rawls 1993, *Political Liberalism* (48)"></span></td>
+</tr>
+</tbody>
+</table>
+```
+
+## (From W01) Promise-Keeping {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-ul .title-12}
+
+* Scenario: You just baked a pie, and you promised your friend you'd give them the pie. You're walking over to the friend's house to give them the pie.
+* Suddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds
+* Do you give the hostage-taker the pie?
+
+::: {layout="[1,1]"}
+::: {#conseqentialism}
+
+<center>
+**Consequentialist Ethics $\implies$ Yes**
+</center>
+
+* To be ethical is to weigh consequences of your actions
+* The **positive consequences** of giving the pie to the hostage-taker (saving a life) outweigh the **negative consequences** (breaking your promise to your friend)
+* *(Ex: **Utilitarianism**, associated with British philosopher **Jeremy Bentham**)*
+
+:::
+::: {#deontology}
+
+<center>
+**Deontological Ethics $\implies$ No**
+</center>
+
+* To be ethical is to live by rules which you would **want everyone to follow**.
+* As a **rule** (a "categorical imperative"), you **must not break promises**. (Breaking this rule $\implies$ others can also "pick and choose" when to honor promises to you)
+* *(Ex: **Kantian Ethics**, associated with German philosopher **Immanuel Kant**)*
+
+:::
+
+:::
+
+## Silly Counterarguments
+
+* Against consequentialism: William James $\rightarrow$ Ursula Le Guin
+* Against deontology: Parable of the "crazed axeman"
+* Against virtue ethics: It's too vague
+
+
+
+## References
+
+::: {#refs}
+:::

@@ -32,6 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,8 +63,39 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <script src="./jjcustom.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -120,6 +153,24 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Week 1: Jan 17</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./w02/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2: Jan 24</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./w03/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3: Jan 30</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./w04/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4: Feb 6</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -164,11 +215,69 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Welcome to the homepage for <strong><em>DSAN 5450: Data Ethics and Policy</em></strong> at Georgetown University, for the Spring 2024 semester!</p>
 <p>The course meets on <strong>Wednesdays from 3:30pm to 6:00pm</strong> in the <strong><a href="https://maps.app.goo.gl/fVVfDFpp4MEuukXa9" target="_blank">Walsh Building<i class="bi bi-box-arrow-up-right ps-1"></i></a></strong>, <strong>Room 498</strong>.</p>
-<p>Check out the <a href="./syllabus.html"><strong>syllabus</strong></a> (or any other link in the sidebar) for more info!</p>
+<p>Check out the <a href="./syllabus.html"><strong>syllabus</strong></a> (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:</p>
+<div id="listing-listing" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table table-hover">
+<thead>
+<tr>
+<th>
+Title
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="Class Sessions" data-listing-date-sort="1705467600000" data-listing-file-modified-sort="1703648292619" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-title-sort="Week 1: Introduction to the Course" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./w01/index.html" class="title listing-title">Week 1: Introduction to the Course</a>
+</td>
+<td>
+<span class="listing-date">January 17</span>
+</td>
+</tr>
+<tr data-index="1" data-categories="Class Sessions" data-listing-date-sort="1706072400000" data-listing-file-modified-sort="1703648296283" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-title-sort="Week 2: Machine Learning and Training Data" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./w02/index.html" class="title listing-title">Week 2: Machine Learning and Training Data</a>
+</td>
+<td>
+<span class="listing-date">January 24</span>
+</td>
+</tr>
+<tr data-index="2" data-categories="Class Sessions" data-listing-date-sort="1706590800000" data-listing-file-modified-sort="1703648300959" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-title-sort="Week 3: Ethical Frameworks" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./w03/index.html" class="title listing-title">Week 3: Ethical Frameworks</a>
+</td>
+<td>
+<span class="listing-date">January 30</span>
+</td>
+</tr>
+<tr data-index="3" data-categories="Class Sessions" data-listing-date-sort="1707195600000" data-listing-file-modified-sort="1703650537083" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-title-sort="Week 4: Fairness in AI" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
+ if (href) { window.location=href ; return false; }">
+<td>
+<a href="./w04/index.html" class="title listing-title">Week 4: Fairness in AI</a>
+</td>
+<td>
+<span class="listing-date">February 6</span>
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 <p><strong>Course Description:</strong></p>
 <p>This graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).</p>
 <p>Beginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.</p>
 <p>The course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. <em>Prerequisites: None. 3 credits</em>.</p>
+
 
 
 

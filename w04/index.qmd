@@ -1,0 +1,91 @@
+---
+title: "Week 4: Fairness in AI"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2024, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
+bibliography: "../_DSAN5450.bib"
+date: 2024-02-06
+lecnum: 4
+categories:
+  - "Class Sessions"
+format:
+  revealjs:
+    df-print: kable
+    footer: "DSAN 5450 Week 4: Fairness in AI"
+    output-file: "slides.html"
+    html-math-method: mathjax
+    theme: ["../_jjslides.scss"]
+    scrollable: true
+    slide-number: true
+    simplemenu:
+      flat: true
+      barhtml:
+        header: "<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>"
+      scale: 0.5
+    revealjs-plugins:
+      - simplemenu
+  html:
+    df-print: kable
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
+
+# Defining Fairness {data-stack-name="Overview"}
+
+::: {.hidden}
+
+{{< include ../_globals-tex.qmd >}}
+
+:::
+
+* Predictive Parity ("Parity")
+* Balance for the Positive Class ("Balance")
+
+## Mathematical Setup {.smaller}
+
+* We can define notions of fairness under a unified mathematical framework of **decision-making**
+* A decision-maker $\mathscr{D}$ solves the optimization problem $\max\{\mu\}$ where, given a set of individuals indexed by $i$,
+$$
+\underbrace{\mu}_{\mathclap{\text{Maximand}}} = \mathbb{E}_i[\underbrace{W_i}_{\mathclap{\text{Decision}}} \, \cdot \, (\underbrace{M_i}_{\mathclap{\small\substack{\text{Merit} \\ \text{(Unobserved)}}}} - \underbrace{c_i}_{\mathclap{\text{Cost}}})]
+$$
+* Since the $M_i$ are unobserved, $\mathscr{D}$ has to **estimate** them using a predictive model (e.g., a supervised ML algorithm):
+$$
+m(x) = \mathbb{E}[M \mid X = x].
+$$
+
+## General Solution
+
+* Without any **restrictions** on the set of admissible policies $\mathscr{W}$, the solution will satisfy
+
+$$
+w^*(\cdot) = \argmax_{w(\cdot) \in \mathscr{W}}\mathbb{E}[w(X) \cdot (m(X) - c)]
+$$
+
+## Fair Solution
+
+* Definitions of **fairness** under this framework, however, specify a variable $A_i$ for each individual, representing their status with respect to some **protected characteristic** like race, gender, or disability status
+* Then $A_i$ is **not allowed** to be included in $X$, at a minimum, and different definitions of fairness include additional constraints on $\mathscr{W}$ based on $A_i$.
+
+# Predictive Parity {data-stack-name="Parity"}
+
+* The fundamental criterion: for all values $a \in A$,
+
+$$
+\mathbb{E}[M \mid W = 1, A = a] = \mathbb{E}[M \mid W = 1]
+$$
+
+# Balance for the Positive Class
+
+* Here the criterion is, for all $i$,
+
+$$
+\mathbb{E}[W_i \mid M_i = 1, A_i = 1] = \mathbb{E}[W_i \mid M_i = 1, A_i = 0]
+$$

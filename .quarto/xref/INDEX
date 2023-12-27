@@ -11,5 +11,17 @@
   "w01/index.qmd": {
     "slides.html": "25e9baf6",
     "index.html": "6c9c423a"
+  },
+  "w02/index.qmd": {
+    "slides.html": "02343eda",
+    "index.html": "225e112e"
+  },
+  "w03/index.qmd": {
+    "slides.html": "6d32de01",
+    "index.html": "59aaead8"
+  },
+  "w04/index.qmd": {
+    "index.html": "45452cbd",
+    "slides.html": "94356412"
   }
 }

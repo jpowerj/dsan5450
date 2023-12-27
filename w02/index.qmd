@@ -1,0 +1,125 @@
+---
+title: "Week 2: Machine Learning and Training Data"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2024, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
+bibliography: "../_DSAN5450.bib"
+date: 2024-01-24
+lecnum: 2
+categories:
+  - "Class Sessions"
+format:
+  revealjs:
+    df-print: kable
+    footer: "DSAN 5450 Week 2: Machine Learning and Training Data"
+    output-file: "slides.html"
+    html-math-method: mathjax
+    theme: ["../_jjslides.scss"]
+    scrollable: true
+    slide-number: true
+    simplemenu:
+      flat: true
+      barhtml:
+        header: "<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>"
+      scale: 0.5
+    revealjs-plugins:
+      - simplemenu
+  html:
+    df-print: kable
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
+
+# Three Component Parts of Machine Learning
+
+1. A cool algorithm
+2. Training data
+3. Human labor
+
+# Machine Learning {data-stack-name="Machine Learning"}
+
+## A Cool Algorithm {.smaller .crunch-title}
+
+![](images/neural_network.svg){fig-align="center"}
+
+# Training Data {data-stack-name="Training Data"}
+
+## Training Data {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure}
+
+::: {layout="[1,1]" layout-valign="center"}
+
+![](images/pronouns.jpg){fig-align="center"}
+
+![](images/translate.jpg){fig-align="center"}
+
+:::
+
+From <a href='http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2' target='_blank'>*Gendered Innovations in Science, Health & Medicine, Engineering, and Environment*</a>
+
+## Word Embeddings {.smaller .crunch-title}
+
+![@bolukbasi_man_2016](images/bolukbasi2016.png){fig-align="center"}
+
+## Removing vs. Studying Biases {.smaller .crunch-title}
+
+::: {layout="[1,2]" layout-valign="center"}
+
+![From @kozlowski_geometry_2019](images/kozlowski_full.jpeg){fig-align="center"}
+
+![<a href='https://www3.cs.stonybrook.edu/~mueller/research/pages/wordbias/' target='_blank'>WordBias: An Interactive Tool for Discovering Intersectional Biases Encoded in Word Embeddings</a>](images/wordbias_custom.jpeg){fig-align="center"}
+
+:::
+
+# Human Labor {data-stack-name="Human Labor"}
+
+## Generating Training Data {.smaller}
+
+::: {layout="[1,1]" layout-valign="center"}
+
+![](images/snorkel_human_labelers.jpg)
+
+![](images/snorkel_training_data.jpg)
+
+:::
+
+## What Comes With Human Labels? Human Biases! {.smaller .title-11 .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-title .crunch-ul}
+
+::: {layout="[1,1]"}
+
+::: {#biases-text}
+
+* **"Reification"**: Pretentious word for an important phenomenon, whereby talking about something (e.g., race) *as if* it was real ends up leading to it becoming real (having real impacts on people's lives)^[@fields_racecraft_2012, for example, uses the term **"racecraft"** to describe the reification of blackness in the US]
+
+> On average, being classified as a White man as opposed to a Coloured man would have more than quadrupled a person's income. [@pellicer_understanding_2023]
+
+![](images/permit_crop.jpeg){fig-align="center"}
+
+:::
+
+![](images/passport.webp){fig-align="center" width="380"}
+
+:::
+
+## Reification in Science
+
+* <a href='https://en.wikipedia.org/wiki/Goodhart%27s_law' target='_blank'>Goodhart's Law</a>: "When a measure becomes a target, it ceases to be a good measure"
+* Cat-and-mouse game between **goals** and ways of **measuring** progress towards goals
+
+## Next Week: Working Towards Solutions
+
+* There is a large literature on **fairness in AI**
+* But, to understand this, we'll need to understand **ethical frameworks**!
+* Remember: Cannot "prove" $q = [\text{Algorithm is fair}]$. Only $p \implies q$, where $p$ is some **ethical framework**!
+
+## References
+
+::: {#refs}
+:::
