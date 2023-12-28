@@ -1,0 +1,446 @@
+---
+title: "Week 5: Privacy-Preserving AI"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2024, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
+bibliography: "../_DSAN5450.bib"
+date: 2024-02-13
+lecnum: 5
+categories:
+  - "Class Sessions"
+format:
+  revealjs:
+    df-print: kable
+    footer: "DSAN 5450 Week 5: Privacy-Preserving AI"
+    output-file: "slides.html"
+    html-math-method: mathjax
+    theme: ["../_jjslides.scss"]
+    scrollable: true
+    slide-number: true
+    simplemenu:
+      flat: true
+      barhtml:
+        header: "<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>"
+      scale: 0.5
+    revealjs-plugins:
+      - simplemenu
+  html:
+    df-print: kable
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
+
+# Privacy and Why It Matters {data-stack-name="Overview"}
+
+## The "Right" to Privacy
+
+* In Theory (Normatively): A **right** is an individual "veto" on a collective decision [@dworkin_taking_1977]
+* In Practice (Descriptively): Rights grow out of the barrel of a gun
+
+## All Hope Is Not Lost!
+
+* **Privacy-Preserving Computation** makes it possible to encode data in such a way that:
+  * It can be used to train algorithms, yet
+  * It cannot be used to identify you
+
+# Homomorphic Cryptography
+
+## First Things First: `NAND`
+
+* The irreducible "atom" of computing, it turns out, is the `NAND` operation: the **N**egation of the **`AND`** operation, which we'll denote using [$\barwedge$]{.cb3}:
+
+```{=html}
+<table class='centered-table'>
+<thead>
+<tr>
+  <th><span data-qmd="$p$"></span></th>
+  <th><span data-qmd="$q$"></span></th>
+  <th><span data-qmd="$p \wedge q$"></span></th>
+  <th class='cb3a-bg'><span data-qmd="$p \barwedge q$"></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0</td>
+  <td>0</td>
+  <td>0</td>
+  <td class='cb3a-bg'>1</td>
+</tr>
+<tr>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td class='cb3a-bg'>1</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+  <td class='cb3a-bg'>1</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>1</td>
+  <td>1</td>
+  <td class='cb3a-bg'>0</td>
+</tr>
+</tbody>
+</table>
+```
+
+## Why is `NAND` All We Need? {.smaller}
+
+* **Logically**: any boolean function can be decomposed (e.g., in "conjunctive normal form") into [**negation**]{.cb1} (unary) and [**conjunction**]{.cb2} (binary). Here's both, using only `NAND`!
+
+::: {layout="[1,1]" layout-align="center"}
+
+::: {#negation}
+
+<center class='center-head'>
+**Negation** ($\neg$)
+</center>
+
+```{=html}
+<center>
+<table class='centered-table'>
+<thead>
+<tr>
+  <th><span data-qmd="$p$"></span></th>
+  <th class='cb1a-bg'><span data-qmd="$\neg p$"></span></th>
+  <th class='cb3a-bg'><span data-qmd="$p \barwedge p$"></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0</td>
+  <td class='cb1a-bg'>1</td>
+  <td class='cb3a-bg'>1</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td class='cb1a-bg'>0</td>
+  <td class='cb3a-bg'>0</td>
+</tr>
+</tbody>
+</table>
+</center>
+```
+
+:::
+::: {#conjunction}
+<center class='center-head'>
+**Conjunction** ($\wedge$)
+</center>
+
+```{=html}
+<table class='centered-table'>
+<thead>
+<tr>
+  <th><span data-qmd="$p$"></span></th>
+  <th><span data-qmd="$q$"></span></th>
+  <th class='cb2a-bg'><span data-qmd="$p \wedge q$"></span></th>
+  <th><span data-qmd="$p \barwedge q$"></span></th>
+  <th class='cb3a-bg'><span data-qmd="$\left(p \barwedge q\right) \barwedge \left(p \barwedge q\right)$"></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0</td>
+  <td>0</td>
+  <td class='cb2a-bg'>0</td>
+  <td>1</td>
+  <td class='cb3a-bg'>0</td>
+</tr>
+<tr>
+  <td>0</td>
+  <td>1</td>
+  <td class='cb2a-bg'>0</td>
+  <td>1</td>
+  <td class='cb3a-bg'>0</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>0</td>
+  <td class='cb2a-bg'>0</td>
+  <td>1</td>
+  <td class='cb3a-bg'>0</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>1</td>
+  <td class='cb2a-bg'>1</td>
+  <td>0</td>
+  <td class='cb3a-bg'>1</td>
+</tr>
+</tbody>
+</table>
+```
+
+:::
+
+:::
+
+## `OR` as a Bonus! {.smaller .crunch-title}
+
+* Since we now have $\neg$ and $\wedge$, we can derive $\vee$!
+
+```{=html}
+<table class='centered-table'>
+<thead>
+<tr>
+  <th><span data-qmd="$p$"></span></th>
+  <th><span data-qmd="$q$"></span></th>
+  <th class='cb2a-bg'><span data-qmd="$p \vee q$"></span></th>
+  <th><span data-qmd="$\neg p$"></span></th>
+  <th><span data-qmd="$\neg q$"></span></th>
+  <td><span data-qmd="$\neg p \wedge \neg q$"></span></td>
+  <th class='cb3a-bg'><span data-qmd="$\neg\left(\neg p \wedge \neg q\right)$"></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0</td>
+  <td>0</td>
+  <td class='cb2a-bg'>0</td>
+  <td>1</td>
+  <td>1</td>
+  <td>1</td>
+  <td class='cb3a-bg'>0</td>
+</tr>
+<tr>
+  <td>0</td>
+  <td>1</td>
+  <td class='cb2a-bg'>1</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+  <td class='cb3a-bg'>1</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>0</td>
+  <td class='cb2a-bg'>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td class='cb3a-bg'>1</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>1</td>
+  <td class='cb2a-bg'>1</td>
+  <td>0</td>
+  <td>0</td>
+  <td>0</td>
+  <td class='cb3a-bg'>1</td>
+</tr>
+</tbody>
+</table>
+```
+* This is encapsulated in **DeMorgan's Laws**:
+
+$$
+\begin{align*}
+\neg(p \wedge q) &= \neg p \vee \neg q \\
+\neg(p \vee q) &= \neg p \wedge \neg q
+\end{align*}
+$$
+
+## And Lastly: `XOR`
+
+* **Exclusive** or: $p \oplus q$ = "$p$ or $q$ **but not both**"
+
+```{=html}
+<table class='centered-table'>
+<thead>
+<tr>
+  <th><span data-qmd="$p$"></span></th>
+  <th><span data-qmd="$q$"></span></th>
+  <th class='cb2a-bg'><span data-qmd="$p \oplus q$"></span></th>
+  <th><span data-qmd="$p \vee q$"></span></th>
+  <th><span data-qmd="$\neg(p \wedge q)$"></span></th>
+  <th class='cb3a-bg'><span data-qmd="$\left(p \vee q) \wedge \neg (p \wedge q\right)$"></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0</td>
+  <td>0</td>
+  <td class='cb2a-bg'>0</td>
+  <td>0</td>
+  <td>1</td>
+  <td class='cb3a-bg'>0</td>
+</tr>
+<tr>
+  <td>0</td>
+  <td>1</td>
+  <td class='cb2a-bg'>1</td>
+  <td>1</td>
+  <td>1</td>
+  <td class='cb3a-bg'>1</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>0</td>
+  <td class='cb2a-bg'>1</td>
+  <td>1</td>
+  <td>1</td>
+  <td class='cb3a-bg'>1</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>1</td>
+  <td class='cb2a-bg'>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td class='cb3a-bg'>0</td>
+</tr>
+</tbody>
+</table>
+```
+
+## Logic $\rightarrow$ Math {.smaller .crunch-title}
+
+* **Mathematically**: (1) Math can be performed in **base 2**, and (2) If we have a way to [**add**]{.cb1} and [**multiply**]{.cb2} in base 2, we have the basic **algebraic ring** $\mathbb{Z}_2$ used for "doing math"!
+* But, let's look at what happens when we do math in $\mathbb{Z}_2$:
+
+::: {layout="[1,1]"}
+::: {#addition}
+
+<center class='center-head'>
+**Addition** ($+$)
+</center>
+
+```{=html}
+<center>
+<table class='centered-table'>
+<thead>
+<tr>
+  <th><span data-qmd="$x$"></span></th>
+  <th><span data-qmd="$y$"></span></th>
+  <th class='cb1a-bg'><span data-qmd="$x +_{\mathbb{Z}_2} y$"></span></th>
+  <th class='cb3a-bg'><span data-qmd="$x \oplus y$"></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0</td>
+  <td>0</td>
+  <td class='cb1a-bg'>0</td>
+  <td class='cb3a-bg'>0</td>
+</tr>
+<tr>
+  <td>0</td>
+  <td>1</td>
+  <td class='cb1a-bg'>1</td>
+  <td class='cb3a-bg'>1</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>0</td>
+  <td class='cb1a-bg'>1</td>
+  <td class='cb3a-bg'>1</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>1</td>
+  <td class='cb1a-bg'>0</td>
+  <td class='cb3a-bg'>0</td>
+</tr>
+</tbody>
+</table>
+</center>
+```
+
+:::
+::: {#multiplication}
+
+<center class='center-head'>
+**Multiplication** ($\times$)
+</center>
+
+```{=html}
+<center>
+<table class='centered-table'>
+<thead>
+<tr>
+  <th><span data-qmd="$x$"></span></th>
+  <th><span data-qmd="$y$"></span></th>
+  <th class='cb2a-bg'><span data-qmd="$x \times_{\mathbb{Z}_2} y$"></span></th>
+  <th class='cb3a-bg'><span data-qmd="$x \wedge y$"></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0</td>
+  <td>0</td>
+  <td class='cb2a-bg'>0</td>
+  <td class='cb3a-bg'>0</td>
+</tr>
+<tr>
+  <td>0</td>
+  <td>1</td>
+  <td class='cb2a-bg'>0</td>
+  <td class='cb3a-bg'>0</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>0</td>
+  <td class='cb2a-bg'>0</td>
+  <td class='cb3a-bg'>0</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>1</td>
+  <td class='cb2a-bg'>1</td>
+  <td class='cb3a-bg'>1</td>
+</tr>
+</tbody>
+</table>
+</center>
+```
+
+:::
+:::
+
+* Takeaway: **Mathematical operations** in $\mathbb{Z}_2$ are **isomorphic** to **logical operators** (over $\text{T}, \text{F}$)!
+
+## Implication for Privacy-Preserving AI {.smaller .crunch-math}
+
+* If we can develop an algorithm allowing **addition** and **multiplication** on **encrypted values**, we can run **any AI algorithm we want** on the data!
+* We can (a) input **encrypted data**, then (b) use encrypted-addition and encrypted-multiplication in place of regular addition and multiplication
+* Example: in **RSA**, the most widely-used encryption algorithm, $\mathcal{E}(m) = m^e\mod{n}$, so multiplying the **encrypted** values produces the **encrypyed version** of the product!
+
+$$
+\begin{align*}
+\mathcal{E}(m_1)\times \mathcal{E}(m_2) &= m_1^em_2^e\mod{n} \\
+&= (m_1m_2)^e\mod{n} \\
+&= \mathcal{E}(m_1 \times m_2)
+\end{align*}
+$$
+
+* Doesn't preserve **addition**, however:
+
+$$
+\begin{align*}
+\mathcal{E}(m_1) + \mathcal{E}(m_2) &= m_1^e + m_2^e\mod{n} \\
+\mathcal{E}(m_1 + m_2) &= (m_1 + m_2)^e\mod{n}
+\end{align*}
+$$
+
+## Application: Zero-Knowledge Proofs and Voting
+
+
+
+## References
+
+::: {#refs}
+:::

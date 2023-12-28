@@ -1,3 +1,30 @@
+/*-- scss:variables --*/
+
+// cb1
+
+//$cb1: #E69F00;
+$cb1: rgb(230, 159, 0);
+//$cb1-alpha: #E69F007F;
+$cb1-alpha: rgba(230, 159, 0, 0.333);
+
+// cb2
+
+//$cb2: #56B4E9;
+$cb2: rgb(86, 180, 233);
+$cb2-alpha: rgba(86, 180, 233, 0.333);
+//$cb2-alpha: #56B4E97F;
+
+// cb3
+
+//$cb3: #009E73;
+$cb3: rgb(0, 158, 115);
+$cb3-alpha: rgba(0, 158, 115, 0.333);
+
+// gray
+
+$cbg: rgb(211, 211, 211);
+$cbg-alpha: rgba(211, 211, 211, 0.333);
+
 /*-- scss:defaults --*/
 
 /*-- scss:rules --*/
@@ -13,6 +40,62 @@ figcaption {
 }
 .caption-left figcaption {
     text-align: left !important;
+}
+
+
+// Colors: text color, background color, and
+// transparent versions
+.cb1 {
+    color: $cb1 !important;
+}
+.cb1-bg {
+    background-color: $cb1 !important;
+}
+.cb1a-bg {
+    background-color: $cb1-alpha !important;
+    text-align: center !important;
+}
+.cb2 {
+    color: $cb2 !important;
+}
+.cb2-bg {
+    background-color: $cb2 !important;
+}
+.cb2a-bg {
+    background-color: $cb2-alpha !important;
+    text-align: center !important;
+}
+.cb3 {
+    color: $cb3 !important;
+}
+.cb3-bg {
+    background-color: $cb3 !important;
+}
+.cb3a-bg {
+    background-color: $cb3-alpha !important;
+    text-align: center !important;
+}
+.cb4 {
+    color: #F0E442 !important;
+}
+.cbg {
+    color: $cbg !important;
+}
+.cbg-bg {
+    background-color: $cbg !important;
+}
+.cbga-bg {
+    background-color: $cbg-alpha !important;
+    text-align: center !important;
+}
+
+.center-head {
+    margin-bottom: 6px !important;
+}
+
+.centered-table td {
+    text-align: center !important;
+    vertical-align: middle !important;
 }
 
 // figcaption
@@ -32,7 +115,7 @@ figcaption {
 }
 
 // math
-.crunch-math-3 mjx-container {
+.crunch-math mjx-container {
     margin: 3px !important;
 }
 

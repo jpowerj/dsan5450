@@ -46,56 +46,189 @@
     "href": "index.html",
     "title": "DSAN 5450: Data Ethics and Policy",
     "section": "",
-    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2024 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 17\n\n\n\n\nWeek 2: Machine Learning and Training Data\n\n\nJanuary 24\n\n\n\n\nWeek 3: Ethical Frameworks\n\n\nJanuary 30\n\n\n\n\nWeek 4: Fairness in AI\n\n\nFebruary 6\n\n\n\n\n\n\nNo matching items\n\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits."
+    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2024 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 17\n\n\n\n\nWeek 2: Machine Learning and Training Data\n\n\nJanuary 24\n\n\n\n\nWeek 3: Ethical Frameworks\n\n\nJanuary 30\n\n\n\n\nWeek 4: Fairness in AI\n\n\nFebruary 6\n\n\n\n\nWeek 5: Privacy-Preserving AI\n\n\nFebruary 13\n\n\n\n\n\n\nNo matching items\n\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits."
   },
   {
-    "objectID": "w04/slides.html#mathematical-setup",
-    "href": "w04/slides.html#mathematical-setup",
-    "title": "Week 4: Fairness in AI",
-    "section": "Mathematical Setup",
-    "text": "Mathematical Setup\n\nWe can define notions of fairness under a unified mathematical framework of decision-making\nA decision-maker \\(\\mathscr{D}\\) solves the optimization problem \\(\\max\\{\\mu\\}\\) where, given a set of individuals indexed by \\(i\\), \\[\n\\underbrace{\\mu}_{\\mathclap{\\text{Maximand}}} = \\mathbb{E}_i[\\underbrace{W_i}_{\\mathclap{\\text{Decision}}} \\, \\cdot \\, (\\underbrace{M_i}_{\\mathclap{\\small\\substack{\\text{Merit} \\\\ \\text{(Unobserved)}}}} - \\underbrace{c_i}_{\\mathclap{\\text{Cost}}})]\n\\]\nSince the \\(M_i\\) are unobserved, \\(\\mathscr{D}\\) has to estimate them using a predictive model (e.g., a supervised ML algorithm): \\[\nm(x) = \\mathbb{E}[M \\mid X = x].\n\\]"
+    "objectID": "w05/slides.html#the-right-to-privacy",
+    "href": "w05/slides.html#the-right-to-privacy",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "The “Right” to Privacy",
+    "text": "The “Right” to Privacy\n\nIn Theory (Normatively): A right is an individual “veto” on a collective decision (Dworkin 1977)\nIn Practice (Descriptively): Rights grow out of the barrel of a gun"
   },
   {
-    "objectID": "w04/slides.html#general-solution",
-    "href": "w04/slides.html#general-solution",
-    "title": "Week 4: Fairness in AI",
-    "section": "General Solution",
-    "text": "General Solution\n\nWithout any restrictions on the set of admissible policies \\(\\mathscr{W}\\), the solution will satisfy\n\n\\[\nw^*(\\cdot) = \\argmax_{w(\\cdot) \\in \\mathscr{W}}\\mathbb{E}[w(X) \\cdot (m(X) - c)]\n\\]"
+    "objectID": "w05/slides.html#all-hope-is-not-lost",
+    "href": "w05/slides.html#all-hope-is-not-lost",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "All Hope Is Not Lost!",
+    "text": "All Hope Is Not Lost!\n\nPrivacy-Preserving Computation makes it possible to encode data in such a way that:\n\nIt can be used to train algorithms, yet\nIt cannot be used to identify you"
   },
   {
-    "objectID": "w04/slides.html#fair-solution",
-    "href": "w04/slides.html#fair-solution",
-    "title": "Week 4: Fairness in AI",
-    "section": "Fair Solution",
-    "text": "Fair Solution\n\nDefinitions of fairness under this framework, however, specify a variable \\(A_i\\) for each individual, representing their status with respect to some protected characteristic like race, gender, or disability status\nThen \\(A_i\\) is not allowed to be included in \\(X\\), at a minimum, and different definitions of fairness include additional constraints on \\(\\mathscr{W}\\) based on \\(A_i\\)."
+    "objectID": "w05/slides.html#first-things-first-nand",
+    "href": "w05/slides.html#first-things-first-nand",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "First Things First: NAND",
+    "text": "First Things First: NAND\n\nThe irreducible “atom” of computing, it turns out, is the NAND operation: the Negation of the AND operation, which we’ll denote using \\(\\barwedge\\):\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\wedge q\\)\n\\(p \\barwedge q\\)\n\n\n\n\n0\n0\n0\n1\n\n\n0\n1\n0\n1\n\n\n1\n0\n0\n1\n\n\n1\n1\n1\n0"
   },
   {
-    "objectID": "w04/index.html",
-    "href": "w04/index.html",
-    "title": "Week 4: Fairness in AI",
+    "objectID": "w05/slides.html#why-is-nand-all-we-need",
+    "href": "w05/slides.html#why-is-nand-all-we-need",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "Why is NAND All We Need?",
+    "text": "Why is NAND All We Need?\n\nLogically: any boolean function can be decomposed (e.g., in “conjunctive normal form”) into negation (unary) and conjunction (binary). Here’s both, using only NAND!\n\n\n\n\n\nNegation (\\(\\neg\\))\n\n\n\n\n\n\n\\(p\\)\n\\(\\neg p\\)\n\\(p \\barwedge p\\)\n\n\n\n\n0\n1\n1\n\n\n1\n0\n0\n\n\n\n\n\n\n\n\nConjunction (\\(\\wedge\\))\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\wedge q\\)\n\\(p \\barwedge q\\)\n\\(\\left(p \\barwedge q\\right) \\barwedge \\left(p \\barwedge q\\right)\\)\n\n\n\n\n0\n0\n0\n1\n0\n\n\n0\n1\n0\n1\n0\n\n\n1\n0\n0\n1\n0\n\n\n1\n1\n1\n0\n1"
+  },
+  {
+    "objectID": "w05/slides.html#or-as-a-bonus",
+    "href": "w05/slides.html#or-as-a-bonus",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "OR as a Bonus!",
+    "text": "OR as a Bonus!\n\nSince we now have \\(\\neg\\) and \\(\\wedge\\), we can derive \\(\\vee\\)!\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\vee q\\)\n\\(\\neg p\\)\n\\(\\neg q\\)\n\\(\\neg p \\wedge \\neg q\\)\n\\(\\neg\\left(\\neg p \\wedge \\neg q\\right)\\)\n\n\n\n\n0\n0\n0\n1\n1\n1\n0\n\n\n0\n1\n1\n1\n0\n0\n1\n\n\n1\n0\n1\n0\n1\n0\n1\n\n\n1\n1\n1\n0\n0\n0\n1\n\n\n\n\nThis is encapsulated in DeMorgan’s Laws:\n\n\\[\n\\begin{align*}\n\\neg(p \\wedge q) &= \\neg p \\vee \\neg q \\\\\n\\neg(p \\vee q) &= \\neg p \\wedge \\neg q\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "w05/slides.html#and-lastly-xor",
+    "href": "w05/slides.html#and-lastly-xor",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "And Lastly: XOR",
+    "text": "And Lastly: XOR\n\nExclusive or: \\(p \\oplus q\\) = “\\(p\\) or \\(q\\) but not both”\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\oplus q\\)\n\\(p \\vee q\\)\n\\(\\neg(p \\wedge q)\\)\n\\(\\left(p \\vee q) \\wedge \\neg (p \\wedge q\\right)\\)\n\n\n\n\n0\n0\n0\n0\n1\n0\n\n\n0\n1\n1\n1\n1\n1\n\n\n1\n0\n1\n1\n1\n1\n\n\n1\n1\n0\n1\n0\n0"
+  },
+  {
+    "objectID": "w05/slides.html#logic-rightarrow-math",
+    "href": "w05/slides.html#logic-rightarrow-math",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "Logic \\(\\rightarrow\\) Math",
+    "text": "Logic \\(\\rightarrow\\) Math\n\nMathematically: (1) Math can be performed in base 2, and (2) If we have a way to add and multiply in base 2, we have the basic algebraic ring \\(\\mathbb{Z}_2\\) used for “doing math”!\nBut, let’s look at what happens when we do math in \\(\\mathbb{Z}_2\\):\n\n\n\n\n\nAddition (\\(+\\))\n\n\n\n\n\n\n\\(x\\)\n\\(y\\)\n\\(x +_{\\mathbb{Z}_2} y\\)\n\\(x \\oplus y\\)\n\n\n\n\n0\n0\n0\n0\n\n\n0\n1\n1\n1\n\n\n1\n0\n1\n1\n\n\n1\n1\n0\n0\n\n\n\n\n\n\n\n\nMultiplication (\\(\\times\\))\n\n\n\n\n\n\n\\(x\\)\n\\(y\\)\n\\(x \\times_{\\mathbb{Z}_2} y\\)\n\\(x \\wedge y\\)\n\n\n\n\n0\n0\n0\n0\n\n\n0\n1\n0\n0\n\n\n1\n0\n0\n0\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n\n\nTakeaway: Mathematical operations in \\(\\mathbb{Z}_2\\) are isomorphic to logical operators (over \\(\\text{T}, \\text{F}\\))!"
+  },
+  {
+    "objectID": "w05/slides.html#implication-for-privacy-preserving-ai",
+    "href": "w05/slides.html#implication-for-privacy-preserving-ai",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "Implication for Privacy-Preserving AI",
+    "text": "Implication for Privacy-Preserving AI\n\nIf we can develop an algorithm allowing addition and multiplication on encrypted values, we can run any AI algorithm we want on the data!\nWe can (a) input encrypted data, then (b) use encrypted-addition and encrypted-multiplication in place of regular addition and multiplication\nExample: in RSA, the most widely-used encryption algorithm, \\(\\mathcal{E}(m) = m^e\\mod{n}\\), so multiplying the encrypted values produces the encrypyed version of the product!\n\n\\[\n\\begin{align*}\n\\mathcal{E}(m_1)\\times \\mathcal{E}(m_2) &= m_1^em_2^e\\mod{n} \\\\\n&= (m_1m_2)^e\\mod{n} \\\\\n&= \\mathcal{E}(m_1 \\times m_2)\n\\end{align*}\n\\]\n\nDoesn’t preserve addition, however:\n\n\\[\n\\begin{align*}\n\\mathcal{E}(m_1) + \\mathcal{E}(m_2) &= m_1^e + m_2^e\\mod{n} \\\\\n\\mathcal{E}(m_1 + m_2) &= (m_1 + m_2)^e\\mod{n}\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "w05/slides.html#application-zero-knowledge-proofs-and-voting",
+    "href": "w05/slides.html#application-zero-knowledge-proofs-and-voting",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "Application: Zero-Knowledge Proofs and Voting",
+    "text": "Application: Zero-Knowledge Proofs and Voting"
+  },
+  {
+    "objectID": "w05/slides.html#references",
+    "href": "w05/slides.html#references",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "References",
+    "text": "References\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\n\n\nDSAN 5450 Week 5: Privacy-Preserving AI"
+  },
+  {
+    "objectID": "w05/index.html",
+    "href": "w05/index.html",
+    "title": "Week 5: Privacy-Preserving AI",
     "section": "",
     "text": "Open slides in new window →"
   },
   {
-    "objectID": "w04/index.html#mathematical-setup",
-    "href": "w04/index.html#mathematical-setup",
-    "title": "Week 4: Fairness in AI",
-    "section": "Mathematical Setup",
-    "text": "Mathematical Setup\n\nWe can define notions of fairness under a unified mathematical framework of decision-making\nA decision-maker \\(\\mathscr{D}\\) solves the optimization problem \\(\\max\\{\\mu\\}\\) where, given a set of individuals indexed by \\(i\\), \\[\n\\underbrace{\\mu}_{\\mathclap{\\text{Maximand}}} = \\mathbb{E}_i[\\underbrace{W_i}_{\\mathclap{\\text{Decision}}} \\, \\cdot \\, (\\underbrace{M_i}_{\\mathclap{\\small\\substack{\\text{Merit} \\\\ \\text{(Unobserved)}}}} - \\underbrace{c_i}_{\\mathclap{\\text{Cost}}})]\n\\]\nSince the \\(M_i\\) are unobserved, \\(\\mathscr{D}\\) has to estimate them using a predictive model (e.g., a supervised ML algorithm): \\[\nm(x) = \\mathbb{E}[M \\mid X = x].\n\\]"
+    "objectID": "w05/index.html#the-right-to-privacy",
+    "href": "w05/index.html#the-right-to-privacy",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "The “Right” to Privacy",
+    "text": "The “Right” to Privacy\n\nIn Theory (Normatively): A right is an individual “veto” on a collective decision (Dworkin 1977)\nIn Practice (Descriptively): Rights grow out of the barrel of a gun"
   },
   {
-    "objectID": "w04/index.html#general-solution",
-    "href": "w04/index.html#general-solution",
-    "title": "Week 4: Fairness in AI",
-    "section": "General Solution",
-    "text": "General Solution\n\nWithout any restrictions on the set of admissible policies \\(\\mathscr{W}\\), the solution will satisfy\n\n\\[\nw^*(\\cdot) = \\argmax_{w(\\cdot) \\in \\mathscr{W}}\\mathbb{E}[w(X) \\cdot (m(X) - c)]\n\\]"
+    "objectID": "w05/index.html#all-hope-is-not-lost",
+    "href": "w05/index.html#all-hope-is-not-lost",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "All Hope Is Not Lost!",
+    "text": "All Hope Is Not Lost!\n\nPrivacy-Preserving Computation makes it possible to encode data in such a way that:\n\nIt can be used to train algorithms, yet\nIt cannot be used to identify you"
   },
   {
-    "objectID": "w04/index.html#fair-solution",
-    "href": "w04/index.html#fair-solution",
-    "title": "Week 4: Fairness in AI",
-    "section": "Fair Solution",
-    "text": "Fair Solution\n\nDefinitions of fairness under this framework, however, specify a variable \\(A_i\\) for each individual, representing their status with respect to some protected characteristic like race, gender, or disability status\nThen \\(A_i\\) is not allowed to be included in \\(X\\), at a minimum, and different definitions of fairness include additional constraints on \\(\\mathscr{W}\\) based on \\(A_i\\)."
+    "objectID": "w05/index.html#first-things-first-nand",
+    "href": "w05/index.html#first-things-first-nand",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "First Things First: NAND",
+    "text": "First Things First: NAND\n\nThe irreducible “atom” of computing, it turns out, is the NAND operation: the Negation of the AND operation, which we’ll denote using \\(\\barwedge\\):\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\wedge q\\)\n\\(p \\barwedge q\\)\n\n\n\n\n0\n0\n0\n1\n\n\n0\n1\n0\n1\n\n\n1\n0\n0\n1\n\n\n1\n1\n1\n0"
+  },
+  {
+    "objectID": "w05/index.html#why-is-nand-all-we-need",
+    "href": "w05/index.html#why-is-nand-all-we-need",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "Why is NAND All We Need?",
+    "text": "Why is NAND All We Need?\n\nLogically: any boolean function can be decomposed (e.g., in “conjunctive normal form”) into negation (unary) and conjunction (binary). Here’s both, using only NAND!\n\n\n\n\n\nNegation (\\(\\neg\\))\n\n\n\n\n\n\n\\(p\\)\n\\(\\neg p\\)\n\\(p \\barwedge p\\)\n\n\n\n\n0\n1\n1\n\n\n1\n0\n0\n\n\n\n\n\n\n\n\nConjunction (\\(\\wedge\\))\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\wedge q\\)\n\\(p \\barwedge q\\)\n\\(\\left(p \\barwedge q\\right) \\barwedge \\left(p \\barwedge q\\right)\\)\n\n\n\n\n0\n0\n0\n1\n0\n\n\n0\n1\n0\n1\n0\n\n\n1\n0\n0\n1\n0\n\n\n1\n1\n1\n0\n1"
+  },
+  {
+    "objectID": "w05/index.html#or-as-a-bonus",
+    "href": "w05/index.html#or-as-a-bonus",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "OR as a Bonus!",
+    "text": "OR as a Bonus!\n\nSince we now have \\(\\neg\\) and \\(\\wedge\\), we can derive \\(\\vee\\)!\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\vee q\\)\n\\(\\neg p\\)\n\\(\\neg q\\)\n\\(\\neg p \\wedge \\neg q\\)\n\\(\\neg\\left(\\neg p \\wedge \\neg q\\right)\\)\n\n\n\n\n0\n0\n0\n1\n1\n1\n0\n\n\n0\n1\n1\n1\n0\n0\n1\n\n\n1\n0\n1\n0\n1\n0\n1\n\n\n1\n1\n1\n0\n0\n0\n1\n\n\n\n\nThis is encapsulated in DeMorgan’s Laws:\n\n\\[\n\\begin{align*}\n\\neg(p \\wedge q) &= \\neg p \\vee \\neg q \\\\\n\\neg(p \\vee q) &= \\neg p \\wedge \\neg q\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "w05/index.html#and-lastly-xor",
+    "href": "w05/index.html#and-lastly-xor",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "And Lastly: XOR",
+    "text": "And Lastly: XOR\n\nExclusive or: \\(p \\oplus q\\) = “\\(p\\) or \\(q\\) but not both”\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\oplus q\\)\n\\(p \\vee q\\)\n\\(\\neg(p \\wedge q)\\)\n\\(\\left(p \\vee q) \\wedge \\neg (p \\wedge q\\right)\\)\n\n\n\n\n0\n0\n0\n0\n1\n0\n\n\n0\n1\n1\n1\n1\n1\n\n\n1\n0\n1\n1\n1\n1\n\n\n1\n1\n0\n1\n0\n0"
+  },
+  {
+    "objectID": "w05/index.html#logic-rightarrow-math",
+    "href": "w05/index.html#logic-rightarrow-math",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "Logic \\(\\rightarrow\\) Math",
+    "text": "Logic \\(\\rightarrow\\) Math\n\nMathematically: (1) Math can be performed in base 2, and (2) If we have a way to add and multiply in base 2, we have the basic algebraic ring \\(\\mathbb{Z}_2\\) used for “doing math”!\nBut, let’s look at what happens when we do math in \\(\\mathbb{Z}_2\\):\n\n\n\n\n\nAddition (\\(+\\))\n\n\n\n\n\n\n\\(x\\)\n\\(y\\)\n\\(x +_{\\mathbb{Z}_2} y\\)\n\\(x \\oplus y\\)\n\n\n\n\n0\n0\n0\n0\n\n\n0\n1\n1\n1\n\n\n1\n0\n1\n1\n\n\n1\n1\n0\n0\n\n\n\n\n\n\n\n\nMultiplication (\\(\\times\\))\n\n\n\n\n\n\n\\(x\\)\n\\(y\\)\n\\(x \\times_{\\mathbb{Z}_2} y\\)\n\\(x \\wedge y\\)\n\n\n\n\n0\n0\n0\n0\n\n\n0\n1\n0\n0\n\n\n1\n0\n0\n0\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n\n\nTakeaway: Mathematical operations in \\(\\mathbb{Z}_2\\) are isomorphic to logical operators (over \\(\\text{T}, \\text{F}\\))!"
+  },
+  {
+    "objectID": "w05/index.html#implication-for-privacy-preserving-ai",
+    "href": "w05/index.html#implication-for-privacy-preserving-ai",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "Implication for Privacy-Preserving AI",
+    "text": "Implication for Privacy-Preserving AI\n\nIf we can develop an algorithm allowing addition and multiplication on encrypted values, we can run any AI algorithm we want on the data!\nWe can (a) input encrypted data, then (b) use encrypted-addition and encrypted-multiplication in place of regular addition and multiplication\nExample: in RSA, the most widely-used encryption algorithm, \\(\\mathcal{E}(m) = m^e\\mod{n}\\), so multiplying the encrypted values produces the encrypyed version of the product!\n\n\\[\n\\begin{align*}\n\\mathcal{E}(m_1)\\times \\mathcal{E}(m_2) &= m_1^em_2^e\\mod{n} \\\\\n&= (m_1m_2)^e\\mod{n} \\\\\n&= \\mathcal{E}(m_1 \\times m_2)\n\\end{align*}\n\\]\n\nDoesn’t preserve addition, however:\n\n\\[\n\\begin{align*}\n\\mathcal{E}(m_1) + \\mathcal{E}(m_2) &= m_1^e + m_2^e\\mod{n} \\\\\n\\mathcal{E}(m_1 + m_2) &= (m_1 + m_2)^e\\mod{n}\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "w05/index.html#application-zero-knowledge-proofs-and-voting",
+    "href": "w05/index.html#application-zero-knowledge-proofs-and-voting",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "Application: Zero-Knowledge Proofs and Voting",
+    "text": "Application: Zero-Knowledge Proofs and Voting"
+  },
+  {
+    "objectID": "w05/index.html#references",
+    "href": "w05/index.html#references",
+    "title": "Week 5: Privacy-Preserving AI",
+    "section": "References",
+    "text": "References\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black."
+  },
+  {
+    "objectID": "w03/slides.html#reflective-equilibrium",
+    "href": "w03/slides.html#reflective-equilibrium",
+    "title": "Week 3: Ethical Frameworks",
+    "section": "Reflective Equilibrium",
+    "text": "Reflective Equilibrium\n\nMost criticisms of any framework boil down to, “great in theory, but doesn’t work in practice”\nThe way to take this seriously: reflective equilibrium\nIntroduced by Rawls (1951), but popularized by Rawls (1971)\n\n\nFrom Awad et al. (2022)"
+  },
+  {
+    "objectID": "w03/slides.html#rawls-vs.-everyone-else",
+    "href": "w03/slides.html#rawls-vs.-everyone-else",
+    "title": "Week 3: Ethical Frameworks",
+    "section": "Rawls vs. Everyone Else",
+    "text": "Rawls vs. Everyone Else\n\nQ: What book had the greatest impact on modern (Anglophone) philosophy?\nOne approach: citations in a widely-used encyclopedia of philosophy1… The results:\n\n\n\n\n\n\n\nBook\n\nBook\n\n\n\n\n1\nRawls 1972, A Theory of Justice (115)\n6\nParfit 1984, Reasons and Persons (62)\n\n\n2\nKripke 1980, Naming and Necessity (88)\n7\nScanlon 1998, What We Owe to Each Other (56)\n\n\n3\nLewis 1986, On the Plurality of Worlds (63)\n8\nWittgenstein 1953, Philosophical Investigations (55)\n\n\n3\nNozick 1974, Anarchy, State and Utopia (63)\n9\nChalmers 1996, The Conscious Mind (53)\n\n\n3\nQuine 1960, Word and Object (63)\n10\nRawls 1993, Political Liberalism (48)\n\n\n\nKeep in mind, however, the dangers of reification we talked about last week!"
+  },
+  {
+    "objectID": "w03/slides.html#from-w01-promise-keeping",
+    "href": "w03/slides.html#from-w01-promise-keeping",
+    "title": "Week 3: Ethical Frameworks",
+    "section": "(From W01) Promise-Keeping",
+    "text": "(From W01) Promise-Keeping\n\nScenario: You just baked a pie, and you promised your friend you’d give them the pie. You’re walking over to the friend’s house to give them the pie.\nSuddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds\nDo you give the hostage-taker the pie?\n\n\n\n\n\nConsequentialist Ethics \\(\\implies\\) Yes\n\n\nTo be ethical is to weigh consequences of your actions\nThe positive consequences of giving the pie to the hostage-taker (saving a life) outweigh the negative consequences (breaking your promise to your friend)\n(Ex: Utilitarianism, associated with British philosopher Jeremy Bentham)\n\n\n\n\nDeontological Ethics \\(\\implies\\) No\n\n\nTo be ethical is to live by rules which you would want everyone to follow.\nAs a rule (a “categorical imperative”), you must not break promises. (Breaking this rule \\(\\implies\\) others can also “pick and choose” when to honor promises to you)\n(Ex: Kantian Ethics, associated with German philosopher Immanuel Kant)"
+  },
+  {
+    "objectID": "w03/slides.html#silly-counterarguments",
+    "href": "w03/slides.html#silly-counterarguments",
+    "title": "Week 3: Ethical Frameworks",
+    "section": "Silly Counterarguments",
+    "text": "Silly Counterarguments\n\nAgainst consequentialism: William James \\(\\rightarrow\\) Ursula Le Guin\nAgainst deontology: Parable of the “crazed axeman”\nAgainst virtue ethics: It’s too vague"
+  },
+  {
+    "objectID": "w03/slides.html#references",
+    "href": "w03/slides.html#references",
+    "title": "Week 3: Ethical Frameworks",
+    "section": "References",
+    "text": "References\n\n\nAwad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. “Computational Ethics.” Trends in Cognitive Sciences 26 (5): 388–405. https://doi.org/10.1016/j.tics.2022.02.009.\n\n\nRawls, John. 1951. “Outline of a Decision Procedure for Ethics.” The Philosophical Review 60 (2): 177–97. https://doi.org/10.2307/2181696.\n\n\n———. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\n\n\nDSAN 5450 Week 3: Ethical Frameworks"
   },
   {
     "objectID": "w03/index.html",
@@ -147,39 +280,53 @@
     "text": "Footnotes\n\n\nKeep in mind, however, the dangers of reification we talked about last week!↩︎"
   },
   {
-    "objectID": "w03/slides.html#reflective-equilibrium",
-    "href": "w03/slides.html#reflective-equilibrium",
-    "title": "Week 3: Ethical Frameworks",
-    "section": "Reflective Equilibrium",
-    "text": "Reflective Equilibrium\n\nMost criticisms of any framework boil down to, “great in theory, but doesn’t work in practice”\nThe way to take this seriously: reflective equilibrium\nIntroduced by Rawls (1951), but popularized by Rawls (1971)\n\n\nFrom Awad et al. (2022)"
+    "objectID": "w04/index.html",
+    "href": "w04/index.html",
+    "title": "Week 4: Fairness in AI",
+    "section": "",
+    "text": "Open slides in new window →"
   },
   {
-    "objectID": "w03/slides.html#rawls-vs.-everyone-else",
-    "href": "w03/slides.html#rawls-vs.-everyone-else",
-    "title": "Week 3: Ethical Frameworks",
-    "section": "Rawls vs. Everyone Else",
-    "text": "Rawls vs. Everyone Else\n\nQ: What book had the greatest impact on modern (Anglophone) philosophy?\nOne approach: citations in a widely-used encyclopedia of philosophy1… The results:\n\n\n\n\n\n\n\nBook\n\nBook\n\n\n\n\n1\nRawls 1972, A Theory of Justice (115)\n6\nParfit 1984, Reasons and Persons (62)\n\n\n2\nKripke 1980, Naming and Necessity (88)\n7\nScanlon 1998, What We Owe to Each Other (56)\n\n\n3\nLewis 1986, On the Plurality of Worlds (63)\n8\nWittgenstein 1953, Philosophical Investigations (55)\n\n\n3\nNozick 1974, Anarchy, State and Utopia (63)\n9\nChalmers 1996, The Conscious Mind (53)\n\n\n3\nQuine 1960, Word and Object (63)\n10\nRawls 1993, Political Liberalism (48)\n\n\n\nKeep in mind, however, the dangers of reification we talked about last week!"
+    "objectID": "w04/index.html#mathematical-setup",
+    "href": "w04/index.html#mathematical-setup",
+    "title": "Week 4: Fairness in AI",
+    "section": "Mathematical Setup",
+    "text": "Mathematical Setup\n\nWe can define notions of fairness under a unified mathematical framework of decision-making\nA decision-maker \\(\\mathscr{D}\\) solves the optimization problem \\(\\max\\{\\mu\\}\\) where, given a set of individuals indexed by \\(i\\), \\[\n\\underbrace{\\mu}_{\\mathclap{\\text{Maximand}}} = \\mathbb{E}_i[\\underbrace{W_i}_{\\mathclap{\\text{Decision}}} \\, \\cdot \\, (\\underbrace{M_i}_{\\mathclap{\\small\\substack{\\text{Merit} \\\\ \\text{(Unobserved)}}}} - \\underbrace{c_i}_{\\mathclap{\\text{Cost}}})]\n\\]\nSince the \\(M_i\\) are unobserved, \\(\\mathscr{D}\\) has to estimate them using a predictive model (e.g., a supervised ML algorithm): \\[\nm(x) = \\mathbb{E}[M \\mid X = x].\n\\]"
   },
   {
-    "objectID": "w03/slides.html#from-w01-promise-keeping",
-    "href": "w03/slides.html#from-w01-promise-keeping",
-    "title": "Week 3: Ethical Frameworks",
-    "section": "(From W01) Promise-Keeping",
-    "text": "(From W01) Promise-Keeping\n\nScenario: You just baked a pie, and you promised your friend you’d give them the pie. You’re walking over to the friend’s house to give them the pie.\nSuddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds\nDo you give the hostage-taker the pie?\n\n\n\n\n\nConsequentialist Ethics \\(\\implies\\) Yes\n\n\nTo be ethical is to weigh consequences of your actions\nThe positive consequences of giving the pie to the hostage-taker (saving a life) outweigh the negative consequences (breaking your promise to your friend)\n(Ex: Utilitarianism, associated with British philosopher Jeremy Bentham)\n\n\n\n\nDeontological Ethics \\(\\implies\\) No\n\n\nTo be ethical is to live by rules which you would want everyone to follow.\nAs a rule (a “categorical imperative”), you must not break promises. (Breaking this rule \\(\\implies\\) others can also “pick and choose” when to honor promises to you)\n(Ex: Kantian Ethics, associated with German philosopher Immanuel Kant)"
+    "objectID": "w04/index.html#general-solution",
+    "href": "w04/index.html#general-solution",
+    "title": "Week 4: Fairness in AI",
+    "section": "General Solution",
+    "text": "General Solution\n\nWithout any restrictions on the set of admissible policies \\(\\mathscr{W}\\), the solution will satisfy\n\n\\[\nw^*(\\cdot) = \\argmax_{w(\\cdot) \\in \\mathscr{W}}\\mathbb{E}[w(X) \\cdot (m(X) - c)]\n\\]"
   },
   {
-    "objectID": "w03/slides.html#silly-counterarguments",
-    "href": "w03/slides.html#silly-counterarguments",
-    "title": "Week 3: Ethical Frameworks",
-    "section": "Silly Counterarguments",
-    "text": "Silly Counterarguments\n\nAgainst consequentialism: William James \\(\\rightarrow\\) Ursula Le Guin\nAgainst deontology: Parable of the “crazed axeman”\nAgainst virtue ethics: It’s too vague"
+    "objectID": "w04/index.html#fair-solution",
+    "href": "w04/index.html#fair-solution",
+    "title": "Week 4: Fairness in AI",
+    "section": "Fair Solution",
+    "text": "Fair Solution\n\nDefinitions of fairness under this framework, however, specify a variable \\(A_i\\) for each individual, representing their status with respect to some protected characteristic like race, gender, or disability status\nThen \\(A_i\\) is not allowed to be included in \\(X\\), at a minimum, and different definitions of fairness include additional constraints on \\(\\mathscr{W}\\) based on \\(A_i\\)."
   },
   {
-    "objectID": "w03/slides.html#references",
-    "href": "w03/slides.html#references",
-    "title": "Week 3: Ethical Frameworks",
-    "section": "References",
-    "text": "References\n\n\nAwad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. “Computational Ethics.” Trends in Cognitive Sciences 26 (5): 388–405. https://doi.org/10.1016/j.tics.2022.02.009.\n\n\nRawls, John. 1951. “Outline of a Decision Procedure for Ethics.” The Philosophical Review 60 (2): 177–97. https://doi.org/10.2307/2181696.\n\n\n———. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\n\n\nDSAN 5450 Week 3: Ethical Frameworks"
+    "objectID": "w04/slides.html#mathematical-setup",
+    "href": "w04/slides.html#mathematical-setup",
+    "title": "Week 4: Fairness in AI",
+    "section": "Mathematical Setup",
+    "text": "Mathematical Setup\n\nWe can define notions of fairness under a unified mathematical framework of decision-making\nA decision-maker \\(\\mathscr{D}\\) solves the optimization problem \\(\\max\\{\\mu\\}\\) where, given a set of individuals indexed by \\(i\\), \\[\n\\underbrace{\\mu}_{\\mathclap{\\text{Maximand}}} = \\mathbb{E}_i[\\underbrace{W_i}_{\\mathclap{\\text{Decision}}} \\, \\cdot \\, (\\underbrace{M_i}_{\\mathclap{\\small\\substack{\\text{Merit} \\\\ \\text{(Unobserved)}}}} - \\underbrace{c_i}_{\\mathclap{\\text{Cost}}})]\n\\]\nSince the \\(M_i\\) are unobserved, \\(\\mathscr{D}\\) has to estimate them using a predictive model (e.g., a supervised ML algorithm): \\[\nm(x) = \\mathbb{E}[M \\mid X = x].\n\\]"
+  },
+  {
+    "objectID": "w04/slides.html#general-solution",
+    "href": "w04/slides.html#general-solution",
+    "title": "Week 4: Fairness in AI",
+    "section": "General Solution",
+    "text": "General Solution\n\nWithout any restrictions on the set of admissible policies \\(\\mathscr{W}\\), the solution will satisfy\n\n\\[\nw^*(\\cdot) = \\argmax_{w(\\cdot) \\in \\mathscr{W}}\\mathbb{E}[w(X) \\cdot (m(X) - c)]\n\\]"
+  },
+  {
+    "objectID": "w04/slides.html#fair-solution",
+    "href": "w04/slides.html#fair-solution",
+    "title": "Week 4: Fairness in AI",
+    "section": "Fair Solution",
+    "text": "Fair Solution\n\nDefinitions of fairness under this framework, however, specify a variable \\(A_i\\) for each individual, representing their status with respect to some protected characteristic like race, gender, or disability status\nThen \\(A_i\\) is not allowed to be included in \\(X\\), at a minimum, and different definitions of fairness include additional constraints on \\(\\mathscr{W}\\) based on \\(A_i\\)."
   },
   {
     "objectID": "w02/index.html",

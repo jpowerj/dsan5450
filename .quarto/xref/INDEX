@@ -23,5 +23,9 @@
   "w04/index.qmd": {
     "index.html": "45452cbd",
     "slides.html": "94356412"
+  },
+  "w05/index.qmd": {
+    "slides.html": "e008fb1d",
+    "index.html": "294f55f1"
   }
 }
