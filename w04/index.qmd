@@ -74,7 +74,7 @@ $$
 * Definitions of **fairness** under this framework, however, specify a variable $A_i$ for each individual, representing their status with respect to some **protected characteristic** like race, gender, or disability status
 * Then $A_i$ is **not allowed** to be included in $X$, at a minimum, and different definitions of fairness include additional constraints on $\mathscr{W}$ based on $A_i$.
 
-# Predictive Parity {data-stack-name="Parity"}
+## Predictive Parity {data-stack-name="Parity"}
 
 * The fundamental criterion: for all values $a \in A$,
 
@@ -82,8 +82,98 @@ $$
 \mathbb{E}[M \mid W = 1, A = a] = \mathbb{E}[M \mid W = 1]
 $$
 
-# Balance for the Positive Class
+* For binary $A \in \{0, 1\}$, we can use this criterion to define a **parity score** $\pi$:
 
+$$
+\pi = \mathbb{E}[M \mid W = 1, A = 1] - \mathbb{E}[M \mid W = 1, A = 0]
+$$
+
+## Implementing Predictive Parity
+
+* Enforcing predictive parity means enforcing that $\pi = 0$
+* So, we restrict the set of rules that can be chosen, and solve
+
+$$
+\begin{align*}
+w^*(\cdot) &= \argmax_{w(\cdot) \in \mathscr{W}_\text{fair}}\mathbb{E}[w(X) \cdot (m(X) - c)], \\
+\mathscr{W}_{\text{fair}} &= \{w \in \mathscr{W} \mid \pi = 0\}
+\end{align*}
+$$
+
+## The Solution: Choice "Only On Merit"
+
+* If we can perfectly predict $M$ ($m(X) = M$), then
+
+$$
+w^*(x) = \begin{cases}
+1 &\text{if }m(X) > c, \\
+0 &\text{otherwise}
+\end{cases}
+$$
+
+* Firms are only being "unfair" if they disciminate **in a way that lowers their profits**
+* Implements definition of discrimination from @becker_economics_1957
+* But what are the **results** of this rule? And the results of changing it? And where did $M$ come from?
+
+## Reflective Equilibrium: Affirmative Action {.smaller}
+
+* Under this definition of fairness, **affirmative action is unfair**:
+* Policy $\alpha$: Employer is incentivized (via $1$ unit reward) for hiring people with $A_i = 1$
+* Policy $\beta$: No incentive for hiring $A_i = 1$ over $A_i = 0$
+* $W^*_\alpha = \begin{cases}1 &\text{if }M + A \geq 1 \\ 0 &\text{otherwise}\end{cases}, \; W^*_{\beta} = M$
+* Fairness scores:
+
+$$
+\begin{align*}
+\pi_\alpha &= \mathbb{E}[M \mid W^*_{\alpha} = 1, A = 1] - \mathbb{E}[M \mid W^*_{\alpha} = 1, A = 0] = 0.5 - 1 =  -0.5 \\
+\pi_\beta &= \mathbb{E}[M \mid W^*_{\beta} = 1, A = 1] - \mathbb{E}[M \mid W^*_{\beta} = 1, A = 0] = 1 - 1 = 0
+\end{align*}
+$$
+
+* So is fairness the right way to evaluate an algorithm?
+
+# Economic, Social, and Political Impacts {data-stack-name="Impact Functions"}
+
+## Affirmative Action: *Welfare* and *Inequality* {.smaller}
+
+* Now consider the **outcomes** from the perspective of the **employees** rather than the employer: $Y(w) = (1 - A) + w$. Then
+
+$$
+\begin{align*}
+Y(W_\alpha) &= 1 + \begin{cases}1 &\text{if }A = 0 \wedge M = 1 \\ 0&\text{otherwise}\end{cases} \\
+Y(W_\beta) &= (1 - A) + M
+\end{align*}
+$$
+
+* Which means
+
+$$
+\text{Var}[Y(W_\alpha)] = \frac{3}{16}, \text{Var}[Y(W_\beta)] = \frac{1}{2}
+$$
+
+## The Impact of *Changes* to an Algorithm {.smaller}
+
+* Once we've derived this optimal $w^*$, we can analyze how **changes** to the algorithm **affect** outcomes we care about! $\mu$ and $\pi$ are objective value as before, but let $\nu$ represent **inequality**
+* Say we are considering a new algorithm $w(x) = w^*(x) + \varepsilon \cdot dw(x)$. Then
+
+$$
+\begin{align*}
+\frac{\partial \mu}{\partial \varepsilon} &= \mathbb{E}[dw(X) \cdot \ell(X)], \; \ell(x) = \mathbb{E}[M \mid X = x] - c \\
+\frac{\partial \pi}{\partial \varepsilon} &= \mathbb{E}\left[dw(X) \cdot p(X)\right], \; p(x) = \mathbb{E}\mkern-4mu\left[\Delta^1\frac{A}{\mathbb{E}[WA]} - \Delta^0\frac{1-A}{\mathbb{E}[W(1-A)]} \; \middle|\; X = x\right], \\
+&\phantom{=} \; \Delta^i = M - \mathbb{E}[M \mid W = 1, A = i] \\
+\frac{\partial \nu}{\partial \varepsilon} &= \mathbb{E}[dw(X) \cdot n(X)], \; n(x) = \mathbb{E}[IF(Y^1, x) - IF(Y^0, x) \mid X = x]
+\end{align*}
+$$
+
+# Implicit Welfare Weights
+
+## Who Gets To Choose The Objective Function?
+
+* It turns out that any objective function is an **implicit implementation** of a **weighting** of each person's welfare relative to others
+
+## Appendix: Balance for the Positive Class
+
+* An alternative to predictive parity, though with similar results
 * Here the criterion is, for all $i$,
 
 $$

@@ -98,6 +98,10 @@ figcaption {
     vertical-align: middle !important;
 }
 
+.crunch-blockquote blockquote {
+    margin: 0px !important;
+}
+
 // figcaption
 
 .crunch-figcaption figcaption {
@@ -110,6 +114,11 @@ figcaption {
 }
 
 // lists
+.crunch-li li {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+}
+
 .crunch-ul-0 ul {
     margin-bottom: 0px !important;
 }
@@ -144,6 +153,22 @@ figcaption {
 .crunch-ul ul {
     margin-top: 2px !important;
     margin-bottom: 2px !important;
+}
+
+.game-cell {
+    border: 1px solid black !important;
+}
+
+.game-div {
+    border-right: 1px solid black !important;
+}
+
+.game-label {
+    border: 0px solid black !important;
+}
+
+.game-table td {
+    border: 0px solid black;
 }
 
 // math smaller

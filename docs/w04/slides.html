@@ -31,7 +31,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -389,20 +408,124 @@ w^*(\cdot) = \argmax_{w(\cdot) \in \mathscr{W}}\mathbb{E}[w(X) \cdot (m(X) - c)]
 <li>Definitions of <strong>fairness</strong> under this framework, however, specify a variable <span class="math inline">\(A_i\)</span> for each individual, representing their status with respect to some <strong>protected characteristic</strong> like race, gender, or disability status</li>
 <li>Then <span class="math inline">\(A_i\)</span> is <strong>not allowed</strong> to be included in <span class="math inline">\(X\)</span>, at a minimum, and different definitions of fairness include additional constraints on <span class="math inline">\(\mathscr{W}\)</span> based on <span class="math inline">\(A_i\)</span>.</li>
 </ul>
-</section></section>
-<section id="predictive-parity" class="title-slide slide level1 center" data-stack-name="Parity">
-<h1>Predictive Parity</h1>
+</section>
+<section id="predictive-parity" class="slide level2" data-stack-name="Parity">
+<h2>Predictive Parity</h2>
 <ul>
 <li>The fundamental criterion: for all values <span class="math inline">\(a \in A\)</span>,</li>
 </ul>
 <p><span class="math display">\[
 \mathbb{E}[M \mid W = 1, A = a] = \mathbb{E}[M \mid W = 1]
 \]</span></p>
-</section>
-
-<section id="balance-for-the-positive-class" class="title-slide slide level1 center">
-<h1>Balance for the Positive Class</h1>
 <ul>
+<li>For binary <span class="math inline">\(A \in \{0, 1\}\)</span>, we can use this criterion to define a <strong>parity score</strong> <span class="math inline">\(\pi\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+\pi = \mathbb{E}[M \mid W = 1, A = 1] - \mathbb{E}[M \mid W = 1, A = 0]
+\]</span></p>
+</section>
+<section id="implementing-predictive-parity" class="slide level2">
+<h2>Implementing Predictive Parity</h2>
+<ul>
+<li>Enforcing predictive parity means enforcing that <span class="math inline">\(\pi = 0\)</span></li>
+<li>So, we restrict the set of rules that can be chosen, and solve</li>
+</ul>
+<p><span class="math display">\[
+\begin{align*}
+w^*(\cdot) &amp;= \argmax_{w(\cdot) \in \mathscr{W}_\text{fair}}\mathbb{E}[w(X) \cdot (m(X) - c)], \\
+\mathscr{W}_{\text{fair}} &amp;= \{w \in \mathscr{W} \mid \pi = 0\}
+\end{align*}
+\]</span></p>
+</section>
+<section id="the-solution-choice-only-on-merit" class="slide level2">
+<h2>The Solution: Choice “Only On Merit”</h2>
+<ul>
+<li>If we can perfectly predict <span class="math inline">\(M\)</span> (<span class="math inline">\(m(X) = M\)</span>), then</li>
+</ul>
+<p><span class="math display">\[
+w^*(x) = \begin{cases}
+1 &amp;\text{if }m(X) &gt; c, \\
+0 &amp;\text{otherwise}
+\end{cases}
+\]</span></p>
+<ul>
+<li>Firms are only being “unfair” if they disciminate <strong>in a way that lowers their profits</strong></li>
+<li>Implements definition of discrimination from <span class="citation" data-cites="becker_economics_1957">Becker (<a href="#/appendix-balance-for-the-positive-class" role="doc-biblioref" onclick="">1957</a>)</span></li>
+<li>But what are the <strong>results</strong> of this rule? And the results of changing it? And where did <span class="math inline">\(M\)</span> come from?</li>
+</ul>
+</section>
+<section id="reflective-equilibrium-affirmative-action" class="slide level2 smaller">
+<h2>Reflective Equilibrium: Affirmative Action</h2>
+<ul>
+<li>Under this definition of fairness, <strong>affirmative action is unfair</strong>:</li>
+<li>Policy <span class="math inline">\(\alpha\)</span>: Employer is incentivized (via <span class="math inline">\(1\)</span> unit reward) for hiring people with <span class="math inline">\(A_i = 1\)</span></li>
+<li>Policy <span class="math inline">\(\beta\)</span>: No incentive for hiring <span class="math inline">\(A_i = 1\)</span> over <span class="math inline">\(A_i = 0\)</span></li>
+<li><span class="math inline">\(W^*_\alpha = \begin{cases}1 &amp;\text{if }M + A \geq 1 \\ 0 &amp;\text{otherwise}\end{cases}, \; W^*_{\beta} = M\)</span></li>
+<li>Fairness scores:</li>
+</ul>
+<p><span class="math display">\[
+\begin{align*}
+\pi_\alpha &amp;= \mathbb{E}[M \mid W^*_{\alpha} = 1, A = 1] - \mathbb{E}[M \mid W^*_{\alpha} = 1, A = 0] = 0.5 - 1 =  -0.5 \\
+\pi_\beta &amp;= \mathbb{E}[M \mid W^*_{\beta} = 1, A = 1] - \mathbb{E}[M \mid W^*_{\beta} = 1, A = 0] = 1 - 1 = 0
+\end{align*}
+\]</span></p>
+<ul>
+<li>So is fairness the right way to evaluate an algorithm?</li>
+</ul>
+</section></section>
+<section>
+<section id="economic-social-and-political-impacts" class="title-slide slide level1 center" data-stack-name="Impact Functions">
+<h1>Economic, Social, and Political Impacts</h1>
+
+</section>
+<section id="affirmative-action-welfare-and-inequality" class="slide level2 smaller">
+<h2>Affirmative Action: <em>Welfare</em> and <em>Inequality</em></h2>
+<ul>
+<li>Now consider the <strong>outcomes</strong> from the perspective of the <strong>employees</strong> rather than the employer: <span class="math inline">\(Y(w) = (1 - A) + w\)</span>. Then</li>
+</ul>
+<p><span class="math display">\[
+\begin{align*}
+Y(W_\alpha) &amp;= 1 + \begin{cases}1 &amp;\text{if }A = 0 \wedge M = 1 \\ 0&amp;\text{otherwise}\end{cases} \\
+Y(W_\beta) &amp;= (1 - A) + M
+\end{align*}
+\]</span></p>
+<ul>
+<li>Which means</li>
+</ul>
+<p><span class="math display">\[
+\text{Var}[Y(W_\alpha)] = \frac{3}{16}, \text{Var}[Y(W_\beta)] = \frac{1}{2}
+\]</span></p>
+</section>
+<section id="the-impact-of-changes-to-an-algorithm" class="slide level2 smaller">
+<h2>The Impact of <em>Changes</em> to an Algorithm</h2>
+<ul>
+<li>Once we’ve derived this optimal <span class="math inline">\(w^*\)</span>, we can analyze how <strong>changes</strong> to the algorithm <strong>affect</strong> outcomes we care about! <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\pi\)</span> are objective value as before, but let <span class="math inline">\(\nu\)</span> represent <strong>inequality</strong></li>
+<li>Say we are considering a new algorithm <span class="math inline">\(w(x) = w^*(x) + \varepsilon \cdot dw(x)\)</span>. Then</li>
+</ul>
+<p><span class="math display">\[
+\begin{align*}
+\frac{\partial \mu}{\partial \varepsilon} &amp;= \mathbb{E}[dw(X) \cdot \ell(X)], \; \ell(x) = \mathbb{E}[M \mid X = x] - c \\
+\frac{\partial \pi}{\partial \varepsilon} &amp;= \mathbb{E}\left[dw(X) \cdot p(X)\right], \; p(x) = \mathbb{E}\mkern-4mu\left[\Delta^1\frac{A}{\mathbb{E}[WA]} - \Delta^0\frac{1-A}{\mathbb{E}[W(1-A)]} \; \middle|\; X = x\right], \\
+&amp;\phantom{=} \; \Delta^i = M - \mathbb{E}[M \mid W = 1, A = i] \\
+\frac{\partial \nu}{\partial \varepsilon} &amp;= \mathbb{E}[dw(X) \cdot n(X)], \; n(x) = \mathbb{E}[IF(Y^1, x) - IF(Y^0, x) \mid X = x]
+\end{align*}
+\]</span></p>
+</section></section>
+<section>
+<section id="implicit-welfare-weights" class="title-slide slide level1 center">
+<h1>Implicit Welfare Weights</h1>
+
+</section>
+<section id="who-gets-to-choose-the-objective-function" class="slide level2">
+<h2>Who Gets To Choose The Objective Function?</h2>
+<ul>
+<li>It turns out that any objective function is an <strong>implicit implementation</strong> of a <strong>weighting</strong> of each person’s welfare relative to others</li>
+</ul>
+</section>
+<section id="appendix-balance-for-the-positive-class" class="slide level2 smaller scrollable">
+<h2>Appendix: Balance for the Positive Class</h2>
+<ul>
+<li>An alternative to predictive parity, though with similar results</li>
 <li>Here the criterion is, for all <span class="math inline">\(i\)</span>,</li>
 </ul>
 <p><span class="math display">\[
@@ -412,7 +535,12 @@ w^*(\cdot) = \argmax_{w(\cdot) \in \mathscr{W}}\mathbb{E}[w(X) \cdot (m(X) - c)]
 <div class="footer footer-default">
 <p>DSAN 5450 Week 4: Fairness in AI</p>
 </div>
-</section>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-becker_economics_1957" class="csl-entry" role="listitem">
+Becker, Gary S. 1957. <em>The <span>Economics</span> of <span>Discrimination</span></em>. <span>University of Chicago Press</span>.
+</div>
+</div>
+</section></section>
     </div>
   </div>
 
