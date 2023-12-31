@@ -46,152 +46,152 @@
     "href": "index.html",
     "title": "DSAN 5450: Data Ethics and Policy",
     "section": "",
-    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2024 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 17\n\n\n\n\nWeek 2: Machine Learning and Training Data\n\n\nJanuary 24\n\n\n\n\nWeek 3: Ethical Frameworks\n\n\nJanuary 30\n\n\n\n\nWeek 4: Fairness in AI\n\n\nFebruary 6\n\n\n\n\nWeek 5: Privacy-Preserving Computation\n\n\nFebruary 13\n\n\n\n\n\n\nNo matching items\n\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits."
+    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2024 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 17\n\n\n\n\nWeek 2: Machine Learning and Training Data\n\n\nJanuary 24\n\n\n\n\nWeek 3: Ethical Frameworks\n\n\nJanuary 30\n\n\n\n\nWeek 4: Fairness in AI\n\n\nFebruary 6\n\n\n\n\nWeek 5: Anonymity, Privacy-Preserving Computation\n\n\nFebruary 13\n\n\n\n\n\n\nNo matching items\n\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits."
   },
   {
     "objectID": "w05/slides.html#the-right-to-privacy",
     "href": "w05/slides.html#the-right-to-privacy",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "The “Right” to Privacy",
     "text": "The “Right” to Privacy\n\nIn Theory (Normatively): A right is an individual “veto” on a collective decision (Dworkin 1977)\nIn Practice (Descriptively): Rights grow out of the barrel of a gun"
   },
   {
     "objectID": "w05/slides.html#all-hope-is-not-lost",
     "href": "w05/slides.html#all-hope-is-not-lost",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "All Hope Is Not Lost!",
-    "text": "All Hope Is Not Lost!\n\nPrivacy-Preserving Computation makes it possible to encode data in such a way that:\n\nIt can be used to train algorithms, yet\nIt cannot be used to identify you"
+    "text": "All Hope Is Not Lost!\n\nAnonymity via Synthetic Datasets: if identifying info already exists (e.g., in the US Census), we can generate synthetic datasets which\n\nHave the same distributional properties as the real data, but\nCannot be used to identify you\n\nPrivacy-Preserving Computation makes it possible to encode data in such a way that:\n\nIt can be used to train algorithms, yet\nIt cannot be used to identify you"
   },
   {
     "objectID": "w05/slides.html#first-things-first-nand",
     "href": "w05/slides.html#first-things-first-nand",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "First Things First: NAND",
     "text": "First Things First: NAND\n\nThe irreducible “atom” of computing, it turns out, is the NAND operation: the Negation of the AND operation, which we’ll denote using \\(\\barwedge\\):\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\wedge q\\)\n\\(p \\barwedge q\\)\n\n\n\n\n0\n0\n0\n1\n\n\n0\n1\n0\n1\n\n\n1\n0\n0\n1\n\n\n1\n1\n1\n0"
   },
   {
     "objectID": "w05/slides.html#why-is-nand-all-we-need",
     "href": "w05/slides.html#why-is-nand-all-we-need",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "Why is NAND All We Need?",
     "text": "Why is NAND All We Need?\n\nLogically: any boolean function can be decomposed (e.g., in “conjunctive normal form”) into negation (unary) and conjunction (binary). Here’s both, using only NAND!\n\n\n\n\n\nNegation (\\(\\neg\\))\n\n\n\n\n\n\n\\(p\\)\n\\(\\neg p\\)\n\\(p \\barwedge p\\)\n\n\n\n\n0\n1\n1\n\n\n1\n0\n0\n\n\n\n\n\n\n\n\nConjunction (\\(\\wedge\\))\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\wedge q\\)\n\\(p \\barwedge q\\)\n\\(\\left(p \\barwedge q\\right) \\barwedge \\left(p \\barwedge q\\right)\\)\n\n\n\n\n0\n0\n0\n1\n0\n\n\n0\n1\n0\n1\n0\n\n\n1\n0\n0\n1\n0\n\n\n1\n1\n1\n0\n1"
   },
   {
     "objectID": "w05/slides.html#or-as-a-bonus",
     "href": "w05/slides.html#or-as-a-bonus",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "OR as a Bonus!",
     "text": "OR as a Bonus!\n\nSince we now have \\(\\neg\\) and \\(\\wedge\\), we can derive \\(\\vee\\)!\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\vee q\\)\n\\(\\neg p\\)\n\\(\\neg q\\)\n\\(\\neg p \\wedge \\neg q\\)\n\\(\\neg\\left(\\neg p \\wedge \\neg q\\right)\\)\n\n\n\n\n0\n0\n0\n1\n1\n1\n0\n\n\n0\n1\n1\n1\n0\n0\n1\n\n\n1\n0\n1\n0\n1\n0\n1\n\n\n1\n1\n1\n0\n0\n0\n1\n\n\n\n\nThis is encapsulated in DeMorgan’s Laws:\n\n\\[\n\\begin{align*}\n\\neg(p \\wedge q) &= \\neg p \\vee \\neg q \\\\\n\\neg(p \\vee q) &= \\neg p \\wedge \\neg q\n\\end{align*}\n\\]"
   },
   {
     "objectID": "w05/slides.html#and-lastly-xor",
     "href": "w05/slides.html#and-lastly-xor",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "And Lastly: XOR",
     "text": "And Lastly: XOR\n\nExclusive or: \\(p \\oplus q\\) = “\\(p\\) or \\(q\\) but not both”\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\oplus q\\)\n\\(p \\vee q\\)\n\\(\\neg(p \\wedge q)\\)\n\\(\\left(p \\vee q) \\wedge \\neg (p \\wedge q\\right)\\)\n\n\n\n\n0\n0\n0\n0\n1\n0\n\n\n0\n1\n1\n1\n1\n1\n\n\n1\n0\n1\n1\n1\n1\n\n\n1\n1\n0\n1\n0\n0"
   },
   {
     "objectID": "w05/slides.html#logic-rightarrow-math",
     "href": "w05/slides.html#logic-rightarrow-math",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "Logic \\(\\rightarrow\\) Math",
     "text": "Logic \\(\\rightarrow\\) Math\n\nMathematically: (1) Math can be performed in base 2, and (2) If we have a way to add and multiply in base 2, we have the basic algebraic ring \\(\\mathbb{Z}_2\\) used for “doing math”!\nBut, let’s look at what happens when we do math in \\(\\mathbb{Z}_2\\):\n\n\n\n\n\nAddition (\\(+\\))\n\n\n\n\n\n\n\\(x\\)\n\\(y\\)\n\\(x +_{\\mathbb{Z}_2} y\\)\n\\(x \\oplus y\\)\n\n\n\n\n0\n0\n0\n0\n\n\n0\n1\n1\n1\n\n\n1\n0\n1\n1\n\n\n1\n1\n0\n0\n\n\n\n\n\n\n\n\nMultiplication (\\(\\times\\))\n\n\n\n\n\n\n\\(x\\)\n\\(y\\)\n\\(x \\times_{\\mathbb{Z}_2} y\\)\n\\(x \\wedge y\\)\n\n\n\n\n0\n0\n0\n0\n\n\n0\n1\n0\n0\n\n\n1\n0\n0\n0\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n\n\nTakeaway: Mathematical operations in \\(\\mathbb{Z}_2\\) are isomorphic to logical operators (over \\(\\text{T}, \\text{F}\\))!"
   },
   {
     "objectID": "w05/slides.html#implication-for-privacy-preserving-ai",
     "href": "w05/slides.html#implication-for-privacy-preserving-ai",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "Implication for Privacy-Preserving AI",
     "text": "Implication for Privacy-Preserving AI\n\nIf we can develop an algorithm allowing addition and multiplication on encrypted values, we can run any AI algorithm we want on the data!\nWe can (a) input encrypted data, then (b) use encrypted-addition and encrypted-multiplication in place of regular addition and multiplication\nExample: in RSA, the most widely-used encryption algorithm, \\(\\mathcal{E}(m) = m^e\\mod{n}\\), so multiplying the encrypted values produces the encrypyed version of the product!\n\n\\[\n\\begin{align*}\n\\mathcal{E}(m_1)\\times \\mathcal{E}(m_2) &= m_1^em_2^e\\mod{n} \\\\\n&= (m_1m_2)^e\\mod{n} \\\\\n&= \\mathcal{E}(m_1 \\times m_2)\n\\end{align*}\n\\]\n\nDoesn’t preserve addition, however:\n\n\\[\n\\begin{align*}\n\\mathcal{E}(m_1) + \\mathcal{E}(m_2) &= m_1^e + m_2^e\\mod{n} \\\\\n\\mathcal{E}(m_1 + m_2) &= (m_1 + m_2)^e\\mod{n}\n\\end{align*}\n\\]"
   },
   {
     "objectID": "w05/slides.html#application-zero-knowledge-proofs-and-voting",
     "href": "w05/slides.html#application-zero-knowledge-proofs-and-voting",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "Application: Zero-Knowledge Proofs and Voting",
     "text": "Application: Zero-Knowledge Proofs and Voting"
   },
   {
     "objectID": "w05/slides.html#references",
     "href": "w05/slides.html#references",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "References",
     "text": "References\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\n\n\nDSAN 5450 Week 5: Privacy-Preserving Computation"
   },
   {
     "objectID": "w05/index.html",
     "href": "w05/index.html",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "",
     "text": "Open slides in new window →"
   },
   {
     "objectID": "w05/index.html#the-right-to-privacy",
     "href": "w05/index.html#the-right-to-privacy",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "The “Right” to Privacy",
     "text": "The “Right” to Privacy\n\nIn Theory (Normatively): A right is an individual “veto” on a collective decision (Dworkin 1977)\nIn Practice (Descriptively): Rights grow out of the barrel of a gun"
   },
   {
     "objectID": "w05/index.html#all-hope-is-not-lost",
     "href": "w05/index.html#all-hope-is-not-lost",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "All Hope Is Not Lost!",
-    "text": "All Hope Is Not Lost!\n\nPrivacy-Preserving Computation makes it possible to encode data in such a way that:\n\nIt can be used to train algorithms, yet\nIt cannot be used to identify you"
+    "text": "All Hope Is Not Lost!\n\nAnonymity via Synthetic Datasets: if identifying info already exists (e.g., in the US Census), we can generate synthetic datasets which\n\nHave the same distributional properties as the real data, but\nCannot be used to identify you\n\nPrivacy-Preserving Computation makes it possible to encode data in such a way that:\n\nIt can be used to train algorithms, yet\nIt cannot be used to identify you"
   },
   {
     "objectID": "w05/index.html#first-things-first-nand",
     "href": "w05/index.html#first-things-first-nand",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "First Things First: NAND",
     "text": "First Things First: NAND\n\nThe irreducible “atom” of computing, it turns out, is the NAND operation: the Negation of the AND operation, which we’ll denote using \\(\\barwedge\\):\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\wedge q\\)\n\\(p \\barwedge q\\)\n\n\n\n\n0\n0\n0\n1\n\n\n0\n1\n0\n1\n\n\n1\n0\n0\n1\n\n\n1\n1\n1\n0"
   },
   {
     "objectID": "w05/index.html#why-is-nand-all-we-need",
     "href": "w05/index.html#why-is-nand-all-we-need",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "Why is NAND All We Need?",
     "text": "Why is NAND All We Need?\n\nLogically: any boolean function can be decomposed (e.g., in “conjunctive normal form”) into negation (unary) and conjunction (binary). Here’s both, using only NAND!\n\n\n\n\n\nNegation (\\(\\neg\\))\n\n\n\n\n\n\n\\(p\\)\n\\(\\neg p\\)\n\\(p \\barwedge p\\)\n\n\n\n\n0\n1\n1\n\n\n1\n0\n0\n\n\n\n\n\n\n\n\nConjunction (\\(\\wedge\\))\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\wedge q\\)\n\\(p \\barwedge q\\)\n\\(\\left(p \\barwedge q\\right) \\barwedge \\left(p \\barwedge q\\right)\\)\n\n\n\n\n0\n0\n0\n1\n0\n\n\n0\n1\n0\n1\n0\n\n\n1\n0\n0\n1\n0\n\n\n1\n1\n1\n0\n1"
   },
   {
     "objectID": "w05/index.html#or-as-a-bonus",
     "href": "w05/index.html#or-as-a-bonus",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "OR as a Bonus!",
     "text": "OR as a Bonus!\n\nSince we now have \\(\\neg\\) and \\(\\wedge\\), we can derive \\(\\vee\\)!\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\vee q\\)\n\\(\\neg p\\)\n\\(\\neg q\\)\n\\(\\neg p \\wedge \\neg q\\)\n\\(\\neg\\left(\\neg p \\wedge \\neg q\\right)\\)\n\n\n\n\n0\n0\n0\n1\n1\n1\n0\n\n\n0\n1\n1\n1\n0\n0\n1\n\n\n1\n0\n1\n0\n1\n0\n1\n\n\n1\n1\n1\n0\n0\n0\n1\n\n\n\n\nThis is encapsulated in DeMorgan’s Laws:\n\n\\[\n\\begin{align*}\n\\neg(p \\wedge q) &= \\neg p \\vee \\neg q \\\\\n\\neg(p \\vee q) &= \\neg p \\wedge \\neg q\n\\end{align*}\n\\]"
   },
   {
     "objectID": "w05/index.html#and-lastly-xor",
     "href": "w05/index.html#and-lastly-xor",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "And Lastly: XOR",
     "text": "And Lastly: XOR\n\nExclusive or: \\(p \\oplus q\\) = “\\(p\\) or \\(q\\) but not both”\n\n\n\n\n\\(p\\)\n\\(q\\)\n\\(p \\oplus q\\)\n\\(p \\vee q\\)\n\\(\\neg(p \\wedge q)\\)\n\\(\\left(p \\vee q) \\wedge \\neg (p \\wedge q\\right)\\)\n\n\n\n\n0\n0\n0\n0\n1\n0\n\n\n0\n1\n1\n1\n1\n1\n\n\n1\n0\n1\n1\n1\n1\n\n\n1\n1\n0\n1\n0\n0"
   },
   {
     "objectID": "w05/index.html#logic-rightarrow-math",
     "href": "w05/index.html#logic-rightarrow-math",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "Logic \\(\\rightarrow\\) Math",
     "text": "Logic \\(\\rightarrow\\) Math\n\nMathematically: (1) Math can be performed in base 2, and (2) If we have a way to add and multiply in base 2, we have the basic algebraic ring \\(\\mathbb{Z}_2\\) used for “doing math”!\nBut, let’s look at what happens when we do math in \\(\\mathbb{Z}_2\\):\n\n\n\n\n\nAddition (\\(+\\))\n\n\n\n\n\n\n\\(x\\)\n\\(y\\)\n\\(x +_{\\mathbb{Z}_2} y\\)\n\\(x \\oplus y\\)\n\n\n\n\n0\n0\n0\n0\n\n\n0\n1\n1\n1\n\n\n1\n0\n1\n1\n\n\n1\n1\n0\n0\n\n\n\n\n\n\n\n\nMultiplication (\\(\\times\\))\n\n\n\n\n\n\n\\(x\\)\n\\(y\\)\n\\(x \\times_{\\mathbb{Z}_2} y\\)\n\\(x \\wedge y\\)\n\n\n\n\n0\n0\n0\n0\n\n\n0\n1\n0\n0\n\n\n1\n0\n0\n0\n\n\n1\n1\n1\n1\n\n\n\n\n\n\n\n\n\nTakeaway: Mathematical operations in \\(\\mathbb{Z}_2\\) are isomorphic to logical operators (over \\(\\text{T}, \\text{F}\\))!"
   },
   {
     "objectID": "w05/index.html#implication-for-privacy-preserving-ai",
     "href": "w05/index.html#implication-for-privacy-preserving-ai",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "Implication for Privacy-Preserving AI",
     "text": "Implication for Privacy-Preserving AI\n\nIf we can develop an algorithm allowing addition and multiplication on encrypted values, we can run any AI algorithm we want on the data!\nWe can (a) input encrypted data, then (b) use encrypted-addition and encrypted-multiplication in place of regular addition and multiplication\nExample: in RSA, the most widely-used encryption algorithm, \\(\\mathcal{E}(m) = m^e\\mod{n}\\), so multiplying the encrypted values produces the encrypyed version of the product!\n\n\\[\n\\begin{align*}\n\\mathcal{E}(m_1)\\times \\mathcal{E}(m_2) &= m_1^em_2^e\\mod{n} \\\\\n&= (m_1m_2)^e\\mod{n} \\\\\n&= \\mathcal{E}(m_1 \\times m_2)\n\\end{align*}\n\\]\n\nDoesn’t preserve addition, however:\n\n\\[\n\\begin{align*}\n\\mathcal{E}(m_1) + \\mathcal{E}(m_2) &= m_1^e + m_2^e\\mod{n} \\\\\n\\mathcal{E}(m_1 + m_2) &= (m_1 + m_2)^e\\mod{n}\n\\end{align*}\n\\]"
   },
   {
     "objectID": "w05/index.html#application-zero-knowledge-proofs-and-voting",
     "href": "w05/index.html#application-zero-knowledge-proofs-and-voting",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "Application: Zero-Knowledge Proofs and Voting",
     "text": "Application: Zero-Knowledge Proofs and Voting"
   },
   {
     "objectID": "w05/index.html#references",
     "href": "w05/index.html#references",
-    "title": "Week 5: Privacy-Preserving Computation",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "References",
     "text": "References\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black."
   },

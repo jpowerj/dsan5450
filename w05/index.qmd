@@ -1,5 +1,5 @@
 ---
-title: "Week 5: Privacy-Preserving Computation"
+title: "Week 5: Anonymity, Privacy-Preserving Computation"
 subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2024, Georgetown University</span>"
 author: "Jeff Jacobs"
 institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
@@ -47,6 +47,9 @@ format:
 
 ## All Hope Is Not Lost!
 
+* **Anonymity via Synthetic Datasets**: if identifying info already exists (e.g., in the US Census), we can generate **synthetic datasets** which
+  * Have the same distributional properties as the real data, but
+  * Cannot be used to identify you
 * **Privacy-Preserving Computation** makes it possible to encode data in such a way that:
   * It can be used to train algorithms, yet
   * It cannot be used to identify you
