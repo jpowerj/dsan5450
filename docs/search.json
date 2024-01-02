@@ -60,7 +60,28 @@
     "href": "w05/slides.html#all-hope-is-not-lost",
     "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "All Hope Is Not Lost!",
-    "text": "All Hope Is Not Lost!\n\nAnonymity via Synthetic Datasets: if identifying info already exists (e.g., in the US Census), we can generate synthetic datasets which\n\nHave the same distributional properties as the real data, but\nCannot be used to identify you\n\nPrivacy-Preserving Computation makes it possible to encode data in such a way that:\n\nIt can be used to train algorithms, yet\nIt cannot be used to identify you"
+    "text": "All Hope Is Not Lost!\n\nAnonymity via Synthetic Datasets: if identifying info already exists (e.g., in the US Census), we can generate synthetic datasets which\n\nHave the same distributional properties as the real data, but\nCannot be used to identify you\n\n\\(\\varepsilon\\)-Differential Privacy: Allows us to quantify the tradeoff between accuracy and privacy\nHomomorphic Cryptography makes it possible to encode data in such a way that:\n\nIt can be used to train algorithms, yet\nIt cannot be used to identify you"
+  },
+  {
+    "objectID": "w05/slides.html#the-goal",
+    "href": "w05/slides.html#the-goal",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
+    "section": "The Goal",
+    "text": "The Goal\n\nEnable mathematical analysis of a privacy mechanism, via optimization with respect to the accuracy-privacy tradeoff:"
+  },
+  {
+    "objectID": "w05/slides.html#pareto-improvements-and-the-pareto-frontier",
+    "href": "w05/slides.html#pareto-improvements-and-the-pareto-frontier",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
+    "section": "Pareto Improvements and the Pareto Frontier",
+    "text": "Pareto Improvements and the Pareto Frontier"
+  },
+  {
+    "objectID": "w05/slides.html#varepsilon-differential-privacy-definition",
+    "href": "w05/slides.html#varepsilon-differential-privacy-definition",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
+    "section": "\\(\\varepsilon\\)-Differential Privacy Definition",
+    "text": "\\(\\varepsilon\\)-Differential Privacy Definition\n\nA privacy mechanism \\(M\\) provides \\(\\varepsilon\\)-differential privacy if:\n\nFor all pairs of datasets \\(x\\) and \\(y\\) which differ in the data of one person, and\nFor all (probability-theoretic) events \\(S\\)\n\n\n\\[\n\\Pr(M(x) \\in S) \\leq e^\\varepsilon \\Pr(M(y) \\in S)\n\\]"
   },
   {
     "objectID": "w05/slides.html#first-things-first-nand",
@@ -116,7 +137,7 @@
     "href": "w05/slides.html#references",
     "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "References",
-    "text": "References\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\n\n\nDSAN 5450 Week 5: Privacy-Preserving Computation"
+    "text": "References\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nRubin, Donald B. 1993. “Statistical Disclosure Limitation.” Journal of Official Statistics 9 (2): 461–68.\n\n\n\n\nDSAN 5450 Week 5: Privacy-Preserving Computation"
   },
   {
     "objectID": "w05/index.html",
@@ -137,7 +158,28 @@
     "href": "w05/index.html#all-hope-is-not-lost",
     "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "All Hope Is Not Lost!",
-    "text": "All Hope Is Not Lost!\n\nAnonymity via Synthetic Datasets: if identifying info already exists (e.g., in the US Census), we can generate synthetic datasets which\n\nHave the same distributional properties as the real data, but\nCannot be used to identify you\n\nPrivacy-Preserving Computation makes it possible to encode data in such a way that:\n\nIt can be used to train algorithms, yet\nIt cannot be used to identify you"
+    "text": "All Hope Is Not Lost!\n\nAnonymity via Synthetic Datasets: if identifying info already exists (e.g., in the US Census), we can generate synthetic datasets which\n\nHave the same distributional properties as the real data, but\nCannot be used to identify you\n\n\\(\\varepsilon\\)-Differential Privacy: Allows us to quantify the tradeoff between accuracy and privacy\nHomomorphic Cryptography makes it possible to encode data in such a way that:\n\nIt can be used to train algorithms, yet\nIt cannot be used to identify you"
+  },
+  {
+    "objectID": "w05/index.html#the-goal",
+    "href": "w05/index.html#the-goal",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
+    "section": "The Goal",
+    "text": "The Goal\n\nEnable mathematical analysis of a privacy mechanism, via optimization with respect to the accuracy-privacy tradeoff:"
+  },
+  {
+    "objectID": "w05/index.html#pareto-improvements-and-the-pareto-frontier",
+    "href": "w05/index.html#pareto-improvements-and-the-pareto-frontier",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
+    "section": "Pareto Improvements and the Pareto Frontier",
+    "text": "Pareto Improvements and the Pareto Frontier"
+  },
+  {
+    "objectID": "w05/index.html#varepsilon-differential-privacy-definition",
+    "href": "w05/index.html#varepsilon-differential-privacy-definition",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
+    "section": "\\(\\varepsilon\\)-Differential Privacy Definition",
+    "text": "\\(\\varepsilon\\)-Differential Privacy Definition\n\nA privacy mechanism \\(M\\) provides \\(\\varepsilon\\)-differential privacy if:\n\nFor all pairs of datasets \\(x\\) and \\(y\\) which differ in the data of one person, and\nFor all (probability-theoretic) events \\(S\\)\n\n\n\\[\n\\Pr(M(x) \\in S) \\leq e^\\varepsilon \\Pr(M(y) \\in S)\n\\]"
   },
   {
     "objectID": "w05/index.html#first-things-first-nand",
@@ -193,7 +235,7 @@
     "href": "w05/index.html#references",
     "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "References",
-    "text": "References\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black."
+    "text": "References\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nRubin, Donald B. 1993. “Statistical Disclosure Limitation.” Journal of Official Statistics 9 (2): 461–68."
   },
   {
     "objectID": "w03/slides.html#reflective-equilibrium",

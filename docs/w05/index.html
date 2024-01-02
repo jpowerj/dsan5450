@@ -181,7 +181,14 @@ div.csl-indent {
   <li><a href="#the-right-to-privacy" id="toc-the-right-to-privacy" class="nav-link" data-scroll-target="#the-right-to-privacy">The “Right” to Privacy</a></li>
   <li><a href="#all-hope-is-not-lost" id="toc-all-hope-is-not-lost" class="nav-link" data-scroll-target="#all-hope-is-not-lost">All Hope Is Not Lost!</a></li>
   </ul></li>
-  <li><a href="#homomorphic-cryptography" id="toc-homomorphic-cryptography" class="nav-link" data-scroll-target="#homomorphic-cryptography">Homomorphic Cryptography</a>
+  <li><a href="#synthetic-datasets" id="toc-synthetic-datasets" class="nav-link" data-scroll-target="#synthetic-datasets">Synthetic Datasets</a></li>
+  <li><a href="#varepsilon-differential-privacy" id="toc-varepsilon-differential-privacy" class="nav-link" data-scroll-target="#varepsilon-differential-privacy"><span class="math inline">\(\varepsilon\)</span>-Differential Privacy</a>
+  <ul class="collapse">
+  <li><a href="#the-goal" id="toc-the-goal" class="nav-link" data-scroll-target="#the-goal">The Goal</a></li>
+  <li><a href="#pareto-improvements-and-the-pareto-frontier" id="toc-pareto-improvements-and-the-pareto-frontier" class="nav-link" data-scroll-target="#pareto-improvements-and-the-pareto-frontier">Pareto Improvements and the Pareto Frontier</a></li>
+  <li><a href="#varepsilon-differential-privacy-definition" id="toc-varepsilon-differential-privacy-definition" class="nav-link" data-scroll-target="#varepsilon-differential-privacy-definition"><span class="math inline">\(\varepsilon\)</span>-Differential Privacy Definition</a></li>
+  </ul></li>
+  <li><a href="#privacy-preserving-computation" id="toc-privacy-preserving-computation" class="nav-link" data-scroll-target="#privacy-preserving-computation">Privacy-Preserving Computation</a>
   <ul class="collapse">
   <li><a href="#first-things-first-nand" id="toc-first-things-first-nand" class="nav-link" data-scroll-target="#first-things-first-nand">First Things First: <code>NAND</code></a></li>
   <li><a href="#why-is-nand-all-we-need" id="toc-why-is-nand-all-we-need" class="nav-link" data-scroll-target="#why-is-nand-all-we-need">Why is <code>NAND</code> All We Need?</a></li>
@@ -250,15 +257,16 @@ div.csl-indent {
 <li>In Practice (Descriptively): Rights grow out of the barrel of a gun</li>
 </ul>
 </section>
-<section id="all-hope-is-not-lost" class="level2">
-<h2 class="anchored" data-anchor-id="all-hope-is-not-lost">All Hope Is Not Lost!</h2>
+<section id="all-hope-is-not-lost" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="all-hope-is-not-lost">All Hope Is Not Lost!</h2>
 <ul>
 <li><strong>Anonymity via Synthetic Datasets</strong>: if identifying info already exists (e.g., in the US Census), we can generate <strong>synthetic datasets</strong> which
 <ul>
 <li>Have the same distributional properties as the real data, but</li>
 <li>Cannot be used to identify you</li>
 </ul></li>
-<li><strong>Privacy-Preserving Computation</strong> makes it possible to encode data in such a way that:
+<li><strong><span class="math inline">\(\varepsilon\)</span>-Differential Privacy</strong>: Allows us to <strong>quantify</strong> the tradeoff between <strong>accuracy</strong> and <strong>privacy</strong></li>
+<li><strong>Homomorphic Cryptography</strong> makes it possible to encode data in such a way that:
 <ul>
 <li>It can be used to train algorithms, yet</li>
 <li>It cannot be used to identify you</li>
@@ -266,8 +274,51 @@ div.csl-indent {
 </ul>
 </section>
 </section>
-<section id="homomorphic-cryptography" class="level1">
-<h1>Homomorphic Cryptography</h1>
+<section id="synthetic-datasets" class="level1">
+<h1>Synthetic Datasets</h1>
+<ul>
+<li>The issue: <strong>conflict</strong> between the benefits of scientific research and the privacy of subjects!</li>
+<li>Synthetic dataset generation escapes this condundrum by creating “fake” data with the same <strong>statistical properties</strong> as the real data</li>
+<li>This was one of the most promising approaches to privacy in computation, upon publication of <span class="citation" data-cites="rubin_statistical_1993">(<a href="#ref-rubin_statistical_1993" role="doc-biblioref">Rubin 1993</a>)</span>, but raised the question of how to <strong>ensure</strong> privacy, rather than hoping that fake data is sufficiently different</li>
+</ul>
+</section>
+<section id="varepsilon-differential-privacy" class="level1">
+<h1><span class="math inline">\(\varepsilon\)</span>-Differential Privacy</h1>
+<section id="the-goal" class="level2 crunch-title crunch-quarto-figure">
+<h2 class="crunch-title crunch-quarto-figure anchored" data-anchor-id="the-goal">The Goal</h2>
+<ul>
+<li>Enable <strong>mathematical</strong> analysis of a privacy mechanism, via optimization with respect to the accuracy-privacy tradeoff:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/accuracy_privacy.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="pareto-improvements-and-the-pareto-frontier" class="level2 smaller title-12">
+<h2 class="smaller title-12 anchored" data-anchor-id="pareto-improvements-and-the-pareto-frontier">Pareto Improvements and the Pareto Frontier</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/pareto.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="varepsilon-differential-privacy-definition" class="level2">
+<h2 class="anchored" data-anchor-id="varepsilon-differential-privacy-definition"><span class="math inline">\(\varepsilon\)</span>-Differential Privacy Definition</h2>
+<ul>
+<li>A privacy mechanism <span class="math inline">\(M\)</span> provides <span class="math inline">\(\varepsilon\)</span>-differential privacy if:
+<ul>
+<li>For all pairs of datasets <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> which differ in the data of one person, and</li>
+<li>For all (probability-theoretic) events <span class="math inline">\(S\)</span></li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+\Pr(M(x) \in S) \leq e^\varepsilon \Pr(M(y) \in S)
+\]</span></p>
+</section>
+</section>
+<section id="privacy-preserving-computation" class="level1">
+<h1>Privacy-Preserving Computation</h1>
 <section id="first-things-first-nand" class="level2">
 <h2 class="anchored" data-anchor-id="first-things-first-nand">First Things First: <code>NAND</code></h2>
 <ul>
@@ -650,6 +701,9 @@ div.csl-indent {
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-dworkin_taking_1977" class="csl-entry" role="listitem">
 Dworkin, Ronald. 1977. <em>Taking <span>Rights Seriously</span></em>. <span>A&amp;C Black</span>.
+</div>
+<div id="ref-rubin_statistical_1993" class="csl-entry" role="listitem">
+Rubin, Donald B. 1993. <span>“Statistical <span>Disclosure Limitation</span>.”</span> <em>Journal of Official Statistics</em> 9 (2): 461–68.
 </div>
 </div>
 

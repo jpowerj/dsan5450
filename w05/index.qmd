@@ -45,16 +45,45 @@ format:
 * In Theory (Normatively): A **right** is an individual "veto" on a collective decision [@dworkin_taking_1977]
 * In Practice (Descriptively): Rights grow out of the barrel of a gun
 
-## All Hope Is Not Lost!
+## All Hope Is Not Lost! {.smaller}
 
 * **Anonymity via Synthetic Datasets**: if identifying info already exists (e.g., in the US Census), we can generate **synthetic datasets** which
   * Have the same distributional properties as the real data, but
   * Cannot be used to identify you
-* **Privacy-Preserving Computation** makes it possible to encode data in such a way that:
+* **$\varepsilon$-Differential Privacy**: Allows us to **quantify** the tradeoff between **accuracy** and **privacy**
+* **Homomorphic Cryptography** makes it possible to encode data in such a way that:
   * It can be used to train algorithms, yet
   * It cannot be used to identify you
 
-# Homomorphic Cryptography
+# Synthetic Datasets
+
+* The issue: **conflict** between the benefits of scientific research and the privacy of subjects!
+* Synthetic dataset generation escapes this condundrum by creating "fake" data with the same **statistical properties** as the real data
+* This was one of the most promising approaches to privacy in computation, upon publication of [@rubin_statistical_1993], but raised the question of how to **ensure** privacy, rather than hoping that fake data is sufficiently different
+
+# $\varepsilon$-Differential Privacy
+
+## The Goal {.crunch-title .crunch-quarto-figure}
+
+* Enable **mathematical** analysis of a privacy mechanism, via optimization with respect to the accuracy-privacy tradeoff:
+
+![](images/accuracy_privacy.svg){fig-align="center"}
+
+## Pareto Improvements and the Pareto Frontier {.smaller .title-12}
+
+![](images/pareto.svg){fig-align="center"}
+
+## $\varepsilon$-Differential Privacy Definition
+
+* A privacy mechanism $M$ provides $\varepsilon$-differential privacy if:
+  * For all pairs of datasets $x$ and $y$ which differ in the data of one person, and
+  * For all (probability-theoretic) events $S$
+
+$$
+\Pr(M(x) \in S) \leq e^\varepsilon \Pr(M(y) \in S)
+$$
+
+# Privacy-Preserving Computation
 
 ## First Things First: `NAND`
 
