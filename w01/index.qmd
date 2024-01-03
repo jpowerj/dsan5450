@@ -38,6 +38,101 @@ format:
 
 :::
 
+# Who Am I? Why Is Georgetown Having Me Teach This? {data-stack-name="Intro"}
+
+## Prof. Jeff Introduction! {.crunch-title}
+
+* Born and raised in **NW DC** &rarr; high school in **Rockville, MD**
+* **University of Maryland**: Computer Science, Math, Economics *(2008-2012)*
+
+![](images/jj_dc_map.png){fig-align="center"}
+
+## Grad School {.crunch-title}
+
+* Studied abroad in **Beijing** (Peking University/北大) &rarr; internship with Huawei in **Hong Kong** (HKUST)
+
+::: columns
+::: {.column width="55%"}
+* **Stanford** for MS in Computer Science *(2012-2014)*
+* Research Economist at **UC Berkeley** *(2014-2015)*
+
+:::
+::: {.column width="45%"}
+
+![](images/bay_area_crop.png)
+
+:::
+:::
+
+* **Columbia** (NYC) for PhD[+Postdoc] in Political Science *(2015-2023)*
+
+## Dissertation (Political Science + History) {.title-09}
+
+*"Our Word is Our Weapon": Text-Analyzing Wars of Ideas from the French Revolution to the First Intifada*
+
+![](images/diss.png){fig-align="center"}
+
+
+## Research (Labor Economics) {.smaller .crunch-images .crunch-title .crunch-ul}
+
+::: columns
+::: {.column width="50%"}
+
+* <a href="https://www.aeaweb.org/articles?id=10.1257/aeri.20180150" target="_blank">*Monopsony in Online Labor Markets*</a>: ML to enhance causal estimates of effect of **job description language** on **uptake rate**
+
+:::
+::: {.column width="50%"}
+
+* *Freedom as Non-Domination in the Labor Market*: Strategic models of workers' rights (**monopsony** vs. **labor discipline**)
+
+<!-- ## Most Recently...
+
+* Chapter on "Freedom as Non-Domination in the Labor Market and in the Workplace" in *Republican Liberty: Philosophical, Political, and Economic Perspectives* (Cambridge University Press, 2024)
+* Submitted papers:
+  * "Meaning, Understanding, and Digitization in the History of Ideas"
+  * "Quantifying Cultural Diplomacy: The Soviet Union and the Diffusion of Marxism in the Third World, 1945--1991" -->
+
+:::
+:::
+
+* <a href="https://ieeexplore.ieee.org/document/9346539" target="_blank">*Unsupervised Extraction of Workplace Rights and Duties from Collective Bargaining Agreements*</a>: Linguistic (dependency) parses of contracts &rarr; time series of **worker** vs. **employer** rights and responsibilities over time
+
+<center>
+<img style="margin-top: 0px !important; margin-bottom: 0px !important;" src="images/cbas.jpeg" height="320"></img>
+
+<!-- ){.notopmargin fig-align="center" height=325 style="margin-top: 0px !important;"} -->
+
+## Why Is Georgetown Having Me Teach This? {.title-09 .crunch-title .crunch-ul}
+
+* PhD major was **Political Philosophy**, with secondary concentration in **International Relations**
+* Both involve ethics in a somewhat strange way
+* Rousseau's *Social Contract*, for example, asks what could make a government legitimate, "taking men [sic] as they are, and laws as they could be".
+* Yet ethics seems to care about "people as they could be", given "laws as they are"...
+* Gives rise to, e.g., **realism** in International Relations, but is "separation" of ethics from politics tenable? [@bowles_moral_2016]
+
+## My Background/Biases {.crunch-title .crunch-ul}
+
+* Raised in religious Jewish, far right-wing (Revisionist Zionist) Republican environment/family; atheism acceptable but...
+* "Encouraged" to emigrate to Israel for IDF service, but after learning history I renounced citizenship etc., family no longer big fans of me (Traumatic and scary to admit, ngl 🙈)
+* 2015-present: Teach CS + design thinking in refugee camps in West Bank and Gaza each summer (Code for Palestine)
+* Metaethics: Learn about the world, challenge and update prior beliefs (Bayes' rule!); I hope I can challenge+update them throughout the semester, with your help 🙂
+
+## Rules of Thumb {.crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-images .crunch-figcaption .crunch-li-4 .crunch-figures}
+
+::: {layout="[1,1]"}
+
+::: {#approach-text}
+
+* Ask questions about **power**, about **inequities** and especially about **structures** that give rise to them!
+* "Philosophers have hitherto only tried to *understand* the world; the point, however, is to *change* it." [@marx_thesen_1845]
+* Dialectical implication: the more we understand it the better we'll be at changing it
+
+:::
+
+![<a href='https://www.rlmartstudio.com/product/paradox/' target='_blank'>Ricardo Levins Morales Art Studio</a> / My office](images/camara3.jpg){fig-align="center" width="320"}
+
+:::
+
 # Ethics as an Axiomatic System {data-stack-name="Axioms" .crunch-title .crunch-figcaption .crunch-images}
 
 {{< include ../_globals-tex.qmd >}}
@@ -99,7 +194,7 @@ format:
 * Axiom 6: We'll define **addition**, $a + b$, as applying this **succession** operation $S$ to $a$, $b$ times. Thus $a + b = \underbrace{S(S(\cdots (S(}_{b\text{ times}}a))\cdots ))$
 * Result: (Axioms 1-6) $\implies 1 + 1 = S(1) = S(\{\{\}\}) = \{\{\{\}\}\} = 2. \; \blacksquare$ 
 
-## How Is This Relevant to Ethics? {.smaller .crunch-math-3 .crunch-ul-0 .crunch-title .crunch-p}
+## How Is This Relevant to Ethics? {.smaller .crunch-math-3 .crunch-ul .crunch-li-4 .crunch-title .crunch-p}
 
 *(Thank you for bearing with me on that 😅)*
 
@@ -344,13 +439,13 @@ $\implies$ *Social Outcome*: No Union
 
 :::
 
-## What Is Being Compared?
+## What Is Being Compared? {.crunch-title .crunch-ul}
 
 * Are countries with 1 billion people comparable to countries with 10 million people?
 * Are countries which were colonized comparable to the colonizing countries?
 * When did the colonized countries gain independence?
 
-![Sen, "China and India"](images/china_india.png){fig-align="center"}
+![@dreze_china_1991](images/china_india.png){fig-align="center"}
 
 ## Implementation
 

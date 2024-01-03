@@ -126,18 +126,25 @@
     "text": "Implication for Privacy-Preserving AI\n\nIf we can develop an algorithm allowing addition and multiplication on encrypted values, we can run any AI algorithm we want on the data!\nWe can (a) input encrypted data, then (b) use encrypted-addition and encrypted-multiplication in place of regular addition and multiplication\nExample: in RSA, the most widely-used encryption algorithm, \\(\\mathcal{E}(m) = m^e\\mod{n}\\), so multiplying the encrypted values produces the encrypyed version of the product!\n\n\\[\n\\begin{align*}\n\\mathcal{E}(m_1)\\times \\mathcal{E}(m_2) &= m_1^em_2^e\\mod{n} \\\\\n&= (m_1m_2)^e\\mod{n} \\\\\n&= \\mathcal{E}(m_1 \\times m_2)\n\\end{align*}\n\\]\n\nDoesn’t preserve addition, however:\n\n\\[\n\\begin{align*}\n\\mathcal{E}(m_1) + \\mathcal{E}(m_2) &= m_1^e + m_2^e\\mod{n} \\\\\n\\mathcal{E}(m_1 + m_2) &= (m_1 + m_2)^e\\mod{n}\n\\end{align*}\n\\]"
   },
   {
+    "objectID": "w05/slides.html#fully-homomorphic-encryption-possible-but-difficult",
+    "href": "w05/slides.html#fully-homomorphic-encryption-possible-but-difficult",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
+    "section": "Fully-Homomorphic Encryption: Possible But Difficult",
+    "text": "Fully-Homomorphic Encryption: Possible But Difficult\n\nThe gist is: each operation performed on the encrypted data adds a certain amount of noise, which means that after several computations the data becomes indecipherable (“Somewhat Homomorphic Encryption”)\nBut, as Gentry and Halevi (2011) showed, you can eliminate this problem by periodically “refreshing” the encryption before it reaches the indecipherable state\nMore robust and advanced FHE schemes have been developed in the years since, but this was the “it’s possible!” result that got the ball rolling"
+  },
+  {
     "objectID": "w05/slides.html#application-zero-knowledge-proofs-and-voting",
     "href": "w05/slides.html#application-zero-knowledge-proofs-and-voting",
     "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "Application: Zero-Knowledge Proofs and Voting",
-    "text": "Application: Zero-Knowledge Proofs and Voting"
+    "text": "Application: Zero-Knowledge Proofs and Voting\n\n\n\nFigure 1: https://www.youtube.com/watch?v=BYRTvoZ3Rho"
   },
   {
     "objectID": "w05/slides.html#references",
     "href": "w05/slides.html#references",
     "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "References",
-    "text": "References\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nRubin, Donald B. 1993. “Statistical Disclosure Limitation.” Journal of Official Statistics 9 (2): 461–68.\n\n\n\n\nDSAN 5450 Week 5: Privacy-Preserving Computation"
+    "text": "References\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nGentry, Craig, and Shai Halevi. 2011. “Implementing Gentry’s Fully-Homomorphic Encryption Scheme.” In Annual International Conference on the Theory and Applications of Cryptographic Techniques, 129–48. Springer.\n\n\nRubin, Donald B. 1993. “Statistical Disclosure Limitation.” Journal of Official Statistics 9 (2): 461–68.\n\n\n\n\nDSAN 5450 Week 5: Privacy-Preserving Computation"
   },
   {
     "objectID": "w05/index.html",
@@ -224,18 +231,25 @@
     "text": "Implication for Privacy-Preserving AI\n\nIf we can develop an algorithm allowing addition and multiplication on encrypted values, we can run any AI algorithm we want on the data!\nWe can (a) input encrypted data, then (b) use encrypted-addition and encrypted-multiplication in place of regular addition and multiplication\nExample: in RSA, the most widely-used encryption algorithm, \\(\\mathcal{E}(m) = m^e\\mod{n}\\), so multiplying the encrypted values produces the encrypyed version of the product!\n\n\\[\n\\begin{align*}\n\\mathcal{E}(m_1)\\times \\mathcal{E}(m_2) &= m_1^em_2^e\\mod{n} \\\\\n&= (m_1m_2)^e\\mod{n} \\\\\n&= \\mathcal{E}(m_1 \\times m_2)\n\\end{align*}\n\\]\n\nDoesn’t preserve addition, however:\n\n\\[\n\\begin{align*}\n\\mathcal{E}(m_1) + \\mathcal{E}(m_2) &= m_1^e + m_2^e\\mod{n} \\\\\n\\mathcal{E}(m_1 + m_2) &= (m_1 + m_2)^e\\mod{n}\n\\end{align*}\n\\]"
   },
   {
+    "objectID": "w05/index.html#fully-homomorphic-encryption-possible-but-difficult",
+    "href": "w05/index.html#fully-homomorphic-encryption-possible-but-difficult",
+    "title": "Week 5: Anonymity, Privacy-Preserving Computation",
+    "section": "Fully-Homomorphic Encryption: Possible But Difficult",
+    "text": "Fully-Homomorphic Encryption: Possible But Difficult\n\nThe gist is: each operation performed on the encrypted data adds a certain amount of noise, which means that after several computations the data becomes indecipherable (“Somewhat Homomorphic Encryption”)\nBut, as Gentry and Halevi (2011) showed, you can eliminate this problem by periodically “refreshing” the encryption before it reaches the indecipherable state\nMore robust and advanced FHE schemes have been developed in the years since, but this was the “it’s possible!” result that got the ball rolling"
+  },
+  {
     "objectID": "w05/index.html#application-zero-knowledge-proofs-and-voting",
     "href": "w05/index.html#application-zero-knowledge-proofs-and-voting",
     "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "Application: Zero-Knowledge Proofs and Voting",
-    "text": "Application: Zero-Knowledge Proofs and Voting"
+    "text": "Application: Zero-Knowledge Proofs and Voting\n\n\n\nFigure 1: https://www.youtube.com/watch?v=BYRTvoZ3Rho"
   },
   {
     "objectID": "w05/index.html#references",
     "href": "w05/index.html#references",
     "title": "Week 5: Anonymity, Privacy-Preserving Computation",
     "section": "References",
-    "text": "References\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nRubin, Donald B. 1993. “Statistical Disclosure Limitation.” Journal of Official Statistics 9 (2): 461–68."
+    "text": "References\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nGentry, Craig, and Shai Halevi. 2011. “Implementing Gentry’s Fully-Homomorphic Encryption Scheme.” In Annual International Conference on the Theory and Applications of Cryptographic Techniques, 129–48. Springer.\n\n\nRubin, Donald B. 1993. “Statistical Disclosure Limitation.” Journal of Official Statistics 9 (2): 461–68."
   },
   {
     "objectID": "w03/slides.html#reflective-equilibrium",
@@ -854,6 +868,55 @@
     "text": "Open slides in new window →"
   },
   {
+    "objectID": "w01/index.html#prof.-jeff-introduction",
+    "href": "w01/index.html#prof.-jeff-introduction",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Prof. Jeff Introduction!",
+    "text": "Prof. Jeff Introduction!\n\nBorn and raised in NW DC → high school in Rockville, MD\nUniversity of Maryland: Computer Science, Math, Economics (2008-2012)"
+  },
+  {
+    "objectID": "w01/index.html#grad-school",
+    "href": "w01/index.html#grad-school",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Grad School",
+    "text": "Grad School\n\nStudied abroad in Beijing (Peking University/北大) → internship with Huawei in Hong Kong (HKUST)\n\n\n\n\nStanford for MS in Computer Science (2012-2014)\nResearch Economist at UC Berkeley (2014-2015)\n\n\n\n\n\n\nColumbia (NYC) for PhD[+Postdoc] in Political Science (2015-2023)"
+  },
+  {
+    "objectID": "w01/index.html#dissertation-political-science-history",
+    "href": "w01/index.html#dissertation-political-science-history",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Dissertation (Political Science + History)",
+    "text": "Dissertation (Political Science + History)\n“Our Word is Our Weapon”: Text-Analyzing Wars of Ideas from the French Revolution to the First Intifada"
+  },
+  {
+    "objectID": "w01/index.html#research-labor-economics",
+    "href": "w01/index.html#research-labor-economics",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Research (Labor Economics)",
+    "text": "Research (Labor Economics)\n\n\n\nMonopsony in Online Labor Markets: ML to enhance causal estimates of effect of job description language on uptake rate\n\n\n\nFreedom as Non-Domination in the Labor Market: Strategic models of workers’ rights (monopsony vs. labor discipline)\n\n\n\n\n\nUnsupervised Extraction of Workplace Rights and Duties from Collective Bargaining Agreements: Linguistic (dependency) parses of contracts → time series of worker vs. employer rights and responsibilities over time"
+  },
+  {
+    "objectID": "w01/index.html#why-is-georgetown-having-me-teach-this",
+    "href": "w01/index.html#why-is-georgetown-having-me-teach-this",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Why Is Georgetown Having Me Teach This?",
+    "text": "Why Is Georgetown Having Me Teach This?\n\nPhD major was Political Philosophy, with secondary concentration in International Relations\nBoth involve ethics in a somewhat strange way\nRousseau’s Social Contract, for example, asks what could make a government legitimate, “taking men [sic] as they are, and laws as they could be”.\nYet ethics seems to care about “people as they could be”, given “laws as they are”…\nGives rise to, e.g., realism in International Relations, but is “separation” of ethics from politics tenable? (Bowles 2016)"
+  },
+  {
+    "objectID": "w01/index.html#my-backgroundbiases",
+    "href": "w01/index.html#my-backgroundbiases",
+    "title": "Week 1: Introduction to the Course",
+    "section": "My Background/Biases",
+    "text": "My Background/Biases\n\nRaised in religious Jewish, far right-wing (Revisionist Zionist) Republican environment/family; atheism acceptable but…\n“Encouraged” to emigrate to Israel for IDF service, but after learning history I renounced citizenship etc., family no longer big fans of me (Traumatic and scary to admit, ngl 🙈)\n2015-present: Teach CS + design thinking in refugee camps in West Bank and Gaza each summer (Code for Palestine)\nMetaethics: Learn about the world, challenge and update prior beliefs (Bayes’ rule!); I hope I can challenge+update them throughout the semester, with your help 🙂"
+  },
+  {
+    "objectID": "w01/index.html#rules-of-thumb",
+    "href": "w01/index.html#rules-of-thumb",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Rules of Thumb",
+    "text": "Rules of Thumb\n\n\n\n\nAsk questions about power, about inequities and especially about structures that give rise to them!\n“Philosophers have hitherto only tried to understand the world; the point, however, is to change it.” (Marx 1845)\nDialectical implication: the more we understand it the better we’ll be at changing it\n\n\n\n\n\n\nRicardo Levins Morales Art Studio / My office"
+  },
+  {
     "objectID": "w01/index.html#axiomatics",
     "href": "w01/index.html#axiomatics",
     "title": "Week 1: Introduction to the Course",
@@ -963,7 +1026,7 @@
     "href": "w01/index.html#what-is-being-compared",
     "title": "Week 1: Introduction to the Course",
     "section": "What Is Being Compared?",
-    "text": "What Is Being Compared?\n\nAre countries with 1 billion people comparable to countries with 10 million people?\nAre countries which were colonized comparable to the colonizing countries?\nWhen did the colonized countries gain independence?\n\n\n\n\nSen, “China and India”"
+    "text": "What Is Being Compared?\n\nAre countries with 1 billion people comparable to countries with 10 million people?\nAre countries which were colonized comparable to the colonizing countries?\nWhen did the colonized countries gain independence?\n\n\n\n\nDrèze and Sen (1991)"
   },
   {
     "objectID": "w01/index.html#implementation",
@@ -991,7 +1054,56 @@
     "href": "w01/index.html#references",
     "title": "Week 1: Introduction to the Course",
     "section": "References",
-    "text": "References\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nHume, David. 1739. A Treatise of Human Nature: Being an Attempt to Introduce the Experimental Method of Reasoning Into Moral Subjects; and Dialogues Concerning Natural Religion. Longmans, Green.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSenor, Dan, and Saul Singer. 2011. Start-up Nation: The Story of Israel’s Economic Miracle. Grand Central Publishing.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press."
+    "text": "References\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nBowles, Samuel. 2016. The Moral Economy: Why Good Incentives Are No Substitute for Good Citizens. Yale University Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nHume, David. 1739. A Treatise of Human Nature: Being an Attempt to Introduce the Experimental Method of Reasoning Into Moral Subjects; and Dialogues Concerning Natural Religion. Longmans, Green.\n\n\nMarx, Karl. 1845. Thesen über Feuerbach. Stuttgart: J. H. W. Dietz. https://de.wikisource.org/wiki/Thesen_%C3%BCber_Feuerbach.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSenor, Dan, and Saul Singer. 2011. Start-up Nation: The Story of Israel’s Economic Miracle. Grand Central Publishing.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press."
+  },
+  {
+    "objectID": "w01/slides.html#prof.-jeff-introduction",
+    "href": "w01/slides.html#prof.-jeff-introduction",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Prof. Jeff Introduction!",
+    "text": "Prof. Jeff Introduction!\n\nBorn and raised in NW DC → high school in Rockville, MD\nUniversity of Maryland: Computer Science, Math, Economics (2008-2012)"
+  },
+  {
+    "objectID": "w01/slides.html#grad-school",
+    "href": "w01/slides.html#grad-school",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Grad School",
+    "text": "Grad School\n\nStudied abroad in Beijing (Peking University/北大) → internship with Huawei in Hong Kong (HKUST)\n\n\n\n\nStanford for MS in Computer Science (2012-2014)\nResearch Economist at UC Berkeley (2014-2015)\n\n\n\n\n\n\nColumbia (NYC) for PhD[+Postdoc] in Political Science (2015-2023)"
+  },
+  {
+    "objectID": "w01/slides.html#dissertation-political-science-history",
+    "href": "w01/slides.html#dissertation-political-science-history",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Dissertation (Political Science + History)",
+    "text": "Dissertation (Political Science + History)\n“Our Word is Our Weapon”: Text-Analyzing Wars of Ideas from the French Revolution to the First Intifada"
+  },
+  {
+    "objectID": "w01/slides.html#research-labor-economics",
+    "href": "w01/slides.html#research-labor-economics",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Research (Labor Economics)",
+    "text": "Research (Labor Economics)\n\n\n\nMonopsony in Online Labor Markets: ML to enhance causal estimates of effect of job description language on uptake rate\n\n\n\nFreedom as Non-Domination in the Labor Market: Strategic models of workers’ rights (monopsony vs. labor discipline)\n\n\n\n\n\nUnsupervised Extraction of Workplace Rights and Duties from Collective Bargaining Agreements: Linguistic (dependency) parses of contracts → time series of worker vs. employer rights and responsibilities over time"
+  },
+  {
+    "objectID": "w01/slides.html#why-is-georgetown-having-me-teach-this",
+    "href": "w01/slides.html#why-is-georgetown-having-me-teach-this",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Why Is Georgetown Having Me Teach This?",
+    "text": "Why Is Georgetown Having Me Teach This?\n\nPhD major was Political Philosophy, with secondary concentration in International Relations\nBoth involve ethics in a somewhat strange way\nRousseau’s Social Contract, for example, asks what could make a government legitimate, “taking men [sic] as they are, and laws as they could be”.\nYet ethics seems to care about “people as they could be”, given “laws as they are”…\nGives rise to, e.g., realism in International Relations, but is “separation” of ethics from politics tenable? (Bowles 2016)"
+  },
+  {
+    "objectID": "w01/slides.html#my-backgroundbiases",
+    "href": "w01/slides.html#my-backgroundbiases",
+    "title": "Week 1: Introduction to the Course",
+    "section": "My Background/Biases",
+    "text": "My Background/Biases\n\nRaised in religious Jewish, far right-wing (Revisionist Zionist) Republican environment/family; atheism acceptable but…\n“Encouraged” to emigrate to Israel for IDF service, but after learning history I renounced citizenship etc., family no longer big fans of me (Traumatic and scary to admit, ngl 🙈)\n2015-present: Teach CS + design thinking in refugee camps in West Bank and Gaza each summer (Code for Palestine)\nMetaethics: Learn about the world, challenge and update prior beliefs (Bayes’ rule!); I hope I can challenge+update them throughout the semester, with your help 🙂"
+  },
+  {
+    "objectID": "w01/slides.html#rules-of-thumb",
+    "href": "w01/slides.html#rules-of-thumb",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Rules of Thumb",
+    "text": "Rules of Thumb\n\n\n\n\nAsk questions about power, about inequities and especially about structures that give rise to them!\n“Philosophers have hitherto only tried to understand the world; the point, however, is to change it.” (Marx 1845)\nDialectical implication: the more we understand it the better we’ll be at changing it\n\n\n\n\n\n\nRicardo Levins Morales Art Studio / My office"
   },
   {
     "objectID": "w01/slides.html#axiomatics",
@@ -1103,7 +1215,7 @@
     "href": "w01/slides.html#what-is-being-compared",
     "title": "Week 1: Introduction to the Course",
     "section": "What Is Being Compared?",
-    "text": "What Is Being Compared?\n\nAre countries with 1 billion people comparable to countries with 10 million people?\nAre countries which were colonized comparable to the colonizing countries?\nWhen did the colonized countries gain independence?\n\n\nSen, “China and India”"
+    "text": "What Is Being Compared?\n\nAre countries with 1 billion people comparable to countries with 10 million people?\nAre countries which were colonized comparable to the colonizing countries?\nWhen did the colonized countries gain independence?\n\n\nDrèze and Sen (1991)"
   },
   {
     "objectID": "w01/slides.html#implementation",
@@ -1131,6 +1243,6 @@
     "href": "w01/slides.html#references",
     "title": "Week 1: Introduction to the Course",
     "section": "References",
-    "text": "References\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nHume, David. 1739. A Treatise of Human Nature: Being an Attempt to Introduce the Experimental Method of Reasoning Into Moral Subjects; and Dialogues Concerning Natural Religion. Longmans, Green.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSenor, Dan, and Saul Singer. 2011. Start-up Nation: The Story of Israel’s Economic Miracle. Grand Central Publishing.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press.\n\n\n\n\nDSAN 5450 Week 1: Introduction"
+    "text": "References\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nBowles, Samuel. 2016. The Moral Economy: Why Good Incentives Are No Substitute for Good Citizens. Yale University Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nHume, David. 1739. A Treatise of Human Nature: Being an Attempt to Introduce the Experimental Method of Reasoning Into Moral Subjects; and Dialogues Concerning Natural Religion. Longmans, Green.\n\n\nMarx, Karl. 1845. Thesen über Feuerbach. Stuttgart: J. H. W. Dietz. https://de.wikisource.org/wiki/Thesen_%C3%BCber_Feuerbach.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSenor, Dan, and Saul Singer. 2011. Start-up Nation: The Story of Israel’s Economic Miracle. Grand Central Publishing.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press.\n\n\n\n\nDSAN 5450 Week 1: Introduction"
   }
 ]

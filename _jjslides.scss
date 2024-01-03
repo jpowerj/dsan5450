@@ -108,6 +108,11 @@ figcaption {
     margin: 0px !important;
 }
 
+// iframe
+.crunch-iframe iframe {
+    margin-bottom: 0px !important;
+}
+
 // images
 .crunch-images img {
     margin: 0px !important;
@@ -117,6 +122,21 @@ figcaption {
 .crunch-li li {
     margin-top: 2px !important;
     margin-bottom: 2px !important;
+}
+
+.crunch-li-3 li {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+}
+
+.crunch-li-4 li {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+}
+
+.crunch-li-5 li {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
 }
 
 .crunch-ul-0 ul {
@@ -191,6 +211,14 @@ figcaption {
 }
 
 // title smaller
+
+.title-07 h2 {
+    font-size: calc(0.7*var(--r-heading2-size)) !important;
+}
+
+.title-07 h1 {
+    font-size: calc(0.7*var(--r-heading2-size)) !important;
+}
 
 .title-08 h2 {
     font-size: calc(0.8*var(--r-heading2-size)) !important;

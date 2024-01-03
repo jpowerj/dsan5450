@@ -12,7 +12,6 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Jeff Jacobs">
-  <meta name="dcterms.date" content="2024-02-13">
   <title>DSAN 5450 - Week 5: Anonymity, Privacy-Preserving Computation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -362,7 +361,7 @@ Jeff Jacobs
     </div>
 </div>
 
-  <p class="date">2024-02-13</p>
+  <p class="date">Tuesday, February 13, 2024</p>
 </section>
 <section>
 <section id="privacy-and-why-it-matters" class="title-slide slide level1 center" data-stack-name="Overview">
@@ -392,7 +391,7 @@ Jeff Jacobs
 </ul></li>
 </ul>
 </section></section>
-<section id="synthetic-datasets" class="title-slide slide level1 center">
+<section id="synthetic-datasets" class="title-slide slide level1 center" data-name="Synthetic Data">
 <h1>Synthetic Datasets</h1>
 <ul>
 <li>The issue: <strong>conflict</strong> between the benefits of scientific research and the privacy of subjects!</li>
@@ -402,7 +401,7 @@ Jeff Jacobs
 </section>
 
 <section>
-<section id="varepsilon-differential-privacy" class="title-slide slide level1 center">
+<section id="varepsilon-differential-privacy" class="title-slide slide level1 center" data-stack-name="Differential Privacy">
 <h1><span class="math inline">\(\varepsilon\)</span>-Differential Privacy</h1>
 
 </section>
@@ -431,7 +430,7 @@ Jeff Jacobs
 \]</span></p>
 </section></section>
 <section>
-<section id="privacy-preserving-computation" class="title-slide slide level1 center">
+<section id="privacy-preserving-computation" class="title-slide slide level1 center" data-stack-name="Privacy-Preserving Computation">
 <h1>Privacy-Preserving Computation</h1>
 
 </section>
@@ -809,14 +808,31 @@ Jeff Jacobs
 \end{align*}
 \]</span></p>
 </section>
-<section id="application-zero-knowledge-proofs-and-voting" class="slide level2">
+<section id="fully-homomorphic-encryption-possible-but-difficult" class="slide level2 title-07">
+<h2>Fully-Homomorphic Encryption: Possible But Difficult</h2>
+<ul>
+<li>The gist is: each operation performed on the encrypted data adds a certain amount of <strong>noise</strong>, which means that after several computations the data becomes indecipherable (“Somewhat Homomorphic Encryption”)</li>
+<li><strong>But</strong>, as <span class="citation" data-cites="gentry_implementing_2011">Gentry and Halevi (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span> showed, you can eliminate this problem by periodically “refreshing” the encryption before it reaches the indecipherable state</li>
+<li>More robust and advanced FHE schemes have been developed in the years since, but this was the “it’s possible!” result that got the ball rolling</li>
+</ul>
+</section>
+<section id="application-zero-knowledge-proofs-and-voting" class="slide level2 smaller title-09 crunch-quarto-figure crunch-figcaption crunch-iframe">
 <h2>Application: Zero-Knowledge Proofs and Voting</h2>
+<div id="fig-voting" class="quarto-figure quarto-figure-center">
+<figure>
+<iframe data-external="1" src="https://www.youtube.com/embed/BYRTvoZ3Rho" width="100%" height="600" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<figcaption>Figure&nbsp;1: <a href="https://www.youtube.com/watch?v=BYRTvoZ3Rho" target="_blank">https://www.youtube.com/watch?v=BYRTvoZ3Rho</a></figcaption>
+</figure>
+</div>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-dworkin_taking_1977" class="csl-entry" role="listitem">
 Dworkin, Ronald. 1977. <em>Taking <span>Rights Seriously</span></em>. <span>A&amp;C Black</span>.
+</div>
+<div id="ref-gentry_implementing_2011" class="csl-entry" role="listitem">
+Gentry, Craig, and Shai Halevi. 2011. <span>“Implementing Gentry’s Fully-Homomorphic Encryption Scheme.”</span> In <em>Annual International Conference on the Theory and Applications of Cryptographic Techniques</em>, 129–48. <span>Springer</span>.
 </div>
 <div id="ref-rubin_statistical_1993" class="csl-entry" role="listitem">
 Rubin, Donald B. 1993. <span>“Statistical <span>Disclosure Limitation</span>.”</span> <em>Journal of Official Statistics</em> 9 (2): 461–68.

@@ -5,6 +5,7 @@ author: "Jeff Jacobs"
 institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
 bibliography: "../_DSAN5450.bib"
 date: 2024-02-13
+date-format: full
 lecnum: 5
 categories:
   - "Class Sessions"
@@ -55,13 +56,13 @@ format:
   * It can be used to train algorithms, yet
   * It cannot be used to identify you
 
-# Synthetic Datasets
+# Synthetic Datasets {data-name="Synthetic Data"}
 
 * The issue: **conflict** between the benefits of scientific research and the privacy of subjects!
 * Synthetic dataset generation escapes this condundrum by creating "fake" data with the same **statistical properties** as the real data
 * This was one of the most promising approaches to privacy in computation, upon publication of [@rubin_statistical_1993], but raised the question of how to **ensure** privacy, rather than hoping that fake data is sufficiently different
 
-# $\varepsilon$-Differential Privacy
+# $\varepsilon$-Differential Privacy {data-stack-name="Differential Privacy"}
 
 ## The Goal {.crunch-title .crunch-quarto-figure}
 
@@ -83,7 +84,7 @@ $$
 \Pr(M(x) \in S) \leq e^\varepsilon \Pr(M(y) \in S)
 $$
 
-# Privacy-Preserving Computation
+# Privacy-Preserving Computation {data-stack-name="Privacy-Preserving Computation"}
 
 ## First Things First: `NAND`
 
@@ -468,9 +469,20 @@ $$
 \end{align*}
 $$
 
-## Application: Zero-Knowledge Proofs and Voting
+## Fully-Homomorphic Encryption: Possible But Difficult {.title-07}
 
+* The gist is: each operation performed on the encrypted data adds a certain amount of **noise**, which means that after several computations the data becomes indecipherable ("Somewhat Homomorphic Encryption")
+* **But**, as @gentry_implementing_2011 showed, you can eliminate this problem by periodically "refreshing" the encryption before it reaches the indecipherable state
+* More robust and advanced FHE schemes have been developed in the years since, but this was the "it's possible!" result that got the ball rolling
 
+## Application: Zero-Knowledge Proofs and Voting {.smaller .title-09 .crunch-quarto-figure .crunch-figcaption .crunch-iframe}
+
+::: {#fig-voting}
+
+{{< video https://www.youtube.com/watch?v=BYRTvoZ3Rho width="100%" height="600" >}}
+
+<a href='https://www.youtube.com/watch?v=BYRTvoZ3Rho' target='_blank'>https://www.youtube.com/watch?v=BYRTvoZ3Rho</a>
+:::
 
 ## References
 
