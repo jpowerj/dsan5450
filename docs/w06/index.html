@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jeff Jacobs">
-<meta name="dcterms.date" content="2024-01-24">
 
-<title>DSAN 5450 - Week 2: Machine Learning and Training Data</title>
+<title>DSAN 5450 - Week 6: Midterm</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,26 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -83,8 +63,6 @@ div.csl-indent {
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../jjcustom.js"></script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -98,7 +76,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../w02/index.html">Week 2: Jan 24</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../w06/index.html">Week 6: Feb 20</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -144,7 +122,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../w02/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../w02/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2: Jan 24</span></a>
   </div>
 </li>
@@ -168,7 +146,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../w06/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../w06/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Week 6: Feb 20</span></a>
   </div>
 </li>
@@ -184,38 +162,14 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#three-component-parts-of-machine-learning" id="toc-three-component-parts-of-machine-learning" class="nav-link active" data-scroll-target="#three-component-parts-of-machine-learning">Three Component Parts of Machine Learning</a></li>
-  <li><a href="#machine-learning" id="toc-machine-learning" class="nav-link" data-scroll-target="#machine-learning">Machine Learning</a>
-  <ul class="collapse">
-  <li><a href="#a-cool-algorithm" id="toc-a-cool-algorithm" class="nav-link" data-scroll-target="#a-cool-algorithm">A Cool Algorithm</a></li>
-  </ul></li>
-  <li><a href="#training-data" id="toc-training-data" class="nav-link" data-scroll-target="#training-data">Training Data</a>
-  <ul class="collapse">
-  <li><a href="#training-data-1" id="toc-training-data-1" class="nav-link" data-scroll-target="#training-data-1">Training Data</a></li>
-  <li><a href="#word-embeddings" id="toc-word-embeddings" class="nav-link" data-scroll-target="#word-embeddings">Word Embeddings</a></li>
-  <li><a href="#removing-vs.-studying-biases" id="toc-removing-vs.-studying-biases" class="nav-link" data-scroll-target="#removing-vs.-studying-biases">Removing vs.&nbsp;Studying Biases</a></li>
-  </ul></li>
-  <li><a href="#human-labor" id="toc-human-labor" class="nav-link" data-scroll-target="#human-labor">Human Labor</a>
-  <ul class="collapse">
-  <li><a href="#generating-training-data" id="toc-generating-training-data" class="nav-link" data-scroll-target="#generating-training-data">Generating Training Data</a></li>
-  <li><a href="#what-comes-with-human-labels-human-biases" id="toc-what-comes-with-human-labels-human-biases" class="nav-link" data-scroll-target="#what-comes-with-human-labels-human-biases">What Comes With Human Labels? Human Biases!</a></li>
-  <li><a href="#reification-in-science" id="toc-reification-in-science" class="nav-link" data-scroll-target="#reification-in-science">Reification in Science</a></li>
-  <li><a href="#next-week-working-towards-solutions" id="toc-next-week-working-towards-solutions" class="nav-link" data-scroll-target="#next-week-working-towards-solutions">Next Week: Working Towards Solutions</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></li>
-  </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
-    </div>
+        
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 2: Machine Learning and Training Data</h1>
+<h1 class="title">Week 6: Midterm</h1>
 <p class="subtitle lead"><em>DSAN 5450: Data Ethics and Policy</em><br><span class="subsubtitle">Spring 2024, Georgetown University</span></p>
   <div class="quarto-categories">
     <div class="quarto-category">Class Sessions</div>
@@ -243,7 +197,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 24, 2024</p>
+      <p class="date">Tuesday, February 13, 2024</p>
     </div>
   </div>
   
@@ -256,167 +210,10 @@ div.csl-indent {
 <center>
 <a class="h2" href="./slides.html" target="_blank">Open slides in new window →</a>
 </center>
-<section id="three-component-parts-of-machine-learning" class="level1">
-<h1>Three Component Parts of Machine Learning</h1>
-<ol type="1">
-<li>A cool algorithm</li>
-<li>Training data</li>
-<li>Human labor</li>
-</ol>
-</section>
-<section id="machine-learning" class="level1" data-stack-name="Machine Learning">
-<h1 data-stack-name="Machine Learning">Machine Learning</h1>
-<section id="a-cool-algorithm" class="level2 smaller crunch-title">
-<h2 class="smaller crunch-title anchored" data-anchor-id="a-cool-algorithm">A Cool Algorithm</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/neural_network.svg" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</section>
-</section>
-<section id="training-data" class="level1" data-stack-name="Training Data">
-<h1 data-stack-name="Training Data">Training Data</h1>
-<section id="training-data-1" class="level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure">
-<h2 class="smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure anchored" data-anchor-id="training-data-1">Training Data</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/pronouns.jpg" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/translate.jpg" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<p>From <a href="http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2" target="_blank"><em>Gendered Innovations in Science, Health &amp; Medicine, Engineering, and Environment</em></a></p>
-</section>
-<section id="word-embeddings" class="level2 smaller crunch-title">
-<h2 class="smaller crunch-title anchored" data-anchor-id="word-embeddings">Word Embeddings</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/bolukbasi2016.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="bolukbasi_man_2016">Bolukbasi et al. (<a href="#ref-bolukbasi_man_2016" role="doc-biblioref">2016</a>)</span></figcaption>
-</figure>
-</div>
-</section>
-<section id="removing-vs.-studying-biases" class="level2 smaller crunch-title">
-<h2 class="smaller crunch-title anchored" data-anchor-id="removing-vs.-studying-biases">Removing vs.&nbsp;Studying Biases</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/kozlowski_full.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">From <span class="citation" data-cites="kozlowski_geometry_2019">Kozlowski, Taddy, and Evans (<a href="#ref-kozlowski_geometry_2019" role="doc-biblioref">2019</a>)</span></figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/wordbias_custom.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption"><a href="https://www3.cs.stonybrook.edu/~mueller/research/pages/wordbias/" target="_blank">WordBias: An Interactive Tool for Discovering Intersectional Biases Encoded in Word Embeddings</a></figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="human-labor" class="level1" data-stack-name="Human Labor">
-<h1 data-stack-name="Human Labor">Human Labor</h1>
-<section id="generating-training-data" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="generating-training-data">Generating Training Data</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="images/snorkel_human_labelers.jpg" class="img-fluid"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="images/snorkel_training_data.jpg" class="img-fluid"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="what-comes-with-human-labels-human-biases" class="level2 smaller title-11 crunch-quarto-layout-panel crunch-quarto-figure crunch-title crunch-ul">
-<h2 class="smaller title-11 crunch-quarto-layout-panel crunch-quarto-figure crunch-title crunch-ul anchored" data-anchor-id="what-comes-with-human-labels-human-biases">What Comes With Human Labels? Human Biases!</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="biases-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<ul>
-<li><strong>“Reification”</strong>: Pretentious word for an important phenomenon, whereby talking about something (e.g., race) <em>as if</em> it was real ends up leading to it becoming real (having real impacts on people’s lives)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
-</ul>
-<blockquote class="blockquote">
-<p>On average, being classified as a White man as opposed to a Coloured man would have more than quadrupled a person’s income. <span class="citation" data-cites="pellicer_understanding_2023">(<a href="#ref-pellicer_understanding_2023" role="doc-biblioref">Pellicer and Ranchhod 2023</a>)</span></p>
-</blockquote>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/permit_crop.jpeg" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/passport.webp" class="img-fluid figure-img" width="380"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="reification-in-science" class="level2">
-<h2 class="anchored" data-anchor-id="reification-in-science">Reification in Science</h2>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Goodhart%27s_law" target="_blank">Goodhart’s Law</a>: “When a measure becomes a target, it ceases to be a good measure”</li>
-<li>Cat-and-mouse game between <strong>goals</strong> and ways of <strong>measuring</strong> progress towards goals</li>
-</ul>
-</section>
-<section id="next-week-working-towards-solutions" class="level2">
-<h2 class="anchored" data-anchor-id="next-week-working-towards-solutions">Next Week: Working Towards Solutions</h2>
-<ul>
-<li>There is a large literature on <strong>fairness in AI</strong></li>
-<li>But, to understand this, we’ll need to understand <strong>ethical frameworks</strong>!</li>
-<li>Remember: Cannot “prove” <span class="math inline">\(q = [\text{Algorithm is fair}]\)</span>. Only <span class="math inline">\(p \implies q\)</span>, where <span class="math inline">\(p\)</span> is some <strong>ethical framework</strong>!</li>
-</ul>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-bolukbasi_man_2016" class="csl-entry" role="listitem">
-Bolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. <span>“Man Is to <span>Computer Programmer</span> as <span>Woman</span> Is to <span>Homemaker</span>? <span>Debiasing Word Embeddings</span>.”</span> In <em>Advances in <span>Neural Information Processing Systems</span></em>. Vol. 29. <span>Curran Associates, Inc.</span> <a href="https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html">https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html</a>.
-</div>
-<div id="ref-fields_racecraft_2012" class="csl-entry" role="listitem">
-Fields, Barbara J., and Karen E. Fields. 2012. <em>Racecraft: <span>The Soul</span> of <span>Inequality</span> in <span>American Life</span></em>. <span>Verso Books</span>.
-</div>
-<div id="ref-kozlowski_geometry_2019" class="csl-entry" role="listitem">
-Kozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. <span>“The <span>Geometry</span> of <span>Culture</span>: <span>Analyzing</span> the <span>Meanings</span> of <span>Class</span> Through <span>Word Embeddings</span>.”</span> <em>American Sociological Review</em> 84 (5): 905–49. <a href="https://doi.org/10.1177/0003122419877135">https://doi.org/10.1177/0003122419877135</a>.
-</div>
-<div id="ref-pellicer_understanding_2023" class="csl-entry" role="listitem">
-Pellicer, Miquel, and Vimal Ranchhod. 2023. <span>“Understanding the Effects of Racial Classification in <span>Apartheid South Africa</span>.”</span> <em>Journal of Development Economics</em> 160 (January): 102998. <a href="https://doi.org/10.1016/j.jdeveco.2022.102998">https://doi.org/10.1016/j.jdeveco.2022.102998</a>.
-</div>
-</div>
 
 
-</section>
-</section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p><span class="citation" data-cites="fields_racecraft_2012">Fields and Fields (<a href="#ref-fields_racecraft_2012" role="doc-biblioref">2012</a>)</span>, for example, uses the term <strong>“racecraft”</strong> to describe the reification of blackness in the US<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

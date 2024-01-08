@@ -31,5 +31,9 @@
   "w07/index.qmd": {
     "slides.html": "d2edbb97",
     "index.html": "cb7f4611"
+  },
+  "w06/index.qmd": {
+    "slides.html": "eda799c0",
+    "index.html": "14033e95"
   }
 }
