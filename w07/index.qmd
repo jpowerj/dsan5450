@@ -39,4 +39,23 @@ format:
 
 :::
 
-# 
+# Descriptive Public Policy: What *Are* The Frameworks?
+
+* GDPR
+
+## GDPR: General Data Protection Regulation (EU)
+
+* Provides definitions of, e.g., "personal data", "data processing", "controller"
+
+# Normative Public Policy: What *Should* We Regulate?
+
+## UN Global Digital Compact (GDC) {.crunch-title .crunch-li-5}
+
+* Connecting the unconnected
+* Avoiding fragmentation of the Internet
+* Providing people with options as to how their data is used
+* Application of human rights online
+* Accountability for discrimination and misleading content.
+* Regulation of artificial intelligence to
+ensure alignment with shared global values
+* Amnesty International: "Transparency in acquisition and use of surveillance technolgoies by both public actors and private surveillance companies"
