@@ -40,6 +40,8 @@ format:
 
 # Who Am I? Why Is Georgetown Having Me Teach This? {data-stack-name="Intro"}
 
+{{< include ../_globals-py.qmd >}}
+
 ## Prof. Jeff Introduction! {.crunch-title}
 
 * Born and raised in **NW DC** &rarr; high school in **Rockville, MD**
@@ -72,50 +74,111 @@ format:
 
 ![](images/diss.png){fig-align="center"}
 
+## Why Is Georgetown Having Me Teach This? {.smaller .title-09 .crunch-title .crunch-ul .crunch-quarto-layout-panel}
 
-## Research (Labor Economics) {.smaller .crunch-images .crunch-title .crunch-ul}
+::: {layout="[1,1]" layout-align="center" layout-valign="center"}
+::: {#why-background-left}
 
-::: columns
-::: {.column width="50%"}
-
-* <a href="https://www.aeaweb.org/articles?id=10.1257/aeri.20180150" target="_blank">*Monopsony in Online Labor Markets*</a>: ML to enhance causal estimates of effect of **job description language** on **uptake rate**
-
-:::
-::: {.column width="50%"}
-
-* *Freedom as Non-Domination in the Labor Market*: Strategic models of workers' rights (**monopsony** vs. **labor discipline**)
-
-<!-- ## Most Recently...
-
-* Chapter on "Freedom as Non-Domination in the Labor Market and in the Workplace" in *Republican Liberty: Philosophical, Political, and Economic Perspectives* (Cambridge University Press, 2024)
-* Submitted papers:
-  * "Meaning, Understanding, and Digitization in the History of Ideas"
-  * "Quantifying Cultural Diplomacy: The Soviet Union and the Diffusion of Marxism in the Third World, 1945--1991" -->
+* Quanty things, but then PhD major was **Political Philosophy** (concentration in **International Relations**)
+* What most interested me: <a href='https://unravelhistory.com/' target='_blank'>**unraveling history**</a>; Easy to get lost in "present-day" details of e.g. **debiasing** algorithms and **fairness in AI**, but these questions go back literally thousands of years!
+* Pol philosophers distinguish "ancients" and "moderns" based on a crucial **shift in perspective**: ancients sought perfection, while @rousseau_social_1762 "took men [sic] as they are, and laws as they could be".
 
 :::
-:::
-
-* <a href="https://ieeexplore.ieee.org/document/9346539" target="_blank">*Unsupervised Extraction of Workplace Rights and Duties from Collective Bargaining Agreements*</a>: Linguistic (dependency) parses of contracts &rarr; time series of **worker** vs. **employer** rights and responsibilities over time
-
+::: {#fig-background-right}
 <center>
-<img style="margin-top: 0px !important; margin-bottom: 0px !important;" src="images/cbas.jpeg" height="320"></img>
 
-<!-- ){.notopmargin fig-align="center" height=325 style="margin-top: 0px !important;"} -->
+```{python}
+#| label: bg-sunburst
+#| fig-align: center
+#| align: center
+import plotly.express as px
+import plotly.io as pio
+pio.renderers.default = "notebook"
+import pandas as pd
+year_df = pd.DataFrame({
+  'field': ['Math<br>(BS)','CS<br>(BS,MS)','Pol Phil<br>(PhD Pt 1)','Econ<br>(BS+Job)','Pol Econ<br>(PhD Pt 2)'],
+  'cat': ['Quant','Quant','Humanities','Social Sci','Social Sci'],
+  'yrs': [4, 6, 3, 6, 5]
+})
+fig = px.sunburst(
+    year_df, path=['cat','field'], values='yrs',
+    width=450, height=400, color='cat',
+    color_discrete_map={'Quant': cb_palette[0], 'Humanities': cb_palette[1], 'Social Sci': cb_palette[2]},
+    hover_data=[]
+)
+fig.update_traces(
+   hovertemplate=None,
+   hoverinfo='skip'
+)
+# Update layout for tight margin
+# See https://plotly.com/python/creating-and-updating-figures/
+fig.update_layout(margin = dict(t=0, l=0, r=0, b=0))
+fig.show()
+```
+</center>
 
-## Why Is Georgetown Having Me Teach This? {.title-09 .crunch-title .crunch-ul}
+Years spent questing in various dungeons of academia
+:::
+:::
 
-* PhD major was **Political Philosophy**, with secondary concentration in **International Relations**
-* Both involve ethics in a somewhat strange way
-* Rousseau's *Social Contract*, for example, asks what could make a government legitimate, "taking men [sic] as they are, and laws as they could be".
-* Yet ethics seems to care about "people as they could be", given "laws as they are"...
-* Gives rise to, e.g., **realism** in International Relations, but is "separation" of ethics from politics tenable? [@bowles_moral_2016]
+* But is separation of ethics from politics possible? [@bowles_moral_2016] Should we accept "human nature" as immutable/eternal? My answer: yes AND no simultaneously...
 
-## My Background/Biases {.crunch-title .crunch-ul}
+<!-- Might seem boring+abstract (and it is), but... -->
 
-* Raised in religious Jewish, far right-wing (Revisionist Zionist) Republican environment/family; atheism acceptable but...
+## Dialectics {.smaller .crunch-title}
+
+![](images/angela_davis.webp){fig-align="center"}
+
+## My Background/Biases {.smaller .crunch-title .crunch-ul .crunch-quarto-layout-figure .crunch-quarto-figure}
+
+::: {layout="[4,3]" layout-valign="center"}
+::: {#biases-left}
+
+* Raised in religious Jewish, right-wing (Revisionist Zionist) Republican environment
 * "Encouraged" to emigrate to Israel for IDF service, but after learning history I renounced citizenship etc., family no longer big fans of me (Traumatic and scary to admit, ngl 🙈)
 * 2015-present: Teach CS + design thinking in refugee camps in West Bank and Gaza each summer (Code for Palestine)
-* Metaethics: Learn about the world, challenge and update prior beliefs (Bayes' rule!); I hope I can challenge+update them throughout the semester, with your help 🙂
+* Metaethics: Learn about the world, challenge+update prior beliefs (Bayes' rule!); I hope to challenge+update them throughout semester, with your help 🙂
+
+:::
+::: {#biases-right}
+
+![](images/land_map.png){fig-align="center" width="420"}
+
+:::
+:::
+
+## On the One Hand... {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-images .crunch-quarto-figure}
+
+::: {layout="[1,1]"}
+::: {#emails-left}
+
+![](images/JJHATESPREADER.jpg){fig-align="center" width="240"}
+
+![](images/columbia_email.png){fig-align="center" width="300"}
+
+:::
+::: {#emails-right}
+
+![](images/palestine_legal_crop.png){width="440" fig-align="center"}
+
+:::
+:::
+
+## On the Other Hand... {.smaller .crunch-title .crunch-quarto-layout-panel}
+
+::: {layout="[1,1]"}
+
+![](images/2019-07-28%2015.26.49-1.jpg){fig-align="center" width="400"}
+
+![](images/aya_and_leen_crop.jpeg){fig-align="center" width="340"}
+
+:::
+
+## Remembering Why It Matters
+
+<center>
+{{< video https://www.youtube.com/watch?v=Dq6Y6LSjulU width="100%" height="550" align="center" >}}
+</center>
 
 ## Rules of Thumb {.crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-images .crunch-figcaption .crunch-li-4 .crunch-figures}
 
@@ -356,11 +419,11 @@ $\neg P_5 \implies T \neq 180^\circ$
 * $q$ = *Union dues are voluntary*
 * $p \wedge q \implies$ I can obtain benefits of unions without paying
 * $\implies$ **Individually rational** to **not** pay dues
-* *(Think also about how this applies to **climate change policy**)*
+* *(Think also about how this applies to **climate change policy**)* 🤔
 
 :::
 
-![@olson_logic_1965](images/olson.jpg){fig-align="center" width="360"}
+![@olson_logic_1965](images/olson.jpg){fig-align="center" width="350"}
 
 :::
 
@@ -421,17 +484,21 @@ $\implies$ *Social Outcome*: No Union
 
 :::
 
-## Operationalization {.smaller}
+## Operationalization {.smaller .crunch-title .crunch-li}
 
-::: {layout="[1,1]"}
+::: {layout="[3,2]"}
 
 ::: {#oper-text}
 
 * Think about claims commonly made on the basis of "data":
-  * Free markets cause economic prosperity
+  * Markets create economic prosperity
   * A glass of wine in the evening prevents cancer
   * Policing makes communities safer
 * How exactly are "prosperity", "preventing cancer", "policing", "community safety" being **measured**?
+
+<center>
+{{< video https://jpj.georgetown.domains/dsan5450-scratch/huey.mp4 height="300" >}}
+</center>
 
 :::
 
@@ -447,16 +514,48 @@ $\implies$ *Social Outcome*: No Union
 
 ![@dreze_china_1991](images/china_india.png){fig-align="center"}
 
-## Implementation
+## Implementation {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-figcaption .crunch-images}
 
-![From @dignazio_data_2020, Ch. 6 (<a href='https://www.insidehighered.com/news/2014/07/17/colleges-often-win-reduction-fines-federal-campus-safety-violations' target='_blank'>see also</a>)](images/clery.jpg)
+::: {layout="[1,1]"}
 
-# Ethical Issues in *Applying* Data Science {.title-11 .not-title-slide .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-title data-stack-name="Data Science"}
+![From @dignazio_data_2020, Ch. 6 (<a href='https://www.insidehighered.com/news/2014/07/17/colleges-often-win-reduction-fines-federal-campus-safety-violations' target='_blank'>see also</a>)](images/clery.jpg){fig-align="center"}
 
-* Self-Driving Cars
-* Facial Recognition Algorithms
-* Large Language Models
-* Military and Police Applications of AI
+::: {#implementation-right}
+
+![](images/arresting_citizenship.jpeg){fig-align="center" width="410"}
+
+![From @lerman_arresting_2014](images/weaver_fig62.jpeg){fig-align="center" width="410"}
+
+:::
+:::
+
+## Fairness... 🧐 {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-images .crunch-quarto-figure .crunch-figcaption}
+
+::: {layout="[4,3]" layout-valign="center"}
+::: {#fig-fairness-left}
+
+![](images/lily_hu_1.svg){fig-align="center" width="350"}
+
+![](images/lily_hu_2.svg){fig-align="center" width="350"}
+
+From Lily Hu, <a href='https://www.phenomenalworld.org/analysis/direct-effects/' target='_blank'>*Direct Effects: How Should We Measure Racial Discrimination?*</a>, *Phenomenal World*, 25 September 2020
+:::
+::: {#fairness-right}
+
+![From @kasy_fairness_2021](images/kasy_abebe.jpeg){#fig-kasy fig-align="center"}
+
+:::
+:::
+
+## ...And INVERSE Fairness 🤯 {.smaller .crunch-title}
+
+![From *Machine Learning What Policymakers Value* [@bjorkegren_machine_2022]](images/inverse_fairness.jpeg){fig-align="center"}
+
+# Ethical Issues in *Applying* Data Science {.title-09 .not-title-slide .crunch-quarto-layout-panel .crunch-quarto-figure data-stack-name="Applications"}
+
+<center>
+![](images/airobot.jpeg){fig-align="center" width="800"}
+</center>
 
 ## Facial Recognition Algorithms {.crunch-title .smaller .crunch-quarto-layout-panel .crunch-images .crunch-quarto-figure .crunch-figcaption}
 
@@ -472,17 +571,60 @@ $\implies$ *Social Outcome*: No Union
 
 :::
 
+## Large Language Models {.crunch-title .smaller}
+
+::: {layout="[2,3]" layout-valign="center"}
+
+![From @schiebinger_machine_2020](images/pronouns.jpg){#fig-pronouns fig-align="center"}
+
+::: {#fig-embedding-bias-right}
+
+![](images/neutralizing.png){fig-align="center"}
+![](images/embeddings-equalizing.png){fig-align="center"}
+
+From DeepLearning.AI's <a href='https://www.coursera.org/lecture/nlp-sequence-models/debiasing-word-embeddings-zHASj' target='_blank'>Deep Learning course</a>
+:::
+:::
+
 ## Military and Police Applications of AI {.crunch-title .smaller}
 
 ::: {layout="[1,1]"}
 
-![@senor_startup_2011](images/startup-nation.jpg){fig-align="center" width="300"}
+![@ayyub_app_2019](images/doroob.jpeg){fig-align="center" width="410"}
 
 ![@mcneil_israel_2022](images/israel-ai.jpeg){fig-align="center" width="300"}
 
+:::
+
+# Your Job: Policy Whitepaper {.title-11 .not-title-slide data-stack-name="Policy"}
+
+* So... is technology/data science/machine learning "bad" in and of itself, or a tool to be wielded for both "good" and "bad" uses?
+* How can we **curtail** uses of some kinds and/or **encourage** other uses?
+* If only we had some sort of... institution... for **governing** its use in society... some sort of... **govern**... ment?
+
+## From Week 7 Onwards, You Work At A Think Tank {.smaller .crunch-title .title-11 .crunch-images .crunch-quarto-figure}
+
+::: {layout="[3,4]" layout-valign="center"}
+
+::: {#think-tank-left}
+
+![](images/aei_crop.jpeg){fig-align="center" width="360"}
+
+![](images/aei2_crop.jpeg){fig-align="center" width="360"}
+
+![@morozov_socialize_2015](images/morozov2.jpeg){fig-align="center" width="360"}
+
+:::
+::: {#think-tank-right}
+
+![From @ames_techtopus_2014](images/techtopus.jpeg){fig-align="center"}
+
+:::
 :::
 
 ## References
 
 ::: {#refs}
 :::
+
+<!-- ![@senor_startup_2011](images/startup-nation.jpg){fig-align="center" width="300"} -->
