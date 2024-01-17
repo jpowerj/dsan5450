@@ -35,5 +35,8 @@
   "w06/index.qmd": {
     "slides.html": "eda799c0",
     "index.html": "14033e95"
+  },
+  "recordings/index.qmd": {
+    "index.html": "a0f564f1"
   }
 }
