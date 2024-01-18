@@ -12,6 +12,8 @@ website:
         href: index.qmd
       - text: "Syllabus"
         href: syllabus.qmd
+      - text: "Recordings"
+        href: recordings/index.qmd
       - "---"
       - text: "Week 1: Jan 17"
         href: "w01/index.qmd"
@@ -27,6 +29,10 @@ website:
         href: "w06/index.qmd"
       - text: "Week 7: Feb 27"
         href: "w07/index.qmd"
+      - "---"
+      - text: "Anonymous Suggestions<i class='bi bi-box-arrow-up-right ps-1'></i>"
+        href: "https://forms.gle/LLQsiwGy5kkH5n3PA"
+        target: "_blank"
 
 format:
   html:
