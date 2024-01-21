@@ -8,12 +8,14 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Jeff Jacobs">
   <meta name="dcterms.date" content="2024-01-24">
-  <title>DSAN 5450 - Week 2: Machine Learning and Training Data</title>
+  <title>DSAN 5450 - Week 2: Machine Learning, Training Data, and Bias</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -348,7 +350,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 2: Machine Learning and Training Data</h1>
+  <h1 class="title">Week 2: Machine Learning, Training Data, and Bias</h1>
   <p class="subtitle"><em>DSAN 5450: Data Ethics and Policy</em><br><span class="subsubtitle">Spring 2024, Georgetown University</span></p>
 
 <div class="quarto-title-authors">
@@ -364,30 +366,285 @@ Jeff Jacobs
 
   <p class="date">2024-01-24</p>
 </section>
-<section id="three-component-parts-of-machine-learning" class="title-slide slide level1 center">
-<h1>Three Component Parts of Machine Learning</h1>
+<section id="overview-slouching-towards-fairness" class="title-slide slide level1 smaller not-title-slide title-09 center" data-stack-name="Overview">
+<h1>Overview: Slouching Towards Fairness</h1>
+<ul>
+<li>First half: Remaining high-level issues!</li>
+<li>Second half: you’ll start to understand why I kept maniacally pointing to <span class="math inline">\(p \implies q\)</span> on the board last lecture!</li>
+<li>“Rules” for fairness are not “rules” at all! They’re statements of the form <strong>“If we accept ethical framework <span class="math inline">\(x\)</span>, then our algorithms ought to satisfy condition <span class="math inline">\(y\)</span>”</strong></li>
+</ul>
+<p><span class="math display">\[
+\underbrace{p(x)}_{\substack{\text{Accept ethical} \\ \text{framework }x}} \implies \underbrace{q(y)}_{\substack{\text{Algorithms should} \\ \text{satisfy condition }y}}
+\]</span></p>
+<ul>
+<li>Last week: very broad intro to <strong>possible ethical frameworks</strong> (values for <span class="math inline">\(x\)</span>)</li>
+<li>Today: very broad intro to <strong>possible fairness criteria</strong> (values for <span class="math inline">\(y\)</span>)</li>
+<li>End of today: <strong>HW1: Nuts and Bolts for Evaluating Fairness</strong></li>
+</ul>
+</section>
+
+<section>
+<section id="ethical-issues-in-data-science" class="title-slide slide level1 title-11 not-title-slide crunch-quarto-layout-panel crunch-quarto-figure crunch-title center" data-stack-name="Data Science">
+<h1>Ethical Issues in Data Science</h1>
+<ul>
+<li>Data Science for Who?</li>
+<li>Operationalization</li>
+<li>Fair Comparisons</li>
+<li>Implementation</li>
+</ul>
+</section>
+<section id="data-science-for-who" class="slide level2">
+<h2>Data Science for Who?</h2>
+<ul>
+<li>What are the processes by which data is <strong>measured</strong>, <strong>recorded</strong>, and <strong>distributed</strong>?</li>
+</ul>
+
+<img data-src="images/missing-datasets.jpg" class="r-stretch quarto-figure-center"><p class="caption">The <a href="https://github.com/MimiOnuoha/missing-datasets" target="_blank">Library of Missing Datasets</a>. From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></section>
+<section id="example-measuring-freedom-and-human-rights" class="slide level2 smaller title-10">
+<h2>Example: Measuring “Freedom” and “Human Rights”</h2>
+<ul>
+<li><strong>Freedom House Ratings</strong> are the most common measure of “freedom” in a country, across social science literature; <strong>US State Dept. Country Reports on Human Rights Practices</strong> are the most common measure of “human rights” in a country, across social science literature
+<ul>
+<li>(you can take my word for it, or browse e.g.&nbsp;<a href="https://www.cambridge.org/core/journals/american-political-science-review" target="_blank">American Political Science Review</a>)</li>
+</ul></li>
+<li>…So what’s the issue? (What is Jeff whining about this time?)</li>
+</ul>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/freedom_house_funding.jpeg"></p>
+<figcaption>From <a href="https://freedomhouse.org/about-us/financials">Freedom House, Inc., <em>Notes to Financial Statements</em> (2023)</a>, p.&nbsp;21</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/state_dept_human_rights.jpeg" width="400"></p>
+<figcaption>From <a href="https://www.state.gov/reports/2022-country-reports-on-human-rights-practices/" target="_blank">state.gov/reports</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-measuring-freedom-and-human-rights-1" class="slide level2 smaller title-10">
+<h2>Example: Measuring “Freedom” and “Human Rights”</h2>
+
+<img data-src="images/yells_at_cloud_edit.jpg" class="r-stretch quarto-figure-center"></section>
+<section id="operationalization" class="slide level2 smaller crunch-title crunch-li">
+<h2>Operationalization</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="oper-text" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<ul>
+<li>Think about claims commonly made on the basis of “data”:
+<ul>
+<li>Markets create economic prosperity</li>
+<li>A glass of wine in the evening prevents cancer</li>
+<li>Policing makes communities safer</li>
+</ul></li>
+<li>How exactly are “prosperity”, “preventing cancer”, “policing”, “community safety” being <strong>measured</strong>?</li>
+</ul>
+<center>
+<video id="video_shortcode_videojs_video1" height="300" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="https://jpj.georgetown.domains/dsan5450-scratch/huey.mp4"></video>
+</center>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/mismeasuring.jpg"></p>
+<figcaption><span class="citation" data-cites="stiglitz_mismeasuring_2010">Stiglitz, Sen, and Fitoussi (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-being-compared" class="slide level2 crunch-title crunch-ul">
+<h2>What Is Being Compared?</h2>
+<ul>
+<li>Are countries with 1 billion people comparable to countries with 10 million people?</li>
+<li>Are countries which were colonized comparable to the colonizing countries?</li>
+<li>When did the colonized countries gain independence?</li>
+</ul>
+
+<img data-src="images/china_india.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="dreze_china_1991">Drèze and Sen (<a href="#/references" role="doc-biblioref" onclick="">1991</a>)</span></p></section>
+<section id="implementation" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption crunch-images">
+<h2>Implementation</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clery.jpg"></p>
+<figcaption>From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span>, Ch. 6 (<a href="https://www.insidehighered.com/news/2014/07/17/colleges-often-win-reduction-fines-federal-campus-safety-violations" target="_blank">see also</a>)</figcaption>
+</figure>
+</div>
+</div>
+<div id="implementation-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/arresting_citizenship.jpeg" width="410"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/weaver_fig62.jpeg" width="410"></p>
+<figcaption>From <span class="citation" data-cites="lerman_arresting_2014">Lerman and Weaver (<a href="#/references" role="doc-biblioref" onclick="">2014</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="fairness" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption">
+<h2>Fairness… 🧐</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="fig-fairness-left" class="quarto-figure quarto-figure-center" style="flex-basis: 57.1%;justify-content: center;">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/lily_hu_1.svg" width="350"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/lily_hu_2.svg" width="350"></p>
+</figure>
+</div>
+<figcaption>Figure&nbsp;1: From Lily Hu, <a href="https://www.phenomenalworld.org/analysis/direct-effects/" target="_blank"><em>Direct Effects: How Should We Measure Racial Discrimination?</em></a>, <em>Phenomenal World</em>, 25 September 2020</figcaption>
+</figure>
+</div>
+<div id="fairness-right" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: center;">
+<div id="fig-kasy" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/kasy_abebe.jpeg"></p>
+<figcaption>Figure&nbsp;2: From <span class="citation" data-cites="kasy_fairness_2021">Kasy and Abebe (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="and-inverse-fairness" class="slide level2 smaller crunch-title">
+<h2>…And INVERSE Fairness 🤯</h2>
+
+<img data-src="images/inverse_fairness.jpeg" class="r-stretch quarto-figure-center"><p class="caption">From <em>Machine Learning What Policymakers Value</em> <span class="citation" data-cites="bjorkegren_machine_2022">(<a href="#/references" role="doc-biblioref" onclick="">Björkegren, Blumenstock, and Knight 2022</a>)</span></p></section></section>
+<section>
+<section id="ethical-issues-in-applying-data-science" class="title-slide slide level1 title-09 not-title-slide crunch-quarto-layout-panel crunch-quarto-figure center" data-stack-name="Applications">
+<h1>Ethical Issues in <em>Applying</em> Data Science</h1>
+<center>
+<img data-src="images/airobot.jpeg" data-fig-align="center" width="800">
+</center>
+</section>
+<section id="facial-recognition-algorithms" class="slide level2 crunch-title smaller crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption">
+<h2>Facial Recognition Algorithms</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/facial-recognition.webp" width="400"></p>
+<figcaption><span class="citation" data-cites="facia.ai_facial_2023">Facia.ai (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/wellcome_jewish_type_crop.jpeg" width="360"></p>
+<figcaption><span class="citation" data-cites="wellcomecollection_composite_1890">Wellcome Collection (<a href="#/references" role="doc-biblioref" onclick="">1890</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pixel-face-unlock.webp" width="400"></p>
+<figcaption><span class="citation" data-cites="ouz_google_2023">Ouz (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/deep_learning_gay_detection_crop.jpeg" width="360"></p>
+<figcaption><span class="citation" data-cites="wang_deep_2018">Wang and Kosinski (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="large-language-models" class="slide level2 crunch-title smaller">
+<h2>Large Language Models</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<div id="fig-pronouns" class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pronouns.jpg"></p>
+<figcaption>Figure&nbsp;3: From <span class="citation" data-cites="schiebinger_machine_2020">Schiebinger et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+<div id="fig-embedding-bias-right" class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
+<figure>
+<p><img data-src="images/neutralizing.png" data-fig-align="center"> <img data-src="images/embeddings-equalizing.png" data-fig-align="center"></p>
+<figcaption>Figure&nbsp;4: From DeepLearning.AI’s <a href="https://www.coursera.org/lecture/nlp-sequence-models/debiasing-word-embeddings-zHASj" target="_blank">Deep Learning course</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="military-and-police-applications-of-ai" class="slide level2 crunch-title smaller">
+<h2>Military and Police Applications of AI</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/doroob.jpeg" width="410"></p>
+<figcaption><span class="citation" data-cites="ayyub_app_2019">Ayyub (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/israel-ai.jpeg" width="300"></p>
+<figcaption><span class="citation" data-cites="mcneil_israel_2022">McNeil (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<!-- ![@senor_startup_2011](images/startup-nation.jpg){fig-align="center" width="300"} -->
+</section></section>
+<section>
+<section id="machine-learning-at-30000-feet" class="title-slide slide level1 center" data-stack-name="Machine Learning">
+<h1>Machine Learning at 30,000 Feet</h1>
+
+</section>
+<section id="three-component-parts-of-machine-learning" class="slide level2">
+<h2>Three Component Parts of Machine Learning</h2>
 <ol type="1">
 <li>A cool algorithm</li>
 <li>Training data</li>
 <li>Human labor</li>
 </ol>
 </section>
-
-<section>
-<section id="machine-learning" class="title-slide slide level1 center" data-stack-name="Machine Learning">
-<h1>Machine Learning</h1>
-
-</section>
 <section id="a-cool-algorithm" class="slide level2 smaller crunch-title">
 <h2>A Cool Algorithm</h2>
 
-<img data-src="images/neural_network.svg" class="r-stretch quarto-figure-center"></section></section>
-<section>
-<section id="training-data" class="title-slide slide level1 center" data-stack-name="Training Data">
-<h1>Training Data</h1>
-
-</section>
-<section id="training-data-1" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure">
+<img data-src="images/neural_network.svg" class="r-stretch quarto-figure-center"></section>
+<section id="training-data" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure">
 <h2>Training Data</h2>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-center">
@@ -435,14 +692,12 @@ Jeff Jacobs
 </div>
 </div>
 </div>
-</section></section>
-<section>
-<section id="human-labor" class="title-slide slide level1 center" data-stack-name="Human Labor">
-<h1>Human Labor</h1>
-
 </section>
-<section id="generating-training-data" class="slide level2 smaller">
-<h2>Generating Training Data</h2>
+<section id="human-labor" class="slide level2 smaller">
+<h2>Human Labor</h2>
+<ul>
+<li>Generating Training Data</li>
+</ul>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -487,29 +742,134 @@ Jeff Jacobs
 <li><a href="https://en.wikipedia.org/wiki/Goodhart%27s_law" target="_blank">Goodhart’s Law</a>: “When a measure becomes a target, it ceases to be a good measure”</li>
 <li>Cat-and-mouse game between <strong>goals</strong> and ways of <strong>measuring</strong> progress towards goals</li>
 </ul>
+</section></section>
+<section>
+<section id="nuts-and-bolts-for-fairness" class="title-slide slide level1 center" data-stack-name="Fairness">
+<h1>Nuts and Bolts for Fairness</h1>
+
 </section>
-<section id="next-week-working-towards-solutions" class="slide level2">
-<h2>Next Week: Working Towards Solutions</h2>
+<section id="one-final-reminder" class="slide level2 crunch-title">
+<h2>One Final Reminder</h2>
 <ul>
-<li>There is a large literature on <strong>fairness in AI</strong></li>
-<li>But, to understand this, we’ll need to understand <strong>ethical frameworks</strong>!</li>
-<li>Remember: Cannot “prove” <span class="math inline">\(q = [\text{Algorithm is fair}]\)</span>. Only <span class="math inline">\(p \implies q\)</span>, where <span class="math inline">\(p\)</span> is some <strong>ethical framework</strong>!</li>
+<li>Industry rule #4080: Cannot “prove” <span class="math inline">\(q(x) = \text{``Algorithm }x\text{ is fair''}\)</span>! Only <span class="math inline">\(p(x) \implies q(y)\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+\underbrace{p(x)}_{\substack{\text{Accept ethical} \\ \text{framework }x}} \implies \underbrace{q(y)}_{\substack{\text{Algorithms should} \\ \text{satisfy condition }y}}
+\]</span></p>
+<ul>
+<li>Last week: very broad intro to <strong>possible ethical frameworks</strong> (values for <span class="math inline">\(x\)</span>)</li>
+<li>Today: very broad intro to <strong>possible fairness criteria</strong> (values for <span class="math inline">\(y\)</span>)</li>
+</ul>
+</section>
+<section id="who-remembers-confusion-matrices" class="slide level2 smaller">
+<h2>Who Remembers Confusion Matrices?</h2>
+<ul>
+<li>Let <span class="math inline">\(Y_i\)</span> be “desirable” outcome for person <span class="math inline">\(i\)</span>, <span class="math inline">\(D_i\)</span> be algorithmic decision for person <span class="math inline">\(i\)</span></li>
+<li>For binary <span class="math inline">\(Y_i\)</span> and <span class="math inline">\(D_i\)</span>, there are <strong>eight possible conditional probabilities</strong> we might care about (whether <strong>descriptively</strong> or <strong>normatively</strong>!)</li>
+</ul>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="confusion-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<table data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\Pr(D_i \mid Y_i)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(D_i = 0\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(D_i = 1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(Y_i = 0\)</span></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(Y_i = 1\)</span></td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="confusion-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<table data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\Pr(Y_i \mid D_i)\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(D_i = 0\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(D_i = 1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(Y_i = 0\)</span></td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(Y_i = 1\)</span></td>
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">8</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li>Entry 5, for example, tells us: “<strong>Given</strong> that the algorithm <strong>decided 0</strong> for person <span class="math inline">\(i\)</span>, what is the probability that the desirable outcome for person <span class="math inline">\(i\)</span> was 0?”</li>
 </ul>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-ayyub_app_2019" class="csl-entry" role="listitem">
+Ayyub, Rami. 2019. <span>“App Aims to Help <span>Palestinian</span> Drivers Find Their Way Around Checkpoints.”</span> <em>The Times of Israel</em>, August. <a href="https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/">https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/</a>.
+</div>
+<div id="ref-bjorkegren_machine_2022" class="csl-entry" role="listitem">
+Björkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. <span>“(<span>Machine</span>) <span>Learning What Policies Value</span>.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.2206.00727">https://doi.org/10.48550/arXiv.2206.00727</a>.
+</div>
 <div id="ref-bolukbasi_man_2016" class="csl-entry" role="listitem">
 Bolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. <span>“Man Is to <span>Computer Programmer</span> as <span>Woman</span> Is to <span>Homemaker</span>? <span>Debiasing Word Embeddings</span>.”</span> In <em>Advances in <span>Neural Information Processing Systems</span></em>. Vol. 29. <span>Curran Associates, Inc.</span> <a href="https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html">https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html</a>.
+</div>
+<div id="ref-dignazio_data_2020" class="csl-entry" role="listitem">
+D’Ignazio, Catherine, and Lauren F. Klein. 2020. <em>Data <span>Feminism</span></em>. <span>MIT Press</span>.
+</div>
+<div id="ref-dreze_china_1991" class="csl-entry" role="listitem">
+Drèze, Jean, and Amartya Sen. 1991. <span>“China and <span>India</span>.”</span> In <em>Hunger and <span>Public Action</span></em>, 0. <span>Oxford University Press</span>. <a href="https://doi.org/10.1093/0198283652.003.0011">https://doi.org/10.1093/0198283652.003.0011</a>.
+</div>
+<div id="ref-facia.ai_facial_2023" class="csl-entry" role="listitem">
+Facia.ai. 2023. <span>“Facial <span>Recognition Helps Vendors</span> in <span>Healthcare</span>.”</span> <em>Facia.ai</em>. <a href="https://facia.ai/blog/facial-recognition-healthcare/">https://facia.ai/blog/facial-recognition-healthcare/</a>.
 </div>
 <div id="ref-fields_racecraft_2012" class="csl-entry" role="listitem">
 Fields, Barbara J., and Karen E. Fields. 2012. <em>Racecraft: <span>The Soul</span> of <span>Inequality</span> in <span>American Life</span></em>. <span>Verso Books</span>.
 </div>
+<div id="ref-kasy_fairness_2021" class="csl-entry" role="listitem">
+Kasy, Maximilian, and Rediet Abebe. 2021. <span>“Fairness, <span>Equality</span>, and <span>Power</span> in <span>Algorithmic Decision-Making</span>.”</span> In <em>Proceedings of the 2021 <span>ACM Conference</span> on <span>Fairness</span>, <span>Accountability</span>, and <span>Transparency</span></em>, 576–86. <span>FAccT</span> ’21. <span>New York, NY, USA</span>: <span>Association for Computing Machinery</span>. <a href="https://doi.org/10.1145/3442188.3445919">https://doi.org/10.1145/3442188.3445919</a>.
+</div>
 <div id="ref-kozlowski_geometry_2019" class="csl-entry" role="listitem">
 Kozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. <span>“The <span>Geometry</span> of <span>Culture</span>: <span>Analyzing</span> the <span>Meanings</span> of <span>Class</span> Through <span>Word Embeddings</span>.”</span> <em>American Sociological Review</em> 84 (5): 905–49. <a href="https://doi.org/10.1177/0003122419877135">https://doi.org/10.1177/0003122419877135</a>.
 </div>
+<div id="ref-lerman_arresting_2014" class="csl-entry" role="listitem">
+Lerman, Amy E., and Vesla M. Weaver. 2014. <em>Arresting <span>Citizenship</span>: <span>The Democratic Consequences</span> of <span>American Crime Control</span></em>. <span>University of Chicago Press</span>.
+</div>
+<div id="ref-mcneil_israel_2022" class="csl-entry" role="listitem">
+McNeil, Sam. 2022. <span>“Israel Deploys Remote-Controlled Robotic Guns in <span>West Bank</span>.”</span> <em>AP News</em>, November. <a href="https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88">https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88</a>.
+</div>
+<div id="ref-ouz_google_2023" class="csl-entry" role="listitem">
+Ouz. 2023. <span>“Google <span>Pixel</span> 8 <span>Face Unlock Vulnerability Discovered</span>, <span>Allowing Others</span> to <span>Unlock Devices</span>.”</span> <em>Gizmochina</em>. <a href="https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/">https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/</a>.
+</div>
 <div id="ref-pellicer_understanding_2023" class="csl-entry" role="listitem">
 Pellicer, Miquel, and Vimal Ranchhod. 2023. <span>“Understanding the Effects of Racial Classification in <span>Apartheid South Africa</span>.”</span> <em>Journal of Development Economics</em> 160 (January): 102998. <a href="https://doi.org/10.1016/j.jdeveco.2022.102998">https://doi.org/10.1016/j.jdeveco.2022.102998</a>.
+</div>
+<div id="ref-schiebinger_machine_2020" class="csl-entry" role="listitem">
+Schiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. <span>“Machine <span>Translation</span>: <span>Gendered Innovations</span>.”</span> <a href="http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2">http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2</a>.
+</div>
+<div id="ref-stiglitz_mismeasuring_2010" class="csl-entry" role="listitem">
+Stiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. <em>Mismeasuring <span>Our Lives</span>: <span>Why GDP Doesn</span>’t <span>Add Up</span></em>. <span>The New Press</span>.
+</div>
+<div id="ref-wang_deep_2018" class="csl-entry" role="listitem">
+Wang, Yilun, and Michal Kosinski. 2018. <span>“Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.”</span> <em>Journal of Personality and Social Psychology</em> 114 (2): 246–57. <a href="https://doi.org/10.1037/pspa0000098">https://doi.org/10.1037/pspa0000098</a>.
+</div>
+<div id="ref-wellcomecollection_composite_1890" class="csl-entry" role="listitem">
+Wellcome Collection. 1890. <span>“Composite <span>Photographs</span>: "<span>The Jewish Type</span>".”</span> <a href="https://wellcomecollection.org/works/ngq29vyw">https://wellcomecollection.org/works/ngq29vyw</a>.
 </div>
 </div>
 
@@ -877,6 +1237,7 @@ Pellicer, Miquel, and Vimal Ranchhod. 2023. <span>“Understanding the Effects o
       }
     });
     </script>
+    
     
 
 </body></html>
