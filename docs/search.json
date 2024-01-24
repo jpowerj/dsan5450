@@ -532,11 +532,11 @@
     "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2024 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 17\n\n\n\n\nWeek 2: Machine Learning, Training Data, and Bias\n\n\nJanuary 24\n\n\n\n\nWeek 3: Ethical Frameworks\n\n\nJanuary 30\n\n\n\n\nWeek 4: Fairness in AI\n\n\nFebruary 6\n\n\n\n\nWeek 5: Anonymity, Privacy-Preserving Computation\n\n\nFebruary 13\n\n\n\n\nWeek 6: Midterm\n\n\nFebruary 13\n\n\n\n\nWeek 7: Public Policy\n\n\nMarch 13\n\n\n\n\n\n\nNo matching items\n\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits."
   },
   {
-    "objectID": "w02/slides.html#data-science-for-who",
-    "href": "w02/slides.html#data-science-for-who",
+    "objectID": "w02/slides.html#data-science-for-whom",
+    "href": "w02/slides.html#data-science-for-whom",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
-    "section": "Data Science for Who?",
-    "text": "Data Science for Who?\n\nWhat are the processes by which data is measured, recorded, and distributed?\n\n\nThe Library of Missing Datasets. From D’Ignazio and Klein (2020)"
+    "section": "Data Science for Who(m)?",
+    "text": "Data Science for Who(m)?\n\nWhat are the processes by which data is measured, recorded, and distributed?\n\n\nThe Library of Missing Datasets. From D’Ignazio and Klein (2020)"
   },
   {
     "objectID": "w02/slides.html#example-measuring-freedom-and-human-rights",
@@ -557,7 +557,7 @@
     "href": "w02/slides.html#operationalization",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
     "section": "Operationalization",
-    "text": "Operationalization\n\n\n\n\nThink about claims commonly made on the basis of “data”:\n\nMarkets create economic prosperity\nA glass of wine in the evening prevents cancer\nPolicing makes communities safer\n\nHow exactly are “prosperity”, “preventing cancer”, “policing”, “community safety” being measured?\n\n\n\n\n\n\n\n\n\nStiglitz, Sen, and Fitoussi (2010)"
+    "text": "Operationalization\n\n\n\n\nThink of common claims made on basis of “data”:\n\nMarkets create economic prosperity\nA glass of wine in the evening prevents cancer\nPolicing makes communities safer\n\nHow exactly are “prosperity”, “preventing cancer”, “policing”, “community safety” being measured?\n\n\n\n\nThumbnail from full video (Quarto crashes when I embed it directly 😑)\n\n\n\n\n\n\n\nStiglitz, Sen, and Fitoussi (2010)"
   },
   {
     "objectID": "w02/slides.html#what-is-being-compared",
@@ -613,28 +613,28 @@
     "href": "w02/slides.html#three-component-parts-of-machine-learning",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
     "section": "Three Component Parts of Machine Learning",
-    "text": "Three Component Parts of Machine Learning\n\nA cool algorithm\nTraining data\nHuman labor"
+    "text": "Three Component Parts of Machine Learning\n\nA cool algorithm 😎😍\n[Possibly benign but possibly biased] Training data ❓🧐\nExploitation of below-minimum-wage human labor 😞🤐 (Dube et al. 2020, like and subscribe yall, get those ❤️s goin)"
   },
   {
     "objectID": "w02/slides.html#a-cool-algorithm",
     "href": "w02/slides.html#a-cool-algorithm",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
-    "section": "A Cool Algorithm",
-    "text": "A Cool Algorithm"
+    "section": "A Cool Algorithm 😎😍",
+    "text": "A Cool Algorithm 😎😍"
   },
   {
-    "objectID": "w02/slides.html#training-data",
-    "href": "w02/slides.html#training-data",
+    "objectID": "w02/slides.html#training-data-with-acknowledged-bias",
+    "href": "w02/slides.html#training-data-with-acknowledged-bias",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
-    "section": "Training Data",
-    "text": "Training Data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Gendered Innovations in Science, Health & Medicine, Engineering, and Environment"
+    "section": "Training Data With Acknowledged Bias",
+    "text": "Training Data With Acknowledged Bias\n\nOne potentially fruitful approach to fairness: since we can’t eliminate it, bring it out into the open and study it!\n\nThis can, at very least, help us brainstorm how we might “correct” for it (next slides!)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Gendered Innovations in Science, Health & Medicine, Engineering, and Environment"
   },
   {
     "objectID": "w02/slides.html#word-embeddings",
     "href": "w02/slides.html#word-embeddings",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
     "section": "Word Embeddings",
-    "text": "Word Embeddings\n\nBolukbasi et al. (2016)"
+    "text": "Word Embeddings\n\nBolukbasi et al. (2016)\nNotice how the \\(x\\)-axis has been selected by the researcher specifically to draw out (one) gendered dimension of language!\n\n\\(\\overrightarrow{\\texttt{she}}\\) mapped to \\(\\langle -1,0\\rangle\\), \\(\\overrightarrow{\\texttt{he}}\\) mapped to \\(\\langle 1,0 \\rangle\\), others projected onto this dimension"
   },
   {
     "objectID": "w02/slides.html#removing-vs.-studying-biases",
@@ -644,25 +644,214 @@
     "text": "Removing vs. Studying Biases\n\n\n\n\n\n\nFrom Kozlowski, Taddy, and Evans (2019)\n\n\n\n\n\n\n\nWordBias: An Interactive Tool for Discovering Intersectional Biases Encoded in Word Embeddings"
   },
   {
+    "objectID": "w02/slides.html#the-training-data-bottleneck",
+    "href": "w02/slides.html#the-training-data-bottleneck",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "The “Training Data Bottleneck”",
+    "text": "The “Training Data Bottleneck”\n\n\n\n\n\n\n\n\n\n\n\n\n\nSnorkel.AI, An Introduction to Snorkel and Data-Centric AI\n\n\n\n\n\nWith so much technical progress […] why is there so little real enterprise success? The answer all too often is that many enterprises continue to be bottlenecked by one key ingredient: the large amounts of labeled data [needed] to train these new systems.\n\nFigure 5: ibid. (PS, if it seems like I’m picking on them: these are the ‘good guys’ IMO! W.r.t. foregrounding training data as labor)"
+  },
+  {
     "objectID": "w02/slides.html#human-labor",
     "href": "w02/slides.html#human-labor",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
     "section": "Human Labor",
-    "text": "Human Labor\n\nGenerating Training Data"
+    "text": "Human Labor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: From Snorkel AI, “The Principles of Data-Centric AI Development by Alex Ratner” (YouTube)\n\n\n\n\n\n\nGray and Suri (2019)"
   },
   {
-    "objectID": "w02/slides.html#what-comes-with-human-labels-human-biases",
-    "href": "w02/slides.html#what-comes-with-human-labels-human-biases",
+    "objectID": "w02/slides.html#computer-scientists-being-responsible-at-georgetown",
+    "href": "w02/slides.html#computer-scientists-being-responsible-at-georgetown",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
-    "section": "What Comes With Human Labels? Human Biases!",
-    "text": "What Comes With Human Labels? Human Biases!\n\n\n\n\n“Reification”: Pretentious word for an important phenomenon, whereby talking about something (e.g., race) as if it was real ends up leading to it becoming real (having real impacts on people’s lives)1\n\n\nOn average, being classified as a White man as opposed to a Coloured man would have more than quadrupled a person’s income. (Pellicer and Ranchhod 2023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFields and Fields (2012), for example, uses the term “racecraft” to describe the reification of blackness in the US"
+    "section": "Computer Scientists Being Responsible (At Georgetown!)",
+    "text": "Computer Scientists Being Responsible (At Georgetown!)\n\nDr. Redmiles’ homepage (Since Quarto also freezes when I try to embed it…)\n(PS… UMD undergrad CS class of 2013 extremely overrepresented here 😜)"
+  },
+  {
+    "objectID": "w02/slides.html#computer-scientists-being-responsible-at-georgetown-1",
+    "href": "w02/slides.html#computer-scientists-being-responsible-at-georgetown-1",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Computer Scientists Being Responsible (At Georgetown!)",
+    "text": "Computer Scientists Being Responsible (At Georgetown!)\n\nGU360 Course Page"
+  },
+  {
+    "objectID": "w02/slides.html#so-what-comes-with-human-labels-human-biases",
+    "href": "w02/slides.html#so-what-comes-with-human-labels-human-biases",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "So, What Comes With Human Labels? Human Biases!",
+    "text": "So, What Comes With Human Labels? Human Biases!\n\n\n\n\n\n\nCrawford and Paglen (2019)\n\n\n\n\n\n\n\nImage tagged in ImageNet with the label “BOLSHEVIK”. From Crawford and Paglen (2019)"
+  },
+  {
+    "objectID": "w02/slides.html#biases-in-our-brains-rightarrow-biases-in-our-models-rightarrow-material-effects",
+    "href": "w02/slides.html#biases-in-our-brains-rightarrow-biases-in-our-models-rightarrow-material-effects",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Biases In Our Brains \\(\\rightarrow\\) Biases in Our Models \\(\\rightarrow\\) Material Effects",
+    "text": "Biases In Our Brains \\(\\rightarrow\\) Biases in Our Models \\(\\rightarrow\\) Material Effects\n\n\n\n\n“Reification”: Pretentious word for an important phenomenon, whereby talking about something (e.g., race) as if it was real ends up leading to it becoming real (having real impacts on people’s lives)1\n\n\nOn average, being classified as a White man as opposed to a Coloured man would have more than quadrupled a person’s income. (Pellicer and Ranchhod 2023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFields and Fields (2012), for example, coined “racecraft” to describe reification of blackness in US… much more on this later!"
   },
   {
     "objectID": "w02/slides.html#reification-in-science",
     "href": "w02/slides.html#reification-in-science",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
     "section": "Reification in Science",
-    "text": "Reification in Science\n\nGoodhart’s Law: “When a measure becomes a target, it ceases to be a good measure”\nCat-and-mouse game between goals and ways of measuring progress towards goals"
+    "text": "Reification in Science\n\n\n\n\n“““Intelligence”“” Testing\n\n\n\n\nGould (1980)\n\n\n\n\n\nMore Generally\n\n\nGoodhart’s Law: “When a measure becomes a target, it ceases to be a good measure”\nCat-and-mouse game between goals (🚩) and ways of measuring progress towards goals (also 🚩)"
+  },
+  {
+    "objectID": "w02/slides.html#reflective-equilibrium",
+    "href": "w02/slides.html#reflective-equilibrium",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Reflective Equilibrium",
+    "text": "Reflective Equilibrium\n\nMost criticisms of any framework boil down to, “great in theory, but doesn’t work in practice”\nThe way to take this seriously: reflective equilibrium\nIntroduced by Rawls (1951), but popularized by Rawls (1971)\n\n\nFrom Awad et al. (2022)"
+  },
+  {
+    "objectID": "w02/slides.html#rawls-vs.-everyone-else",
+    "href": "w02/slides.html#rawls-vs.-everyone-else",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Rawls vs. Everyone Else",
+    "text": "Rawls vs. Everyone Else\n\nQ: What book had the greatest impact on modern (Anglophone) philosophy?\nOne approach: citations in a widely-used encyclopedia of philosophy* The results:\n\n\n\n\n\nBook\n\nBook\n\n\n\n\n1\nRawls 1972, A Theory of Justice (115)\n6\nParfit 1984, Reasons and Persons (62)\n\n\n2\nKripke 1980, Naming and Necessity (88)\n7\nScanlon 1998, What We Owe to Each Other (56)\n\n\n3\nLewis 1986, On the Plurality of Worlds (63)\n8\nWittgenstein 1953, Philosophical Investigations (55)\n\n\n3\nNozick 1974, Anarchy, State and Utopia (63)\n9\nChalmers 1996, The Conscious Mind (53)\n\n\n3\nQuine 1960, Word and Object (63)\n10\nRawls 1993, Political Liberalism (48)\n\n\n\n*(But don’t forget about the dangers of reification!)"
+  },
+  {
+    "objectID": "w02/slides.html#easy-mode-descriptive-judgements",
+    "href": "w02/slides.html#easy-mode-descriptive-judgements",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Easy Mode: Descriptive Judgements",
+    "text": "Easy Mode: Descriptive Judgements\nHow did you acquire the concept “red”?\n\nPeople pointed to stuff with certain properties and said “red” (or “rojo” or “红”), as part of constructing an intersubjective communication system\nThese descriptive concepts exist essentially for coordination, like driving on the left vs. right side of the road!\nNothing very profound or difficult seems to come from the commitments implied by this descriptive coordination: “for ease of communication, I’ll vibrate my vocal chords like this (or write these symbols) to indicate \\(x\\), and I’ll vibrate them like this (or write these other symbols) to indicate \\(y\\)” \nOur linguistic choices, when it comes to description, are arbitrary*: Our mouths can make these sounds, and each language is a mapping: [combinations of sounds] \\(\\leftrightarrow\\) [things] \n\n*(Tiny text footnote: Except for, perhaps, a few fun but rare onomatopoetic cases)"
+  },
+  {
+    "objectID": "w02/slides.html#what-makes-ethical-judgements-more-difficult",
+    "href": "w02/slides.html#what-makes-ethical-judgements-more-difficult",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "What Makes Ethical Judgements “More Difficult”?",
+    "text": "What Makes Ethical Judgements “More Difficult”?\nHow did you acquire the concept “good”?\n\nPeople pointed to actions/decisions with certain properties and said “good” (and pointed at others and said “bad”), as part of instilling values in you\n“Grass is green” just links two descriptive referents together, while “Honesty is good” takes the descriptive concept “honesty” and links it with the normative concept “good”\nIn doing this, parents/teachers/friends are doing way more than just linking sounds and things in the world (describing): they are also prescribing rules of moral conduct!\nThese normative concepts go beyond “mere” communication: the course of your life, the way the future unfolds, and [insert more things that tend to matter deeply to people] are different if you act on one set of norms vs. another\nEthics therefore centrally involves non-arbitrarily-chosen commitments!\ntl;dr: languages are arbitrary conventions for communication, while ethical systems use this language to non-arbitrarily mark out things that are good/bad:\n\nLife would not be very different if we “shuffled” words (we’d just vibrate our vocal chords differently), but would be very different if we “shuffled” good/bad labeling"
+  },
+  {
+    "objectID": "w02/slides.html#quick-aside-top-10-linguist-beefs",
+    "href": "w02/slides.html#quick-aside-top-10-linguist-beefs",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Quick Aside: Top 10 Linguist Beefs",
+    "text": "Quick Aside: Top 10 Linguist Beefs\n\nStatement on previous slide (“Life would not be very different if we shuffled words”), might seem weird/closed-minded/dismissive if you have a certain popular prior belief…\n\n\n\n\n\n\n\nDeutscher (2010)\n\n\n\n\n\n\n\nMcWhorter (2014)"
+  },
+  {
+    "objectID": "w02/slides.html#the-last-time-i-use-this-i-promise",
+    "href": "w02/slides.html#the-last-time-i-use-this-i-promise",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "The Last Time I Use This, I Promise",
+    "text": "The Last Time I Use This, I Promise"
+  },
+  {
+    "objectID": "w02/slides.html#historical-example-capitalism-and-the-protestant-ethic",
+    "href": "w02/slides.html#historical-example-capitalism-and-the-protestant-ethic",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Historical Example: Capitalism and the “Protestant Ethic”",
+    "text": "Historical Example: Capitalism and the “Protestant Ethic”\n\nBig changes in history are associated with changes in this good/bad labeling!\nMax Weber (second most-cited sociologist of all time*): Protestant value system gave rise to capitalist system by relabeling what things are good vs. bad (Weber 1904):\n\n\n\n\n\nJesus said to his disciples, “Truly, I say to you, only with difficulty will a rich person enter the kingdom of heaven. Again I tell you, it is easier for a camel to go through the eye of a needle than for a rich person to enter the kingdom of God.” (Matthew 19:23-24)\n\n\nOh, were we loving God worthily, we should have no love at all for money! (St. Augustine 1874, pg. 28)\n\n*(…jumpscare: REIFICATION!)\n\n\n\nThe earliest capitalists lacked legitimacy in the moral climate in which they found themselves. One of the means they found [to legitimize their behavior] was to appropriate the evaluative vocabulary of Protestantism. (Skinner 2012, pg. 157)\n\n\nCalvinism added [to Luther’s doctrine] the necessity of proving one’s faith in worldly activity, [replacing] spiritual aristocracy of monks outside of/above the world with spiritual aristocracy of predestined saints within it. (pg. 121)."
+  },
+  {
+    "objectID": "w02/slides.html#contemporary-example-palestine",
+    "href": "w02/slides.html#contemporary-example-palestine",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Contemporary Example: Palestine",
+    "text": "Contemporary Example: Palestine\n\nVery few of the relevant empirical facts are in dispute, since opening of crucial archives to three so-called “New Historians” in the 1980s. So why do people still argue?\n\n\n\n\n\nIlan Pappe, one of these historians, concluded from this material that:\n\nThe Israeli state was built upon a massive ethnic cleansing, and\nIs not morally justifiable (Pappe 2006)\n\n\n\nThe immunity Israel has received over the last fifty years encourages others, regimes and oppositions alike, to believe that human and civil rights are irrelevant in the Middle East. The dismantling of the mega-prison in Palestine will send a different, and more hopeful, message.\n\n\n\n\nBenny Morris, another of these historians, concluded that:\n\nThe Israeli state was built upon a massive ethnic cleansing, and\nIs morally justifiable (Morris 1987)\n\n\n\nA Jewish state would not have come into being without the uprooting of 700,000 Palestinians. Therefore it was necessary to uproot them. There was no choice but to expel that population. It was necessary to cleanse the hinterland and cleanse the border areas and cleanse the main roads."
+  },
+  {
+    "objectID": "w02/slides.html#from-w01-promise-keeping",
+    "href": "w02/slides.html#from-w01-promise-keeping",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "(From W01) Promise-Keeping",
+    "text": "(From W01) Promise-Keeping\n\nScenario: You just baked a pie, and you promised your friend you’d give them the pie. You’re walking over to the friend’s house to give them the pie.\nSuddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds\nDo you give the hostage-taker the pie?\n\n\n\n\n\nConsequentialist Ethics \\(\\implies\\) Yes\n\n\nTo be ethical is to weigh consequences of your actions\nThe positive consequences of giving the pie to the hostage-taker (saving a life) outweigh the negative consequences (breaking your promise to your friend)\n(Ex: Utilitarianism, associated with British philosopher Jeremy Bentham)\n\n\n\n\nDeontological Ethics \\(\\implies\\) No\n\n\nTo be ethical is to live by rules which you would want everyone to follow.\nAs a rule (a “categorical imperative”), you must not break promises. (Breaking this rule \\(\\implies\\) others can also “pick and choose” when to honor promises to you)\n(Ex: Kantian Ethics, associated with German philosopher Immanuel Kant)"
+  },
+  {
+    "objectID": "w02/slides.html#counterargument-to-consequentialism",
+    "href": "w02/slides.html#counterargument-to-consequentialism",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Counterargument to Consequentialism",
+    "text": "Counterargument to Consequentialism\n\n\n\n\nMillions are kept permanently happy, on the one simple condition that a certain lost soul on the far-off edge of things should lead a life of lonely torture (James 1891)\n\n\nModern example: people “out there” suffer so we can have iPhones, etc.\n\n\n\n\n\n\nLe Guin (1973)"
+  },
+  {
+    "objectID": "w02/slides.html#one-solution-individual-rights",
+    "href": "w02/slides.html#one-solution-individual-rights",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "One Solution: Individual Rights",
+    "text": "One Solution: Individual Rights\n\n\n\n\nRights are vetoes which individuals can use to cancel out collective/institutional decisions which affect them (key example for us: right to privacy)\nRawls/liberalism: individual rights are lexically prior to “efficiency” and/or distributional concerns\nWhy the buzzword “lexically”? Enter (non-scary) math!\nWe can put lowercase letters of English alphabet in an order: \\(\\texttt{a} \\prec \\texttt{b} \\prec \\cdots \\texttt{z}\\)\nWe can put capital letters of English alphabet in an order: \\(\\texttt{A} \\prec \\texttt{B} \\prec \\cdots \\prec \\texttt{Z}\\)\nWhat if we need to sort stuff with both types? We can decide that capital letters are lexically prior to lowercase letters, giving us a combined ordering:\n\n\n\n\n\n\nDworkin (1977)\n\n\n\n\n\n\\[\n\\texttt{A} \\prec \\texttt{B} \\prec \\texttt{Z} \\prec \\texttt{a} \\prec \\texttt{b} \\prec \\texttt{z}\n\\]"
+  },
+  {
+    "objectID": "w02/slides.html#lexical-ordering-i-tricked-you",
+    "href": "w02/slides.html#lexical-ordering-i-tricked-you",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Lexical Ordering (I Tricked You 😈)",
+    "text": "Lexical Ordering (I Tricked You 😈)\n\n\n\n\nYou thought I was just talking about letters, but they’re actually variables: capital letters are rights, lowercase letters are distributive principles\n\n\\[\n\\underbrace{\\texttt{A} \\prec \\texttt{B} \\prec \\texttt{Z}}_{\\mathclap{\\substack{\\text{Individual Rights} \\\\ \\text{Basic Goods}}}} \\phantom{\\prec} \\prec \\phantom{\\prec} \\underbrace{\\texttt{a} \\prec \\texttt{b} \\prec \\texttt{z}}_{\\mathclap{\\substack{\\text{Distributive Principles} \\\\ \\text{Money and whatnot}}}}\n\\]"
+  },
+  {
+    "objectID": "w02/slides.html#counterarguments-to-deontology",
+    "href": "w02/slides.html#counterarguments-to-deontology",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Counterargument(s) to Deontology",
+    "text": "Counterargument(s) to Deontology\n\n\n\n\nDeontological rule: “Don’t lie”\n\nBut then: Nazis come to your house, ask you if you’re harboring any Jews\n\nk, new deontological rule: “Don’t lie unless necessary”\n\nWho decides when it’s necessary?\n\nDeontological commitment: Pacifism / Nonviolence\n\nBut then: someone swingin on you\n\nk, new deontological commitment: Pacifism / Nonviolence Except In Self-Defense\n\nWhat counts as self-defense?\n\nDeontological maxim: “The master’s tools will never dismantle the master’s house”\n\nWhy concede “ownership” to the master?\n\n(Trolley problems, etc.)\n\n\n\n\n\n\nChurchill and Ryan (1998) (Derrick Jensen intro removed from later editions so… I put it on dang GitHub)"
+  },
+  {
+    "objectID": "w02/slides.html#a-synthesis-two-level-utilitarianism",
+    "href": "w02/slides.html#a-synthesis-two-level-utilitarianism",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "A Synthesis: Two-Level Utilitarianism",
+    "text": "A Synthesis: Two-Level Utilitarianism\n\n\n\n\nIt would be exhausting to compute Nash equilibrium strategies for every scenario\nInstead, we can develop heuristics that work for most cases, then reevaluate and update when we encounter tough cases\n(Brings us back to reflective equilibrium!)\n\n\n\n\n\n\nKahneman (2011)"
+  },
+  {
+    "objectID": "w02/slides.html#individual-vs.-social-morality",
+    "href": "w02/slides.html#individual-vs.-social-morality",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Individual vs. Social Morality",
+    "text": "Individual vs. Social Morality\n\nIt’s already quite difficult to reason about individual morality\nNow add in the fact that we live in a society 😰\nThings that happen depend not only on our choices but also the choices of others"
+  },
+  {
+    "objectID": "w02/slides.html#enter-game-theory",
+    "href": "w02/slides.html#enter-game-theory",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Enter Game Theory",
+    "text": "Enter Game Theory\n\nA tool for analyzing how individual choices + choices of others \\(\\rightarrow\\) outcomes!\n\n\n\n\n\nExample: You (\\(A\\)) and a friend (\\(B\\)) committed a robbery, and you’re brought into the police station for questioning.\nYou’re placed in separate rooms, and each of you is offered a plea deal: if you testify while your partner stays silent, you go free and they go to jail for 3 years.\nOtherwise, if you both stay silent, they have very little evidence and can only jail you for 1 year\nHowever, there’s a catch: if you both confess, you both get two years in jail, since they now have maximal evidence\n\n\n\n\n\n\nSource: Wikimedia Commons"
+  },
+  {
+    "objectID": "w02/slides.html#individual-decision-making",
+    "href": "w02/slides.html#individual-decision-making",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Individual Decision-Making",
+    "text": "Individual Decision-Making\n\n\n\n\nLet’s think through \\(A\\)’s best responses to the possible choices \\(B\\) could make:\nIf \\(B\\) stays silent, what is \\(A\\)’s best option?\n\nStaying silent results in 1 year of jail\nTestifying results in 0 years of jail\nSo it is better to testify\n\nIf \\(B\\) testifies, what is \\(A\\)’s best option?\n\nStaying silent results in 3 years of jail\nTestifying results in 2 years of jail\nSo it is better to testify\n\nThe result: regardless of what \\(B\\) does, \\(A\\) is better off testifying!\n\n\n\n\n\n\nSource: Wikimedia Commons"
+  },
+  {
+    "objectID": "w02/slides.html#the-social-outcome",
+    "href": "w02/slides.html#the-social-outcome",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "The Social Outcome",
+    "text": "The Social Outcome\n\n\n\n\nThe game is symmetric, so the same logic applies for \\(B\\)\nConclusion: the outcome of the game will be \\(s^* = (\\text{Testify}, \\text{Testify})\\)\nThis is called a Nash equilibrium: no player \\(i\\) can make themselves better off by deviating from \\(s_i\\)\n\n\n\n\n\n\nSource: Wikimedia Commons"
+  },
+  {
+    "objectID": "w02/slides.html#how-do-we-fix-this-conventions",
+    "href": "w02/slides.html#how-do-we-fix-this-conventions",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "How Do We Fix This? Conventions!",
+    "text": "How Do We Fix This? Conventions!\n\nWe encounter this type of problem every day if we drive! You (\\(A\\)) and another driver (\\(B\\)) arrive at an intersection:\n\n\n\n\n\nIf both stop, we’re mostly bored: \\(u_A = -1\\)\nIf we stop and the other person drives, we’re mad that they got to go and we didn’t: \\(u_A = -3\\)\nIf both drive, we crash: \\(u_A = -10\\)\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nStop\nDrive\n\n\n\\(A\\)\nStop\n\\(-1,-1\\)\n\\(-3,\\phantom{-}0\\)\n\n\nDrive\n\\(\\phantom{-}0, -3\\)\n\\(-10,-10\\)"
+  },
+  {
+    "objectID": "w02/slides.html#without-a-convention",
+    "href": "w02/slides.html#without-a-convention",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Without A Convention",
+    "text": "Without A Convention\n\n\n\n\nWe’re “frozen”: this game has no unique Nash equilibrium, so we cannot say (on the basis of individual rationality) what will happen!\nWithout a convention: power/aggression takes over. “War of all against all”, only the strong survive, etc. (life is “nasty, brutish, and short”)\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nStop\nDrive\n\n\n\\(A\\)\nStop\n\\({\\color{orange}\\cancel{\\color{black}-1}},{\\color{lightblue}\\cancel{\\color{black}-1}}\\)\n\\(\\boxed{-3},\\boxed{0}\\)\n\n\nDrive\n\\(\\boxed{0}, \\boxed{-3}\\)\n\\({\\color{orange}\\cancel{\\color{black}-10}},{\\color{lightblue}\\cancel{\\color{black}-10}}\\)\n\n\n\n\n\n\n\nIf \\(A\\)’s aggression is \\(\\Pr(s_A = \\textsf{Drive}) = X \\sim \\mathcal{U}[0,1]\\), \\(B\\)’s aggression is \\(\\Pr(s_B = \\textsf{Drive}) = Y \\sim \\mathcal{U}[0,1]\\), what happens at individual and societal levels?\n\n\\[\n\\begin{align*}\n\\mathbb{E}[u_A] = \\mathbb{E}[u_B] &= \\int_{0}^{1}\\int_{0}^{1}\\left(x - 2y -8xy - 1\\right)dy \\, dx = -3.5 \\\\\n\\underbrace{\\mathbb{E}\\mkern-3mu\\left[u_A + u_B\\right]}_{\\mathclap{\\text{Utilitarian Social Welfare}}} &= -3.5\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "w02/slides.html#the-convention-of-traffic-lights",
+    "href": "w02/slides.html#the-convention-of-traffic-lights",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "The Convention of Traffic Lights",
+    "text": "The Convention of Traffic Lights\n\nIf we don’t want a world where \\(\\text{Happiness}(i) \\propto \\Pr(i \\text{ more aggro than }j)\\), we can introduce traffic lights:\n\n\n\n\n\nNow in “correlated equilibrium”, where we ensure* coordinated \\(\\Pr((\\textsf{Drive}, \\textsf{Stop})) = 0.5\\), \\(\\Pr((\\textsf{Stop}, \\textsf{Drive})) = 0.5\\)\n\\(\\mathbb{E}[u_A] = (0.5)(0) + (0.5)(-3) = -1.5\\)\n\\(\\mathbb{E}[u_B] = (0.5)(-3) + (0.5)(0) = -1.5\\)\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nStop\nDrive\n\n\n\\(A\\)\nStop\n\\({\\color{orange}\\cancel{\\color{black}-1}},{\\color{lightblue}\\cancel{\\color{black}-1}}\\)\n\\(\\boxed{-3},\\boxed{0}\\)\n\n\nDrive\n\\(\\boxed{0}, \\boxed{-3}\\)\n\\({\\color{orange}\\cancel{\\color{black}-10}},{\\color{lightblue}\\cancel{\\color{black}-10}}\\)\n\n\n\n\n\n\n\nEmpirical (anthropological) findings across literally thousands of different cultures throughout the world: people are willing to give up rewards to ensure fairness (see, e.g., Henrich et al. (2001))\n\n*(through, for example, traffic laws: equal in theory… In practice? Another story)"
+  },
+  {
+    "objectID": "w02/slides.html#so-how-should-we-makechoose-conventions",
+    "href": "w02/slides.html#so-how-should-we-makechoose-conventions",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "So How Should We Make/Choose Conventions?",
+    "text": "So How Should We Make/Choose Conventions?\n\nHobbes (1651): Only way out of “war of all against all” is to surrender all power to one sovereign (the Leviathan)\nRousseau (1762): Social contract\nRawls (1971): Social contract behind the “veil of ignorance”\n\nIf we didn’t know where we were going to end up in society, how would we set it up?"
+  },
+  {
+    "objectID": "w02/slides.html#rawls-veil-of-ignorance",
+    "href": "w02/slides.html#rawls-veil-of-ignorance",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Rawls’ Veil of Ignorance",
+    "text": "Rawls’ Veil of Ignorance\n\nProbably the most important tool for policy whitepapers!\n“Justice as fairness” (next week: fairness in AI 😜)\nWe don’t know whether we’ll be \\(A\\) or \\(B\\) in the intersection game, so we’d choose the traffic light!\nMore profoundly: We don’t know what race, gender, class, ethnicity, sexuality, disability status we’ll have; We don’t know whether we’ll be Israeli or Palestinian; we don’t know whether we’ll own means of production or own only our labor power (and thus have to sell it on a market to survive)… 🤔"
   },
   {
     "objectID": "w02/slides.html#one-final-reminder",
@@ -672,18 +861,39 @@
     "text": "One Final Reminder\n\nIndustry rule #4080: Cannot “prove” \\(q(x) = \\text{``Algorithm }x\\text{ is fair''}\\)! Only \\(p(x) \\implies q(y)\\):\n\n\\[\n\\underbrace{p(x)}_{\\substack{\\text{Accept ethical} \\\\ \\text{framework }x}} \\implies \\underbrace{q(y)}_{\\substack{\\text{Algorithms should} \\\\ \\text{satisfy condition }y}}\n\\]\n\nLast week: very broad intro to possible ethical frameworks (values for \\(x\\))\nToday: very broad intro to possible fairness criteria (values for \\(y\\))"
   },
   {
+    "objectID": "w02/slides.html#categories-of-fairness-criteria",
+    "href": "w02/slides.html#categories-of-fairness-criteria",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Categories of Fairness Criteria",
+    "text": "Categories of Fairness Criteria\n\nRoughly, approaches to fairness/bias in AI can be categorized as follows:\n\n\nFairness\n\n\n\n\n\n\nContext-Free\n\n\nSingle-Threshold Fairness\nEqual Prediction\nEqual Decision\n\n\n\n\n\n\n\n\n\nContext-Sensitive\n\n\nFairness via Similarity Metric(s)\nCausal Definitions\n\n\n\n\n\n\n\n[Today] Context-Free Fairness: Easier to grasp from CS/data science perspective; rooted in “language” of Machine Learning (you already know much of it, given DSAN 5000!)\nBut easy-to-grasp notion \\(\\neq\\) “good” notion!\nYour job: push yourself to (a) consider what is getting left out of the context-free definitions, and (b) the loopholes that are thus introduced into them, whereby people/computers can discriminate while remaining “technically fair”"
+  },
+  {
+    "objectID": "w02/slides.html#laws-often-perfectly-technically-fair",
+    "href": "w02/slides.html#laws-often-perfectly-technically-fair",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Laws: Often Perfectly “Technically Fair”",
+    "text": "Laws: Often Perfectly “Technically Fair”\n\nAh, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!\n\n\n(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)\n\nAnatole France, Le Lys Rouge (France 1894)"
+  },
+  {
     "objectID": "w02/slides.html#who-remembers-confusion-matrices",
     "href": "w02/slides.html#who-remembers-confusion-matrices",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
-    "section": "Who Remembers Confusion Matrices?",
-    "text": "Who Remembers Confusion Matrices?\n\nLet \\(Y_i\\) be “desirable” outcome for person \\(i\\), \\(D_i\\) be algorithmic decision for person \\(i\\)\nFor binary \\(Y_i\\) and \\(D_i\\), there are eight possible conditional probabilities we might care about (whether descriptively or normatively!)\n\n\n\n\n\n\n\n\\(\\Pr(D_i \\mid Y_i)\\)\n\\(D_i = 0\\)\n\\(D_i = 1\\)\n\n\n\\(Y_i = 0\\)\n1\n2\n\n\n\\(Y_i = 1\\)\n3\n4\n\n\n\n\n\n\n\n\n\\(\\Pr(Y_i \\mid D_i)\\)\n\\(D_i = 0\\)\n\\(D_i = 1\\)\n\n\n\\(Y_i = 0\\)\n5\n6\n\n\n\\(Y_i = 1\\)\n7\n8\n\n\n\n\n\n\n\nEntry 5, for example, tells us: “Given that the algorithm decided 0 for person \\(i\\), what is the probability that the desirable outcome for person \\(i\\) was 0?”"
+    "section": "Who Remembers… 🎉Confusion Matrices!!!🎉",
+    "text": "Who Remembers… 🎉Confusion Matrices!!!🎉\n\nTerrifyingly higher stakes than in DSAN 5000, however!\nNow \\(D = 1\\) could literally mean “shoot this person” or “throw this person in jail for life”\n\n\nFrom Mitchell et al. (2021)"
+  },
+  {
+    "objectID": "w02/slides.html#baby-steps-a-less-busy-confusion-matrix",
+    "href": "w02/slides.html#baby-steps-a-less-busy-confusion-matrix",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Baby Steps: A Less Busy Confusion Matrix",
+    "text": "Baby Steps: A Less Busy Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (recidivism)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions, this is the last slide!)"
   },
   {
     "objectID": "w02/slides.html#references",
     "href": "w02/slides.html#references",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
     "section": "References",
-    "text": "References\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. “Man Is to Computer Programmer as Woman Is to Homemaker? Debiasing Word Embeddings.” In Advances in Neural Information Processing Systems. Vol. 29. Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFields, Barbara J., and Karen E. Fields. 2012. Racecraft: The Soul of Inequality in American Life. Verso Books.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nKozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class Through Word Embeddings.” American Sociological Review 84 (5): 905–49. https://doi.org/10.1177/0003122419877135.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nPellicer, Miquel, and Vimal Ranchhod. 2023. “Understanding the Effects of Racial Classification in Apartheid South Africa.” Journal of Development Economics 160 (January): 102998. https://doi.org/10.1016/j.jdeveco.2022.102998.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\n\n\nDSAN 5450 Week 2: Machine Learning and Training Data"
+    "text": "References\n\n\nAwad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. “Computational Ethics.” Trends in Cognitive Sciences 26 (5): 388–405. https://doi.org/10.1016/j.tics.2022.02.009.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. “Man Is to Computer Programmer as Woman Is to Homemaker? Debiasing Word Embeddings.” In Advances in Neural Information Processing Systems. Vol. 29. Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html.\n\n\nChurchill, Ward, and Michael Ryan. 1998. Pacifism as Pathology: Reflections on the Role of Armed Struggle in North America. PM Press.\n\n\nCrawford, Kate, and Trevor Paglen. 2019. “Excavating AI: The Politics of Training Sets for Machine Learning.” AI Now Institute, NYU. https://excavating.ai.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDeutscher, Guy. 2010. Through the Language Glass: Why the World Looks Different in Other Languages. Henry Holt and Company.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFields, Barbara J., and Karen E. Fields. 2012. Racecraft: The Soul of Inequality in American Life. Verso Books.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nGould, Stephen Jay. 1980. The Mismeasure of Man (Revised and Expanded). W. W. Norton & Company.\n\n\nGray, Mary L., and Siddharth Suri. 2019. Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass. HarperCollins.\n\n\nHenrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert Gintis, and Richard McElreath. 2001. “In Search of Homo Economicus: Behavioral Experiments in 15 Small-Scale Societies.” American Economic Review 91 (2): 73–78. https://doi.org/10.1257/aer.91.2.73.\n\n\nHobbes, Thomas. 1651. Leviathan: With Selected Variants from the Latin Edition of 1668. Hackett Publishing.\n\n\nJames, William. 1891. “The Moral Philosopher and the Moral Life.” International Journal of Ethics 1 (3): 330–54. https://www.jstor.org/stable/2375309.\n\n\nKahneman, Daniel. 2011. Thinking, Fast and Slow. Farrar, Straus and Giroux.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nKozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class Through Word Embeddings.” American Sociological Review 84 (5): 905–49. https://doi.org/10.1177/0003122419877135.\n\n\nLe Guin, Ursula K. 1973. The Ones Who Walk Away from Omelas: A Story. HarperCollins.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMcWhorter, John H. 2014. The Language Hoax: Why the World Looks the Same in Any Language. Oxford University Press.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorris, Benny. 1987. The Birth of the Palestinian Refugee Problem, 1947-1949. Cambridge University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nPappe, Ilan. 2006. The Ethnic Cleansing of Palestine. Simon and Schuster.\n\n\nPellicer, Miquel, and Vimal Ranchhod. 2023. “Understanding the Effects of Racial Classification in Apartheid South Africa.” Journal of Development Economics 160 (January): 102998. https://doi.org/10.1016/j.jdeveco.2022.102998.\n\n\nRawls, John. 1951. “Outline of a Decision Procedure for Ethics.” The Philosophical Review 60 (2): 177–97. https://doi.org/10.2307/2181696.\n\n\n———. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSkinner, Quentin. 2012. Visions of Politics, Volume 1: Regarding Method. Cambridge: Cambridge University Press.\n\n\nSt. Augustine. 1874. The Works of Aurelius Augustine: Lectures or Tractates on the Gospel According to St. John, v. 2. T. & T. Clark.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWeber, Max. 1904. The Protestant Ethic and the Spirit of Capitalism. Courier Corporation.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\n\n\nDSAN 5450 Week 2: Machine Learning and Training Data"
   },
   {
     "objectID": "w02/index.html",
@@ -693,11 +903,11 @@
     "text": "Open slides in new window →"
   },
   {
-    "objectID": "w02/index.html#data-science-for-who",
-    "href": "w02/index.html#data-science-for-who",
+    "objectID": "w02/index.html#data-science-for-whom",
+    "href": "w02/index.html#data-science-for-whom",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
-    "section": "Data Science for Who?",
-    "text": "Data Science for Who?\n\nWhat are the processes by which data is measured, recorded, and distributed?\n\n\n\n\nThe Library of Missing Datasets. From D’Ignazio and Klein (2020)"
+    "section": "Data Science for Who(m)?",
+    "text": "Data Science for Who(m)?\n\nWhat are the processes by which data is measured, recorded, and distributed?\n\n\n\n\nThe Library of Missing Datasets. From D’Ignazio and Klein (2020)"
   },
   {
     "objectID": "w02/index.html#example-measuring-freedom-and-human-rights",
@@ -718,7 +928,7 @@
     "href": "w02/index.html#operationalization",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
     "section": "Operationalization",
-    "text": "Operationalization\n\n\n\n\nThink about claims commonly made on the basis of “data”:\n\nMarkets create economic prosperity\nA glass of wine in the evening prevents cancer\nPolicing makes communities safer\n\nHow exactly are “prosperity”, “preventing cancer”, “policing”, “community safety” being measured?\n\n\n\n\n\n\n\n\n\nStiglitz, Sen, and Fitoussi (2010)"
+    "text": "Operationalization\n\n\n\n\nThink of common claims made on basis of “data”:\n\nMarkets create economic prosperity\nA glass of wine in the evening prevents cancer\nPolicing makes communities safer\n\nHow exactly are “prosperity”, “preventing cancer”, “policing”, “community safety” being measured?\n\n\n\n\nThumbnail from full video (Quarto crashes when I embed it directly 😑)\n\n\n\n\n\n\n\nStiglitz, Sen, and Fitoussi (2010)"
   },
   {
     "objectID": "w02/index.html#what-is-being-compared",
@@ -774,28 +984,28 @@
     "href": "w02/index.html#three-component-parts-of-machine-learning",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
     "section": "Three Component Parts of Machine Learning",
-    "text": "Three Component Parts of Machine Learning\n\nA cool algorithm\nTraining data\nHuman labor"
+    "text": "Three Component Parts of Machine Learning\n\nA cool algorithm 😎😍\n[Possibly benign but possibly biased] Training data ❓🧐\nExploitation of below-minimum-wage human labor 😞🤐 (Dube et al. 2020, like and subscribe yall, get those ❤️s goin)"
   },
   {
     "objectID": "w02/index.html#a-cool-algorithm",
     "href": "w02/index.html#a-cool-algorithm",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
-    "section": "A Cool Algorithm",
-    "text": "A Cool Algorithm"
+    "section": "A Cool Algorithm 😎😍",
+    "text": "A Cool Algorithm 😎😍"
   },
   {
-    "objectID": "w02/index.html#training-data",
-    "href": "w02/index.html#training-data",
+    "objectID": "w02/index.html#training-data-with-acknowledged-bias",
+    "href": "w02/index.html#training-data-with-acknowledged-bias",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
-    "section": "Training Data",
-    "text": "Training Data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Gendered Innovations in Science, Health & Medicine, Engineering, and Environment"
+    "section": "Training Data With Acknowledged Bias",
+    "text": "Training Data With Acknowledged Bias\n\nOne potentially fruitful approach to fairness: since we can’t eliminate it, bring it out into the open and study it!\n\nThis can, at very least, help us brainstorm how we might “correct” for it (next slides!)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Gendered Innovations in Science, Health & Medicine, Engineering, and Environment"
   },
   {
     "objectID": "w02/index.html#word-embeddings",
     "href": "w02/index.html#word-embeddings",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
     "section": "Word Embeddings",
-    "text": "Word Embeddings\n\n\n\nBolukbasi et al. (2016)"
+    "text": "Word Embeddings\n\n\n\nBolukbasi et al. (2016)\n\n\n\nNotice how the \\(x\\)-axis has been selected by the researcher specifically to draw out (one) gendered dimension of language!\n\n\\(\\overrightarrow{\\texttt{she}}\\) mapped to \\(\\langle -1,0\\rangle\\), \\(\\overrightarrow{\\texttt{he}}\\) mapped to \\(\\langle 1,0 \\rangle\\), others projected onto this dimension"
   },
   {
     "objectID": "w02/index.html#removing-vs.-studying-biases",
@@ -805,25 +1015,214 @@
     "text": "Removing vs. Studying Biases\n\n\n\n\n\n\nFrom Kozlowski, Taddy, and Evans (2019)\n\n\n\n\n\n\n\nWordBias: An Interactive Tool for Discovering Intersectional Biases Encoded in Word Embeddings"
   },
   {
+    "objectID": "w02/index.html#the-training-data-bottleneck",
+    "href": "w02/index.html#the-training-data-bottleneck",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "The “Training Data Bottleneck”",
+    "text": "The “Training Data Bottleneck”\n\n\n\n\n\n\n\n\n\n\n\n\n\nSnorkel.AI, An Introduction to Snorkel and Data-Centric AI\n\n\n\n\n\nWith so much technical progress […] why is there so little real enterprise success? The answer all too often is that many enterprises continue to be bottlenecked by one key ingredient: the large amounts of labeled data [needed] to train these new systems.\n\nFigure 5: ibid. (PS, if it seems like I’m picking on them: these are the ‘good guys’ IMO! W.r.t. foregrounding training data as labor)"
+  },
+  {
     "objectID": "w02/index.html#human-labor",
     "href": "w02/index.html#human-labor",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
     "section": "Human Labor",
-    "text": "Human Labor\n\nGenerating Training Data"
+    "text": "Human Labor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: From Snorkel AI, “The Principles of Data-Centric AI Development by Alex Ratner” (YouTube)\n\n\n\n\n\n\nGray and Suri (2019)"
   },
   {
-    "objectID": "w02/index.html#what-comes-with-human-labels-human-biases",
-    "href": "w02/index.html#what-comes-with-human-labels-human-biases",
+    "objectID": "w02/index.html#computer-scientists-being-responsible-at-georgetown",
+    "href": "w02/index.html#computer-scientists-being-responsible-at-georgetown",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
-    "section": "What Comes With Human Labels? Human Biases!",
-    "text": "What Comes With Human Labels? Human Biases!\n\n\n\n\n“Reification”: Pretentious word for an important phenomenon, whereby talking about something (e.g., race) as if it was real ends up leading to it becoming real (having real impacts on people’s lives)1\n\n\nOn average, being classified as a White man as opposed to a Coloured man would have more than quadrupled a person’s income. (Pellicer and Ranchhod 2023)"
+    "section": "Computer Scientists Being Responsible (At Georgetown!)",
+    "text": "Computer Scientists Being Responsible (At Georgetown!)\n\n\n\nDr. Redmiles’ homepage (Since Quarto also freezes when I try to embed it…)\n\n\n\n(PS… UMD undergrad CS class of 2013 extremely overrepresented here 😜)"
+  },
+  {
+    "objectID": "w02/index.html#computer-scientists-being-responsible-at-georgetown-1",
+    "href": "w02/index.html#computer-scientists-being-responsible-at-georgetown-1",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Computer Scientists Being Responsible (At Georgetown!)",
+    "text": "Computer Scientists Being Responsible (At Georgetown!)\n\n\n\nGU360 Course Page"
+  },
+  {
+    "objectID": "w02/index.html#so-what-comes-with-human-labels-human-biases",
+    "href": "w02/index.html#so-what-comes-with-human-labels-human-biases",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "So, What Comes With Human Labels? Human Biases!",
+    "text": "So, What Comes With Human Labels? Human Biases!\n\n\n\n\n\n\nCrawford and Paglen (2019)\n\n\n\n\n\n\n\nImage tagged in ImageNet with the label “BOLSHEVIK”. From Crawford and Paglen (2019)"
+  },
+  {
+    "objectID": "w02/index.html#biases-in-our-brains-rightarrow-biases-in-our-models-rightarrow-material-effects",
+    "href": "w02/index.html#biases-in-our-brains-rightarrow-biases-in-our-models-rightarrow-material-effects",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Biases In Our Brains \\(\\rightarrow\\) Biases in Our Models \\(\\rightarrow\\) Material Effects",
+    "text": "Biases In Our Brains \\(\\rightarrow\\) Biases in Our Models \\(\\rightarrow\\) Material Effects\n\n\n\n\n“Reification”: Pretentious word for an important phenomenon, whereby talking about something (e.g., race) as if it was real ends up leading to it becoming real (having real impacts on people’s lives)1\n\n\nOn average, being classified as a White man as opposed to a Coloured man would have more than quadrupled a person’s income. (Pellicer and Ranchhod 2023)"
   },
   {
     "objectID": "w02/index.html#reification-in-science",
     "href": "w02/index.html#reification-in-science",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
     "section": "Reification in Science",
-    "text": "Reification in Science\n\nGoodhart’s Law: “When a measure becomes a target, it ceases to be a good measure”\nCat-and-mouse game between goals and ways of measuring progress towards goals"
+    "text": "Reification in Science\n\n\n\n\n“““Intelligence”“” Testing\n\n\n\n\nGould (1980)\n\n\n\n\n\nMore Generally\n\n\nGoodhart’s Law: “When a measure becomes a target, it ceases to be a good measure”\nCat-and-mouse game between goals (🚩) and ways of measuring progress towards goals (also 🚩)"
+  },
+  {
+    "objectID": "w02/index.html#reflective-equilibrium",
+    "href": "w02/index.html#reflective-equilibrium",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Reflective Equilibrium",
+    "text": "Reflective Equilibrium\n\nMost criticisms of any framework boil down to, “great in theory, but doesn’t work in practice”\nThe way to take this seriously: reflective equilibrium\nIntroduced by Rawls (1951), but popularized by Rawls (1971)\n\n\n\n\nFrom Awad et al. (2022)"
+  },
+  {
+    "objectID": "w02/index.html#rawls-vs.-everyone-else",
+    "href": "w02/index.html#rawls-vs.-everyone-else",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Rawls vs. Everyone Else",
+    "text": "Rawls vs. Everyone Else\n\nQ: What book had the greatest impact on modern (Anglophone) philosophy?\nOne approach: citations in a widely-used encyclopedia of philosophy* The results:\n\n\n\n\n\nBook\n\nBook\n\n\n\n\n1\nRawls 1972, A Theory of Justice (115)\n6\nParfit 1984, Reasons and Persons (62)\n\n\n2\nKripke 1980, Naming and Necessity (88)\n7\nScanlon 1998, What We Owe to Each Other (56)\n\n\n3\nLewis 1986, On the Plurality of Worlds (63)\n8\nWittgenstein 1953, Philosophical Investigations (55)\n\n\n3\nNozick 1974, Anarchy, State and Utopia (63)\n9\nChalmers 1996, The Conscious Mind (53)\n\n\n3\nQuine 1960, Word and Object (63)\n10\nRawls 1993, Political Liberalism (48)\n\n\n\n*(But don’t forget about the dangers of reification!)"
+  },
+  {
+    "objectID": "w02/index.html#easy-mode-descriptive-judgements",
+    "href": "w02/index.html#easy-mode-descriptive-judgements",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Easy Mode: Descriptive Judgements",
+    "text": "Easy Mode: Descriptive Judgements\nHow did you acquire the concept “red”?\n\nPeople pointed to stuff with certain properties and said “red” (or “rojo” or “红”), as part of constructing an intersubjective communication system\nThese descriptive concepts exist essentially for coordination, like driving on the left vs. right side of the road!\nNothing very profound or difficult seems to come from the commitments implied by this descriptive coordination: “for ease of communication, I’ll vibrate my vocal chords like this (or write these symbols) to indicate \\(x\\), and I’ll vibrate them like this (or write these other symbols) to indicate \\(y\\)” \nOur linguistic choices, when it comes to description, are arbitrary*: Our mouths can make these sounds, and each language is a mapping: [combinations of sounds] \\(\\leftrightarrow\\) [things] \n\n*(Tiny text footnote: Except for, perhaps, a few fun but rare onomatopoetic cases)"
+  },
+  {
+    "objectID": "w02/index.html#what-makes-ethical-judgements-more-difficult",
+    "href": "w02/index.html#what-makes-ethical-judgements-more-difficult",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "What Makes Ethical Judgements “More Difficult”?",
+    "text": "What Makes Ethical Judgements “More Difficult”?\nHow did you acquire the concept “good”?\n\nPeople pointed to actions/decisions with certain properties and said “good” (and pointed at others and said “bad”), as part of instilling values in you\n“Grass is green” just links two descriptive referents together, while “Honesty is good” takes the descriptive concept “honesty” and links it with the normative concept “good”\nIn doing this, parents/teachers/friends are doing way more than just linking sounds and things in the world (describing): they are also prescribing rules of moral conduct!\nThese normative concepts go beyond “mere” communication: the course of your life, the way the future unfolds, and [insert more things that tend to matter deeply to people] are different if you act on one set of norms vs. another\nEthics therefore centrally involves non-arbitrarily-chosen commitments!\ntl;dr: languages are arbitrary conventions for communication, while ethical systems use this language to non-arbitrarily mark out things that are good/bad:\n\nLife would not be very different if we “shuffled” words (we’d just vibrate our vocal chords differently), but would be very different if we “shuffled” good/bad labeling"
+  },
+  {
+    "objectID": "w02/index.html#quick-aside-top-10-linguist-beefs",
+    "href": "w02/index.html#quick-aside-top-10-linguist-beefs",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Quick Aside: Top 10 Linguist Beefs",
+    "text": "Quick Aside: Top 10 Linguist Beefs\n\nStatement on previous slide (“Life would not be very different if we shuffled words”), might seem weird/closed-minded/dismissive if you have a certain popular prior belief…\n\n\n\n\n\n\n\nDeutscher (2010)\n\n\n\n\n\n\n\nMcWhorter (2014)"
+  },
+  {
+    "objectID": "w02/index.html#the-last-time-i-use-this-i-promise",
+    "href": "w02/index.html#the-last-time-i-use-this-i-promise",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "The Last Time I Use This, I Promise",
+    "text": "The Last Time I Use This, I Promise"
+  },
+  {
+    "objectID": "w02/index.html#historical-example-capitalism-and-the-protestant-ethic",
+    "href": "w02/index.html#historical-example-capitalism-and-the-protestant-ethic",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Historical Example: Capitalism and the “Protestant Ethic”",
+    "text": "Historical Example: Capitalism and the “Protestant Ethic”\n\nBig changes in history are associated with changes in this good/bad labeling!\nMax Weber (second most-cited sociologist of all time*): Protestant value system gave rise to capitalist system by relabeling what things are good vs. bad (Weber 1904):\n\n\n\n\n\nJesus said to his disciples, “Truly, I say to you, only with difficulty will a rich person enter the kingdom of heaven. Again I tell you, it is easier for a camel to go through the eye of a needle than for a rich person to enter the kingdom of God.” (Matthew 19:23-24)\n\n\nOh, were we loving God worthily, we should have no love at all for money! (St. Augustine 1874, pg. 28)\n\n*(…jumpscare: REIFICATION!)\n\n\n\nThe earliest capitalists lacked legitimacy in the moral climate in which they found themselves. One of the means they found [to legitimize their behavior] was to appropriate the evaluative vocabulary of Protestantism. (Skinner 2012, pg. 157)\n\n\nCalvinism added [to Luther’s doctrine] the necessity of proving one’s faith in worldly activity, [replacing] spiritual aristocracy of monks outside of/above the world with spiritual aristocracy of predestined saints within it. (pg. 121)."
+  },
+  {
+    "objectID": "w02/index.html#contemporary-example-palestine",
+    "href": "w02/index.html#contemporary-example-palestine",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Contemporary Example: Palestine",
+    "text": "Contemporary Example: Palestine\n\nVery few of the relevant empirical facts are in dispute, since opening of crucial archives to three so-called “New Historians” in the 1980s. So why do people still argue?\n\n\n\n\n\nIlan Pappe, one of these historians, concluded from this material that:\n\nThe Israeli state was built upon a massive ethnic cleansing, and\nIs not morally justifiable (Pappe 2006)\n\n\n\nThe immunity Israel has received over the last fifty years encourages others, regimes and oppositions alike, to believe that human and civil rights are irrelevant in the Middle East. The dismantling of the mega-prison in Palestine will send a different, and more hopeful, message.\n\n\n\n\nBenny Morris, another of these historians, concluded that:\n\nThe Israeli state was built upon a massive ethnic cleansing, and\nIs morally justifiable (Morris 1987)\n\n\n\nA Jewish state would not have come into being without the uprooting of 700,000 Palestinians. Therefore it was necessary to uproot them. There was no choice but to expel that population. It was necessary to cleanse the hinterland and cleanse the border areas and cleanse the main roads."
+  },
+  {
+    "objectID": "w02/index.html#from-w01-promise-keeping",
+    "href": "w02/index.html#from-w01-promise-keeping",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "(From W01) Promise-Keeping",
+    "text": "(From W01) Promise-Keeping\n\nScenario: You just baked a pie, and you promised your friend you’d give them the pie. You’re walking over to the friend’s house to give them the pie.\nSuddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds\nDo you give the hostage-taker the pie?\n\n\n\n\n\nConsequentialist Ethics \\(\\implies\\) Yes\n\n\nTo be ethical is to weigh consequences of your actions\nThe positive consequences of giving the pie to the hostage-taker (saving a life) outweigh the negative consequences (breaking your promise to your friend)\n(Ex: Utilitarianism, associated with British philosopher Jeremy Bentham)\n\n\n\n\nDeontological Ethics \\(\\implies\\) No\n\n\nTo be ethical is to live by rules which you would want everyone to follow.\nAs a rule (a “categorical imperative”), you must not break promises. (Breaking this rule \\(\\implies\\) others can also “pick and choose” when to honor promises to you)\n(Ex: Kantian Ethics, associated with German philosopher Immanuel Kant)"
+  },
+  {
+    "objectID": "w02/index.html#counterargument-to-consequentialism",
+    "href": "w02/index.html#counterargument-to-consequentialism",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Counterargument to Consequentialism",
+    "text": "Counterargument to Consequentialism\n\n\n\n\nMillions are kept permanently happy, on the one simple condition that a certain lost soul on the far-off edge of things should lead a life of lonely torture (James 1891)\n\n\nModern example: people “out there” suffer so we can have iPhones, etc.\n\n\n\n\n\n\nLe Guin (1973)"
+  },
+  {
+    "objectID": "w02/index.html#one-solution-individual-rights",
+    "href": "w02/index.html#one-solution-individual-rights",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "One Solution: Individual Rights",
+    "text": "One Solution: Individual Rights\n\n\n\n\nRights are vetoes which individuals can use to cancel out collective/institutional decisions which affect them (key example for us: right to privacy)\nRawls/liberalism: individual rights are lexically prior to “efficiency” and/or distributional concerns\nWhy the buzzword “lexically”? Enter (non-scary) math!\nWe can put lowercase letters of English alphabet in an order: \\(\\texttt{a} \\prec \\texttt{b} \\prec \\cdots \\texttt{z}\\)\nWe can put capital letters of English alphabet in an order: \\(\\texttt{A} \\prec \\texttt{B} \\prec \\cdots \\prec \\texttt{Z}\\)\nWhat if we need to sort stuff with both types? We can decide that capital letters are lexically prior to lowercase letters, giving us a combined ordering:\n\n\n\n\n\n\nDworkin (1977)\n\n\n\n\n\n\\[\n\\texttt{A} \\prec \\texttt{B} \\prec \\texttt{Z} \\prec \\texttt{a} \\prec \\texttt{b} \\prec \\texttt{z}\n\\]"
+  },
+  {
+    "objectID": "w02/index.html#lexical-ordering-i-tricked-you",
+    "href": "w02/index.html#lexical-ordering-i-tricked-you",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Lexical Ordering (I Tricked You 😈)",
+    "text": "Lexical Ordering (I Tricked You 😈)\n\n\n\n\nYou thought I was just talking about letters, but they’re actually variables: capital letters are rights, lowercase letters are distributive principles\n\n\\[\n\\underbrace{\\texttt{A} \\prec \\texttt{B} \\prec \\texttt{Z}}_{\\mathclap{\\substack{\\text{Individual Rights} \\\\ \\text{Basic Goods}}}} \\phantom{\\prec} \\prec \\phantom{\\prec} \\underbrace{\\texttt{a} \\prec \\texttt{b} \\prec \\texttt{z}}_{\\mathclap{\\substack{\\text{Distributive Principles} \\\\ \\text{Money and whatnot}}}}\n\\]"
+  },
+  {
+    "objectID": "w02/index.html#counterarguments-to-deontology",
+    "href": "w02/index.html#counterarguments-to-deontology",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Counterargument(s) to Deontology",
+    "text": "Counterargument(s) to Deontology\n\n\n\n\nDeontological rule: “Don’t lie”\n\nBut then: Nazis come to your house, ask you if you’re harboring any Jews\n\nk, new deontological rule: “Don’t lie unless necessary”\n\nWho decides when it’s necessary?\n\nDeontological commitment: Pacifism / Nonviolence\n\nBut then: someone swingin on you\n\nk, new deontological commitment: Pacifism / Nonviolence Except In Self-Defense\n\nWhat counts as self-defense?\n\nDeontological maxim: “The master’s tools will never dismantle the master’s house”\n\nWhy concede “ownership” to the master?\n\n(Trolley problems, etc.)\n\n\n\n\n\n\nChurchill and Ryan (1998) (Derrick Jensen intro removed from later editions so… I put it on dang GitHub)"
+  },
+  {
+    "objectID": "w02/index.html#a-synthesis-two-level-utilitarianism",
+    "href": "w02/index.html#a-synthesis-two-level-utilitarianism",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "A Synthesis: Two-Level Utilitarianism",
+    "text": "A Synthesis: Two-Level Utilitarianism\n\n\n\n\nIt would be exhausting to compute Nash equilibrium strategies for every scenario\nInstead, we can develop heuristics that work for most cases, then reevaluate and update when we encounter tough cases\n(Brings us back to reflective equilibrium!)\n\n\n\n\n\n\nKahneman (2011)"
+  },
+  {
+    "objectID": "w02/index.html#individual-vs.-social-morality",
+    "href": "w02/index.html#individual-vs.-social-morality",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Individual vs. Social Morality",
+    "text": "Individual vs. Social Morality\n\nIt’s already quite difficult to reason about individual morality\nNow add in the fact that we live in a society 😰\nThings that happen depend not only on our choices but also the choices of others"
+  },
+  {
+    "objectID": "w02/index.html#enter-game-theory",
+    "href": "w02/index.html#enter-game-theory",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Enter Game Theory",
+    "text": "Enter Game Theory\n\nA tool for analyzing how individual choices + choices of others \\(\\rightarrow\\) outcomes!\n\n\n\n\n\nExample: You (\\(A\\)) and a friend (\\(B\\)) committed a robbery, and you’re brought into the police station for questioning.\nYou’re placed in separate rooms, and each of you is offered a plea deal: if you testify while your partner stays silent, you go free and they go to jail for 3 years.\nOtherwise, if you both stay silent, they have very little evidence and can only jail you for 1 year\nHowever, there’s a catch: if you both confess, you both get two years in jail, since they now have maximal evidence\n\n\n\n\n\n\nSource: Wikimedia Commons"
+  },
+  {
+    "objectID": "w02/index.html#individual-decision-making",
+    "href": "w02/index.html#individual-decision-making",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Individual Decision-Making",
+    "text": "Individual Decision-Making\n\n\n\n\nLet’s think through \\(A\\)’s best responses to the possible choices \\(B\\) could make:\nIf \\(B\\) stays silent, what is \\(A\\)’s best option?\n\nStaying silent results in 1 year of jail\nTestifying results in 0 years of jail\nSo it is better to testify\n\nIf \\(B\\) testifies, what is \\(A\\)’s best option?\n\nStaying silent results in 3 years of jail\nTestifying results in 2 years of jail\nSo it is better to testify\n\nThe result: regardless of what \\(B\\) does, \\(A\\) is better off testifying!\n\n\n\n\n\n\nSource: Wikimedia Commons"
+  },
+  {
+    "objectID": "w02/index.html#the-social-outcome",
+    "href": "w02/index.html#the-social-outcome",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "The Social Outcome",
+    "text": "The Social Outcome\n\n\n\n\nThe game is symmetric, so the same logic applies for \\(B\\)\nConclusion: the outcome of the game will be \\(s^* = (\\text{Testify}, \\text{Testify})\\)\nThis is called a Nash equilibrium: no player \\(i\\) can make themselves better off by deviating from \\(s_i\\)\n\n\n\n\n\n\nSource: Wikimedia Commons"
+  },
+  {
+    "objectID": "w02/index.html#how-do-we-fix-this-conventions",
+    "href": "w02/index.html#how-do-we-fix-this-conventions",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "How Do We Fix This? Conventions!",
+    "text": "How Do We Fix This? Conventions!\n\nWe encounter this type of problem every day if we drive! You (\\(A\\)) and another driver (\\(B\\)) arrive at an intersection:\n\n\n\n\n\nIf both stop, we’re mostly bored: \\(u_A = -1\\)\nIf we stop and the other person drives, we’re mad that they got to go and we didn’t: \\(u_A = -3\\)\nIf both drive, we crash: \\(u_A = -10\\)\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nStop\nDrive\n\n\n\\(A\\)\nStop\n\\(-1,-1\\)\n\\(-3,\\phantom{-}0\\)\n\n\nDrive\n\\(\\phantom{-}0, -3\\)\n\\(-10,-10\\)"
+  },
+  {
+    "objectID": "w02/index.html#without-a-convention",
+    "href": "w02/index.html#without-a-convention",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Without A Convention",
+    "text": "Without A Convention\n\n\n\n\nWe’re “frozen”: this game has no unique Nash equilibrium, so we cannot say (on the basis of individual rationality) what will happen!\nWithout a convention: power/aggression takes over. “War of all against all”, only the strong survive, etc. (life is “nasty, brutish, and short”)\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nStop\nDrive\n\n\n\\(A\\)\nStop\n\\({\\color{orange}\\cancel{\\color{black}-1}},{\\color{lightblue}\\cancel{\\color{black}-1}}\\)\n\\(\\boxed{-3},\\boxed{0}\\)\n\n\nDrive\n\\(\\boxed{0}, \\boxed{-3}\\)\n\\({\\color{orange}\\cancel{\\color{black}-10}},{\\color{lightblue}\\cancel{\\color{black}-10}}\\)\n\n\n\n\n\n\n\nIf \\(A\\)’s aggression is \\(\\Pr(s_A = \\textsf{Drive}) = X \\sim \\mathcal{U}[0,1]\\), \\(B\\)’s aggression is \\(\\Pr(s_B = \\textsf{Drive}) = Y \\sim \\mathcal{U}[0,1]\\), what happens at individual and societal levels?\n\n\\[\n\\begin{align*}\n\\mathbb{E}[u_A] = \\mathbb{E}[u_B] &= \\int_{0}^{1}\\int_{0}^{1}\\left(x - 2y -8xy - 1\\right)dy \\, dx = -3.5 \\\\\n\\underbrace{\\mathbb{E}\\mkern-3mu\\left[u_A + u_B\\right]}_{\\mathclap{\\text{Utilitarian Social Welfare}}} &= -3.5\n\\end{align*}\n\\]"
+  },
+  {
+    "objectID": "w02/index.html#the-convention-of-traffic-lights",
+    "href": "w02/index.html#the-convention-of-traffic-lights",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "The Convention of Traffic Lights",
+    "text": "The Convention of Traffic Lights\n\nIf we don’t want a world where \\(\\text{Happiness}(i) \\propto \\Pr(i \\text{ more aggro than }j)\\), we can introduce traffic lights:\n\n\n\n\n\nNow in “correlated equilibrium”, where we ensure* coordinated \\(\\Pr((\\textsf{Drive}, \\textsf{Stop})) = 0.5\\), \\(\\Pr((\\textsf{Stop}, \\textsf{Drive})) = 0.5\\)\n\\(\\mathbb{E}[u_A] = (0.5)(0) + (0.5)(-3) = -1.5\\)\n\\(\\mathbb{E}[u_B] = (0.5)(-3) + (0.5)(0) = -1.5\\)\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nStop\nDrive\n\n\n\\(A\\)\nStop\n\\({\\color{orange}\\cancel{\\color{black}-1}},{\\color{lightblue}\\cancel{\\color{black}-1}}\\)\n\\(\\boxed{-3},\\boxed{0}\\)\n\n\nDrive\n\\(\\boxed{0}, \\boxed{-3}\\)\n\\({\\color{orange}\\cancel{\\color{black}-10}},{\\color{lightblue}\\cancel{\\color{black}-10}}\\)\n\n\n\n\n\n\n\nEmpirical (anthropological) findings across literally thousands of different cultures throughout the world: people are willing to give up rewards to ensure fairness (see, e.g., Henrich et al. (2001))\n\n*(through, for example, traffic laws: equal in theory… In practice? Another story)"
+  },
+  {
+    "objectID": "w02/index.html#so-how-should-we-makechoose-conventions",
+    "href": "w02/index.html#so-how-should-we-makechoose-conventions",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "So How Should We Make/Choose Conventions?",
+    "text": "So How Should We Make/Choose Conventions?\n\nHobbes (1651): Only way out of “war of all against all” is to surrender all power to one sovereign (the Leviathan)\nRousseau (1762): Social contract\nRawls (1971): Social contract behind the “veil of ignorance”\n\nIf we didn’t know where we were going to end up in society, how would we set it up?"
+  },
+  {
+    "objectID": "w02/index.html#rawls-veil-of-ignorance",
+    "href": "w02/index.html#rawls-veil-of-ignorance",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Rawls’ Veil of Ignorance",
+    "text": "Rawls’ Veil of Ignorance\n\nProbably the most important tool for policy whitepapers!\n“Justice as fairness” (next week: fairness in AI 😜)\nWe don’t know whether we’ll be \\(A\\) or \\(B\\) in the intersection game, so we’d choose the traffic light!\nMore profoundly: We don’t know what race, gender, class, ethnicity, sexuality, disability status we’ll have; We don’t know whether we’ll be Israeli or Palestinian; we don’t know whether we’ll own means of production or own only our labor power (and thus have to sell it on a market to survive)… 🤔"
   },
   {
     "objectID": "w02/index.html#one-final-reminder",
@@ -833,25 +1232,46 @@
     "text": "One Final Reminder\n\nIndustry rule #4080: Cannot “prove” \\(q(x) = \\text{``Algorithm }x\\text{ is fair''}\\)! Only \\(p(x) \\implies q(y)\\):\n\n\\[\n\\underbrace{p(x)}_{\\substack{\\text{Accept ethical} \\\\ \\text{framework }x}} \\implies \\underbrace{q(y)}_{\\substack{\\text{Algorithms should} \\\\ \\text{satisfy condition }y}}\n\\]\n\nLast week: very broad intro to possible ethical frameworks (values for \\(x\\))\nToday: very broad intro to possible fairness criteria (values for \\(y\\))"
   },
   {
+    "objectID": "w02/index.html#categories-of-fairness-criteria",
+    "href": "w02/index.html#categories-of-fairness-criteria",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Categories of Fairness Criteria",
+    "text": "Categories of Fairness Criteria\n\nRoughly, approaches to fairness/bias in AI can be categorized as follows:\n\n\nFairness\n\n\n\n\n\n\nContext-Free\n\n\nSingle-Threshold Fairness\nEqual Prediction\nEqual Decision\n\n\n\n\n\n\n\n\n\nContext-Sensitive\n\n\nFairness via Similarity Metric(s)\nCausal Definitions\n\n\n\n\n\n\n\n[Today] Context-Free Fairness: Easier to grasp from CS/data science perspective; rooted in “language” of Machine Learning (you already know much of it, given DSAN 5000!)\nBut easy-to-grasp notion \\(\\neq\\) “good” notion!\nYour job: push yourself to (a) consider what is getting left out of the context-free definitions, and (b) the loopholes that are thus introduced into them, whereby people/computers can discriminate while remaining “technically fair”"
+  },
+  {
+    "objectID": "w02/index.html#laws-often-perfectly-technically-fair",
+    "href": "w02/index.html#laws-often-perfectly-technically-fair",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Laws: Often Perfectly “Technically Fair”",
+    "text": "Laws: Often Perfectly “Technically Fair”\n\nAh, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!\n\n\n(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)\n\nAnatole France, Le Lys Rouge (France 1894)"
+  },
+  {
     "objectID": "w02/index.html#who-remembers-confusion-matrices",
     "href": "w02/index.html#who-remembers-confusion-matrices",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
-    "section": "Who Remembers Confusion Matrices?",
-    "text": "Who Remembers Confusion Matrices?\n\nLet \\(Y_i\\) be “desirable” outcome for person \\(i\\), \\(D_i\\) be algorithmic decision for person \\(i\\)\nFor binary \\(Y_i\\) and \\(D_i\\), there are eight possible conditional probabilities we might care about (whether descriptively or normatively!)\n\n\n\n\n\n\n\n\\(\\Pr(D_i \\mid Y_i)\\)\n\\(D_i = 0\\)\n\\(D_i = 1\\)\n\n\n\\(Y_i = 0\\)\n1\n2\n\n\n\\(Y_i = 1\\)\n3\n4\n\n\n\n\n\n\n\n\n\\(\\Pr(Y_i \\mid D_i)\\)\n\\(D_i = 0\\)\n\\(D_i = 1\\)\n\n\n\\(Y_i = 0\\)\n5\n6\n\n\n\\(Y_i = 1\\)\n7\n8\n\n\n\n\n\n\n\nEntry 5, for example, tells us: “Given that the algorithm decided 0 for person \\(i\\), what is the probability that the desirable outcome for person \\(i\\) was 0?”"
+    "section": "Who Remembers… 🎉Confusion Matrices!!!🎉",
+    "text": "Who Remembers… 🎉Confusion Matrices!!!🎉\n\nTerrifyingly higher stakes than in DSAN 5000, however!\nNow \\(D = 1\\) could literally mean “shoot this person” or “throw this person in jail for life”\n\n\n\n\nFrom Mitchell et al. (2021)"
+  },
+  {
+    "objectID": "w02/index.html#baby-steps-a-less-busy-confusion-matrix",
+    "href": "w02/index.html#baby-steps-a-less-busy-confusion-matrix",
+    "title": "Week 2: Machine Learning, Training Data, and Bias",
+    "section": "Baby Steps: A Less Busy Confusion Matrix",
+    "text": "Baby Steps: A Less Busy Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (recidivism)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions, this is the last slide!)"
   },
   {
     "objectID": "w02/index.html#references",
     "href": "w02/index.html#references",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
     "section": "References",
-    "text": "References\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. “Man Is to Computer Programmer as Woman Is to Homemaker? Debiasing Word Embeddings.” In Advances in Neural Information Processing Systems. Vol. 29. Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFields, Barbara J., and Karen E. Fields. 2012. Racecraft: The Soul of Inequality in American Life. Verso Books.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nKozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class Through Word Embeddings.” American Sociological Review 84 (5): 905–49. https://doi.org/10.1177/0003122419877135.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nPellicer, Miquel, and Vimal Ranchhod. 2023. “Understanding the Effects of Racial Classification in Apartheid South Africa.” Journal of Development Economics 160 (January): 102998. https://doi.org/10.1016/j.jdeveco.2022.102998.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw."
+    "text": "References\n\n\nAwad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. “Computational Ethics.” Trends in Cognitive Sciences 26 (5): 388–405. https://doi.org/10.1016/j.tics.2022.02.009.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. “Man Is to Computer Programmer as Woman Is to Homemaker? Debiasing Word Embeddings.” In Advances in Neural Information Processing Systems. Vol. 29. Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html.\n\n\nChurchill, Ward, and Michael Ryan. 1998. Pacifism as Pathology: Reflections on the Role of Armed Struggle in North America. PM Press.\n\n\nCrawford, Kate, and Trevor Paglen. 2019. “Excavating AI: The Politics of Training Sets for Machine Learning.” AI Now Institute, NYU. https://excavating.ai.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDeutscher, Guy. 2010. Through the Language Glass: Why the World Looks Different in Other Languages. Henry Holt and Company.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFields, Barbara J., and Karen E. Fields. 2012. Racecraft: The Soul of Inequality in American Life. Verso Books.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nGould, Stephen Jay. 1980. The Mismeasure of Man (Revised and Expanded). W. W. Norton & Company.\n\n\nGray, Mary L., and Siddharth Suri. 2019. Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass. HarperCollins.\n\n\nHenrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert Gintis, and Richard McElreath. 2001. “In Search of Homo Economicus: Behavioral Experiments in 15 Small-Scale Societies.” American Economic Review 91 (2): 73–78. https://doi.org/10.1257/aer.91.2.73.\n\n\nHobbes, Thomas. 1651. Leviathan: With Selected Variants from the Latin Edition of 1668. Hackett Publishing.\n\n\nJames, William. 1891. “The Moral Philosopher and the Moral Life.” International Journal of Ethics 1 (3): 330–54. https://www.jstor.org/stable/2375309.\n\n\nKahneman, Daniel. 2011. Thinking, Fast and Slow. Farrar, Straus and Giroux.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nKozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class Through Word Embeddings.” American Sociological Review 84 (5): 905–49. https://doi.org/10.1177/0003122419877135.\n\n\nLe Guin, Ursula K. 1973. The Ones Who Walk Away from Omelas: A Story. HarperCollins.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMcWhorter, John H. 2014. The Language Hoax: Why the World Looks the Same in Any Language. Oxford University Press.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorris, Benny. 1987. The Birth of the Palestinian Refugee Problem, 1947-1949. Cambridge University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nPappe, Ilan. 2006. The Ethnic Cleansing of Palestine. Simon and Schuster.\n\n\nPellicer, Miquel, and Vimal Ranchhod. 2023. “Understanding the Effects of Racial Classification in Apartheid South Africa.” Journal of Development Economics 160 (January): 102998. https://doi.org/10.1016/j.jdeveco.2022.102998.\n\n\nRawls, John. 1951. “Outline of a Decision Procedure for Ethics.” The Philosophical Review 60 (2): 177–97. https://doi.org/10.2307/2181696.\n\n\n———. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSkinner, Quentin. 2012. Visions of Politics, Volume 1: Regarding Method. Cambridge: Cambridge University Press.\n\n\nSt. Augustine. 1874. The Works of Aurelius Augustine: Lectures or Tractates on the Gospel According to St. John, v. 2. T. & T. Clark.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWeber, Max. 1904. The Protestant Ethic and the Spirit of Capitalism. Courier Corporation.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw."
   },
   {
     "objectID": "w02/index.html#footnotes",
     "href": "w02/index.html#footnotes",
     "title": "Week 2: Machine Learning, Training Data, and Bias",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nFields and Fields (2012), for example, uses the term “racecraft” to describe the reification of blackness in the US↩︎"
+    "text": "Footnotes\n\n\nFields and Fields (2012), for example, coined “racecraft” to describe reification of blackness in US… much more on this later!↩︎"
   },
   {
     "objectID": "w04/slides.html#mathematical-setup",

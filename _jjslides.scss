@@ -100,11 +100,20 @@ figcaption {
 
 .crunch-blockquote blockquote {
     margin: 0px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
 }
 
 // figcaption
 
 .crunch-figcaption figcaption {
+    margin: 0px !important;
+}
+
+// figure
+.crunch-figures figure {
     margin: 0px !important;
 }
 
@@ -160,6 +169,12 @@ figcaption {
     margin: 0px !important;
 }
 
+// quarto-layout-cell
+
+.crunch-quarto-layout-cell .quarto-layout-cell {
+    margin-right: 0px !important;
+}
+
 // quarto-layout-panel
 .crunch-quarto-layout-panel .quarto-layout-panel {
     margin-bottom: 0px !important;
@@ -175,6 +190,10 @@ figcaption {
     margin-bottom: 2px !important;
 }
 
+.fn-span {
+    font-size: 80% !important;
+}
+
 .game-cell {
     border: 1px solid black !important;
 }
@@ -185,6 +204,7 @@ figcaption {
 
 .game-label {
     border: 0px solid black !important;
+    font-size: 95% !important;
 }
 
 .game-table td {
@@ -196,9 +216,25 @@ figcaption {
     font-size: 90% !important;
 }
 
+.inline-08 span.math.inline {
+    font-size: 80% !important;
+}
+
+.inline-85 span.math.inline {
+    font-size: 85% !important;
+}
+
+.inline-09 span.math.inline {
+    font-size: 90% !important;
+}
+
 .not-title-slide {
     display: block !important;
     top: 0px !important;
+}
+
+.shift-ul ul {
+    padding-left: 0;
 }
 
 .split-table {

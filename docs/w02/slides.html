@@ -8,9 +8,7 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Jeff Jacobs">
@@ -344,6 +342,7 @@
       margin-right: 0; 
     }
   </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -393,8 +392,8 @@ Jeff Jacobs
 <li>Implementation</li>
 </ul>
 </section>
-<section id="data-science-for-who" class="slide level2">
-<h2>Data Science for Who?</h2>
+<section id="data-science-for-whom" class="slide level2">
+<h2>Data Science for Who(m)?</h2>
 <ul>
 <li>What are the processes by which data is <strong>measured</strong>, <strong>recorded</strong>, and <strong>distributed</strong>?</li>
 </ul>
@@ -434,13 +433,13 @@ Jeff Jacobs
 <h2>Example: Measuring “Freedom” and “Human Rights”</h2>
 
 <img data-src="images/yells_at_cloud_edit.jpg" class="r-stretch quarto-figure-center"></section>
-<section id="operationalization" class="slide level2 smaller crunch-title crunch-li">
+<section id="operationalization" class="slide level2 smaller crunch-title crunch-li crunch-figcaption crunch-ul crunch-quarto-layout-panel crunch-quarto-figure">
 <h2>Operationalization</h2>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="oper-text" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
 <ul>
-<li>Think about claims commonly made on the basis of “data”:
+<li>Think of common claims made on basis of “data”:
 <ul>
 <li>Markets create economic prosperity</li>
 <li>A glass of wine in the evening prevents cancer</li>
@@ -448,9 +447,12 @@ Jeff Jacobs
 </ul></li>
 <li>How exactly are “prosperity”, “preventing cancer”, “policing”, “community safety” being <strong>measured</strong>?</li>
 </ul>
-<center>
-<video id="video_shortcode_videojs_video1" height="300" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="https://jpj.georgetown.domains/dsan5450-scratch/huey.mp4"></video>
-</center>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://www.youtube.com/watch?v=cGI9MjeOTc0"><img data-src="images/huey_thumbnail.jpeg" width="550"></a></p>
+<figcaption>Thumbnail from <a href="https://www.youtube.com/watch?v=cGI9MjeOTc0" target="_blank">full video</a> (Quarto crashes when I embed it directly 😑)</figcaption>
+</figure>
+</div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
@@ -635,17 +637,23 @@ Jeff Jacobs
 <section id="three-component-parts-of-machine-learning" class="slide level2">
 <h2>Three Component Parts of Machine Learning</h2>
 <ol type="1">
-<li>A cool algorithm</li>
-<li>Training data</li>
-<li>Human labor</li>
+<li>A cool algorithm 😎😍</li>
+<li>[Possibly benign but possibly biased] Training data ❓🧐</li>
+<li>Exploitation of below-minimum-wage human labor 😞🤐 <span class="citation" data-cites="dube_monopsony_2020">(<a href="#/references" role="doc-biblioref" onclick="">Dube et al. 2020</a>, like and subscribe yall, get those ❤️s goin)</span></li>
 </ol>
 </section>
 <section id="a-cool-algorithm" class="slide level2 smaller crunch-title">
-<h2>A Cool Algorithm</h2>
+<h2>A Cool Algorithm 😎😍</h2>
 
 <img data-src="images/neural_network.svg" class="r-stretch quarto-figure-center"></section>
-<section id="training-data" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure">
-<h2>Training Data</h2>
+<section id="training-data-with-acknowledged-bias" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure">
+<h2>Training Data With <em>Acknowledged</em> Bias</h2>
+<ul>
+<li>One potentially fruitful approach to fairness: since we can’t <em>eliminate</em> it, bring it out into the open and study it!
+<ul>
+<li>This can, at very least, help us brainstorm how we might “correct” for it (next slides!)</li>
+</ul></li>
+</ul>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -669,7 +677,13 @@ Jeff Jacobs
 <section id="word-embeddings" class="slide level2 smaller crunch-title">
 <h2>Word Embeddings</h2>
 
-<img data-src="images/bolukbasi2016.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="bolukbasi_man_2016">Bolukbasi et al. (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span></p></section>
+<img data-src="images/bolukbasi2016.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="bolukbasi_man_2016">Bolukbasi et al. (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span></p><ul>
+<li>Notice how the <span class="math inline">\(x\)</span>-axis has been <strong>selected</strong> by the researcher <strong>specifically</strong> to draw out (one) <strong>gendered dimension</strong> of language!
+<ul>
+<li><span class="math inline">\(\overrightarrow{\texttt{she}}\)</span> mapped to <span class="math inline">\(\langle -1,0\rangle\)</span>, <span class="math inline">\(\overrightarrow{\texttt{he}}\)</span> mapped to <span class="math inline">\(\langle 1,0 \rangle\)</span>, others <strong>projected</strong> onto this dimension</li>
+</ul></li>
+</ul>
+</section>
 <section id="removing-vs.-studying-biases" class="slide level2 smaller crunch-title">
 <h2>Removing vs.&nbsp;Studying Biases</h2>
 <div class="quarto-layout-panel">
@@ -693,29 +707,107 @@ Jeff Jacobs
 </div>
 </div>
 </section>
-<section id="human-labor" class="slide level2 smaller">
-<h2>Human Labor</h2>
-<ul>
-<li>Generating Training Data</li>
-</ul>
+<section id="the-training-data-bottleneck" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-figures crunch-quarto-figure">
+<h2>The “Training Data Bottleneck”</h2>
 <div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="images/snorkel_human_labelers.jpg"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/snorkel_1.svg"></p>
+</figure>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img data-src="images/snorkel_training_data.jpg"></p>
+</div>
+<div id="snorkel-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/snorkel_2.svg"></p>
+<figcaption>Snorkel.AI, <a href="assets/snorkel.pdf" target="_blank"><em>An Introduction to Snorkel and Data-Centric AI</em></a></figcaption>
+</figure>
+</div>
+<div id="fig-snorkel-quote" class="quarto-figure quarto-figure-center">
+<figure>
+<blockquote>
+<p>With so much technical progress […] why is there so little real enterprise success? The answer all too often is that many enterprises continue to be <strong>bottlenecked</strong> by one key ingredient: the large amounts of <strong>labeled data</strong> [needed] to train these new systems.</p>
+</blockquote>
+<figcaption>Figure&nbsp;5: <em>ibid. (PS, if it seems like I’m picking on them: these are the ‘good guys’ IMO! W.r.t. foregrounding training data as labor)</em></figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
 </section>
-<section id="what-comes-with-human-labels-human-biases" class="slide level2 smaller title-11 crunch-quarto-layout-panel crunch-quarto-figure crunch-title crunch-ul">
-<h2>What Comes With Human Labels? Human Biases!</h2>
+<section id="human-labor" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption">
+<h2>Human Labor</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="fig-human-labor-left" class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/snorkel_human_labelers.jpg" width="450"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/snorkel_training_data.jpg" width="450"></p>
+</figure>
+</div>
+<figcaption>Figure&nbsp;6: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_QooA" target="_blank">“The Principles of Data-Centric AI Development by Alex Ratner”</a> (YouTube)</figcaption>
+</figure>
+</div>
+<div id="human-labor-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/ghost_work.jpg" width="360"></p>
+<figcaption><span class="citation" data-cites="gray_ghost_2019">Gray and Suri (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="computer-scientists-being-responsible-at-georgetown" class="slide level2 smaller crunch-title crunch-iframe title-09">
+<h2>Computer Scientists Being Responsible (At Georgetown!)</h2>
+
+<img data-src="images/dr_redmiles_homepage.jpeg" class="r-stretch quarto-figure-center"><p class="caption"><a href="" target="_blank">Dr.&nbsp;Redmiles’ homepage</a> (Since Quarto also freezes when I try to embed it…)</p><ul>
+<li><em>(PS… UMD undergrad CS class of 2013 extremely overrepresented here</em> 😜<em>)</em></li>
+</ul>
+</section>
+<section id="computer-scientists-being-responsible-at-georgetown-1" class="slide level2 smaller crunch-title crunch-iframe title-09">
+<h2>Computer Scientists Being Responsible (At Georgetown!)</h2>
+
+<img data-src="images/dr_redmiles_class.jpeg" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://gufaculty360.georgetown.edu/s/course-catalog/a1oHp00000GvwGnIAJ/cosc882001?id=003Hp00002jN3TsIAK" target="_blank">GU360 Course Page</a></p></section>
+<section id="so-what-comes-with-human-labels-human-biases" class="slide level2 smaller title-10 crunch-quarto-layout-panel crunch-quarto-figure crunch-title crunch-ul crunch-figcaption">
+<h2>So, What Comes With Human Labels? Human Biases!</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/imagenet_jezebel.jpg" width="660"></p>
+<figcaption><span class="citation" data-cites="crawford_excavating_2019">Crawford and Paglen (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/bolshevik.JPEG"></p>
+<figcaption>Image tagged in ImageNet with the label <strong>“BOLSHEVIK”</strong>. From <span class="citation" data-cites="crawford_excavating_2019">Crawford and Paglen (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="biases-in-our-brains-rightarrow-biases-in-our-models-rightarrow-material-effects" class="slide level2 smaller crunch-title title-08 crunch-p crunch-quarto-layout-panel crunch-ul">
+<h2>Biases In Our Brains <span class="math inline">\(\rightarrow\)</span> Biases in Our Models <span class="math inline">\(\rightarrow\)</span> Material Effects</h2>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="biases-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <ul>
-<li><strong>“Reification”</strong>: Pretentious word for an important phenomenon, whereby talking about something (e.g., race) <em>as if</em> it was real ends up leading to it becoming real (having real impacts on people’s lives)<sup>1</sup></li>
+<li><strong>“Reification”</strong>: Pretentious word for an important phenomenon, whereby talking about something (e.g., race) <em>as if</em> it was real ends up leading to it <strong>becoming real</strong> (having real impacts on people’s lives)<sup>1</sup></li>
 </ul>
 <blockquote>
 <p>On average, being classified as a White man as opposed to a Coloured man would have more than quadrupled a person’s income. <span class="citation" data-cites="pellicer_understanding_2023">(<a href="#/references" role="doc-biblioref" onclick="">Pellicer and Ranchhod 2023</a>)</span></p>
@@ -735,12 +827,669 @@ Jeff Jacobs
 </div>
 </div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p><span class="citation" data-cites="fields_racecraft_2012">Fields and Fields (<a href="#/references" role="doc-biblioref" onclick="">2012</a>)</span>, for example, uses the term <strong>“racecraft”</strong> to describe the reification of blackness in the US</p></li></ol></aside></section>
-<section id="reification-in-science" class="slide level2">
+<aside><ol class="aside-footnotes"><li id="fn1"><p><span class="citation" data-cites="fields_racecraft_2012">Fields and Fields (<a href="#/references" role="doc-biblioref" onclick="">2012</a>)</span>, for example, coined <strong>“racecraft”</strong> to describe reification of blackness in US… <em>much</em> more on this later!</p></li></ol></aside></section>
+<section id="reification-in-science" class="slide level2 crunch-title crunch-quarto-layout-panel crunch-figcaption">
 <h2>Reification in Science</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="intelligence-testing" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<center>
+<em>“““Intelligence”“” Testing</em>
+</center>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/mismeasure.webp" width="340"></p>
+<figcaption><span class="citation" data-cites="gould_mismeasure_1980">Gould (<a href="#/references" role="doc-biblioref" onclick="">1980</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+<div id="goodhart" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<center>
+<em>More Generally</em>
+</center>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Goodhart%27s_law" target="_blank">Goodhart’s Law</a>: “When a measure becomes a target, it ceases to be a good measure”</li>
-<li>Cat-and-mouse game between <strong>goals</strong> and ways of <strong>measuring</strong> progress towards goals</li>
+<li>Cat-and-mouse game between <strong>goals</strong> (🚩) and ways of <strong>measuring</strong> progress towards goals (also 🚩)</li>
+</ul>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="metaethics" class="title-slide slide level1 center" data-stack-name="Metaethics">
+<h1>Metaethics</h1>
+<p>A scary-sounding word that just means:</p>
+<blockquote>
+<p>“What we talk about when we talk about ethics”,</p>
+</blockquote>
+<p>in contrast to</p>
+<blockquote>
+<p>“What we talk about when we talk about [insert particular ethical framework here]”</p>
+</blockquote>
+</section>
+<section id="reflective-equilibrium" class="slide level2 crunch-title crunch-quarto-figure">
+<h2>Reflective Equilibrium</h2>
+<ul>
+<li>Most criticisms of any framework boil down to, “great in theory, but doesn’t work in practice”</li>
+<li>The way to take this seriously: <strong>reflective equilibrium</strong></li>
+<li>Introduced by <span class="citation" data-cites="rawls_outline_1951">Rawls (<a href="#/references" role="doc-biblioref" onclick="">1951</a>)</span>, but popularized by <span class="citation" data-cites="rawls_theory_1971">Rawls (<a href="#/references" role="doc-biblioref" onclick="">1971</a>)</span></li>
+</ul>
+
+<img data-src="images/reflective.jpg" class="r-stretch quarto-figure-center"><p class="caption">From <span class="citation" data-cites="awad_computational_2022">Awad et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></p></section>
+<section id="rawls-vs.-everyone-else" class="slide level2 smaller crunch-title crunch-ul">
+<h2>Rawls vs.&nbsp;Everyone Else</h2>
+<ul>
+<li>Q: What book had the greatest impact on modern (Anglophone) philosophy?</li>
+<li>One approach: citations in a widely-used <a href="https://plato.stanford.edu/entries/reflective-equilibrium/" target="_blank">encyclopedia of philosophy</a>* <a href="http://schwitzsplinters.blogspot.com/2020/07/the-233-most-cited-works-in-stanford.html" target="_blank">The results</a>:</li>
+</ul>
+<table data-quarto-postprocess="true" style="width: 100% !important;">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="width: 5% !important"></th>
+<th class="split-table" data-quarto-table-cell-role="th" style="width: 45% !important">Book</th>
+<th data-quarto-table-cell-role="th" style="width: 5% !important"></th>
+<th data-quarto-table-cell-role="th" style="width: 45% !important">Book</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td class="split-table">Rawls 1972, <em>A Theory of Justice</em> (115)</td>
+<td>6</td>
+<td>Parfit 1984, <em>Reasons and Persons</em> (62)</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td class="split-table">Kripke 1980, <em>Naming and Necessity</em> (88)</td>
+<td>7</td>
+<td>Scanlon 1998, <em>What We Owe to Each Other</em> (56)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td class="split-table">Lewis 1986, <em>On the Plurality of Worlds</em> (63)</td>
+<td>8</td>
+<td>Wittgenstein 1953, <em>Philosophical Investigations</em> (55)</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td class="split-table">Nozick 1974, <em>Anarchy, State and Utopia</em> (63)</td>
+<td>9</td>
+<td>Chalmers 1996, <em>The Conscious Mind</em> (53)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td class="split-table">Quine 1960, <em>Word and Object</em> (63)</td>
+<td>10</td>
+<td>Rawls 1993, <em>Political Liberalism</em> (48)</td>
+</tr>
+</tbody>
+</table>
+<p>*<em>(But don’t forget about the dangers of <strong>reification</strong>!)</em></p>
+</section></section>
+<section>
+<section id="descriptive-vs.-normative-judgements" class="title-slide slide level1 not-title-page title-11 center">
+<h1>Descriptive vs.&nbsp;Normative Judgements</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Descriptive (Is)</th>
+<th>Normative (Ought)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Grass is green (true)</td>
+<td>Grass ought to be green (?)</td>
+</tr>
+<tr class="even">
+<td>Grass is blue (false)</td>
+<td>Grass ought to be blue (?)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="easy-mode-descriptive-judgements" class="slide level2 smaller crunch-title crunch-p">
+<h2>Easy Mode: Descriptive Judgements</h2>
+<p><strong>How did you acquire the concept “red”?</strong></p>
+<ul>
+<li>People pointed to stuff with certain properties and said “red” (or “rojo” or “红”), as part of constructing an <strong>intersubjective</strong> communication system</li>
+<li>These <strong>descriptive</strong> concepts exist essentially for <em>coordination</em>, like driving on the left vs.&nbsp;right side of the road!</li>
+<li>Nothing very profound or difficult seems to come from the <strong>commitments</strong> implied by this descriptive coordination: <em>“for ease of communication, I’ll vibrate my vocal chords like this (or write these symbols) to indicate <span class="math inline">\(x\)</span>, and I’ll vibrate them like this (or write these other symbols) to indicate <span class="math inline">\(y\)</span>”</em> <!-- * Technically you have the free will to **refuse** this prescription. But, nothing very "" --></li>
+<li>Our linguistic choices, when it comes to <strong>description</strong>, are arbitrary*: Our mouths can make <a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet" target="_blank">these sounds</a>, and each language is a mapping: [combinations of sounds] <span class="math inline">\(\leftrightarrow\)</span> [things] <!-- * Our lives/the world would not be very different if "red" was switched with "green"; i.e., the main change would just be vibrating different vocal chords or writing different symbols to communicate the concept --></li>
+</ul>
+<p>*<em>(Tiny text footnote: Except for, perhaps, a few <a href="https://en.wikipedia.org/wiki/Bouba/kiki_effect" target="_blank">fun but rare onomatopoetic cases</a>)</em></p>
+</section>
+<section id="what-makes-ethical-judgements-more-difficult" class="slide level2 smaller title-11 crunch-title crunch-p">
+<h2>What Makes Ethical Judgements “More Difficult”?</h2>
+<p><strong>How did you acquire the concept “good”?</strong></p>
+<ul>
+<li>People pointed to actions/decisions with certain properties and said “good” (and pointed at others and said “bad”), as part of instilling <strong>values</strong> in you</li>
+<li>“Grass is green” just links two <strong>descriptive</strong> referents together, while “Honesty is good” takes the <strong>descriptive</strong> concept “honesty” and <em>links it</em> with the <strong>normative</strong> concept “good”</li>
+<li>In doing this, parents/teachers/friends are doing way more than just linking sounds and things in the world (<strong>de</strong>scribing): they are also <strong>prescribing</strong> rules of moral conduct!</li>
+<li>These <strong>normative</strong> concepts go beyond “mere” communication: the course of your life, the way the future unfolds, and [insert more things that tend to matter deeply to people] are different if you <strong>act on</strong> one set of norms vs.&nbsp;another</li>
+<li>Ethics therefore centrally involves non-arbitrarily-chosen <strong>commitments</strong>!</li>
+<li>tl;dr: languages are arbitrary conventions for communication, while ethical systems use this language to non-arbitrarily mark out things that are good/bad:
+<ul>
+<li>Life would <strong>not</strong> be very different if we “shuffled” words (we’d just vibrate our vocal chords differently), but <strong>would</strong> be very different if we “shuffled” good/bad labeling</li>
+</ul></li>
+</ul>
+</section>
+<section id="quick-aside-top-10-linguist-beefs" class="slide level2 smaller crunch-title crunch-figcaption crunch-quarto-layout-panel crunch-ul crunch-images">
+<h2>Quick Aside: Top 10 Linguist Beefs</h2>
+<ul>
+<li>Statement on previous slide (<em>“Life would not be very different if we shuffled words”</em>), might seem weird/closed-minded/dismissive if you have a certain popular prior belief…</li>
+</ul>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/language_glass.jpg" width="300"></p>
+<figcaption><span class="citation" data-cites="deutscher_language_2010">Deutscher (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/language_hoax.jpg" width="325"></p>
+<figcaption><span class="citation" data-cites="mcwhorter_language_2014">McWhorter (<a href="#/references" role="doc-biblioref" onclick="">2014</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-last-time-i-use-this-i-promise" class="slide level2">
+<h2>The Last Time I Use This, I Promise</h2>
+
+<img data-src="images/yells_at_sapir.jpeg" class="r-stretch"></section>
+<section id="historical-example-capitalism-and-the-protestant-ethic" class="slide level2 crunch-title smaller title-09 crunch-quarto-layout-panel crunch-p crunch-ul crunch-quarto-layout-cell crunch-blockquote">
+<h2>Historical Example: Capitalism and the “Protestant Ethic”</h2>
+<ul>
+<li>Big changes in history are associated with changes in this <strong>good/bad labeling</strong>!</li>
+<li>Max Weber (<a href="https://www.researchgate.net/figure/Top-50-sociologists-according-to-aggregate-weighted-citation-scores-normalized-score_fig1_332447162" target="_blank">second most-cited</a> sociologist of all time*): <em>Protestant value system</em> gave rise to <em>capitalist system</em> by <strong>relabeling</strong> what things are good vs.&nbsp;bad <span class="citation" data-cites="weber_protestant_1904">(<a href="#/references" role="doc-biblioref" onclick="">Weber 1904</a>)</span>:</li>
+</ul>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="bible-money" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<blockquote>
+<p>Jesus said to his disciples, “Truly, I say to you, only with difficulty will a rich person enter the kingdom of heaven. Again I tell you, it is easier for a camel to go through the eye of a needle than for a rich person to enter the kingdom of God.” (<a href="https://www.biblegateway.com/passage/?search=Matthew%2019&amp;version=ESV" target="_blank">Matthew 19:23-24</a>)</p>
+</blockquote>
+<blockquote>
+<p>Oh, were we loving God worthily, we should have no love at all for money! <span class="citation" data-cites="st.augustine_works_1874">(<a href="#/references" role="doc-biblioref" onclick="">St. Augustine 1874</a>, pg. 28)</span></p>
+</blockquote>
+<p><span class="fn-span">*<em>(…jumpscare: REIFICATION!)</em></span></p>
+</div>
+<div id="protestant-ethic" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<blockquote>
+<p>The earliest capitalists lacked legitimacy in the moral climate in which they found themselves. One of the means they found [to legitimize their behavior] was to appropriate the evaluative vocabulary of Protestantism. <span class="citation" data-cites="skinner_visions_2012">(<a href="#/references" role="doc-biblioref" onclick="">Skinner 2012</a>, pg. 157)</span></p>
+</blockquote>
+<blockquote>
+<p>Calvinism added [to Luther’s doctrine] the necessity of <strong>proving one’s faith</strong> in worldly activity, [replacing] spiritual aristocracy of monks outside of/above the world with spiritual aristocracy of predestined saints within it. (pg. 121).</p>
+</blockquote>
+</div>
+</div>
+</div>
+</section>
+<section id="contemporary-example-palestine" class="slide level2 smaller crunch-quarto-layout-panel crunch-title crunch-ul crunch-blockquote crunch-li crunch-p">
+<h2>Contemporary Example: Palestine</h2>
+<ul>
+<li>Very few of the relevant <strong>empirical</strong> facts are in dispute, since opening of crucial archives to three so-called “New Historians” in the 1980s. So why do people still argue?</li>
+</ul>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="pappe-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<ul>
+<li><strong>Ilan Pappe</strong>, one of these historians, concluded from this material that:
+<ul>
+<li>The Israeli state was built upon a massive ethnic cleansing, and</li>
+<li>Is not morally justifiable <span class="citation" data-cites="pappe_ethnic_2006">(<a href="#/references" role="doc-biblioref" onclick="">Pappe 2006</a>)</span></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>The immunity Israel has received over the last fifty years encourages others, regimes and oppositions alike, to believe that human and civil rights are irrelevant in the Middle East. The dismantling of the mega-prison in Palestine will send a different, and more hopeful, message.</p>
+</blockquote>
+</div>
+<div id="morris-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<ul>
+<li><strong>Benny Morris</strong>, another of these historians, concluded that:
+<ul>
+<li>The Israeli state was built upon a massive ethnic cleansing, and</li>
+<li>Is morally justifiable <span class="citation" data-cites="morris_birth_1987">(<a href="#/references" role="doc-biblioref" onclick="">Morris 1987</a>)</span></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>A Jewish state would not have come into being without the uprooting of 700,000 Palestinians. Therefore it was necessary to uproot them. There was no choice but to expel that population. It was necessary to cleanse the hinterland and cleanse the border areas and cleanse the main roads.</p>
+</blockquote>
+<!-- [...] The term "cleanse" doesn't sound nice but that's the term they used at the time. I adopted it from the 1948 documents. -->
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="ethical-frameworks" class="title-slide slide level1 center" data-stack-name="Frameworks">
+<h1>Ethical Frameworks</h1>
+
+</section>
+<section id="from-w01-promise-keeping" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-ul title-12">
+<h2>(From W01) Promise-Keeping</h2>
+<ul>
+<li>Scenario: You just baked a pie, and you promised your friend you’d give them the pie. You’re walking over to the friend’s house to give them the pie.</li>
+<li>Suddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds</li>
+<li>Do you give the hostage-taker the pie?</li>
+</ul>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="conseqentialism" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<center>
+<strong>Consequentialist Ethics <span class="math inline">\(\implies\)</span> Yes</strong>
+</center>
+<ul>
+<li>To be ethical is to weigh consequences of your actions</li>
+<li>The <strong>positive consequences</strong> of giving the pie to the hostage-taker (saving a life) outweigh the <strong>negative consequences</strong> (breaking your promise to your friend)</li>
+<li><em>(Ex: <strong>Utilitarianism</strong>, associated with British philosopher <strong>Jeremy Bentham</strong>)</em></li>
+</ul>
+</div>
+<div id="deontology" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<center>
+<strong>Deontological Ethics <span class="math inline">\(\implies\)</span> No</strong>
+</center>
+<ul>
+<li>To be ethical is to live by rules which you would <strong>want everyone to follow</strong>.</li>
+<li>As a <strong>rule</strong> (a “categorical imperative”), you <strong>must not break promises</strong>. (Breaking this rule <span class="math inline">\(\implies\)</span> others can also “pick and choose” when to honor promises to you)</li>
+<li><em>(Ex: <strong>Kantian Ethics</strong>, associated with German philosopher <strong>Immanuel Kant</strong>)</em></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="counterargument-to-consequentialism" class="slide level2 crunch-title title-09 crunch-quarto-layout-panel crunch-ul crunch-quarto-figure crunch-images">
+<h2>Counterargument to Consequentialism</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="omelas-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<blockquote>
+<p>Millions are kept permanently happy, on the one simple condition that a certain lost soul on the far-off edge of things should lead a life of lonely torture <span class="citation" data-cites="james_moral_1891">(<a href="#/references" role="doc-biblioref" onclick="">James 1891</a>)</span></p>
+</blockquote>
+<ul>
+<li>Modern example: people “out there” suffer so we can have iPhones, etc.</li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/omelas.jpg" width="360"></p>
+<figcaption><span class="citation" data-cites="leguin_ones_1973">Le Guin (<a href="#/references" role="doc-biblioref" onclick="">1973</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="one-solution-individual-rights" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption crunch-images crunch-math">
+<h2>One Solution: Individual Rights</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="rights-text" class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<ul>
+<li>Rights are <strong>vetoes</strong> which <strong>individuals</strong> can use to cancel out <strong>collective</strong>/institutional decisions which affect them (key example for us: right to <strong>privacy</strong>)</li>
+<li>Rawls/liberalism: individual rights are <strong>lexically prior to</strong> “efficiency” and/or distributional concerns</li>
+<li>Why the buzzword “lexically”? Enter (non-scary) math!</li>
+<li>We can put <em>lowercase</em> letters of English alphabet in an <strong>order</strong>: <span class="math inline">\(\texttt{a} \prec \texttt{b} \prec \cdots \texttt{z}\)</span></li>
+<li>We can put <em>capital</em> letters of English alphabet in an order: <span class="math inline">\(\texttt{A} \prec \texttt{B} \prec \cdots \prec \texttt{Z}\)</span></li>
+<li>What if we need to sort stuff with <strong>both</strong> types? We can decide that capital letters are <strong>lexically prior</strong> to lowercase letters, giving us a combined ordering:</li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/dworkin.jpg" width="300"></p>
+<figcaption><span class="citation" data-cites="dworkin_taking_1977">Dworkin (<a href="#/references" role="doc-biblioref" onclick="">1977</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p><span class="math display">\[
+\texttt{A} \prec \texttt{B} \prec \texttt{Z} \prec \texttt{a} \prec \texttt{b} \prec \texttt{z}
+\]</span></p>
+</section>
+<section id="lexical-ordering-i-tricked-you" class="slide level2">
+<h2>Lexical Ordering (I Tricked You 😈)</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="trick-left" class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<ul>
+<li>You thought I was just talking about <em>letters</em>, but they’re actually <strong>variables</strong>: capital letters are rights, lowercase letters are distributive principles</li>
+</ul>
+<p><span class="math display">\[
+\underbrace{\texttt{A} \prec \texttt{B} \prec \texttt{Z}}_{\mathclap{\substack{\text{Individual Rights} \\ \text{Basic Goods}}}} \phantom{\prec} \prec \phantom{\prec} \underbrace{\texttt{a} \prec \texttt{b} \prec \texttt{z}}_{\mathclap{\substack{\text{Distributive Principles} \\ \text{Money and whatnot}}}}
+\]</span></p>
+</div>
+<div id="trick-right" class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/atrick_nocap.jpg"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="counterarguments-to-deontology" class="slide level2 smaller crunch-title crunch-ul crunch-figcaption shift-ul crunch-li-3 crunch-images">
+<h2>Counterargument(s) to Deontology</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="deontology-counter-left" class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: center;">
+<ul>
+<li>Deontological rule: “Don’t lie”
+<ul>
+<li>But then: Nazis come to your house, ask you if you’re harboring any Jews</li>
+</ul></li>
+<li>k, new deontological rule: “Don’t lie unless necessary”
+<ul>
+<li>Who decides when it’s necessary?</li>
+</ul></li>
+<li>Deontological commitment: Pacifism / Nonviolence
+<ul>
+<li>But then: someone swingin on you</li>
+</ul></li>
+<li>k, new deontological commitment: Pacifism / Nonviolence Except In Self-Defense
+<ul>
+<li>What counts as self-defense?</li>
+</ul></li>
+<li>Deontological maxim: “The master’s tools will never dismantle the master’s house”
+<ul>
+<li>Why concede “ownership” to the master?</li>
+</ul></li>
+<li>(Trolley problems, etc.)</li>
+</ul>
+</div>
+<div id="deontology-counter-right" class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pacifism.jpg" width="340"></p>
+<figcaption><span class="citation" data-cites="churchill_pacifism_1998">Churchill and Ryan (<a href="#/references" role="doc-biblioref" onclick="">1998</a>)</span> <em>(Derrick Jensen intro removed from later editions so… I <a href="https://github.com/jpowerj/mdb/blob/main/1998_Churchill_PacifismAsPathology.md" target="_blank">put it on dang GitHub</a>)</em></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-synthesis-two-level-utilitarianism" class="slide level2 title-09 crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-images crunch-figcaption">
+<h2>A Synthesis: Two-Level Utilitarianism</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="two-level-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<ul>
+<li>It would be exhausting to compute Nash equilibrium strategies for every scenario</li>
+<li>Instead, we can develop <strong>heuristics</strong> that work for most cases, then <strong>reevaluate</strong> and <strong>update</strong> when we encounter tough cases</li>
+<li>(Brings us back to <strong>reflective equilibrium</strong>!)</li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/thinking.jpg" width="360"></p>
+<figcaption><span class="citation" data-cites="kahneman_thinking_2011">Kahneman (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="individual-vs.-social-morality" class="slide level2">
+<h2>Individual vs.&nbsp;Social Morality</h2>
+<ul>
+<li>It’s already quite difficult to reason about <strong>individual</strong> morality</li>
+<li>Now add in the fact that we live in a society 😰</li>
+<li>Things that happen depend not only on <strong>our</strong> choices but also the choices of others</li>
+</ul>
+</section>
+<section id="enter-game-theory" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-figcaption crunch-ul">
+<h2>Enter Game Theory</h2>
+<ul>
+<li>A tool for analyzing how <strong>individual choices</strong> + <strong>choices of others</strong> <span class="math inline">\(\rightarrow\)</span> <strong>outcomes</strong>!</li>
+</ul>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="game-theory-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<ul>
+<li>Example: You (<span class="math inline">\(A\)</span>) and a friend (<span class="math inline">\(B\)</span>) committed a robbery, and you’re brought into the police station for questioning.</li>
+<li>You’re placed in separate rooms, and each of you is offered a <strong>plea deal</strong>: if you <strong>testify</strong> while your partner <strong>stays silent</strong>, you go free and they go to jail for 3 years.</li>
+<li>Otherwise, if you <strong>both stay silent</strong>, they have very little evidence and can only jail you for <strong>1 year</strong></li>
+<li>However, there’s a catch: if you <strong>both confess</strong>, you both get <strong>two years</strong> in jail, since they now have maximal evidence</li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/prisoners_dilemma.svg"></p>
+<figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:Prisoners_dilemma.svg" target="_blank">Wikimedia Commons</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="individual-decision-making" class="slide level2 smaller title-11">
+<h2>Individual Decision-Making</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="step-by-step" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<ul>
+<li>Let’s think through <span class="math inline">\(A\)</span>’s <strong>best responses</strong> to the possible choices <span class="math inline">\(B\)</span> could make:</li>
+<li>If <span class="math inline">\(B\)</span> <strong>stays silent</strong>, what is <span class="math inline">\(A\)</span>’s best option?
+<ul>
+<li><strong>Staying silent</strong> results in <strong>1 year</strong> of jail</li>
+<li><strong>Testifying</strong> results in <strong>0 years</strong> of jail</li>
+<li>So it is <strong>better to testify</strong></li>
+</ul></li>
+<li>If <span class="math inline">\(B\)</span> <strong>testifies</strong>, what is <span class="math inline">\(A\)</span>’s best option?
+<ul>
+<li><strong>Staying silent</strong> results in <strong>3 years</strong> of jail</li>
+<li><strong>Testifying</strong> results in <strong>2 years</strong> of jail</li>
+<li>So it is <strong>better to testify</strong></li>
+</ul></li>
+<li>The result: <strong>regardless of what <span class="math inline">\(B\)</span> does</strong>, <span class="math inline">\(A\)</span> is <strong>better off testifying</strong>!</li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/prisoners_dilemma.svg"></p>
+<figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:Prisoners_dilemma.svg" target="_blank">Wikimedia Commons</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-social-outcome" class="slide level2">
+<h2>The Social Outcome</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="social-outcome-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<ul>
+<li>The game is <strong>symmetric</strong>, so the same logic applies for <span class="math inline">\(B\)</span></li>
+<li>Conclusion: <strong>the outcome of the game will be <span class="math inline">\(s^* = (\text{Testify}, \text{Testify})\)</span></strong></li>
+<li>This is called a <strong>Nash equilibrium</strong>: no player <span class="math inline">\(i\)</span> can make themselves better off by <strong>deviating</strong> from <span class="math inline">\(s_i\)</span></li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/prisoners_dilemma.svg"></p>
+<figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:Prisoners_dilemma.svg" target="_blank">Wikimedia Commons</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="how-do-we-fix-this-conventions" class="slide level2 crunch-title inline-08 crunch-quarto-layout-cell">
+<h2>How Do We Fix This? <em>Conventions!</em></h2>
+<ul>
+<li>We encounter this type of problem every day if we <strong>drive</strong>! You (<span class="math inline">\(A\)</span>) and another driver (<span class="math inline">\(B\)</span>) arrive at an <strong>intersection</strong>:</li>
+</ul>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="intersection-text" class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: center;">
+<ul>
+<li>If <strong>both stop</strong>, we’re mostly bored: <span class="math inline">\(u_A = -1\)</span></li>
+<li>If we stop and the other person drives, we’re mad that they got to go and we didn’t: <span class="math inline">\(u_A = -3\)</span></li>
+<li>If <strong>both drive</strong>, we crash: <span class="math inline">\(u_A = -10\)</span></li>
+</ul>
+</div>
+<div id="intersection-table" class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: center;">
+<table class="game-table" data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td class="game-label" style="text-align: left;"></td>
+<td class="game-label" style="text-align: left;"></td>
+<td colspan="2" class="game-label" style="text-align: center;"><span class="math inline">\(B\)</span></td>
+</tr>
+<tr class="even">
+<td class="game-label" style="text-align: left;"></td>
+<td class="game-label" style="text-align: left;"></td>
+<td class="game-label" style="text-align: center;">Stop</td>
+<td class="game-label" style="text-align: center;">Drive</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" class="game-label" style="text-align: left; vertical-align: middle;"><span class="math inline">\(A\)</span></td>
+<td class="game-label" style="text-align: left;">Stop</td>
+<td class="game-cell" style="text-align: center;"><span class="math inline">\(-1,-1\)</span></td>
+<td class="game-cell" style="text-align: center;"><span class="math inline">\(-3,\phantom{-}0\)</span></td>
+</tr>
+<tr class="even">
+<td class="game-label" style="text-align: left;">Drive</td>
+<td class="game-cell" style="text-align: center;"><span class="math inline">\(\phantom{-}0, -3\)</span></td>
+<td class="game-cell" style="text-align: center;"><span class="math inline">\(-10,-10\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="without-a-convention" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-ul crunch-math">
+<h2>Without A Convention</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="no-convention-text" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<ul>
+<li>We’re “frozen”: this game has <strong>no unique Nash equilibrium</strong>, so we cannot say (on the basis of individual rationality) what will happen!</li>
+<li>Without a convention: <strong>power</strong>/aggression takes over. “War of all against all”, only the strong survive, etc. (life is “nasty, brutish, and short”)</li>
+</ul>
+</div>
+<div id="no-convention-table" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<table class="game-table" data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td class="game-label" style="text-align: left;"></td>
+<td class="game-label" style="text-align: left;"></td>
+<td colspan="2" class="game-label" style="text-align: center;"><span class="math inline">\(B\)</span></td>
+</tr>
+<tr class="even">
+<td class="game-label" style="text-align: left;"></td>
+<td class="game-label" style="text-align: left;"></td>
+<td class="game-label" style="text-align: center;">Stop</td>
+<td class="game-label" style="text-align: center;">Drive</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" class="game-label" style="text-align: left; vertical-align: middle;"><span class="math inline">\(A\)</span></td>
+<td class="game-label" style="text-align: left;">Stop</td>
+<td class="game-cell" style="text-align: center;"><span class="math inline">\({\color{orange}\cancel{\color{black}-1}},{\color{lightblue}\cancel{\color{black}-1}}\)</span></td>
+<td class="game-cell" style="text-align: center;"><span class="math inline">\(\boxed{-3},\boxed{0}\)</span></td>
+</tr>
+<tr class="even">
+<td class="game-label" style="text-align: left;">Drive</td>
+<td class="game-cell" style="text-align: center;"><span class="math inline">\(\boxed{0}, \boxed{-3}\)</span></td>
+<td class="game-cell" style="text-align: center;"><span class="math inline">\({\color{orange}\cancel{\color{black}-10}},{\color{lightblue}\cancel{\color{black}-10}}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li>If <span class="math inline">\(A\)</span>’s aggression is <span class="math inline">\(\Pr(s_A = \textsf{Drive}) = X \sim \mathcal{U}[0,1]\)</span>, <span class="math inline">\(B\)</span>’s aggression is <span class="math inline">\(\Pr(s_B = \textsf{Drive}) = Y \sim \mathcal{U}[0,1]\)</span>, what happens at individual and societal levels?</li>
+</ul>
+<p><span class="math display">\[
+\begin{align*}
+\mathbb{E}[u_A] = \mathbb{E}[u_B] &amp;= \int_{0}^{1}\int_{0}^{1}\left(x - 2y -8xy - 1\right)dy \, dx = -3.5 \\
+\underbrace{\mathbb{E}\mkern-3mu\left[u_A + u_B\right]}_{\mathclap{\text{Utilitarian Social Welfare}}} &amp;= -3.5
+\end{align*}
+\]</span></p>
+</section>
+<section id="the-convention-of-traffic-lights" class="slide level2 smaller crunch-title">
+<h2>The Convention of Traffic Lights</h2>
+<ul>
+<li>If we don’t want a world where <span class="math inline">\(\text{Happiness}(i) \propto \Pr(i \text{ more aggro than }j)\)</span>, we can introduce <strong>traffic lights</strong>:</li>
+</ul>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="traffic-light-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<ul>
+<li>Now in <strong>“correlated equilibrium”</strong>, where we ensure* coordinated <span class="math inline">\(\Pr((\textsf{Drive}, \textsf{Stop})) = 0.5\)</span>, <span class="math inline">\(\Pr((\textsf{Stop}, \textsf{Drive})) = 0.5\)</span></li>
+<li><span class="math inline">\(\mathbb{E}[u_A] = (0.5)(0) + (0.5)(-3) = -1.5\)</span></li>
+<li><span class="math inline">\(\mathbb{E}[u_B] = (0.5)(-3) + (0.5)(0) = -1.5\)</span></li>
+</ul>
+</div>
+<div id="traffic-light-table" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<table class="game-table" data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td class="game-label" style="text-align: left;"></td>
+<td class="game-label" style="text-align: left;"></td>
+<td colspan="2" class="game-label" style="text-align: center;"><span class="math inline">\(B\)</span></td>
+</tr>
+<tr class="even">
+<td class="game-label" style="text-align: left;"></td>
+<td class="game-label" style="text-align: left;"></td>
+<td class="game-label" style="text-align: center;">Stop</td>
+<td class="game-label" style="text-align: center;">Drive</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" class="game-label" style="text-align: left; vertical-align: middle;"><span class="math inline">\(A\)</span></td>
+<td class="game-label" style="text-align: left;">Stop</td>
+<td class="game-cell" style="text-align: center;"><span class="math inline">\({\color{orange}\cancel{\color{black}-1}},{\color{lightblue}\cancel{\color{black}-1}}\)</span></td>
+<td class="game-cell" style="text-align: center;"><span class="math inline">\(\boxed{-3},\boxed{0}\)</span></td>
+</tr>
+<tr class="even">
+<td class="game-label" style="text-align: left;">Drive</td>
+<td class="game-cell" style="text-align: center;"><span class="math inline">\(\boxed{0}, \boxed{-3}\)</span></td>
+<td class="game-cell" style="text-align: center;"><span class="math inline">\({\color{orange}\cancel{\color{black}-10}},{\color{lightblue}\cancel{\color{black}-10}}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul>
+<li>Empirical (anthropological) findings across literally thousands of different cultures throughout the world: people are willing to <strong>give up rewards</strong> to <strong>ensure fairness</strong> (see, e.g., <span class="citation" data-cites="henrich_search_2001">Henrich et al. (<a href="#/references" role="doc-biblioref" onclick="">2001</a>)</span>)</li>
+</ul>
+<p><span class="fn-span">*<em>(through, for example, traffic laws: equal in theory… In practice? Another story)</em></span></p>
+</section>
+<section id="so-how-should-we-makechoose-conventions" class="slide level2 title-08">
+<h2>So How Should We Make/Choose Conventions?</h2>
+<ul>
+<li><span class="citation" data-cites="hobbes_leviathan_1651">Hobbes (<a href="#/references" role="doc-biblioref" onclick="">1651</a>)</span>: Only way out of “war of all against all” is to surrender all power to one <strong>sovereign</strong> (the <em>Leviathan</em>)</li>
+<li><span class="citation" data-cites="rousseau_social_1762">Rousseau (<a href="#/references" role="doc-biblioref" onclick="">1762</a>)</span>: Social contract</li>
+<li><span class="citation" data-cites="rawls_theory_1971">Rawls (<a href="#/references" role="doc-biblioref" onclick="">1971</a>)</span>: Social contract <strong>behind the “veil of ignorance”</strong>
+<ul>
+<li>If we didn’t know <strong>where we were going to end up</strong> in society, how would we set it up? <!-- * @dworkin_what_1981: Yes, plus also people can **buy insurance** against ending up in a bad place $\rightarrow$ level of "just" redistribution --></li>
+</ul></li>
+</ul>
+</section>
+<section id="rawls-veil-of-ignorance" class="slide level2 crunch-title">
+<h2>Rawls’ Veil of Ignorance</h2>
+<ul>
+<li>Probably the most important tool for policy whitepapers!</li>
+<li>“Justice as fairness” (next week: fairness in AI 😜)</li>
+<li>We don’t know whether we’ll be <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> in the intersection game, so we’d choose the <strong>traffic light</strong>!</li>
+<li>More profoundly: We don’t know what <strong>race</strong>, <strong>gender</strong>, <strong>class</strong>, <strong>ethnicity</strong>, <strong>sexuality</strong>, <strong>disability status</strong> we’ll have; We don’t know whether we’ll be <strong>Israeli</strong> or <strong>Palestinian</strong>; we don’t know whether we’ll own <strong>means of production</strong> or own only our <strong>labor power</strong> (and thus have to sell it on a market to survive)… 🤔</li>
 </ul>
 </section></section>
 <section>
@@ -761,65 +1510,132 @@ Jeff Jacobs
 <li>Today: very broad intro to <strong>possible fairness criteria</strong> (values for <span class="math inline">\(y\)</span>)</li>
 </ul>
 </section>
-<section id="who-remembers-confusion-matrices" class="slide level2 smaller">
-<h2>Who Remembers Confusion Matrices?</h2>
+<section id="categories-of-fairness-criteria" class="slide level2 smaller crunch-title">
+<h2>Categories of Fairness Criteria</h2>
+<style>
+#fairness-box .columns {
+  display: flex !important;
+  height: 100% !important;
+}
+
+#fairness-box .column {
+  /* border: 2px solid black !important; */
+  padding: 14px !important;
+  box-sizing: border-box !important;
+  /* height: 100% !important; */
+}
+</style>
+<p>Roughly, approaches to fairness/bias in AI can be categorized as follows:</p>
+<div id="fairness-box" style="border: 2px solid black !important; box-sizing: border-box !important;">
+<center>
+<strong>Fairness</strong>
+</center>
+<!-- start columns -->
+<div class="columns">
+<div class="column" style="width:46%;">
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center>
+<strong>Context-Free</strong>
+</center>
 <ul>
-<li>Let <span class="math inline">\(Y_i\)</span> be “desirable” outcome for person <span class="math inline">\(i\)</span>, <span class="math inline">\(D_i\)</span> be algorithmic decision for person <span class="math inline">\(i\)</span></li>
-<li>For binary <span class="math inline">\(Y_i\)</span> and <span class="math inline">\(D_i\)</span>, there are <strong>eight possible conditional probabilities</strong> we might care about (whether <strong>descriptively</strong> or <strong>normatively</strong>!)</li>
+<li>Single-Threshold Fairness</li>
+<li>Equal Prediction</li>
+<li>Equal Decision</li>
 </ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="confusion-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<table data-quarto-postprocess="true">
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\Pr(D_i \mid Y_i)\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(D_i = 0\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(D_i = 1\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(Y_i = 0\)</span></td>
-<td style="text-align: left;">1</td>
-<td style="text-align: left;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(Y_i = 1\)</span></td>
-<td style="text-align: left;">3</td>
-<td style="text-align: left;">4</td>
-</tr>
-</tbody>
-</table>
 </div>
-<div id="confusion-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<table data-quarto-postprocess="true">
-<tbody>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\Pr(Y_i \mid D_i)\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(D_i = 0\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(D_i = 1\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="math inline">\(Y_i = 0\)</span></td>
-<td style="text-align: left;">5</td>
-<td style="text-align: left;">6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(Y_i = 1\)</span></td>
-<td style="text-align: left;">7</td>
-<td style="text-align: left;">8</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
+</div><div class="column" style="width:8%;">
+<center>
+<span style="font-size: 180% !important;"><i class="bi bi-repeat"></i>
+</span></center>
+</div><div class="column" style="width:46%;">
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center style="margin: 0px !important;">
+<strong>Context-Sensitive</strong>
+</center>
 <ul>
-<li>Entry 5, for example, tells us: “<strong>Given</strong> that the algorithm <strong>decided 0</strong> for person <span class="math inline">\(i\)</span>, what is the probability that the desirable outcome for person <span class="math inline">\(i\)</span> was 0?”</li>
+<li>Fairness via Similarity Metric(s)</li>
+<li>Causal Definitions</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- end quarto box -->
+<ul>
+<li>[Today] <strong>Context-Free</strong> Fairness: Easier to grasp from CS/data science perspective; rooted in “language” of Machine Learning (you already know much of it, given DSAN 5000!)</li>
+<li>But <strong>easy-to-grasp notion</strong> <span class="math inline">\(\neq\)</span> <strong>“good” notion</strong>!</li>
+<li>Your job: push yourself to (a) consider what is getting <strong>left out of</strong> the context-free definitions, and (b) the <strong>loopholes</strong> that are thus introduced into them, whereby people/computers can discriminate while remaining “technically fair”</li>
 </ul>
 </section>
-<section id="references" class="slide level2 smaller scrollable">
+<section id="laws-often-perfectly-technically-fair" class="slide level2 title-09">
+<h2>Laws: Often Perfectly “Technically Fair”</h2>
+<blockquote>
+<p><em>Ah, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!</em></p>
+</blockquote>
+<blockquote>
+<p>(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)</p>
+</blockquote>
+<p>Anatole France, <em>Le Lys Rouge</em> <span class="citation" data-cites="france_lys_1894">(<a href="#/references" role="doc-biblioref" onclick="">France 1894</a>)</span></p>
+</section></section>
+<section>
+<section id="context-free-fairness" class="title-slide slide level1 smaller not-title-slide crunch-title center">
+<h1>Context-Free Fairness</h1>
+
+<img data-src="images/chomsky-hierarchy.jpeg" class="no-stretch r-stretch quarto-figure-center" width="200"><p class="caption">From <a href="https://www.cs.sfu.ca/~anoop/courses/MACM-300-Spring-2006/complexity.pdf" target="_blank"><em>Introduction to Formal Languages and Automata</em></a>, Simon Fraser University (2006). This figure summarizes the <strong>Chomsky Hierarchy</strong> of Languages, developed by Noam Chomsky, who also has a lot to say about Ethics and Policy…</p></section>
+<section id="who-remembers-confusion-matrices" class="slide level2 smaller crunch-title title-11">
+<h2>Who Remembers… 🎉<em>Confusion Matrices!!!</em>🎉</h2>
+<ul>
+<li>Terrifyingly higher stakes than in DSAN 5000, however!</li>
+<li>Now <span class="math inline">\(D = 1\)</span> could literally mean <em>“shoot this person”</em> or <em>“throw this person in jail for life”</em></li>
+</ul>
+
+<img data-src="images/mitchell_et_al.svg" class="r-stretch quarto-figure-center"><p class="caption">From <span class="citation" data-cites="mitchell_algorithmic_2021">Mitchell et al. (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></p></section>
+<section id="baby-steps-a-less-busy-confusion-matrix" class="slide level2 title-09 crunch-title smaller">
+<h2>Baby Steps: A Less Busy Confusion Matrix</h2>
+<table style="width:99%;">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Labeled Low-Risk</th>
+<th>Labeled High-Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Didn’t Do More Crimes</strong></td>
+<td><em>True Negative</em></td>
+<td><em>False Positive</em></td>
+</tr>
+<tr class="even">
+<td><strong>Did More Crimes</strong></td>
+<td><em>False Negative</em></td>
+<td><em>True Positive</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>What kinds of <strong>causal connections</strong> and/or <strong>feedback loops</strong> might there be between our <strong>decision variable</strong> (low vs.&nbsp;high risk) and our <strong>outcome variable</strong> (recidivism)</li>
+<li>What types of <strong>policy implications</strong> might this process have, after it “runs” for several “iterations”?</li>
+<li>Why might some segments of society, with some shared ethical framework(s), <strong>weigh</strong> the <strong>“costs”</strong> of false negatives and false positives <strong>differently</strong> from other segments of society with different shared ethical framework(s)?</li>
+<li>(Non-rhetorical questions, this is the last slide!)</li>
+</ul>
+<!-- ## Minimizing Loss Function Penalizing (Only) These Errors $\iff$ Single-Threshold Fairness {.smaller .crunch-title .title-09}
+
+* Loss function: $\ell(d, \widehat{d})$
+* An **optimal classifier** minimizes the expected loss: $\mathbb{E}[\ell(\widehat{d},d)]$
+* A **decision** is considered to be fair if individuals with the same score $s_i = \psi(v_i)$ are treated equally, regardless of group membership (Corbett-Davies & Goel 2018). -->
+</section>
+<section id="references" class="slide level2 crunch-title smaller scrollable">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-awad_computational_2022" class="csl-entry" role="listitem">
+Awad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. <span>“Computational Ethics.”</span> <em>Trends in Cognitive Sciences</em> 26 (5): 388–405. <a href="https://doi.org/10.1016/j.tics.2022.02.009">https://doi.org/10.1016/j.tics.2022.02.009</a>.
+</div>
 <div id="ref-ayyub_app_2019" class="csl-entry" role="listitem">
 Ayyub, Rami. 2019. <span>“App Aims to Help <span>Palestinian</span> Drivers Find Their Way Around Checkpoints.”</span> <em>The Times of Israel</em>, August. <a href="https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/">https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/</a>.
 </div>
@@ -829,11 +1645,26 @@ Björkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. <span>“(<
 <div id="ref-bolukbasi_man_2016" class="csl-entry" role="listitem">
 Bolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. <span>“Man Is to <span>Computer Programmer</span> as <span>Woman</span> Is to <span>Homemaker</span>? <span>Debiasing Word Embeddings</span>.”</span> In <em>Advances in <span>Neural Information Processing Systems</span></em>. Vol. 29. <span>Curran Associates, Inc.</span> <a href="https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html">https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html</a>.
 </div>
+<div id="ref-churchill_pacifism_1998" class="csl-entry" role="listitem">
+Churchill, Ward, and Michael Ryan. 1998. <em>Pacifism as <span>Pathology</span>: <span>Reflections</span> on the <span>Role</span> of <span>Armed Struggle</span> in <span>North America</span></em>. <span>PM Press</span>.
+</div>
+<div id="ref-crawford_excavating_2019" class="csl-entry" role="listitem">
+Crawford, Kate, and Trevor Paglen. 2019. <span>“Excavating <span>AI</span>: <span>The Politics</span> of <span>Training Sets</span> for <span>Machine Learning</span>.”</span> <span>AI Now Institute, NYU</span>. <a href="https://excavating.ai">https://excavating.ai</a>.
+</div>
 <div id="ref-dignazio_data_2020" class="csl-entry" role="listitem">
 D’Ignazio, Catherine, and Lauren F. Klein. 2020. <em>Data <span>Feminism</span></em>. <span>MIT Press</span>.
 </div>
+<div id="ref-deutscher_language_2010" class="csl-entry" role="listitem">
+Deutscher, Guy. 2010. <em>Through the <span>Language Glass</span>: <span>Why</span> the <span>World Looks Different</span> in <span>Other Languages</span></em>. <span>Henry Holt and Company</span>.
+</div>
 <div id="ref-dreze_china_1991" class="csl-entry" role="listitem">
 Drèze, Jean, and Amartya Sen. 1991. <span>“China and <span>India</span>.”</span> In <em>Hunger and <span>Public Action</span></em>, 0. <span>Oxford University Press</span>. <a href="https://doi.org/10.1093/0198283652.003.0011">https://doi.org/10.1093/0198283652.003.0011</a>.
+</div>
+<div id="ref-dube_monopsony_2020" class="csl-entry" role="listitem">
+Dube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. <span>“Monopsony in <span>Online Labor Markets</span>.”</span> <em>American Economic Review: Insights</em> 2 (1): 33–46. <a href="https://doi.org/10.1257/aeri.20180150">https://doi.org/10.1257/aeri.20180150</a>.
+</div>
+<div id="ref-dworkin_taking_1977" class="csl-entry" role="listitem">
+Dworkin, Ronald. 1977. <em>Taking <span>Rights Seriously</span></em>. <span>A&amp;C Black</span>.
 </div>
 <div id="ref-facia.ai_facial_2023" class="csl-entry" role="listitem">
 Facia.ai. 2023. <span>“Facial <span>Recognition Helps Vendors</span> in <span>Healthcare</span>.”</span> <em>Facia.ai</em>. <a href="https://facia.ai/blog/facial-recognition-healthcare/">https://facia.ai/blog/facial-recognition-healthcare/</a>.
@@ -841,11 +1672,35 @@ Facia.ai. 2023. <span>“Facial <span>Recognition Helps Vendors</span> in <span>
 <div id="ref-fields_racecraft_2012" class="csl-entry" role="listitem">
 Fields, Barbara J., and Karen E. Fields. 2012. <em>Racecraft: <span>The Soul</span> of <span>Inequality</span> in <span>American Life</span></em>. <span>Verso Books</span>.
 </div>
+<div id="ref-france_lys_1894" class="csl-entry" role="listitem">
+France, Anatole. 1894. <em>Le <span>Lys Rouge</span> (<span>The Red Lily</span>)</em>. <span>G. Wells</span>.
+</div>
+<div id="ref-gould_mismeasure_1980" class="csl-entry" role="listitem">
+Gould, Stephen Jay. 1980. <em>The <span>Mismeasure</span> of <span>Man</span> (<span>Revised</span> and <span>Expanded</span>)</em>. <span>W. W. Norton &amp; Company</span>.
+</div>
+<div id="ref-gray_ghost_2019" class="csl-entry" role="listitem">
+Gray, Mary L., and Siddharth Suri. 2019. <em>Ghost <span>Work</span>: <span>How</span> to <span>Stop Silicon Valley</span> from <span>Building</span> a <span>New Global Underclass</span></em>. <span>HarperCollins</span>.
+</div>
+<div id="ref-henrich_search_2001" class="csl-entry" role="listitem">
+Henrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert Gintis, and Richard McElreath. 2001. <span>“In <span>Search</span> of <span>Homo Economicus</span>: <span>Behavioral Experiments</span> in 15 <span>Small-Scale Societies</span>.”</span> <em>American Economic Review</em> 91 (2): 73–78. <a href="https://doi.org/10.1257/aer.91.2.73">https://doi.org/10.1257/aer.91.2.73</a>.
+</div>
+<div id="ref-hobbes_leviathan_1651" class="csl-entry" role="listitem">
+Hobbes, Thomas. 1651. <em>Leviathan: <span>With</span> Selected Variants from the <span>Latin</span> Edition of 1668</em>. <span>Hackett Publishing</span>.
+</div>
+<div id="ref-james_moral_1891" class="csl-entry" role="listitem">
+James, William. 1891. <span>“The <span>Moral Philosopher</span> and the <span>Moral Life</span>.”</span> <em>International Journal of Ethics</em> 1 (3): 330–54. <a href="https://www.jstor.org/stable/2375309">https://www.jstor.org/stable/2375309</a>.
+</div>
+<div id="ref-kahneman_thinking_2011" class="csl-entry" role="listitem">
+Kahneman, Daniel. 2011. <em>Thinking, <span>Fast</span> and <span>Slow</span></em>. <span>Farrar, Straus and Giroux</span>.
+</div>
 <div id="ref-kasy_fairness_2021" class="csl-entry" role="listitem">
 Kasy, Maximilian, and Rediet Abebe. 2021. <span>“Fairness, <span>Equality</span>, and <span>Power</span> in <span>Algorithmic Decision-Making</span>.”</span> In <em>Proceedings of the 2021 <span>ACM Conference</span> on <span>Fairness</span>, <span>Accountability</span>, and <span>Transparency</span></em>, 576–86. <span>FAccT</span> ’21. <span>New York, NY, USA</span>: <span>Association for Computing Machinery</span>. <a href="https://doi.org/10.1145/3442188.3445919">https://doi.org/10.1145/3442188.3445919</a>.
 </div>
 <div id="ref-kozlowski_geometry_2019" class="csl-entry" role="listitem">
 Kozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. <span>“The <span>Geometry</span> of <span>Culture</span>: <span>Analyzing</span> the <span>Meanings</span> of <span>Class</span> Through <span>Word Embeddings</span>.”</span> <em>American Sociological Review</em> 84 (5): 905–49. <a href="https://doi.org/10.1177/0003122419877135">https://doi.org/10.1177/0003122419877135</a>.
+</div>
+<div id="ref-leguin_ones_1973" class="csl-entry" role="listitem">
+Le Guin, Ursula K. 1973. <em>The <span>Ones Who Walk Away</span> from <span>Omelas</span>: <span>A Story</span></em>. <span>HarperCollins</span>.
 </div>
 <div id="ref-lerman_arresting_2014" class="csl-entry" role="listitem">
 Lerman, Amy E., and Vesla M. Weaver. 2014. <em>Arresting <span>Citizenship</span>: <span>The Democratic Consequences</span> of <span>American Crime Control</span></em>. <span>University of Chicago Press</span>.
@@ -853,20 +1708,50 @@ Lerman, Amy E., and Vesla M. Weaver. 2014. <em>Arresting <span>Citizenship</span
 <div id="ref-mcneil_israel_2022" class="csl-entry" role="listitem">
 McNeil, Sam. 2022. <span>“Israel Deploys Remote-Controlled Robotic Guns in <span>West Bank</span>.”</span> <em>AP News</em>, November. <a href="https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88">https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88</a>.
 </div>
+<div id="ref-mcwhorter_language_2014" class="csl-entry" role="listitem">
+McWhorter, John H. 2014. <em>The <span>Language Hoax</span>: <span>Why</span> the <span>World Looks</span> the <span>Same</span> in <span>Any Language</span></em>. <span>Oxford University Press</span>.
+</div>
+<div id="ref-mitchell_algorithmic_2021" class="csl-entry" role="listitem">
+Mitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. <span>“Algorithmic <span>Fairness</span>: <span>Choices</span>, <span>Assumptions</span>, and <span>Definitions</span>.”</span> <em>Annual Review of Statistics and Its Application</em> 8 (1): 141–63. <a href="https://doi.org/10.1146/annurev-statistics-042720-125902">https://doi.org/10.1146/annurev-statistics-042720-125902</a>.
+</div>
+<div id="ref-morris_birth_1987" class="csl-entry" role="listitem">
+Morris, Benny. 1987. <em>The <span>Birth</span> of the <span>Palestinian Refugee Problem</span>, 1947-1949</em>. <span>Cambridge University Press</span>.
+</div>
 <div id="ref-ouz_google_2023" class="csl-entry" role="listitem">
 Ouz. 2023. <span>“Google <span>Pixel</span> 8 <span>Face Unlock Vulnerability Discovered</span>, <span>Allowing Others</span> to <span>Unlock Devices</span>.”</span> <em>Gizmochina</em>. <a href="https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/">https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/</a>.
+</div>
+<div id="ref-pappe_ethnic_2006" class="csl-entry" role="listitem">
+Pappe, Ilan. 2006. <em>The <span>Ethnic Cleansing</span> of <span>Palestine</span></em>. <span>Simon and Schuster</span>.
 </div>
 <div id="ref-pellicer_understanding_2023" class="csl-entry" role="listitem">
 Pellicer, Miquel, and Vimal Ranchhod. 2023. <span>“Understanding the Effects of Racial Classification in <span>Apartheid South Africa</span>.”</span> <em>Journal of Development Economics</em> 160 (January): 102998. <a href="https://doi.org/10.1016/j.jdeveco.2022.102998">https://doi.org/10.1016/j.jdeveco.2022.102998</a>.
 </div>
+<div id="ref-rawls_outline_1951" class="csl-entry" role="listitem">
+Rawls, John. 1951. <span>“Outline of a <span>Decision Procedure</span> for <span>Ethics</span>.”</span> <em>The Philosophical Review</em> 60 (2): 177–97. <a href="https://doi.org/10.2307/2181696">https://doi.org/10.2307/2181696</a>.
+</div>
+<div id="ref-rawls_theory_1971" class="csl-entry" role="listitem">
+———. 1971. <em>A <span>Theory</span> of <span>Justice</span>: <span>Original Edition</span></em>. <span>Harvard University Press</span>.
+</div>
+<div id="ref-rousseau_social_1762" class="csl-entry" role="listitem">
+Rousseau, Jean-Jacques. 1762. <em>The <span>Social Contract</span></em>. <span>Geneva</span>: <span>J. M. Dent</span>.
+</div>
 <div id="ref-schiebinger_machine_2020" class="csl-entry" role="listitem">
 Schiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. <span>“Machine <span>Translation</span>: <span>Gendered Innovations</span>.”</span> <a href="http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2">http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2</a>.
+</div>
+<div id="ref-skinner_visions_2012" class="csl-entry" role="listitem">
+Skinner, Quentin. 2012. <em>Visions of <span>Politics</span>, <span>Volume</span> 1: <span>Regarding Method</span></em>. <span>Cambridge</span>: <span>Cambridge University Press</span>.
+</div>
+<div id="ref-st.augustine_works_1874" class="csl-entry" role="listitem">
+St. Augustine. 1874. <em>The <span>Works</span> of <span>Aurelius Augustine</span>: <span>Lectures</span> or Tractates on the <span>Gospel</span> According to <span>St</span>. <span>John</span>, v. 2</em>. <span>T. &amp; T. Clark</span>.
 </div>
 <div id="ref-stiglitz_mismeasuring_2010" class="csl-entry" role="listitem">
 Stiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. <em>Mismeasuring <span>Our Lives</span>: <span>Why GDP Doesn</span>’t <span>Add Up</span></em>. <span>The New Press</span>.
 </div>
 <div id="ref-wang_deep_2018" class="csl-entry" role="listitem">
 Wang, Yilun, and Michal Kosinski. 2018. <span>“Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.”</span> <em>Journal of Personality and Social Psychology</em> 114 (2): 246–57. <a href="https://doi.org/10.1037/pspa0000098">https://doi.org/10.1037/pspa0000098</a>.
+</div>
+<div id="ref-weber_protestant_1904" class="csl-entry" role="listitem">
+Weber, Max. 1904. <em>The <span>Protestant Ethic</span> and the <span>Spirit</span> of <span>Capitalism</span></em>. <span>Courier Corporation</span>.
 </div>
 <div id="ref-wellcomecollection_composite_1890" class="csl-entry" role="listitem">
 Wellcome Collection. 1890. <span>“Composite <span>Photographs</span>: "<span>The Jewish Type</span>".”</span> <a href="https://wellcomecollection.org/works/ngq29vyw">https://wellcomecollection.org/works/ngq29vyw</a>.
@@ -1237,7 +2122,6 @@ Wellcome Collection. 1890. <span>“Composite <span>Photographs</span>: "<span>T
       }
     });
     </script>
-    
     
 
 </body></html>

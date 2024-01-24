@@ -38,5 +38,12 @@
   },
   "recordings/index.qmd": {
     "index.html": "a0f564f1"
+  },
+  "w02/index-alt.qmd": {
+    "slides.html": "f8d3915f",
+    "index.html": "98399c92"
+  },
+  "w02/ethical-frameworks.qmd": {
+    "ethical-frameworks.html": "1ce38a2a"
   }
 }
