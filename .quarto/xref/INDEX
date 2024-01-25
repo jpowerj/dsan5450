@@ -45,5 +45,11 @@
   },
   "w02/ethical-frameworks.qmd": {
     "ethical-frameworks.html": "1ce38a2a"
+  },
+  "writeups/w02.qmd": {
+    "w02.html": "3da751bf"
+  },
+  "writeups/index.qmd": {
+    "index.html": "bf8865c9"
   }
 }
