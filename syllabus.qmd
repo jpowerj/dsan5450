@@ -11,9 +11,9 @@ The course meets on **Wednesdays from 3:30-6pm in the <a href='https://maps.app.
 * Prof. Jeff Jacobs, <a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>
   * Office hours (Click to schedule): <a href='https://calendar.app.google/WiA9Jqit5d9mXsJf9' target='_blank'>Monday, Tuesday, 3:30-6pm</a>
 * TA Amelia Baier, <a href='mailto:ab3868@georgetown.edu' target='_blank'>`ab3868@georgetown.edu`</a>
-  * Office hours: TBD
+  * Office hours: By appointment
 * TA Sonali Dabhi, <a href='mailto:sd1387@georgetown.edu' target='_blank'>`sd1387@georgetown.edu`</a>
-  * Office hours: TBD
+  * Office hours: By appointment
 
 ## Course Description
 
@@ -72,7 +72,7 @@ The following is a rough map of what we will work through together throughout th
 </thead>
 <tbody>
 <tr>
-    <td><span data-qmd="**Unit 1**: Data-Scientific Issues"></span></td>
+    <td><span data-qmd="**Unit 1**: Ethical Frameworks and Fairness in AI"></span></td>
     <td>1</td>
     <td><span data-qmd="Jan 17"></span></td>
     <td>Course Intro</td>
@@ -81,49 +81,49 @@ The following is a rough map of what we will work through together throughout th
     <td></td>
     <td>2</td>
     <td>Jan 24</td>
-    <td>Machine Learning and Training Data</td>
+    <td>Machine Learning, Training Data, and Bias</td>
 </tr>
 <tr>
     <td></td>
     <td>3</td>
     <td>Jan 31</td>
-    <td>Case Studies Part 1</td>
+    <td>Normative vs. Descriptive, Confusion Matrix Fairness</td>
 </tr>
 <tr>
     <td></td>
     <td>4</td>
     <td>Feb 7</td>
-    <td>Case Studies Part 2</td>
+    <td>Similarity-Based and Causal-Path Fairness</td>
 </tr>
 <tr>
     <td></td>
     <td></td>
-    <td><span data-qmd="*Feb 9 (Friday)*"></span></td>
-    <td><span data-qmd="*Deliverable: Data Science*"></span></td>
+    <td><span data-qmd="*Feb 9 (Friday), 11:59pm EST*"></span></td>
+    <td><span data-qmd="*[Deliverable] HW1: Nuts and Bolts for Fairness in AI*"></span></td>
 </tr>
 <tr class='new-unit'>
-    <td><span data-qmd="**Unit 2**: Ethical Frameworks"></span></td>
+    <td><span data-qmd="**Unit 2**: Privacy"></span></td>
     <td>5</td>
     <td>Feb 14</td>
-    <td>Consequentialism</td>
+    <td>Data Privacy and Anonymity</td>
 </tr>
 <tr>
     <td></td>
     <td>6</td>
     <td>Feb 21</td>
-    <td>Deontological Ethics</td>
+    <td>Privacy-Preserving Computation</td>
 </tr>
 <tr>
     <td></td>
     <td></td>
     <td><span data-qmd="*Feb 23 (Friday)*"></span></td>
-    <td><span data-qmd="*Deliverable: Ethical Frameworks*"></span></td>
+    <td><span data-qmd="*[Deliverable] HW2: Privacy-Preserving Computation*"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>7</td>
     <td>Feb 28</td>
-    <td>Midterm (Data Science and Ethics)</td>
+    <td>In-Class Midterm (Data Ethics, Fairness, Privacy)</td>
 </tr>
 <tr>
     <td></td>
@@ -132,7 +132,7 @@ The following is a rough map of what we will work through together throughout th
     <td><span data-qmd="*No Class (Spring Break)*"></span></td>
 </tr>
 <tr class='new-unit'>
-    <td><span data-qmd="**Unit 3:** Applying Ethical Frameworks"></span></td>
+    <td><span data-qmd="**Unit 3:** Policy Frameworks"></span></td>
     <td>8</td>
     <td>Mar 13</td>
     <td>Applying Ethical Frameworks: Self-Driving Cars, Facial Recognition, and ChatGPT</td>
@@ -147,13 +147,13 @@ The following is a rough map of what we will work through together throughout th
     <td></td>
     <td></td>
     <td><span data-qmd="*Mar 22 (Friday)*"></span></td>
-    <td><span data-qmd="*Deliverable: Applying Ethical Frameworks*"></span></td>
+    <td><span data-qmd="*[Deliverable] HW3: Policy Frameworks*"></span></td>
 </tr>
 <tr class='new-unit'>
-    <td><span data-qmd="**Unit 4**: Public Policy"></span></td>
+    <td><span data-qmd="**Unit 4**: Policy Evaluation"></span></td>
     <td>10</td>
     <td>Mar 27</td>
-    <td>Intro to Public Policy</td>
+    <td>Policy Evaluation and Reverse Fairness</td>
 </tr>
 <tr>
     <td></td>
@@ -165,7 +165,7 @@ The following is a rough map of what we will work through together throughout th
     <td></td>
     <td></td>
     <td><span data-qmd="*Apr 5 (Friday)*"></span></td>
-    <td><span data-qmd="*Deliverable: Public Policy*"></span></td>
+    <td><span data-qmd="*[Deliverable] HW4: Policy Evaluation*"></span></td>
 </tr>
 <tr>
     <td></td>
@@ -189,7 +189,7 @@ The following is a rough map of what we will work through together throughout th
     <td></td>
     <td></td>
     <td><span data-qmd="*May 3 (Friday)*"></span></td>
-    <td><span data-qmd="*Deliverable: Policy Whitepaper*"></span></td>
+    <td><span data-qmd="*[Deliverable] Policy Whitepaper*"></span></td>
 </tr>
 </tbody>
 </table>
@@ -201,11 +201,11 @@ The main assignment in the course will be your **policy whitepaper**, submitted 
 
 | Assignment | Due Date | % of Grade |
 | - | - | - |
-| Data Science Overview Assignment | Friday, **February 9** | 10% |
-| Ethical Frameworks Assignment | Friday, **February 23** | 10% |
+| HW1: Nuts and Bolts for Fairness in AI | Friday, **February 9** | 10% |
+| HW2: Privacy-Preserving Computation | Friday, **February 23** | 10% |
 | Midterm | Wednesday, **February 28** | 30% |
-| Applying Ethical Frameworks Assignment | Friday, **March 22** | 10% |
-| Public Policy Assignment | Friday, **April 5** | 10% |
+| HW3: Policy Frameworks | Friday, **March 22** | 10% |
+| HW4: Policy Evaluation | Friday, **April 5** | 10% |
 | Policy Whitepaper | Friday, **May 3** | 30% |
 
 : {tbl-colwidths="[55,25,20]"}
