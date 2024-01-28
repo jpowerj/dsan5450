@@ -49,6 +49,21 @@ format:
 * "Tracing back" causes / **unraveling history**
   * *"The result [of modern 24-hour news cycles] is a litany of events with no beginning and no real end, thrown together only because they occurred at the same time[,] cut off from their **antecedents** and **consequenes**"* [@bourdieu_sociology_2010]
 
+## Ethics of Eliciting Sensitive Linguistic Data {.smaller .crunch-title .title-12}
+
+::: {layout="[1,1]" layout-valign="center"}
+::: {#labov-left}
+
+![From @labov_language_2013, pg. 4](images/labov_interview.jpeg){fig-align="center"}
+
+:::
+::: {#labov-right}
+
+![From "80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre", *NPR Parallels*, 7 Oct 2017 [@bishop_80_2017]](images/parsley.jpeg){fig-align="center"}
+
+:::
+:::
+
 # (Recap) Three Component Parts of Machine Learning
 
 1. [A cool algorithm ✅]{.cbg}
