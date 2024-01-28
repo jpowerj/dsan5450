@@ -39,14 +39,14 @@ format:
 
 :::
 
-# Recap / Loose Ends
+# Recap / Loose Ends {data-stack-name="Week 2 Wrapup"}
 
 ## Loose Ends {.smaller .crunch-title}
 
-* Normative vs. Descriptive "Exploitation": How can we disentangle these in our understanding of the term? [@roemer_free_1988]
+* Normative vs. Descriptive **"Exploitation"**: How can we disentangle these in our understanding of the term? [@roemer_free_1988]
   * Under descriptive definition, one can "exploit" **corn** or **land** in the exact same way one "exploits" **human labor** (just another type of input into the production process)
   * Utility-wise, an economy **with** exploitation can be **unambiguously better** than one **without** exploitation: if 10 people $H$ own means of production, and 990 people $S$ own only their labor power (landless peasants, for example), allowing $H$ to exploit $S$ for a wage increases utility for both: $H$ acquires profits, $S$ doesn't starve to death
-* "Tracing back" causes / unraveling history
+* "Tracing back" causes / **unraveling history**
   * *"The result [of modern 24-hour news cycles] is a litany of events with no beginning and no real end, thrown together only because they occurred at the same time[,] cut off from their **antecedents** and **consequenes**"* [@bourdieu_sociology_2010]
 
 # (Recap) Three Component Parts of Machine Learning
@@ -173,58 +173,6 @@ in contrast to
 
 ![From @awad_computational_2022](images/reflective.jpg){fig-align="center"}
 
-## Rawls vs. Everyone Else {.smaller .crunch-title .crunch-ul}
-
-* Q: What book had the greatest impact on modern (Anglophone) philosophy?
-* One approach: citations in a widely-used <a href='https://plato.stanford.edu/entries/reflective-equilibrium/' target='_blank'>encyclopedia of philosophy</a>\* <a href='http://schwitzsplinters.blogspot.com/2020/07/the-233-most-cited-works-in-stanford.html' target='_blank'>The results</a>:
-
-```{=html}
-<table style='width: 100% !important;'>
-<thead>
-<tr>
-    <th style='width: 5% !important;'></th>
-    <th style='width: 45% !important;' class='split-table'>Book</th>
-    <th style='width: 5% !important;'></th>
-    <th style='width: 45% !important;'>Book</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>1</td>
-    <td class='split-table'><span data-qmd="Rawls 1972, *A Theory of Justice* (115)"></span></td>
-    <td>6</td>
-    <td><span data-qmd="Parfit 1984, *Reasons and Persons* (62)"></span></td>
-</tr>
-<tr>
-    <td>2</td>
-    <td class='split-table'><span data-qmd="Kripke 1980, *Naming and Necessity* (88)"></span></td>
-    <td>7</td>
-    <td><span data-qmd="Scanlon 1998, *What We Owe to Each Other* (56)"></span></td>
-</tr>
-<tr>
-    <td>3</td>
-    <td class='split-table'><span data-qmd="Lewis 1986, *On the Plurality of Worlds* (63)"></span></td>
-    <td>8</td>
-    <td><span data-qmd="Wittgenstein 1953, *Philosophical Investigations* (55)"></span></td>
-</tr>
-<tr>
-    <td>3</td>
-    <td class='split-table'><span data-qmd="Nozick 1974, *Anarchy, State and Utopia* (63)"></span></td>
-    <td>9</td>
-    <td><span data-qmd="Chalmers 1996, *The Conscious Mind* (53)"></span></td>
-</tr>
-<tr>
-    <td>3</td>
-    <td class='split-table'><span data-qmd="Quine 1960, *Word and Object* (63)"></span></td>
-    <td>10</td>
-    <td><span data-qmd="Rawls 1993, *Political Liberalism* (48)"></span></td>
-</tr>
-</tbody>
-</table>
-```
-
-\**(But don't forget about the dangers of **reification**!)*
-
 # Descriptive vs. Normative Judgements {.not-title-page .title-11}
 
 | Descriptive (Is) | Normative (Ought) |
@@ -325,9 +273,9 @@ in contrast to
 :::
 :::
 
-# Ethical Frameworks {data-stack-name="Frameworks"}
+# Individual Ethics $\rightarrow$ Social Ethics {data-stack-name="Individual vs. Social Ethics"}
 
-## (From W01) Promise-Keeping {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-ul .title-12}
+## (From Week 1) Promise-Keeping {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-ul .title-12}
 
 * Scenario: You just baked a pie, and you promised your friend you'd give them the pie. You're walking over to the friend's house to give them the pie.
 * Suddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds
@@ -359,7 +307,7 @@ in contrast to
 
 :::
 
-## Counterargument to Consequentialism {.crunch-title .title-09 .crunch-quarto-layout-panel .crunch-ul .crunch-quarto-figure .crunch-images}
+## (From Week 1) Counterargument to Consequentialism {.crunch-title .title-07 .crunch-quarto-layout-panel .crunch-ul .crunch-quarto-figure .crunch-images}
 
 ::: {layout="[1,1]"}
 
@@ -458,11 +406,13 @@ $$
 
 :::
 
-## Individual vs. Social Morality
+## Individual vs. Social Morality {.smaller .crunch-title}
 
 * It's already quite difficult to reason about **individual** morality
 * Now add in the fact that we live in a society 😰
 * Things that happen depend not only on **our** choices but also the choices of others
+
+[![<a href='https://www.youtube.com/watch?v=LHhbdXCzt_A' target='_blank'>Seinfeld: Living in a Society (Clip) | TBS</a>](images/seinfeld_society.jpeg){fig-align="center"}](https://www.youtube.com/watch?v=LHhbdXCzt_A)
 
 ## Enter Game Theory {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-figcaption .crunch-ul}
 
@@ -704,8 +654,8 @@ $$
 \underbrace{p(x)}_{\substack{\text{Accept ethical} \\ \text{framework }x}} \implies \underbrace{q(y)}_{\substack{\text{Algorithms should} \\ \text{satisfy condition }y}}
 $$
 
-* Last week: very broad intro to **possible ethical frameworks** (values for $x$)
-* Today: very broad intro to **possible fairness criteria** (values for $y$)
+* Before: **possible ethical frameworks** (values for $x$)
+* Now: **possible fairness criteria** (values for $y$)
 
 ## Categories of Fairness Criteria {.smaller .crunch-title}
 
@@ -809,13 +759,149 @@ Anatole France, *Le Lys Rouge* [@france_lys_1894]
 * What kinds of **causal connections** and/or **feedback loops** might there be between our **decision variable** (low vs. high risk) and our **outcome variable** (recidivism)
 * What types of **policy implications** might this process have, after it "runs" for several "iterations"?
 * Why might some segments of society, with some shared ethical framework(s), **weigh** the **"costs"** of false negatives and false positives **differently** from other segments of society with different shared ethical framework(s)?
-* (Non-rhetorical questions, this is the last slide!)
+* (Non-rhetorical questions!)
 
 <!-- ## Minimizing Loss Function Penalizing (Only) These Errors $\iff$ Single-Threshold Fairness {.smaller .crunch-title .title-09}
 
 * Loss function: $\ell(d, \widehat{d})$
 * An **optimal classifier** minimizes the expected loss: $\mathbb{E}[\ell(\widehat{d},d)]$
 * A **decision** is considered to be fair if individuals with the same score $s_i = \psi(v_i)$ are treated equally, regardless of group membership (Corbett-Davies & Goel 2018). -->
+
+## Fairness Through Unawareness and Proxy Discrimination {.smaller .crunch-title}
+
+![From @tschantz_what_2022](images/proxy_paper.jpg){fig-align="center"}
+
+## Causal Fairness
+
+* From DSAN 5100 you know things like $\mathbb{E}[Y \mid X], \text{Cov}(X,Y)$, $X \perp Y$, and estimating $Y = \beta_0 + \beta_1X$
+* For **causal inference** however, there is a **qualitatively different** and **more strict** standard: $\mathbb{E}[Y \mid do(X)]$
+  * Literally called "Do-Calculus"
+
+# "Race" (Noun) vs. "Racecraft" (Social Practice) {data-stack-name="Racecraft"}
+
+## $\textsf{Race}_{\textsf{Variable}}$ vs. $\textsf{Race}_{\textsf{Construct}}$
+
+* Careful scientific, causal studies measure the effect that **changing $X$** ($do(X)$) has on $Y$, controlling for $C$ (via, at least under the hood, "Do-Calculus")
+* But, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into "race" and "not race"
+* Keep in back of your mind as we look at just one example of how (measured by thorough, statistically-principled randomized experiment), **race can have direct, measurable, causal impacts on important aspects of our everyday lives**
+
+## Racial Discrimination {.smaller .crunch-title}
+
+* Marianne Bertrand and Sendhil Mullainathan. 2004. "Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination." *American Economic Review*. [@bertrand_are_2004]
+
+> We study **race** in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are **randomly assigned** African-American- or White-sounding **names**. **White names** receive **50 percent more callbacks** for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U.S. labor market.
+
+## "Controlling for" Everything Besides Race {.smaller .crunch-title .title-11}
+
+::: {layout="[1,1]" layout-valign="center"}
+
+![](images/resume_greg_baker.jpeg){fig-align="center"}
+
+![](images/resume_jamal_jones.jpeg){fig-align="center"}
+
+:::
+
+## Age Discrimination? {.smaller .crunch-title}
+
+::: {layout="[1,1]" layout-valign="center"}
+
+![](images/resume_age_12.jpeg){fig-align="center"}
+
+![](images/resume_age_22.jpeg){fig-align="center"}
+
+:::
+
+* Based on Lily Hu, <a href='https://www.youtube.com/watch?v=8qMC1fZJMi4' target='_blank'>*What is 'Race' in Algorithmic Discrimination on the Basis of Race? - IPAM at UCLA*</a> (YouTube)
+
+## "Cool Theory, I Guess..." {.smaller .crunch-title .crunch-quarto-layout-panel}
+
+* "Good luck measuring ideas inside of people's heads... I'll be over here measuring real things and doing real data science!" -My Opps
+
+::: {layout="[1,1]"}
+
+![](images/representations.jpeg){fig-align="center"}
+
+![](images/sperber.jpg){fig-align="center" width="320"}
+
+:::
+
+## "Cool Theory, I Guess..." {.smaller .crunch-title}
+
+![](images/representations_bilingual.jpeg){fig-align="center"}
+
+## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell}
+
+::: {layout="[1,1]"}
+
+::: {#worms1-left}
+
+* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+
+:::
+::: {#worms-right}
+
+![](images/race_graph_step1.svg){fig-align="center" width="500"}
+
+:::
+:::
+
+## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell}
+
+::: {layout="[1,1]"}
+::: {#worms2-left}
+
+* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
+
+:::
+::: {#worms2-right}
+
+![](images/race_graph_step2.svg){fig-align="center" width="500"}
+
+:::
+:::
+
+## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-figure .crunch-quarto-layout-panel .crunch-quarto-layout-cell}
+
+::: {layout="[1,1]"}
+::: {#worms3-left}
+
+* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
+* Each person $x$ forming their own **internal representations** $\widetilde{t^x_0}$, $\widetilde{t^x_1}$, $\widetilde{t^x_2}$ of one another based on **patterns of interaction**, then
+* Generalizing to an internal representation of a **"type of person" $\widetilde{t^x_9}$**...
+
+:::
+::: {#worms3-right}
+
+![](images/race_graph_step3.svg){fig-align="center" width="600"}
+
+:::
+:::
+
+## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-figure .crunch-quarto-layout-panel .crunch-quarto-layout-cell}
+
+::: {layout="[1,1]"}
+::: {#worms4-left}
+
+* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
+* Each person $x$ forming their own **internal representations** $\widetilde{t^x_0}$, $\widetilde{t^x_1}$, $\widetilde{t^x_2}$ of one another based on **patterns of interaction**, then
+* Generalizing to an internal representation of a **"type of person" $\widetilde{t^x_9}$**...
+* Which they then **externalize** as $t^x_9$.
+* $t^0_9$, $t^1_9$, $t^2_9$ "congeal" into a **shared external representation** $t_9^e$ via social mechanism (discussion, media, culture, propaganda, parenting, religion, education, ...) $\Rightarrow t^e_9$ **"reified"** (causal effects on $t_0$, $t_1$, $t_2$)
+
+:::
+::: {#worms4-right}
+
+![](images/race_graph_step4.svg){fig-align="center" width="600"}
+
+:::
+:::
+
+## (More to Come on HW1!)
+
+![](images/sunny.jpg){fig-align="center"}
 
 ## References
 

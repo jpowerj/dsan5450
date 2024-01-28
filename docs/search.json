@@ -1043,13 +1043,6 @@
     "text": "Reflective Equilibrium\n\nMost criticisms of any framework boil down to, “great in theory, but doesn’t work in practice”\nThe way to take this seriously: reflective equilibrium\nIntroduced by Rawls (1951), but popularized by Rawls (1971)\n\n\n\n\nFrom Awad et al. (2022)"
   },
   {
-    "objectID": "w03/index.html#rawls-vs.-everyone-else",
-    "href": "w03/index.html#rawls-vs.-everyone-else",
-    "title": "Week 3: (Descriptive) Fairness in AI",
-    "section": "Rawls vs. Everyone Else",
-    "text": "Rawls vs. Everyone Else\n\nQ: What book had the greatest impact on modern (Anglophone) philosophy?\nOne approach: citations in a widely-used encyclopedia of philosophy* The results:\n\n\n\n\n\nBook\n\nBook\n\n\n\n\n1\nRawls 1972, A Theory of Justice (115)\n6\nParfit 1984, Reasons and Persons (62)\n\n\n2\nKripke 1980, Naming and Necessity (88)\n7\nScanlon 1998, What We Owe to Each Other (56)\n\n\n3\nLewis 1986, On the Plurality of Worlds (63)\n8\nWittgenstein 1953, Philosophical Investigations (55)\n\n\n3\nNozick 1974, Anarchy, State and Utopia (63)\n9\nChalmers 1996, The Conscious Mind (53)\n\n\n3\nQuine 1960, Word and Object (63)\n10\nRawls 1993, Political Liberalism (48)\n\n\n\n*(But don’t forget about the dangers of reification!)"
-  },
-  {
     "objectID": "w03/index.html#easy-mode-descriptive-judgements",
     "href": "w03/index.html#easy-mode-descriptive-judgements",
     "title": "Week 3: (Descriptive) Fairness in AI",
@@ -1092,18 +1085,18 @@
     "text": "Contemporary Example: Palestine\n\nVery few of the relevant empirical facts are in dispute, since opening of crucial archives to three so-called “New Historians” in the 1980s. So why do people still argue?\n\n\n\n\n\nIlan Pappe, one of these historians, concluded from this material that:\n\nThe Israeli state was built upon a massive ethnic cleansing, and\nIs not morally justifiable (Pappe 2006)\n\n\n\nThe immunity Israel has received over the last fifty years encourages others, regimes and oppositions alike, to believe that human and civil rights are irrelevant in the Middle East. The dismantling of the mega-prison in Palestine will send a different, and more hopeful, message.\n\n\n\n\nBenny Morris, another of these historians, concluded that:\n\nThe Israeli state was built upon a massive ethnic cleansing, and\nIs morally justifiable (Morris 1987)\n\n\n\nA Jewish state would not have come into being without the uprooting of 700,000 Palestinians. Therefore it was necessary to uproot them. There was no choice but to expel that population. It was necessary to cleanse the hinterland and cleanse the border areas and cleanse the main roads."
   },
   {
-    "objectID": "w03/index.html#from-w01-promise-keeping",
-    "href": "w03/index.html#from-w01-promise-keeping",
+    "objectID": "w03/index.html#from-week-1-promise-keeping",
+    "href": "w03/index.html#from-week-1-promise-keeping",
     "title": "Week 3: (Descriptive) Fairness in AI",
-    "section": "(From W01) Promise-Keeping",
-    "text": "(From W01) Promise-Keeping\n\nScenario: You just baked a pie, and you promised your friend you’d give them the pie. You’re walking over to the friend’s house to give them the pie.\nSuddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds\nDo you give the hostage-taker the pie?\n\n\n\n\n\nConsequentialist Ethics \\(\\implies\\) Yes\n\n\nTo be ethical is to weigh consequences of your actions\nThe positive consequences of giving the pie to the hostage-taker (saving a life) outweigh the negative consequences (breaking your promise to your friend)\n(Ex: Utilitarianism, associated with British philosopher Jeremy Bentham)\n\n\n\n\nDeontological Ethics \\(\\implies\\) No\n\n\nTo be ethical is to live by rules which you would want everyone to follow.\nAs a rule (a “categorical imperative”), you must not break promises. (Breaking this rule \\(\\implies\\) others can also “pick and choose” when to honor promises to you)\n(Ex: Kantian Ethics, associated with German philosopher Immanuel Kant)"
+    "section": "(From Week 1) Promise-Keeping",
+    "text": "(From Week 1) Promise-Keeping\n\nScenario: You just baked a pie, and you promised your friend you’d give them the pie. You’re walking over to the friend’s house to give them the pie.\nSuddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds\nDo you give the hostage-taker the pie?\n\n\n\n\n\nConsequentialist Ethics \\(\\implies\\) Yes\n\n\nTo be ethical is to weigh consequences of your actions\nThe positive consequences of giving the pie to the hostage-taker (saving a life) outweigh the negative consequences (breaking your promise to your friend)\n(Ex: Utilitarianism, associated with British philosopher Jeremy Bentham)\n\n\n\n\nDeontological Ethics \\(\\implies\\) No\n\n\nTo be ethical is to live by rules which you would want everyone to follow.\nAs a rule (a “categorical imperative”), you must not break promises. (Breaking this rule \\(\\implies\\) others can also “pick and choose” when to honor promises to you)\n(Ex: Kantian Ethics, associated with German philosopher Immanuel Kant)"
   },
   {
-    "objectID": "w03/index.html#counterargument-to-consequentialism",
-    "href": "w03/index.html#counterargument-to-consequentialism",
+    "objectID": "w03/index.html#from-week-1-counterargument-to-consequentialism",
+    "href": "w03/index.html#from-week-1-counterargument-to-consequentialism",
     "title": "Week 3: (Descriptive) Fairness in AI",
-    "section": "Counterargument to Consequentialism",
-    "text": "Counterargument to Consequentialism\n\n\n\n\nMillions are kept permanently happy, on the one simple condition that a certain lost soul on the far-off edge of things should lead a life of lonely torture (James 1891)\n\n\nModern example: people “out there” suffer so we can have iPhones, etc.\n\n\n\n\n\n\nLe Guin (1973)"
+    "section": "(From Week 1) Counterargument to Consequentialism",
+    "text": "(From Week 1) Counterargument to Consequentialism\n\n\n\n\nMillions are kept permanently happy, on the one simple condition that a certain lost soul on the far-off edge of things should lead a life of lonely torture (James 1891)\n\n\nModern example: people “out there” suffer so we can have iPhones, etc.\n\n\n\n\n\n\nLe Guin (1973)"
   },
   {
     "objectID": "w03/index.html#one-solution-individual-rights",
@@ -1138,7 +1131,7 @@
     "href": "w03/index.html#individual-vs.-social-morality",
     "title": "Week 3: (Descriptive) Fairness in AI",
     "section": "Individual vs. Social Morality",
-    "text": "Individual vs. Social Morality\n\nIt’s already quite difficult to reason about individual morality\nNow add in the fact that we live in a society 😰\nThings that happen depend not only on our choices but also the choices of others"
+    "text": "Individual vs. Social Morality\n\nIt’s already quite difficult to reason about individual morality\nNow add in the fact that we live in a society 😰\nThings that happen depend not only on our choices but also the choices of others\n\n\n\n\nSeinfeld: Living in a Society (Clip) | TBS"
   },
   {
     "objectID": "w03/index.html#enter-game-theory",
@@ -1201,7 +1194,7 @@
     "href": "w03/index.html#one-final-reminder",
     "title": "Week 3: (Descriptive) Fairness in AI",
     "section": "One Final Reminder",
-    "text": "One Final Reminder\n\nIndustry rule #4080: Cannot “prove” \\(q(x) = \\text{``Algorithm }x\\text{ is fair''}\\)! Only \\(p(x) \\implies q(y)\\):\n\n\\[\n\\underbrace{p(x)}_{\\substack{\\text{Accept ethical} \\\\ \\text{framework }x}} \\implies \\underbrace{q(y)}_{\\substack{\\text{Algorithms should} \\\\ \\text{satisfy condition }y}}\n\\]\n\nLast week: very broad intro to possible ethical frameworks (values for \\(x\\))\nToday: very broad intro to possible fairness criteria (values for \\(y\\))"
+    "text": "One Final Reminder\n\nIndustry rule #4080: Cannot “prove” \\(q(x) = \\text{``Algorithm }x\\text{ is fair''}\\)! Only \\(p(x) \\implies q(y)\\):\n\n\\[\n\\underbrace{p(x)}_{\\substack{\\text{Accept ethical} \\\\ \\text{framework }x}} \\implies \\underbrace{q(y)}_{\\substack{\\text{Algorithms should} \\\\ \\text{satisfy condition }y}}\n\\]\n\nBefore: possible ethical frameworks (values for \\(x\\))\nNow: possible fairness criteria (values for \\(y\\))"
   },
   {
     "objectID": "w03/index.html#categories-of-fairness-criteria",
@@ -1229,14 +1222,105 @@
     "href": "w03/index.html#baby-steps-a-less-busy-confusion-matrix",
     "title": "Week 3: (Descriptive) Fairness in AI",
     "section": "Baby Steps: A Less Busy Confusion Matrix",
-    "text": "Baby Steps: A Less Busy Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (recidivism)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions, this is the last slide!)"
+    "text": "Baby Steps: A Less Busy Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (recidivism)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)"
+  },
+  {
+    "objectID": "w03/index.html#fairness-through-unawareness-and-proxy-discrimination",
+    "href": "w03/index.html#fairness-through-unawareness-and-proxy-discrimination",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Fairness Through Unawareness and Proxy Discrimination",
+    "text": "Fairness Through Unawareness and Proxy Discrimination\n\n\n\nFrom Tschantz (2022)"
+  },
+  {
+    "objectID": "w03/index.html#causal-fairness",
+    "href": "w03/index.html#causal-fairness",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Causal Fairness",
+    "text": "Causal Fairness\n\nFrom DSAN 5100 you know things like \\(\\mathbb{E}[Y \\mid X], \\text{Cov}(X,Y)\\), \\(X \\perp Y\\), and estimating \\(Y = \\beta_0 + \\beta_1X\\)\nFor causal inference however, there is a qualitatively different and more strict standard: \\(\\mathbb{E}[Y \\mid do(X)]\\)\n\nLiterally called “Do-Calculus”"
+  },
+  {
+    "objectID": "w03/index.html#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct",
+    "href": "w03/index.html#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)",
+    "text": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)\n\nCareful scientific, causal studies measure the effect that changing \\(X\\) (\\(do(X)\\)) has on \\(Y\\), controlling for \\(C\\) (via, at least under the hood, “Do-Calculus”)\nBut, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into “race” and “not race”\nKeep in back of your mind as we look at just one example of how (measured by thorough, statistically-principled randomized experiment), race can have direct, measurable, causal impacts on important aspects of our everyday lives"
+  },
+  {
+    "objectID": "w03/index.html#racial-discrimination",
+    "href": "w03/index.html#racial-discrimination",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Racial Discrimination",
+    "text": "Racial Discrimination\n\nMarianne Bertrand and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” American Economic Review. (Bertrand and Mullainathan 2004)\n\n\nWe study race in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are randomly assigned African-American- or White-sounding names. White names receive 50 percent more callbacks for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U.S. labor market."
+  },
+  {
+    "objectID": "w03/index.html#controlling-for-everything-besides-race",
+    "href": "w03/index.html#controlling-for-everything-besides-race",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "“Controlling for” Everything Besides Race",
+    "text": "“Controlling for” Everything Besides Race"
+  },
+  {
+    "objectID": "w03/index.html#age-discrimination",
+    "href": "w03/index.html#age-discrimination",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Age Discrimination?",
+    "text": "Age Discrimination?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBased on Lily Hu, What is ‘Race’ in Algorithmic Discrimination on the Basis of Race? - IPAM at UCLA (YouTube)"
+  },
+  {
+    "objectID": "w03/index.html#cool-theory-i-guess",
+    "href": "w03/index.html#cool-theory-i-guess",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "“Cool Theory, I Guess…”",
+    "text": "“Cool Theory, I Guess…”\n\n“Good luck measuring ideas inside of people’s heads… I’ll be over here measuring real things and doing real data science!” -My Opps"
+  },
+  {
+    "objectID": "w03/index.html#cool-theory-i-guess-1",
+    "href": "w03/index.html#cool-theory-i-guess-1",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "“Cool Theory, I Guess…”",
+    "text": "“Cool Theory, I Guess…”"
+  },
+  {
+    "objectID": "w03/index.html#opening-a-big-can-of-worms",
+    "href": "w03/index.html#opening-a-big-can-of-worms",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Opening A Big Can Of Worms",
+    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…"
+  },
+  {
+    "objectID": "w03/index.html#opening-a-big-can-of-worms-1",
+    "href": "w03/index.html#opening-a-big-can-of-worms-1",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Opening A Big Can Of Worms",
+    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…\nMediated by external things \\(o^e_3\\) to \\(o^e_8\\) (giving rise to patterns of interaction)…"
+  },
+  {
+    "objectID": "w03/index.html#opening-a-big-can-of-worms-2",
+    "href": "w03/index.html#opening-a-big-can-of-worms-2",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Opening A Big Can Of Worms",
+    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…\nMediated by external things \\(o^e_3\\) to \\(o^e_8\\) (giving rise to patterns of interaction)…\nEach person \\(x\\) forming their own internal representations \\(\\widetilde{t^x_0}\\), \\(\\widetilde{t^x_1}\\), \\(\\widetilde{t^x_2}\\) of one another based on patterns of interaction, then\nGeneralizing to an internal representation of a “type of person” \\(\\widetilde{t^x_9}\\)…"
+  },
+  {
+    "objectID": "w03/index.html#opening-a-big-can-of-worms-3",
+    "href": "w03/index.html#opening-a-big-can-of-worms-3",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Opening A Big Can Of Worms",
+    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…\nMediated by external things \\(o^e_3\\) to \\(o^e_8\\) (giving rise to patterns of interaction)…\nEach person \\(x\\) forming their own internal representations \\(\\widetilde{t^x_0}\\), \\(\\widetilde{t^x_1}\\), \\(\\widetilde{t^x_2}\\) of one another based on patterns of interaction, then\nGeneralizing to an internal representation of a “type of person” \\(\\widetilde{t^x_9}\\)…\nWhich they then externalize as \\(t^x_9\\).\n\\(t^0_9\\), \\(t^1_9\\), \\(t^2_9\\) “congeal” into a shared external representation \\(t_9^e\\) via social mechanism (discussion, media, culture, propaganda, parenting, religion, education, …) \\(\\Rightarrow t^e_9\\) “reified” (causal effects on \\(t_0\\), \\(t_1\\), \\(t_2\\))"
+  },
+  {
+    "objectID": "w03/index.html#more-to-come-on-hw1",
+    "href": "w03/index.html#more-to-come-on-hw1",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "(More to Come on HW1!)",
+    "text": "(More to Come on HW1!)"
   },
   {
     "objectID": "w03/index.html#references",
     "href": "w03/index.html#references",
     "title": "Week 3: (Descriptive) Fairness in AI",
     "section": "References",
-    "text": "References\n\n\nAwad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. “Computational Ethics.” Trends in Cognitive Sciences 26 (5): 388–405. https://doi.org/10.1016/j.tics.2022.02.009.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nChurchill, Ward, and Michael Ryan. 1998. Pacifism as Pathology: Reflections on the Role of Armed Struggle in North America. PM Press.\n\n\nCrawford, Kate, and Trevor Paglen. 2019. “Excavating AI: The Politics of Training Sets for Machine Learning.” AI Now Institute, NYU. https://excavating.ai.\n\n\nDeutscher, Guy. 2010. Through the Language Glass: Why the World Looks Different in Other Languages. Henry Holt and Company.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nFields, Barbara J., and Karen E. Fields. 2012. Racecraft: The Soul of Inequality in American Life. Verso Books.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nGould, Stephen Jay. 1980. The Mismeasure of Man (Revised and Expanded). W. W. Norton & Company.\n\n\nGray, Mary L., and Siddharth Suri. 2019. Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass. HarperCollins.\n\n\nHenrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert Gintis, and Richard McElreath. 2001. “In Search of Homo Economicus: Behavioral Experiments in 15 Small-Scale Societies.” American Economic Review 91 (2): 73–78. https://doi.org/10.1257/aer.91.2.73.\n\n\nHobbes, Thomas. 1651. Leviathan: With Selected Variants from the Latin Edition of 1668. Hackett Publishing.\n\n\nJames, William. 1891. “The Moral Philosopher and the Moral Life.” International Journal of Ethics 1 (3): 330–54. https://www.jstor.org/stable/2375309.\n\n\nKahneman, Daniel. 2011. Thinking, Fast and Slow. Farrar, Straus and Giroux.\n\n\nLe Guin, Ursula K. 1973. The Ones Who Walk Away from Omelas: A Story. HarperCollins.\n\n\nMcWhorter, John H. 2014. The Language Hoax: Why the World Looks the Same in Any Language. Oxford University Press.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorris, Benny. 1987. The Birth of the Palestinian Refugee Problem, 1947-1949. Cambridge University Press.\n\n\nPappe, Ilan. 2006. The Ethnic Cleansing of Palestine. Simon and Schuster.\n\n\nPellicer, Miquel, and Vimal Ranchhod. 2023. “Understanding the Effects of Racial Classification in Apartheid South Africa.” Journal of Development Economics 160 (January): 102998. https://doi.org/10.1016/j.jdeveco.2022.102998.\n\n\nRawls, John. 1951. “Outline of a Decision Procedure for Ethics.” The Philosophical Review 60 (2): 177–97. https://doi.org/10.2307/2181696.\n\n\n———. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\nRoemer, John E. 1988. Free to Lose: An Introduction to Marxist Economic Philosophy. Harvard University Press.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSkinner, Quentin. 2012. Visions of Politics, Volume 1: Regarding Method. Cambridge: Cambridge University Press.\n\n\nSt. Augustine. 1874. The Works of Aurelius Augustine: Lectures or Tractates on the Gospel According to St. John, v. 2. T. & T. Clark.\n\n\nWeber, Max. 1904. The Protestant Ethic and the Spirit of Capitalism. Courier Corporation."
+    "text": "References\n\n\nAwad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. “Computational Ethics.” Trends in Cognitive Sciences 26 (5): 388–405. https://doi.org/10.1016/j.tics.2022.02.009.\n\n\nBertrand, Marianne, and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” American Economic Review 94 (4): 991–1013. https://doi.org/10.1257/0002828042002561.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nChurchill, Ward, and Michael Ryan. 1998. Pacifism as Pathology: Reflections on the Role of Armed Struggle in North America. PM Press.\n\n\nCrawford, Kate, and Trevor Paglen. 2019. “Excavating AI: The Politics of Training Sets for Machine Learning.” AI Now Institute, NYU. https://excavating.ai.\n\n\nDeutscher, Guy. 2010. Through the Language Glass: Why the World Looks Different in Other Languages. Henry Holt and Company.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nFields, Barbara J., and Karen E. Fields. 2012. Racecraft: The Soul of Inequality in American Life. Verso Books.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nGould, Stephen Jay. 1980. The Mismeasure of Man (Revised and Expanded). W. W. Norton & Company.\n\n\nGray, Mary L., and Siddharth Suri. 2019. Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass. HarperCollins.\n\n\nHenrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert Gintis, and Richard McElreath. 2001. “In Search of Homo Economicus: Behavioral Experiments in 15 Small-Scale Societies.” American Economic Review 91 (2): 73–78. https://doi.org/10.1257/aer.91.2.73.\n\n\nHobbes, Thomas. 1651. Leviathan: With Selected Variants from the Latin Edition of 1668. Hackett Publishing.\n\n\nJames, William. 1891. “The Moral Philosopher and the Moral Life.” International Journal of Ethics 1 (3): 330–54. https://www.jstor.org/stable/2375309.\n\n\nKahneman, Daniel. 2011. Thinking, Fast and Slow. Farrar, Straus and Giroux.\n\n\nLe Guin, Ursula K. 1973. The Ones Who Walk Away from Omelas: A Story. HarperCollins.\n\n\nMcWhorter, John H. 2014. The Language Hoax: Why the World Looks the Same in Any Language. Oxford University Press.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorris, Benny. 1987. The Birth of the Palestinian Refugee Problem, 1947-1949. Cambridge University Press.\n\n\nPappe, Ilan. 2006. The Ethnic Cleansing of Palestine. Simon and Schuster.\n\n\nPellicer, Miquel, and Vimal Ranchhod. 2023. “Understanding the Effects of Racial Classification in Apartheid South Africa.” Journal of Development Economics 160 (January): 102998. https://doi.org/10.1016/j.jdeveco.2022.102998.\n\n\nRawls, John. 1951. “Outline of a Decision Procedure for Ethics.” The Philosophical Review 60 (2): 177–97. https://doi.org/10.2307/2181696.\n\n\n———. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\nRoemer, John E. 1988. Free to Lose: An Introduction to Marxist Economic Philosophy. Harvard University Press.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSkinner, Quentin. 2012. Visions of Politics, Volume 1: Regarding Method. Cambridge: Cambridge University Press.\n\n\nSt. Augustine. 1874. The Works of Aurelius Augustine: Lectures or Tractates on the Gospel According to St. John, v. 2. T. & T. Clark.\n\n\nTschantz, Michael Carl. 2022. “What Is Proxy Discrimination?” In Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency, 1993–2003. FAccT ’22. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3531146.3533242.\n\n\nWeber, Max. 1904. The Protestant Ethic and the Spirit of Capitalism. Courier Corporation."
   },
   {
     "objectID": "w03/index.html#footnotes",
@@ -1309,13 +1393,6 @@
     "text": "Reflective Equilibrium\n\nMost criticisms of any framework boil down to, “great in theory, but doesn’t work in practice”\nThe way to take this seriously: reflective equilibrium\nIntroduced by Rawls (1951), but popularized by Rawls (1971)\n\n\nFrom Awad et al. (2022)"
   },
   {
-    "objectID": "w03/slides.html#rawls-vs.-everyone-else",
-    "href": "w03/slides.html#rawls-vs.-everyone-else",
-    "title": "Week 3: (Descriptive) Fairness in AI",
-    "section": "Rawls vs. Everyone Else",
-    "text": "Rawls vs. Everyone Else\n\nQ: What book had the greatest impact on modern (Anglophone) philosophy?\nOne approach: citations in a widely-used encyclopedia of philosophy* The results:\n\n\n\n\n\nBook\n\nBook\n\n\n\n\n1\nRawls 1972, A Theory of Justice (115)\n6\nParfit 1984, Reasons and Persons (62)\n\n\n2\nKripke 1980, Naming and Necessity (88)\n7\nScanlon 1998, What We Owe to Each Other (56)\n\n\n3\nLewis 1986, On the Plurality of Worlds (63)\n8\nWittgenstein 1953, Philosophical Investigations (55)\n\n\n3\nNozick 1974, Anarchy, State and Utopia (63)\n9\nChalmers 1996, The Conscious Mind (53)\n\n\n3\nQuine 1960, Word and Object (63)\n10\nRawls 1993, Political Liberalism (48)\n\n\n\n*(But don’t forget about the dangers of reification!)"
-  },
-  {
     "objectID": "w03/slides.html#easy-mode-descriptive-judgements",
     "href": "w03/slides.html#easy-mode-descriptive-judgements",
     "title": "Week 3: (Descriptive) Fairness in AI",
@@ -1358,18 +1435,18 @@
     "text": "Contemporary Example: Palestine\n\nVery few of the relevant empirical facts are in dispute, since opening of crucial archives to three so-called “New Historians” in the 1980s. So why do people still argue?\n\n\n\n\n\nIlan Pappe, one of these historians, concluded from this material that:\n\nThe Israeli state was built upon a massive ethnic cleansing, and\nIs not morally justifiable (Pappe 2006)\n\n\n\nThe immunity Israel has received over the last fifty years encourages others, regimes and oppositions alike, to believe that human and civil rights are irrelevant in the Middle East. The dismantling of the mega-prison in Palestine will send a different, and more hopeful, message.\n\n\n\n\nBenny Morris, another of these historians, concluded that:\n\nThe Israeli state was built upon a massive ethnic cleansing, and\nIs morally justifiable (Morris 1987)\n\n\n\nA Jewish state would not have come into being without the uprooting of 700,000 Palestinians. Therefore it was necessary to uproot them. There was no choice but to expel that population. It was necessary to cleanse the hinterland and cleanse the border areas and cleanse the main roads."
   },
   {
-    "objectID": "w03/slides.html#from-w01-promise-keeping",
-    "href": "w03/slides.html#from-w01-promise-keeping",
+    "objectID": "w03/slides.html#from-week-1-promise-keeping",
+    "href": "w03/slides.html#from-week-1-promise-keeping",
     "title": "Week 3: (Descriptive) Fairness in AI",
-    "section": "(From W01) Promise-Keeping",
-    "text": "(From W01) Promise-Keeping\n\nScenario: You just baked a pie, and you promised your friend you’d give them the pie. You’re walking over to the friend’s house to give them the pie.\nSuddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds\nDo you give the hostage-taker the pie?\n\n\n\n\n\nConsequentialist Ethics \\(\\implies\\) Yes\n\n\nTo be ethical is to weigh consequences of your actions\nThe positive consequences of giving the pie to the hostage-taker (saving a life) outweigh the negative consequences (breaking your promise to your friend)\n(Ex: Utilitarianism, associated with British philosopher Jeremy Bentham)\n\n\n\n\nDeontological Ethics \\(\\implies\\) No\n\n\nTo be ethical is to live by rules which you would want everyone to follow.\nAs a rule (a “categorical imperative”), you must not break promises. (Breaking this rule \\(\\implies\\) others can also “pick and choose” when to honor promises to you)\n(Ex: Kantian Ethics, associated with German philosopher Immanuel Kant)"
+    "section": "(From Week 1) Promise-Keeping",
+    "text": "(From Week 1) Promise-Keeping\n\nScenario: You just baked a pie, and you promised your friend you’d give them the pie. You’re walking over to the friend’s house to give them the pie.\nSuddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds\nDo you give the hostage-taker the pie?\n\n\n\n\n\nConsequentialist Ethics \\(\\implies\\) Yes\n\n\nTo be ethical is to weigh consequences of your actions\nThe positive consequences of giving the pie to the hostage-taker (saving a life) outweigh the negative consequences (breaking your promise to your friend)\n(Ex: Utilitarianism, associated with British philosopher Jeremy Bentham)\n\n\n\n\nDeontological Ethics \\(\\implies\\) No\n\n\nTo be ethical is to live by rules which you would want everyone to follow.\nAs a rule (a “categorical imperative”), you must not break promises. (Breaking this rule \\(\\implies\\) others can also “pick and choose” when to honor promises to you)\n(Ex: Kantian Ethics, associated with German philosopher Immanuel Kant)"
   },
   {
-    "objectID": "w03/slides.html#counterargument-to-consequentialism",
-    "href": "w03/slides.html#counterargument-to-consequentialism",
+    "objectID": "w03/slides.html#from-week-1-counterargument-to-consequentialism",
+    "href": "w03/slides.html#from-week-1-counterargument-to-consequentialism",
     "title": "Week 3: (Descriptive) Fairness in AI",
-    "section": "Counterargument to Consequentialism",
-    "text": "Counterargument to Consequentialism\n\n\n\n\nMillions are kept permanently happy, on the one simple condition that a certain lost soul on the far-off edge of things should lead a life of lonely torture (James 1891)\n\n\nModern example: people “out there” suffer so we can have iPhones, etc.\n\n\n\n\n\n\nLe Guin (1973)"
+    "section": "(From Week 1) Counterargument to Consequentialism",
+    "text": "(From Week 1) Counterargument to Consequentialism\n\n\n\n\nMillions are kept permanently happy, on the one simple condition that a certain lost soul on the far-off edge of things should lead a life of lonely torture (James 1891)\n\n\nModern example: people “out there” suffer so we can have iPhones, etc.\n\n\n\n\n\n\nLe Guin (1973)"
   },
   {
     "objectID": "w03/slides.html#one-solution-individual-rights",
@@ -1404,7 +1481,7 @@
     "href": "w03/slides.html#individual-vs.-social-morality",
     "title": "Week 3: (Descriptive) Fairness in AI",
     "section": "Individual vs. Social Morality",
-    "text": "Individual vs. Social Morality\n\nIt’s already quite difficult to reason about individual morality\nNow add in the fact that we live in a society 😰\nThings that happen depend not only on our choices but also the choices of others"
+    "text": "Individual vs. Social Morality\n\nIt’s already quite difficult to reason about individual morality\nNow add in the fact that we live in a society 😰\nThings that happen depend not only on our choices but also the choices of others\n\n\nSeinfeld: Living in a Society (Clip) | TBS"
   },
   {
     "objectID": "w03/slides.html#enter-game-theory",
@@ -1467,7 +1544,7 @@
     "href": "w03/slides.html#one-final-reminder",
     "title": "Week 3: (Descriptive) Fairness in AI",
     "section": "One Final Reminder",
-    "text": "One Final Reminder\n\nIndustry rule #4080: Cannot “prove” \\(q(x) = \\text{``Algorithm }x\\text{ is fair''}\\)! Only \\(p(x) \\implies q(y)\\):\n\n\\[\n\\underbrace{p(x)}_{\\substack{\\text{Accept ethical} \\\\ \\text{framework }x}} \\implies \\underbrace{q(y)}_{\\substack{\\text{Algorithms should} \\\\ \\text{satisfy condition }y}}\n\\]\n\nLast week: very broad intro to possible ethical frameworks (values for \\(x\\))\nToday: very broad intro to possible fairness criteria (values for \\(y\\))"
+    "text": "One Final Reminder\n\nIndustry rule #4080: Cannot “prove” \\(q(x) = \\text{``Algorithm }x\\text{ is fair''}\\)! Only \\(p(x) \\implies q(y)\\):\n\n\\[\n\\underbrace{p(x)}_{\\substack{\\text{Accept ethical} \\\\ \\text{framework }x}} \\implies \\underbrace{q(y)}_{\\substack{\\text{Algorithms should} \\\\ \\text{satisfy condition }y}}\n\\]\n\nBefore: possible ethical frameworks (values for \\(x\\))\nNow: possible fairness criteria (values for \\(y\\))"
   },
   {
     "objectID": "w03/slides.html#categories-of-fairness-criteria",
@@ -1495,14 +1572,105 @@
     "href": "w03/slides.html#baby-steps-a-less-busy-confusion-matrix",
     "title": "Week 3: (Descriptive) Fairness in AI",
     "section": "Baby Steps: A Less Busy Confusion Matrix",
-    "text": "Baby Steps: A Less Busy Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (recidivism)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions, this is the last slide!)"
+    "text": "Baby Steps: A Less Busy Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (recidivism)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)"
+  },
+  {
+    "objectID": "w03/slides.html#fairness-through-unawareness-and-proxy-discrimination",
+    "href": "w03/slides.html#fairness-through-unawareness-and-proxy-discrimination",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Fairness Through Unawareness and Proxy Discrimination",
+    "text": "Fairness Through Unawareness and Proxy Discrimination\n\nFrom Tschantz (2022)"
+  },
+  {
+    "objectID": "w03/slides.html#causal-fairness",
+    "href": "w03/slides.html#causal-fairness",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Causal Fairness",
+    "text": "Causal Fairness\n\nFrom DSAN 5100 you know things like \\(\\mathbb{E}[Y \\mid X], \\text{Cov}(X,Y)\\), \\(X \\perp Y\\), and estimating \\(Y = \\beta_0 + \\beta_1X\\)\nFor causal inference however, there is a qualitatively different and more strict standard: \\(\\mathbb{E}[Y \\mid do(X)]\\)\n\nLiterally called “Do-Calculus”"
+  },
+  {
+    "objectID": "w03/slides.html#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct",
+    "href": "w03/slides.html#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)",
+    "text": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)\n\nCareful scientific, causal studies measure the effect that changing \\(X\\) (\\(do(X)\\)) has on \\(Y\\), controlling for \\(C\\) (via, at least under the hood, “Do-Calculus”)\nBut, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into “race” and “not race”\nKeep in back of your mind as we look at just one example of how (measured by thorough, statistically-principled randomized experiment), race can have direct, measurable, causal impacts on important aspects of our everyday lives"
+  },
+  {
+    "objectID": "w03/slides.html#racial-discrimination",
+    "href": "w03/slides.html#racial-discrimination",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Racial Discrimination",
+    "text": "Racial Discrimination\n\nMarianne Bertrand and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” American Economic Review. (Bertrand and Mullainathan 2004)\n\n\nWe study race in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are randomly assigned African-American- or White-sounding names. White names receive 50 percent more callbacks for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U.S. labor market."
+  },
+  {
+    "objectID": "w03/slides.html#controlling-for-everything-besides-race",
+    "href": "w03/slides.html#controlling-for-everything-besides-race",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "“Controlling for” Everything Besides Race",
+    "text": "“Controlling for” Everything Besides Race"
+  },
+  {
+    "objectID": "w03/slides.html#age-discrimination",
+    "href": "w03/slides.html#age-discrimination",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Age Discrimination?",
+    "text": "Age Discrimination?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBased on Lily Hu, What is ‘Race’ in Algorithmic Discrimination on the Basis of Race? - IPAM at UCLA (YouTube)"
+  },
+  {
+    "objectID": "w03/slides.html#cool-theory-i-guess",
+    "href": "w03/slides.html#cool-theory-i-guess",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "“Cool Theory, I Guess…”",
+    "text": "“Cool Theory, I Guess…”\n\n“Good luck measuring ideas inside of people’s heads… I’ll be over here measuring real things and doing real data science!” -My Opps"
+  },
+  {
+    "objectID": "w03/slides.html#cool-theory-i-guess-1",
+    "href": "w03/slides.html#cool-theory-i-guess-1",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "“Cool Theory, I Guess…”",
+    "text": "“Cool Theory, I Guess…”"
+  },
+  {
+    "objectID": "w03/slides.html#opening-a-big-can-of-worms",
+    "href": "w03/slides.html#opening-a-big-can-of-worms",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Opening A Big Can Of Worms",
+    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…"
+  },
+  {
+    "objectID": "w03/slides.html#opening-a-big-can-of-worms-1",
+    "href": "w03/slides.html#opening-a-big-can-of-worms-1",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Opening A Big Can Of Worms",
+    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…\nMediated by external things \\(o^e_3\\) to \\(o^e_8\\) (giving rise to patterns of interaction)…"
+  },
+  {
+    "objectID": "w03/slides.html#opening-a-big-can-of-worms-2",
+    "href": "w03/slides.html#opening-a-big-can-of-worms-2",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Opening A Big Can Of Worms",
+    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…\nMediated by external things \\(o^e_3\\) to \\(o^e_8\\) (giving rise to patterns of interaction)…\nEach person \\(x\\) forming their own internal representations \\(\\widetilde{t^x_0}\\), \\(\\widetilde{t^x_1}\\), \\(\\widetilde{t^x_2}\\) of one another based on patterns of interaction, then\nGeneralizing to an internal representation of a “type of person” \\(\\widetilde{t^x_9}\\)…"
+  },
+  {
+    "objectID": "w03/slides.html#opening-a-big-can-of-worms-3",
+    "href": "w03/slides.html#opening-a-big-can-of-worms-3",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Opening A Big Can Of Worms",
+    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…\nMediated by external things \\(o^e_3\\) to \\(o^e_8\\) (giving rise to patterns of interaction)…\nEach person \\(x\\) forming their own internal representations \\(\\widetilde{t^x_0}\\), \\(\\widetilde{t^x_1}\\), \\(\\widetilde{t^x_2}\\) of one another based on patterns of interaction, then\nGeneralizing to an internal representation of a “type of person” \\(\\widetilde{t^x_9}\\)…\nWhich they then externalize as \\(t^x_9\\).\n\\(t^0_9\\), \\(t^1_9\\), \\(t^2_9\\) “congeal” into a shared external representation \\(t_9^e\\) via social mechanism (discussion, media, culture, propaganda, parenting, religion, education, …) \\(\\Rightarrow t^e_9\\) “reified” (causal effects on \\(t_0\\), \\(t_1\\), \\(t_2\\))"
+  },
+  {
+    "objectID": "w03/slides.html#more-to-come-on-hw1",
+    "href": "w03/slides.html#more-to-come-on-hw1",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "(More to Come on HW1!)",
+    "text": "(More to Come on HW1!)"
   },
   {
     "objectID": "w03/slides.html#references",
     "href": "w03/slides.html#references",
     "title": "Week 3: (Descriptive) Fairness in AI",
     "section": "References",
-    "text": "References\n\n\nAwad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. “Computational Ethics.” Trends in Cognitive Sciences 26 (5): 388–405. https://doi.org/10.1016/j.tics.2022.02.009.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nChurchill, Ward, and Michael Ryan. 1998. Pacifism as Pathology: Reflections on the Role of Armed Struggle in North America. PM Press.\n\n\nCrawford, Kate, and Trevor Paglen. 2019. “Excavating AI: The Politics of Training Sets for Machine Learning.” AI Now Institute, NYU. https://excavating.ai.\n\n\nDeutscher, Guy. 2010. Through the Language Glass: Why the World Looks Different in Other Languages. Henry Holt and Company.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nFields, Barbara J., and Karen E. Fields. 2012. Racecraft: The Soul of Inequality in American Life. Verso Books.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nGould, Stephen Jay. 1980. The Mismeasure of Man (Revised and Expanded). W. W. Norton & Company.\n\n\nGray, Mary L., and Siddharth Suri. 2019. Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass. HarperCollins.\n\n\nHenrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert Gintis, and Richard McElreath. 2001. “In Search of Homo Economicus: Behavioral Experiments in 15 Small-Scale Societies.” American Economic Review 91 (2): 73–78. https://doi.org/10.1257/aer.91.2.73.\n\n\nHobbes, Thomas. 1651. Leviathan: With Selected Variants from the Latin Edition of 1668. Hackett Publishing.\n\n\nJames, William. 1891. “The Moral Philosopher and the Moral Life.” International Journal of Ethics 1 (3): 330–54. https://www.jstor.org/stable/2375309.\n\n\nKahneman, Daniel. 2011. Thinking, Fast and Slow. Farrar, Straus and Giroux.\n\n\nLe Guin, Ursula K. 1973. The Ones Who Walk Away from Omelas: A Story. HarperCollins.\n\n\nMcWhorter, John H. 2014. The Language Hoax: Why the World Looks the Same in Any Language. Oxford University Press.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorris, Benny. 1987. The Birth of the Palestinian Refugee Problem, 1947-1949. Cambridge University Press.\n\n\nPappe, Ilan. 2006. The Ethnic Cleansing of Palestine. Simon and Schuster.\n\n\nPellicer, Miquel, and Vimal Ranchhod. 2023. “Understanding the Effects of Racial Classification in Apartheid South Africa.” Journal of Development Economics 160 (January): 102998. https://doi.org/10.1016/j.jdeveco.2022.102998.\n\n\nRawls, John. 1951. “Outline of a Decision Procedure for Ethics.” The Philosophical Review 60 (2): 177–97. https://doi.org/10.2307/2181696.\n\n\n———. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\nRoemer, John E. 1988. Free to Lose: An Introduction to Marxist Economic Philosophy. Harvard University Press.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSkinner, Quentin. 2012. Visions of Politics, Volume 1: Regarding Method. Cambridge: Cambridge University Press.\n\n\nSt. Augustine. 1874. The Works of Aurelius Augustine: Lectures or Tractates on the Gospel According to St. John, v. 2. T. & T. Clark.\n\n\nWeber, Max. 1904. The Protestant Ethic and the Spirit of Capitalism. Courier Corporation.\n\n\n\n\nDSAN 5450 Week 3: (Descriptive) Fairness in AI"
+    "text": "References\n\n\nAwad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. “Computational Ethics.” Trends in Cognitive Sciences 26 (5): 388–405. https://doi.org/10.1016/j.tics.2022.02.009.\n\n\nBertrand, Marianne, and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” American Economic Review 94 (4): 991–1013. https://doi.org/10.1257/0002828042002561.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nChurchill, Ward, and Michael Ryan. 1998. Pacifism as Pathology: Reflections on the Role of Armed Struggle in North America. PM Press.\n\n\nCrawford, Kate, and Trevor Paglen. 2019. “Excavating AI: The Politics of Training Sets for Machine Learning.” AI Now Institute, NYU. https://excavating.ai.\n\n\nDeutscher, Guy. 2010. Through the Language Glass: Why the World Looks Different in Other Languages. Henry Holt and Company.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nFields, Barbara J., and Karen E. Fields. 2012. Racecraft: The Soul of Inequality in American Life. Verso Books.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nGould, Stephen Jay. 1980. The Mismeasure of Man (Revised and Expanded). W. W. Norton & Company.\n\n\nGray, Mary L., and Siddharth Suri. 2019. Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass. HarperCollins.\n\n\nHenrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert Gintis, and Richard McElreath. 2001. “In Search of Homo Economicus: Behavioral Experiments in 15 Small-Scale Societies.” American Economic Review 91 (2): 73–78. https://doi.org/10.1257/aer.91.2.73.\n\n\nHobbes, Thomas. 1651. Leviathan: With Selected Variants from the Latin Edition of 1668. Hackett Publishing.\n\n\nJames, William. 1891. “The Moral Philosopher and the Moral Life.” International Journal of Ethics 1 (3): 330–54. https://www.jstor.org/stable/2375309.\n\n\nKahneman, Daniel. 2011. Thinking, Fast and Slow. Farrar, Straus and Giroux.\n\n\nLe Guin, Ursula K. 1973. The Ones Who Walk Away from Omelas: A Story. HarperCollins.\n\n\nMcWhorter, John H. 2014. The Language Hoax: Why the World Looks the Same in Any Language. Oxford University Press.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorris, Benny. 1987. The Birth of the Palestinian Refugee Problem, 1947-1949. Cambridge University Press.\n\n\nPappe, Ilan. 2006. The Ethnic Cleansing of Palestine. Simon and Schuster.\n\n\nPellicer, Miquel, and Vimal Ranchhod. 2023. “Understanding the Effects of Racial Classification in Apartheid South Africa.” Journal of Development Economics 160 (January): 102998. https://doi.org/10.1016/j.jdeveco.2022.102998.\n\n\nRawls, John. 1951. “Outline of a Decision Procedure for Ethics.” The Philosophical Review 60 (2): 177–97. https://doi.org/10.2307/2181696.\n\n\n———. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\nRoemer, John E. 1988. Free to Lose: An Introduction to Marxist Economic Philosophy. Harvard University Press.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSkinner, Quentin. 2012. Visions of Politics, Volume 1: Regarding Method. Cambridge: Cambridge University Press.\n\n\nSt. Augustine. 1874. The Works of Aurelius Augustine: Lectures or Tractates on the Gospel According to St. John, v. 2. T. & T. Clark.\n\n\nTschantz, Michael Carl. 2022. “What Is Proxy Discrimination?” In Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency, 1993–2003. FAccT ’22. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3531146.3533242.\n\n\nWeber, Max. 1904. The Protestant Ethic and the Spirit of Capitalism. Courier Corporation.\n\n\n\n\nDSAN 5450 Week 3: (Descriptive) Fairness in AI"
   },
   {
     "objectID": "w05/index.html",
