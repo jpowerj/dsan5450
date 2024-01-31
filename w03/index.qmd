@@ -13,6 +13,8 @@ format:
   revealjs:
     df-print: kable
     footer: "DSAN 5450 Week 3: (Descriptive) Fairness in AI"
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'>"
     output-file: "slides.html"
     html-math-method: mathjax
     theme: ["../_jjslides.scss"]
@@ -180,7 +182,7 @@ in contrast to
 
 > "What we talk about when we talk about [insert particular ethical framework here]"
 
-## Reflective Equilibrium {.crunch-title .crunch-quarto-figure}
+## Reflective Equilibrium {.crunch-title}
 
 * Most criticisms of any framework boil down to, "great in theory, but doesn't work in practice"
 * The way to take this seriously: **reflective equilibrium** 
@@ -199,11 +201,14 @@ in contrast to
 
 **How did you acquire the concept "red"?**
 
-* People pointed to stuff with certain properties and said "red" (or "rojo" or "红"), as part of constructing an **intersubjective** communication system
-* These **descriptive** concepts exist essentially for *coordination*, like driving on the left vs. right side of the road!
-* Nothing very profound or difficult seems to come from the **commitments** implied by this descriptive coordination: *"for ease of communication, I'll vibrate my vocal chords like this (or write these symbols) to indicate $x$, and I'll vibrate them like this (or write these other symbols) to indicate $y$"*
+* People pointed to stuff with certain properties and said "red" (or "rojo" or "红"), as pieces of an **intersubjective** communication system
+* These **descriptive** labels enable *coordination*, like driving on left or right side of road!
+* Nothing very profound or difficult in **committing** to this descriptive coordination: *"for **ease of communication**, I'll vibrate my vocal chords like this (or write these symbols) to indicate $x$, and vibrate them like this (or write these other symbols) to indicate $y$"*
 <!-- * Technically you have the free will to **refuse** this prescription. But, nothing very "" -->
-* Our linguistic choices, when it comes to **description**, are arbitrary*: Our mouths can make <a href='https://en.wikipedia.org/wiki/International_Phonetic_Alphabet' target='_blank'>these sounds</a>, and each language is a mapping: [combinations of sounds] $\leftrightarrow$ [things]
+* Linguistic choices, when it comes to **description**, are arbitrary*: Our mouths can make <a href='https://en.wikipedia.org/wiki/International_Phonetic_Alphabet' target='_blank'>these sounds</a>, and each language is a mapping: [combinations of sounds] $\leftrightarrow$ [things]
+  * diːsˈæn ˈfɪfti fɔr ˈfɪfti [<a href='http://ipa-reader.xyz/?text=dis%C3%A6n%CB%88f%C9%AAfdif%C9%94%C9%B9%CB%88f%C9%AAfti' target='_blank'>US Accent <i class='bi bi-box-arrow-up-right'></i></a> / <a href='http://ipa-reader.xyz/?text=dis%C3%A6n%CB%88f%C9%AAfdif%C9%94%C9%B9%CB%88f%C9%AAfti&voice=Dora' target='_blank'>Icelandic Accent <i class='bi bi-box-arrow-up-right'></i></a>]
+
+<!-- disænˈfɪfdifɔɹˈfɪfti  / disænˈfɪfdifɔɹˈfɪfti -->
 <!-- * Our lives/the world would not be very different if "red" was switched with "green"; i.e., the main change would just be vibrating different vocal chords or writing different symbols to communicate the concept -->
 
 \**(Tiny text footnote: Except for, perhaps, a few <a href='https://en.wikipedia.org/wiki/Bouba/kiki_effect' target='_blank'>fun but rare onomatopoetic cases</a>)*
@@ -212,13 +217,17 @@ in contrast to
 
 **How did you acquire the concept "good"?**
 
-* People pointed to actions/decisions with certain properties and said "good" (and pointed at others and said "bad"), as part of instilling **values** in you
+* People pointed to **actions** with certain properties and said "good" (and pointed at others and said "bad"), as part of instilling **values** in you
 * "Grass is green" just links two **descriptive** referents together, while "Honesty is good" takes the **descriptive** concept "honesty" and *links it* with the **normative** concept "good"
 * In doing this, parents/teachers/friends are doing way more than just linking sounds and things in the world (**de**scribing): they are also **prescribing** rules of moral conduct!
-* These **normative** concepts go beyond "mere" communication: the course of your life, the way the future unfolds, and [insert more things that tend to matter deeply to people] are different if you **act on** one set of norms vs. another
-* Ethics therefore centrally involves non-arbitrarily-chosen **commitments**!
-* tl;dr: languages are arbitrary conventions for communication, while ethical systems use this language to non-arbitrarily mark out things that are good/bad:
-  * Life would **not** be very different if we "shuffled" words (we'd just vibrate our vocal chords differently), but **would** be very different if we "shuffled" good/bad labeling
+* **Normative** concepts go beyond "mere" communication: course of your life / future / [things that matter deeply to people] differ if you **act on** one set of norms vs. another
+* $\implies$ Ethics centrally involves non-arbitrarily-chosen **commitments**!
+
+## Tl;dr
+
+* **Languages** are **arbitrary conventions** for communication
+* **Ethical systems** **build on** this language to **non-arbitrarily** mark out things that are good/bad
+* Life would **not** be very different if we "shuffled" words (we'd just vibrate our vocal chords differently), but **would** be very different if we "shuffled" good/bad labeling
 
 ## Quick Aside: Top 10 Linguist Beefs {.smaller .crunch-title .crunch-figcaption .crunch-quarto-layout-panel .crunch-ul .crunch-images}
 
@@ -290,38 +299,6 @@ in contrast to
 
 # Individual Ethics $\rightarrow$ Social Ethics {data-stack-name="Individual vs. Social Ethics"}
 
-## (From Week 1) Promise-Keeping {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-ul .title-12}
-
-* Scenario: You just baked a pie, and you promised your friend you'd give them the pie. You're walking over to the friend's house to give them the pie.
-* Suddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds
-* Do you give the hostage-taker the pie?
-
-::: {layout="[1,1]"}
-::: {#conseqentialism}
-
-<center>
-**Consequentialist Ethics $\implies$ Yes**
-</center>
-
-* To be ethical is to weigh consequences of your actions
-* The **positive consequences** of giving the pie to the hostage-taker (saving a life) outweigh the **negative consequences** (breaking your promise to your friend)
-* *(Ex: **Utilitarianism**, associated with British philosopher **Jeremy Bentham**)*
-
-:::
-::: {#deontology}
-
-<center>
-**Deontological Ethics $\implies$ No**
-</center>
-
-* To be ethical is to live by rules which you would **want everyone to follow**.
-* As a **rule** (a "categorical imperative"), you **must not break promises**. (Breaking this rule $\implies$ others can also "pick and choose" when to honor promises to you)
-* *(Ex: **Kantian Ethics**, associated with German philosopher **Immanuel Kant**)*
-
-:::
-
-:::
-
 ## (From Week 1) Counterargument to Consequentialism {.crunch-title .title-07 .crunch-quarto-layout-panel .crunch-ul .crunch-quarto-figure .crunch-images}
 
 ::: {layout="[1,1]"}
@@ -338,9 +315,9 @@ in contrast to
 
 :::
 
-## One Solution: Individual Rights {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-figcaption .crunch-images .crunch-math}
+## One Solution: Individual Rights {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-figcaption .crunch-images .crunch-math .crunch-ul}
 
-::: {layout="[2,1]"}
+::: {layout="[2,1]" layout-valign="center"}
 
 ::: {#rights-text}
 
@@ -358,7 +335,7 @@ in contrast to
 :::
 
 $$
-\texttt{A} \prec \texttt{B} \prec \texttt{Z} \prec \texttt{a} \prec \texttt{b} \prec \texttt{z}
+\boxed{\texttt{A} \prec \texttt{B} \prec \cdots \prec \texttt{Z} \prec \texttt{a} \prec \texttt{b} \prec \cdots \prec \texttt{z}}
 $$
 
 ## Lexical Ordering (I Tricked You 😈)
@@ -369,7 +346,7 @@ $$
 * You thought I was just talking about *letters*, but they're actually **variables**: capital letters are rights, lowercase letters are distributive principles
 
 $$
-\underbrace{\texttt{A} \prec \texttt{B} \prec \texttt{Z}}_{\mathclap{\substack{\text{Individual Rights} \\ \text{Basic Goods}}}} \phantom{\prec} \prec \phantom{\prec} \underbrace{\texttt{a} \prec \texttt{b} \prec \texttt{z}}_{\mathclap{\substack{\text{Distributive Principles} \\ \text{Money and whatnot}}}}
+\underbrace{\texttt{A} \prec \texttt{B} \prec \cdots \prec \texttt{Z}}_{\mathclap{\substack{\text{Individual Rights} \\ \text{Basic Goods}}}} \phantom{\prec} \prec \phantom{\prec} \underbrace{\texttt{a} \prec \texttt{b} \prec \cdots \prec \texttt{z}}_{\mathclap{\substack{\text{Distributive Principles} \\ \text{Money and whatnot}}}}
 $$
 
 :::
@@ -380,21 +357,35 @@ $$
 :::
 :::
 
+## Better Metaphor Than Letters {.smaller .crunch-title .crunch-ul .crunch-math}
+
+* Letters are where Rawls gets "lexically prior" from, but letters are **total orderings** (we know where *every* letter "stands" in relation to *every* other letter)
+* Better metaphor: a **high school** with a hierarchy such that
+
+$$
+\text{Seniors} \prec \text{Juniors} \prec \text{Sophomores}  \prec \text{Freshmen} 
+$$
+
+* $\implies$ If you're a Freshman, whether at the "top" or "bottom" of a ranking of Freshmen, you're still **prior to** all Sophomores...
+* Why is this more helpful? Because **we don't need to define** the **rankings *within* classes** to know the **rankings *between* classes** in this case
+
+![](images/ordinal_numbers.svg){fig-align="center" width="300"}
+
 ## Counterargument(s) to Deontology {.smaller .crunch-title .crunch-ul .crunch-figcaption .shift-ul .crunch-li-3 .crunch-images}
 
 ::: {layout="[7,3]"}
 ::: {#deontology-counter-left}
 
-* Deontological rule: "Don't lie"
+* Deontological **rule**: *"Don't lie"*
   * But then: Nazis come to your house, ask you if you're harboring any Jews
-* k, new deontological rule: "Don't lie unless necessary"
+* k, new deontological **rule**: *"Don't lie unless necessary"*
   * Who decides when it's necessary?
-* Deontological commitment: Pacifism / Nonviolence
+* Deontological commitment: *Pacifism / Nonviolence*
   * But then: someone swingin on you
-* k, new deontological commitment: Pacifism / Nonviolence Except In Self-Defense
-  * What counts as self-defense?
-* Deontological maxim: "The master's tools will never dismantle the master's house"
-  * Why concede "ownership" to the master?
+* k, new deontological **commitment**: *Pacifism / Nonviolence Except In Self-Defense*
+  * Who decides what counts as self-defense?
+* Deontological **maxim**: *"The master's tools will never dismantle the master's house"*
+  * Who conceded "ownership" to the master?
 * (Trolley problems, etc.)
 
 :::
@@ -421,13 +412,13 @@ $$
 
 :::
 
-## Individual vs. Social Morality {.smaller .crunch-title}
+## Individual vs. Social Morality {.smaller .crunch-title .crunch-ul .crunch-figcaption .crunch-images .crunch-quarto-figure}
 
-* It's already quite difficult to reason about **individual** morality
+* That was all already hard enough, to reason about **individual** morality
 * Now add in the fact that we live in a society 😰
 * Things that happen depend not only on **our** choices but also the choices of others
 
-[![<a href='https://www.youtube.com/watch?v=LHhbdXCzt_A' target='_blank'>Seinfeld: Living in a Society (Clip) | TBS</a>](images/seinfeld_society.jpeg){fig-align="center"}](https://www.youtube.com/watch?v=LHhbdXCzt_A)
+[![<a href='https://www.youtube.com/watch?v=LHhbdXCzt_A' target='_blank'>Seinfeld: Living in a Society (Clip) | TBS</a>](images/seinfeld_society.jpeg){fig-align="center" width="700"}](https://www.youtube.com/watch?v=LHhbdXCzt_A)
 
 ## Enter Game Theory {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-figcaption .crunch-ul}
 
@@ -471,7 +462,7 @@ $$
 
 :::
 
-## The Social Outcome
+## The Social Outcome {.crunch-title .crunch-ul}
 
 ::: {layout="[1,1]" layout-valign="center"}
 
@@ -487,20 +478,15 @@ $$
 
 :::
 
-## How Do We Fix This? *Conventions!* {.crunch-title .inline-08 .crunch-quarto-layout-cell}
+## How Do We Fix This? *Conventions!* {.crunch-title .inline-08 .crunch-quarto-layout-cell .crunch-quarto-layout-panel}
+
+::: {layout="[1,1]" layout-valign="center"}
+
+::: {#conventions-left}
 
 * We encounter this type of problem every day if we **drive**! You ($A$) and another driver ($B$) arrive at an **intersection**:
 
-::: {layout="[70,30]"}
-
-::: {#intersection-text}
-
-* If **both stop**, we're mostly bored: $u_A = -1$
-* If we stop and the other person drives, we're mad that they got to go and we didn't: $u_A = -3$
-* If **both drive**, we crash: $u_A = -10$
-
 :::
-::: {#intersection-table}
 
 ```{=html}
 <table class='game-table'>
@@ -535,7 +521,9 @@ $$
 
 :::
 
-:::
+* If **both stop**, we're mostly bored: $u_A = -1$
+* If we stop and the other person drives, we're mad that they got to go and we didn't: $u_A = -3$
+* If **both drive**, we crash: $u_A = -10$
 
 ## Without A Convention {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-ul .crunch-math}
 
@@ -648,6 +636,7 @@ $$
 
 * @hobbes_leviathan_1651: Only way out of "war of all against all" is to surrender all power to one **sovereign** (the *Leviathan*)
 * @rousseau_social_1762: Social contract
+* *[Big big ~200 year gap here... can you think of why? Hint: French Revolution in 1789]*
 * @rawls_theory_1971: Social contract **behind the "veil of ignorance"**
   * If we didn't know **where we were going to end up** in society, how would we set it up?
 <!-- * @dworkin_what_1981: Yes, plus also people can **buy insurance** against ending up in a bad place $\rightarrow$ level of "just" redistribution -->
@@ -755,12 +744,92 @@ Anatole France, *Le Lys Rouge* [@france_lys_1894]
 
 ![From <a href='https://www.cs.sfu.ca/~anoop/courses/MACM-300-Spring-2006/complexity.pdf' target='_blank'>*Introduction to Formal Languages and Automata*</a>, Simon Fraser University (2006). This figure summarizes the **Chomsky Hierarchy** of Languages, developed by Noam Chomsky, who also has a lot to say about Ethics and Policy...](images/chomsky-hierarchy.jpeg){.no-stretch fig-align="center" width="200"}
 
+## The Brogrammer's Criterion {.crunch-title .crunch-ul}
+
+```python
+df.drop(columns=["race"], inplace=True)
+```
+
+* Racism solved, folks! 🥳🎊🎉 End of the course, have a great rest of your data science career ✌️
+
+![](images/flocka.jpeg){fig-align="center"}
+
+## (No) Fairness Through Unawareness {.smaller .crunch-title .crunch-ul .crunch-figcaption}
+
+* **HW1**: Using tiny sample ($N < 10K$) of Florida voter registrations... <a href='https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html' target='_blank'>RandomForestClassifier</a> (default settings, no hyperparameter tuning, no cross-validation, no ensembling with other methods) will predict self-reported race with $>90\%$ accuracy (in balanced sample) from just **surname** and **county of residence**
+  * Can reach $70\text{-}75\%$ with **just** surname or **just** county of residence
+* Also in HW1: **Facebook** ad matching service provides **over 1,000 different user attributes** for **(micro)targeting**
+
+![From @datta_proxy_2017](images/proxy.svg){fig-align="center"}
+
+## To Make It Even More Concrete... {.smaller .crunch-title}
+
+* *Bloomberg* analysis of neighborhoods with same-day delivery from Amazon:
+
+::: {#fig-bloomberg layout="[1,1,1]" layout-valign="center"}
+
+![](images/amazon-six-cities-at.png){fig-align="center"}
+
+![](images/amazon-six-cities-ch.png){fig-align="center"}
+
+![](images/amazon-six-cities-dc.png){fig-align="center"}
+
+Figures from @ingold_amazon_2016
+:::
+
+## We Can Do (A Bit) Better... {.smaller}
+
+* Use **random variables** to model inferences made by an algorithm (or a human!)
+* $\implies$ fairness by statistically **equalizing** loan rejections, error rate, etc. between groups
+* Obvious **societal** drawback: **equality** does not ameliorate the effects of **past injustices** (see: police contact vs. trust-in-government plot from last week)
+  * This one we saw coming, given "context-free" nature!
+* Less obvious **mathematical** drawback: **impossibility results** (because algebra 😳)
+  * Roughly: can't satisfy [more than] two statistical fairness criteria at once; similar to how setting $\Pr(X) = p$ also determines $\Pr(\text{not }X) = 1 - p$, or how plugging $x = 3$ into $x + y = 5$ leaves only one possibility $y = 2$
+* **BUT**, "impossibility" $\neq$ impossibility: (a) one criteria may be "all you need" in given setting; (b) can derive **more robust** measures by "relaxing" confusion-matrix measures
+
 ## Who Remembers... 🎉*Confusion Matrices!!!*🎉 {.smaller .crunch-title .title-11}
 
 * Terrifyingly higher stakes than in DSAN 5000, however!
 * Now $D = 1$ could literally mean *"shoot this person"* or *"throw this person in jail for life"*
 
 ![From @mitchell_algorithmic_2021](images/mitchell_et_al.svg){fig-align="center"}
+
+## Our First Fairness Measure (Finally)! {.crunch-title .smaller .crunch-ul .crunch-math}
+
+* Standard across the literature: Random Variable $A_i$ "encoding" membership in protected/sensitive group. In HW1, for example:
+
+$$
+A_i = \begin{cases}
+0 &\text{if }i\text{ self-reported ``white''} \\
+1 &\text{if }i\text{ self-reported ``black''}
+\end{cases}
+$$
+
+* **Notice**: choice of mapping into $\{0, 1\}$ here **non-arbitrary**!
+* We want our models/criteria to be **descriptively** but also **normatively robust**; e.g.:
+* **If** (antecedent I hold, though <a href='https://www.pewresearch.org/politics/2021/08/12/deep-divisions-in-americans-views-of-nations-racial-history-and-how-to-address-it/' target='_blank'>majority in US</a> do not) one believes that ending (much less repairing) centuries of unrelenting white supremacist violence here might require asymmetric race-based policies,
+* **Then** our model should allow different **normative labels** and differential **weights** on
+
+  $$
+  \begin{align*}
+  \Delta &= (\text{Fairness} \mid A = 1) - (\text{Fairness} \mid A = 0) \\
+  \nabla &= (\text{Fairness} \mid A = 0) - (\text{Fairness} \mid A = 1)
+  \end{align*}
+  $$
+
+  despite the **descriptive** fact that $\Delta = -\nabla$.
+
+## Where Descriptive and Normative Intertwine (Whether You Want It To Or Not :O)
+
+* Allowing this **asymmetry** is precisely what enables bring **descriptive** facts to bear on **normative** concerns: **mathematically** we can swap the mapping into $\{0, 1\}$, but this (again, in a precise, logical sense) implies that we're treating **racial treatment** as the same type of phenomenon as **driving on left or right side of road** (see: prev slides on why we make the descriptive vs. normative distinction)
+
+## The Fairness Criterion
+
+$$
+\Pr(D = 1 \mid A = 0) = \Pr(D = 1 \mid A = 1)
+$$
+
+* (We made it!)
 
 ## Baby Steps: A Less Busy Confusion Matrix {.title-09 .crunch-title .smaller}
 

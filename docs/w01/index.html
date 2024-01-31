@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.4">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jeff Jacobs">
 <meta name="dcterms.date" content="2024-01-17">
 
-<title>DSAN 5450 - Week 1: Introduction to the Course</title>
+<title>DSAN 5450 – Week 1: Introduction to the Course</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,7 +24,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -60,6 +60,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -78,7 +79,7 @@ div.csl-indent {
 }</style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -103,7 +104,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -112,14 +119,14 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
         <script type="text/javascript">
         window.PlotlyConfig = {MathJaxConfig: 'local'};
@@ -147,6 +154,33 @@ div.csl-indent {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="../styles.css">
 </head>
 
@@ -156,12 +190,12 @@ div.csl-indent {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../w01/index.html">Week 1: Jan 17</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../w01/index.html">Week 1: Jan 17</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
@@ -171,7 +205,7 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">DSAN 5450: Data Ethics and Policy</a> 
@@ -261,7 +295,7 @@ div.csl-indent {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -343,12 +377,12 @@ div.csl-indent {
     <div class="quarto-title-meta-contents">
     <p class="author">Jeff Jacobs </p>
   </div>
-    <div class="quarto-title-meta-contents">
+  <div class="quarto-title-meta-contents">
         <p class="affiliation">
             <a href="mailto:jj1088@georgetown.edu" target="_blank"><code>jj1088@georgetown.edu</code></a>
           </p>
       </div>
-    </div>
+  </div>
 
 <div class="quarto-title-meta">
 
@@ -364,7 +398,9 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <center>
 <a class="h2" href="./slides.html" target="_blank">Open slides in new window →</a>
@@ -372,7 +408,7 @@ div.csl-indent {
 <section id="who-am-i-why-is-georgetown-having-me-teach-this" class="level1" data-stack-name="Intro">
 <h1 data-stack-name="Intro">Who Am I? Why Is Georgetown Having Me Teach This?</h1>
 <div class="hidden">
-<div class="cell" data-execution_count="1">
+<div id="7bf02371" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>cb_palette <span class="op">=</span> [</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>,</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"#F0E442"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#D55E00"</span>,</span>
@@ -388,7 +424,7 @@ div.csl-indent {
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/jj_dc_map.png" class="img-fluid figure-img"></p>
+<p><img src="images/jj_dc_map.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 </section>
@@ -416,13 +452,16 @@ div.csl-indent {
 <p><em>“Our Word is Our Weapon”: Text-Analyzing Wars of Ideas from the French Revolution to the First Intifada</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/diss.png" class="img-fluid figure-img"></p>
+<p><img src="images/diss.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 </section>
 <section id="why-is-georgetown-having-me-teach-this" class="level2 smaller title-09 crunch-title crunch-ul crunch-quarto-layout-panel">
 <h2 class="smaller title-09 crunch-title crunch-ul crunch-quarto-layout-panel anchored" data-anchor-id="why-is-georgetown-having-me-teach-this">Why Is Georgetown Having Me Teach This?</h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]" data-layout-align="center">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="why-background-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <ul>
@@ -431,10 +470,12 @@ div.csl-indent {
 <li>Pol philosophers distinguish “ancients” and “moderns” based on a crucial <strong>shift in perspective</strong>: ancients sought perfection, while <span class="citation" data-cites="rousseau_social_1762">Rousseau (<a href="#ref-rousseau_social_1762" role="doc-biblioref">1762</a>)</span> “took men [sic] as they are, and laws as they could be”.</li>
 </ul>
 </div>
-<div id="fig-background-right" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
-<figure class="figure">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-background-right" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-background-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <center>
-<div class="cell" data-align="center" data-execution_count="2">
+<div id="cell-bg-sunburst" class="cell" data-align="center" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.io <span class="im">as</span> pio</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>pio.renderers.default <span class="op">=</span> <span class="st">"notebook"</span></span>
@@ -459,10 +500,9 @@ div.csl-indent {
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>fig.update_layout(margin <span class="op">=</span> <span class="bu">dict</span>(t<span class="op">=</span><span class="dv">0</span>, l<span class="op">=</span><span class="dv">0</span>, r<span class="op">=</span><span class="dv">0</span>, b<span class="op">=</span><span class="dv">0</span>))</span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div id="bg-sunburst" class="cell-output cell-output-display">
-
-<div>                            <div id="5c50f32e-d237-40ec-a708-d02deb92a85e" class="plotly-graph-div" style="height:400px; width:450px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("5c50f32e-d237-40ec-a708-d02deb92a85e")) {                    Plotly.newPlot(                        "5c50f32e-d237-40ec-a708-d02deb92a85e",                        [{"branchvalues":"total","customdata":[["Quant"],["Quant"],["Social Sci"],["Social Sci"],["Humanities"],["Humanities"],["Quant"],["Social Sci"]],"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"ids":["Quant\u002fMath\u003cbr\u003e(BS)","Quant\u002fCS\u003cbr\u003e(BS,MS)","Social Sci\u002fEcon\u003cbr\u003e(BS+Job)","Social Sci\u002fPol Econ\u003cbr\u003e(PhD Pt 2)","Humanities\u002fPol Phil\u003cbr\u003e(PhD Pt 1)","Humanities","Quant","Social Sci"],"labels":["Math\u003cbr\u003e(BS)","CS\u003cbr\u003e(BS,MS)","Econ\u003cbr\u003e(BS+Job)","Pol Econ\u003cbr\u003e(PhD Pt 2)","Pol Phil\u003cbr\u003e(PhD Pt 1)","Humanities","Quant","Social Sci"],"marker":{"colors":["#E69F00","#E69F00","#009E73","#009E73","#56B4E9","#56B4E9","#E69F00","#009E73"]},"name":"","parents":["Quant","Quant","Social Sci","Social Sci","Humanities","","",""],"values":[4,6,6,5,3,3,10,11],"type":"sunburst","hoverinfo":"skip"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"legend":{"tracegroupgap":0},"margin":{"t":0,"l":0,"r":0,"b":0},"height":400,"width":450},                        {"responsive": true}                    ).then(function(){
+<div>                            <div id="52c50629-ae9e-405d-88e5-a4bbfa19c7ed" class="plotly-graph-div" style="height:400px; width:450px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("52c50629-ae9e-405d-88e5-a4bbfa19c7ed")) {                    Plotly.newPlot(                        "52c50629-ae9e-405d-88e5-a4bbfa19c7ed",                        [{"branchvalues":"total","customdata":[["Quant"],["Quant"],["Social Sci"],["Social Sci"],["Humanities"],["Humanities"],["Quant"],["Social Sci"]],"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"ids":["Quant\u002fMath\u003cbr\u003e(BS)","Quant\u002fCS\u003cbr\u003e(BS,MS)","Social Sci\u002fEcon\u003cbr\u003e(BS+Job)","Social Sci\u002fPol Econ\u003cbr\u003e(PhD Pt 2)","Humanities\u002fPol Phil\u003cbr\u003e(PhD Pt 1)","Humanities","Quant","Social Sci"],"labels":["Math\u003cbr\u003e(BS)","CS\u003cbr\u003e(BS,MS)","Econ\u003cbr\u003e(BS+Job)","Pol Econ\u003cbr\u003e(PhD Pt 2)","Pol Phil\u003cbr\u003e(PhD Pt 1)","Humanities","Quant","Social Sci"],"marker":{"colors":["#E69F00","#E69F00","#009E73","#009E73","#56B4E9","#56B4E9","#E69F00","#009E73"]},"name":"","parents":["Quant","Quant","Social Sci","Social Sci","Humanities","","",""],"values":[4,6,6,5,3,3,10,11],"type":"sunburst","hoverinfo":"skip"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"legend":{"tracegroupgap":0},"height":400,"width":450,"margin":{"t":0,"l":0,"r":0,"b":0}},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('5c50f32e-d237-40ec-a708-d02deb92a85e');
+var gd = document.getElementById('52c50629-ae9e-405d-88e5-a4bbfa19c7ed');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -488,8 +528,12 @@ if (outputEl) {{
 </div>
 </div>
 </center>
-<figcaption class="figure-caption">Figure&nbsp;1: Years spent questing in various dungeons of academia</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-background-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Years spent questing in various dungeons of academia
+</figcaption>
 </figure>
+</div>
 </div>
 </div>
 </div>
@@ -502,15 +546,18 @@ if (outputEl) {{
 <h2 class="smaller crunch-title anchored" data-anchor-id="dialectics">Dialectics</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/angela_davis.webp" class="img-fluid figure-img"></p>
+<p><img src="images/angela_davis.webp" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 </section>
 <section id="my-backgroundbiases" class="level2 smaller crunch-title crunch-ul crunch-quarto-layout-figure crunch-quarto-figure">
 <h2 class="smaller crunch-title crunch-ul crunch-quarto-layout-figure crunch-quarto-figure anchored" data-anchor-id="my-backgroundbiases">My Background/Biases</h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[4,3]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div id="biases-left" class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: center;">
+<div id="biases-left" class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: flex-start;">
 <ul>
 <li>Raised in religious Jewish, right-wing (Revisionist Zionist) Republican environment</li>
 <li>“Encouraged” to emigrate to Israel for IDF service, but after learning history I renounced citizenship etc., family no longer big fans of me (Traumatic and scary to admit, ngl 🙈)</li>
@@ -521,7 +568,7 @@ if (outputEl) {{
 <div id="biases-right" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/land_map.png" class="img-fluid figure-img" width="420"></p>
+<p><img src="images/land_map.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="420"></p>
 </figure>
 </div>
 </div>
@@ -530,24 +577,27 @@ if (outputEl) {{
 </section>
 <section id="on-the-one-hand" class="level2 smaller crunch-title crunch-quarto-layout-panel crunch-images crunch-quarto-figure">
 <h2 class="smaller crunch-title crunch-quarto-layout-panel crunch-images crunch-quarto-figure anchored" data-anchor-id="on-the-one-hand">On the One Hand…</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
 <div id="emails-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/JJHATESPREADER.jpg" class="img-fluid figure-img" width="240"></p>
+<p><img src="images/JJHATESPREADER.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="240"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/columbia_email.png" class="img-fluid figure-img" width="300"></p>
+<p><img src="images/columbia_email.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300"></p>
 </figure>
 </div>
 </div>
 <div id="emails-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/palestine_legal_crop.png" class="img-fluid figure-img" width="440"></p>
+<p><img src="images/palestine_legal_crop.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="440"></p>
 </figure>
 </div>
 </div>
@@ -556,19 +606,22 @@ if (outputEl) {{
 </section>
 <section id="on-the-other-hand" class="level2 smaller crunch-title crunch-quarto-layout-panel">
 <h2 class="smaller crunch-title crunch-quarto-layout-panel anchored" data-anchor-id="on-the-other-hand">On the Other Hand…</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/2019-07-28 15.26.49-1.jpg" class="img-fluid figure-img" width="400"></p>
+<p><img src="images/2019-07-28 15.26.49-1.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/aya_and_leen_crop.jpeg" class="img-fluid figure-img" width="340"></p>
+<p><img src="images/aya_and_leen_crop.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="340"></p>
 </figure>
 </div>
 </div>
@@ -583,20 +636,23 @@ if (outputEl) {{
 </section>
 <section id="rules-of-thumb" class="level2 crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-images crunch-figcaption crunch-li-4 crunch-figures">
 <h2 class="crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-images crunch-figcaption crunch-li-4 crunch-figures anchored" data-anchor-id="rules-of-thumb">Rules of Thumb</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="approach-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="approach-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Ask questions about <strong>power</strong>, about <strong>inequities</strong> and especially about <strong>structures</strong> that give rise to them!</li>
 <li>“Philosophers have hitherto only tried to <em>understand</em> the world; the point, however, is to <em>change</em> it.” <span class="citation" data-cites="marx_thesen_1845">(<a href="#ref-marx_thesen_1845" role="doc-biblioref">Marx 1845</a>)</span></li>
 <li>Dialectical implication: the more we understand it the better we’ll be at changing it</li>
 </ul>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/camara3.jpg" class="img-fluid figure-img" width="320"></p>
-<figcaption class="figure-caption"><a href="https://www.rlmartstudio.com/product/paradox/" target="_blank">Ricardo Levins Morales Art Studio</a> / My office</figcaption>
+<p><img src="images/camara3.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="320"></p>
+<figcaption><a href="https://www.rlmartstudio.com/product/paradox/" target="_blank">Ricardo Levins Morales Art Studio</a> / My office</figcaption>
 </figure>
 </div>
 </div>
@@ -615,9 +671,12 @@ if (outputEl) {{
 </div>
 <section id="axiomatics" class="level2 smaller crunch-title crunch-images crunch-figcaption crunch-quarto-layout-panel crunch-quarto-figure">
 <h2 class="smaller crunch-title crunch-images crunch-figcaption crunch-quarto-layout-panel crunch-quarto-figure anchored" data-anchor-id="axiomatics">Axiomatics</h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div id="axioms-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="axioms-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <!-- * In the field of math before the 20th century (and in our general understanding of math today), math was (is) a domain dealing with **truths**
 * Thanks to figures like Georg Cantor, David Hilbert, and especially Bertrand Russell and Alfred North Whitehead, mathematicians no longer believe that theorems of mathematics are "true" in an **absolute sense** -->
 <ul>
@@ -634,11 +693,11 @@ if (outputEl) {{
 </ul>
 <!-- * That is: mathematicians today recognize that **we cannot prove non-implicational statements**! We will never be able to prove an (atomic) statement $q$, only implicational statements: $p \implies q$ for some **axiom(s)** $q$. -->
 </div>
-<div id="axioms-book" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="axioms-book" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/axiomatics.jpg" class="img-fluid figure-img" width="360"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="steingart_axiomatics_2023">Steingart (<a href="#ref-steingart_axiomatics_2023" role="doc-biblioref">2023</a>)</span></figcaption>
+<p><img src="images/axiomatics.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="360"></p>
+<figcaption><span class="citation" data-cites="steingart_axiomatics_2023">Steingart (<a href="#ref-steingart_axiomatics_2023" role="doc-biblioref">2023</a>)</span></figcaption>
 </figure>
 </div>
 </div>
@@ -647,19 +706,22 @@ if (outputEl) {{
 </section>
 <section id="example-1-1-2" class="level2">
 <h2 class="anchored" data-anchor-id="example-1-1-2">Example: <span class="math inline">\(1 + 1 = 2\)</span></h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div id="one-one-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="one-one-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>How it’s taught: this is a <strong>rule</strong>, and if you <strong>don’t follow it</strong> you will be <strong>banished to eternal hellfire</strong></li>
 <li>How it’s proved: <span class="math inline">\(ZFC \implies [1 + 1 = 2]\)</span>, where <span class="math inline">\(ZFC\)</span> stands for the <strong><a href="https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory" target="_blank">Zermelo-Fraenkel Axioms with the Axiom of Choice</a>!</strong></li>
 </ul>
 </div>
-<div id="one-one-image" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="one-one-image" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/principia.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="whitehead_principia_1910">Whitehead and Russell (<a href="#ref-whitehead_principia_1910" role="doc-biblioref">1910</a>)</span>, p.&nbsp;83. See <a href="https://archive.org/details/dli.ernet.285563/page/83/mode/2up" target="_blank">here</a> for page in context</figcaption>
+<figcaption><span class="citation" data-cites="whitehead_principia_1910">Whitehead and Russell (<a href="#ref-whitehead_principia_1910" role="doc-biblioref">1910</a>)</span>, p.&nbsp;83. See <a href="https://archive.org/details/dli.ernet.285563/page/83/mode/2up" target="_blank">here</a> for page in context</figcaption>
 </figure>
 </div>
 </div>
@@ -712,8 +774,11 @@ if (outputEl) {{
 <li><strong>Euclid’s Fifth Postulate</strong> <span class="math inline">\(P_5\)</span>: Given a line and a point not on it, exactly one line parallel to the given line can be drawn through the point.</li>
 </ul>
 <!-- Technically, when phrased in this way, this axiom is called <a href='https://en.wikipedia.org/wiki/Playfair%27s_axiom' target='_blank'>Playfair's Axiom</a>. But it is **logically equivalent** to Euclid's Fifth Postulate! -->
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]" data-layout-align="center">
+<div class="quarto-layout-row">
 <div id="euclidean" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <center>
 <span class="math inline">\(P_5 \implies T = 180^\circ\)</span>
@@ -732,7 +797,10 @@ if (outputEl) {{
 </div>
 </div>
 </div>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img src="images/playfair.png" class="img-fluid"></p>
@@ -740,7 +808,7 @@ if (outputEl) {{
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/geodesicsOnSphere.png" class="img-fluid figure-img" width="360"></p>
+<p><img src="images/geodesicsOnSphere.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="360"></p>
 </figure>
 </div>
 </div>
@@ -754,9 +822,12 @@ if (outputEl) {{
 <li>Suddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds</li>
 <li>Do you give the hostage-taker the pie?</li>
 </ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="conseqentialism" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="conseqentialism" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <center>
 <strong>Consequentialist Ethics <span class="math inline">\(\implies\)</span> Yes</strong>
 </center>
@@ -766,7 +837,7 @@ if (outputEl) {{
 <li><em>(Ex: <strong>Utilitarianism</strong>, associated with British philosopher <strong>Jeremy Bentham</strong>)</em></li>
 </ul>
 </div>
-<div id="deontology" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="deontology" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <center>
 <strong>Deontological Ethics <span class="math inline">\(\implies\)</span> No</strong>
 </center>
@@ -784,7 +855,10 @@ if (outputEl) {{
 <h1 data-stack-name="Ethical Arguments">Making and Evaluating Ethical Arguments</h1>
 <section id="descriptive-vs.-normative" class="level2 smaller crunch-title crunch-quarto-layout-panel">
 <h2 class="smaller crunch-title crunch-quarto-layout-panel anchored" data-anchor-id="descriptive-vs.-normative">Descriptive vs.&nbsp;Normative</h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]" data-layout-align="center">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="norm-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <center>
@@ -797,7 +871,7 @@ if (outputEl) {{
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/bin_laden.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="binladen_messages_2005">bin Laden (<a href="#ref-binladen_messages_2005" role="doc-biblioref">2005</a>)</span></figcaption>
+<figcaption><span class="citation" data-cites="binladen_messages_2005">bin Laden (<a href="#ref-binladen_messages_2005" role="doc-biblioref">2005</a>)</span></figcaption>
 </figure>
 </div>
 </div>
@@ -861,20 +935,23 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 </section>
 <section id="what-happens-when-we-confuse-the-two" class="level2 crunch-title title-08 crunch-quarto-layout-panel crunch-quarto-figure">
 <h2 class="crunch-title title-08 crunch-quarto-layout-panel crunch-quarto-figure anchored" data-anchor-id="what-happens-when-we-confuse-the-two">What Happens When We Confuse The Two?</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="interpretation" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="interpretation" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Makes it impossible to “cross the boundary” between your own and others’ beliefs</li>
 <li><em>Collective welfare</em>: Bad on its own terms (see: wars, racism, etc.)</li>
 <li><em>Self-interest</em>: Prevents us from <strong>convincing</strong> other people of our arguments</li>
 </ul>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/geertz.jpg" class="img-fluid figure-img" width="360"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="geertz_interpretation_1973">Geertz (<a href="#ref-geertz_interpretation_1973" role="doc-biblioref">1973</a>)</span></figcaption>
+<p><img src="images/geertz.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="360"></p>
+<figcaption><span class="citation" data-cites="geertz_interpretation_1973">Geertz (<a href="#ref-geertz_interpretation_1973" role="doc-biblioref">1973</a>)</span></figcaption>
 </figure>
 </div>
 </div>
@@ -883,9 +960,12 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 </section>
 <section id="collective-vs.-self-interest" class="level2 smaller crunch-quarto-layout-panel crunch-title crunch-quarto-figure">
 <h2 class="smaller crunch-quarto-layout-panel crunch-title crunch-quarto-figure anchored" data-anchor-id="collective-vs.-self-interest">Collective vs.&nbsp;Self-Interest</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="collective-action" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="collective-action" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Good for collection of people <span class="math inline">\(\; \nimplies\)</span> good for each individual person! (😰)</li>
 <li><span class="math inline">\(p\)</span> = <em>Unions improve everyone’s workplace conditions, whether or not they pay dues</em></li>
@@ -895,11 +975,11 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 <li><em>(Think also about how this applies to <strong>climate change policy</strong>)</em> 🤔</li>
 </ul>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/olson.jpg" class="img-fluid figure-img" width="350"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="olson_logic_1965">Olson (<a href="#ref-olson_logic_1965" role="doc-biblioref">1965</a>)</span></figcaption>
+<p><img src="images/olson.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="350"></p>
+<figcaption><span class="citation" data-cites="olson_logic_1965">Olson (<a href="#ref-olson_logic_1965" role="doc-biblioref">1965</a>)</span></figcaption>
 </figure>
 </div>
 </div>
@@ -908,7 +988,10 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 </section>
 <section id="modeling-individual-vs.-societal-outcomes" class="level2 smaller title-09 crunch-title crunch-quarto-figure">
 <h2 class="smaller title-09 crunch-title crunch-quarto-figure anchored" data-anchor-id="modeling-individual-vs.-societal-outcomes">Modeling Individual vs.&nbsp;Societal Outcomes</h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="individual-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <ul>
@@ -916,16 +999,16 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/schelling.svg" class="img-fluid figure-img" width="460"></p>
+<p><img src="images/schelling.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="460"></p>
 </figure>
 </div>
 <p><span class="math inline">\(\implies\)</span> <em>Social Outcome</em>: No Union</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/schelling.jpeg" class="img-fluid figure-img" width="340"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="schelling_micromotives_1978">Schelling (<a href="#ref-schelling_micromotives_1978" role="doc-biblioref">1978</a>)</span></figcaption>
+<p><img src="images/schelling.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="340"></p>
+<figcaption><span class="citation" data-cites="schelling_micromotives_1978">Schelling (<a href="#ref-schelling_micromotives_1978" role="doc-biblioref">1978</a>)</span></figcaption>
 </figure>
 </div>
 </div>
@@ -934,9 +1017,12 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 </section>
 <section id="takeaway-for-policy-whitepapers" class="level2">
 <h2 class="anchored" data-anchor-id="takeaway-for-policy-whitepapers">Takeaway for Policy Whitepapers</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="takeaway-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="takeaway-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>You <em>cannot</em> (just) say, “doing <span class="math inline">\(x\)</span> will be better for society”</li>
 <li>You must <em>also</em> justify benefits to individuals, or at minimum, the individual organization and its stakeholders!</li>
@@ -946,7 +1032,7 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/commie.jpg" class="img-fluid figure-img"></p>
+<p><img src="images/commie.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 </div>
@@ -969,26 +1055,29 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/missing-datasets.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">The <a href="https://github.com/MimiOnuoha/missing-datasets" target="_blank">Library of Missing Datasets</a>. From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#ref-dignazio_data_2020" role="doc-biblioref">2020</a>)</span></figcaption>
+<p><img src="images/missing-datasets.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figcaption>The <a href="https://github.com/MimiOnuoha/missing-datasets" target="_blank">Library of Missing Datasets</a>. From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#ref-dignazio_data_2020" role="doc-biblioref">2020</a>)</span></figcaption>
 </figure>
 </div>
 </section>
 <section id="example-measuring-freedom-and-human-rights" class="level2">
 <h2 class="anchored" data-anchor-id="example-measuring-freedom-and-human-rights">Example: Measuring “Freedom” and “Human Rights”</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/freedom_house_funding.jpeg" class="img-fluid figure-img"></p>
+<p><img src="images/freedom_house_funding.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/state_dept_human_rights.jpeg" class="img-fluid figure-img"></p>
+<p><img src="images/state_dept_human_rights.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 </div>
@@ -997,9 +1086,12 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 </section>
 <section id="operationalization" class="level2 smaller crunch-title crunch-li">
 <h2 class="smaller crunch-title crunch-li anchored" data-anchor-id="operationalization">Operationalization</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="oper-text" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[3,2]">
+<div class="quarto-layout-row">
+<div id="oper-text" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
 <ul>
 <li>Think about claims commonly made on the basis of “data”:
 <ul>
@@ -1013,11 +1105,11 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 <div class="quarto-video"><video id="video_shortcode_videojs_video1" height="300" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="https://jpj.georgetown.domains/dsan5450-scratch/huey.mp4"></video></div>
 </center>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/mismeasuring.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="stiglitz_mismeasuring_2010">Stiglitz, Sen, and Fitoussi (<a href="#ref-stiglitz_mismeasuring_2010" role="doc-biblioref">2010</a>)</span></figcaption>
+<p><img src="images/mismeasuring.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figcaption><span class="citation" data-cites="stiglitz_mismeasuring_2010">Stiglitz, Sen, and Fitoussi (<a href="#ref-stiglitz_mismeasuring_2010" role="doc-biblioref">2010</a>)</span></figcaption>
 </figure>
 </div>
 </div>
@@ -1033,33 +1125,36 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/china_india.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="dreze_china_1991">Drèze and Sen (<a href="#ref-dreze_china_1991" role="doc-biblioref">1991</a>)</span></figcaption>
+<p><img src="images/china_india.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figcaption><span class="citation" data-cites="dreze_china_1991">Drèze and Sen (<a href="#ref-dreze_china_1991" role="doc-biblioref">1991</a>)</span></figcaption>
 </figure>
 </div>
 </section>
 <section id="implementation" class="level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption crunch-images">
 <h2 class="smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption crunch-images anchored" data-anchor-id="implementation">Implementation</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clery.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#ref-dignazio_data_2020" role="doc-biblioref">2020</a>)</span>, Ch. 6 (<a href="https://www.insidehighered.com/news/2014/07/17/colleges-often-win-reduction-fines-federal-campus-safety-violations" target="_blank">see also</a>)</figcaption>
+<p><img src="images/clery.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figcaption>From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#ref-dignazio_data_2020" role="doc-biblioref">2020</a>)</span>, Ch. 6 (<a href="https://www.insidehighered.com/news/2014/07/17/colleges-often-win-reduction-fines-federal-campus-safety-violations" target="_blank">see also</a>)</figcaption>
 </figure>
 </div>
 </div>
 <div id="implementation-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/arresting_citizenship.jpeg" class="img-fluid figure-img" width="410"></p>
+<p><img src="images/arresting_citizenship.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="410"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/weaver_fig62.jpeg" class="img-fluid figure-img" width="410"></p>
-<figcaption class="figure-caption">From <span class="citation" data-cites="lerman_arresting_2014">Lerman and Weaver (<a href="#ref-lerman_arresting_2014" role="doc-biblioref">2014</a>)</span></figcaption>
+<p><img src="images/weaver_fig62.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="410"></p>
+<figcaption>From <span class="citation" data-cites="lerman_arresting_2014">Lerman and Weaver (<a href="#ref-lerman_arresting_2014" role="doc-biblioref">2014</a>)</span></figcaption>
 </figure>
 </div>
 </div>
@@ -1068,28 +1163,41 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 </section>
 <section id="fairness" class="level2 smaller crunch-title crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption">
 <h2 class="smaller crunch-title crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption anchored" data-anchor-id="fairness">Fairness… 🧐</h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[4,3]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div id="fig-fairness-left" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 57.1%;justify-content: center;">
-<figure class="figure">
+<div class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: flex-start;">
+<div id="fig-fairness-left" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-fairness-left-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/lily_hu_1.svg" class="img-fluid figure-img" width="350"></p>
+<p><img src="images/lily_hu_1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="350"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/lily_hu_2.svg" class="img-fluid figure-img" width="350"></p>
+<p><img src="images/lily_hu_2.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="350"></p>
 </figure>
 </div>
-<figcaption class="figure-caption">Figure&nbsp;2: From Lily Hu, <a href="https://www.phenomenalworld.org/analysis/direct-effects/" target="_blank"><em>Direct Effects: How Should We Measure Racial Discrimination?</em></a>, <em>Phenomenal World</em>, 25 September 2020</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fairness-left-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: From Lily Hu, <a href="https://www.phenomenalworld.org/analysis/direct-effects/" target="_blank"><em>Direct Effects: How Should We Measure Racial Discrimination?</em></a>, <em>Phenomenal World</em>, 25 September 2020
+</figcaption>
 </figure>
 </div>
-<div id="fairness-right" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: center;">
-<div id="fig-kasy" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/kasy_abebe.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;3: From <span class="citation" data-cites="kasy_fairness_2021">Kasy and Abebe (<a href="#ref-kasy_fairness_2021" role="doc-biblioref">2021</a>)</span></figcaption>
+</div>
+<div id="fairness-right" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: flex-start;">
+<div id="fig-kasy" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-kasy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/kasy_abebe.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kasy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: From <span class="citation" data-cites="kasy_fairness_2021">Kasy and Abebe (<a href="#ref-kasy_fairness_2021" role="doc-biblioref">2021</a>)</span>
+</figcaption>
 </figure>
 </div>
 </div>
@@ -1100,8 +1208,8 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 <h2 class="smaller crunch-title anchored" data-anchor-id="and-inverse-fairness">…And INVERSE Fairness 🤯</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/inverse_fairness.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">From <em>Machine Learning What Policymakers Value</em> <span class="citation" data-cites="bjorkegren_machine_2022">(<a href="#ref-bjorkegren_machine_2022" role="doc-biblioref">Björkegren, Blumenstock, and Knight 2022</a>)</span></figcaption>
+<p><img src="images/inverse_fairness.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figcaption>From <em>Machine Learning What Policymakers Value</em> <span class="citation" data-cites="bjorkegren_machine_2022">(<a href="#ref-bjorkegren_machine_2022" role="doc-biblioref">Björkegren, Blumenstock, and Knight 2022</a>)</span></figcaption>
 </figure>
 </div>
 </section>
@@ -1109,43 +1217,46 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 <section id="ethical-issues-in-applying-data-science" class="level1 title-09 not-title-slide crunch-quarto-layout-panel crunch-quarto-figure" data-stack-name="Applications">
 <h1 class="title-09 not-title-slide crunch-quarto-layout-panel crunch-quarto-figure" data-stack-name="Applications">Ethical Issues in <em>Applying</em> Data Science</h1>
 <center>
-<img src="images/airobot.jpeg" class="img-fluid" data-fig-align="center" width="800">
+<img src="images/airobot.jpeg" class="img-fluid quarto-figure quarto-figure-center" width="800">
 </center>
 <section id="facial-recognition-algorithms" class="level2 crunch-title smaller crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption">
 <h2 class="crunch-title smaller crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption anchored" data-anchor-id="facial-recognition-algorithms">Facial Recognition Algorithms</h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[[1,1],[1,1]]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/facial-recognition.webp" class="img-fluid figure-img" width="400"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="facia.ai_facial_2023">Facia.ai (<a href="#ref-facia.ai_facial_2023" role="doc-biblioref">2023</a>)</span></figcaption>
+<p><img src="images/facial-recognition.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<figcaption><span class="citation" data-cites="facia.ai_facial_2023">Facia.ai (<a href="#ref-facia.ai_facial_2023" role="doc-biblioref">2023</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/wellcome_jewish_type_crop.jpeg" class="img-fluid figure-img" width="360"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="wellcomecollection_composite_1890">Wellcome Collection (<a href="#ref-wellcomecollection_composite_1890" role="doc-biblioref">1890</a>)</span></figcaption>
+<p><img src="images/wellcome_jewish_type_crop.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="360"></p>
+<figcaption><span class="citation" data-cites="wellcomecollection_composite_1890">Wellcome Collection (<a href="#ref-wellcomecollection_composite_1890" role="doc-biblioref">1890</a>)</span></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/pixel-face-unlock.webp" class="img-fluid figure-img" width="400"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="ouz_google_2023">Ouz (<a href="#ref-ouz_google_2023" role="doc-biblioref">2023</a>)</span></figcaption>
+<p><img src="images/pixel-face-unlock.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<figcaption><span class="citation" data-cites="ouz_google_2023">Ouz (<a href="#ref-ouz_google_2023" role="doc-biblioref">2023</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/deep_learning_gay_detection_crop.jpeg" class="img-fluid figure-img" width="360"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="wang_deep_2018">Wang and Kosinski (<a href="#ref-wang_deep_2018" role="doc-biblioref">2018</a>)</span></figcaption>
+<p><img src="images/deep_learning_gay_detection_crop.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="360"></p>
+<figcaption><span class="citation" data-cites="wang_deep_2018">Wang and Kosinski (<a href="#ref-wang_deep_2018" role="doc-biblioref">2018</a>)</span></figcaption>
 </figure>
 </div>
 </div>
@@ -1154,42 +1265,58 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 </section>
 <section id="large-language-models" class="level2 crunch-title smaller">
 <h2 class="crunch-title smaller anchored" data-anchor-id="large-language-models">Large Language Models</h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[2,3]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
-<div id="fig-pronouns" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="images/pronouns.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;4: From <span class="citation" data-cites="schiebinger_machine_2020">Schiebinger et al. (<a href="#ref-schiebinger_machine_2020" role="doc-biblioref">2020</a>)</span></figcaption>
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
+<div id="fig-pronouns" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pronouns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/pronouns.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pronouns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: From <span class="citation" data-cites="schiebinger_machine_2020">Schiebinger et al. (<a href="#ref-schiebinger_machine_2020" role="doc-biblioref">2020</a>)</span>
+</figcaption>
 </figure>
 </div>
 </div>
-<div id="fig-embedding-bias-right" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 60.0%;justify-content: center;">
-<figure class="figure">
-<p><img src="images/neutralizing.png" class="img-fluid figure-img" data-fig-align="center"> <img src="images/embeddings-equalizing.png" class="img-fluid figure-img" data-fig-align="center"></p>
-<figcaption class="figure-caption">Figure&nbsp;5: From DeepLearning.AI’s <a href="https://www.coursera.org/lecture/nlp-sequence-models/debiasing-word-embeddings-zHASj" target="_blank">Deep Learning course</a></figcaption>
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<div id="fig-embedding-bias-right" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-embedding-bias-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/neutralizing.png" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-embedding-bias-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: From DeepLearning.AI’s <a href="https://www.coursera.org/lecture/nlp-sequence-models/debiasing-word-embeddings-zHASj" target="_blank">Deep Learning course</a>
+</figcaption>
 </figure>
+</div>
 </div>
 </div>
 </div>
 </section>
 <section id="military-and-police-applications-of-ai" class="level2 crunch-title smaller">
 <h2 class="crunch-title smaller anchored" data-anchor-id="military-and-police-applications-of-ai">Military and Police Applications of AI</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/doroob.jpeg" class="img-fluid figure-img" width="410"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="ayyub_app_2019">Ayyub (<a href="#ref-ayyub_app_2019" role="doc-biblioref">2019</a>)</span></figcaption>
+<p><img src="images/doroob.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="410"></p>
+<figcaption><span class="citation" data-cites="ayyub_app_2019">Ayyub (<a href="#ref-ayyub_app_2019" role="doc-biblioref">2019</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/israel-ai.jpeg" class="img-fluid figure-img" width="300"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="mcneil_israel_2022">McNeil (<a href="#ref-mcneil_israel_2022" role="doc-biblioref">2022</a>)</span></figcaption>
+<p><img src="images/israel-ai.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300"></p>
+<figcaption><span class="citation" data-cites="mcneil_israel_2022">McNeil (<a href="#ref-mcneil_israel_2022" role="doc-biblioref">2022</a>)</span></figcaption>
 </figure>
 </div>
 </div>
@@ -1206,31 +1333,34 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 </ul>
 <section id="from-week-7-onwards-you-work-at-a-think-tank" class="level2 smaller crunch-title title-11 crunch-images crunch-quarto-figure">
 <h2 class="smaller crunch-title title-11 crunch-images crunch-quarto-figure anchored" data-anchor-id="from-week-7-onwards-you-work-at-a-think-tank">From Week 7 Onwards, You Work At A Think Tank</h2>
-<div class="quarto-layout-panel">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[3,4]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="think-tank-left" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/aei_crop.jpeg" class="img-fluid figure-img" width="360"></p>
+<p><img src="images/aei_crop.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="360"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/aei2_crop.jpeg" class="img-fluid figure-img" width="360"></p>
+<p><img src="images/aei2_crop.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="360"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/morozov2.jpeg" class="img-fluid figure-img" width="360"></p>
-<figcaption class="figure-caption"><span class="citation" data-cites="morozov_socialize_2015">Morozov (<a href="#ref-morozov_socialize_2015" role="doc-biblioref">2015</a>)</span></figcaption>
+<p><img src="images/morozov2.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="360"></p>
+<figcaption><span class="citation" data-cites="morozov_socialize_2015">Morozov (<a href="#ref-morozov_socialize_2015" role="doc-biblioref">2015</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div id="think-tank-right" class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: center;">
+<div id="think-tank-right" class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/techtopus.jpeg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">From <span class="citation" data-cites="ames_techtopus_2014">Ames (<a href="#ref-ames_techtopus_2014" role="doc-biblioref">2014</a>)</span></figcaption>
+<p><img src="images/techtopus.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figcaption>From <span class="citation" data-cites="ames_techtopus_2014">Ames (<a href="#ref-ames_techtopus_2014" role="doc-biblioref">2014</a>)</span></figcaption>
 </figure>
 </div>
 </div>
@@ -1239,7 +1369,7 @@ Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="h
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-ames_techtopus_2014" class="csl-entry" role="listitem">
 Ames, Mark. 2014. <span>“The <span>Techtopus</span>: <span>How Silicon Valley</span>’s Most Celebrated <span>CEOs</span> Conspired to Drive down 100,000 Tech Engineers’ Wages,”</span> January. <a href="http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/">http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/</a>.
 </div>
@@ -1402,10 +1532,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1415,8 +1544,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1429,6 +1567,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1472,6 +1729,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1497,6 +1755,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1558,6 +1842,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 <script>videojs(video_shortcode_videojs_video1);</script>
+
 
 
 

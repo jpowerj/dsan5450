@@ -9,10 +9,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.5.4">
 
   <meta name="author" content="Jeff Jacobs">
-  <title>DSAN 5450 - Week 3: (Descriptive) Fairness in AI</title>
+  <title>DSAN 5450 – Week 3: (Descriptive) Fairness in AI</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,10 +30,76 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -177,7 +243,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -341,6 +408,7 @@
       margin-right: 0; 
     }
   </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -384,20 +452,20 @@ Jeff Jacobs
 </section>
 <section id="ethics-of-eliciting-sensitive-linguistic-data" class="slide level2 smaller crunch-title title-12">
 <h2>Ethics of Eliciting Sensitive Linguistic Data</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div id="labov-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="labov-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/labov_interview.jpeg"></p>
+<p><img data-src="images/labov_interview.jpeg" class="quarto-figure quarto-figure-center"></p>
 <figcaption>From <span class="citation" data-cites="labov_language_2013">Labov (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span>, pg. 4</figcaption>
 </figure>
 </div>
 </div>
-<div id="labov-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="labov-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/parsley.jpeg"></p>
+<p><img data-src="images/parsley.jpeg" class="quarto-figure quarto-figure-center"></p>
 <figcaption>From “80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre”, <em>NPR Parallels</em>, 7 Oct 2017 <span class="citation" data-cites="bishop_80_2017">(<a href="#/references" role="doc-biblioref" onclick="">Bishop and Fernandez 2017</a>)</span></figcaption>
 </figure>
 </div>
@@ -406,7 +474,7 @@ Jeff Jacobs
 </div>
 </section></section>
 <section>
-<section id="recap-three-component-parts-of-machine-learning" class="title-slide slide level1 center">
+<section id="recap-three-component-parts-of-machine-learning" class="title-slide slide level1 center scrollable">
 <h1>(Recap) Three Component Parts of Machine Learning</h1>
 <ol type="1">
 <li><span class="cbg">A cool algorithm ✅</span></li>
@@ -416,28 +484,32 @@ Jeff Jacobs
 </section>
 <section id="part-3-the-training-data-bottleneck" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-figures crunch-quarto-figure title-12">
 <h2>Part 3: The “Training Data Bottleneck”</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/snorkel_1.svg"></p>
+<p><img data-src="images/snorkel_1.svg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
-<div id="snorkel-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="snorkel-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/snorkel_2.svg"></p>
+<p><img data-src="images/snorkel_2.svg" class="quarto-figure quarto-figure-center"></p>
 <figcaption>Snorkel.AI, <a href="assets/snorkel.pdf" target="_blank"><em>An Introduction to Snorkel and Data-Centric AI</em></a></figcaption>
 </figure>
 </div>
-<div id="fig-snorkel-quote" class="quarto-figure quarto-figure-center">
-<figure>
+<div id="fig-snorkel-quote" class="quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-snorkel-quote-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <blockquote>
 <p>With so much technical progress […] why is there so little real enterprise success? The answer all too often is that many enterprises continue to be <strong>bottlenecked</strong> by one key ingredient: the large amounts of <strong>labeled data</strong> [needed] to train these new systems.</p>
 </blockquote>
-<figcaption>Figure&nbsp;1: <em>ibid. (PS, if it seems like I’m picking on them: these are the ‘good guys’ IMO! W.r.t. foregrounding training data as labor)</em></figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-snorkel-quote-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <em>ibid. (PS, if it seems like I’m picking on them: these are the ‘good guys’ IMO! W.r.t. foregrounding training data as labor)</em>
+</figcaption>
 </figure>
 </div>
 </div>
@@ -446,27 +518,33 @@ Jeff Jacobs
 </section>
 <section id="human-labor" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption">
 <h2>Human Labor</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="fig-human-labor-left" class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
-<figure>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-human-labor-left" class="quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-human-labor-left-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/snorkel_human_labelers.jpg" width="450"></p>
+<p><img data-src="images/snorkel_human_labelers.jpg" class="quarto-figure quarto-figure-center" width="450"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/snorkel_training_data.jpg" width="450"></p>
+<p><img data-src="images/snorkel_training_data.jpg" class="quarto-figure quarto-figure-center" width="450"></p>
 </figure>
 </div>
-<figcaption>Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_QooA" target="_blank">“The Principles of Data-Centric AI Development by Alex Ratner”</a> (YouTube)</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-human-labor-left-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_QooA" target="_blank">“The Principles of Data-Centric AI Development by Alex Ratner”</a> (YouTube)
+</figcaption>
 </figure>
 </div>
-<div id="human-labor-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+</div>
+<div id="human-labor-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/ghost_work.jpg" width="360"></p>
+<p><img data-src="images/ghost_work.jpg" class="quarto-figure quarto-figure-center" width="360"></p>
 <figcaption><span class="citation" data-cites="gray_ghost_2019">Gray and Suri (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></figcaption>
 </figure>
 </div>
@@ -477,30 +555,30 @@ Jeff Jacobs
 <section id="computer-scientists-being-responsible-at-georgetown" class="slide level2 smaller crunch-title crunch-iframe title-09">
 <h2>Computer Scientists Being Responsible (At Georgetown!)</h2>
 
-<img data-src="images/dr_redmiles_homepage.jpeg" class="r-stretch quarto-figure-center"><p class="caption"><a href="" target="_blank">Dr.&nbsp;Redmiles’ homepage</a> (Since Quarto also freezes when I try to embed it…)</p><ul>
+<img data-src="images/dr_redmiles_homepage.jpeg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="" target="_blank">Dr.&nbsp;Redmiles’ homepage</a> (Since Quarto also freezes when I try to embed it…)</p><ul>
 <li><em>(PS… UMD undergrad CS class of 2013 extremely overrepresented here</em> 😜<em>)</em></li>
 </ul>
 </section>
 <section id="computer-scientists-being-responsible-at-georgetown-1" class="slide level2 smaller crunch-title crunch-iframe title-09">
 <h2>Computer Scientists Being Responsible (At Georgetown!)</h2>
 
-<img data-src="images/dr_redmiles_class.jpeg" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://gufaculty360.georgetown.edu/s/course-catalog/a1oHp00000GvwGnIAJ/cosc882001?id=003Hp00002jN3TsIAK" target="_blank">GU360 Course Page</a></p></section>
+<img data-src="images/dr_redmiles_class.jpeg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://gufaculty360.georgetown.edu/s/course-catalog/a1oHp00000GvwGnIAJ/cosc882001?id=003Hp00002jN3TsIAK" target="_blank">GU360 Course Page</a></p></section>
 <section id="so-what-comes-with-human-labels-human-biases" class="slide level2 smaller title-10 crunch-quarto-layout-panel crunch-quarto-figure crunch-title crunch-ul crunch-figcaption">
 <h2>So, What Comes With Human Labels? Human Biases!</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[2,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/imagenet_jezebel.jpg" width="660"></p>
+<p><img data-src="images/imagenet_jezebel.jpg" class="quarto-figure quarto-figure-center" width="660"></p>
 <figcaption><span class="citation" data-cites="crawford_excavating_2019">Crawford and Paglen (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/bolshevik.JPEG"></p>
+<p><img data-src="images/bolshevik.JPEG" class="quarto-figure quarto-figure-center"></p>
 <figcaption>Image tagged in ImageNet with the label <strong>“BOLSHEVIK”</strong>. From <span class="citation" data-cites="crawford_excavating_2019">Crawford and Paglen (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></figcaption>
 </figure>
 </div>
@@ -508,10 +586,10 @@ Jeff Jacobs
 </div>
 </div>
 </section>
-<section id="biases-in-our-brains-rightarrow-biases-in-our-models-rightarrow-material-effects" class="slide level2 smaller crunch-title title-08 crunch-p crunch-quarto-layout-panel crunch-ul">
+<section id="biases-in-our-brains-rightarrow-biases-in-our-models-rightarrow-material-effects" class="slide level2 smaller crunch-title title-08 crunch-p crunch-quarto-layout-panel crunch-ul scrollable">
 <h2>Biases In Our Brains <span class="math inline">\(\rightarrow\)</span> Biases in Our Models <span class="math inline">\(\rightarrow\)</span> Material Effects</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
 <div id="biases-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <ul>
 <li><strong>“Reification”</strong>: Pretentious word for an important phenomenon, whereby talking about something (e.g., race) <em>as if</em> it was real ends up leading to it <strong>becoming real</strong> (having real impacts on people’s lives)<sup>1</sup></li>
@@ -521,14 +599,14 @@ Jeff Jacobs
 </blockquote>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/permit_crop.jpeg"></p>
+<p><img data-src="images/permit_crop.jpeg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/passport.webp" width="380"></p>
+<p><img data-src="images/passport.webp" class="quarto-figure quarto-figure-center" width="380"></p>
 </figure>
 </div>
 </div>
@@ -537,20 +615,20 @@ Jeff Jacobs
 <aside><ol class="aside-footnotes"><li id="fn1"><p><span class="citation" data-cites="fields_racecraft_2012">Fields and Fields (<a href="#/references" role="doc-biblioref" onclick="">2012</a>)</span>, for example, coined <strong>“racecraft”</strong> to describe reification of blackness in US… <em>much</em> more on this later!</p></li></ol></aside></section>
 <section id="reification-in-science" class="slide level2 crunch-title crunch-quarto-layout-panel crunch-figcaption">
 <h2>Reification in Science</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="intelligence-testing" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="intelligence-testing" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <center>
 <em>“““Intelligence”“” Testing</em>
 </center>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/mismeasure.webp" width="340"></p>
+<p><img data-src="images/mismeasure.webp" class="quarto-figure quarto-figure-center" width="340"></p>
 <figcaption><span class="citation" data-cites="gould_mismeasure_1980">Gould (<a href="#/references" role="doc-biblioref" onclick="">1980</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div id="goodhart" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="goodhart" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <center>
 <em>More Generally</em>
 </center>
@@ -574,7 +652,7 @@ Jeff Jacobs
 <p>“What we talk about when we talk about [insert particular ethical framework here]”</p>
 </blockquote>
 </section>
-<section id="reflective-equilibrium" class="slide level2 crunch-title crunch-quarto-figure">
+<section id="reflective-equilibrium" class="slide level2 crunch-title">
 <h2>Reflective Equilibrium</h2>
 <ul>
 <li>Most criticisms of any framework boil down to, “great in theory, but doesn’t work in practice”</li>
@@ -582,7 +660,7 @@ Jeff Jacobs
 <li>Introduced by <span class="citation" data-cites="rawls_outline_1951">Rawls (<a href="#/references" role="doc-biblioref" onclick="">1951</a>)</span>, but popularized by <span class="citation" data-cites="rawls_theory_1971">Rawls (<a href="#/references" role="doc-biblioref" onclick="">1971</a>)</span></li>
 </ul>
 
-<img data-src="images/reflective.jpg" class="r-stretch quarto-figure-center"><p class="caption">From <span class="citation" data-cites="awad_computational_2022">Awad et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></p></section></section>
+<img data-src="images/reflective.jpg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">From <span class="citation" data-cites="awad_computational_2022">Awad et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></p></section></section>
 <section>
 <section id="descriptive-vs.-normative-judgements" class="title-slide slide level1 not-title-page title-11 center">
 <h1>Descriptive vs.&nbsp;Normative Judgements</h1>
@@ -609,26 +687,35 @@ Jeff Jacobs
 <h2>Easy Mode: Descriptive Judgements</h2>
 <p><strong>How did you acquire the concept “red”?</strong></p>
 <ul>
-<li>People pointed to stuff with certain properties and said “red” (or “rojo” or “红”), as part of constructing an <strong>intersubjective</strong> communication system</li>
-<li>These <strong>descriptive</strong> concepts exist essentially for <em>coordination</em>, like driving on the left vs.&nbsp;right side of the road!</li>
-<li>Nothing very profound or difficult seems to come from the <strong>commitments</strong> implied by this descriptive coordination: <em>“for ease of communication, I’ll vibrate my vocal chords like this (or write these symbols) to indicate <span class="math inline">\(x\)</span>, and I’ll vibrate them like this (or write these other symbols) to indicate <span class="math inline">\(y\)</span>”</em> <!-- * Technically you have the free will to **refuse** this prescription. But, nothing very "" --></li>
-<li>Our linguistic choices, when it comes to <strong>description</strong>, are arbitrary*: Our mouths can make <a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet" target="_blank">these sounds</a>, and each language is a mapping: [combinations of sounds] <span class="math inline">\(\leftrightarrow\)</span> [things] <!-- * Our lives/the world would not be very different if "red" was switched with "green"; i.e., the main change would just be vibrating different vocal chords or writing different symbols to communicate the concept --></li>
+<li>People pointed to stuff with certain properties and said “red” (or “rojo” or “红”), as pieces of an <strong>intersubjective</strong> communication system</li>
+<li>These <strong>descriptive</strong> labels enable <em>coordination</em>, like driving on left or right side of road!</li>
+<li>Nothing very profound or difficult in <strong>committing</strong> to this descriptive coordination: <em>“for <strong>ease of communication</strong>, I’ll vibrate my vocal chords like this (or write these symbols) to indicate <span class="math inline">\(x\)</span>, and vibrate them like this (or write these other symbols) to indicate <span class="math inline">\(y\)</span>”</em> <!-- * Technically you have the free will to **refuse** this prescription. But, nothing very "" --></li>
+<li>Linguistic choices, when it comes to <strong>description</strong>, are arbitrary*: Our mouths can make <a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet" target="_blank">these sounds</a>, and each language is a mapping: [combinations of sounds] <span class="math inline">\(\leftrightarrow\)</span> [things]
+<ul>
+<li>diːsˈæn ˈfɪfti fɔr ˈfɪfti [<a href="http://ipa-reader.xyz/?text=dis%C3%A6n%CB%88f%C9%AAfdif%C9%94%C9%B9%CB%88f%C9%AAfti" target="_blank">US Accent <i class="bi bi-box-arrow-up-right"></i></a> / <a href="http://ipa-reader.xyz/?text=dis%C3%A6n%CB%88f%C9%AAfdif%C9%94%C9%B9%CB%88f%C9%AAfti&amp;voice=Dora" target="_blank">Icelandic Accent <i class="bi bi-box-arrow-up-right"></i></a>]</li>
+</ul></li>
 </ul>
+<!-- disænˈfɪfdifɔɹˈfɪfti  / disænˈfɪfdifɔɹˈfɪfti -->
+<!-- * Our lives/the world would not be very different if "red" was switched with "green"; i.e., the main change would just be vibrating different vocal chords or writing different symbols to communicate the concept -->
 <p>*<em>(Tiny text footnote: Except for, perhaps, a few <a href="https://en.wikipedia.org/wiki/Bouba/kiki_effect" target="_blank">fun but rare onomatopoetic cases</a>)</em></p>
 </section>
 <section id="what-makes-ethical-judgements-more-difficult" class="slide level2 smaller title-11 crunch-title crunch-p">
 <h2>What Makes Ethical Judgements “More Difficult”?</h2>
 <p><strong>How did you acquire the concept “good”?</strong></p>
 <ul>
-<li>People pointed to actions/decisions with certain properties and said “good” (and pointed at others and said “bad”), as part of instilling <strong>values</strong> in you</li>
+<li>People pointed to <strong>actions</strong> with certain properties and said “good” (and pointed at others and said “bad”), as part of instilling <strong>values</strong> in you</li>
 <li>“Grass is green” just links two <strong>descriptive</strong> referents together, while “Honesty is good” takes the <strong>descriptive</strong> concept “honesty” and <em>links it</em> with the <strong>normative</strong> concept “good”</li>
 <li>In doing this, parents/teachers/friends are doing way more than just linking sounds and things in the world (<strong>de</strong>scribing): they are also <strong>prescribing</strong> rules of moral conduct!</li>
-<li>These <strong>normative</strong> concepts go beyond “mere” communication: the course of your life, the way the future unfolds, and [insert more things that tend to matter deeply to people] are different if you <strong>act on</strong> one set of norms vs.&nbsp;another</li>
-<li>Ethics therefore centrally involves non-arbitrarily-chosen <strong>commitments</strong>!</li>
-<li>tl;dr: languages are arbitrary conventions for communication, while ethical systems use this language to non-arbitrarily mark out things that are good/bad:
+<li><strong>Normative</strong> concepts go beyond “mere” communication: course of your life / future / [things that matter deeply to people] differ if you <strong>act on</strong> one set of norms vs.&nbsp;another</li>
+<li><span class="math inline">\(\implies\)</span> Ethics centrally involves non-arbitrarily-chosen <strong>commitments</strong>!</li>
+</ul>
+</section>
+<section id="tldr" class="slide level2">
+<h2>Tl;dr</h2>
 <ul>
+<li><strong>Languages</strong> are <strong>arbitrary conventions</strong> for communication</li>
+<li><strong>Ethical systems</strong> <strong>build on</strong> this language to <strong>non-arbitrarily</strong> mark out things that are good/bad</li>
 <li>Life would <strong>not</strong> be very different if we “shuffled” words (we’d just vibrate our vocal chords differently), but <strong>would</strong> be very different if we “shuffled” good/bad labeling</li>
-</ul></li>
 </ul>
 </section>
 <section id="quick-aside-top-10-linguist-beefs" class="slide level2 smaller crunch-title crunch-figcaption crunch-quarto-layout-panel crunch-ul crunch-images">
@@ -636,20 +723,20 @@ Jeff Jacobs
 <ul>
 <li>Statement on previous slide (<em>“Life would not be very different if we shuffled words”</em>), might seem weird/closed-minded/dismissive if you have a certain popular prior belief…</li>
 </ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/language_glass.jpg" width="300"></p>
+<p><img data-src="images/language_glass.jpg" class="quarto-figure quarto-figure-center" width="300"></p>
 <figcaption><span class="citation" data-cites="deutscher_language_2010">Deutscher (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/language_hoax.jpg" width="325"></p>
+<p><img data-src="images/language_hoax.jpg" class="quarto-figure quarto-figure-center" width="325"></p>
 <figcaption><span class="citation" data-cites="mcwhorter_language_2014">McWhorter (<a href="#/references" role="doc-biblioref" onclick="">2014</a>)</span></figcaption>
 </figure>
 </div>
@@ -667,9 +754,9 @@ Jeff Jacobs
 <li>Big changes in history are associated with changes in this <strong>good/bad labeling</strong>!</li>
 <li>Max Weber (<a href="https://www.researchgate.net/figure/Top-50-sociologists-according-to-aggregate-weighted-citation-scores-normalized-score_fig1_332447162" target="_blank">second most-cited</a> sociologist of all time*): <em>Protestant value system</em> gave rise to <em>capitalist system</em> by <strong>relabeling</strong> what things are good vs.&nbsp;bad <span class="citation" data-cites="weber_protestant_1904">(<a href="#/references" role="doc-biblioref" onclick="">Weber 1904</a>)</span>:</li>
 </ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="bible-money" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="bible-money" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <blockquote>
 <p>Jesus said to his disciples, “Truly, I say to you, only with difficulty will a rich person enter the kingdom of heaven. Again I tell you, it is easier for a camel to go through the eye of a needle than for a rich person to enter the kingdom of God.” (<a href="https://www.biblegateway.com/passage/?search=Matthew%2019&amp;version=ESV" target="_blank">Matthew 19:23-24</a>)</p>
 </blockquote>
@@ -678,7 +765,7 @@ Jeff Jacobs
 </blockquote>
 <p><span class="fn-span">*<em>(…jumpscare: REIFICATION!)</em></span></p>
 </div>
-<div id="protestant-ethic" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="protestant-ethic" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <blockquote>
 <p>The earliest capitalists lacked legitimacy in the moral climate in which they found themselves. One of the means they found [to legitimize their behavior] was to appropriate the evaluative vocabulary of Protestantism. <span class="citation" data-cites="skinner_visions_2012">(<a href="#/references" role="doc-biblioref" onclick="">Skinner 2012</a>, pg. 157)</span></p>
 </blockquote>
@@ -694,9 +781,9 @@ Jeff Jacobs
 <ul>
 <li>Very few of the relevant <strong>empirical</strong> facts are in dispute, since opening of crucial archives to three so-called “New Historians” in the 1980s. So why do people still argue?</li>
 </ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="pappe-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="pappe-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li><strong>Ilan Pappe</strong>, one of these historians, concluded from this material that:
 <ul>
@@ -708,7 +795,7 @@ Jeff Jacobs
 <p>The immunity Israel has received over the last fifty years encourages others, regimes and oppositions alike, to believe that human and civil rights are irrelevant in the Middle East. The dismantling of the mega-prison in Palestine will send a different, and more hopeful, message.</p>
 </blockquote>
 </div>
-<div id="morris-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="morris-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li><strong>Benny Morris</strong>, another of these historians, concluded that:
 <ul>
@@ -729,43 +816,11 @@ Jeff Jacobs
 <h1>Individual Ethics <span class="math inline">\(\rightarrow\)</span> Social Ethics</h1>
 
 </section>
-<section id="from-week-1-promise-keeping" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-ul title-12">
-<h2>(From Week 1) Promise-Keeping</h2>
-<ul>
-<li>Scenario: You just baked a pie, and you promised your friend you’d give them the pie. You’re walking over to the friend’s house to give them the pie.</li>
-<li>Suddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds</li>
-<li>Do you give the hostage-taker the pie?</li>
-</ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="conseqentialism" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<center>
-<strong>Consequentialist Ethics <span class="math inline">\(\implies\)</span> Yes</strong>
-</center>
-<ul>
-<li>To be ethical is to weigh consequences of your actions</li>
-<li>The <strong>positive consequences</strong> of giving the pie to the hostage-taker (saving a life) outweigh the <strong>negative consequences</strong> (breaking your promise to your friend)</li>
-<li><em>(Ex: <strong>Utilitarianism</strong>, associated with British philosopher <strong>Jeremy Bentham</strong>)</em></li>
-</ul>
-</div>
-<div id="deontology" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<center>
-<strong>Deontological Ethics <span class="math inline">\(\implies\)</span> No</strong>
-</center>
-<ul>
-<li>To be ethical is to live by rules which you would <strong>want everyone to follow</strong>.</li>
-<li>As a <strong>rule</strong> (a “categorical imperative”), you <strong>must not break promises</strong>. (Breaking this rule <span class="math inline">\(\implies\)</span> others can also “pick and choose” when to honor promises to you)</li>
-<li><em>(Ex: <strong>Kantian Ethics</strong>, associated with German philosopher <strong>Immanuel Kant</strong>)</em></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
 <section id="from-week-1-counterargument-to-consequentialism" class="slide level2 crunch-title title-07 crunch-quarto-layout-panel crunch-ul crunch-quarto-figure crunch-images">
 <h2>(From Week 1) Counterargument to Consequentialism</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="omelas-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="omelas-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <blockquote>
 <p>Millions are kept permanently happy, on the one simple condition that a certain lost soul on the far-off edge of things should lead a life of lonely torture <span class="citation" data-cites="james_moral_1891">(<a href="#/references" role="doc-biblioref" onclick="">James 1891</a>)</span></p>
 </blockquote>
@@ -773,10 +828,10 @@ Jeff Jacobs
 <li>Modern example: people “out there” suffer so we can have iPhones, etc.</li>
 </ul>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/omelas.jpg" width="360"></p>
+<p><img data-src="images/omelas.jpg" class="quarto-figure quarto-figure-center" width="360"></p>
 <figcaption><span class="citation" data-cites="leguin_ones_1973">Le Guin (<a href="#/references" role="doc-biblioref" onclick="">1973</a>)</span></figcaption>
 </figure>
 </div>
@@ -784,11 +839,11 @@ Jeff Jacobs
 </div>
 </div>
 </section>
-<section id="one-solution-individual-rights" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption crunch-images crunch-math">
+<section id="one-solution-individual-rights" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption crunch-images crunch-math crunch-ul">
 <h2>One Solution: Individual Rights</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="rights-text" class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[2,1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="rights-text" class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <ul>
 <li>Rights are <strong>vetoes</strong> which <strong>individuals</strong> can use to cancel out <strong>collective</strong>/institutional decisions which affect them (key example for us: right to <strong>privacy</strong>)</li>
 <li>Rawls/liberalism: individual rights are <strong>lexically prior to</strong> “efficiency” and/or distributional concerns</li>
@@ -798,10 +853,10 @@ Jeff Jacobs
 <li>What if we need to sort stuff with <strong>both</strong> types? We can decide that capital letters are <strong>lexically prior</strong> to lowercase letters, giving us a combined ordering:</li>
 </ul>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/dworkin.jpg" width="300"></p>
+<p><img data-src="images/dworkin.jpg" class="quarto-figure quarto-figure-center" width="300"></p>
 <figcaption><span class="citation" data-cites="dworkin_taking_1977">Dworkin (<a href="#/references" role="doc-biblioref" onclick="">1977</a>)</span></figcaption>
 </figure>
 </div>
@@ -809,64 +864,79 @@ Jeff Jacobs
 </div>
 </div>
 <p><span class="math display">\[
-\texttt{A} \prec \texttt{B} \prec \texttt{Z} \prec \texttt{a} \prec \texttt{b} \prec \texttt{z}
+\boxed{\texttt{A} \prec \texttt{B} \prec \cdots \prec \texttt{Z} \prec \texttt{a} \prec \texttt{b} \prec \cdots \prec \texttt{z}}
 \]</span></p>
 </section>
 <section id="lexical-ordering-i-tricked-you" class="slide level2">
 <h2>Lexical Ordering (I Tricked You 😈)</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="trick-left" class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[2,1]">
+<div class="quarto-layout-row">
+<div id="trick-left" class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <ul>
 <li>You thought I was just talking about <em>letters</em>, but they’re actually <strong>variables</strong>: capital letters are rights, lowercase letters are distributive principles</li>
 </ul>
 <p><span class="math display">\[
-\underbrace{\texttt{A} \prec \texttt{B} \prec \texttt{Z}}_{\mathclap{\substack{\text{Individual Rights} \\ \text{Basic Goods}}}} \phantom{\prec} \prec \phantom{\prec} \underbrace{\texttt{a} \prec \texttt{b} \prec \texttt{z}}_{\mathclap{\substack{\text{Distributive Principles} \\ \text{Money and whatnot}}}}
+\underbrace{\texttt{A} \prec \texttt{B} \prec \cdots \prec \texttt{Z}}_{\mathclap{\substack{\text{Individual Rights} \\ \text{Basic Goods}}}} \phantom{\prec} \prec \phantom{\prec} \underbrace{\texttt{a} \prec \texttt{b} \prec \cdots \prec \texttt{z}}_{\mathclap{\substack{\text{Distributive Principles} \\ \text{Money and whatnot}}}}
 \]</span></p>
 </div>
 <div id="trick-right" class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/atrick_nocap.jpg"></p>
+<p><img data-src="images/atrick_nocap.jpg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
 </section>
+<section id="better-metaphor-than-letters" class="slide level2 smaller crunch-title crunch-ul crunch-math">
+<h2>Better Metaphor Than Letters</h2>
+<ul>
+<li>Letters are where Rawls gets “lexically prior” from, but letters are <strong>total orderings</strong> (we know where <em>every</em> letter “stands” in relation to <em>every</em> other letter)</li>
+<li>Better metaphor: a <strong>high school</strong> with a hierarchy such that</li>
+</ul>
+<p><span class="math display">\[
+\text{Seniors} \prec \text{Juniors} \prec \text{Sophomores}  \prec \text{Freshmen}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\implies\)</span> If you’re a Freshman, whether at the “top” or “bottom” of a ranking of Freshmen, you’re still <strong>prior to</strong> all Sophomores…</li>
+<li>Why is this more helpful? Because <strong>we don’t need to define</strong> the <strong>rankings <em>within</em> classes</strong> to know the <strong>rankings <em>between</em> classes</strong> in this case</li>
+</ul>
+
+<img data-src="images/ordinal_numbers.svg" class="quarto-figure quarto-figure-center r-stretch" width="300"></section>
 <section id="counterarguments-to-deontology" class="slide level2 smaller crunch-title crunch-ul crunch-figcaption shift-ul crunch-li-3 crunch-images">
 <h2>Counterargument(s) to Deontology</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="deontology-counter-left" class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[7,3]">
+<div class="quarto-layout-row">
+<div id="deontology-counter-left" class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: flex-start;">
 <ul>
-<li>Deontological rule: “Don’t lie”
+<li>Deontological <strong>rule</strong>: <em>“Don’t lie”</em>
 <ul>
 <li>But then: Nazis come to your house, ask you if you’re harboring any Jews</li>
 </ul></li>
-<li>k, new deontological rule: “Don’t lie unless necessary”
+<li>k, new deontological <strong>rule</strong>: <em>“Don’t lie unless necessary”</em>
 <ul>
 <li>Who decides when it’s necessary?</li>
 </ul></li>
-<li>Deontological commitment: Pacifism / Nonviolence
+<li>Deontological commitment: <em>Pacifism / Nonviolence</em>
 <ul>
 <li>But then: someone swingin on you</li>
 </ul></li>
-<li>k, new deontological commitment: Pacifism / Nonviolence Except In Self-Defense
+<li>k, new deontological <strong>commitment</strong>: <em>Pacifism / Nonviolence Except In Self-Defense</em>
 <ul>
-<li>What counts as self-defense?</li>
+<li>Who decides what counts as self-defense?</li>
 </ul></li>
-<li>Deontological maxim: “The master’s tools will never dismantle the master’s house”
+<li>Deontological <strong>maxim</strong>: <em>“The master’s tools will never dismantle the master’s house”</em>
 <ul>
-<li>Why concede “ownership” to the master?</li>
+<li>Who conceded “ownership” to the master?</li>
 </ul></li>
 <li>(Trolley problems, etc.)</li>
 </ul>
 </div>
-<div id="deontology-counter-right" class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: center;">
+<div id="deontology-counter-right" class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/pacifism.jpg" width="340"></p>
+<p><img data-src="images/pacifism.jpg" class="quarto-figure quarto-figure-center" width="340"></p>
 <figcaption><span class="citation" data-cites="churchill_pacifism_1998">Churchill and Ryan (<a href="#/references" role="doc-biblioref" onclick="">1998</a>)</span> <em>(Derrick Jensen intro removed from later editions so… I <a href="https://github.com/jpowerj/mdb/blob/main/1998_Churchill_PacifismAsPathology.md" target="_blank">put it on dang GitHub</a>)</em></figcaption>
 </figure>
 </div>
@@ -876,19 +946,19 @@ Jeff Jacobs
 </section>
 <section id="a-synthesis-two-level-utilitarianism" class="slide level2 title-09 crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-images crunch-figcaption">
 <h2>A Synthesis: Two-Level Utilitarianism</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="two-level-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="two-level-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>It would be exhausting to compute Nash equilibrium strategies for every scenario</li>
 <li>Instead, we can develop <strong>heuristics</strong> that work for most cases, then <strong>reevaluate</strong> and <strong>update</strong> when we encounter tough cases</li>
 <li>(Brings us back to <strong>reflective equilibrium</strong>!)</li>
 </ul>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/thinking.jpg" width="360"></p>
+<p><img data-src="images/thinking.jpg" class="quarto-figure quarto-figure-center" width="360"></p>
 <figcaption><span class="citation" data-cites="kahneman_thinking_2011">Kahneman (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span></figcaption>
 </figure>
 </div>
@@ -896,23 +966,28 @@ Jeff Jacobs
 </div>
 </div>
 </section>
-<section id="individual-vs.-social-morality" class="slide level2 smaller crunch-title">
+<section id="individual-vs.-social-morality" class="slide level2 smaller crunch-title crunch-ul crunch-figcaption crunch-images crunch-quarto-figure">
 <h2>Individual vs.&nbsp;Social Morality</h2>
 <ul>
-<li>It’s already quite difficult to reason about <strong>individual</strong> morality</li>
+<li>That was all already hard enough, to reason about <strong>individual</strong> morality</li>
 <li>Now add in the fact that we live in a society 😰</li>
 <li>Things that happen depend not only on <strong>our</strong> choices but also the choices of others</li>
 </ul>
-
-<img data-src="images/seinfeld_society.jpeg" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://www.youtube.com/watch?v=LHhbdXCzt_A" target="_blank">Seinfeld: Living in a Society (Clip) | TBS</a></p></section>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://www.youtube.com/watch?v=LHhbdXCzt_A"><img data-src="images/seinfeld_society.jpeg" class="quarto-figure quarto-figure-center" width="700" alt="Seinfeld: Living in a Society (Clip) | TBS"></a></p>
+<figcaption><a href="https://www.youtube.com/watch?v=LHhbdXCzt_A" target="_blank">Seinfeld: Living in a Society (Clip) | TBS</a></figcaption>
+</figure>
+</div>
+</section>
 <section id="enter-game-theory" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-figcaption crunch-ul">
 <h2>Enter Game Theory</h2>
 <ul>
 <li>A tool for analyzing how <strong>individual choices</strong> + <strong>choices of others</strong> <span class="math inline">\(\rightarrow\)</span> <strong>outcomes</strong>!</li>
 </ul>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div id="game-theory-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="game-theory-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Example: You (<span class="math inline">\(A\)</span>) and a friend (<span class="math inline">\(B\)</span>) committed a robbery, and you’re brought into the police station for questioning.</li>
 <li>You’re placed in separate rooms, and each of you is offered a <strong>plea deal</strong>: if you <strong>testify</strong> while your partner <strong>stays silent</strong>, you go free and they go to jail for 3 years.</li>
@@ -920,10 +995,10 @@ Jeff Jacobs
 <li>However, there’s a catch: if you <strong>both confess</strong>, you both get <strong>two years</strong> in jail, since they now have maximal evidence</li>
 </ul>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/prisoners_dilemma.svg"></p>
+<p><img data-src="images/prisoners_dilemma.svg" class="quarto-figure quarto-figure-center"></p>
 <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:Prisoners_dilemma.svg" target="_blank">Wikimedia Commons</a></figcaption>
 </figure>
 </div>
@@ -933,9 +1008,9 @@ Jeff Jacobs
 </section>
 <section id="individual-decision-making" class="slide level2 smaller title-11">
 <h2>Individual Decision-Making</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div id="step-by-step" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="step-by-step" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Let’s think through <span class="math inline">\(A\)</span>’s <strong>best responses</strong> to the possible choices <span class="math inline">\(B\)</span> could make:</li>
 <li>If <span class="math inline">\(B\)</span> <strong>stays silent</strong>, what is <span class="math inline">\(A\)</span>’s best option?
@@ -953,10 +1028,10 @@ Jeff Jacobs
 <li>The result: <strong>regardless of what <span class="math inline">\(B\)</span> does</strong>, <span class="math inline">\(A\)</span> is <strong>better off testifying</strong>!</li>
 </ul>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/prisoners_dilemma.svg"></p>
+<p><img data-src="images/prisoners_dilemma.svg" class="quarto-figure quarto-figure-center"></p>
 <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:Prisoners_dilemma.svg" target="_blank">Wikimedia Commons</a></figcaption>
 </figure>
 </div>
@@ -964,21 +1039,21 @@ Jeff Jacobs
 </div>
 </div>
 </section>
-<section id="the-social-outcome" class="slide level2">
+<section id="the-social-outcome" class="slide level2 crunch-title crunch-ul">
 <h2>The Social Outcome</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div id="social-outcome-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="social-outcome-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>The game is <strong>symmetric</strong>, so the same logic applies for <span class="math inline">\(B\)</span></li>
 <li>Conclusion: <strong>the outcome of the game will be <span class="math inline">\(s^* = (\text{Testify}, \text{Testify})\)</span></strong></li>
 <li>This is called a <strong>Nash equilibrium</strong>: no player <span class="math inline">\(i\)</span> can make themselves better off by <strong>deviating</strong> from <span class="math inline">\(s_i\)</span></li>
 </ul>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/prisoners_dilemma.svg"></p>
+<p><img data-src="images/prisoners_dilemma.svg" class="quarto-figure quarto-figure-center"></p>
 <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:Prisoners_dilemma.svg" target="_blank">Wikimedia Commons</a></figcaption>
 </figure>
 </div>
@@ -986,21 +1061,16 @@ Jeff Jacobs
 </div>
 </div>
 </section>
-<section id="how-do-we-fix-this-conventions" class="slide level2 crunch-title inline-08 crunch-quarto-layout-cell">
+<section id="how-do-we-fix-this-conventions" class="slide level2 crunch-title inline-08 crunch-quarto-layout-cell crunch-quarto-layout-panel">
 <h2>How Do We Fix This? <em>Conventions!</em></h2>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="conventions-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>We encounter this type of problem every day if we <strong>drive</strong>! You (<span class="math inline">\(A\)</span>) and another driver (<span class="math inline">\(B\)</span>) arrive at an <strong>intersection</strong>:</li>
 </ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="intersection-text" class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: center;">
-<ul>
-<li>If <strong>both stop</strong>, we’re mostly bored: <span class="math inline">\(u_A = -1\)</span></li>
-<li>If we stop and the other person drives, we’re mad that they got to go and we didn’t: <span class="math inline">\(u_A = -3\)</span></li>
-<li>If <strong>both drive</strong>, we crash: <span class="math inline">\(u_A = -10\)</span></li>
-</ul>
 </div>
-<div id="intersection-table" class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <table class="game-table" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd">
@@ -1030,12 +1100,17 @@ Jeff Jacobs
 </div>
 </div>
 </div>
+<ul>
+<li>If <strong>both stop</strong>, we’re mostly bored: <span class="math inline">\(u_A = -1\)</span></li>
+<li>If we stop and the other person drives, we’re mad that they got to go and we didn’t: <span class="math inline">\(u_A = -3\)</span></li>
+<li>If <strong>both drive</strong>, we crash: <span class="math inline">\(u_A = -10\)</span></li>
+</ul>
 </section>
 <section id="without-a-convention" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-ul crunch-math">
 <h2>Without A Convention</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[6,4]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div id="no-convention-text" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<div id="no-convention-text" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
 <ul>
 <li>We’re “frozen”: this game has <strong>no unique Nash equilibrium</strong>, so we cannot say (on the basis of individual rationality) what will happen!</li>
 <li>Without a convention: <strong>power</strong>/aggression takes over. “War of all against all”, only the strong survive, etc. (life is “nasty, brutish, and short”)</li>
@@ -1086,9 +1161,9 @@ Jeff Jacobs
 <ul>
 <li>If we don’t want a world where <span class="math inline">\(\text{Happiness}(i) \propto \Pr(i \text{ more aggro than }j)\)</span>, we can introduce <strong>traffic lights</strong>:</li>
 </ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="traffic-light-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="traffic-light-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Now in <strong>“correlated equilibrium”</strong>, where we ensure* coordinated <span class="math inline">\(\Pr((\textsf{Drive}, \textsf{Stop})) = 0.5\)</span>, <span class="math inline">\(\Pr((\textsf{Stop}, \textsf{Drive})) = 0.5\)</span></li>
 <li><span class="math inline">\(\mathbb{E}[u_A] = (0.5)(0) + (0.5)(-3) = -1.5\)</span></li>
@@ -1135,6 +1210,7 @@ Jeff Jacobs
 <ul>
 <li><span class="citation" data-cites="hobbes_leviathan_1651">Hobbes (<a href="#/references" role="doc-biblioref" onclick="">1651</a>)</span>: Only way out of “war of all against all” is to surrender all power to one <strong>sovereign</strong> (the <em>Leviathan</em>)</li>
 <li><span class="citation" data-cites="rousseau_social_1762">Rousseau (<a href="#/references" role="doc-biblioref" onclick="">1762</a>)</span>: Social contract</li>
+<li><em>[Big big ~200 year gap here… can you think of why? Hint: French Revolution in 1789]</em></li>
 <li><span class="citation" data-cites="rawls_theory_1971">Rawls (<a href="#/references" role="doc-biblioref" onclick="">1971</a>)</span>: Social contract <strong>behind the “veil of ignorance”</strong>
 <ul>
 <li>If we didn’t know <strong>where we were going to end up</strong> in society, how would we set it up? <!-- * @dworkin_what_1981: Yes, plus also people can **buy insurance** against ending up in a bad place $\rightarrow$ level of "just" redistribution --></li>
@@ -1239,7 +1315,80 @@ Jeff Jacobs
 <section id="context-free-fairness" class="title-slide slide level1 smaller not-title-slide crunch-title center">
 <h1>Context-Free Fairness</h1>
 
-<img data-src="images/chomsky-hierarchy.jpeg" class="no-stretch r-stretch quarto-figure-center" width="200"><p class="caption">From <a href="https://www.cs.sfu.ca/~anoop/courses/MACM-300-Spring-2006/complexity.pdf" target="_blank"><em>Introduction to Formal Languages and Automata</em></a>, Simon Fraser University (2006). This figure summarizes the <strong>Chomsky Hierarchy</strong> of Languages, developed by Noam Chomsky, who also has a lot to say about Ethics and Policy…</p></section>
+<img data-src="images/chomsky-hierarchy.jpeg" class="no-stretch quarto-figure quarto-figure-center r-stretch" width="200"><p class="caption">From <a href="https://www.cs.sfu.ca/~anoop/courses/MACM-300-Spring-2006/complexity.pdf" target="_blank"><em>Introduction to Formal Languages and Automata</em></a>, Simon Fraser University (2006). This figure summarizes the <strong>Chomsky Hierarchy</strong> of Languages, developed by Noam Chomsky, who also has a lot to say about Ethics and Policy…</p></section>
+<section id="the-brogrammers-criterion" class="slide level2 crunch-title crunch-ul">
+<h2>The Brogrammer’s Criterion</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>df.drop(columns<span class="op">=</span>[<span class="st">"race"</span>], inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Racism solved, folks! 🥳🎊🎉 End of the course, have a great rest of your data science career ✌️</li>
+</ul>
+
+<img data-src="images/flocka.jpeg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="no-fairness-through-unawareness" class="slide level2 smaller crunch-title crunch-ul crunch-figcaption">
+<h2>(No) Fairness Through Unawareness</h2>
+<ul>
+<li><strong>HW1</strong>: Using tiny sample (<span class="math inline">\(N &lt; 10K\)</span>) of Florida voter registrations… <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html" target="_blank">RandomForestClassifier</a> (default settings, no hyperparameter tuning, no cross-validation, no ensembling with other methods) will predict self-reported race with <span class="math inline">\(&gt;90\%\)</span> accuracy (in balanced sample) from just <strong>surname</strong> and <strong>county of residence</strong>
+<ul>
+<li>Can reach <span class="math inline">\(70\text{-}75\%\)</span> with <strong>just</strong> surname or <strong>just</strong> county of residence</li>
+</ul></li>
+<li>Also in HW1: <strong>Facebook</strong> ad matching service provides <strong>over 1,000 different user attributes</strong> for <strong>(micro)targeting</strong></li>
+</ul>
+
+<img data-src="images/proxy.svg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">From <span class="citation" data-cites="datta_proxy_2017">Datta et al. (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span></p></section>
+<section id="to-make-it-even-more-concrete" class="slide level2 smaller crunch-title">
+<h2>To Make It Even More Concrete…</h2>
+<ul>
+<li><em>Bloomberg</em> analysis of neighborhoods with same-day delivery from Amazon:</li>
+</ul>
+<div id="fig-bloomberg" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-bloomberg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/amazon-six-cities-at.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/amazon-six-cities-ch.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/amazon-six-cities-dc.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bloomberg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Figures from <span class="citation" data-cites="ingold_amazon_2016">Ingold and Soper (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="we-can-do-a-bit-better" class="slide level2 smaller">
+<h2>We Can Do (A Bit) Better…</h2>
+<ul>
+<li>Use <strong>random variables</strong> to model inferences made by an algorithm (or a human!)</li>
+<li><span class="math inline">\(\implies\)</span> fairness by statistically <strong>equalizing</strong> loan rejections, error rate, etc. between groups</li>
+<li>Obvious <strong>societal</strong> drawback: <strong>equality</strong> does not ameliorate the effects of <strong>past injustices</strong> (see: police contact vs.&nbsp;trust-in-government plot from last week)
+<ul>
+<li>This one we saw coming, given “context-free” nature!</li>
+</ul></li>
+<li>Less obvious <strong>mathematical</strong> drawback: <strong>impossibility results</strong> (because algebra 😳)
+<ul>
+<li>Roughly: can’t satisfy [more than] two statistical fairness criteria at once; similar to how setting <span class="math inline">\(\Pr(X) = p\)</span> also determines <span class="math inline">\(\Pr(\text{not }X) = 1 - p\)</span>, or how plugging <span class="math inline">\(x = 3\)</span> into <span class="math inline">\(x + y = 5\)</span> leaves only one possibility <span class="math inline">\(y = 2\)</span></li>
+</ul></li>
+<li><strong>BUT</strong>, “impossibility” <span class="math inline">\(\neq\)</span> impossibility: (a) one criteria may be “all you need” in given setting; (b) can derive <strong>more robust</strong> measures by “relaxing” confusion-matrix measures</li>
+</ul>
+</section>
 <section id="who-remembers-confusion-matrices" class="slide level2 smaller crunch-title title-11">
 <h2>Who Remembers… 🎉<em>Confusion Matrices!!!</em>🎉</h2>
 <ul>
@@ -1247,7 +1396,47 @@ Jeff Jacobs
 <li>Now <span class="math inline">\(D = 1\)</span> could literally mean <em>“shoot this person”</em> or <em>“throw this person in jail for life”</em></li>
 </ul>
 
-<img data-src="images/mitchell_et_al.svg" class="r-stretch quarto-figure-center"><p class="caption">From <span class="citation" data-cites="mitchell_algorithmic_2021">Mitchell et al. (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></p></section>
+<img data-src="images/mitchell_et_al.svg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">From <span class="citation" data-cites="mitchell_algorithmic_2021">Mitchell et al. (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></p></section>
+<section id="our-first-fairness-measure-finally" class="slide level2 crunch-title smaller crunch-ul crunch-math">
+<h2>Our First Fairness Measure (Finally)!</h2>
+<ul>
+<li>Standard across the literature: Random Variable <span class="math inline">\(A_i\)</span> “encoding” membership in protected/sensitive group. In HW1, for example:</li>
+</ul>
+<p><span class="math display">\[
+A_i = \begin{cases}
+0 &amp;\text{if }i\text{ self-reported ``white''} \\
+1 &amp;\text{if }i\text{ self-reported ``black''}
+\end{cases}
+\]</span></p>
+<ul>
+<li><p><strong>Notice</strong>: choice of mapping into <span class="math inline">\(\{0, 1\}\)</span> here <strong>non-arbitrary</strong>!</p></li>
+<li><p>We want our models/criteria to be <strong>descriptively</strong> but also <strong>normatively robust</strong>; e.g.:</p></li>
+<li><p><strong>If</strong> (antecedent I hold, though <a href="https://www.pewresearch.org/politics/2021/08/12/deep-divisions-in-americans-views-of-nations-racial-history-and-how-to-address-it/" target="_blank">majority in US</a> do not) one believes that ending (much less repairing) centuries of unrelenting white supremacist violence here might require asymmetric race-based policies,</p></li>
+<li><p><strong>Then</strong> our model should allow different <strong>normative labels</strong> and differential <strong>weights</strong> on</p>
+<p><span class="math display">\[
+\begin{align*}
+\Delta &amp;= (\text{Fairness} \mid A = 1) - (\text{Fairness} \mid A = 0) \\
+\nabla &amp;= (\text{Fairness} \mid A = 0) - (\text{Fairness} \mid A = 1)
+\end{align*}
+\]</span></p>
+<p>despite the <strong>descriptive</strong> fact that <span class="math inline">\(\Delta = -\nabla\)</span>.</p></li>
+</ul>
+</section>
+<section id="where-descriptive-and-normative-intertwine-whether-you-want-it-to-or-not-o" class="slide level2">
+<h2>Where Descriptive and Normative Intertwine (Whether You Want It To Or Not :O)</h2>
+<ul>
+<li>Allowing this <strong>asymmetry</strong> is precisely what enables bring <strong>descriptive</strong> facts to bear on <strong>normative</strong> concerns: <strong>mathematically</strong> we can swap the mapping into <span class="math inline">\(\{0, 1\}\)</span>, but this (again, in a precise, logical sense) implies that we’re treating <strong>racial treatment</strong> as the same type of phenomenon as <strong>driving on left or right side of road</strong> (see: prev slides on why we make the descriptive vs.&nbsp;normative distinction)</li>
+</ul>
+</section>
+<section id="the-fairness-criterion" class="slide level2">
+<h2>The Fairness Criterion</h2>
+<p><span class="math display">\[
+\Pr(D = 1 \mid A = 0) = \Pr(D = 1 \mid A = 1)
+\]</span></p>
+<ul>
+<li>(We made it!)</li>
+</ul>
+</section>
 <section id="baby-steps-a-less-busy-confusion-matrix" class="slide level2 title-09 crunch-title smaller">
 <h2>Baby Steps: A Less Busy Confusion Matrix</h2>
 <table style="width:99%;">
@@ -1291,7 +1480,7 @@ Jeff Jacobs
 <section id="fairness-through-unawareness-and-proxy-discrimination" class="slide level2 smaller crunch-title">
 <h2>Fairness Through Unawareness and Proxy Discrimination</h2>
 
-<img data-src="images/proxy_paper.jpg" class="r-stretch quarto-figure-center"><p class="caption">From <span class="citation" data-cites="tschantz_what_2022">Tschantz (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></p></section>
+<img data-src="images/proxy_paper.jpg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">From <span class="citation" data-cites="tschantz_what_2022">Tschantz (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></p></section>
 <section id="causal-fairness" class="slide level2">
 <h2>Causal Fairness</h2>
 <ul>
@@ -1326,19 +1515,19 @@ Jeff Jacobs
 </section>
 <section id="controlling-for-everything-besides-race" class="slide level2 smaller crunch-title title-11">
 <h2>“Controlling for” Everything Besides Race</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/resume_greg_baker.jpeg"></p>
+<p><img data-src="images/resume_greg_baker.jpeg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/resume_jamal_jones.jpeg"></p>
+<p><img data-src="images/resume_jamal_jones.jpeg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -1347,19 +1536,19 @@ Jeff Jacobs
 </section>
 <section id="age-discrimination" class="slide level2 smaller crunch-title">
 <h2>Age Discrimination?</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/resume_age_12.jpeg"></p>
+<p><img data-src="images/resume_age_12.jpeg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/resume_age_22.jpeg"></p>
+<p><img data-src="images/resume_age_22.jpeg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -1374,19 +1563,19 @@ Jeff Jacobs
 <ul>
 <li>“Good luck measuring ideas inside of people’s heads… I’ll be over here measuring real things and doing real data science!” -My Opps</li>
 </ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/representations.jpeg"></p>
+<p><img data-src="images/representations.jpeg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/sperber.jpg" width="320"></p>
+<p><img data-src="images/sperber.jpg" class="quarto-figure quarto-figure-center" width="320"></p>
 </figure>
 </div>
 </div>
@@ -1396,12 +1585,12 @@ Jeff Jacobs
 <section id="cool-theory-i-guess-1" class="slide level2 smaller crunch-title">
 <h2>“Cool Theory, I Guess…”</h2>
 
-<img data-src="images/representations_bilingual.jpeg" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/representations_bilingual.jpeg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="opening-a-big-can-of-worms" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell">
 <h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="worms1-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="worms1-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
 </ul>
@@ -1409,7 +1598,7 @@ Jeff Jacobs
 <div id="worms-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/race_graph_step1.svg" width="500"></p>
+<p><img data-src="images/race_graph_step1.svg" class="quarto-figure quarto-figure-center" width="500"></p>
 </figure>
 </div>
 </div>
@@ -1418,9 +1607,9 @@ Jeff Jacobs
 </section>
 <section id="opening-a-big-can-of-worms-1" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell">
 <h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="worms2-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="worms2-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
 <li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
@@ -1429,7 +1618,7 @@ Jeff Jacobs
 <div id="worms2-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/race_graph_step2.svg" width="500"></p>
+<p><img data-src="images/race_graph_step2.svg" class="quarto-figure quarto-figure-center" width="500"></p>
 </figure>
 </div>
 </div>
@@ -1438,9 +1627,9 @@ Jeff Jacobs
 </section>
 <section id="opening-a-big-can-of-worms-2" class="slide level2 smaller crunch-title crunch-quarto-figure crunch-quarto-layout-panel crunch-quarto-layout-cell">
 <h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="worms3-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="worms3-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
 <li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
@@ -1451,7 +1640,7 @@ Jeff Jacobs
 <div id="worms3-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/race_graph_step3.svg" width="600"></p>
+<p><img data-src="images/race_graph_step3.svg" class="quarto-figure quarto-figure-center" width="600"></p>
 </figure>
 </div>
 </div>
@@ -1460,9 +1649,9 @@ Jeff Jacobs
 </section>
 <section id="opening-a-big-can-of-worms-3" class="slide level2 smaller crunch-title crunch-quarto-figure crunch-quarto-layout-panel crunch-quarto-layout-cell">
 <h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="worms4-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="worms4-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
 <li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
@@ -1475,7 +1664,7 @@ Jeff Jacobs
 <div id="worms4-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/race_graph_step4.svg" width="600"></p>
+<p><img data-src="images/race_graph_step4.svg" class="quarto-figure quarto-figure-center" width="600"></p>
 </figure>
 </div>
 </div>
@@ -1485,10 +1674,10 @@ Jeff Jacobs
 <section id="more-to-come-on-hw1" class="slide level2">
 <h2>(More to Come on HW1!)</h2>
 
-<img data-src="images/sunny.jpg" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/sunny.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-awad_computational_2022" class="csl-entry" role="listitem">
 Awad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. <span>“Computational Ethics.”</span> <em>Trends in Cognitive Sciences</em> 26 (5): 388–405. <a href="https://doi.org/10.1016/j.tics.2022.02.009">https://doi.org/10.1016/j.tics.2022.02.009</a>.
 </div>
@@ -1506,6 +1695,9 @@ Churchill, Ward, and Michael Ryan. 1998. <em>Pacifism as <span>Pathology</span>:
 </div>
 <div id="ref-crawford_excavating_2019" class="csl-entry" role="listitem">
 Crawford, Kate, and Trevor Paglen. 2019. <span>“Excavating <span>AI</span>: <span>The Politics</span> of <span>Training Sets</span> for <span>Machine Learning</span>.”</span> <span>AI Now Institute, NYU</span>. <a href="https://excavating.ai">https://excavating.ai</a>.
+</div>
+<div id="ref-datta_proxy_2017" class="csl-entry" role="listitem">
+Datta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. <span>“Proxy <span>Non-Discrimination</span> in <span>Data-Driven Systems</span>.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.1707.08120">https://doi.org/10.48550/arXiv.1707.08120</a>.
 </div>
 <div id="ref-deutscher_language_2010" class="csl-entry" role="listitem">
 Deutscher, Guy. 2010. <em>Through the <span>Language Glass</span>: <span>Why</span> the <span>World Looks Different</span> in <span>Other Languages</span></em>. <span>Henry Holt and Company</span>.
@@ -1533,6 +1725,9 @@ Henrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert 
 </div>
 <div id="ref-hobbes_leviathan_1651" class="csl-entry" role="listitem">
 Hobbes, Thomas. 1651. <em>Leviathan: <span>With</span> Selected Variants from the <span>Latin</span> Edition of 1668</em>. <span>Hackett Publishing</span>.
+</div>
+<div id="ref-ingold_amazon_2016" class="csl-entry" role="listitem">
+Ingold, David, and Spencer Soper. 2016. <span>“Amazon <span>Doesn</span>’t <span>Consider</span> the <span>Race</span> of <span>Its Customers</span>. <span>Should It</span>?”</span> <em>Bloomberg</em>, April. <a href="http://www.bloomberg.com/graphics/2016-amazon-same-day/">http://www.bloomberg.com/graphics/2016-amazon-same-day/</a>.
 </div>
 <div id="ref-james_moral_1891" class="csl-entry" role="listitem">
 James, William. 1891. <span>“The <span>Moral Philosopher</span> and the <span>Moral Life</span>.”</span> <em>International Journal of Ethics</em> 1 (3): 330–54. <a href="https://www.jstor.org/stable/2375309">https://www.jstor.org/stable/2375309</a>.
@@ -1587,8 +1782,10 @@ Weber, Max. 1904. <em>The <span>Protestant Ethic</span> and the <span>Spirit</sp
 </div>
 </div>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>DSAN 5450 Week 3: (Descriptive) Fairness in AI</p>
+</div>
 </div>
 </section></section>
 
@@ -1619,7 +1816,6 @@ Weber, Max. 1904. <em>The <span>Protestant Ethic</span> and the <span>Spirit</sp
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1881,10 +2077,9 @@ Weber, Max. 1904. <em>The <span>Protestant Ethic</span> and the <span>Spirit</sp
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1894,8 +2089,17 @@ Weber, Max. 1904. <em>The <span>Protestant Ethic</span> and the <span>Spirit</sp
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

@@ -9,10 +9,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.5.4">
 
   <meta name="author" content="Jeff Jacobs">
-  <title>DSAN 5450 - Week 2: Machine Learning, Training Data, and Bias</title>
+  <title>DSAN 5450 – Week 2: Machine Learning, Training Data, and Bias</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -34,6 +34,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -177,7 +178,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -397,7 +399,7 @@ Jeff Jacobs
 <li>What are the processes by which data is <strong>measured</strong>, <strong>recorded</strong>, and <strong>distributed</strong>?</li>
 </ul>
 
-<img data-src="images/missing-datasets.jpg" class="r-stretch quarto-figure-center"><p class="caption">The <a href="https://github.com/MimiOnuoha/missing-datasets" target="_blank">Library of Missing Datasets</a>. From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></section>
+<img data-src="images/missing-datasets.jpg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">The <a href="https://github.com/MimiOnuoha/missing-datasets" target="_blank">Library of Missing Datasets</a>. From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></section>
 <section id="example-measuring-freedom-and-human-rights" class="slide level2 smaller title-10">
 <h2>Example: Measuring “Freedom” and “Human Rights”</h2>
 <ul>
@@ -407,20 +409,20 @@ Jeff Jacobs
 </ul></li>
 <li>…So what’s the issue? (What is Jeff whining about this time?)</li>
 </ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/freedom_house_funding.jpeg"></p>
+<p><img data-src="images/freedom_house_funding.jpeg" class="quarto-figure quarto-figure-center"></p>
 <figcaption>From <a href="https://freedomhouse.org/about-us/financials">Freedom House, Inc., <em>Notes to Financial Statements</em> (2023)</a>, p.&nbsp;21</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/state_dept_human_rights.jpeg" width="400"></p>
+<p><img data-src="images/state_dept_human_rights.jpeg" class="quarto-figure quarto-figure-center" width="400"></p>
 <figcaption>From <a href="https://www.state.gov/reports/2022-country-reports-on-human-rights-practices/" target="_blank">state.gov/reports</a></figcaption>
 </figure>
 </div>
@@ -431,12 +433,12 @@ Jeff Jacobs
 <section id="example-measuring-freedom-and-human-rights-1" class="slide level2 smaller title-10">
 <h2>Example: Measuring “Freedom” and “Human Rights”</h2>
 
-<img data-src="images/yells_at_cloud_edit.jpg" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/yells_at_cloud_edit.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="operationalization" class="slide level2 smaller crunch-title crunch-li crunch-figcaption crunch-ul crunch-quarto-layout-panel crunch-quarto-figure">
 <h2>Operationalization</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="oper-text" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[3,2]">
+<div class="quarto-layout-row">
+<div id="oper-text" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
 <ul>
 <li>Think of common claims made on basis of “data”:
 <ul>
@@ -448,15 +450,15 @@ Jeff Jacobs
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><a href="https://www.youtube.com/watch?v=cGI9MjeOTc0"><img data-src="images/huey_thumbnail.jpeg" width="550"></a></p>
+<p><a href="https://www.youtube.com/watch?v=cGI9MjeOTc0"><img data-src="images/huey_thumbnail.jpeg" class="quarto-figure quarto-figure-center" width="550" alt="Thumbnail from full video (Quarto crashes when I embed it directly 😑)"></a></p>
 <figcaption>Thumbnail from <a href="https://www.youtube.com/watch?v=cGI9MjeOTc0" target="_blank">full video</a> (Quarto crashes when I embed it directly 😑)</figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/mismeasuring.jpg"></p>
+<p><img data-src="images/mismeasuring.jpg" class="quarto-figure quarto-figure-center"></p>
 <figcaption><span class="citation" data-cites="stiglitz_mismeasuring_2010">Stiglitz, Sen, and Fitoussi (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span></figcaption>
 </figure>
 </div>
@@ -472,15 +474,15 @@ Jeff Jacobs
 <li>When did the colonized countries gain independence?</li>
 </ul>
 
-<img data-src="images/china_india.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="dreze_china_1991">Drèze and Sen (<a href="#/references" role="doc-biblioref" onclick="">1991</a>)</span></p></section>
+<img data-src="images/china_india.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><span class="citation" data-cites="dreze_china_1991">Drèze and Sen (<a href="#/references" role="doc-biblioref" onclick="">1991</a>)</span></p></section>
 <section id="implementation" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption crunch-images">
 <h2>Implementation</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/clery.jpg"></p>
+<p><img data-src="images/clery.jpg" class="quarto-figure quarto-figure-center"></p>
 <figcaption>From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span>, Ch. 6 (<a href="https://www.insidehighered.com/news/2014/07/17/colleges-often-win-reduction-fines-federal-campus-safety-violations" target="_blank">see also</a>)</figcaption>
 </figure>
 </div>
@@ -488,12 +490,12 @@ Jeff Jacobs
 <div id="implementation-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/arresting_citizenship.jpeg" width="410"></p>
+<p><img data-src="images/arresting_citizenship.jpeg" class="quarto-figure quarto-figure-center" width="410"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/weaver_fig62.jpeg" width="410"></p>
+<p><img data-src="images/weaver_fig62.jpeg" class="quarto-figure quarto-figure-center" width="410"></p>
 <figcaption>From <span class="citation" data-cites="lerman_arresting_2014">Lerman and Weaver (<a href="#/references" role="doc-biblioref" onclick="">2014</a>)</span></figcaption>
 </figure>
 </div>
@@ -503,28 +505,38 @@ Jeff Jacobs
 </section>
 <section id="fairness" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption">
 <h2>Fairness… 🧐</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[4,3]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div id="fig-fairness-left" class="quarto-figure quarto-figure-center" style="flex-basis: 57.1%;justify-content: center;">
-<figure>
+<div class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: flex-start;">
+<div id="fig-fairness-left" class="quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-fairness-left-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/lily_hu_1.svg" width="350"></p>
+<p><img data-src="images/lily_hu_1.svg" class="quarto-figure quarto-figure-center" width="350"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/lily_hu_2.svg" width="350"></p>
+<p><img data-src="images/lily_hu_2.svg" class="quarto-figure quarto-figure-center" width="350"></p>
 </figure>
 </div>
-<figcaption>Figure&nbsp;1: From Lily Hu, <a href="https://www.phenomenalworld.org/analysis/direct-effects/" target="_blank"><em>Direct Effects: How Should We Measure Racial Discrimination?</em></a>, <em>Phenomenal World</em>, 25 September 2020</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fairness-left-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: From Lily Hu, <a href="https://www.phenomenalworld.org/analysis/direct-effects/" target="_blank"><em>Direct Effects: How Should We Measure Racial Discrimination?</em></a>, <em>Phenomenal World</em>, 25 September 2020
+</figcaption>
 </figure>
 </div>
-<div id="fairness-right" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: center;">
-<div id="fig-kasy" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/kasy_abebe.jpeg"></p>
-<figcaption>Figure&nbsp;2: From <span class="citation" data-cites="kasy_fairness_2021">Kasy and Abebe (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></figcaption>
+</div>
+<div id="fairness-right" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: flex-start;">
+<div id="fig-kasy" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-kasy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/kasy_abebe.jpeg" class="quarto-figure quarto-figure-center">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kasy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: From <span class="citation" data-cites="kasy_fairness_2021">Kasy and Abebe (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>
+</figcaption>
 </figure>
 </div>
 </div>
@@ -534,48 +546,48 @@ Jeff Jacobs
 <section id="and-inverse-fairness" class="slide level2 smaller crunch-title">
 <h2>…And INVERSE Fairness 🤯</h2>
 
-<img data-src="images/inverse_fairness.jpeg" class="r-stretch quarto-figure-center"><p class="caption">From <em>Machine Learning What Policymakers Value</em> <span class="citation" data-cites="bjorkegren_machine_2022">(<a href="#/references" role="doc-biblioref" onclick="">Björkegren, Blumenstock, and Knight 2022</a>)</span></p></section></section>
+<img data-src="images/inverse_fairness.jpeg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">From <em>Machine Learning What Policymakers Value</em> <span class="citation" data-cites="bjorkegren_machine_2022">(<a href="#/references" role="doc-biblioref" onclick="">Björkegren, Blumenstock, and Knight 2022</a>)</span></p></section></section>
 <section>
 <section id="ethical-issues-in-applying-data-science" class="title-slide slide level1 title-09 not-title-slide crunch-quarto-layout-panel crunch-quarto-figure center" data-stack-name="Applications">
 <h1>Ethical Issues in <em>Applying</em> Data Science</h1>
 <center>
-<img data-src="images/airobot.jpeg" data-fig-align="center" width="800">
+<img data-src="images/airobot.jpeg" class="quarto-figure quarto-figure-center" width="800">
 </center>
 </section>
 <section id="facial-recognition-algorithms" class="slide level2 crunch-title smaller crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption">
 <h2>Facial Recognition Algorithms</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[[1,1],[1,1]]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/facial-recognition.webp" width="400"></p>
+<p><img data-src="images/facial-recognition.webp" class="quarto-figure quarto-figure-center" width="400"></p>
 <figcaption><span class="citation" data-cites="facia.ai_facial_2023">Facia.ai (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/wellcome_jewish_type_crop.jpeg" width="360"></p>
+<p><img data-src="images/wellcome_jewish_type_crop.jpeg" class="quarto-figure quarto-figure-center" width="360"></p>
 <figcaption><span class="citation" data-cites="wellcomecollection_composite_1890">Wellcome Collection (<a href="#/references" role="doc-biblioref" onclick="">1890</a>)</span></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/pixel-face-unlock.webp" width="400"></p>
+<p><img data-src="images/pixel-face-unlock.webp" class="quarto-figure quarto-figure-center" width="400"></p>
 <figcaption><span class="citation" data-cites="ouz_google_2023">Ouz (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/deep_learning_gay_detection_crop.jpeg" width="360"></p>
+<p><img data-src="images/deep_learning_gay_detection_crop.jpeg" class="quarto-figure quarto-figure-center" width="360"></p>
 <figcaption><span class="citation" data-cites="wang_deep_2018">Wang and Kosinski (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span></figcaption>
 </figure>
 </div>
@@ -585,41 +597,51 @@ Jeff Jacobs
 </section>
 <section id="large-language-models" class="slide level2 crunch-title smaller">
 <h2>Large Language Models</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[2,3]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
-<div id="fig-pronouns" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pronouns.jpg"></p>
-<figcaption>Figure&nbsp;3: From <span class="citation" data-cites="schiebinger_machine_2020">Schiebinger et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></figcaption>
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
+<div id="fig-pronouns" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-pronouns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/pronouns.jpg" class="quarto-figure quarto-figure-center">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pronouns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: From <span class="citation" data-cites="schiebinger_machine_2020">Schiebinger et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span>
+</figcaption>
 </figure>
 </div>
 </div>
-<div id="fig-embedding-bias-right" class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
-<figure>
-<p><img data-src="images/neutralizing.png" data-fig-align="center"> <img data-src="images/embeddings-equalizing.png" data-fig-align="center"></p>
-<figcaption>Figure&nbsp;4: From DeepLearning.AI’s <a href="https://www.coursera.org/lecture/nlp-sequence-models/debiasing-word-embeddings-zHASj" target="_blank">Deep Learning course</a></figcaption>
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<div id="fig-embedding-bias-right" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-embedding-bias-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/neutralizing.png" class="quarto-figure quarto-figure-center">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-embedding-bias-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: From DeepLearning.AI’s <a href="https://www.coursera.org/lecture/nlp-sequence-models/debiasing-word-embeddings-zHASj" target="_blank">Deep Learning course</a>
+</figcaption>
 </figure>
+</div>
 </div>
 </div>
 </div>
 </section>
 <section id="military-and-police-applications-of-ai" class="slide level2 crunch-title smaller">
 <h2>Military and Police Applications of AI</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/doroob.jpeg" width="410"></p>
+<p><img data-src="images/doroob.jpeg" class="quarto-figure quarto-figure-center" width="410"></p>
 <figcaption><span class="citation" data-cites="ayyub_app_2019">Ayyub (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/israel-ai.jpeg" width="300"></p>
+<p><img data-src="images/israel-ai.jpeg" class="quarto-figure quarto-figure-center" width="300"></p>
 <figcaption><span class="citation" data-cites="mcneil_israel_2022">McNeil (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></figcaption>
 </figure>
 </div>
@@ -633,7 +655,7 @@ Jeff Jacobs
 <h1>Machine Learning at 30,000 Feet</h1>
 
 </section>
-<section id="three-component-parts-of-machine-learning" class="slide level2">
+<section id="three-component-parts-of-machine-learning" class="slide level2 scrollable">
 <h2>Three Component Parts of Machine Learning</h2>
 <ol type="1">
 <li>A cool algorithm 😎😍</li>
@@ -644,7 +666,7 @@ Jeff Jacobs
 <section id="a-cool-algorithm" class="slide level2 smaller crunch-title">
 <h2>A Cool Algorithm 😎😍</h2>
 
-<img data-src="images/neural_network.svg" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/neural_network.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="training-data-with-acknowledged-bias" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure">
 <h2>Training Data With <em>Acknowledged</em> Bias</h2>
 <ul>
@@ -653,19 +675,19 @@ Jeff Jacobs
 <li>This can, at very least, help us brainstorm how we might “correct” for it (next slides!)</li>
 </ul></li>
 </ul>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/pronouns.jpg"></p>
+<p><img data-src="images/pronouns.jpg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/translate.jpg"></p>
+<p><img data-src="images/translate.jpg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -676,7 +698,7 @@ Jeff Jacobs
 <section id="word-embeddings" class="slide level2 smaller crunch-title">
 <h2>Word Embeddings</h2>
 
-<img data-src="images/bolukbasi2016.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="bolukbasi_man_2016">Bolukbasi et al. (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span></p><ul>
+<img data-src="images/bolukbasi2016.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><span class="citation" data-cites="bolukbasi_man_2016">Bolukbasi et al. (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span></p><ul>
 <li>Notice how the <span class="math inline">\(x\)</span>-axis has been <strong>selected</strong> by the researcher <strong>specifically</strong> to draw out (one) <strong>gendered dimension</strong> of language!
 <ul>
 <li><span class="math inline">\(\overrightarrow{\texttt{she}}\)</span> mapped to <span class="math inline">\(\langle -1,0\rangle\)</span>, <span class="math inline">\(\overrightarrow{\texttt{he}}\)</span> mapped to <span class="math inline">\(\langle 1,0 \rangle\)</span>, others <strong>projected</strong> onto this dimension</li>
@@ -685,20 +707,20 @@ Jeff Jacobs
 </section>
 <section id="removing-vs.-studying-biases" class="slide level2 smaller crunch-title">
 <h2>Removing vs.&nbsp;Studying Biases</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[1,2]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/kozlowski_full.jpeg"></p>
+<p><img data-src="images/kozlowski_full.jpeg" class="quarto-figure quarto-figure-center"></p>
 <figcaption>From <span class="citation" data-cites="kozlowski_geometry_2019">Kozlowski, Taddy, and Evans (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/wordbias_custom.jpeg"></p>
+<p><img data-src="images/wordbias_custom.jpeg" class="quarto-figure quarto-figure-center"></p>
 <figcaption><a href="https://www3.cs.stonybrook.edu/~mueller/research/pages/wordbias/" target="_blank">WordBias: An Interactive Tool for Discovering Intersectional Biases Encoded in Word Embeddings</a></figcaption>
 </figure>
 </div>
@@ -708,7 +730,7 @@ Jeff Jacobs
 </section>
 <section id="references" class="slide level2 crunch-title smaller scrollable">
 <h2>References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-ayyub_app_2019" class="csl-entry" role="listitem">
 Ayyub, Rami. 2019. <span>“App Aims to Help <span>Palestinian</span> Drivers Find Their Way Around Checkpoints.”</span> <em>The Times of Israel</em>, August. <a href="https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/">https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/</a>.
 </div>
@@ -759,8 +781,10 @@ Wellcome Collection. 1890. <span>“Composite <span>Photographs</span>: "<span>T
 </div>
 </div>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>DSAN 5450 Week 2: Machine Learning and Training Data</p>
+</div>
 </div>
 </section></section>
     </div>
@@ -790,7 +814,6 @@ Wellcome Collection. 1890. <span>“Composite <span>Photographs</span>: "<span>T
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1052,10 +1075,9 @@ Wellcome Collection. 1890. <span>“Composite <span>Photographs</span>: "<span>T
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1065,8 +1087,17 @@ Wellcome Collection. 1890. <span>“Composite <span>Photographs</span>: "<span>T
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 

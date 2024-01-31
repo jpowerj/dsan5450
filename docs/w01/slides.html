@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <link href="../favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-html/tabby.min.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -11,11 +11,11 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
 <link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.5.4">
 
   <meta name="author" content="Jeff Jacobs">
   <meta name="dcterms.date" content="2024-01-17">
-  <title>DSAN 5450 - Week 1: Introduction to the Course</title>
+  <title>DSAN 5450 – Week 1: Introduction to the Course</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -37,6 +37,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -180,7 +181,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -344,9 +346,8 @@
       margin-right: 0; 
     }
   </style>
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  
   <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
           <script type="text/javascript">
           window.PlotlyConfig = {MathJaxConfig: 'local'};
@@ -405,7 +406,7 @@ Jeff Jacobs
 <li><strong>University of Maryland</strong>: Computer Science, Math, Economics <em>(2008-2012)</em></li>
 </ul>
 
-<img data-src="images/jj_dc_map.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/jj_dc_map.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="grad-school" class="slide level2 crunch-title">
 <h2>Grad School</h2>
 <ul>
@@ -429,10 +430,10 @@ Jeff Jacobs
 <h2>Dissertation (Political Science + History)</h2>
 <p><em>“Our Word is Our Weapon”: Text-Analyzing Wars of Ideas from the French Revolution to the First Intifada</em></p>
 
-<img data-src="images/diss.png" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/diss.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="why-is-georgetown-having-me-teach-this" class="slide level2 smaller title-09 crunch-title crunch-ul crunch-quarto-layout-panel">
 <h2>Why Is Georgetown Having Me Teach This?</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[1,1]" data-layout-align="center">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="why-background-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <ul>
@@ -441,15 +442,16 @@ Jeff Jacobs
 <li>Pol philosophers distinguish “ancients” and “moderns” based on a crucial <strong>shift in perspective</strong>: ancients sought perfection, while <span class="citation" data-cites="rousseau_social_1762">Rousseau (<a href="#/references" role="doc-biblioref" onclick="">1762</a>)</span> “took men [sic] as they are, and laws as they could be”.</li>
 </ul>
 </div>
-<div id="fig-background-right" class="quarto-figure quarto-figure-center" style="flex-basis: 50.0%;justify-content: center;">
-<figure>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="fig-background-right" class="quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-background-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <center>
-<div class="cell" data-align="center" data-execution_count="2">
+<div id="cell-bg-sunburst" class="cell" data-align="center" data-execution_count="2">
 <div id="bg-sunburst" class="cell-output cell-output-display">
-
-<div>                            <div id="b21e2fb6-41b0-4255-8aa6-dfb30baaabbc" class="plotly-graph-div" style="height:400px; width:450px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("b21e2fb6-41b0-4255-8aa6-dfb30baaabbc")) {                    Plotly.newPlot(                        "b21e2fb6-41b0-4255-8aa6-dfb30baaabbc",                        [{"branchvalues":"total","customdata":[["Quant"],["Quant"],["Social Sci"],["Social Sci"],["Humanities"],["Humanities"],["Quant"],["Social Sci"]],"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"ids":["Quant\u002fMath\u003cbr\u003e(BS)","Quant\u002fCS\u003cbr\u003e(BS,MS)","Social Sci\u002fEcon\u003cbr\u003e(BS+Job)","Social Sci\u002fPol Econ\u003cbr\u003e(PhD Pt 2)","Humanities\u002fPol Phil\u003cbr\u003e(PhD Pt 1)","Humanities","Quant","Social Sci"],"labels":["Math\u003cbr\u003e(BS)","CS\u003cbr\u003e(BS,MS)","Econ\u003cbr\u003e(BS+Job)","Pol Econ\u003cbr\u003e(PhD Pt 2)","Pol Phil\u003cbr\u003e(PhD Pt 1)","Humanities","Quant","Social Sci"],"marker":{"colors":["#E69F00","#E69F00","#009E73","#009E73","#56B4E9","#56B4E9","#E69F00","#009E73"]},"name":"","parents":["Quant","Quant","Social Sci","Social Sci","Humanities","","",""],"values":[4,6,6,5,3,3,10,11],"type":"sunburst","hoverinfo":"skip"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"legend":{"tracegroupgap":0},"margin":{"t":0,"l":0,"r":0,"b":0},"height":400,"width":450},                        {"responsive": true}                    ).then(function(){
+<div>                            <div id="de9f556f-3b6c-4d44-a78d-175d35e4d77e" class="plotly-graph-div" style="height:400px; width:450px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("de9f556f-3b6c-4d44-a78d-175d35e4d77e")) {                    Plotly.newPlot(                        "de9f556f-3b6c-4d44-a78d-175d35e4d77e",                        [{"branchvalues":"total","customdata":[["Quant"],["Quant"],["Social Sci"],["Social Sci"],["Humanities"],["Humanities"],["Quant"],["Social Sci"]],"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"ids":["Quant\u002fMath\u003cbr\u003e(BS)","Quant\u002fCS\u003cbr\u003e(BS,MS)","Social Sci\u002fEcon\u003cbr\u003e(BS+Job)","Social Sci\u002fPol Econ\u003cbr\u003e(PhD Pt 2)","Humanities\u002fPol Phil\u003cbr\u003e(PhD Pt 1)","Humanities","Quant","Social Sci"],"labels":["Math\u003cbr\u003e(BS)","CS\u003cbr\u003e(BS,MS)","Econ\u003cbr\u003e(BS+Job)","Pol Econ\u003cbr\u003e(PhD Pt 2)","Pol Phil\u003cbr\u003e(PhD Pt 1)","Humanities","Quant","Social Sci"],"marker":{"colors":["#E69F00","#E69F00","#009E73","#009E73","#56B4E9","#56B4E9","#E69F00","#009E73"]},"name":"","parents":["Quant","Quant","Social Sci","Social Sci","Humanities","","",""],"values":[4,6,6,5,3,3,10,11],"type":"sunburst","hoverinfo":"skip"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"legend":{"tracegroupgap":0},"height":400,"width":450,"margin":{"t":0,"l":0,"r":0,"b":0}},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('b21e2fb6-41b0-4255-8aa6-dfb30baaabbc');
+var gd = document.getElementById('de9f556f-3b6c-4d44-a78d-175d35e4d77e');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -475,8 +477,12 @@ if (outputEl) {{
 </div>
 </div>
 </center>
-<figcaption>Figure&nbsp;1: Years spent questing in various dungeons of academia</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-background-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Years spent questing in various dungeons of academia
+</figcaption>
 </figure>
+</div>
 </div>
 </div>
 </div>
@@ -488,12 +494,12 @@ if (outputEl) {{
 <section id="dialectics" class="slide level2 smaller crunch-title">
 <h2>Dialectics</h2>
 
-<img data-src="images/angela_davis.webp" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/angela_davis.webp" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="my-backgroundbiases" class="slide level2 smaller crunch-title crunch-ul crunch-quarto-layout-figure crunch-quarto-figure">
 <h2>My Background/Biases</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[4,3]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div id="biases-left" class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: center;">
+<div id="biases-left" class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: flex-start;">
 <ul>
 <li>Raised in religious Jewish, right-wing (Revisionist Zionist) Republican environment</li>
 <li>“Encouraged” to emigrate to Israel for IDF service, but after learning history I renounced citizenship etc., family no longer big fans of me (Traumatic and scary to admit, ngl 🙈)</li>
@@ -504,7 +510,7 @@ if (outputEl) {{
 <div id="biases-right" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/land_map.png" width="420"></p>
+<p><img data-src="images/land_map.png" class="quarto-figure quarto-figure-center" width="420"></p>
 </figure>
 </div>
 </div>
@@ -513,24 +519,24 @@ if (outputEl) {{
 </section>
 <section id="on-the-one-hand" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-images crunch-quarto-figure">
 <h2>On the One Hand…</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
 <div id="emails-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/JJHATESPREADER.jpg" width="240"></p>
+<p><img data-src="images/JJHATESPREADER.jpg" class="quarto-figure quarto-figure-center" width="240"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/columbia_email.png" width="300"></p>
+<p><img data-src="images/columbia_email.png" class="quarto-figure quarto-figure-center" width="300"></p>
 </figure>
 </div>
 </div>
 <div id="emails-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/palestine_legal_crop.png" width="440"></p>
+<p><img data-src="images/palestine_legal_crop.png" class="quarto-figure quarto-figure-center" width="440"></p>
 </figure>
 </div>
 </div>
@@ -539,19 +545,19 @@ if (outputEl) {{
 </section>
 <section id="on-the-other-hand" class="slide level2 smaller crunch-title crunch-quarto-layout-panel">
 <h2>On the Other Hand…</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/2019-07-28 15.26.49-1.jpg" width="400"></p>
+<p><img data-src="images/2019-07-28 15.26.49-1.jpg" class="quarto-figure quarto-figure-center" width="400"></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/aya_and_leen_crop.jpeg" width="340"></p>
+<p><img data-src="images/aya_and_leen_crop.jpeg" class="quarto-figure quarto-figure-center" width="340"></p>
 </figure>
 </div>
 </div>
@@ -566,19 +572,19 @@ if (outputEl) {{
 </section>
 <section id="rules-of-thumb" class="slide level2 crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-images crunch-figcaption crunch-li-4 crunch-figures">
 <h2>Rules of Thumb</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="approach-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="approach-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Ask questions about <strong>power</strong>, about <strong>inequities</strong> and especially about <strong>structures</strong> that give rise to them!</li>
 <li>“Philosophers have hitherto only tried to <em>understand</em> the world; the point, however, is to <em>change</em> it.” <span class="citation" data-cites="marx_thesen_1845">(<a href="#/references" role="doc-biblioref" onclick="">Marx 1845</a>)</span></li>
 <li>Dialectical implication: the more we understand it the better we’ll be at changing it</li>
 </ul>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/camara3.jpg" width="320"></p>
+<p><img data-src="images/camara3.jpg" class="quarto-figure quarto-figure-center" width="320"></p>
 <figcaption><a href="https://www.rlmartstudio.com/product/paradox/" target="_blank">Ricardo Levins Morales Art Studio</a> / My office</figcaption>
 </figure>
 </div>
@@ -599,9 +605,9 @@ if (outputEl) {{
 </section>
 <section id="axiomatics" class="slide level2 smaller crunch-title crunch-images crunch-figcaption crunch-quarto-layout-panel crunch-quarto-figure">
 <h2>Axiomatics</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div id="axioms-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="axioms-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <!-- * In the field of math before the 20th century (and in our general understanding of math today), math was (is) a domain dealing with **truths**
 * Thanks to figures like Georg Cantor, David Hilbert, and especially Bertrand Russell and Alfred North Whitehead, mathematicians no longer believe that theorems of mathematics are "true" in an **absolute sense** -->
 <ul>
@@ -618,10 +624,10 @@ if (outputEl) {{
 </ul>
 <!-- * That is: mathematicians today recognize that **we cannot prove non-implicational statements**! We will never be able to prove an (atomic) statement $q$, only implicational statements: $p \implies q$ for some **axiom(s)** $q$. -->
 </div>
-<div id="axioms-book" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="axioms-book" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/axiomatics.jpg" width="360"></p>
+<p><img data-src="images/axiomatics.jpg" class="quarto-figure quarto-figure-center" width="360"></p>
 <figcaption><span class="citation" data-cites="steingart_axiomatics_2023">Steingart (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></figcaption>
 </figure>
 </div>
@@ -631,15 +637,15 @@ if (outputEl) {{
 </section>
 <section id="example-1-1-2" class="slide level2">
 <h2>Example: <span class="math inline">\(1 + 1 = 2\)</span></h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div id="one-one-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="one-one-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>How it’s taught: this is a <strong>rule</strong>, and if you <strong>don’t follow it</strong> you will be <strong>banished to eternal hellfire</strong></li>
 <li>How it’s proved: <span class="math inline">\(ZFC \implies [1 + 1 = 2]\)</span>, where <span class="math inline">\(ZFC\)</span> stands for the <strong><a href="https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory" target="_blank">Zermelo-Fraenkel Axioms with the Axiom of Choice</a>!</strong></li>
 </ul>
 </div>
-<div id="one-one-image" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="one-one-image" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/principia.jpeg"></p>
@@ -696,8 +702,8 @@ if (outputEl) {{
 <li><strong>Euclid’s Fifth Postulate</strong> <span class="math inline">\(P_5\)</span>: Given a line and a point not on it, exactly one line parallel to the given line can be drawn through the point.</li>
 </ul>
 <!-- Technically, when phrased in this way, this axiom is called <a href='https://en.wikipedia.org/wiki/Playfair%27s_axiom' target='_blank'>Playfair's Axiom</a>. But it is **logically equivalent** to Euclid's Fifth Postulate! -->
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-panel" data-layout="[1,1]" data-layout-align="center">
+<div class="quarto-layout-row">
 <div id="euclidean" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <center>
 <span class="math inline">\(P_5 \implies T = 180^\circ\)</span>
@@ -716,7 +722,7 @@ if (outputEl) {{
 </div>
 </div>
 </div>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <p><img data-src="images/playfair.png"></p>
@@ -724,7 +730,7 @@ if (outputEl) {{
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/geodesicsOnSphere.png" width="360"></p>
+<p><img data-src="images/geodesicsOnSphere.png" class="quarto-figure quarto-figure-center" width="360"></p>
 </figure>
 </div>
 </div>
@@ -738,9 +744,9 @@ if (outputEl) {{
 <li>Suddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds</li>
 <li>Do you give the hostage-taker the pie?</li>
 </ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="conseqentialism" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="conseqentialism" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <center>
 <strong>Consequentialist Ethics <span class="math inline">\(\implies\)</span> Yes</strong>
 </center>
@@ -750,7 +756,7 @@ if (outputEl) {{
 <li><em>(Ex: <strong>Utilitarianism</strong>, associated with British philosopher <strong>Jeremy Bentham</strong>)</em></li>
 </ul>
 </div>
-<div id="deontology" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="deontology" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <center>
 <strong>Deontological Ethics <span class="math inline">\(\implies\)</span> No</strong>
 </center>
@@ -770,7 +776,7 @@ if (outputEl) {{
 </section>
 <section id="descriptive-vs.-normative" class="slide level2 smaller crunch-title crunch-quarto-layout-panel">
 <h2>Descriptive vs.&nbsp;Normative</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout-align="center" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="norm-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <center>
@@ -808,6 +814,7 @@ if (outputEl) {{
 </section>
 <section id="the-is-ought-distinction" class="slide level2">
 <h2>The <em>Is-Ought Distinction</em></h2>
+<div title="Hume on *Is* vs. *Ought* [@hume_treatise_1739]">
 <div class="callout callout-note no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -820,6 +827,7 @@ if (outputEl) {{
 <li><em>I meet with no proposition that is not connected with an <strong>ought</strong>, or an <strong>ought not</strong>.</em></li>
 <li><em>This change is imperceptible; but is, however, of the last consequence.</em></li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -844,19 +852,19 @@ if (outputEl) {{
 </section>
 <section id="what-happens-when-we-confuse-the-two" class="slide level2 crunch-title title-08 crunch-quarto-layout-panel crunch-quarto-figure">
 <h2>What Happens When We Confuse The Two?</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="interpretation" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="interpretation" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Makes it impossible to “cross the boundary” between your own and others’ beliefs</li>
 <li><em>Collective welfare</em>: Bad on its own terms (see: wars, racism, etc.)</li>
 <li><em>Self-interest</em>: Prevents us from <strong>convincing</strong> other people of our arguments</li>
 </ul>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/geertz.jpg" width="360"></p>
+<p><img data-src="images/geertz.jpg" class="quarto-figure quarto-figure-center" width="360"></p>
 <figcaption><span class="citation" data-cites="geertz_interpretation_1973">Geertz (<a href="#/references" role="doc-biblioref" onclick="">1973</a>)</span></figcaption>
 </figure>
 </div>
@@ -866,9 +874,9 @@ if (outputEl) {{
 </section>
 <section id="collective-vs.-self-interest" class="slide level2 smaller crunch-quarto-layout-panel crunch-title crunch-quarto-figure">
 <h2>Collective vs.&nbsp;Self-Interest</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="collective-action" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="collective-action" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>Good for collection of people <span class="math inline">\(\; \nimplies\)</span> good for each individual person! (😰)</li>
 <li><span class="math inline">\(p\)</span> = <em>Unions improve everyone’s workplace conditions, whether or not they pay dues</em></li>
@@ -878,10 +886,10 @@ if (outputEl) {{
 <li><em>(Think also about how this applies to <strong>climate change policy</strong>)</em> 🤔</li>
 </ul>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/olson.jpg" width="350"></p>
+<p><img data-src="images/olson.jpg" class="quarto-figure quarto-figure-center" width="350"></p>
 <figcaption><span class="citation" data-cites="olson_logic_1965">Olson (<a href="#/references" role="doc-biblioref" onclick="">1965</a>)</span></figcaption>
 </figure>
 </div>
@@ -891,7 +899,7 @@ if (outputEl) {{
 </section>
 <section id="modeling-individual-vs.-societal-outcomes" class="slide level2 smaller title-09 crunch-title crunch-quarto-figure">
 <h2>Modeling Individual vs.&nbsp;Societal Outcomes</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="individual-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <ul>
@@ -899,15 +907,15 @@ if (outputEl) {{
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/schelling.svg" width="460"></p>
+<p><img data-src="images/schelling.svg" class="quarto-figure quarto-figure-center" width="460"></p>
 </figure>
 </div>
 <p><span class="math inline">\(\implies\)</span> <em>Social Outcome</em>: No Union</p>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/schelling.jpeg" width="340"></p>
+<p><img data-src="images/schelling.jpeg" class="quarto-figure quarto-figure-center" width="340"></p>
 <figcaption><span class="citation" data-cites="schelling_micromotives_1978">Schelling (<a href="#/references" role="doc-biblioref" onclick="">1978</a>)</span></figcaption>
 </figure>
 </div>
@@ -917,9 +925,9 @@ if (outputEl) {{
 </section>
 <section id="takeaway-for-policy-whitepapers" class="slide level2">
 <h2>Takeaway for Policy Whitepapers</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="takeaway-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="takeaway-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <ul>
 <li>You <em>cannot</em> (just) say, “doing <span class="math inline">\(x\)</span> will be better for society”</li>
 <li>You must <em>also</em> justify benefits to individuals, or at minimum, the individual organization and its stakeholders!</li>
@@ -929,7 +937,7 @@ if (outputEl) {{
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/commie.jpg"></p>
+<p><img data-src="images/commie.jpg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -952,22 +960,22 @@ if (outputEl) {{
 <li>What are the processes by which data is <strong>measured</strong>, <strong>recorded</strong>, and <strong>distributed</strong>?</li>
 </ul>
 
-<img data-src="images/missing-datasets.jpg" class="r-stretch quarto-figure-center"><p class="caption">The <a href="https://github.com/MimiOnuoha/missing-datasets" target="_blank">Library of Missing Datasets</a>. From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></section>
+<img data-src="images/missing-datasets.jpg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">The <a href="https://github.com/MimiOnuoha/missing-datasets" target="_blank">Library of Missing Datasets</a>. From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></section>
 <section id="example-measuring-freedom-and-human-rights" class="slide level2">
 <h2>Example: Measuring “Freedom” and “Human Rights”</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/freedom_house_funding.jpeg"></p>
+<p><img data-src="images/freedom_house_funding.jpeg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/state_dept_human_rights.jpeg"></p>
+<p><img data-src="images/state_dept_human_rights.jpeg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 </div>
@@ -976,9 +984,9 @@ if (outputEl) {{
 </section>
 <section id="operationalization" class="slide level2 smaller crunch-title crunch-li">
 <h2>Operationalization</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="oper-text" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[3,2]">
+<div class="quarto-layout-row">
+<div id="oper-text" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
 <ul>
 <li>Think about claims commonly made on the basis of “data”:
 <ul>
@@ -992,10 +1000,10 @@ if (outputEl) {{
 <video id="video_shortcode_videojs_video1" height="300" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="https://jpj.georgetown.domains/dsan5450-scratch/huey.mp4"></video>
 </center>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/mismeasuring.jpg"></p>
+<p><img data-src="images/mismeasuring.jpg" class="quarto-figure quarto-figure-center"></p>
 <figcaption><span class="citation" data-cites="stiglitz_mismeasuring_2010">Stiglitz, Sen, and Fitoussi (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span></figcaption>
 </figure>
 </div>
@@ -1011,15 +1019,15 @@ if (outputEl) {{
 <li>When did the colonized countries gain independence?</li>
 </ul>
 
-<img data-src="images/china_india.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="dreze_china_1991">Drèze and Sen (<a href="#/references" role="doc-biblioref" onclick="">1991</a>)</span></p></section>
+<img data-src="images/china_india.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><span class="citation" data-cites="dreze_china_1991">Drèze and Sen (<a href="#/references" role="doc-biblioref" onclick="">1991</a>)</span></p></section>
 <section id="implementation" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption crunch-images">
 <h2>Implementation</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/clery.jpg"></p>
+<p><img data-src="images/clery.jpg" class="quarto-figure quarto-figure-center"></p>
 <figcaption>From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span>, Ch. 6 (<a href="https://www.insidehighered.com/news/2014/07/17/colleges-often-win-reduction-fines-federal-campus-safety-violations" target="_blank">see also</a>)</figcaption>
 </figure>
 </div>
@@ -1027,12 +1035,12 @@ if (outputEl) {{
 <div id="implementation-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/arresting_citizenship.jpeg" width="410"></p>
+<p><img data-src="images/arresting_citizenship.jpeg" class="quarto-figure quarto-figure-center" width="410"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/weaver_fig62.jpeg" width="410"></p>
+<p><img data-src="images/weaver_fig62.jpeg" class="quarto-figure quarto-figure-center" width="410"></p>
 <figcaption>From <span class="citation" data-cites="lerman_arresting_2014">Lerman and Weaver (<a href="#/references" role="doc-biblioref" onclick="">2014</a>)</span></figcaption>
 </figure>
 </div>
@@ -1042,28 +1050,38 @@ if (outputEl) {{
 </section>
 <section id="fairness" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption">
 <h2>Fairness… 🧐</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[4,3]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div id="fig-fairness-left" class="quarto-figure quarto-figure-center" style="flex-basis: 57.1%;justify-content: center;">
-<figure>
+<div class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: flex-start;">
+<div id="fig-fairness-left" class="quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-fairness-left-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/lily_hu_1.svg" width="350"></p>
+<p><img data-src="images/lily_hu_1.svg" class="quarto-figure quarto-figure-center" width="350"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/lily_hu_2.svg" width="350"></p>
+<p><img data-src="images/lily_hu_2.svg" class="quarto-figure quarto-figure-center" width="350"></p>
 </figure>
 </div>
-<figcaption>Figure&nbsp;2: From Lily Hu, <a href="https://www.phenomenalworld.org/analysis/direct-effects/" target="_blank"><em>Direct Effects: How Should We Measure Racial Discrimination?</em></a>, <em>Phenomenal World</em>, 25 September 2020</figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fairness-left-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: From Lily Hu, <a href="https://www.phenomenalworld.org/analysis/direct-effects/" target="_blank"><em>Direct Effects: How Should We Measure Racial Discrimination?</em></a>, <em>Phenomenal World</em>, 25 September 2020
+</figcaption>
 </figure>
 </div>
-<div id="fairness-right" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: center;">
-<div id="fig-kasy" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/kasy_abebe.jpeg"></p>
-<figcaption>Figure&nbsp;3: From <span class="citation" data-cites="kasy_fairness_2021">Kasy and Abebe (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></figcaption>
+</div>
+<div id="fairness-right" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: flex-start;">
+<div id="fig-kasy" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-kasy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/kasy_abebe.jpeg" class="quarto-figure quarto-figure-center">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kasy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: From <span class="citation" data-cites="kasy_fairness_2021">Kasy and Abebe (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>
+</figcaption>
 </figure>
 </div>
 </div>
@@ -1073,48 +1091,48 @@ if (outputEl) {{
 <section id="and-inverse-fairness" class="slide level2 smaller crunch-title">
 <h2>…And INVERSE Fairness 🤯</h2>
 
-<img data-src="images/inverse_fairness.jpeg" class="r-stretch quarto-figure-center"><p class="caption">From <em>Machine Learning What Policymakers Value</em> <span class="citation" data-cites="bjorkegren_machine_2022">(<a href="#/references" role="doc-biblioref" onclick="">Björkegren, Blumenstock, and Knight 2022</a>)</span></p></section></section>
+<img data-src="images/inverse_fairness.jpeg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">From <em>Machine Learning What Policymakers Value</em> <span class="citation" data-cites="bjorkegren_machine_2022">(<a href="#/references" role="doc-biblioref" onclick="">Björkegren, Blumenstock, and Knight 2022</a>)</span></p></section></section>
 <section>
 <section id="ethical-issues-in-applying-data-science" class="title-slide slide level1 title-09 not-title-slide crunch-quarto-layout-panel crunch-quarto-figure center" data-stack-name="Applications">
 <h1>Ethical Issues in <em>Applying</em> Data Science</h1>
 <center>
-<img data-src="images/airobot.jpeg" data-fig-align="center" width="800">
+<img data-src="images/airobot.jpeg" class="quarto-figure quarto-figure-center" width="800">
 </center>
 </section>
 <section id="facial-recognition-algorithms" class="slide level2 crunch-title smaller crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption">
 <h2>Facial Recognition Algorithms</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[[1,1],[1,1]]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/facial-recognition.webp" width="400"></p>
+<p><img data-src="images/facial-recognition.webp" class="quarto-figure quarto-figure-center" width="400"></p>
 <figcaption><span class="citation" data-cites="facia.ai_facial_2023">Facia.ai (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/wellcome_jewish_type_crop.jpeg" width="360"></p>
+<p><img data-src="images/wellcome_jewish_type_crop.jpeg" class="quarto-figure quarto-figure-center" width="360"></p>
 <figcaption><span class="citation" data-cites="wellcomecollection_composite_1890">Wellcome Collection (<a href="#/references" role="doc-biblioref" onclick="">1890</a>)</span></figcaption>
 </figure>
 </div>
 </div>
 </div>
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/pixel-face-unlock.webp" width="400"></p>
+<p><img data-src="images/pixel-face-unlock.webp" class="quarto-figure quarto-figure-center" width="400"></p>
 <figcaption><span class="citation" data-cites="ouz_google_2023">Ouz (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/deep_learning_gay_detection_crop.jpeg" width="360"></p>
+<p><img data-src="images/deep_learning_gay_detection_crop.jpeg" class="quarto-figure quarto-figure-center" width="360"></p>
 <figcaption><span class="citation" data-cites="wang_deep_2018">Wang and Kosinski (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span></figcaption>
 </figure>
 </div>
@@ -1124,41 +1142,51 @@ if (outputEl) {{
 </section>
 <section id="large-language-models" class="slide level2 crunch-title smaller">
 <h2>Large Language Models</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[2,3]">
 <div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
-<div id="fig-pronouns" class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/pronouns.jpg"></p>
-<figcaption>Figure&nbsp;4: From <span class="citation" data-cites="schiebinger_machine_2020">Schiebinger et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></figcaption>
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
+<div id="fig-pronouns" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-pronouns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/pronouns.jpg" class="quarto-figure quarto-figure-center">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pronouns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: From <span class="citation" data-cites="schiebinger_machine_2020">Schiebinger et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span>
+</figcaption>
 </figure>
 </div>
 </div>
-<div id="fig-embedding-bias-right" class="quarto-figure quarto-figure-center" style="flex-basis: 60.0%;justify-content: center;">
-<figure>
-<p><img data-src="images/neutralizing.png" data-fig-align="center"> <img data-src="images/embeddings-equalizing.png" data-fig-align="center"></p>
-<figcaption>Figure&nbsp;5: From DeepLearning.AI’s <a href="https://www.coursera.org/lecture/nlp-sequence-models/debiasing-word-embeddings-zHASj" target="_blank">Deep Learning course</a></figcaption>
+<div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<div id="fig-embedding-bias-right" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-embedding-bias-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/neutralizing.png" class="quarto-figure quarto-figure-center">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-embedding-bias-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: From DeepLearning.AI’s <a href="https://www.coursera.org/lecture/nlp-sequence-models/debiasing-word-embeddings-zHASj" target="_blank">Deep Learning course</a>
+</figcaption>
 </figure>
+</div>
 </div>
 </div>
 </div>
 </section>
 <section id="military-and-police-applications-of-ai" class="slide level2 crunch-title smaller">
 <h2>Military and Police Applications of AI</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/doroob.jpeg" width="410"></p>
+<p><img data-src="images/doroob.jpeg" class="quarto-figure quarto-figure-center" width="410"></p>
 <figcaption><span class="citation" data-cites="ayyub_app_2019">Ayyub (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/israel-ai.jpeg" width="300"></p>
+<p><img data-src="images/israel-ai.jpeg" class="quarto-figure quarto-figure-center" width="300"></p>
 <figcaption><span class="citation" data-cites="mcneil_israel_2022">McNeil (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></figcaption>
 </figure>
 </div>
@@ -1177,30 +1205,30 @@ if (outputEl) {{
 </section>
 <section id="from-week-7-onwards-you-work-at-a-think-tank" class="slide level2 smaller crunch-title title-11 crunch-images crunch-quarto-figure">
 <h2>From Week 7 Onwards, You Work At A Think Tank</h2>
-<div class="quarto-layout-panel">
+<div class="quarto-layout-panel" data-layout="[3,4]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="think-tank-left" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/aei_crop.jpeg" width="360"></p>
+<p><img data-src="images/aei_crop.jpeg" class="quarto-figure quarto-figure-center" width="360"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/aei2_crop.jpeg" width="360"></p>
+<p><img data-src="images/aei2_crop.jpeg" class="quarto-figure quarto-figure-center" width="360"></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/morozov2.jpeg" width="360"></p>
+<p><img data-src="images/morozov2.jpeg" class="quarto-figure quarto-figure-center" width="360"></p>
 <figcaption><span class="citation" data-cites="morozov_socialize_2015">Morozov (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span></figcaption>
 </figure>
 </div>
 </div>
-<div id="think-tank-right" class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: center;">
+<div id="think-tank-right" class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/techtopus.jpeg"></p>
+<p><img data-src="images/techtopus.jpeg" class="quarto-figure quarto-figure-center"></p>
 <figcaption>From <span class="citation" data-cites="ames_techtopus_2014">Ames (<a href="#/references" role="doc-biblioref" onclick="">2014</a>)</span></figcaption>
 </figure>
 </div>
@@ -1210,7 +1238,7 @@ if (outputEl) {{
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-ames_techtopus_2014" class="csl-entry" role="listitem">
 Ames, Mark. 2014. <span>“The <span>Techtopus</span>: <span>How Silicon Valley</span>’s Most Celebrated <span>CEOs</span> Conspired to Drive down 100,000 Tech Engineers’ Wages,”</span> January. <a href="http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/">http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/</a>.
 </div>
@@ -1289,8 +1317,10 @@ Whitehead, Alfred North, and Bertrand Russell. 1910. <em>Principia <span>Mathema
 </div>
 <!-- ![@senor_startup_2011](images/startup-nation.jpg){fig-align="center" width="300"} -->
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>DSAN 5450 Week 1: Introduction</p>
+</div>
 </div>
 </section></section>
     </div>
@@ -1320,7 +1350,6 @@ Whitehead, Alfred North, and Bertrand Russell. 1910. <em>Principia <span>Mathema
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1582,10 +1611,9 @@ Whitehead, Alfred North, and Bertrand Russell. 1910. <em>Principia <span>Mathema
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1595,8 +1623,17 @@ Whitehead, Alfred North, and Bertrand Russell. 1910. <em>Principia <span>Mathema
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
@@ -1652,7 +1689,7 @@ Whitehead, Alfred North, and Bertrand Russell. 1910. <em>Principia <span>Mathema
       }
     });
     </script>
-    
+    <script>videojs(video_shortcode_videojs_video1);</script>
     
 
 </body></html>

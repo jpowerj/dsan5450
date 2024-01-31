@@ -9,10 +9,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.5.4">
 
   <meta name="author" content="Jeff Jacobs">
-  <title>DSAN 5450 - Week 5: Anonymity, Privacy-Preserving Computation</title>
+  <title>DSAN 5450 – Week 5: Anonymity, Privacy-Preserving Computation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -34,6 +34,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -177,7 +178,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -411,11 +413,11 @@ Jeff Jacobs
 <li>Enable <strong>mathematical</strong> analysis of a privacy mechanism, via optimization with respect to the accuracy-privacy tradeoff:</li>
 </ul>
 
-<img data-src="images/accuracy_privacy.svg" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/accuracy_privacy.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="pareto-improvements-and-the-pareto-frontier" class="slide level2 smaller title-12">
 <h2>Pareto Improvements and the Pareto Frontier</h2>
 
-<img data-src="images/pareto.svg" class="r-stretch quarto-figure-center"></section>
+<img data-src="images/pareto.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="varepsilon-differential-privacy-definition" class="slide level2">
 <h2><span class="math inline">\(\varepsilon\)</span>-Differential Privacy Definition</h2>
 <ul>
@@ -481,8 +483,8 @@ Jeff Jacobs
 <ul>
 <li><strong>Logically</strong>: any boolean function can be decomposed (e.g., in “conjunctive normal form”) into <span class="cb1"><strong>negation</strong></span> (unary) and <span class="cb2"><strong>conjunction</strong></span> (binary). Here’s both, using only <code>NAND</code>!</li>
 </ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-panel" data-layout-align="center" data-layout="[1,1]">
+<div class="quarto-layout-row">
 <div id="negation" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <center class="center-head">
 <strong>Negation</strong> (<span class="math inline">\(\neg\)</span>)
@@ -492,21 +494,21 @@ Jeff Jacobs
 <table class="centered-table" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th"><span class="math inline">\(p\)</span></th>
-<th class="cb1a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(\neg p\)</span></th>
-<th class="cb3a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(p \barwedge p\)</span></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(p\)</span></th>
+<th class="cb1a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(\neg p\)</span></th>
+<th class="cb3a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(p \barwedge p\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>0</td>
-<td class="cb1a-bg">1</td>
-<td class="cb3a-bg">1</td>
+<td style="text-align: left;">0</td>
+<td class="cb1a-bg" style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">1</td>
 </tr>
 <tr class="even">
-<td>1</td>
-<td class="cb1a-bg">0</td>
-<td class="cb3a-bg">0</td>
+<td style="text-align: left;">1</td>
+<td class="cb1a-bg" style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
 </tr>
 </tbody>
 </table>
@@ -520,41 +522,41 @@ Jeff Jacobs
 <table class="centered-table" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th"><span class="math inline">\(p\)</span></th>
-<th data-quarto-table-cell-role="th"><span class="math inline">\(q\)</span></th>
-<th class="cb2a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(p \wedge q\)</span></th>
-<th data-quarto-table-cell-role="th"><span class="math inline">\(p \barwedge q\)</span></th>
-<th class="cb3a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(\left(p \barwedge q\right) \barwedge \left(p \barwedge q\right)\)</span></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(p\)</span></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(q\)</span></th>
+<th class="cb2a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(p \wedge q\)</span></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(p \barwedge q\)</span></th>
+<th class="cb3a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(\left(p \barwedge q\right) \barwedge \left(p \barwedge q\right)\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>0</td>
-<td>0</td>
-<td class="cb2a-bg">0</td>
-<td>1</td>
-<td class="cb3a-bg">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td class="cb2a-bg" style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
 </tr>
 <tr class="even">
-<td>0</td>
-<td>1</td>
-<td class="cb2a-bg">0</td>
-<td>1</td>
-<td class="cb3a-bg">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td class="cb2a-bg" style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
 </tr>
 <tr class="odd">
-<td>1</td>
-<td>0</td>
-<td class="cb2a-bg">0</td>
-<td>1</td>
-<td class="cb3a-bg">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td class="cb2a-bg" style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
 </tr>
 <tr class="even">
-<td>1</td>
-<td>1</td>
-<td class="cb2a-bg">1</td>
-<td>0</td>
-<td class="cb3a-bg">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td class="cb2a-bg" style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">1</td>
 </tr>
 </tbody>
 </table>
@@ -686,8 +688,8 @@ Jeff Jacobs
 <li><strong>Mathematically</strong>: (1) Math can be performed in <strong>base 2</strong>, and (2) If we have a way to <span class="cb1"><strong>add</strong></span> and <span class="cb2"><strong>multiply</strong></span> in base 2, we have the basic <strong>algebraic ring</strong> <span class="math inline">\(\mathbb{Z}_2\)</span> used for “doing math”!</li>
 <li>But, let’s look at what happens when we do math in <span class="math inline">\(\mathbb{Z}_2\)</span>:</li>
 </ul>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
 <div id="addition" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <center class="center-head">
 <strong>Addition</strong> (<span class="math inline">\(+\)</span>)
@@ -697,36 +699,36 @@ Jeff Jacobs
 <table class="centered-table" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th"><span class="math inline">\(x\)</span></th>
-<th data-quarto-table-cell-role="th"><span class="math inline">\(y\)</span></th>
-<th class="cb1a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(x +_{\mathbb{Z}_2} y\)</span></th>
-<th class="cb3a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(x \oplus y\)</span></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(x\)</span></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(y\)</span></th>
+<th class="cb1a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(x +_{\mathbb{Z}_2} y\)</span></th>
+<th class="cb3a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(x \oplus y\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>0</td>
-<td>0</td>
-<td class="cb1a-bg">0</td>
-<td class="cb3a-bg">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td class="cb1a-bg" style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
 </tr>
 <tr class="even">
-<td>0</td>
-<td>1</td>
-<td class="cb1a-bg">1</td>
-<td class="cb3a-bg">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td class="cb1a-bg" style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">1</td>
 </tr>
 <tr class="odd">
-<td>1</td>
-<td>0</td>
-<td class="cb1a-bg">1</td>
-<td class="cb3a-bg">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td class="cb1a-bg" style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">1</td>
 </tr>
 <tr class="even">
-<td>1</td>
-<td>1</td>
-<td class="cb1a-bg">0</td>
-<td class="cb3a-bg">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td class="cb1a-bg" style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
 </tr>
 </tbody>
 </table>
@@ -742,36 +744,36 @@ Jeff Jacobs
 <table class="centered-table" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th"><span class="math inline">\(x\)</span></th>
-<th data-quarto-table-cell-role="th"><span class="math inline">\(y\)</span></th>
-<th class="cb2a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(x \times_{\mathbb{Z}_2} y\)</span></th>
-<th class="cb3a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(x \wedge y\)</span></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(x\)</span></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(y\)</span></th>
+<th class="cb2a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(x \times_{\mathbb{Z}_2} y\)</span></th>
+<th class="cb3a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(x \wedge y\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>0</td>
-<td>0</td>
-<td class="cb2a-bg">0</td>
-<td class="cb3a-bg">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td class="cb2a-bg" style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
 </tr>
 <tr class="even">
-<td>0</td>
-<td>1</td>
-<td class="cb2a-bg">0</td>
-<td class="cb3a-bg">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td class="cb2a-bg" style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
 </tr>
 <tr class="odd">
-<td>1</td>
-<td>0</td>
-<td class="cb2a-bg">0</td>
-<td class="cb3a-bg">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td class="cb2a-bg" style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
 </tr>
 <tr class="even">
-<td>1</td>
-<td>1</td>
-<td class="cb2a-bg">1</td>
-<td class="cb3a-bg">1</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td class="cb2a-bg" style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">1</td>
 </tr>
 </tbody>
 </table>
@@ -818,16 +820,20 @@ Jeff Jacobs
 </section>
 <section id="application-zero-knowledge-proofs-and-voting" class="slide level2 smaller title-09 crunch-quarto-figure crunch-figcaption crunch-iframe">
 <h2>Application: Zero-Knowledge Proofs and Voting</h2>
-<div id="fig-voting" class="quarto-figure quarto-figure-center">
-<figure>
+<div id="fig-voting" class="quarto-figure quarto-figure-center quarto-float">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-voting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <iframe data-external="1" src="https://www.youtube.com/embed/BYRTvoZ3Rho" width="100%" height="600" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<figcaption>Figure&nbsp;1: <a href="https://www.youtube.com/watch?v=BYRTvoZ3Rho" target="_blank">https://www.youtube.com/watch?v=BYRTvoZ3Rho</a></figcaption>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-voting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <a href="https://www.youtube.com/watch?v=BYRTvoZ3Rho" target="_blank">https://www.youtube.com/watch?v=BYRTvoZ3Rho</a>
+</figcaption>
 </figure>
 </div>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-dworkin_taking_1977" class="csl-entry" role="listitem">
 Dworkin, Ronald. 1977. <em>Taking <span>Rights Seriously</span></em>. <span>A&amp;C Black</span>.
 </div>
@@ -839,8 +845,10 @@ Rubin, Donald B. 1993. <span>“Statistical <span>Disclosure Limitation</span>.�
 </div>
 </div>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>DSAN 5450 Week 5: Privacy-Preserving Computation</p>
+</div>
 </div>
 </section></section>
     </div>
@@ -870,7 +878,6 @@ Rubin, Donald B. 1993. <span>“Statistical <span>Disclosure Limitation</span>.�
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1132,10 +1139,9 @@ Rubin, Donald B. 1993. <span>“Statistical <span>Disclosure Limitation</span>.�
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1145,8 +1151,17 @@ Rubin, Donald B. 1993. <span>“Statistical <span>Disclosure Limitation</span>.�
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
