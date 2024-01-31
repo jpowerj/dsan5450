@@ -1439,7 +1439,7 @@ A_i = \begin{cases}
 </ul>
 </section>
 <section id="fairness-through-equalized-positive-rates" class="slide level2 crunch-title crunch-ul title-08">
-<h2>“Fairness” Through Equalized Positive Rates</h2>
+<h2>“Fairness” Through Equalized <em>Positive</em> Rates</h2>
 <p><span class="math display">\[
 \Pr(D = 1 \mid A = 0) = \Pr(D = 1 \mid A = 1)
 \]</span></p>
@@ -1451,8 +1451,37 @@ A_i = \begin{cases}
 D \perp A \iff \Pr(D = d, A = a) = \Pr(D = d)\Pr(A = a)
 \]</span></p>
 </section>
-<section id="baby-steps-a-less-busy-confusion-matrix" class="slide level2 title-09 crunch-title smaller">
-<h2>Baby Steps: A Less Busy Confusion Matrix</h2>
+<section id="fairness-through-equalized-error-rates" class="slide level2 smaller crunch-title title-12">
+<h2>“Fairness” Through Equalized <em>Error</em> Rates</h2>
+<ul>
+<li>Equalized <strong>False Positive Rate</strong>:</li>
+</ul>
+<p><span class="math display">\[
+\Pr(D = 1 \mid Y = 0, A = 0) = \Pr(D = 1 \mid Y = 0, A = 1)
+\]</span></p>
+<ul>
+<li>Equalized <strong>False Negative Rate</strong>:</li>
+</ul>
+<p><span class="math display">\[
+\Pr(D = 0 \mid Y = 1, A = 0) = \Pr(D = 0 \mid Y = 1, A = 1)
+\]</span></p>
+<ul>
+<li>For general (non-binary) attributes: <span class="math inline">\((D \perp A) \mid Y\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+\Pr(D = d, A = a \mid Y = y) = \Pr(D = d \mid Y = y)\Pr(A = a \mid Y = y)
+\]</span></p>
+</section>
+<section id="no-more-equations" class="slide level2 smaller">
+<h2>NO MORE EQUATIONS! 😤</h2>
+<ul>
+<li>Depending on your background and/or learning style (say, visual vs.&nbsp;auditory), you may be able to look at equations on previous slides and “see” what they’re “saying”</li>
+<li>If your brain works similarly to <strong>mine</strong>, however, your eyes glazed over, you began dissociating, planning an escape route, etc.</li>
+<li>If you’re in the latter group, welcome to the <strong>cult of Probabilistic Graphical Models</strong> 😈</li>
+</ul>
+</section>
+<section id="baby-steps-a-real-world-confusion-matrix" class="slide level2 title-11 crunch-title smaller">
+<h2>Baby Steps: A Real-World Confusion Matrix</h2>
 <table style="width:99%;">
 <colgroup>
 <col style="width: 27%">

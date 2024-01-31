@@ -1860,11 +1860,31 @@
     ]
   },
   {
-    "objectID": "w03/index.html#baby-steps-a-less-busy-confusion-matrix",
-    "href": "w03/index.html#baby-steps-a-less-busy-confusion-matrix",
+    "objectID": "w03/index.html#fairness-through-equalized-error-rates",
+    "href": "w03/index.html#fairness-through-equalized-error-rates",
     "title": "Week 3: (Descriptive) Fairness in AI",
-    "section": "Baby Steps: A Less Busy Confusion Matrix",
-    "text": "Baby Steps: A Less Busy Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (recidivism)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)",
+    "section": "“Fairness” Through Equalized Error Rates",
+    "text": "“Fairness” Through Equalized Error Rates\n\nEqualized False Positive Rate:\n\n\\[\n\\Pr(D = 1 \\mid Y = 0, A = 0) = \\Pr(D = 1 \\mid Y = 0, A = 1)\n\\]\n\nEqualized False Negative Rate:\n\n\\[\n\\Pr(D = 0 \\mid Y = 1, A = 0) = \\Pr(D = 0 \\mid Y = 1, A = 1)\n\\]\n\nFor general (non-binary) attributes: \\((D \\perp A) \\mid Y\\):\n\n\\[\n\\Pr(D = d, A = a \\mid Y = y) = \\Pr(D = d \\mid Y = y)\\Pr(A = a \\mid Y = y)\n\\]",
+    "crumbs": [
+      "Week 3: Jan 30"
+    ]
+  },
+  {
+    "objectID": "w03/index.html#no-more-equations",
+    "href": "w03/index.html#no-more-equations",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "NO MORE EQUATIONS! 😤",
+    "text": "NO MORE EQUATIONS! 😤\n\nDepending on your background and/or learning style (say, visual vs. auditory), you may be able to look at equations on previous slides and “see” what they’re “saying”\nIf your brain works similarly to mine, however, your eyes glazed over, you began dissociating, planning an escape route, etc.\nIf you’re in the latter group, welcome to the cult of Probabilistic Graphical Models 😈",
+    "crumbs": [
+      "Week 3: Jan 30"
+    ]
+  },
+  {
+    "objectID": "w03/index.html#baby-steps-a-real-world-confusion-matrix",
+    "href": "w03/index.html#baby-steps-a-real-world-confusion-matrix",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Baby Steps: A Real-World Confusion Matrix",
+    "text": "Baby Steps: A Real-World Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (recidivism)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)",
     "crumbs": [
       "Week 3: Jan 30"
     ]
@@ -2198,11 +2218,25 @@
     "text": "“Fairness” Through Equalized Positive Rates\n\\[\n\\Pr(D = 1 \\mid A = 0) = \\Pr(D = 1 \\mid A = 1)\n\\]\n\nThis works specifically for discrete, binary-valued categories\nFor general attributes (whether discrete or continuous!), generalizes to:\n\n\\[\nD \\perp A \\iff \\Pr(D = d, A = a) = \\Pr(D = d)\\Pr(A = a)\n\\]"
   },
   {
-    "objectID": "w03/slides.html#baby-steps-a-less-busy-confusion-matrix",
-    "href": "w03/slides.html#baby-steps-a-less-busy-confusion-matrix",
+    "objectID": "w03/slides.html#fairness-through-equalized-error-rates",
+    "href": "w03/slides.html#fairness-through-equalized-error-rates",
     "title": "Week 3: (Descriptive) Fairness in AI",
-    "section": "Baby Steps: A Less Busy Confusion Matrix",
-    "text": "Baby Steps: A Less Busy Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (recidivism)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)"
+    "section": "“Fairness” Through Equalized Error Rates",
+    "text": "“Fairness” Through Equalized Error Rates\n\nEqualized False Positive Rate:\n\n\\[\n\\Pr(D = 1 \\mid Y = 0, A = 0) = \\Pr(D = 1 \\mid Y = 0, A = 1)\n\\]\n\nEqualized False Negative Rate:\n\n\\[\n\\Pr(D = 0 \\mid Y = 1, A = 0) = \\Pr(D = 0 \\mid Y = 1, A = 1)\n\\]\n\nFor general (non-binary) attributes: \\((D \\perp A) \\mid Y\\):\n\n\\[\n\\Pr(D = d, A = a \\mid Y = y) = \\Pr(D = d \\mid Y = y)\\Pr(A = a \\mid Y = y)\n\\]"
+  },
+  {
+    "objectID": "w03/slides.html#no-more-equations",
+    "href": "w03/slides.html#no-more-equations",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "NO MORE EQUATIONS! 😤",
+    "text": "NO MORE EQUATIONS! 😤\n\nDepending on your background and/or learning style (say, visual vs. auditory), you may be able to look at equations on previous slides and “see” what they’re “saying”\nIf your brain works similarly to mine, however, your eyes glazed over, you began dissociating, planning an escape route, etc.\nIf you’re in the latter group, welcome to the cult of Probabilistic Graphical Models 😈"
+  },
+  {
+    "objectID": "w03/slides.html#baby-steps-a-real-world-confusion-matrix",
+    "href": "w03/slides.html#baby-steps-a-real-world-confusion-matrix",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "Baby Steps: A Real-World Confusion Matrix",
+    "text": "Baby Steps: A Real-World Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (recidivism)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)"
   },
   {
     "objectID": "w03/slides.html#references",

@@ -832,7 +832,7 @@ $$
 * But this (in a precise, mathematical sense: namely, *isomorphism*) implies that we're treating **racial categorization** as the same type of phenomenon as **driving on left or right side of road** (see: prev slides on why we make the descriptive vs. normative distinction)
 * (See also: Sweden's <a href='https://en.wikipedia.org/wiki/Dagen_H' target='_blank'>Dagen H</a>!)
 
-## "Fairness" Through Equalized Positive Rates {.crunch-title .crunch-ul .title-08}
+## "Fairness" Through Equalized *Positive* Rates {.crunch-title .crunch-ul .title-08}
 
 $$
 \Pr(D = 1 \mid A = 0) = \Pr(D = 1 \mid A = 1)
@@ -845,7 +845,33 @@ $$
 D \perp A \iff \Pr(D = d, A = a) = \Pr(D = d)\Pr(A = a)
 $$
 
-## Baby Steps: A Less Busy Confusion Matrix {.title-09 .crunch-title .smaller}
+## "Fairness" Through Equalized *Error* Rates {.smaller .crunch-title .title-12}
+
+* Equalized **False Positive Rate**:
+
+$$
+\Pr(D = 1 \mid Y = 0, A = 0) = \Pr(D = 1 \mid Y = 0, A = 1)
+$$
+
+* Equalized **False Negative Rate**:
+
+$$
+\Pr(D = 0 \mid Y = 1, A = 0) = \Pr(D = 0 \mid Y = 1, A = 1)
+$$
+
+* For general (non-binary) attributes: $(D \perp A) \mid Y$:
+
+$$
+\Pr(D = d, A = a \mid Y = y) = \Pr(D = d \mid Y = y)\Pr(A = a \mid Y = y)
+$$
+
+## NO MORE EQUATIONS! 😤 {.smaller}
+
+* Depending on your background and/or learning style (say, visual vs. auditory), you may be able to look at equations on previous slides and "see" what they're "saying"
+* If your brain works similarly to **mine**, however, your eyes glazed over, you began dissociating, planning an escape route, etc.
+* If you're in the latter group, welcome to the **cult of Probabilistic Graphical Models** 😈
+
+## Baby Steps: A Real-World Confusion Matrix {.title-11 .crunch-title .smaller}
 
 | | Labeled Low-Risk | Labeled High-Risk |
 | - | - | - |
