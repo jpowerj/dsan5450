@@ -38,7 +38,144 @@ format:
 
 :::
 
-# Defining Fairness {data-stack-name="Overview"}
+
+## Fairness Through Unawareness and Proxy Discrimination {.smaller .crunch-title}
+
+![From @tschantz_what_2022](images/proxy_paper.jpg){fig-align="center"}
+
+## Causal Fairness
+
+* From DSAN 5100 you know things like $\mathbb{E}[Y \mid X], \text{Cov}(X,Y)$, $X \perp Y$, and estimating $Y = \beta_0 + \beta_1X$
+* For **causal inference** however, there is a **qualitatively different** and **more strict** standard: $\mathbb{E}[Y \mid do(X)]$
+  * Literally called "Do-Calculus"
+
+# "Race" (Noun) vs. "Racecraft" (Social Practice) {data-stack-name="Racecraft"}
+
+## $\textsf{Race}_{\textsf{Variable}}$ vs. $\textsf{Race}_{\textsf{Construct}}$
+
+* Careful scientific, causal studies measure the effect that **changing $X$** ($do(X)$) has on $Y$, controlling for $C$ (via, at least under the hood, "Do-Calculus")
+* But, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into "race" and "not race"
+* Keep in back of your mind as we look at just one example of how (measured by thorough, statistically-principled randomized experiment), **race can have direct, measurable, causal impacts on important aspects of our everyday lives**
+
+## Racial Discrimination {.smaller .crunch-title}
+
+* Marianne Bertrand and Sendhil Mullainathan. 2004. "Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination." *American Economic Review*. [@bertrand_are_2004]
+
+> We study **race** in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are **randomly assigned** African-American- or White-sounding **names**. **White names** receive **50 percent more callbacks** for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U.S. labor market.
+
+## "Controlling for" Everything Besides Race {.smaller .crunch-title .title-11}
+
+::: {layout="[1,1]" layout-valign="center"}
+
+![](images/resume_greg_baker.jpeg){fig-align="center"}
+
+![](images/resume_jamal_jones.jpeg){fig-align="center"}
+
+:::
+
+## Age Discrimination? {.smaller .crunch-title}
+
+::: {layout="[1,1]" layout-valign="center"}
+
+![](images/resume_age_12.jpeg){fig-align="center"}
+
+![](images/resume_age_22.jpeg){fig-align="center"}
+
+:::
+
+* Based on Lily Hu, <a href='https://www.youtube.com/watch?v=8qMC1fZJMi4' target='_blank'>*What is 'Race' in Algorithmic Discrimination on the Basis of Race? - IPAM at UCLA*</a> (YouTube)
+
+## "Cool Theory, I Guess..." {.smaller .crunch-title .crunch-quarto-layout-panel}
+
+* "Good luck measuring ideas inside of people's heads... I'll be over here measuring real things and doing real data science!" -My Opps
+
+::: {layout="[1,1]"}
+
+![](images/representations.jpeg){fig-align="center"}
+
+![](images/sperber.jpg){fig-align="center" width="320"}
+
+:::
+
+## "Cool Theory, I Guess..." {.smaller .crunch-title}
+
+![](images/representations_bilingual.jpeg){fig-align="center"}
+
+## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell}
+
+::: {layout="[1,1]"}
+
+::: {#worms1-left}
+
+* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+
+:::
+::: {#worms-right}
+
+![](images/race_graph_step1.svg){fig-align="center" width="500"}
+
+:::
+:::
+
+## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell}
+
+::: {layout="[1,1]"}
+::: {#worms2-left}
+
+* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
+
+:::
+::: {#worms2-right}
+
+![](images/race_graph_step2.svg){fig-align="center" width="500"}
+
+:::
+:::
+
+## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-figure .crunch-quarto-layout-panel .crunch-quarto-layout-cell}
+
+::: {layout="[1,1]"}
+::: {#worms3-left}
+
+* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
+* Each person $x$ forming their own **internal representations** $\widetilde{t^x_0}$, $\widetilde{t^x_1}$, $\widetilde{t^x_2}$ of one another based on **patterns of interaction**, then
+* Generalizing to an internal representation of a **"type of person" $\widetilde{t^x_9}$**...
+
+:::
+::: {#worms3-right}
+
+![](images/race_graph_step3.svg){fig-align="center" width="600"}
+
+:::
+:::
+
+## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-figure .crunch-quarto-layout-panel .crunch-quarto-layout-cell}
+
+::: {layout="[1,1]"}
+::: {#worms4-left}
+
+* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
+* Each person $x$ forming their own **internal representations** $\widetilde{t^x_0}$, $\widetilde{t^x_1}$, $\widetilde{t^x_2}$ of one another based on **patterns of interaction**, then
+* Generalizing to an internal representation of a **"type of person" $\widetilde{t^x_9}$**...
+* Which they then **externalize** as $t^x_9$.
+* $t^0_9$, $t^1_9$, $t^2_9$ "congeal" into a **shared external representation** $t_9^e$ via social mechanism (discussion, media, culture, propaganda, parenting, religion, education, ...) $\Rightarrow t^e_9$ **"reified"** (causal effects on $t_0$, $t_1$, $t_2$)
+
+:::
+::: {#worms4-right}
+
+![](images/race_graph_step4.svg){fig-align="center" width="600"}
+
+:::
+:::
+
+## (More to Come on HW1!)
+
+![](images/sunny.jpg){fig-align="center"}
+
+# Defining Fairness in Economic Environments {data-stack-name="Overview"}
 
 ::: {.hidden}
 

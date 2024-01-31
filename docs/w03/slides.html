@@ -1429,20 +1429,27 @@ A_i = \begin{cases}
 <p>despite the <strong>descriptive</strong> fact that <span class="math inline">\(\Delta = -\nabla\)</span>.</p></li>
 </ul>
 </section>
-<section id="where-descriptive-and-normative-intertwine-whether-you-want-it-to-or-not-o" class="slide level2">
-<h2>Where Descriptive and Normative Intertwine (Whether You Want It To Or Not :O)</h2>
+<section id="where-descriptive-and-normative-become-intertwined" class="slide level2 crunch-title title-07">
+<h2>Where Descriptive and Normative Become Intertwined</h2>
 <ul>
-<li>Allowing this <strong>asymmetry</strong> is precisely what enables bring <strong>descriptive</strong> facts to bear on <strong>normative</strong> concerns: <strong>mathematically</strong> we can swap the mapping into <span class="math inline">\(\{0, 1\}\)</span>, but this (again, in a precise, logical sense) implies that we’re treating <strong>racial treatment</strong> as the same type of phenomenon as <strong>driving on left or right side of road</strong> (see: prev slides on why we make the descriptive vs.&nbsp;normative distinction)</li>
+<li>Allowing this <strong>asymmetry</strong> is precisely what enables bring <strong>descriptive</strong> facts to bear on <strong>normative</strong> concerns!</li>
+<li><strong>Mathematically</strong> we can always “flip” the mapping from racial labels into <span class="math inline">\(\{0, 1\}\)</span>…</li>
+<li>But this (in a precise, mathematical sense: namely, <em>isomorphism</em>) implies that we’re treating <strong>racial categorization</strong> as the same type of phenomenon as <strong>driving on left or right side of road</strong> (see: prev slides on why we make the descriptive vs.&nbsp;normative distinction)</li>
+<li>(See also: Sweden’s <a href="https://en.wikipedia.org/wiki/Dagen_H" target="_blank">Dagen H</a>!)</li>
 </ul>
 </section>
-<section id="the-fairness-criterion" class="slide level2">
-<h2>The Fairness Criterion</h2>
+<section id="fairness-through-equalized-positive-rates" class="slide level2 crunch-title crunch-ul title-08">
+<h2>“Fairness” Through Equalized Positive Rates</h2>
 <p><span class="math display">\[
 \Pr(D = 1 \mid A = 0) = \Pr(D = 1 \mid A = 1)
 \]</span></p>
 <ul>
-<li>(We made it!)</li>
+<li>This works specifically for discrete, <strong>binary</strong>-valued categories</li>
+<li>For general attributes (whether discrete or continuous!), generalizes to:</li>
 </ul>
+<p><span class="math display">\[
+D \perp A \iff \Pr(D = d, A = a) = \Pr(D = d)\Pr(A = a)
+\]</span></p>
 </section>
 <section id="baby-steps-a-less-busy-confusion-matrix" class="slide level2 title-09 crunch-title smaller">
 <h2>Baby Steps: A Less Busy Confusion Matrix</h2>
@@ -1484,212 +1491,11 @@ A_i = \begin{cases}
 * An **optimal classifier** minimizes the expected loss: $\mathbb{E}[\ell(\widehat{d},d)]$
 * A **decision** is considered to be fair if individuals with the same score $s_i = \psi(v_i)$ are treated equally, regardless of group membership (Corbett-Davies & Goel 2018). -->
 </section>
-<section id="fairness-through-unawareness-and-proxy-discrimination" class="slide level2 smaller crunch-title">
-<h2>Fairness Through Unawareness and Proxy Discrimination</h2>
-
-<img data-src="images/proxy_paper.jpg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">From <span class="citation" data-cites="tschantz_what_2022">Tschantz (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></p></section>
-<section id="causal-fairness" class="slide level2">
-<h2>Causal Fairness</h2>
-<ul>
-<li>From DSAN 5100 you know things like <span class="math inline">\(\mathbb{E}[Y \mid X], \text{Cov}(X,Y)\)</span>, <span class="math inline">\(X \perp Y\)</span>, and estimating <span class="math inline">\(Y = \beta_0 + \beta_1X\)</span></li>
-<li>For <strong>causal inference</strong> however, there is a <strong>qualitatively different</strong> and <strong>more strict</strong> standard: <span class="math inline">\(\mathbb{E}[Y \mid do(X)]\)</span>
-<ul>
-<li>Literally called “Do-Calculus”</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="race-noun-vs.-racecraft-social-practice" class="title-slide slide level1 center" data-stack-name="Racecraft">
-<h1>“Race” (Noun) vs.&nbsp;“Racecraft” (Social Practice)</h1>
-
-</section>
-<section id="textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct" class="slide level2">
-<h2><span class="math inline">\(\textsf{Race}_{\textsf{Variable}}\)</span> vs.&nbsp;<span class="math inline">\(\textsf{Race}_{\textsf{Construct}}\)</span></h2>
-<ul>
-<li>Careful scientific, causal studies measure the effect that <strong>changing <span class="math inline">\(X\)</span></strong> (<span class="math inline">\(do(X)\)</span>) has on <span class="math inline">\(Y\)</span>, controlling for <span class="math inline">\(C\)</span> (via, at least under the hood, “Do-Calculus”)</li>
-<li>But, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into “race” and “not race”</li>
-<li>Keep in back of your mind as we look at just one example of how (measured by thorough, statistically-principled randomized experiment), <strong>race can have direct, measurable, causal impacts on important aspects of our everyday lives</strong></li>
-</ul>
-</section>
-<section id="racial-discrimination" class="slide level2 smaller crunch-title">
-<h2>Racial Discrimination</h2>
-<ul>
-<li>Marianne Bertrand and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” <em>American Economic Review</em>. <span class="citation" data-cites="bertrand_are_2004">(<a href="#/references" role="doc-biblioref" onclick="">Bertrand and Mullainathan 2004</a>)</span></li>
-</ul>
-<blockquote>
-<p>We study <strong>race</strong> in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are <strong>randomly assigned</strong> African-American- or White-sounding <strong>names</strong>. <strong>White names</strong> receive <strong>50 percent more callbacks</strong> for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U.S. labor market.</p>
-</blockquote>
-</section>
-<section id="controlling-for-everything-besides-race" class="slide level2 smaller crunch-title title-11">
-<h2>“Controlling for” Everything Besides Race</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/resume_greg_baker.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/resume_jamal_jones.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="age-discrimination" class="slide level2 smaller crunch-title">
-<h2>Age Discrimination?</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/resume_age_12.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/resume_age_22.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<ul>
-<li>Based on Lily Hu, <a href="https://www.youtube.com/watch?v=8qMC1fZJMi4" target="_blank"><em>What is ‘Race’ in Algorithmic Discrimination on the Basis of Race? - IPAM at UCLA</em></a> (YouTube)</li>
-</ul>
-</section>
-<section id="cool-theory-i-guess" class="slide level2 smaller crunch-title crunch-quarto-layout-panel">
-<h2>“Cool Theory, I Guess…”</h2>
-<ul>
-<li>“Good luck measuring ideas inside of people’s heads… I’ll be over here measuring real things and doing real data science!” -My Opps</li>
-</ul>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/representations.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/sperber.jpg" class="quarto-figure quarto-figure-center" width="320"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="cool-theory-i-guess-1" class="slide level2 smaller crunch-title">
-<h2>“Cool Theory, I Guess…”</h2>
-
-<img data-src="images/representations_bilingual.jpeg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="opening-a-big-can-of-worms" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell">
-<h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div id="worms1-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<ul>
-<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
-</ul>
-</div>
-<div id="worms-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/race_graph_step1.svg" class="quarto-figure quarto-figure-center" width="500"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="opening-a-big-can-of-worms-1" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell">
-<h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div id="worms2-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<ul>
-<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
-<li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
-</ul>
-</div>
-<div id="worms2-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/race_graph_step2.svg" class="quarto-figure quarto-figure-center" width="500"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="opening-a-big-can-of-worms-2" class="slide level2 smaller crunch-title crunch-quarto-figure crunch-quarto-layout-panel crunch-quarto-layout-cell">
-<h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div id="worms3-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<ul>
-<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
-<li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
-<li>Each person <span class="math inline">\(x\)</span> forming their own <strong>internal representations</strong> <span class="math inline">\(\widetilde{t^x_0}\)</span>, <span class="math inline">\(\widetilde{t^x_1}\)</span>, <span class="math inline">\(\widetilde{t^x_2}\)</span> of one another based on <strong>patterns of interaction</strong>, then</li>
-<li>Generalizing to an internal representation of a <strong>“type of person” <span class="math inline">\(\widetilde{t^x_9}\)</span></strong>…</li>
-</ul>
-</div>
-<div id="worms3-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/race_graph_step3.svg" class="quarto-figure quarto-figure-center" width="600"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="opening-a-big-can-of-worms-3" class="slide level2 smaller crunch-title crunch-quarto-figure crunch-quarto-layout-panel crunch-quarto-layout-cell">
-<h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div id="worms4-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<ul>
-<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
-<li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
-<li>Each person <span class="math inline">\(x\)</span> forming their own <strong>internal representations</strong> <span class="math inline">\(\widetilde{t^x_0}\)</span>, <span class="math inline">\(\widetilde{t^x_1}\)</span>, <span class="math inline">\(\widetilde{t^x_2}\)</span> of one another based on <strong>patterns of interaction</strong>, then</li>
-<li>Generalizing to an internal representation of a <strong>“type of person” <span class="math inline">\(\widetilde{t^x_9}\)</span></strong>…</li>
-<li>Which they then <strong>externalize</strong> as <span class="math inline">\(t^x_9\)</span>.</li>
-<li><span class="math inline">\(t^0_9\)</span>, <span class="math inline">\(t^1_9\)</span>, <span class="math inline">\(t^2_9\)</span> “congeal” into a <strong>shared external representation</strong> <span class="math inline">\(t_9^e\)</span> via social mechanism (discussion, media, culture, propaganda, parenting, religion, education, …) <span class="math inline">\(\Rightarrow t^e_9\)</span> <strong>“reified”</strong> (causal effects on <span class="math inline">\(t_0\)</span>, <span class="math inline">\(t_1\)</span>, <span class="math inline">\(t_2\)</span>)</li>
-</ul>
-</div>
-<div id="worms4-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/race_graph_step4.svg" class="quarto-figure quarto-figure-center" width="600"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="more-to-come-on-hw1" class="slide level2">
-<h2>(More to Come on HW1!)</h2>
-
-<img data-src="images/sunny.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-awad_computational_2022" class="csl-entry" role="listitem">
 Awad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. <span>“Computational Ethics.”</span> <em>Trends in Cognitive Sciences</em> 26 (5): 388–405. <a href="https://doi.org/10.1016/j.tics.2022.02.009">https://doi.org/10.1016/j.tics.2022.02.009</a>.
-</div>
-<div id="ref-bertrand_are_2004" class="csl-entry" role="listitem">
-Bertrand, Marianne, and Sendhil Mullainathan. 2004. <span>“Are <span>Emily</span> and <span>Greg More Employable Than Lakisha</span> and <span>Jamal</span>? <span>A Field Experiment</span> on <span>Labor Market Discrimination</span>.”</span> <em>American Economic Review</em> 94 (4): 991–1013. <a href="https://doi.org/10.1257/0002828042002561">https://doi.org/10.1257/0002828042002561</a>.
 </div>
 <div id="ref-bishop_80_2017" class="csl-entry" role="listitem">
 Bishop, Marlon, and Tatiana Fernandez. 2017. <span>“80 <span>Years On</span>, <span>Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre</span>.”</span> <em>NPR</em>, October. <a href="https://www.npr.org/sections/parallels/2017/10/07/555871670/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre">https://www.npr.org/sections/parallels/2017/10/07/555871670/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre</a>.
@@ -1780,9 +1586,6 @@ Skinner, Quentin. 2012. <em>Visions of <span>Politics</span>, <span>Volume</span
 </div>
 <div id="ref-st.augustine_works_1874" class="csl-entry" role="listitem">
 St. Augustine. 1874. <em>The <span>Works</span> of <span>Aurelius Augustine</span>: <span>Lectures</span> or Tractates on the <span>Gospel</span> According to <span>St</span>. <span>John</span>, v. 2</em>. <span>T. &amp; T. Clark</span>.
-</div>
-<div id="ref-tschantz_what_2022" class="csl-entry" role="listitem">
-Tschantz, Michael Carl. 2022. <span>“What Is <span>Proxy Discrimination</span>?”</span> In <em>Proceedings of the 2022 <span>ACM Conference</span> on <span>Fairness</span>, <span>Accountability</span>, and <span>Transparency</span></em>, 1993–2003. <span>FAccT</span> ’22. <span>New York, NY, USA</span>: <span>Association for Computing Machinery</span>. <a href="https://doi.org/10.1145/3531146.3533242">https://doi.org/10.1145/3531146.3533242</a>.
 </div>
 <div id="ref-weber_protestant_1904" class="csl-entry" role="listitem">
 Weber, Max. 1904. <em>The <span>Protestant Ethic</span> and the <span>Spirit</span> of <span>Capitalism</span></em>. <span>Courier Corporation</span>.

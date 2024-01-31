@@ -242,7 +242,23 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#defining-fairness" id="toc-defining-fairness" class="nav-link active" data-scroll-target="#defining-fairness">Defining Fairness</a>
+  <li><a href="#fairness-through-unawareness-and-proxy-discrimination" id="toc-fairness-through-unawareness-and-proxy-discrimination" class="nav-link active" data-scroll-target="#fairness-through-unawareness-and-proxy-discrimination">Fairness Through Unawareness and Proxy Discrimination</a></li>
+  <li><a href="#causal-fairness" id="toc-causal-fairness" class="nav-link" data-scroll-target="#causal-fairness">Causal Fairness</a></li>
+  <li><a href="#race-noun-vs.-racecraft-social-practice" id="toc-race-noun-vs.-racecraft-social-practice" class="nav-link" data-scroll-target="#race-noun-vs.-racecraft-social-practice">“Race” (Noun) vs.&nbsp;“Racecraft” (Social Practice)</a>
+  <ul class="collapse">
+  <li><a href="#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct" id="toc-textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct" class="nav-link" data-scroll-target="#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct"><span class="math inline">\(\textsf{Race}_{\textsf{Variable}}\)</span> vs.&nbsp;<span class="math inline">\(\textsf{Race}_{\textsf{Construct}}\)</span></a></li>
+  <li><a href="#racial-discrimination" id="toc-racial-discrimination" class="nav-link" data-scroll-target="#racial-discrimination">Racial Discrimination</a></li>
+  <li><a href="#controlling-for-everything-besides-race" id="toc-controlling-for-everything-besides-race" class="nav-link" data-scroll-target="#controlling-for-everything-besides-race">“Controlling for” Everything Besides Race</a></li>
+  <li><a href="#age-discrimination" id="toc-age-discrimination" class="nav-link" data-scroll-target="#age-discrimination">Age Discrimination?</a></li>
+  <li><a href="#cool-theory-i-guess" id="toc-cool-theory-i-guess" class="nav-link" data-scroll-target="#cool-theory-i-guess">“Cool Theory, I Guess…”</a></li>
+  <li><a href="#cool-theory-i-guess-1" id="toc-cool-theory-i-guess-1" class="nav-link" data-scroll-target="#cool-theory-i-guess-1">“Cool Theory, I Guess…”</a></li>
+  <li><a href="#opening-a-big-can-of-worms" id="toc-opening-a-big-can-of-worms" class="nav-link" data-scroll-target="#opening-a-big-can-of-worms">Opening A Big Can Of Worms</a></li>
+  <li><a href="#opening-a-big-can-of-worms-1" id="toc-opening-a-big-can-of-worms-1" class="nav-link" data-scroll-target="#opening-a-big-can-of-worms-1">Opening A Big Can Of Worms</a></li>
+  <li><a href="#opening-a-big-can-of-worms-2" id="toc-opening-a-big-can-of-worms-2" class="nav-link" data-scroll-target="#opening-a-big-can-of-worms-2">Opening A Big Can Of Worms</a></li>
+  <li><a href="#opening-a-big-can-of-worms-3" id="toc-opening-a-big-can-of-worms-3" class="nav-link" data-scroll-target="#opening-a-big-can-of-worms-3">Opening A Big Can Of Worms</a></li>
+  <li><a href="#more-to-come-on-hw1" id="toc-more-to-come-on-hw1" class="nav-link" data-scroll-target="#more-to-come-on-hw1">(More to Come on HW1!)</a></li>
+  </ul></li>
+  <li><a href="#defining-fairness-in-economic-environments" id="toc-defining-fairness-in-economic-environments" class="nav-link" data-scroll-target="#defining-fairness-in-economic-environments">Defining Fairness in Economic Environments</a>
   <ul class="collapse">
   <li><a href="#mathematical-setup" id="toc-mathematical-setup" class="nav-link" data-scroll-target="#mathematical-setup">Mathematical Setup</a></li>
   <li><a href="#general-solution" id="toc-general-solution" class="nav-link" data-scroll-target="#general-solution">General Solution</a></li>
@@ -313,8 +329,238 @@ window.Quarto = {
 <center>
 <a class="h2" href="./slides.html" target="_blank">Open slides in new window →</a>
 </center>
-<section id="defining-fairness" class="level1" data-stack-name="Overview">
-<h1 data-stack-name="Overview">Defining Fairness</h1>
+<section id="fairness-through-unawareness-and-proxy-discrimination" class="level2 smaller crunch-title">
+<h2 class="smaller crunch-title anchored" data-anchor-id="fairness-through-unawareness-and-proxy-discrimination">Fairness Through Unawareness and Proxy Discrimination</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/proxy_paper.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<figcaption>From <span class="citation" data-cites="tschantz_what_2022">Tschantz (<a href="#ref-tschantz_what_2022" role="doc-biblioref">2022</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="causal-fairness" class="level2">
+<h2 class="anchored" data-anchor-id="causal-fairness">Causal Fairness</h2>
+<ul>
+<li>From DSAN 5100 you know things like <span class="math inline">\(\mathbb{E}[Y \mid X], \text{Cov}(X,Y)\)</span>, <span class="math inline">\(X \perp Y\)</span>, and estimating <span class="math inline">\(Y = \beta_0 + \beta_1X\)</span></li>
+<li>For <strong>causal inference</strong> however, there is a <strong>qualitatively different</strong> and <strong>more strict</strong> standard: <span class="math inline">\(\mathbb{E}[Y \mid do(X)]\)</span>
+<ul>
+<li>Literally called “Do-Calculus”</li>
+</ul></li>
+</ul>
+</section>
+<section id="race-noun-vs.-racecraft-social-practice" class="level1" data-stack-name="Racecraft">
+<h1 data-stack-name="Racecraft">“Race” (Noun) vs.&nbsp;“Racecraft” (Social Practice)</h1>
+<section id="textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct" class="level2">
+<h2 class="anchored" data-anchor-id="textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct"><span class="math inline">\(\textsf{Race}_{\textsf{Variable}}\)</span> vs.&nbsp;<span class="math inline">\(\textsf{Race}_{\textsf{Construct}}\)</span></h2>
+<ul>
+<li>Careful scientific, causal studies measure the effect that <strong>changing <span class="math inline">\(X\)</span></strong> (<span class="math inline">\(do(X)\)</span>) has on <span class="math inline">\(Y\)</span>, controlling for <span class="math inline">\(C\)</span> (via, at least under the hood, “Do-Calculus”)</li>
+<li>But, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into “race” and “not race”</li>
+<li>Keep in back of your mind as we look at just one example of how (measured by thorough, statistically-principled randomized experiment), <strong>race can have direct, measurable, causal impacts on important aspects of our everyday lives</strong></li>
+</ul>
+</section>
+<section id="racial-discrimination" class="level2 smaller crunch-title">
+<h2 class="smaller crunch-title anchored" data-anchor-id="racial-discrimination">Racial Discrimination</h2>
+<ul>
+<li>Marianne Bertrand and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” <em>American Economic Review</em>. <span class="citation" data-cites="bertrand_are_2004">(<a href="#ref-bertrand_are_2004" role="doc-biblioref">Bertrand and Mullainathan 2004</a>)</span></li>
+</ul>
+<blockquote class="blockquote">
+<p>We study <strong>race</strong> in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are <strong>randomly assigned</strong> African-American- or White-sounding <strong>names</strong>. <strong>White names</strong> receive <strong>50 percent more callbacks</strong> for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U.S. labor market.</p>
+</blockquote>
+</section>
+<section id="controlling-for-everything-besides-race" class="level2 smaller crunch-title title-11">
+<h2 class="smaller crunch-title title-11 anchored" data-anchor-id="controlling-for-everything-besides-race">“Controlling for” Everything Besides Race</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/resume_greg_baker.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/resume_jamal_jones.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="age-discrimination" class="level2 smaller crunch-title">
+<h2 class="smaller crunch-title anchored" data-anchor-id="age-discrimination">Age Discrimination?</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/resume_age_12.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/resume_age_22.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li>Based on Lily Hu, <a href="https://www.youtube.com/watch?v=8qMC1fZJMi4" target="_blank"><em>What is ‘Race’ in Algorithmic Discrimination on the Basis of Race? - IPAM at UCLA</em></a> (YouTube)</li>
+</ul>
+</section>
+<section id="cool-theory-i-guess" class="level2 smaller crunch-title crunch-quarto-layout-panel">
+<h2 class="smaller crunch-title crunch-quarto-layout-panel anchored" data-anchor-id="cool-theory-i-guess">“Cool Theory, I Guess…”</h2>
+<ul>
+<li>“Good luck measuring ideas inside of people’s heads… I’ll be over here measuring real things and doing real data science!” -My Opps</li>
+</ul>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/representations.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sperber.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="320"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="cool-theory-i-guess-1" class="level2 smaller crunch-title">
+<h2 class="smaller crunch-title anchored" data-anchor-id="cool-theory-i-guess-1">“Cool Theory, I Guess…”</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/representations_bilingual.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="opening-a-big-can-of-worms" class="level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell">
+<h2 class="smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell anchored" data-anchor-id="opening-a-big-can-of-worms">Opening A Big Can Of Worms</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="worms1-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
+</ul>
+</div>
+<div id="worms-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/race_graph_step1.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="opening-a-big-can-of-worms-1" class="level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell">
+<h2 class="smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell anchored" data-anchor-id="opening-a-big-can-of-worms-1">Opening A Big Can Of Worms</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="worms2-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
+<li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
+</ul>
+</div>
+<div id="worms2-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/race_graph_step2.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="500"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="opening-a-big-can-of-worms-2" class="level2 smaller crunch-title crunch-quarto-figure crunch-quarto-layout-panel crunch-quarto-layout-cell">
+<h2 class="smaller crunch-title crunch-quarto-figure crunch-quarto-layout-panel crunch-quarto-layout-cell anchored" data-anchor-id="opening-a-big-can-of-worms-2">Opening A Big Can Of Worms</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="worms3-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
+<li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
+<li>Each person <span class="math inline">\(x\)</span> forming their own <strong>internal representations</strong> <span class="math inline">\(\widetilde{t^x_0}\)</span>, <span class="math inline">\(\widetilde{t^x_1}\)</span>, <span class="math inline">\(\widetilde{t^x_2}\)</span> of one another based on <strong>patterns of interaction</strong>, then</li>
+<li>Generalizing to an internal representation of a <strong>“type of person” <span class="math inline">\(\widetilde{t^x_9}\)</span></strong>…</li>
+</ul>
+</div>
+<div id="worms3-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/race_graph_step3.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="opening-a-big-can-of-worms-3" class="level2 smaller crunch-title crunch-quarto-figure crunch-quarto-layout-panel crunch-quarto-layout-cell">
+<h2 class="smaller crunch-title crunch-quarto-figure crunch-quarto-layout-panel crunch-quarto-layout-cell anchored" data-anchor-id="opening-a-big-can-of-worms-3">Opening A Big Can Of Worms</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="worms4-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
+<li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
+<li>Each person <span class="math inline">\(x\)</span> forming their own <strong>internal representations</strong> <span class="math inline">\(\widetilde{t^x_0}\)</span>, <span class="math inline">\(\widetilde{t^x_1}\)</span>, <span class="math inline">\(\widetilde{t^x_2}\)</span> of one another based on <strong>patterns of interaction</strong>, then</li>
+<li>Generalizing to an internal representation of a <strong>“type of person” <span class="math inline">\(\widetilde{t^x_9}\)</span></strong>…</li>
+<li>Which they then <strong>externalize</strong> as <span class="math inline">\(t^x_9\)</span>.</li>
+<li><span class="math inline">\(t^0_9\)</span>, <span class="math inline">\(t^1_9\)</span>, <span class="math inline">\(t^2_9\)</span> “congeal” into a <strong>shared external representation</strong> <span class="math inline">\(t_9^e\)</span> via social mechanism (discussion, media, culture, propaganda, parenting, religion, education, …) <span class="math inline">\(\Rightarrow t^e_9\)</span> <strong>“reified”</strong> (causal effects on <span class="math inline">\(t_0\)</span>, <span class="math inline">\(t_1\)</span>, <span class="math inline">\(t_2\)</span>)</li>
+</ul>
+</div>
+<div id="worms4-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/race_graph_step4.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="600"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="more-to-come-on-hw1" class="level2">
+<h2 class="anchored" data-anchor-id="more-to-come-on-hw1">(More to Come on HW1!)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sunny.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="defining-fairness-in-economic-environments" class="level1" data-stack-name="Overview">
+<h1 data-stack-name="Overview">Defining Fairness in Economic Environments</h1>
 <div class="hidden">
 <div class="hidden">
 <p><span class="math display">\[
@@ -483,6 +729,12 @@ Y(W_\beta) &amp;= (1 - A) + M
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-becker_economics_1957" class="csl-entry" role="listitem">
 Becker, Gary S. 1957. <em>The <span>Economics</span> of <span>Discrimination</span></em>. <span>University of Chicago Press</span>.
+</div>
+<div id="ref-bertrand_are_2004" class="csl-entry" role="listitem">
+Bertrand, Marianne, and Sendhil Mullainathan. 2004. <span>“Are <span>Emily</span> and <span>Greg More Employable Than Lakisha</span> and <span>Jamal</span>? <span>A Field Experiment</span> on <span>Labor Market Discrimination</span>.”</span> <em>American Economic Review</em> 94 (4): 991–1013. <a href="https://doi.org/10.1257/0002828042002561">https://doi.org/10.1257/0002828042002561</a>.
+</div>
+<div id="ref-tschantz_what_2022" class="csl-entry" role="listitem">
+Tschantz, Michael Carl. 2022. <span>“What Is <span>Proxy Discrimination</span>?”</span> In <em>Proceedings of the 2022 <span>ACM Conference</span> on <span>Fairness</span>, <span>Accountability</span>, and <span>Transparency</span></em>, 1993–2003. <span>FAccT</span> ’22. <span>New York, NY, USA</span>: <span>Association for Computing Machinery</span>. <a href="https://doi.org/10.1145/3531146.3533242">https://doi.org/10.1145/3531146.3533242</a>.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
