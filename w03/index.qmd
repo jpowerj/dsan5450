@@ -787,6 +787,12 @@ Figures from @ingold_amazon_2016
   * Roughly: can't satisfy [more than] two statistical fairness criteria at once; similar to how setting $\Pr(X) = p$ also determines $\Pr(\text{not }X) = 1 - p$, or how plugging $x = 3$ into $x + y = 5$ leaves only one possibility $y = 2$
 * **BUT**, "impossibility" $\neq$ impossibility: (a) one criteria may be "all you need" in given setting; (b) can derive **more robust** measures by "relaxing" confusion-matrix measures
 
+## What the Fairness Measures Will Feel Like For Now {.smaller .crunch-title .title-10}
+
+![](images/rock_on_rich_brian.jpeg){fig-align="center"}
+
+* (They will get more robust and will **incorporate context** soon, I promise!)
+
 ## Who Remembers... 🎉*Confusion Matrices!!!*🎉 {.smaller .crunch-title .title-11}
 
 * Terrifyingly higher stakes than in DSAN 5000, however!

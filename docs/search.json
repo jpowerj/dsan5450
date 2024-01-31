@@ -1589,6 +1589,16 @@
     ]
   },
   {
+    "objectID": "w03/index.html#what-the-fairness-measures-will-feel-like-for-now",
+    "href": "w03/index.html#what-the-fairness-measures-will-feel-like-for-now",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "What the Fairness Measures Will Feel Like For Now",
+    "text": "What the Fairness Measures Will Feel Like For Now\n\n\n\n\n\n\n(They will get more robust and will incorporate context soon, I promise!)",
+    "crumbs": [
+      "Week 3: Jan 30"
+    ]
+  },
+  {
     "objectID": "w03/index.html#who-remembers-confusion-matrices",
     "href": "w03/index.html#who-remembers-confusion-matrices",
     "title": "Week 3: (Descriptive) Fairness in AI",
@@ -2060,6 +2070,13 @@
     "title": "Week 3: (Descriptive) Fairness in AI",
     "section": "We Can Do (A Bit) Better…",
     "text": "We Can Do (A Bit) Better…\n\nUse random variables to model inferences made by an algorithm (or a human!)\n\\(\\implies\\) fairness by statistically equalizing loan rejections, error rate, etc. between groups\nObvious societal drawback: equality does not ameliorate the effects of past injustices (see: police contact vs. trust-in-government plot from last week)\n\nThis one we saw coming, given “context-free” nature!\n\nLess obvious mathematical drawback: impossibility results (because algebra 😳)\n\nRoughly: can’t satisfy [more than] two statistical fairness criteria at once; similar to how setting \\(\\Pr(X) = p\\) also determines \\(\\Pr(\\text{not }X) = 1 - p\\), or how plugging \\(x = 3\\) into \\(x + y = 5\\) leaves only one possibility \\(y = 2\\)\n\nBUT, “impossibility” \\(\\neq\\) impossibility: (a) one criteria may be “all you need” in given setting; (b) can derive more robust measures by “relaxing” confusion-matrix measures"
+  },
+  {
+    "objectID": "w03/slides.html#what-the-fairness-measures-will-feel-like-for-now",
+    "href": "w03/slides.html#what-the-fairness-measures-will-feel-like-for-now",
+    "title": "Week 3: (Descriptive) Fairness in AI",
+    "section": "What the Fairness Measures Will Feel Like For Now",
+    "text": "What the Fairness Measures Will Feel Like For Now\n\n\n(They will get more robust and will incorporate context soon, I promise!)"
   },
   {
     "objectID": "w03/slides.html#who-remembers-confusion-matrices",
