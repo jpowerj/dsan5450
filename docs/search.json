@@ -1884,7 +1884,7 @@
     "href": "w03/index.html#baby-steps-a-real-world-confusion-matrix",
     "title": "Week 3: (Descriptive) Fairness in AI",
     "section": "Baby Steps: A Real-World Confusion Matrix",
-    "text": "Baby Steps: A Real-World Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (recidivism)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)",
+    "text": "Baby Steps: A Real-World Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (did vs. didn’t do more crimes)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)",
     "crumbs": [
       "Week 3: Jan 30"
     ]
@@ -2236,7 +2236,7 @@
     "href": "w03/slides.html#baby-steps-a-real-world-confusion-matrix",
     "title": "Week 3: (Descriptive) Fairness in AI",
     "section": "Baby Steps: A Real-World Confusion Matrix",
-    "text": "Baby Steps: A Real-World Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (recidivism)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)"
+    "text": "Baby Steps: A Real-World Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (did vs. didn’t do more crimes)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)"
   },
   {
     "objectID": "w03/slides.html#references",
@@ -2498,7 +2498,7 @@
     "href": "recordings/index.html",
     "title": "Lecture Recordings",
     "section": "",
-    "text": "Week\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\n2\n\n\nWeek 2 Lecture\n\n\nWednesday Jan 24, 2024\n\n\n\n\n1\n\n\nWeek 1 Lecture\n\n\nWednesday Jan 17, 2024\n\n\n\n\n\nNo matching items",
+    "text": "Week\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\n3\n\n\nWeek 3 Lecture\n\n\nWednesday Jan 31, 2024\n\n\n\n\n2\n\n\nWeek 2 Lecture\n\n\nWednesday Jan 24, 2024\n\n\n\n\n1\n\n\nWeek 1 Lecture\n\n\nWednesday Jan 17, 2024\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Recordings"
     ]
