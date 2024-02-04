@@ -51,5 +51,8 @@
   },
   "writeups/index.qmd": {
     "index.html": "bf8865c9"
+  },
+  "writeups/w03.qmd": {
+    "w03.html": "f9582588"
   }
 }

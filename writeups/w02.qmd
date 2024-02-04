@@ -3,6 +3,7 @@ title: "Week 2 Resources / Priming Your Brain for HW1"
 author: "Jeff Jacobs"
 institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
 date: 2024-01-24
+sidebar: mainnav
 date-format: full
 categories:
   - "Extra Writeups"
