@@ -344,6 +344,7 @@
       margin-right: 0; 
     }
   </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -366,386 +367,401 @@ Jeff Jacobs
 
   <p class="date">2024-02-06</p>
 </section>
-<section id="fairness-through-unawareness-and-proxy-discrimination" class="slide level2 smaller crunch-title">
-<h2>Fairness Through Unawareness and Proxy Discrimination</h2>
-
-<img data-src="images/proxy_paper.jpg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">From <span class="citation" data-cites="tschantz_what_2022">Tschantz (<a href="#/appendix-balance-for-the-positive-class" role="doc-biblioref" onclick="">2022</a>)</span></p></section>
-<section id="causal-fairness" class="slide level2">
-<h2>Causal Fairness</h2>
-<ul>
-<li>From DSAN 5100 you know things like <span class="math inline">\(\mathbb{E}[Y \mid X], \text{Cov}(X,Y)\)</span>, <span class="math inline">\(X \perp Y\)</span>, and estimating <span class="math inline">\(Y = \beta_0 + \beta_1X\)</span></li>
-<li>For <strong>causal inference</strong> however, there is a <strong>qualitatively different</strong> and <strong>more strict</strong> standard: <span class="math inline">\(\mathbb{E}[Y \mid do(X)]\)</span>
-<ul>
-<li>Literally called “Do-Calculus”</li>
-</ul></li>
-</ul>
-</section>
 <section>
-<section id="race-noun-vs.-racecraft-social-practice" class="title-slide slide level1 center" data-stack-name="Racecraft">
-<h1>“Race” (Noun) vs.&nbsp;“Racecraft” (Social Practice)</h1>
-
-</section>
-<section id="textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct" class="slide level2">
-<h2><span class="math inline">\(\textsf{Race}_{\textsf{Variable}}\)</span> vs.&nbsp;<span class="math inline">\(\textsf{Race}_{\textsf{Construct}}\)</span></h2>
-<ul>
-<li>Careful scientific, causal studies measure the effect that <strong>changing <span class="math inline">\(X\)</span></strong> (<span class="math inline">\(do(X)\)</span>) has on <span class="math inline">\(Y\)</span>, controlling for <span class="math inline">\(C\)</span> (via, at least under the hood, “Do-Calculus”)</li>
-<li>But, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into “race” and “not race”</li>
-<li>Keep in back of your mind as we look at just one example of how (measured by thorough, statistically-principled randomized experiment), <strong>race can have direct, measurable, causal impacts on important aspects of our everyday lives</strong></li>
-</ul>
-</section>
-<section id="racial-discrimination" class="slide level2 smaller crunch-title">
-<h2>Racial Discrimination</h2>
-<ul>
-<li>Marianne Bertrand and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” <em>American Economic Review</em>. <span class="citation" data-cites="bertrand_are_2004">(<a href="#/appendix-balance-for-the-positive-class" role="doc-biblioref" onclick="">Bertrand and Mullainathan 2004</a>)</span></li>
-</ul>
+<section id="week-3-recap" class="title-slide slide level1 center" data-stack-name="Recap">
+<h1>Week 3 Recap</h1>
 <blockquote>
-<p>We study <strong>race</strong> in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are <strong>randomly assigned</strong> African-American- or White-sounding <strong>names</strong>. <strong>White names</strong> receive <strong>50 percent more callbacks</strong> for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U.S. labor market.</p>
+<p>“Repetition is the mother of perfection” - Dwayne Michael “Lil Wayne” Carter, Jr.</p>
 </blockquote>
 </section>
-<section id="controlling-for-everything-besides-race" class="slide level2 smaller crunch-title title-11">
-<h2>“Controlling for” Everything Besides Race</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/resume_greg_baker.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/resume_jamal_jones.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="age-discrimination" class="slide level2 smaller crunch-title">
-<h2>Age Discrimination?</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/resume_age_12.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/resume_age_22.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
+<section id="baby-steps-a-real-world-confusion-matrix" class="slide level2 title-11 crunch-title smaller">
+<h2>Baby Steps: A Real-World Confusion Matrix</h2>
+<table style="width:99%;">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Labeled Low-Risk</th>
+<th>Labeled High-Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Didn’t Do More Crimes</strong></td>
+<td><em>True Negative</em></td>
+<td><em>False Positive</em></td>
+</tr>
+<tr class="even">
+<td><strong>Did More Crimes</strong></td>
+<td><em>False Negative</em></td>
+<td><em>True Positive</em></td>
+</tr>
+</tbody>
+</table>
 <ul>
-<li>Based on Lily Hu, <a href="https://www.youtube.com/watch?v=8qMC1fZJMi4" target="_blank"><em>What is ‘Race’ in Algorithmic Discrimination on the Basis of Race? - IPAM at UCLA</em></a> (YouTube)</li>
+<li>What kinds of <strong>causal connections</strong> and/or <strong>feedback loops</strong> might there be between our <strong>decision variable</strong> (low vs.&nbsp;high risk) and our <strong>outcome variable</strong> (did vs.&nbsp;didn’t do more crimes)</li>
+<li>What types of <strong>policy implications</strong> might this process have, after it “runs” for several “iterations”?</li>
+<li>Why might some segments of society, with some shared ethical framework(s), <strong>weigh</strong> the <strong>“costs”</strong> of false negatives and false positives <strong>differently</strong> from other segments of society with different shared ethical framework(s)?</li>
+<li>(Non-rhetorical questions!)</li>
 </ul>
 </section>
-<section id="cool-theory-i-guess" class="slide level2 smaller crunch-title crunch-quarto-layout-panel">
-<h2>“Cool Theory, I Guess…”</h2>
-<ul>
-<li>“Good luck measuring ideas inside of people’s heads… I’ll be over here measuring real things and doing real data science!” -My Opps</li>
-</ul>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/representations.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/sperber.jpg" class="quarto-figure quarto-figure-center" width="320"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="cool-theory-i-guess-1" class="slide level2 smaller crunch-title">
-<h2>“Cool Theory, I Guess…”</h2>
+<section id="categories-of-fairness-criteria" class="slide level2 smaller crunch-title">
+<h2>Categories of Fairness Criteria</h2>
+<style>
+#fairness-box .columns {
+  display: flex !important;
+  height: 100% !important;
+}
 
-<img data-src="images/representations_bilingual.jpeg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="opening-a-big-can-of-worms" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell">
-<h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div id="worms1-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+#fairness-box .column {
+  /* border: 2px solid black !important; */
+  padding: 14px !important;
+  box-sizing: border-box !important;
+  /* height: 100% !important; */
+}
+</style>
+<p>Roughly, approaches to fairness/bias in AI can be categorized as follows:</p>
+<div id="fairness-box" style="border: 2px solid black !important; box-sizing: border-box !important;">
+<center>
+<strong>Fairness</strong>
+</center>
+<!-- start columns -->
+<div class="columns">
+<div class="column" style="width:46%;">
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center>
+<strong>Context-Free</strong>
+</center>
 <ul>
-<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
+<li>Single-Threshold Fairness</li>
+<li>Equal Prediction</li>
+<li>Equal Decision</li>
 </ul>
 </div>
-<div id="worms-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/race_graph_step1.svg" class="quarto-figure quarto-figure-center" width="500"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="opening-a-big-can-of-worms-1" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell">
-<h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div id="worms2-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+</div><div class="column" style="width:8%;">
+<center>
+<span style="font-size: 180% !important;"><i class="bi bi-repeat"></i>
+</span></center>
+</div><div class="column" style="width:46%;">
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center style="margin: 0px !important;">
+<strong>Context-Sensitive</strong>
+</center>
 <ul>
-<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
-<li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
+<li>Fairness via Similarity Metric(s)</li>
+<li>Causal Definitions</li>
 </ul>
 </div>
-<div id="worms2-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/race_graph_step2.svg" class="quarto-figure quarto-figure-center" width="500"></p>
-</figure>
 </div>
 </div>
 </div>
-</div>
-</section>
-<section id="opening-a-big-can-of-worms-2" class="slide level2 smaller crunch-title crunch-quarto-figure crunch-quarto-layout-panel crunch-quarto-layout-cell">
-<h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div id="worms3-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<!-- end quarto box -->
 <ul>
-<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
-<li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
-<li>Each person <span class="math inline">\(x\)</span> forming their own <strong>internal representations</strong> <span class="math inline">\(\widetilde{t^x_0}\)</span>, <span class="math inline">\(\widetilde{t^x_1}\)</span>, <span class="math inline">\(\widetilde{t^x_2}\)</span> of one another based on <strong>patterns of interaction</strong>, then</li>
-<li>Generalizing to an internal representation of a <strong>“type of person” <span class="math inline">\(\widetilde{t^x_9}\)</span></strong>…</li>
+<li>[Today] <strong>Context-Free</strong> Fairness: Easier to grasp from CS/data science perspective; rooted in “language” of Machine Learning (you already know much of it, given DSAN 5000!)</li>
+<li>But <strong>easy-to-grasp notion</strong> <span class="math inline">\(\neq\)</span> <strong>“good” notion</strong>!</li>
+<li>Your job: push yourself to (a) consider what is getting <strong>left out of</strong> the context-free definitions, and (b) the <strong>loopholes</strong> that are thus introduced into them, whereby people/computers can discriminate while remaining “technically fair”</li>
 </ul>
-</div>
-<div id="worms3-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/race_graph_step3.svg" class="quarto-figure quarto-figure-center" width="600"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
 </section>
-<section id="opening-a-big-can-of-worms-3" class="slide level2 smaller crunch-title crunch-quarto-figure crunch-quarto-layout-panel crunch-quarto-layout-cell">
-<h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div id="worms4-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<section id="laws-often-perfectly-technically-fair" class="slide level2 title-09">
+<h2>Laws: Often Perfectly “Technically Fair”</h2>
+<blockquote>
+<p><em>Ah, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!</em></p>
+</blockquote>
+<blockquote>
+<p>(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)</p>
+</blockquote>
+<p>Anatole France, <em>Le Lys Rouge</em> <span class="citation" data-cites="france_lys_1894">(<a href="#/references" role="doc-biblioref" onclick="">France 1894</a>)</span></p>
+</section>
+<section id="no-fairness-through-unawareness" class="slide level2 smaller crunch-title crunch-ul crunch-figcaption">
+<h2>(No) Fairness Through Unawareness</h2>
 <ul>
-<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
-<li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
-<li>Each person <span class="math inline">\(x\)</span> forming their own <strong>internal representations</strong> <span class="math inline">\(\widetilde{t^x_0}\)</span>, <span class="math inline">\(\widetilde{t^x_1}\)</span>, <span class="math inline">\(\widetilde{t^x_2}\)</span> of one another based on <strong>patterns of interaction</strong>, then</li>
-<li>Generalizing to an internal representation of a <strong>“type of person” <span class="math inline">\(\widetilde{t^x_9}\)</span></strong>…</li>
-<li>Which they then <strong>externalize</strong> as <span class="math inline">\(t^x_9\)</span>.</li>
-<li><span class="math inline">\(t^0_9\)</span>, <span class="math inline">\(t^1_9\)</span>, <span class="math inline">\(t^2_9\)</span> “congeal” into a <strong>shared external representation</strong> <span class="math inline">\(t_9^e\)</span> via social mechanism (discussion, media, culture, propaganda, parenting, religion, education, …) <span class="math inline">\(\Rightarrow t^e_9\)</span> <strong>“reified”</strong> (causal effects on <span class="math inline">\(t_0\)</span>, <span class="math inline">\(t_1\)</span>, <span class="math inline">\(t_2\)</span>)</li>
+<li><strong>HW1</strong>: Using tiny sample (<span class="math inline">\(N &lt; 10K\)</span>) of Florida voter registrations… <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html" target="_blank">RandomForestClassifier</a> (default settings, no hyperparameter tuning, no cross-validation, no ensembling with other methods) will predict self-reported race with <span class="math inline">\(&gt;90\%\)</span> accuracy (in balanced sample) from just <strong>surname</strong> and <strong>county of residence</strong>
+<ul>
+<li>Can reach <span class="math inline">\(70\text{-}75\%\)</span> with <strong>just</strong> surname or <strong>just</strong> county of residence</li>
+</ul></li>
+<li>Also in HW1: <strong>Facebook</strong> ad matching service provides <strong>over 1,000 different user attributes</strong> for <strong>(micro)targeting</strong></li>
 </ul>
-</div>
-<div id="worms4-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/race_graph_step4.svg" class="quarto-figure quarto-figure-center" width="600"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="more-to-come-on-hw1" class="slide level2">
-<h2>(More to Come on HW1!)</h2>
 
-<img data-src="images/sunny.jpg" class="quarto-figure quarto-figure-center r-stretch"></section></section>
+<img data-src="images/proxy.svg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">From <span class="citation" data-cites="datta_proxy_2017">Datta et al. (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span></p></section>
+<section id="to-make-it-even-more-concrete" class="slide level2 smaller crunch-title">
+<h2>To Make It Even More Concrete…</h2>
+<ul>
+<li><em>Bloomberg</em> analysis of neighborhoods with same-day delivery from Amazon:</li>
+</ul>
+<div id="fig-bloomberg" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-bloomberg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/amazon-six-cities-at.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/amazon-six-cities-ch.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/amazon-six-cities-dc.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bloomberg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Figures from <span class="citation" data-cites="ingold_amazon_2016">Ingold and Soper (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="last-one-i-promise" class="slide level2">
+<h2>Last One I Promise</h2>
+
+<img data-src="images/census-tract-bethesda.png" class="r-stretch quarto-figure-center"><p class="caption">Predicting self-reported <strong>whiteness</strong> with <strong>70% accuracy</strong></p></section>
+<section id="last-one-i-promise-1" class="slide level2">
+<h2>Last One I Promise</h2>
+
+<img data-src="images/census-tract-pg-cty.png" class="r-stretch quarto-figure-center"><p class="caption">Predicting self-reported <strong>non-whiteness</strong> with <strong>90% accuracy</strong></p></section>
+<section id="we-can-do-a-bit-better" class="slide level2 smaller">
+<h2>We Can Do (A Bit) Better…</h2>
+<ul>
+<li>Use <strong>random variables</strong> to model inferences made by an algorithm (or a human!)</li>
+<li><span class="math inline">\(\implies\)</span> fairness by statistically <strong>equalizing</strong> loan rejections, error rate, etc. between groups</li>
+<li>Obvious <strong>societal</strong> drawback: <strong>equality</strong> does not ameliorate the effects of <strong>past injustices</strong> (see: police contact vs.&nbsp;trust-in-government plot from last week)
+<ul>
+<li>This one we saw coming, given “context-free” nature!</li>
+</ul></li>
+<li>Less obvious <strong>mathematical</strong> drawback: <strong>impossibility results</strong> (because algebra 😳)
+<ul>
+<li>Roughly: can’t satisfy [more than] two statistical fairness criteria at once; similar to how setting <span class="math inline">\(\Pr(X) = p\)</span> also determines <span class="math inline">\(\Pr(\text{not }X) = 1 - p\)</span>, or how plugging <span class="math inline">\(x = 3\)</span> into <span class="math inline">\(x + y = 5\)</span> leaves only one possibility <span class="math inline">\(y = 2\)</span></li>
+</ul></li>
+<li><strong>BUT</strong>, “impossibility” <span class="math inline">\(\neq\)</span> impossibility: (a) one criteria may be “all you need” in given setting; (b) can derive <strong>more robust</strong> measures by “relaxing” confusion-matrix measures</li>
+</ul>
+</section></section>
 <section>
-<section id="defining-fairness-in-economic-environments" class="title-slide slide level1 center" data-stack-name="Overview">
-<h1>Defining Fairness in Economic Environments</h1>
-<div class="hidden">
-<div class="hidden">
-<p><span class="math display">\[
-\DeclareMathOperator*{\argmax}{argmax}
-\DeclareMathOperator*{\argmin}{argmin}
-\newcommand{\nimplies}{\;\not\!\!\!\!\implies}
-\]</span></p>
-</div>
-</div>
+<section id="definitions-and-impossibility-results" class="title-slide slide level1 center" data-stack-name="Definitions and Results">
+<h1>Definitions and (Impossibility) Results</h1>
+<p><em>(tldr:)</em></p>
 <ul>
-<li>Predictive Parity (“Parity”)</li>
-<li>Balance for the Positive Class (“Balance”)</li>
+<li>We have information <span class="math inline">\(X_i\)</span> about person <span class="math inline">\(i\)</span>, and</li>
+<li>We’re trying to <strong>predict</strong> a <strong>binary</strong> outcome <span class="math inline">\(Y_i\)</span> involving <span class="math inline">\(i\)</span>.</li>
+<li>So, we use ML to learn a <strong>risk function</strong> <span class="math inline">\(r: \mathcal{R}_{X_i} \rightarrow \mathbb{R}\)</span>, then</li>
+<li>Use this to make a <strong>binary decision</strong> <span class="math inline">\(\widehat{Y}_i = \mathbf{1}[r(X_i) &gt; t]\)</span></li>
 </ul>
 </section>
-<section id="mathematical-setup" class="slide level2 smaller">
-<h2>Mathematical Setup</h2>
+<section id="protectedsensitive-attributes" class="slide level2 crunch-title smaller crunch-ul crunch-math">
+<h2>Protected/Sensitive Attributes</h2>
 <ul>
-<li>We can define notions of fairness under a unified mathematical framework of <strong>decision-making</strong></li>
-<li>A decision-maker <span class="math inline">\(\mathscr{D}\)</span> solves the optimization problem <span class="math inline">\(\max\{\mu\}\)</span> where, given a set of individuals indexed by <span class="math inline">\(i\)</span>, <span class="math display">\[
-\underbrace{\mu}_{\mathclap{\text{Maximand}}} = \mathbb{E}_i[\underbrace{W_i}_{\mathclap{\text{Decision}}} \, \cdot \, (\underbrace{M_i}_{\mathclap{\small\substack{\text{Merit} \\ \text{(Unobserved)}}}} - \underbrace{c_i}_{\mathclap{\text{Cost}}})]
-\]</span></li>
-<li>Since the <span class="math inline">\(M_i\)</span> are unobserved, <span class="math inline">\(\mathscr{D}\)</span> has to <strong>estimate</strong> them using a predictive model (e.g., a supervised ML algorithm): <span class="math display">\[
-m(x) = \mathbb{E}[M \mid X = x].
-\]</span></li>
-</ul>
-</section>
-<section id="general-solution" class="slide level2">
-<h2>General Solution</h2>
-<ul>
-<li>Without any <strong>restrictions</strong> on the set of admissible policies <span class="math inline">\(\mathscr{W}\)</span>, the solution will satisfy</li>
+<li>Standard across the literature: Random Variable <span class="math inline">\(A_i\)</span> “encoding” membership in protected/sensitive group. In HW1, for example:</li>
 </ul>
 <p><span class="math display">\[
-w^*(\cdot) = \argmax_{w(\cdot) \in \mathscr{W}}\mathbb{E}[w(X) \cdot (m(X) - c)]
-\]</span></p>
-</section>
-<section id="fair-solution" class="slide level2">
-<h2>Fair Solution</h2>
-<ul>
-<li>Definitions of <strong>fairness</strong> under this framework, however, specify a variable <span class="math inline">\(A_i\)</span> for each individual, representing their status with respect to some <strong>protected characteristic</strong> like race, gender, or disability status</li>
-<li>Then <span class="math inline">\(A_i\)</span> is <strong>not allowed</strong> to be included in <span class="math inline">\(X\)</span>, at a minimum, and different definitions of fairness include additional constraints on <span class="math inline">\(\mathscr{W}\)</span> based on <span class="math inline">\(A_i\)</span>.</li>
-</ul>
-</section>
-<section id="predictive-parity" class="slide level2" data-stack-name="Parity">
-<h2>Predictive Parity</h2>
-<ul>
-<li>The fundamental criterion: for all values <span class="math inline">\(a \in A\)</span>,</li>
-</ul>
-<p><span class="math display">\[
-\mathbb{E}[M \mid W = 1, A = a] = \mathbb{E}[M \mid W = 1]
-\]</span></p>
-<ul>
-<li>For binary <span class="math inline">\(A \in \{0, 1\}\)</span>, we can use this criterion to define a <strong>parity score</strong> <span class="math inline">\(\pi\)</span>:</li>
-</ul>
-<p><span class="math display">\[
-\pi = \mathbb{E}[M \mid W = 1, A = 1] - \mathbb{E}[M \mid W = 1, A = 0]
-\]</span></p>
-</section>
-<section id="implementing-predictive-parity" class="slide level2">
-<h2>Implementing Predictive Parity</h2>
-<ul>
-<li>Enforcing predictive parity means enforcing that <span class="math inline">\(\pi = 0\)</span></li>
-<li>So, we restrict the set of rules that can be chosen, and solve</li>
-</ul>
-<p><span class="math display">\[
-\begin{align*}
-w^*(\cdot) &amp;= \argmax_{w(\cdot) \in \mathscr{W}_\text{fair}}\mathbb{E}[w(X) \cdot (m(X) - c)], \\
-\mathscr{W}_{\text{fair}} &amp;= \{w \in \mathscr{W} \mid \pi = 0\}
-\end{align*}
-\]</span></p>
-</section>
-<section id="the-solution-choice-only-on-merit" class="slide level2">
-<h2>The Solution: Choice “Only On Merit”</h2>
-<ul>
-<li>If we can perfectly predict <span class="math inline">\(M\)</span> (<span class="math inline">\(m(X) = M\)</span>), then</li>
-</ul>
-<p><span class="math display">\[
-w^*(x) = \begin{cases}
-1 &amp;\text{if }m(X) &gt; c, \\
-0 &amp;\text{otherwise}
+A_i = \begin{cases}
+0 &amp;\text{if }i\text{ self-reported ``white''} \\
+1 &amp;\text{if }i\text{ self-reported ``black''}
 \end{cases}
 \]</span></p>
 <ul>
-<li>Firms are only being “unfair” if they disciminate <strong>in a way that lowers their profits</strong></li>
-<li>Implements definition of discrimination from <span class="citation" data-cites="becker_economics_1957">Becker (<a href="#/appendix-balance-for-the-positive-class" role="doc-biblioref" onclick="">1957</a>)</span></li>
-<li>But what are the <strong>results</strong> of this rule? And the results of changing it? And where did <span class="math inline">\(M\)</span> come from?</li>
-</ul>
-</section>
-<section id="reflective-equilibrium-affirmative-action" class="slide level2 smaller">
-<h2>Reflective Equilibrium: Affirmative Action</h2>
-<ul>
-<li>Under this definition of fairness, <strong>affirmative action is unfair</strong>:</li>
-<li>Policy <span class="math inline">\(\alpha\)</span>: Employer is incentivized (via <span class="math inline">\(1\)</span> unit reward) for hiring people with <span class="math inline">\(A_i = 1\)</span></li>
-<li>Policy <span class="math inline">\(\beta\)</span>: No incentive for hiring <span class="math inline">\(A_i = 1\)</span> over <span class="math inline">\(A_i = 0\)</span></li>
-<li><span class="math inline">\(W^*_\alpha = \begin{cases}1 &amp;\text{if }M + A \geq 1 \\ 0 &amp;\text{otherwise}\end{cases}, \; W^*_{\beta} = M\)</span></li>
-<li>Fairness scores:</li>
-</ul>
+<li><p><strong>Notice</strong>: choice of mapping into <span class="math inline">\(\{0, 1\}\)</span> here <strong>non-arbitrary</strong>!</p></li>
+<li><p>We want our models/criteria to be <strong>descriptively</strong> but also <strong>normatively robust</strong>; e.g.:</p></li>
+<li><p><strong>If</strong> (antecedent I hold, though <a href="https://www.pewresearch.org/politics/2021/08/12/deep-divisions-in-americans-views-of-nations-racial-history-and-how-to-address-it/" target="_blank">majority in US</a> do not) one believes that ending (much less repairing) centuries of unrelenting white supremacist violence here might require asymmetric race-based policies,</p></li>
+<li><p><strong>Then</strong> our model should allow different <strong>normative labels</strong> and differential <strong>weights</strong> on</p>
 <p><span class="math display">\[
 \begin{align*}
-\pi_\alpha &amp;= \mathbb{E}[M \mid W^*_{\alpha} = 1, A = 1] - \mathbb{E}[M \mid W^*_{\alpha} = 1, A = 0] = 0.5 - 1 =  -0.5 \\
-\pi_\beta &amp;= \mathbb{E}[M \mid W^*_{\beta} = 1, A = 1] - \mathbb{E}[M \mid W^*_{\beta} = 1, A = 0] = 1 - 1 = 0
+\Delta &amp;= (\text{Fairness} \mid A = 1) - (\text{Fairness} \mid A = 0) \\
+\nabla &amp;= (\text{Fairness} \mid A = 0) - (\text{Fairness} \mid A = 1)
 \end{align*}
 \]</span></p>
-<ul>
-<li>So is fairness the right way to evaluate an algorithm?</li>
+<p>despite the <strong>descriptive</strong> fact that <span class="math inline">\(\Delta = -\nabla\)</span>.</p></li>
 </ul>
-</section></section>
-<section>
-<section id="economic-social-and-political-impacts" class="title-slide slide level1 center" data-stack-name="Impact Functions">
-<h1>Economic, Social, and Political Impacts</h1>
+</section>
+<section id="where-descriptive-and-normative-become-intertwined" class="slide level2 crunch-title title-07">
+<h2>Where Descriptive and Normative Become Intertwined</h2>
+<ul>
+<li>Allowing this <strong>asymmetry</strong> is precisely what enables bring <strong>descriptive</strong> facts to bear on <strong>normative</strong> concerns!</li>
+<li><strong>Mathematically</strong> we can always “flip” the mapping from racial labels into <span class="math inline">\(\{0, 1\}\)</span>…</li>
+<li>But this (in a precise, mathematical sense: namely, <em>isomorphism</em>) implies that we’re treating <strong>racial categorization</strong> as the same type of phenomenon as <strong>driving on left or right side of road</strong> (see: prev slides on why we make the descriptive vs.&nbsp;normative distinction)</li>
+<li>(See also: Sweden’s <a href="https://en.wikipedia.org/wiki/Dagen_H" target="_blank">Dagen H</a>!)</li>
+</ul>
+</section>
+<section id="fairness-through-equalized-positive-rates-epr" class="slide level2 crunch-ul title-07 math-95 crunch-math crunch-blockquote">
+<h2>“Fairness” Through Equalized <em>Positive</em> Rates (EPR)</h2>
+<div style="height: 8px !important;">
+&nbsp;
+</div>
+<p><span class="math display">\[
+\boxed{\Pr(D = 1 \mid A = 0) = \Pr(D = 1 \mid A = 1)}
+\]</span></p>
+<ul>
+<li>This works specifically for discrete, <strong>binary</strong>-valued categories</li>
+<li>For general attributes (whether discrete or continuous!), generalizes to:</li>
+</ul>
+<p><span class="math display">\[
+\boxed{D \perp A} \iff \Pr(D = d, A = a) = \Pr(D = d)\Pr(A = a)
+\]</span></p>
+<blockquote>
+<p>Imagine you learn that a person received a scholarship (<span class="math inline">\(D = 1\)</span>); [with equalized positive rates], this fact would give you no knowledge about the race (or sex, or class, as desired) <span class="math inline">\(A\)</span> of the individual in question. <span class="citation" data-cites="dedeo_wrong_2016">(<a href="#/references" role="doc-biblioref" onclick="">DeDeo 2016</a>)</span></p>
+</blockquote>
+</section>
+<section id="achieving-equalized-positive-rates" class="slide level2 smaller crunch-title">
+<h2>Achieving Equalized Positive Rates</h2>
+<ul>
+<li><p>The good news: if we want this, there is a <strong>closed-form solution</strong>: take your datapoints <span class="math inline">\(X_i\)</span> and <strong>re-weigh</strong> each point to obtain <span class="math inline">\(\widetilde{X}_i = w_iX_i\)</span>, where</p>
+<p><span class="math display">\[
+  w_i = \frac{\Pr(Y_i = 1)}{\Pr(Y_i = 1 \mid A_i = 1)}
+  \]</span></p>
+<p>and use derived dataset <span class="math inline">\(\widetilde{X}_i\)</span> to learn <span class="math inline">\(r(X)\)</span> (via ML algorithm)… Why does this work?</p></li>
+<li><p>Let <span class="math inline">\(\mathcal{X}_{\text{fair}}\)</span> be the set of all possible <strong>reweighted versions</strong> of <span class="math inline">\(X_i\)</span> ensuring <span class="math inline">\(Y_i \perp A_i\)</span>. Then</p></li>
+</ul>
+<p><span class="math display">\[
+\widetilde{X}_i = \min_{X_i' \in \mathcal{X}_{\text{fair}}}\textsf{distance}(X_i', X_i) = \min_{X_i' \in \mathcal{X}_{\text{fair}}}\underbrace{KL(X_i' \| X_i)}_{\text{Relative entropy!}}
+\]</span></p>
+<ul>
+<li>The bad news: nobody in the fairness in AI community read <span class="citation" data-cites="dedeo_wrong_2016">DeDeo (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, which proves this using information theory? Idk. It has a total of <a href="https://scholar.google.com/scholar?lookup=0&amp;q=wrong+side+of+the+tracks+dedeo&amp;hl=en&amp;as_sdt=0,9" target="_blank">22 citations</a> 😐</li>
+</ul>
+</section>
+<section id="fairness-through-equalized-error-rates" class="slide level2 smaller crunch-title title-12 crunch-math">
+<h2>“Fairness” Through Equalized <em>Error</em> Rates</h2>
+<ul>
+<li><p>Equalized <strong>positive</strong> rates didn’t take <strong>outcomes</strong> <span class="math inline">\(Y_i\)</span> into account…</p>
+<ul>
+<li>(Even if <span class="math inline">\(A_i = 1 \Rightarrow Y_i = 1, A_i = 0 \Rightarrow Y_i = 0\)</span>, we’d have to choose <span class="math inline">\(\widehat{Y}_i = c\)</span>)</li>
+</ul></li>
+<li><p>This time, we consider the <strong>outcome</strong> <span class="math inline">\(Y\)</span> that</p></li>
+<li><p>Equalized <strong>False Positive Rate</strong> (<strong>EFPR</strong>):</p></li>
+</ul>
+<p><span class="math display">\[
+\Pr(D = 1 \mid Y = 0, A = 0) = \Pr(D = 1 \mid Y = 0, A = 1)
+\]</span></p>
+<ul>
+<li>Equalized <strong>False Negative Rate</strong> (<strong>EFNR</strong>):</li>
+</ul>
+<p><span class="math display">\[
+\Pr(D = 0 \mid Y = 1, A = 0) = \Pr(D = 0 \mid Y = 1, A = 1)
+\]</span></p>
+<ul>
+<li>For general (non-binary) attributes: <span class="math inline">\((D \perp A) \mid Y\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+\Pr(D = d, A = a \mid Y = y) = \Pr(D = d \mid Y = y)\Pr(A = a \mid Y = y)
+\]</span></p>
+</section>
+<section id="less-equations-please" class="slide level2 smaller">
+<h2>⚠️ LESS EQUATIONS PLEASE! 😤</h2>
+<ul>
+<li>Depending on your background and/or learning style (say, visual vs.&nbsp;auditory), you may be able to look at equations on previous two slides and “see” what they’re “saying”</li>
+<li>If your brain works similarly to <strong>mine</strong>, however, your eyes glazed over, you began dissociating, planning an escape route, etc., the moment <span class="math inline">\(&gt; 2\)</span> variables appeared</li>
+<li>If you’re in the latter group, welcome to the <strong>cult of Probabilistic Graphical Models</strong> 😈</li>
+</ul>
 
+<img data-src="images/pgm_fairness.svg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">Your first <strong>PGM</strong>, illustrating <strong>hypothesized causal relationships</strong> between three random variables <span class="math inline">\(Y\)</span> (outcome), <span class="math inline">\(D\)</span> (decision), and <span class="math inline">\(A\)</span> (protected attribute). The <span class="math inline">\(Y\)</span> node is <strong>shaded</strong> to indicate that it is an <strong>observed</strong> value in our model, rendering the <strong>unobserved</strong> values <span class="math inline">\(D\)</span> and <span class="math inline">\(A\)</span> <strong>independent</strong> conditional on it. If I was elected Emperor of Math, equations would be abolished in favor of PGMs.</p></section>
+<section id="section" class="slide level2 crunch-title crunch-callout" data-background-video="https://jpj.georgetown.domains/dsan5450-scratch/Dead_Inside_Shuffle.mp4" data-background-size="contain" data-background-opacity="0.5">
+<h2></h2>
+<div class="quarto-layout-panel" data-layout-align="right" data-layout="[-70,30]">
+<div class="quarto-layout-row">
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 70.0%;justify-content: flex-end;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: flex-end;">
+<div title="Equalized False Negative/Positive Rates" style="background-color: white !important;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Equalized False Negative/Positive Rates</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Our first measure that <strong>🥳🎉matches a principle of justice in society!!!🕺🪩</strong></li>
+<li><a href="https://en.wikipedia.org/wiki/Blackstone%27s_ratio" target="_blank"><strong>Blackstone’s Ratio</strong></a>: <em>“It is better that ten guilty persons escape, than that one innocent suffers.”</em> <span class="citation" data-cites="blackstone_commentaries_1769">(<a href="#/references" role="doc-biblioref" onclick="">Blackstone 1769</a>)</span></li>
+<li>(…break time!)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="affirmative-action-welfare-and-inequality" class="slide level2 smaller">
-<h2>Affirmative Action: <em>Welfare</em> and <em>Inequality</em></h2>
+<section id="back-to-equalized-error-rates" class="slide level2 crunch-title crunch-ul">
+<h2>Back to Equalized Error Rates</h2>
 <ul>
-<li>Now consider the <strong>outcomes</strong> from the perspective of the <strong>employees</strong> rather than the employer: <span class="math inline">\(Y(w) = (1 - A) + w\)</span>. Then</li>
+<li><a href="https://en.wikipedia.org/wiki/Blackstone%27s_ratio" target="_blank"><strong>Blackstone’s Ratio</strong></a>: <em>“It is better that ten guilty persons escape, than that one innocent suffers.”</em> <span class="citation" data-cites="blackstone_commentaries_1769">(<a href="#/references" role="doc-biblioref" onclick="">Blackstone 1769</a>)</span></li>
+<li>Mathematically <span class="math inline">\(\Rightarrow \text{Cost}(FPR) = 10\cdot \text{Cost}(FNR)\)</span></li>
+<li>Legally <span class="math inline">\(\Rightarrow\)</span> <em>beyond reasonable doubt</em> standard for conviction</li>
+<li>EFPR <span class="math inline">\(\iff\)</span> rates of false conviction should be the same for everyone, including members of different racial groups.
+<ul>
+<li>Violated when black people are disproportionately likely to be incorrectly convicted, as if a <strong>lower evidentiary standard</strong> were applied to black people.</li>
+</ul></li>
+</ul>
+</section>
+<section id="one-final-context-free-criterion-calibration" class="slide level2">
+<h2>One Final Context-Free Criterion: Calibration</h2>
+<ul>
+<li>A risk function <span class="math inline">\(r(X)\)</span> is <strong>calibrated</strong> if</li>
 </ul>
 <p><span class="math display">\[
-\begin{align*}
-Y(W_\alpha) &amp;= 1 + \begin{cases}1 &amp;\text{if }A = 0 \wedge M = 1 \\ 0&amp;\text{otherwise}\end{cases} \\
-Y(W_\beta) &amp;= (1 - A) + M
-\end{align*}
+\Pr(Y = 1 \mid r(X) = v_r) = v_r
 \]</span></p>
 <ul>
-<li>Which means</li>
+<li>(Sweeping a lot of details under the rug), I see this one as: <strong>the risk function “tracks” real-world probabilities</strong></li>
+<li>Then, <span class="math inline">\(r(X)\)</span> is <strong>calibrated by group</strong> if</li>
 </ul>
 <p><span class="math display">\[
-\text{Var}[Y(W_\alpha)] = \frac{3}{16}, \text{Var}[Y(W_\beta)] = \frac{1}{2}
+\Pr(Y = y \mid r(X) = v_r, A = a) = v_r
 \]</span></p>
 </section>
-<section id="the-impact-of-changes-to-an-algorithm" class="slide level2 smaller">
-<h2>The Impact of <em>Changes</em> to an Algorithm</h2>
-<ul>
-<li>Once we’ve derived this optimal <span class="math inline">\(w^*\)</span>, we can analyze how <strong>changes</strong> to the algorithm <strong>affect</strong> outcomes we care about! <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\pi\)</span> are objective value as before, but let <span class="math inline">\(\nu\)</span> represent <strong>inequality</strong></li>
-<li>Say we are considering a new algorithm <span class="math inline">\(w(x) = w^*(x) + \varepsilon \cdot dw(x)\)</span>. Then</li>
-</ul>
-<p><span class="math display">\[
-\begin{align*}
-\frac{\partial \mu}{\partial \varepsilon} &amp;= \mathbb{E}[dw(X) \cdot \ell(X)], \; \ell(x) = \mathbb{E}[M \mid X = x] - c \\
-\frac{\partial \pi}{\partial \varepsilon} &amp;= \mathbb{E}\left[dw(X) \cdot p(X)\right], \; p(x) = \mathbb{E}\mkern-4mu\left[\Delta^1\frac{A}{\mathbb{E}[WA]} - \Delta^0\frac{1-A}{\mathbb{E}[W(1-A)]} \; \middle|\; X = x\right], \\
-&amp;\phantom{=} \; \Delta^i = M - \mathbb{E}[M \mid W = 1, A = i] \\
-\frac{\partial \nu}{\partial \varepsilon} &amp;= \mathbb{E}[dw(X) \cdot n(X)], \; n(x) = \mathbb{E}[IF(Y^1, x) - IF(Y^0, x) \mid X = x]
-\end{align*}
-\]</span></p>
-</section></section>
-<section>
-<section id="implicit-welfare-weights" class="title-slide slide level1 center">
-<h1>Implicit Welfare Weights</h1>
+<section id="calibration" class="slide level2">
+<h2>Calibration</h2>
+<!-- ## Minimizing Loss Function Penalizing (Only) These Errors $\iff$ Single-Threshold Fairness {.smaller .crunch-title .title-09}
 
+* Loss function: $\ell(d, \widehat{d})$
+* An **optimal classifier** minimizes the expected loss: $\mathbb{E}[\ell(\widehat{d},d)]$
+* A **decision** is considered to be fair if individuals with the same score $s_i = \psi(v_i)$ are treated equally, regardless of group membership (Corbett-Davies & Goel 2018). -->
 </section>
-<section id="who-gets-to-choose-the-objective-function" class="slide level2">
-<h2>Who Gets To Choose The Objective Function?</h2>
+<section id="impossibility-results" class="slide level2">
+<h2>Impossibility Results</h2>
 <ul>
-<li>It turns out that any objective function is an <strong>implicit implementation</strong> of a <strong>weighting</strong> of each person’s welfare relative to others</li>
+<li>tldr: We cannot possibly achieve all three of <strong>anti-classification</strong>, classification <strong>parity</strong>, and <strong>calibration</strong>.</li>
+<li>We can’t even really achieve both classification parity and calibration.</li>
 </ul>
 </section>
-<section id="appendix-balance-for-the-positive-class" class="slide level2 smaller scrollable">
-<h2>Appendix: Balance for the Positive Class</h2>
-<ul>
-<li>An alternative to predictive parity, though with similar results</li>
-<li>Here the criterion is, for all <span class="math inline">\(i\)</span>,</li>
-</ul>
-<p><span class="math display">\[
-\mathbb{E}[W_i \mid M_i = 1, A_i = 1] = \mathbb{E}[W_i \mid M_i = 1, A_i = 0]
-\]</span></p>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-blackstone_commentaries_1769" class="csl-entry" role="listitem">
+Blackstone, William. 1769. <em>Commentaries on the <span>Laws</span> of <span>England</span>, <span>Volume</span> 2: <span>A Facsimile</span> of the <span>First Edition</span> of 1765-1769</em>. <span>University of Chicago Press</span>.
+</div>
+<div id="ref-datta_proxy_2017" class="csl-entry" role="listitem">
+Datta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. <span>“Proxy <span>Non-Discrimination</span> in <span>Data-Driven Systems</span>.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.1707.08120">https://doi.org/10.48550/arXiv.1707.08120</a>.
+</div>
+<div id="ref-dedeo_wrong_2016" class="csl-entry" role="listitem">
+DeDeo, Simon. 2016. <span>“Wrong Side of the Tracks: <span>Big Data</span> and <span>Protected Categories</span>.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.1412.4643">https://doi.org/10.48550/arXiv.1412.4643</a>.
+</div>
+<div id="ref-france_lys_1894" class="csl-entry" role="listitem">
+France, Anatole. 1894. <em>Le <span>Lys Rouge</span> (<span>The Red Lily</span>)</em>. <span>G. Wells</span>.
+</div>
+<div id="ref-ingold_amazon_2016" class="csl-entry" role="listitem">
+Ingold, David, and Spencer Soper. 2016. <span>“Amazon <span>Doesn</span>’t <span>Consider</span> the <span>Race</span> of <span>Its Customers</span>. <span>Should It</span>?”</span> <em>Bloomberg</em>, April. <a href="http://www.bloomberg.com/graphics/2016-amazon-same-day/">http://www.bloomberg.com/graphics/2016-amazon-same-day/</a>.
+</div>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>DSAN 5450 Week 4: Fairness in AI</p>
-</div>
-</div>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-becker_economics_1957" class="csl-entry" role="listitem">
-Becker, Gary S. 1957. <em>The <span>Economics</span> of <span>Discrimination</span></em>. <span>University of Chicago Press</span>.
-</div>
-<div id="ref-bertrand_are_2004" class="csl-entry" role="listitem">
-Bertrand, Marianne, and Sendhil Mullainathan. 2004. <span>“Are <span>Emily</span> and <span>Greg More Employable Than Lakisha</span> and <span>Jamal</span>? <span>A Field Experiment</span> on <span>Labor Market Discrimination</span>.”</span> <em>American Economic Review</em> 94 (4): 991–1013. <a href="https://doi.org/10.1257/0002828042002561">https://doi.org/10.1257/0002828042002561</a>.
-</div>
-<div id="ref-tschantz_what_2022" class="csl-entry" role="listitem">
-Tschantz, Michael Carl. 2022. <span>“What Is <span>Proxy Discrimination</span>?”</span> In <em>Proceedings of the 2022 <span>ACM Conference</span> on <span>Fairness</span>, <span>Accountability</span>, and <span>Transparency</span></em>, 1993–2003. <span>FAccT</span> ’22. <span>New York, NY, USA</span>: <span>Association for Computing Machinery</span>. <a href="https://doi.org/10.1145/3531146.3533242">https://doi.org/10.1145/3531146.3533242</a>.
 </div>
 </div>
 </section></section>

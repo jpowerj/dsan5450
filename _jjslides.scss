@@ -106,6 +106,10 @@ figcaption {
     padding-bottom: 8px !important;
 }
 
+.crunch-callout .callout {
+    margin-bottom: 0px !important;
+}
+
 // figcaption
 
 .crunch-figcaption figcaption {
@@ -219,6 +223,19 @@ figcaption {
 // math smaller
 .math-09 mjx-container {
     font-size: 90% !important;
+}
+
+// math smaller
+.math-85 mjx-container {
+    font-size: 85% !important;
+}
+
+.math-90 mjx-container {
+    font-size: 90% !important;
+}
+
+.math-95 mjx-container {
+    font-size: 95% !important;
 }
 
 .inline-08 span.math.inline {

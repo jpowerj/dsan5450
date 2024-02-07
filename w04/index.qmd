@@ -11,6 +11,8 @@ categories:
 format:
   revealjs:
     df-print: kable
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'>"
     footer: "DSAN 5450 Week 4: Fairness in AI"
     output-file: "slides.html"
     html-math-method: mathjax
@@ -38,281 +40,302 @@ format:
 
 :::
 
+# Week 3 Recap {data-stack-name="Recap"}
 
-## Fairness Through Unawareness and Proxy Discrimination {.smaller .crunch-title}
+> "Repetition is the mother of perfection" - Dwayne Michael "Lil Wayne" Carter, Jr.
 
-![From @tschantz_what_2022](images/proxy_paper.jpg){fig-align="center"}
+## Baby Steps: A Real-World Confusion Matrix {.title-11 .crunch-title .smaller}
 
-## Causal Fairness
+| | Labeled Low-Risk | Labeled High-Risk |
+| - | - | - |
+| **Didn't Do More Crimes** | *True Negative* | *False Positive* |
+**Did More Crimes** | *False Negative* | *True Positive* |
 
-* From DSAN 5100 you know things like $\mathbb{E}[Y \mid X], \text{Cov}(X,Y)$, $X \perp Y$, and estimating $Y = \beta_0 + \beta_1X$
-* For **causal inference** however, there is a **qualitatively different** and **more strict** standard: $\mathbb{E}[Y \mid do(X)]$
-  * Literally called "Do-Calculus"
+: {tbl-colwidths="[30,40,40]"}
 
-# "Race" (Noun) vs. "Racecraft" (Social Practice) {data-stack-name="Racecraft"}
+* What kinds of **causal connections** and/or **feedback loops** might there be between our **decision variable** (low vs. high risk) and our **outcome variable** (did vs. didn't do more crimes)
+* What types of **policy implications** might this process have, after it "runs" for several "iterations"?
+* Why might some segments of society, with some shared ethical framework(s), **weigh** the **"costs"** of false negatives and false positives **differently** from other segments of society with different shared ethical framework(s)?
+* (Non-rhetorical questions!)
 
-## $\textsf{Race}_{\textsf{Variable}}$ vs. $\textsf{Race}_{\textsf{Construct}}$
+## Categories of Fairness Criteria {.smaller .crunch-title}
 
-* Careful scientific, causal studies measure the effect that **changing $X$** ($do(X)$) has on $Y$, controlling for $C$ (via, at least under the hood, "Do-Calculus")
-* But, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into "race" and "not race"
-* Keep in back of your mind as we look at just one example of how (measured by thorough, statistically-principled randomized experiment), **race can have direct, measurable, causal impacts on important aspects of our everyday lives**
+```{=html}
+<style>
+#fairness-box .columns {
+  display: flex !important;
+  height: 100% !important;
+}
 
-## Racial Discrimination {.smaller .crunch-title}
+#fairness-box .column {
+  /* border: 2px solid black !important; */
+  padding: 14px !important;
+  box-sizing: border-box !important;
+  /* height: 100% !important; */
+}
+</style>
+```
 
-* Marianne Bertrand and Sendhil Mullainathan. 2004. "Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination." *American Economic Review*. [@bertrand_are_2004]
+Roughly, approaches to fairness/bias in AI can be categorized as follows:
 
-> We study **race** in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are **randomly assigned** African-American- or White-sounding **names**. **White names** receive **50 percent more callbacks** for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U.S. labor market.
+<div id="fairness-box" style="border: 2px solid black !important; box-sizing: border-box !important;">
 
-## "Controlling for" Everything Besides Race {.smaller .crunch-title .title-11}
+<center>
+**Fairness**
+</center>
 
-::: {layout="[1,1]" layout-valign="center"}
+<!-- start columns -->
+::: {.columns}
+::: {.column width="46%"}
 
-![](images/resume_greg_baker.jpeg){fig-align="center"}
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center>
+**Context-Free**
+</center>
 
-![](images/resume_jamal_jones.jpeg){fig-align="center"}
+* Single-Threshold Fairness
+* Equal Prediction
+* Equal Decision
 
-:::
-
-## Age Discrimination? {.smaller .crunch-title}
-
-::: {layout="[1,1]" layout-valign="center"}
-
-![](images/resume_age_12.jpeg){fig-align="center"}
-
-![](images/resume_age_22.jpeg){fig-align="center"}
-
-:::
-
-* Based on Lily Hu, <a href='https://www.youtube.com/watch?v=8qMC1fZJMi4' target='_blank'>*What is 'Race' in Algorithmic Discrimination on the Basis of Race? - IPAM at UCLA*</a> (YouTube)
-
-## "Cool Theory, I Guess..." {.smaller .crunch-title .crunch-quarto-layout-panel}
-
-* "Good luck measuring ideas inside of people's heads... I'll be over here measuring real things and doing real data science!" -My Opps
-
-::: {layout="[1,1]"}
-
-![](images/representations.jpeg){fig-align="center"}
-
-![](images/sperber.jpg){fig-align="center" width="320"}
-
-:::
-
-## "Cool Theory, I Guess..." {.smaller .crunch-title}
-
-![](images/representations_bilingual.jpeg){fig-align="center"}
-
-## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell}
-
-::: {layout="[1,1]"}
-
-::: {#worms1-left}
-
-* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+</div>
 
 :::
-::: {#worms-right}
+::: {.column width="8%"}
 
-![](images/race_graph_step1.svg){fig-align="center" width="500"}
-
-:::
-:::
-
-## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell}
-
-::: {layout="[1,1]"}
-::: {#worms2-left}
-
-* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
-* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
+<center>
+<span style="font-size: 180% !important;"><i class='bi bi-repeat'></i>
+</center>
 
 :::
-::: {#worms2-right}
+::: {.column width="46%"}
 
-![](images/race_graph_step2.svg){fig-align="center" width="500"}
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center style="margin: 0px !important;">
+**Context-Sensitive**
+</center>
+
+* Fairness via Similarity Metric(s)
+* Causal Definitions
+
+</div>
 
 :::
 :::
 
-## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-figure .crunch-quarto-layout-panel .crunch-quarto-layout-cell}
+</div>
+<!-- end quarto box -->
 
-::: {layout="[1,1]"}
-::: {#worms3-left}
+* [Today] **Context-Free** Fairness: Easier to grasp from CS/data science perspective; rooted in "language" of Machine Learning (you already know much of it, given DSAN 5000!)
+* But **easy-to-grasp notion** $\neq$ **"good" notion**!
+* Your job: push yourself to (a) consider what is getting **left out of** the context-free definitions, and (b) the **loopholes** that are thus introduced into them, whereby people/computers can discriminate while remaining "technically fair"
 
-* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
-* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
-* Each person $x$ forming their own **internal representations** $\widetilde{t^x_0}$, $\widetilde{t^x_1}$, $\widetilde{t^x_2}$ of one another based on **patterns of interaction**, then
-* Generalizing to an internal representation of a **"type of person" $\widetilde{t^x_9}$**...
+## Laws: Often Perfectly "Technically Fair" {.title-09}
 
-:::
-::: {#worms3-right}
+> *Ah, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!*
 
-![](images/race_graph_step3.svg){fig-align="center" width="600"}
+> (Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)
 
-:::
-:::
+Anatole France, *Le Lys Rouge* [@france_lys_1894]
 
-## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-figure .crunch-quarto-layout-panel .crunch-quarto-layout-cell}
+## (No) Fairness Through Unawareness {.smaller .crunch-title .crunch-ul .crunch-figcaption}
 
-::: {layout="[1,1]"}
-::: {#worms4-left}
+* **HW1**: Using tiny sample ($N < 10K$) of Florida voter registrations... <a href='https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html' target='_blank'>RandomForestClassifier</a> (default settings, no hyperparameter tuning, no cross-validation, no ensembling with other methods) will predict self-reported race with $>90\%$ accuracy (in balanced sample) from just **surname** and **county of residence**
+  * Can reach $70\text{-}75\%$ with **just** surname or **just** county of residence
+* Also in HW1: **Facebook** ad matching service provides **over 1,000 different user attributes** for **(micro)targeting**
 
-* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
-* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
-* Each person $x$ forming their own **internal representations** $\widetilde{t^x_0}$, $\widetilde{t^x_1}$, $\widetilde{t^x_2}$ of one another based on **patterns of interaction**, then
-* Generalizing to an internal representation of a **"type of person" $\widetilde{t^x_9}$**...
-* Which they then **externalize** as $t^x_9$.
-* $t^0_9$, $t^1_9$, $t^2_9$ "congeal" into a **shared external representation** $t_9^e$ via social mechanism (discussion, media, culture, propaganda, parenting, religion, education, ...) $\Rightarrow t^e_9$ **"reified"** (causal effects on $t_0$, $t_1$, $t_2$)
+![From @datta_proxy_2017](images/proxy.svg){fig-align="center"}
 
-:::
-::: {#worms4-right}
+## To Make It Even More Concrete... {.smaller .crunch-title}
 
-![](images/race_graph_step4.svg){fig-align="center" width="600"}
+* *Bloomberg* analysis of neighborhoods with same-day delivery from Amazon:
 
-:::
-:::
+::: {#fig-bloomberg layout="[1,1,1]" layout-valign="center"}
 
-## (More to Come on HW1!)
+![](images/amazon-six-cities-at.png){fig-align="center"}
 
-![](images/sunny.jpg){fig-align="center"}
+![](images/amazon-six-cities-ch.png){fig-align="center"}
 
-# Defining Fairness in Economic Environments {data-stack-name="Overview"}
+![](images/amazon-six-cities-dc.png){fig-align="center"}
 
-::: {.hidden}
-
-{{< include ../_globals-tex.qmd >}}
-
+Figures from @ingold_amazon_2016
 :::
 
-* Predictive Parity ("Parity")
-* Balance for the Positive Class ("Balance")
+## Last One I Promise
 
-## Mathematical Setup {.smaller}
+![Predicting self-reported **whiteness** with **70% accuracy**](images/census-tract-bethesda.png)
 
-* We can define notions of fairness under a unified mathematical framework of **decision-making**
-* A decision-maker $\mathscr{D}$ solves the optimization problem $\max\{\mu\}$ where, given a set of individuals indexed by $i$,
-$$
-\underbrace{\mu}_{\mathclap{\text{Maximand}}} = \mathbb{E}_i[\underbrace{W_i}_{\mathclap{\text{Decision}}} \, \cdot \, (\underbrace{M_i}_{\mathclap{\small\substack{\text{Merit} \\ \text{(Unobserved)}}}} - \underbrace{c_i}_{\mathclap{\text{Cost}}})]
-$$
-* Since the $M_i$ are unobserved, $\mathscr{D}$ has to **estimate** them using a predictive model (e.g., a supervised ML algorithm):
-$$
-m(x) = \mathbb{E}[M \mid X = x].
-$$
+## Last One I Promise
 
-## General Solution
+![Predicting self-reported **non-whiteness** with **90% accuracy**](images/census-tract-pg-cty.png)
 
-* Without any **restrictions** on the set of admissible policies $\mathscr{W}$, the solution will satisfy
+## We Can Do (A Bit) Better... {.smaller}
+
+* Use **random variables** to model inferences made by an algorithm (or a human!)
+* $\implies$ fairness by statistically **equalizing** loan rejections, error rate, etc. between groups
+* Obvious **societal** drawback: **equality** does not ameliorate the effects of **past injustices** (see: police contact vs. trust-in-government plot from last week)
+  * This one we saw coming, given "context-free" nature!
+* Less obvious **mathematical** drawback: **impossibility results** (because algebra 😳)
+  * Roughly: can't satisfy [more than] two statistical fairness criteria at once; similar to how setting $\Pr(X) = p$ also determines $\Pr(\text{not }X) = 1 - p$, or how plugging $x = 3$ into $x + y = 5$ leaves only one possibility $y = 2$
+* **BUT**, "impossibility" $\neq$ impossibility: (a) one criteria may be "all you need" in given setting; (b) can derive **more robust** measures by "relaxing" confusion-matrix measures
+
+# Definitions and (Impossibility) Results {data-stack-name="Definitions and Results"}
+
+*(tldr:)*
+
+* We have information $X_i$ about person $i$, and
+* We're trying to **predict** a **binary** outcome $Y_i$ involving $i$.
+* So, we use ML to learn a **risk function** $r: \mathcal{R}_{X_i} \rightarrow \mathbb{R}$, then
+* Use this to make a **binary decision** $\widehat{Y}_i = \mathbf{1}[r(X_i) > t]$
+
+## Protected/Sensitive Attributes {.crunch-title .smaller .crunch-ul .crunch-math}
+
+* Standard across the literature: Random Variable $A_i$ "encoding" membership in protected/sensitive group. In HW1, for example:
 
 $$
-w^*(\cdot) = \argmax_{w(\cdot) \in \mathscr{W}}\mathbb{E}[w(X) \cdot (m(X) - c)]
-$$
-
-## Fair Solution
-
-* Definitions of **fairness** under this framework, however, specify a variable $A_i$ for each individual, representing their status with respect to some **protected characteristic** like race, gender, or disability status
-* Then $A_i$ is **not allowed** to be included in $X$, at a minimum, and different definitions of fairness include additional constraints on $\mathscr{W}$ based on $A_i$.
-
-## Predictive Parity {data-stack-name="Parity"}
-
-* The fundamental criterion: for all values $a \in A$,
-
-$$
-\mathbb{E}[M \mid W = 1, A = a] = \mathbb{E}[M \mid W = 1]
-$$
-
-* For binary $A \in \{0, 1\}$, we can use this criterion to define a **parity score** $\pi$:
-
-$$
-\pi = \mathbb{E}[M \mid W = 1, A = 1] - \mathbb{E}[M \mid W = 1, A = 0]
-$$
-
-## Implementing Predictive Parity
-
-* Enforcing predictive parity means enforcing that $\pi = 0$
-* So, we restrict the set of rules that can be chosen, and solve
-
-$$
-\begin{align*}
-w^*(\cdot) &= \argmax_{w(\cdot) \in \mathscr{W}_\text{fair}}\mathbb{E}[w(X) \cdot (m(X) - c)], \\
-\mathscr{W}_{\text{fair}} &= \{w \in \mathscr{W} \mid \pi = 0\}
-\end{align*}
-$$
-
-## The Solution: Choice "Only On Merit"
-
-* If we can perfectly predict $M$ ($m(X) = M$), then
-
-$$
-w^*(x) = \begin{cases}
-1 &\text{if }m(X) > c, \\
-0 &\text{otherwise}
+A_i = \begin{cases}
+0 &\text{if }i\text{ self-reported ``white''} \\
+1 &\text{if }i\text{ self-reported ``black''}
 \end{cases}
 $$
 
-* Firms are only being "unfair" if they disciminate **in a way that lowers their profits**
-* Implements definition of discrimination from @becker_economics_1957
-* But what are the **results** of this rule? And the results of changing it? And where did $M$ come from?
+* **Notice**: choice of mapping into $\{0, 1\}$ here **non-arbitrary**!
+* We want our models/criteria to be **descriptively** but also **normatively robust**; e.g.:
+* **If** (antecedent I hold, though <a href='https://www.pewresearch.org/politics/2021/08/12/deep-divisions-in-americans-views-of-nations-racial-history-and-how-to-address-it/' target='_blank'>majority in US</a> do not) one believes that ending (much less repairing) centuries of unrelenting white supremacist violence here might require asymmetric race-based policies,
+* **Then** our model should allow different **normative labels** and differential **weights** on
 
-## Reflective Equilibrium: Affirmative Action {.smaller}
+  $$
+  \begin{align*}
+  \Delta &= (\text{Fairness} \mid A = 1) - (\text{Fairness} \mid A = 0) \\
+  \nabla &= (\text{Fairness} \mid A = 0) - (\text{Fairness} \mid A = 1)
+  \end{align*}
+  $$
 
-* Under this definition of fairness, **affirmative action is unfair**:
-* Policy $\alpha$: Employer is incentivized (via $1$ unit reward) for hiring people with $A_i = 1$
-* Policy $\beta$: No incentive for hiring $A_i = 1$ over $A_i = 0$
-* $W^*_\alpha = \begin{cases}1 &\text{if }M + A \geq 1 \\ 0 &\text{otherwise}\end{cases}, \; W^*_{\beta} = M$
-* Fairness scores:
+  despite the **descriptive** fact that $\Delta = -\nabla$.
 
-$$
-\begin{align*}
-\pi_\alpha &= \mathbb{E}[M \mid W^*_{\alpha} = 1, A = 1] - \mathbb{E}[M \mid W^*_{\alpha} = 1, A = 0] = 0.5 - 1 =  -0.5 \\
-\pi_\beta &= \mathbb{E}[M \mid W^*_{\beta} = 1, A = 1] - \mathbb{E}[M \mid W^*_{\beta} = 1, A = 0] = 1 - 1 = 0
-\end{align*}
-$$
+## Where Descriptive and Normative Become Intertwined {.crunch-title .title-07}
 
-* So is fairness the right way to evaluate an algorithm?
+* Allowing this **asymmetry** is precisely what enables bring **descriptive** facts to bear on **normative** concerns!
+* **Mathematically** we can always "flip" the mapping from racial labels into $\{0, 1\}$...
+* But this (in a precise, mathematical sense: namely, *isomorphism*) implies that we're treating **racial categorization** as the same type of phenomenon as **driving on left or right side of road** (see: prev slides on why we make the descriptive vs. normative distinction)
+* (See also: Sweden's <a href='https://en.wikipedia.org/wiki/Dagen_H' target='_blank'>Dagen H</a>!)
 
-# Economic, Social, and Political Impacts {data-stack-name="Impact Functions"}
+## "Fairness" Through Equalized *Positive* Rates (EPR) {.crunch-ul .title-07 .math-95 .crunch-math .crunch-blockquote}
 
-## Affirmative Action: *Welfare* and *Inequality* {.smaller}
-
-* Now consider the **outcomes** from the perspective of the **employees** rather than the employer: $Y(w) = (1 - A) + w$. Then
+<div style='height: 8px !important;'>&nbsp;</div>
 
 $$
-\begin{align*}
-Y(W_\alpha) &= 1 + \begin{cases}1 &\text{if }A = 0 \wedge M = 1 \\ 0&\text{otherwise}\end{cases} \\
-Y(W_\beta) &= (1 - A) + M
-\end{align*}
+\boxed{\Pr(D = 1 \mid A = 0) = \Pr(D = 1 \mid A = 1)}
 $$
 
-* Which means
+* This works specifically for discrete, **binary**-valued categories
+* For general attributes (whether discrete or continuous!), generalizes to:
 
 $$
-\text{Var}[Y(W_\alpha)] = \frac{3}{16}, \text{Var}[Y(W_\beta)] = \frac{1}{2}
+\boxed{D \perp A} \iff \Pr(D = d, A = a) = \Pr(D = d)\Pr(A = a)
 $$
 
-## The Impact of *Changes* to an Algorithm {.smaller}
+> Imagine you learn that a person received a scholarship ($D = 1$); [with equalized positive rates], this fact would give you no knowledge about the race (or sex, or class, as desired) $A$ of the individual in question. [@dedeo_wrong_2016]
 
-* Once we've derived this optimal $w^*$, we can analyze how **changes** to the algorithm **affect** outcomes we care about! $\mu$ and $\pi$ are objective value as before, but let $\nu$ represent **inequality**
-* Say we are considering a new algorithm $w(x) = w^*(x) + \varepsilon \cdot dw(x)$. Then
+## Achieving Equalized Positive Rates {.smaller .crunch-title}
 
-$$
-\begin{align*}
-\frac{\partial \mu}{\partial \varepsilon} &= \mathbb{E}[dw(X) \cdot \ell(X)], \; \ell(x) = \mathbb{E}[M \mid X = x] - c \\
-\frac{\partial \pi}{\partial \varepsilon} &= \mathbb{E}\left[dw(X) \cdot p(X)\right], \; p(x) = \mathbb{E}\mkern-4mu\left[\Delta^1\frac{A}{\mathbb{E}[WA]} - \Delta^0\frac{1-A}{\mathbb{E}[W(1-A)]} \; \middle|\; X = x\right], \\
-&\phantom{=} \; \Delta^i = M - \mathbb{E}[M \mid W = 1, A = i] \\
-\frac{\partial \nu}{\partial \varepsilon} &= \mathbb{E}[dw(X) \cdot n(X)], \; n(x) = \mathbb{E}[IF(Y^1, x) - IF(Y^0, x) \mid X = x]
-\end{align*}
-$$
+* The good news: if we want this, there is a **closed-form solution**: take your datapoints $X_i$ and **re-weigh** each point to obtain $\widetilde{X}_i = w_iX_i$, where
 
-# Implicit Welfare Weights
+    $$
+    w_i = \frac{\Pr(Y_i = 1)}{\Pr(Y_i = 1 \mid A_i = 1)}
+    $$
 
-## Who Gets To Choose The Objective Function?
-
-* It turns out that any objective function is an **implicit implementation** of a **weighting** of each person's welfare relative to others
-
-## Appendix: Balance for the Positive Class
-
-* An alternative to predictive parity, though with similar results
-* Here the criterion is, for all $i$,
+    and use derived dataset $\widetilde{X}_i$ to learn $r(X)$ (via ML algorithm)... Why does this work?
+* Let $\mathcal{X}_{\text{fair}}$ be the set of all possible **reweighted versions** of $X_i$ ensuring $Y_i \perp A_i$. Then
 
 $$
-\mathbb{E}[W_i \mid M_i = 1, A_i = 1] = \mathbb{E}[W_i \mid M_i = 1, A_i = 0]
+\widetilde{X}_i = \min_{X_i' \in \mathcal{X}_{\text{fair}}}\textsf{distance}(X_i', X_i) = \min_{X_i' \in \mathcal{X}_{\text{fair}}}\underbrace{KL(X_i' \| X_i)}_{\text{Relative entropy!}}
 $$
+
+* The bad news: nobody in the fairness in AI community read @dedeo_wrong_2016, which proves this using information theory? Idk. It has a total of <a href='https://scholar.google.com/scholar?lookup=0&q=wrong+side+of+the+tracks+dedeo&hl=en&as_sdt=0,9' target='_blank'>22 citations</a> 😐
+
+## "Fairness" Through Equalized *Error* Rates {.smaller .crunch-title .title-12 .crunch-math}
+
+* Equalized **positive** rates didn't take **outcomes** $Y_i$ into account...
+  * (Even if $A_i = 1 \Rightarrow Y_i = 1, A_i = 0 \Rightarrow Y_i = 0$, we'd have to choose $\widehat{Y}_i = c$)
+* This time, we consider the **outcome** $Y$ that 
+
+* Equalized **False Positive Rate** (**EFPR**):
+
+$$
+\Pr(D = 1 \mid Y = 0, A = 0) = \Pr(D = 1 \mid Y = 0, A = 1)
+$$
+
+* Equalized **False Negative Rate** (**EFNR**):
+
+$$
+\Pr(D = 0 \mid Y = 1, A = 0) = \Pr(D = 0 \mid Y = 1, A = 1)
+$$
+
+* For general (non-binary) attributes: $(D \perp A) \mid Y$:
+
+$$
+\Pr(D = d, A = a \mid Y = y) = \Pr(D = d \mid Y = y)\Pr(A = a \mid Y = y)
+$$
+
+## ⚠️ LESS EQUATIONS PLEASE! 😤 {.smaller}
+
+* Depending on your background and/or learning style (say, visual vs. auditory), you may be able to look at equations on previous two slides and "see" what they're "saying"
+* If your brain works similarly to **mine**, however, your eyes glazed over, you began dissociating, planning an escape route, etc., the moment $> 2$ variables appeared
+* If you're in the latter group, welcome to the **cult of Probabilistic Graphical Models** 😈
+
+![Your first **PGM**, illustrating **hypothesized causal relationships** between three random variables $Y$ (outcome), $D$ (decision), and $A$ (protected attribute). The $Y$ node is **shaded** to indicate that it is an **observed** value in our model, rendering the **unobserved** values $D$ and $A$ **independent** conditional on it. If I was elected Emperor of Math, equations would be abolished in favor of PGMs.](images/pgm_fairness.svg){fig-align="center"}
+
+## {background-video="https://jpj.georgetown.domains/dsan5450-scratch/Dead_Inside_Shuffle.mp4" background-size="contain" background-opacity="0.5" .crunch-title .crunch-callout}
+
+::: {layout="[-70,30]" layout-align="right"}
+
+::: {.callout-note title="Equalized False Negative/Positive Rates" style="background-color: white !important;"}
+
+* Our first measure that **🥳🎉matches a principle of justice in society!!!🕺🪩**
+* <a href='https://en.wikipedia.org/wiki/Blackstone%27s_ratio' target='_blank'>**Blackstone's Ratio**</a>: *"It is better that ten guilty persons escape, than that one innocent suffers."* [@blackstone_commentaries_1769]
+* (...break time!)
+
+:::
+
+:::
+
+## Back to Equalized Error Rates {.crunch-title .crunch-ul}
+
+* <a href='https://en.wikipedia.org/wiki/Blackstone%27s_ratio' target='_blank'>**Blackstone's Ratio**</a>: *"It is better that ten guilty persons escape, than that one innocent suffers."* [@blackstone_commentaries_1769]
+* Mathematically $\Rightarrow \text{Cost}(FPR) = 10\cdot \text{Cost}(FNR)$
+* Legally $\Rightarrow$ *beyond reasonable doubt* standard for conviction
+* EFPR $\iff$ rates of false conviction should be the same for everyone, including members of different racial groups.
+  * Violated when black people are disproportionately likely to be incorrectly convicted, as if a **lower evidentiary standard** were applied to black people.
+
+## One Final Context-Free Criterion: Calibration
+
+* A risk function $r(X)$ is **calibrated** if
+
+$$
+\Pr(Y = 1 \mid r(X) = v_r) = v_r
+$$
+
+* (Sweeping a lot of details under the rug), I see this one as: **the risk function "tracks" real-world probabilities**
+* Then, $r(X)$ is **calibrated by group** if
+
+$$
+\Pr(Y = y \mid r(X) = v_r, A = a) = v_r
+$$
+
+## Calibration 
+
+<!-- ## Minimizing Loss Function Penalizing (Only) These Errors $\iff$ Single-Threshold Fairness {.smaller .crunch-title .title-09}
+
+* Loss function: $\ell(d, \widehat{d})$
+* An **optimal classifier** minimizes the expected loss: $\mathbb{E}[\ell(\widehat{d},d)]$
+* A **decision** is considered to be fair if individuals with the same score $s_i = \psi(v_i)$ are treated equally, regardless of group membership (Corbett-Davies & Goel 2018). -->
+
+## Impossibility Results
+
+* tldr: We cannot possibly achieve all three of **anti-classification**, classification **parity**, and **calibration**.
+* We can't even really achieve both classification parity and calibration.
+
+## References
+
+::: {#refs}
+:::
