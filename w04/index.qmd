@@ -40,6 +40,14 @@ format:
 
 :::
 
+::: {.hidden}
+
+$$
+\newcommand{\nimplies}{\;\not\!\!\!\!\implies}
+$$
+
+:::
+
 # Week 3 Recap {data-stack-name="Recap"}
 
 > "Repetition is the mother of perfection" - Dwayne Michael "Lil Wayne" Carter, Jr.
@@ -322,8 +330,6 @@ $$
 \Pr(Y = y \mid r(X) = v_r, A = a) = v_r
 $$
 
-## Calibration 
-
 <!-- ## Minimizing Loss Function Penalizing (Only) These Errors $\iff$ Single-Threshold Fairness {.smaller .crunch-title .title-09}
 
 * Loss function: $\ell(d, \widehat{d})$
@@ -332,8 +338,45 @@ $$
 
 ## Impossibility Results
 
-* tldr: We cannot possibly achieve all three of **anti-classification**, classification **parity**, and **calibration**.
-* We can't even really achieve both classification parity and calibration.
+* tldr: We cannot possibly achieve all three of **equalized positive rates** (often also termed "anti-classification"), classification **parity**, and **calibration** (regardless of **base rates**)
+* More alarmingly: We can't even achieve both classification **parity** and **calibration**, except in the special case of **equal base rates**
+
+## "Impossibility" vs. Impossibility {.smaller .crunch-title}
+
+* Sometimes "impossibility results" are, for all intents and purposes, mathematical curiosities: often there's some **pragmatic** way of getting around them
+* Example: "Arrow's Impossibility Theorem"
+  * [In theory] It is mathematically impossible to **aggregate individual preferences** into **societal preferences**
+  * [The catch] True only if people are restricted to **ordinal preferences**: "I prefer $x$ to $y$." No more information allowed
+  * [The way around it] Allow people to indicate the **magnitude** of their preferences: "I prefer $x$ 5 times more than $y$"
+* In this case, though, there are direct and (often) unavoidable real-world barriers that fairness impossibility imposes 😕
+
+## ProPublica vs. Northpointe {.smaller .crunch-title}
+
+* This is... an example with 1000s of books and papers and discussions around it! (A red flag 🚩, since, obsession with one example may conceal much wider range of issues!)
+* But, tldr, Northpointe created a ML algorithm called COMPAS, used by court systems all over the US to predict "risk" of arrestees
+* In 2016, ProPublica published results from an investigative report documenting COMPAS's racial discrimination, in the form of violating **equal error rates** between black and white arrestees
+* Northpointe responded that COMPAS does **not** discriminate, as it satisfies **calibration**
+* People have argued about who is "right" for 8 years, with some progress, but... not a lot
+
+## So... What Do We Do? {.smaller .crunch-title .crunch-ul .crunch-blockquote}
+
+* One option: argue about which of the two definitions is "better" for the next 100 years (what is the best way to give food to the poor?)
+
+> It appears to reveal an unfortunate but inexorable fact about our world: we must choose between two intuitively appealing ways to understand fairness in ML. Many scholars have done just that, defending either ProPublica's or Northpointe’s definitions against what they see as the misguided alternative. [@simons_algorithms_2023]
+
+* Another option: study and then work to ameliorate the social conditions which **force us into** this realm of mathematical impossibility (why do the poor have no food?)
+
+> The impossibility result is about much more than math. [It occurs because] the underlying outcome is distributed unevenly in society. This is a fact about society, not mathematics, and requires engaging with a complex, checkered history of systemic racism in the US. Predicting an outcome whose distribution is shaped by this history requires tradeoffs because the inequalities and injustices are encoded in data---in this case, because America has criminalized Blackness for as long as America has existed.
+
+## Why Not Both?? {.smaller .crunch-title .crunch-ul}
+
+* On the one hand: yes, both! On the other hand: <a hrf='https://en.wikipedia.org/wiki/Argument_to_moderation' target='_blank'>fallacy of the "middle ground"</a>
+* We're back at **descriptive vs. normative**:
+  * **Descriptively**, given 100 values $v_1, \ldots, v_{100}$, their **mean** may be a good way to summarize, if we have to choose a single number
+  * But, **normatively**, imagine that these are **opinions** that people hold about fairness.
+  * Now, if it's the US South in 1860 and $v_i$ represents person $i$'s approval of slavery, from a sample of 100 people, then approx. 97 of the $v_i$'s are "does not disapprove" [@rousey_friends_2001] --- in this case, normatively, is the mean $0.97$ the "correct" answer?
+* We have another case where, like the "grass is green" vs. "grass ought to be green" example, we cannot just "import" our logical/mathematical tools from the former to solve the latter! (However: this does **not** mean they are **useless**! This is the fallacy of the **excluded middle**, sort of the opposite of the fallacy of the middle ground)
+* This is why we have **ethical frameworks** in the first place! Going back to **Rawls**: "97% of Americans think black people shouldn't have rights" &nbsp;$\nimplies$"black people shouldn't have rights", since rights are a **primary good**
 
 ## References
 

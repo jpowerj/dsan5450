@@ -860,25 +860,46 @@
     "text": "One Final Context-Free Criterion: Calibration\n\nA risk function \\(r(X)\\) is calibrated if\n\n\\[\n\\Pr(Y = 1 \\mid r(X) = v_r) = v_r\n\\]\n\n(Sweeping a lot of details under the rug), I see this one as: the risk function “tracks” real-world probabilities\nThen, \\(r(X)\\) is calibrated by group if\n\n\\[\n\\Pr(Y = y \\mid r(X) = v_r, A = a) = v_r\n\\]"
   },
   {
-    "objectID": "w04/slides.html#calibration",
-    "href": "w04/slides.html#calibration",
-    "title": "Week 4: Fairness in AI",
-    "section": "Calibration",
-    "text": "Calibration"
-  },
-  {
     "objectID": "w04/slides.html#impossibility-results",
     "href": "w04/slides.html#impossibility-results",
     "title": "Week 4: Fairness in AI",
     "section": "Impossibility Results",
-    "text": "Impossibility Results\n\ntldr: We cannot possibly achieve all three of anti-classification, classification parity, and calibration.\nWe can’t even really achieve both classification parity and calibration."
+    "text": "Impossibility Results\n\ntldr: We cannot possibly achieve all three of equalized positive rates (often also termed “anti-classification”), classification parity, and calibration (regardless of base rates)\nMore alarmingly: We can’t even achieve both classification parity and calibration, except in the special case of equal base rates"
+  },
+  {
+    "objectID": "w04/slides.html#impossibility-vs.-impossibility",
+    "href": "w04/slides.html#impossibility-vs.-impossibility",
+    "title": "Week 4: Fairness in AI",
+    "section": "“Impossibility” vs. Impossibility",
+    "text": "“Impossibility” vs. Impossibility\n\nSometimes “impossibility results” are, for all intents and purposes, mathematical curiosities: often there’s some pragmatic way of getting around them\nExample: “Arrow’s Impossibility Theorem”\n\n[In theory] It is mathematically impossible to aggregate individual preferences into societal preferences\n[The catch] True only if people are restricted to ordinal preferences: “I prefer \\(x\\) to \\(y\\).” No more information allowed\n[The way around it] Allow people to indicate the magnitude of their preferences: “I prefer \\(x\\) 5 times more than \\(y\\)”\n\nIn this case, though, there are direct and (often) unavoidable real-world barriers that fairness impossibility imposes 😕"
+  },
+  {
+    "objectID": "w04/slides.html#propublica-vs.-northpointe",
+    "href": "w04/slides.html#propublica-vs.-northpointe",
+    "title": "Week 4: Fairness in AI",
+    "section": "ProPublica vs. Northpointe",
+    "text": "ProPublica vs. Northpointe\n\nThis is… an example with 1000s of books and papers and discussions around it! (A red flag 🚩, since, obsession with one example may conceal much wider range of issues!)\nBut, tldr, Northpointe created a ML algorithm called COMPAS, used by court systems all over the US to predict “risk” of arrestees\nIn 2016, ProPublica published results from an investigative report documenting COMPAS’s racial discrimination, in the form of violating equal error rates between black and white arrestees\nNorthpointe responded that COMPAS does not discriminate, as it satisfies calibration\nPeople have argued about who is “right” for 8 years, with some progress, but… not a lot"
+  },
+  {
+    "objectID": "w04/slides.html#so-what-do-we-do",
+    "href": "w04/slides.html#so-what-do-we-do",
+    "title": "Week 4: Fairness in AI",
+    "section": "So… What Do We Do?",
+    "text": "So… What Do We Do?\n\nOne option: argue about which of the two definitions is “better” for the next 100 years (what is the best way to give food to the poor?)\n\n\nIt appears to reveal an unfortunate but inexorable fact about our world: we must choose between two intuitively appealing ways to understand fairness in ML. Many scholars have done just that, defending either ProPublica’s or Northpointe’s definitions against what they see as the misguided alternative. (Simons 2023)\n\n\nAnother option: study and then work to ameliorate the social conditions which force us into this realm of mathematical impossibility (why do the poor have no food?)\n\n\nThe impossibility result is about much more than math. [It occurs because] the underlying outcome is distributed unevenly in society. This is a fact about society, not mathematics, and requires engaging with a complex, checkered history of systemic racism in the US. Predicting an outcome whose distribution is shaped by this history requires tradeoffs because the inequalities and injustices are encoded in data—in this case, because America has criminalized Blackness for as long as America has existed."
+  },
+  {
+    "objectID": "w04/slides.html#why-not-both",
+    "href": "w04/slides.html#why-not-both",
+    "title": "Week 4: Fairness in AI",
+    "section": "Why Not Both??",
+    "text": "Why Not Both??\n\nOn the one hand: yes, both! On the other hand: fallacy of the “middle ground”\nWe’re back at descriptive vs. normative:\n\nDescriptively, given 100 values \\(v_1, \\ldots, v_{100}\\), their mean may be a good way to summarize, if we have to choose a single number\nBut, normatively, imagine that these are opinions that people hold about fairness.\nNow, if it’s the US South in 1860 and \\(v_i\\) represents person \\(i\\)’s approval of slavery, from a sample of 100 people, then approx. 97 of the \\(v_i\\)’s are “does not disapprove” (Rousey 2001) — in this case, normatively, is the mean \\(0.97\\) the “correct” answer?\n\nWe have another case where, like the “grass is green” vs. “grass ought to be green” example, we cannot just “import” our logical/mathematical tools from the former to solve the latter! (However: this does not mean they are useless! This is the fallacy of the excluded middle, sort of the opposite of the fallacy of the middle ground)\nThis is why we have ethical frameworks in the first place! Going back to Rawls: “97% of Americans think black people shouldn’t have rights”  \\(\\nimplies\\)“black people shouldn’t have rights”, since rights are a primary good"
   },
   {
     "objectID": "w04/slides.html#references",
     "href": "w04/slides.html#references",
     "title": "Week 4: Fairness in AI",
     "section": "References",
-    "text": "References\n\n\nBlackstone, William. 1769. Commentaries on the Laws of England, Volume 2: A Facsimile of the First Edition of 1765-1769. University of Chicago Press.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeDeo, Simon. 2016. “Wrong Side of the Tracks: Big Data and Protected Categories.” arXiv. https://doi.org/10.48550/arXiv.1412.4643.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\n\n\n\nDSAN 5450 Week 4: Fairness in AI"
+    "text": "References\n\n\nBlackstone, William. 1769. Commentaries on the Laws of England, Volume 2: A Facsimile of the First Edition of 1765-1769. University of Chicago Press.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeDeo, Simon. 2016. “Wrong Side of the Tracks: Big Data and Protected Categories.” arXiv. https://doi.org/10.48550/arXiv.1412.4643.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nRousey, Dennis C. 2001. “Friends and Foes of Slavery: Foreigners and Northerners in the Old South.” Journal of Social History 35 (2): 373–96. https://www.jstor.org/stable/3790193.\n\n\nSimons, Josh. 2023. Algorithms for the People: Democracy in the Age of AI. Princeton University Press.\n\n\n\n\n\nDSAN 5450 Week 4: Fairness in AI"
   },
   {
     "objectID": "w04/index.html",
@@ -1061,21 +1082,51 @@
     ]
   },
   {
-    "objectID": "w04/index.html#calibration",
-    "href": "w04/index.html#calibration",
+    "objectID": "w04/index.html#impossibility-results",
+    "href": "w04/index.html#impossibility-results",
     "title": "Week 4: Fairness in AI",
-    "section": "Calibration",
-    "text": "Calibration",
+    "section": "Impossibility Results",
+    "text": "Impossibility Results\n\ntldr: We cannot possibly achieve all three of equalized positive rates (often also termed “anti-classification”), classification parity, and calibration (regardless of base rates)\nMore alarmingly: We can’t even achieve both classification parity and calibration, except in the special case of equal base rates",
     "crumbs": [
       "Week 4: Feb 6"
     ]
   },
   {
-    "objectID": "w04/index.html#impossibility-results",
-    "href": "w04/index.html#impossibility-results",
+    "objectID": "w04/index.html#impossibility-vs.-impossibility",
+    "href": "w04/index.html#impossibility-vs.-impossibility",
     "title": "Week 4: Fairness in AI",
-    "section": "Impossibility Results",
-    "text": "Impossibility Results\n\ntldr: We cannot possibly achieve all three of anti-classification, classification parity, and calibration.\nWe can’t even really achieve both classification parity and calibration.",
+    "section": "“Impossibility” vs. Impossibility",
+    "text": "“Impossibility” vs. Impossibility\n\nSometimes “impossibility results” are, for all intents and purposes, mathematical curiosities: often there’s some pragmatic way of getting around them\nExample: “Arrow’s Impossibility Theorem”\n\n[In theory] It is mathematically impossible to aggregate individual preferences into societal preferences\n[The catch] True only if people are restricted to ordinal preferences: “I prefer \\(x\\) to \\(y\\).” No more information allowed\n[The way around it] Allow people to indicate the magnitude of their preferences: “I prefer \\(x\\) 5 times more than \\(y\\)”\n\nIn this case, though, there are direct and (often) unavoidable real-world barriers that fairness impossibility imposes 😕",
+    "crumbs": [
+      "Week 4: Feb 6"
+    ]
+  },
+  {
+    "objectID": "w04/index.html#propublica-vs.-northpointe",
+    "href": "w04/index.html#propublica-vs.-northpointe",
+    "title": "Week 4: Fairness in AI",
+    "section": "ProPublica vs. Northpointe",
+    "text": "ProPublica vs. Northpointe\n\nThis is… an example with 1000s of books and papers and discussions around it! (A red flag 🚩, since, obsession with one example may conceal much wider range of issues!)\nBut, tldr, Northpointe created a ML algorithm called COMPAS, used by court systems all over the US to predict “risk” of arrestees\nIn 2016, ProPublica published results from an investigative report documenting COMPAS’s racial discrimination, in the form of violating equal error rates between black and white arrestees\nNorthpointe responded that COMPAS does not discriminate, as it satisfies calibration\nPeople have argued about who is “right” for 8 years, with some progress, but… not a lot",
+    "crumbs": [
+      "Week 4: Feb 6"
+    ]
+  },
+  {
+    "objectID": "w04/index.html#so-what-do-we-do",
+    "href": "w04/index.html#so-what-do-we-do",
+    "title": "Week 4: Fairness in AI",
+    "section": "So… What Do We Do?",
+    "text": "So… What Do We Do?\n\nOne option: argue about which of the two definitions is “better” for the next 100 years (what is the best way to give food to the poor?)\n\n\nIt appears to reveal an unfortunate but inexorable fact about our world: we must choose between two intuitively appealing ways to understand fairness in ML. Many scholars have done just that, defending either ProPublica’s or Northpointe’s definitions against what they see as the misguided alternative. (Simons 2023)\n\n\nAnother option: study and then work to ameliorate the social conditions which force us into this realm of mathematical impossibility (why do the poor have no food?)\n\n\nThe impossibility result is about much more than math. [It occurs because] the underlying outcome is distributed unevenly in society. This is a fact about society, not mathematics, and requires engaging with a complex, checkered history of systemic racism in the US. Predicting an outcome whose distribution is shaped by this history requires tradeoffs because the inequalities and injustices are encoded in data—in this case, because America has criminalized Blackness for as long as America has existed.",
+    "crumbs": [
+      "Week 4: Feb 6"
+    ]
+  },
+  {
+    "objectID": "w04/index.html#why-not-both",
+    "href": "w04/index.html#why-not-both",
+    "title": "Week 4: Fairness in AI",
+    "section": "Why Not Both??",
+    "text": "Why Not Both??\n\nOn the one hand: yes, both! On the other hand: fallacy of the “middle ground”\nWe’re back at descriptive vs. normative:\n\nDescriptively, given 100 values \\(v_1, \\ldots, v_{100}\\), their mean may be a good way to summarize, if we have to choose a single number\nBut, normatively, imagine that these are opinions that people hold about fairness.\nNow, if it’s the US South in 1860 and \\(v_i\\) represents person \\(i\\)’s approval of slavery, from a sample of 100 people, then approx. 97 of the \\(v_i\\)’s are “does not disapprove” (Rousey 2001) — in this case, normatively, is the mean \\(0.97\\) the “correct” answer?\n\nWe have another case where, like the “grass is green” vs. “grass ought to be green” example, we cannot just “import” our logical/mathematical tools from the former to solve the latter! (However: this does not mean they are useless! This is the fallacy of the excluded middle, sort of the opposite of the fallacy of the middle ground)\nThis is why we have ethical frameworks in the first place! Going back to Rawls: “97% of Americans think black people shouldn’t have rights”  \\(\\nimplies\\)“black people shouldn’t have rights”, since rights are a primary good",
     "crumbs": [
       "Week 4: Feb 6"
     ]
@@ -1085,7 +1136,7 @@
     "href": "w04/index.html#references",
     "title": "Week 4: Fairness in AI",
     "section": "References",
-    "text": "References\n\n\nBlackstone, William. 1769. Commentaries on the Laws of England, Volume 2: A Facsimile of the First Edition of 1765-1769. University of Chicago Press.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeDeo, Simon. 2016. “Wrong Side of the Tracks: Big Data and Protected Categories.” arXiv. https://doi.org/10.48550/arXiv.1412.4643.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.",
+    "text": "References\n\n\nBlackstone, William. 1769. Commentaries on the Laws of England, Volume 2: A Facsimile of the First Edition of 1765-1769. University of Chicago Press.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeDeo, Simon. 2016. “Wrong Side of the Tracks: Big Data and Protected Categories.” arXiv. https://doi.org/10.48550/arXiv.1412.4643.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nRousey, Dennis C. 2001. “Friends and Foes of Slavery: Foreigners and Northerners in the Old South.” Journal of Social History 35 (2): 373–96. https://www.jstor.org/stable/3790193.\n\n\nSimons, Josh. 2023. Algorithms for the People: Democracy in the Age of AI. Princeton University Press.",
     "crumbs": [
       "Week 4: Feb 6"
     ]

@@ -264,8 +264,11 @@ window.Quarto = {
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   <li><a href="#back-to-equalized-error-rates" id="toc-back-to-equalized-error-rates" class="nav-link" data-scroll-target="#back-to-equalized-error-rates">Back to Equalized Error Rates</a></li>
   <li><a href="#one-final-context-free-criterion-calibration" id="toc-one-final-context-free-criterion-calibration" class="nav-link" data-scroll-target="#one-final-context-free-criterion-calibration">One Final Context-Free Criterion: Calibration</a></li>
-  <li><a href="#calibration" id="toc-calibration" class="nav-link" data-scroll-target="#calibration">Calibration</a></li>
   <li><a href="#impossibility-results" id="toc-impossibility-results" class="nav-link" data-scroll-target="#impossibility-results">Impossibility Results</a></li>
+  <li><a href="#impossibility-vs.-impossibility" id="toc-impossibility-vs.-impossibility" class="nav-link" data-scroll-target="#impossibility-vs.-impossibility">“Impossibility” vs.&nbsp;Impossibility</a></li>
+  <li><a href="#propublica-vs.-northpointe" id="toc-propublica-vs.-northpointe" class="nav-link" data-scroll-target="#propublica-vs.-northpointe">ProPublica vs.&nbsp;Northpointe</a></li>
+  <li><a href="#so-what-do-we-do" id="toc-so-what-do-we-do" class="nav-link" data-scroll-target="#so-what-do-we-do">So… What Do We Do?</a></li>
+  <li><a href="#why-not-both" id="toc-why-not-both" class="nav-link" data-scroll-target="#why-not-both">Why Not Both??</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
   </ul>
@@ -319,6 +322,11 @@ window.Quarto = {
 <center>
 <a class="h2" href="./slides.html" target="_blank">Open slides in new window →</a>
 </center>
+<div class="hidden">
+<p><span class="math display">\[
+\newcommand{\nimplies}{\;\not\!\!\!\!\implies}
+\]</span></p>
+</div>
 <section id="week-3-recap" class="level1" data-stack-name="Recap">
 <h1 data-stack-name="Recap">Week 3 Recap</h1>
 <blockquote class="blockquote">
@@ -693,9 +701,6 @@ Equalized False Negative/Positive Rates
 <p><span class="math display">\[
 \Pr(Y = y \mid r(X) = v_r, A = a) = v_r
 \]</span></p>
-</section>
-<section id="calibration" class="level2">
-<h2 class="anchored" data-anchor-id="calibration">Calibration</h2>
 <!-- ## Minimizing Loss Function Penalizing (Only) These Errors $\iff$ Single-Threshold Fairness {.smaller .crunch-title .title-09}
 
 * Loss function: $\ell(d, \widehat{d})$
@@ -705,8 +710,60 @@ Equalized False Negative/Positive Rates
 <section id="impossibility-results" class="level2">
 <h2 class="anchored" data-anchor-id="impossibility-results">Impossibility Results</h2>
 <ul>
-<li>tldr: We cannot possibly achieve all three of <strong>anti-classification</strong>, classification <strong>parity</strong>, and <strong>calibration</strong>.</li>
-<li>We can’t even really achieve both classification parity and calibration.</li>
+<li>tldr: We cannot possibly achieve all three of <strong>equalized positive rates</strong> (often also termed “anti-classification”), classification <strong>parity</strong>, and <strong>calibration</strong> (regardless of <strong>base rates</strong>)</li>
+<li>More alarmingly: We can’t even achieve both classification <strong>parity</strong> and <strong>calibration</strong>, except in the special case of <strong>equal base rates</strong></li>
+</ul>
+</section>
+<section id="impossibility-vs.-impossibility" class="level2 smaller crunch-title">
+<h2 class="smaller crunch-title anchored" data-anchor-id="impossibility-vs.-impossibility">“Impossibility” vs.&nbsp;Impossibility</h2>
+<ul>
+<li>Sometimes “impossibility results” are, for all intents and purposes, mathematical curiosities: often there’s some <strong>pragmatic</strong> way of getting around them</li>
+<li>Example: “Arrow’s Impossibility Theorem”
+<ul>
+<li>[In theory] It is mathematically impossible to <strong>aggregate individual preferences</strong> into <strong>societal preferences</strong></li>
+<li>[The catch] True only if people are restricted to <strong>ordinal preferences</strong>: “I prefer <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span>.” No more information allowed</li>
+<li>[The way around it] Allow people to indicate the <strong>magnitude</strong> of their preferences: “I prefer <span class="math inline">\(x\)</span> 5 times more than <span class="math inline">\(y\)</span>”</li>
+</ul></li>
+<li>In this case, though, there are direct and (often) unavoidable real-world barriers that fairness impossibility imposes 😕</li>
+</ul>
+</section>
+<section id="propublica-vs.-northpointe" class="level2 smaller crunch-title">
+<h2 class="smaller crunch-title anchored" data-anchor-id="propublica-vs.-northpointe">ProPublica vs.&nbsp;Northpointe</h2>
+<ul>
+<li>This is… an example with 1000s of books and papers and discussions around it! (A red flag 🚩, since, obsession with one example may conceal much wider range of issues!)</li>
+<li>But, tldr, Northpointe created a ML algorithm called COMPAS, used by court systems all over the US to predict “risk” of arrestees</li>
+<li>In 2016, ProPublica published results from an investigative report documenting COMPAS’s racial discrimination, in the form of violating <strong>equal error rates</strong> between black and white arrestees</li>
+<li>Northpointe responded that COMPAS does <strong>not</strong> discriminate, as it satisfies <strong>calibration</strong></li>
+<li>People have argued about who is “right” for 8 years, with some progress, but… not a lot</li>
+</ul>
+</section>
+<section id="so-what-do-we-do" class="level2 smaller crunch-title crunch-ul crunch-blockquote">
+<h2 class="smaller crunch-title crunch-ul crunch-blockquote anchored" data-anchor-id="so-what-do-we-do">So… What Do We Do?</h2>
+<ul>
+<li>One option: argue about which of the two definitions is “better” for the next 100 years (what is the best way to give food to the poor?)</li>
+</ul>
+<blockquote class="blockquote">
+<p>It appears to reveal an unfortunate but inexorable fact about our world: we must choose between two intuitively appealing ways to understand fairness in ML. Many scholars have done just that, defending either ProPublica’s or Northpointe’s definitions against what they see as the misguided alternative. <span class="citation" data-cites="simons_algorithms_2023">(<a href="#ref-simons_algorithms_2023" role="doc-biblioref">Simons 2023</a>)</span></p>
+</blockquote>
+<ul>
+<li>Another option: study and then work to ameliorate the social conditions which <strong>force us into</strong> this realm of mathematical impossibility (why do the poor have no food?)</li>
+</ul>
+<blockquote class="blockquote">
+<p>The impossibility result is about much more than math. [It occurs because] the underlying outcome is distributed unevenly in society. This is a fact about society, not mathematics, and requires engaging with a complex, checkered history of systemic racism in the US. Predicting an outcome whose distribution is shaped by this history requires tradeoffs because the inequalities and injustices are encoded in data—in this case, because America has criminalized Blackness for as long as America has existed.</p>
+</blockquote>
+</section>
+<section id="why-not-both" class="level2 smaller crunch-title crunch-ul">
+<h2 class="smaller crunch-title crunch-ul anchored" data-anchor-id="why-not-both">Why Not Both??</h2>
+<ul>
+<li>On the one hand: yes, both! On the other hand: <a hrf="https://en.wikipedia.org/wiki/Argument_to_moderation" target="_blank">fallacy of the “middle ground”</a></li>
+<li>We’re back at <strong>descriptive vs.&nbsp;normative</strong>:
+<ul>
+<li><strong>Descriptively</strong>, given 100 values <span class="math inline">\(v_1, \ldots, v_{100}\)</span>, their <strong>mean</strong> may be a good way to summarize, if we have to choose a single number</li>
+<li>But, <strong>normatively</strong>, imagine that these are <strong>opinions</strong> that people hold about fairness.</li>
+<li>Now, if it’s the US South in 1860 and <span class="math inline">\(v_i\)</span> represents person <span class="math inline">\(i\)</span>’s approval of slavery, from a sample of 100 people, then approx. 97 of the <span class="math inline">\(v_i\)</span>’s are “does not disapprove” <span class="citation" data-cites="rousey_friends_2001">(<a href="#ref-rousey_friends_2001" role="doc-biblioref">Rousey 2001</a>)</span> — in this case, normatively, is the mean <span class="math inline">\(0.97\)</span> the “correct” answer?</li>
+</ul></li>
+<li>We have another case where, like the “grass is green” vs.&nbsp;“grass ought to be green” example, we cannot just “import” our logical/mathematical tools from the former to solve the latter! (However: this does <strong>not</strong> mean they are <strong>useless</strong>! This is the fallacy of the <strong>excluded middle</strong>, sort of the opposite of the fallacy of the middle ground)</li>
+<li>This is why we have <strong>ethical frameworks</strong> in the first place! Going back to <strong>Rawls</strong>: “97% of Americans think black people shouldn’t have rights” &nbsp;<span class="math inline">\(\nimplies\)</span>“black people shouldn’t have rights”, since rights are a <strong>primary good</strong></li>
 </ul>
 </section>
 <section id="references" class="level2">
@@ -726,6 +783,12 @@ France, Anatole. 1894. <em>Le <span>Lys Rouge</span> (<span>The Red Lily</span>)
 </div>
 <div id="ref-ingold_amazon_2016" class="csl-entry" role="listitem">
 Ingold, David, and Spencer Soper. 2016. <span>“Amazon <span>Doesn</span>’t <span>Consider</span> the <span>Race</span> of <span>Its Customers</span>. <span>Should It</span>?”</span> <em>Bloomberg</em>, April. <a href="http://www.bloomberg.com/graphics/2016-amazon-same-day/">http://www.bloomberg.com/graphics/2016-amazon-same-day/</a>.
+</div>
+<div id="ref-rousey_friends_2001" class="csl-entry" role="listitem">
+Rousey, Dennis C. 2001. <span>“Friends and <span>Foes</span> of <span>Slavery</span>: <span>Foreigners</span> and <span>Northerners</span> in the <span>Old South</span>.”</span> <em>Journal of Social History</em> 35 (2): 373–96. <a href="https://www.jstor.org/stable/3790193">https://www.jstor.org/stable/3790193</a>.
+</div>
+<div id="ref-simons_algorithms_2023" class="csl-entry" role="listitem">
+Simons, Josh. 2023. <em>Algorithms for the <span>People</span>: <span>Democracy</span> in the <span>Age</span> of <span>AI</span></em>. <span>Princeton University Press</span>.
 </div>
 </div>
 
