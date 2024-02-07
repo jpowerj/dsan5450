@@ -874,6 +874,13 @@
     "text": "“Impossibility” vs. Impossibility\n\nSometimes “impossibility results” are, for all intents and purposes, mathematical curiosities: often there’s some pragmatic way of getting around them\nExample: “Arrow’s Impossibility Theorem”\n\n[In theory] It is mathematically impossible to aggregate individual preferences into societal preferences\n[The catch] True only if people are restricted to ordinal preferences: “I prefer \\(x\\) to \\(y\\).” No more information allowed\n[The way around it] Allow people to indicate the magnitude of their preferences: “I prefer \\(x\\) 5 times more than \\(y\\)”\n\nIn this case, though, there are direct and (often) unavoidable real-world barriers that fairness impossibility imposes 😕"
   },
   {
+    "objectID": "w04/slides.html#arrows-impossibility-theorem",
+    "href": "w04/slides.html#arrows-impossibility-theorem",
+    "title": "Week 4: Fairness in AI",
+    "section": "Arrow’s Impossibility Theorem",
+    "text": "Arrow’s Impossibility Theorem\n\nAziza, Bogdan, and Charles are competing in a fitness test with four events. Goal: determine who is most fit overall\n\n\n\n\n\nRun\nJump\nHurdle\nWeights\n\n\n\n\nAziza\n10.1”\n6.0’\n40”\n150 lb\n\n\nBogdan\n9.2”\n5.9’\n42”\n140 lb\n\n\nCharles\n10.0”\n6.1’\n39”\n145 lb\n\n\n\n\nWe can rank unambiguously on individual events: Jump: Charles \\(\\succ_J\\) Aziza \\(\\succ_J\\) Bogdan\nNow, axioms for aggregation:\n\n\\(\\text{WP}\\) (Weak Pareto Optimality): if \\(x \\succ_i y\\) for all events \\(i\\), \\(x \\succ y\\)\n\\(\\text{IIA}\\) (Independence of Irrelevant Alternatives): If a fourth competitor enters, but Aziza and Bogdan still have the same relative standing on all events, their relative standing overall should not change\n\nLong story short: only aggregation that can satisfy these is “dictatorship”: choose one event, give it importance of 100%, the rest have importance 0% 😰"
+  },
+  {
     "objectID": "w04/slides.html#propublica-vs.-northpointe",
     "href": "w04/slides.html#propublica-vs.-northpointe",
     "title": "Week 4: Fairness in AI",
@@ -1097,6 +1104,16 @@
     "title": "Week 4: Fairness in AI",
     "section": "“Impossibility” vs. Impossibility",
     "text": "“Impossibility” vs. Impossibility\n\nSometimes “impossibility results” are, for all intents and purposes, mathematical curiosities: often there’s some pragmatic way of getting around them\nExample: “Arrow’s Impossibility Theorem”\n\n[In theory] It is mathematically impossible to aggregate individual preferences into societal preferences\n[The catch] True only if people are restricted to ordinal preferences: “I prefer \\(x\\) to \\(y\\).” No more information allowed\n[The way around it] Allow people to indicate the magnitude of their preferences: “I prefer \\(x\\) 5 times more than \\(y\\)”\n\nIn this case, though, there are direct and (often) unavoidable real-world barriers that fairness impossibility imposes 😕",
+    "crumbs": [
+      "Week 4: Feb 6"
+    ]
+  },
+  {
+    "objectID": "w04/index.html#arrows-impossibility-theorem",
+    "href": "w04/index.html#arrows-impossibility-theorem",
+    "title": "Week 4: Fairness in AI",
+    "section": "Arrow’s Impossibility Theorem",
+    "text": "Arrow’s Impossibility Theorem\n\nAziza, Bogdan, and Charles are competing in a fitness test with four events. Goal: determine who is most fit overall\n\n\n\n\n\nRun\nJump\nHurdle\nWeights\n\n\n\n\nAziza\n10.1”\n6.0’\n40”\n150 lb\n\n\nBogdan\n9.2”\n5.9’\n42”\n140 lb\n\n\nCharles\n10.0”\n6.1’\n39”\n145 lb\n\n\n\n\nWe can rank unambiguously on individual events: Jump: Charles \\(\\succ_J\\) Aziza \\(\\succ_J\\) Bogdan\nNow, axioms for aggregation:\n\n\\(\\text{WP}\\) (Weak Pareto Optimality): if \\(x \\succ_i y\\) for all events \\(i\\), \\(x \\succ y\\)\n\\(\\text{IIA}\\) (Independence of Irrelevant Alternatives): If a fourth competitor enters, but Aziza and Bogdan still have the same relative standing on all events, their relative standing overall should not change\n\nLong story short: only aggregation that can satisfy these is “dictatorship”: choose one event, give it importance of 100%, the rest have importance 0% 😰",
     "crumbs": [
       "Week 4: Feb 6"
     ]

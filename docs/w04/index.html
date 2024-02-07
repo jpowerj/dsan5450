@@ -266,6 +266,7 @@ window.Quarto = {
   <li><a href="#one-final-context-free-criterion-calibration" id="toc-one-final-context-free-criterion-calibration" class="nav-link" data-scroll-target="#one-final-context-free-criterion-calibration">One Final Context-Free Criterion: Calibration</a></li>
   <li><a href="#impossibility-results" id="toc-impossibility-results" class="nav-link" data-scroll-target="#impossibility-results">Impossibility Results</a></li>
   <li><a href="#impossibility-vs.-impossibility" id="toc-impossibility-vs.-impossibility" class="nav-link" data-scroll-target="#impossibility-vs.-impossibility">“Impossibility” vs.&nbsp;Impossibility</a></li>
+  <li><a href="#arrows-impossibility-theorem" id="toc-arrows-impossibility-theorem" class="nav-link" data-scroll-target="#arrows-impossibility-theorem">Arrow’s Impossibility Theorem</a></li>
   <li><a href="#propublica-vs.-northpointe" id="toc-propublica-vs.-northpointe" class="nav-link" data-scroll-target="#propublica-vs.-northpointe">ProPublica vs.&nbsp;Northpointe</a></li>
   <li><a href="#so-what-do-we-do" id="toc-so-what-do-we-do" class="nav-link" data-scroll-target="#so-what-do-we-do">So… What Do We Do?</a></li>
   <li><a href="#why-not-both" id="toc-why-not-both" class="nav-link" data-scroll-target="#why-not-both">Why Not Both??</a></li>
@@ -725,6 +726,55 @@ Equalized False Negative/Positive Rates
 <li>[The way around it] Allow people to indicate the <strong>magnitude</strong> of their preferences: “I prefer <span class="math inline">\(x\)</span> 5 times more than <span class="math inline">\(y\)</span>”</li>
 </ul></li>
 <li>In this case, though, there are direct and (often) unavoidable real-world barriers that fairness impossibility imposes 😕</li>
+</ul>
+</section>
+<section id="arrows-impossibility-theorem" class="level2 crunch-title smaller crunch-ul">
+<h2 class="crunch-title smaller crunch-ul anchored" data-anchor-id="arrows-impossibility-theorem">Arrow’s Impossibility Theorem</h2>
+<ul>
+<li>Aziza, Bogdan, and Charles are competing in a <strong>fitness test</strong> with four events. Goal: determine who is <strong>most fit overall</strong></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Run</th>
+<th>Jump</th>
+<th>Hurdle</th>
+<th>Weights</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aziza</td>
+<td>10.1”</td>
+<td>6.0’</td>
+<td>40”</td>
+<td>150 lb</td>
+</tr>
+<tr class="even">
+<td>Bogdan</td>
+<td>9.2”</td>
+<td>5.9’</td>
+<td>42”</td>
+<td>140 lb</td>
+</tr>
+<tr class="odd">
+<td>Charles</td>
+<td>10.0”</td>
+<td>6.1’</td>
+<td>39”</td>
+<td>145 lb</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>We <strong>can</strong> rank unambiguously on <strong>individual events</strong>: <strong>Jump</strong>: Charles <span class="math inline">\(\succ_J\)</span> Aziza <span class="math inline">\(\succ_J\)</span> Bogdan</li>
+<li>Now, <strong>axioms</strong> for aggregation:
+<ul>
+<li><span class="math inline">\(\text{WP}\)</span> (Weak Pareto Optimality): if <span class="math inline">\(x \succ_i y\)</span> for all events <span class="math inline">\(i\)</span>, <span class="math inline">\(x \succ y\)</span></li>
+<li><span class="math inline">\(\text{IIA}\)</span> (Independence of Irrelevant Alternatives): If a fourth competitor enters, but Aziza and Bogdan still have the same relative standing on all events, their relative standing overall should not change</li>
+</ul></li>
+<li>Long story short: only aggregation that can satisfy these is “dictatorship”: choose one event, give it importance of 100%, the rest have importance 0% 😰</li>
 </ul>
 </section>
 <section id="propublica-vs.-northpointe" class="level2 smaller crunch-title">

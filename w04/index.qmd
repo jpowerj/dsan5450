@@ -350,6 +350,22 @@ $$
   * [The way around it] Allow people to indicate the **magnitude** of their preferences: "I prefer $x$ 5 times more than $y$"
 * In this case, though, there are direct and (often) unavoidable real-world barriers that fairness impossibility imposes 😕
 
+## Arrow's Impossibility Theorem {.crunch-title .smaller .crunch-ul}
+
+* Aziza, Bogdan, and Charles are competing in a **fitness test** with four events. Goal: determine who is **most fit overall**
+
+| | Run | Jump | Hurdle | Weights |
+| - | - | - | - | - |
+| Aziza | 10.1" | 6.0' | 40" | 150 lb |
+| Bogdan | 9.2" | 5.9' | 42" | 140 lb |
+| Charles | 10.0" | 6.1' | 39" | 145 lb |
+
+* We **can** rank unambiguously on **individual events**: **Jump**: Charles $\succ_J$ Aziza $\succ_J$ Bogdan
+* Now, **axioms** for aggregation:
+  * $\text{WP}$ (Weak Pareto Optimality): if $x \succ_i y$ for all events $i$, $x \succ y$
+  * $\text{IIA}$ (Independence of Irrelevant Alternatives): If a fourth competitor enters, but Aziza and Bogdan still have the same relative standing on all events, their relative standing overall should not change
+* Long story short: only aggregation that can satisfy these is "dictatorship": choose one event, give it importance of 100%, the rest have importance 0% 😰
+
 ## ProPublica vs. Northpointe {.smaller .crunch-title}
 
 * This is... an example with 1000s of books and papers and discussions around it! (A red flag 🚩, since, obsession with one example may conceal much wider range of issues!)
