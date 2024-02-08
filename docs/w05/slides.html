@@ -366,7 +366,120 @@ Jeff Jacobs
   <p class="date">Tuesday, February 13, 2024</p>
 </section>
 <section>
-<section id="privacy-and-why-it-matters" class="title-slide slide level1 center" data-stack-name="Overview">
+<section id="context-free-rightarrow-context-sensitive" class="title-slide slide level1 center">
+<h1>Context-Free <span class="math inline">\(\rightarrow\)</span> Context-Sensitive</h1>
+
+</section>
+<section id="impossibility-results" class="slide level2">
+<h2>Impossibility Results</h2>
+<ul>
+<li>tldr: We cannot possibly achieve all three of <strong>equalized positive rates</strong> (often also termed “anti-classification”), classification <strong>parity</strong>, and <strong>calibration</strong> (regardless of <strong>base rates</strong>)</li>
+<li>More alarmingly: We can’t even achieve both classification <strong>parity</strong> and <strong>calibration</strong>, except in the special case of <strong>equal base rates</strong></li>
+</ul>
+</section>
+<section id="impossibility-vs.-impossibility" class="slide level2 smaller crunch-title">
+<h2>“Impossibility” vs.&nbsp;Impossibility</h2>
+<ul>
+<li>Sometimes “impossibility results” are, for all intents and purposes, mathematical curiosities: often there’s some <strong>pragmatic</strong> way of getting around them</li>
+<li>Example: “Arrow’s Impossibility Theorem”
+<ul>
+<li>[In theory] It is mathematically impossible to <strong>aggregate individual preferences</strong> into <strong>societal preferences</strong></li>
+<li>[The catch] True only if people are restricted to <strong>ordinal preferences</strong>: “I prefer <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span>.” No more information allowed</li>
+<li>[The way around it] Allow people to indicate the <strong>magnitude</strong> of their preferences: “I prefer <span class="math inline">\(x\)</span> 5 times more than <span class="math inline">\(y\)</span>”</li>
+</ul></li>
+<li>In this case, though, there are direct and (often) unavoidable real-world barriers that fairness impossibility imposes 😕</li>
+</ul>
+</section>
+<section id="arrows-impossibility-theorem" class="slide level2 crunch-title smaller crunch-ul">
+<h2>Arrow’s Impossibility Theorem</h2>
+<ul>
+<li>Aziza, Bogdan, and Charles are competing in a <strong>fitness test</strong> with four events. Goal: determine who is <strong>most fit overall</strong></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Run</th>
+<th>Jump</th>
+<th>Hurdle</th>
+<th>Weights</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aziza</td>
+<td>10.1”</td>
+<td>6.0’</td>
+<td>40”</td>
+<td>150 lb</td>
+</tr>
+<tr class="even">
+<td>Bogdan</td>
+<td>9.2”</td>
+<td>5.9’</td>
+<td>42”</td>
+<td>140 lb</td>
+</tr>
+<tr class="odd">
+<td>Charles</td>
+<td>10.0”</td>
+<td>6.1’</td>
+<td>39”</td>
+<td>145 lb</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>We <strong>can</strong> rank unambiguously on <strong>individual events</strong>: <strong>Jump</strong>: Charles <span class="math inline">\(\succ_J\)</span> Aziza <span class="math inline">\(\succ_J\)</span> Bogdan</li>
+<li>Now, <strong>axioms</strong> for aggregation:
+<ul>
+<li><span class="math inline">\(\text{WP}\)</span> (Weak Pareto Optimality): if <span class="math inline">\(x \succ_i y\)</span> for all events <span class="math inline">\(i\)</span>, <span class="math inline">\(x \succ y\)</span></li>
+<li><span class="math inline">\(\text{IIA}\)</span> (Independence of Irrelevant Alternatives): If a fourth competitor enters, but Aziza and Bogdan still have the same relative standing on all events, their relative standing overall should not change</li>
+</ul></li>
+<li>Long story short: only aggregation that can satisfy these is “dictatorship”: choose one event, give it importance of 100%, the rest have importance 0% 😰</li>
+</ul>
+</section>
+<section id="propublica-vs.-northpointe" class="slide level2 smaller crunch-title">
+<h2>ProPublica vs.&nbsp;Northpointe</h2>
+<ul>
+<li>This is… an example with 1000s of books and papers and discussions around it! (A red flag 🚩, since, obsession with one example may conceal much wider range of issues!)</li>
+<li>But, tldr, Northpointe created a ML algorithm called COMPAS, used by court systems all over the US to predict “risk” of arrestees</li>
+<li>In 2016, ProPublica published results from an investigative report documenting COMPAS’s racial discrimination, in the form of violating <strong>equal error rates</strong> between black and white arrestees</li>
+<li>Northpointe responded that COMPAS does <strong>not</strong> discriminate, as it satisfies <strong>calibration</strong></li>
+<li>People have argued about who is “right” for 8 years, with some progress, but… not a lot</li>
+</ul>
+</section>
+<section id="so-what-do-we-do" class="slide level2 smaller crunch-title crunch-ul crunch-blockquote">
+<h2>So… What Do We Do?</h2>
+<ul>
+<li>One option: argue about which of the two definitions is “better” for the next 100 years (what is the best way to give food to the poor?)</li>
+</ul>
+<blockquote>
+<p>It appears to reveal an unfortunate but inexorable fact about our world: we must choose between two intuitively appealing ways to understand fairness in ML. Many scholars have done just that, defending either ProPublica’s or Northpointe’s definitions against what they see as the misguided alternative. <span class="citation" data-cites="simons_algorithms_2023">(<a href="#/references" role="doc-biblioref" onclick="">Simons 2023</a>)</span></p>
+</blockquote>
+<ul>
+<li>Another option: study and then work to ameliorate the social conditions which <strong>force us into</strong> this realm of mathematical impossibility (why do the poor have no food?)</li>
+</ul>
+<blockquote>
+<p>The impossibility result is about much more than math. [It occurs because] the underlying outcome is distributed unevenly in society. This is a fact about society, not mathematics, and requires engaging with a complex, checkered history of systemic racism in the US. Predicting an outcome whose distribution is shaped by this history requires tradeoffs because the inequalities and injustices are encoded in data—in this case, because America has criminalized Blackness for as long as America has existed.</p>
+</blockquote>
+</section>
+<section id="why-not-both" class="slide level2 smaller crunch-title crunch-ul">
+<h2>Why Not Both??</h2>
+<ul>
+<li>On the one hand: yes, both! On the other hand: <a hrf="https://en.wikipedia.org/wiki/Argument_to_moderation" target="_blank">fallacy of the “middle ground”</a></li>
+<li>We’re back at <strong>descriptive vs.&nbsp;normative</strong>:
+<ul>
+<li><strong>Descriptively</strong>, given 100 values <span class="math inline">\(v_1, \ldots, v_{100}\)</span>, their <strong>mean</strong> may be a good way to summarize, if we have to choose a single number</li>
+<li>But, <strong>normatively</strong>, imagine that these are <strong>opinions</strong> that people hold about fairness.</li>
+<li>Now, if it’s the US South in 1860 and <span class="math inline">\(v_i\)</span> represents person <span class="math inline">\(i\)</span>’s approval of slavery, from a sample of 100 people, then approx. 97 of the <span class="math inline">\(v_i\)</span>’s are “does not disapprove” <span class="citation" data-cites="rousey_friends_2001">(<a href="#/references" role="doc-biblioref" onclick="">Rousey 2001</a>)</span> — in this case, normatively, is the mean <span class="math inline">\(0.97\)</span> the “correct” answer?</li>
+</ul></li>
+<li>We have another case where, like the “grass is green” vs.&nbsp;“grass ought to be green” example, we cannot just “import” our logical/mathematical tools from the former to solve the latter! (However: this does <strong>not</strong> mean they are <strong>useless</strong>! This is the fallacy of the <strong>excluded middle</strong>, sort of the opposite of the fallacy of the middle ground)</li>
+<li>This is why we have <strong>ethical frameworks</strong> in the first place! Going back to <strong>Rawls</strong>: “97% of Americans think black people shouldn’t have rights” &nbsp;<span class="math inline">\(\nimplies\)</span>“black people shouldn’t have rights”, since rights are a <strong>primary good</strong></li>
+</ul>
+</section></section>
+<section>
+<section id="privacy-and-why-it-matters" class="title-slide slide level1 center" data-stack-name="Privacy">
 <h1>Privacy and Why It Matters</h1>
 
 </section>
@@ -840,8 +953,14 @@ Dworkin, Ronald. 1977. <em>Taking <span>Rights Seriously</span></em>. <span>A&am
 <div id="ref-gentry_implementing_2011" class="csl-entry" role="listitem">
 Gentry, Craig, and Shai Halevi. 2011. <span>“Implementing Gentry’s Fully-Homomorphic Encryption Scheme.”</span> In <em>Annual International Conference on the Theory and Applications of Cryptographic Techniques</em>, 129–48. <span>Springer</span>.
 </div>
+<div id="ref-rousey_friends_2001" class="csl-entry" role="listitem">
+Rousey, Dennis C. 2001. <span>“Friends and <span>Foes</span> of <span>Slavery</span>: <span>Foreigners</span> and <span>Northerners</span> in the <span>Old South</span>.”</span> <em>Journal of Social History</em> 35 (2): 373–96. <a href="https://www.jstor.org/stable/3790193">https://www.jstor.org/stable/3790193</a>.
+</div>
 <div id="ref-rubin_statistical_1993" class="csl-entry" role="listitem">
 Rubin, Donald B. 1993. <span>“Statistical <span>Disclosure Limitation</span>.”</span> <em>Journal of Official Statistics</em> 9 (2): 461–68.
+</div>
+<div id="ref-simons_algorithms_2023" class="csl-entry" role="listitem">
+Simons, Josh. 2023. <em>Algorithms for the <span>People</span>: <span>Democracy</span> in the <span>Age</span> of <span>AI</span></em>. <span>Princeton University Press</span>.
 </div>
 </div>
 
