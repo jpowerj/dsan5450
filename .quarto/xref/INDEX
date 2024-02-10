@@ -58,5 +58,8 @@
   "wXX/index.qmd": {
     "slides.html": "097dc9c9",
     "index.html": "ece501a3"
+  },
+  "assignments.qmd": {
+    "assignments.html": "fb61989b"
   }
 }
