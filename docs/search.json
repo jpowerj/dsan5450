@@ -745,7 +745,10 @@
     "href": "assignments.html",
     "title": "Assignment Point Distributions",
     "section": "",
-    "text": "Use the tabs at the bottom of the spreadsheet (e.g., click the label HW1) to view the point distributions for different assignments.\nThe distributions are imported from a Google Sheet mainly for transparency: so that you can see exactly how totals are computed as a sum of the individual points allocated for each test!"
+    "text": "Use the tabs at the bottom of the spreadsheet (e.g., click the label HW1) to view the point distributions for different assignments.\nThe distributions are imported from a Google Sheet mainly for transparency: so that you can see exactly how totals are computed as a sum of the individual points allocated for each test!",
+    "crumbs": [
+      "Assignments"
+    ]
   },
   {
     "objectID": "w03/slides.html#loose-ends",

@@ -1,5 +1,6 @@
 ---
 title: "Assignment Point Distributions"
+subtitle: "DSAN 5450: Data Ethics and Policy, Spring 2024"
 author: "Jeff Jacobs"
 institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
 sidebar: mainnav
