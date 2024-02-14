@@ -1,16 +1,5 @@
 [
   {
-    "listing": "/writeups/index.html",
-    "items": [
-      "/writeups/w03.html",
-      "/writeups/w02.html"
-    ]
-  },
-  {
-    "listing": "/recordings/index.html",
-    "items": []
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/w01/index.html",
@@ -20,7 +9,19 @@
       "/w05/index.html",
       "/w06/index.html",
       "/w07/index.html",
+      "/w08/index.html",
       "/wXX/index.html"
+    ]
+  },
+  {
+    "listing": "/recordings/index.html",
+    "items": []
+  },
+  {
+    "listing": "/writeups/index.html",
+    "items": [
+      "/writeups/w03.html",
+      "/writeups/w02.html"
     ]
   }
 ]

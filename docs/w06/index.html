@@ -8,7 +8,7 @@
 
 <meta name="author" content="Jeff Jacobs">
 
-<title>DSAN 5450 - Week 6: Midterm</title>
+<title>DSAN 5450 - Week 6: Anonymity, Privacy-Preserving Computation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -70,138 +90,93 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../jjcustom.js"></script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../w06/index.html">Week 6: Feb 20</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">DSAN 5450: Data Ethics and Policy</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><i class="bi bi-house pe-1"></i> Home</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Syllabus</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../writeups/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Writeups</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../assignments.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Assignments</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../recordings/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Recordings</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../w01/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 1: Jan 17</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../w02/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 2: Jan 24</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../w03/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 3: Jan 30</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../w04/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 4: Feb 6</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../w05/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 5: Feb 13</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../w06/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Week 6: Feb 20</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../w07/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 7: Feb 27</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://forms.gle/LLQsiwGy5kkH5n3PA" class="sidebar-item-text sidebar-link" target="&quot;_blank&quot;">
- <span class="menu-text">Anonymous Suggestions<i class="bi bi-box-arrow-up-right ps-1"></i></span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#context-free-rightarrow-context-sensitive" id="toc-context-free-rightarrow-context-sensitive" class="nav-link active" data-scroll-target="#context-free-rightarrow-context-sensitive">Context-Free <span class="math inline">\(\rightarrow\)</span> Context-Sensitive</a>
+  <ul class="collapse">
+  <li><a href="#impossibility-results" id="toc-impossibility-results" class="nav-link" data-scroll-target="#impossibility-results">Impossibility Results</a></li>
+  <li><a href="#impossibility-vs.-impossibility" id="toc-impossibility-vs.-impossibility" class="nav-link" data-scroll-target="#impossibility-vs.-impossibility">“Impossibility” vs.&nbsp;Impossibility</a></li>
+  <li><a href="#arrows-impossibility-theorem" id="toc-arrows-impossibility-theorem" class="nav-link" data-scroll-target="#arrows-impossibility-theorem">Arrow’s Impossibility Theorem</a></li>
+  <li><a href="#propublica-vs.-northpointe" id="toc-propublica-vs.-northpointe" class="nav-link" data-scroll-target="#propublica-vs.-northpointe">ProPublica vs.&nbsp;Northpointe</a></li>
+  <li><a href="#so-what-do-we-do" id="toc-so-what-do-we-do" class="nav-link" data-scroll-target="#so-what-do-we-do">So… What Do We Do?</a></li>
+  <li><a href="#why-not-both" id="toc-why-not-both" class="nav-link" data-scroll-target="#why-not-both">Why Not Both??</a></li>
+  </ul></li>
+  <li><a href="#privacy-and-why-it-matters" id="toc-privacy-and-why-it-matters" class="nav-link" data-scroll-target="#privacy-and-why-it-matters">Privacy and Why It Matters</a>
+  <ul class="collapse">
+  <li><a href="#the-right-to-privacy" id="toc-the-right-to-privacy" class="nav-link" data-scroll-target="#the-right-to-privacy">The “Right” to Privacy</a></li>
+  <li><a href="#all-hope-is-not-lost" id="toc-all-hope-is-not-lost" class="nav-link" data-scroll-target="#all-hope-is-not-lost">All Hope Is Not Lost!</a></li>
+  </ul></li>
+  <li><a href="#synthetic-datasets" id="toc-synthetic-datasets" class="nav-link" data-scroll-target="#synthetic-datasets">Synthetic Datasets</a></li>
+  <li><a href="#varepsilon-differential-privacy" id="toc-varepsilon-differential-privacy" class="nav-link" data-scroll-target="#varepsilon-differential-privacy"><span class="math inline">\(\varepsilon\)</span>-Differential Privacy</a>
+  <ul class="collapse">
+  <li><a href="#the-goal" id="toc-the-goal" class="nav-link" data-scroll-target="#the-goal">The Goal</a></li>
+  <li><a href="#pareto-improvements-and-the-pareto-frontier" id="toc-pareto-improvements-and-the-pareto-frontier" class="nav-link" data-scroll-target="#pareto-improvements-and-the-pareto-frontier">Pareto Improvements and the Pareto Frontier</a></li>
+  <li><a href="#varepsilon-differential-privacy-definition" id="toc-varepsilon-differential-privacy-definition" class="nav-link" data-scroll-target="#varepsilon-differential-privacy-definition"><span class="math inline">\(\varepsilon\)</span>-Differential Privacy Definition</a></li>
+  </ul></li>
+  <li><a href="#privacy-preserving-computation" id="toc-privacy-preserving-computation" class="nav-link" data-scroll-target="#privacy-preserving-computation">Privacy-Preserving Computation</a>
+  <ul class="collapse">
+  <li><a href="#first-things-first-nand" id="toc-first-things-first-nand" class="nav-link" data-scroll-target="#first-things-first-nand">First Things First: <code>NAND</code></a></li>
+  <li><a href="#why-is-nand-all-we-need" id="toc-why-is-nand-all-we-need" class="nav-link" data-scroll-target="#why-is-nand-all-we-need">Why is <code>NAND</code> All We Need?</a></li>
+  <li><a href="#or-as-a-bonus" id="toc-or-as-a-bonus" class="nav-link" data-scroll-target="#or-as-a-bonus"><code>OR</code> as a Bonus!</a></li>
+  <li><a href="#and-lastly-xor" id="toc-and-lastly-xor" class="nav-link" data-scroll-target="#and-lastly-xor">And Lastly: <code>XOR</code></a></li>
+  <li><a href="#logic-rightarrow-math" id="toc-logic-rightarrow-math" class="nav-link" data-scroll-target="#logic-rightarrow-math">Logic <span class="math inline">\(\rightarrow\)</span> Math</a></li>
+  <li><a href="#implication-for-privacy-preserving-ai" id="toc-implication-for-privacy-preserving-ai" class="nav-link" data-scroll-target="#implication-for-privacy-preserving-ai">Implication for Privacy-Preserving AI</a></li>
+  <li><a href="#fully-homomorphic-encryption-possible-but-difficult" id="toc-fully-homomorphic-encryption-possible-but-difficult" class="nav-link" data-scroll-target="#fully-homomorphic-encryption-possible-but-difficult">Fully-Homomorphic Encryption: Possible But Difficult</a></li>
+  <li><a href="#application-zero-knowledge-proofs-and-voting" id="toc-application-zero-knowledge-proofs-and-voting" class="nav-link" data-scroll-target="#application-zero-knowledge-proofs-and-voting">Application: Zero-Knowledge Proofs and Voting</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 6: Midterm</h1>
+<h1 class="title">Week 6: Anonymity, Privacy-Preserving Computation</h1>
 <p class="subtitle lead"><em>DSAN 5450: Data Ethics and Policy</em><br><span class="subsubtitle">Spring 2024, Georgetown University</span></p>
   <div class="quarto-categories">
     <div class="quarto-category">Class Sessions</div>
@@ -229,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Tuesday, February 13, 2024</p>
+      <p class="date">Wednesday, February 21, 2024</p>
     </div>
   </div>
   
@@ -244,8 +219,612 @@ ul.task-list li input[type="checkbox"] {
 <center>
 <a class="h2" href="./slides.html" target="_blank">Open slides in new window →</a>
 </center>
+<section id="context-free-rightarrow-context-sensitive" class="level1">
+<h1>Context-Free <span class="math inline">\(\rightarrow\)</span> Context-Sensitive</h1>
+<section id="impossibility-results" class="level2">
+<h2 class="anchored" data-anchor-id="impossibility-results">Impossibility Results</h2>
+<ul>
+<li>tldr: We cannot possibly achieve all three of <strong>equalized positive rates</strong> (often also termed “anti-classification”), classification <strong>parity</strong>, and <strong>calibration</strong> (regardless of <strong>base rates</strong>)</li>
+<li>More alarmingly: We can’t even achieve both classification <strong>parity</strong> and <strong>calibration</strong>, except in the special case of <strong>equal base rates</strong></li>
+</ul>
+</section>
+<section id="impossibility-vs.-impossibility" class="level2 smaller crunch-title">
+<h2 class="smaller crunch-title anchored" data-anchor-id="impossibility-vs.-impossibility">“Impossibility” vs.&nbsp;Impossibility</h2>
+<ul>
+<li>Sometimes “impossibility results” are, for all intents and purposes, mathematical curiosities: often there’s some <strong>pragmatic</strong> way of getting around them</li>
+<li>Example: “Arrow’s Impossibility Theorem”
+<ul>
+<li>[In theory] It is mathematically impossible to <strong>aggregate individual preferences</strong> into <strong>societal preferences</strong></li>
+<li>[The catch] True only if people are restricted to <strong>ordinal preferences</strong>: “I prefer <span class="math inline">\(x\)</span> to <span class="math inline">\(y\)</span>.” No more information allowed</li>
+<li>[The way around it] Allow people to indicate the <strong>magnitude</strong> of their preferences: “I prefer <span class="math inline">\(x\)</span> 5 times more than <span class="math inline">\(y\)</span>”</li>
+</ul></li>
+<li>In this case, though, there are direct and (often) unavoidable real-world barriers that fairness impossibility imposes 😕</li>
+</ul>
+</section>
+<section id="arrows-impossibility-theorem" class="level2 crunch-title smaller crunch-ul">
+<h2 class="crunch-title smaller crunch-ul anchored" data-anchor-id="arrows-impossibility-theorem">Arrow’s Impossibility Theorem</h2>
+<ul>
+<li>Aziza, Bogdan, and Charles are competing in a <strong>fitness test</strong> with four events. Goal: determine who is <strong>most fit overall</strong></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Run</th>
+<th>Jump</th>
+<th>Hurdle</th>
+<th>Weights</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aziza</td>
+<td>10.1”</td>
+<td>6.0’</td>
+<td>40”</td>
+<td>150 lb</td>
+</tr>
+<tr class="even">
+<td>Bogdan</td>
+<td>9.2”</td>
+<td>5.9’</td>
+<td>42”</td>
+<td>140 lb</td>
+</tr>
+<tr class="odd">
+<td>Charles</td>
+<td>10.0”</td>
+<td>6.1’</td>
+<td>39”</td>
+<td>145 lb</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>We <strong>can</strong> rank unambiguously on <strong>individual events</strong>: <strong>Jump</strong>: Charles <span class="math inline">\(\succ_J\)</span> Aziza <span class="math inline">\(\succ_J\)</span> Bogdan</li>
+<li>Now, <strong>axioms</strong> for aggregation:
+<ul>
+<li><span class="math inline">\(\text{WP}\)</span> (Weak Pareto Optimality): if <span class="math inline">\(x \succ_i y\)</span> for all events <span class="math inline">\(i\)</span>, <span class="math inline">\(x \succ y\)</span></li>
+<li><span class="math inline">\(\text{IIA}\)</span> (Independence of Irrelevant Alternatives): If a fourth competitor enters, but Aziza and Bogdan still have the same relative standing on all events, their relative standing overall should not change</li>
+</ul></li>
+<li>Long story short: only aggregation that can satisfy these is “dictatorship”: choose one event, give it importance of 100%, the rest have importance 0% 😰</li>
+</ul>
+</section>
+<section id="propublica-vs.-northpointe" class="level2 smaller crunch-title">
+<h2 class="smaller crunch-title anchored" data-anchor-id="propublica-vs.-northpointe">ProPublica vs.&nbsp;Northpointe</h2>
+<ul>
+<li>This is… an example with 1000s of books and papers and discussions around it! (A red flag 🚩, since, obsession with one example may conceal much wider range of issues!)</li>
+<li>But, tldr, Northpointe created a ML algorithm called COMPAS, used by court systems all over the US to predict “risk” of arrestees</li>
+<li>In 2016, ProPublica published results from an investigative report documenting COMPAS’s racial discrimination, in the form of violating <strong>equal error rates</strong> between black and white arrestees</li>
+<li>Northpointe responded that COMPAS does <strong>not</strong> discriminate, as it satisfies <strong>calibration</strong></li>
+<li>People have argued about who is “right” for 8 years, with some progress, but… not a lot</li>
+</ul>
+</section>
+<section id="so-what-do-we-do" class="level2 smaller crunch-title crunch-ul crunch-blockquote">
+<h2 class="smaller crunch-title crunch-ul crunch-blockquote anchored" data-anchor-id="so-what-do-we-do">So… What Do We Do?</h2>
+<ul>
+<li>One option: argue about which of the two definitions is “better” for the next 100 years (what is the best way to give food to the poor?)</li>
+</ul>
+<blockquote class="blockquote">
+<p>It appears to reveal an unfortunate but inexorable fact about our world: we must choose between two intuitively appealing ways to understand fairness in ML. Many scholars have done just that, defending either ProPublica’s or Northpointe’s definitions against what they see as the misguided alternative. <span class="citation" data-cites="simons_algorithms_2023">(<a href="#ref-simons_algorithms_2023" role="doc-biblioref">Simons 2023</a>)</span></p>
+</blockquote>
+<ul>
+<li>Another option: study and then work to ameliorate the social conditions which <strong>force us into</strong> this realm of mathematical impossibility (why do the poor have no food?)</li>
+</ul>
+<blockquote class="blockquote">
+<p>The impossibility result is about much more than math. [It occurs because] the underlying outcome is distributed unevenly in society. This is a fact about society, not mathematics, and requires engaging with a complex, checkered history of systemic racism in the US. Predicting an outcome whose distribution is shaped by this history requires tradeoffs because the inequalities and injustices are encoded in data—in this case, because America has criminalized Blackness for as long as America has existed.</p>
+</blockquote>
+</section>
+<section id="why-not-both" class="level2 smaller crunch-title crunch-ul">
+<h2 class="smaller crunch-title crunch-ul anchored" data-anchor-id="why-not-both">Why Not Both??</h2>
+<ul>
+<li>On the one hand: yes, both! On the other hand: <a hrf="https://en.wikipedia.org/wiki/Argument_to_moderation" target="_blank">fallacy of the “middle ground”</a></li>
+<li>We’re back at <strong>descriptive vs.&nbsp;normative</strong>:
+<ul>
+<li><strong>Descriptively</strong>, given 100 values <span class="math inline">\(v_1, \ldots, v_{100}\)</span>, their <strong>mean</strong> may be a good way to summarize, if we have to choose a single number</li>
+<li>But, <strong>normatively</strong>, imagine that these are <strong>opinions</strong> that people hold about fairness.</li>
+<li>Now, if it’s the US South in 1860 and <span class="math inline">\(v_i\)</span> represents person <span class="math inline">\(i\)</span>’s approval of slavery, from a sample of 100 people, then approx. 97 of the <span class="math inline">\(v_i\)</span>’s are “does not disapprove” <span class="citation" data-cites="rousey_friends_2001">(<a href="#ref-rousey_friends_2001" role="doc-biblioref">Rousey 2001</a>)</span> — in this case, normatively, is the mean <span class="math inline">\(0.97\)</span> the “correct” answer?</li>
+</ul></li>
+<li>We have another case where, like the “grass is green” vs.&nbsp;“grass ought to be green” example, we cannot just “import” our logical/mathematical tools from the former to solve the latter! (However: this does <strong>not</strong> mean they are <strong>useless</strong>! This is the fallacy of the <strong>excluded middle</strong>, sort of the opposite of the fallacy of the middle ground)</li>
+<li>This is why we have <strong>ethical frameworks</strong> in the first place! Going back to <strong>Rawls</strong>: “97% of Americans think black people shouldn’t have rights” &nbsp;<span class="math inline">\(\nimplies\)</span>“black people shouldn’t have rights”, since rights are a <strong>primary good</strong></li>
+</ul>
+</section>
+</section>
+<section id="privacy-and-why-it-matters" class="level1" data-stack-name="Privacy">
+<h1 data-stack-name="Privacy">Privacy and Why It Matters</h1>
+<section id="the-right-to-privacy" class="level2">
+<h2 class="anchored" data-anchor-id="the-right-to-privacy">The “Right” to Privacy</h2>
+<ul>
+<li>In Theory (Normatively): A <strong>right</strong> is an individual “veto” on a collective decision <span class="citation" data-cites="dworkin_taking_1977">(<a href="#ref-dworkin_taking_1977" role="doc-biblioref">Dworkin 1977</a>)</span></li>
+<li>In Practice (Descriptively): Rights grow out of the barrel of a gun</li>
+</ul>
+</section>
+<section id="all-hope-is-not-lost" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="all-hope-is-not-lost">All Hope Is Not Lost!</h2>
+<ul>
+<li><strong>Anonymity via Synthetic Datasets</strong>: if identifying info already exists (e.g., in the US Census), we can generate <strong>synthetic datasets</strong> which
+<ul>
+<li>Have the same distributional properties as the real data, but</li>
+<li>Cannot be used to identify you</li>
+</ul></li>
+<li><strong><span class="math inline">\(\varepsilon\)</span>-Differential Privacy</strong>: Allows us to <strong>quantify</strong> the tradeoff between <strong>accuracy</strong> and <strong>privacy</strong></li>
+<li><strong>Homomorphic Cryptography</strong> makes it possible to encode data in such a way that:
+<ul>
+<li>It can be used to train algorithms, yet</li>
+<li>It cannot be used to identify you</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="synthetic-datasets" class="level1" data-name="Synthetic Data">
+<h1 data-name="Synthetic Data">Synthetic Datasets</h1>
+<ul>
+<li>The issue: <strong>conflict</strong> between the benefits of scientific research and the privacy of subjects!</li>
+<li>Synthetic dataset generation escapes this condundrum by creating “fake” data with the same <strong>statistical properties</strong> as the real data</li>
+<li>This was one of the most promising approaches to privacy in computation, upon publication of <span class="citation" data-cites="rubin_statistical_1993">(<a href="#ref-rubin_statistical_1993" role="doc-biblioref">Rubin 1993</a>)</span>, but raised the question of how to <strong>ensure</strong> privacy, rather than hoping that fake data is sufficiently different</li>
+</ul>
+</section>
+<section id="varepsilon-differential-privacy" class="level1" data-stack-name="Differential Privacy">
+<h1 data-stack-name="Differential Privacy"><span class="math inline">\(\varepsilon\)</span>-Differential Privacy</h1>
+<section id="the-goal" class="level2 crunch-title crunch-quarto-figure">
+<h2 class="crunch-title crunch-quarto-figure anchored" data-anchor-id="the-goal">The Goal</h2>
+<ul>
+<li>Enable <strong>mathematical</strong> analysis of a privacy mechanism, via optimization with respect to the accuracy-privacy tradeoff:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/accuracy_privacy.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="pareto-improvements-and-the-pareto-frontier" class="level2 smaller title-12">
+<h2 class="smaller title-12 anchored" data-anchor-id="pareto-improvements-and-the-pareto-frontier">Pareto Improvements and the Pareto Frontier</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/pareto.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="varepsilon-differential-privacy-definition" class="level2">
+<h2 class="anchored" data-anchor-id="varepsilon-differential-privacy-definition"><span class="math inline">\(\varepsilon\)</span>-Differential Privacy Definition</h2>
+<ul>
+<li>A privacy mechanism <span class="math inline">\(M\)</span> provides <span class="math inline">\(\varepsilon\)</span>-differential privacy if:
+<ul>
+<li>For all pairs of datasets <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> which differ in the data of one person, and</li>
+<li>For all (probability-theoretic) events <span class="math inline">\(S\)</span></li>
+</ul></li>
+</ul>
+<p><span class="math display">\[
+\Pr(M(x) \in S) \leq e^\varepsilon \Pr(M(y) \in S)
+\]</span></p>
+</section>
+</section>
+<section id="privacy-preserving-computation" class="level1" data-stack-name="Privacy-Preserving Computation">
+<h1 data-stack-name="Privacy-Preserving Computation">Privacy-Preserving Computation</h1>
+<section id="first-things-first-nand" class="level2">
+<h2 class="anchored" data-anchor-id="first-things-first-nand">First Things First: <code>NAND</code></h2>
+<ul>
+<li>The irreducible “atom” of computing, it turns out, is the <code>NAND</code> operation: the <strong>N</strong>egation of the <strong><code>AND</code></strong> operation, which we’ll denote using <span class="cb3"><span class="math inline">\(\barwedge\)</span></span>:</li>
+</ul>
+<table class="centered-table table" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"><span class="math inline">\(p\)</span></th>
+<th data-quarto-table-cell-role="th"><span class="math inline">\(q\)</span></th>
+<th data-quarto-table-cell-role="th"><span class="math inline">\(p \wedge q\)</span></th>
+<th class="cb3a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(p \barwedge q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td class="cb3a-bg">1</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td class="cb3a-bg">1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td class="cb3a-bg">1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td class="cb3a-bg">0</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="why-is-nand-all-we-need" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="why-is-nand-all-we-need">Why is <code>NAND</code> All We Need?</h2>
+<ul>
+<li><strong>Logically</strong>: any boolean function can be decomposed (e.g., in “conjunctive normal form”) into <span class="cb1"><strong>negation</strong></span> (unary) and <span class="cb2"><strong>conjunction</strong></span> (binary). Here’s both, using only <code>NAND</code>!</li>
+</ul>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-align="center" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="negation" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<center class="center-head">
+<strong>Negation</strong> (<span class="math inline">\(\neg\)</span>)
+</center>
+<center>
+
+<table class="centered-table table" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(p\)</span></th>
+<th class="cb1a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(\neg p\)</span></th>
+<th class="cb3a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(p \barwedge p\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0</td>
+<td class="cb1a-bg" style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td class="cb1a-bg" style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
+</tr>
+</tbody>
+</table>
+
+</center>
+</div>
+<div id="conjunction" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<center class="center-head">
+<strong>Conjunction</strong> (<span class="math inline">\(\wedge\)</span>)
+</center>
+<table class="centered-table table" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(p\)</span></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(q\)</span></th>
+<th class="cb2a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(p \wedge q\)</span></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(p \barwedge q\)</span></th>
+<th class="cb3a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(\left(p \barwedge q\right) \barwedge \left(p \barwedge q\right)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td class="cb2a-bg" style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td class="cb2a-bg" style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td class="cb2a-bg" style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td class="cb2a-bg" style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="or-as-a-bonus" class="level2 smaller crunch-title">
+<h2 class="smaller crunch-title anchored" data-anchor-id="or-as-a-bonus"><code>OR</code> as a Bonus!</h2>
+<ul>
+<li>Since we now have <span class="math inline">\(\neg\)</span> and <span class="math inline">\(\wedge\)</span>, we can derive <span class="math inline">\(\vee\)</span>!</li>
+</ul>
+<table class="centered-table table" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"><span class="math inline">\(p\)</span></th>
+<th data-quarto-table-cell-role="th"><span class="math inline">\(q\)</span></th>
+<th class="cb2a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(p \vee q\)</span></th>
+<th data-quarto-table-cell-role="th"><span class="math inline">\(\neg p\)</span></th>
+<th data-quarto-table-cell-role="th"><span class="math inline">\(\neg q\)</span></th>
+<th><span class="math inline">\(\neg p \wedge \neg q\)</span></th>
+<th class="cb3a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(\neg\left(\neg p \wedge \neg q\right)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td class="cb2a-bg">0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td class="cb3a-bg">0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td class="cb2a-bg">1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td class="cb3a-bg">1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td class="cb2a-bg">1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td class="cb3a-bg">1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td class="cb2a-bg">1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td class="cb3a-bg">1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>This is encapsulated in <strong>DeMorgan’s Laws</strong>:</li>
+</ul>
+<p><span class="math display">\[
+\begin{align*}
+\neg(p \wedge q) &amp;= \neg p \vee \neg q \\
+\neg(p \vee q) &amp;= \neg p \wedge \neg q
+\end{align*}
+\]</span></p>
+</section>
+<section id="and-lastly-xor" class="level2">
+<h2 class="anchored" data-anchor-id="and-lastly-xor">And Lastly: <code>XOR</code></h2>
+<ul>
+<li><strong>Exclusive</strong> or: <span class="math inline">\(p \oplus q\)</span> = “<span class="math inline">\(p\)</span> or <span class="math inline">\(q\)</span> <strong>but not both</strong>”</li>
+</ul>
+<table class="centered-table table" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"><span class="math inline">\(p\)</span></th>
+<th data-quarto-table-cell-role="th"><span class="math inline">\(q\)</span></th>
+<th class="cb2a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(p \oplus q\)</span></th>
+<th data-quarto-table-cell-role="th"><span class="math inline">\(p \vee q\)</span></th>
+<th data-quarto-table-cell-role="th"><span class="math inline">\(\neg(p \wedge q)\)</span></th>
+<th class="cb3a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(\left(p \vee q) \wedge \neg (p \wedge q\right)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td class="cb2a-bg">0</td>
+<td>0</td>
+<td>1</td>
+<td class="cb3a-bg">0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td class="cb2a-bg">1</td>
+<td>1</td>
+<td>1</td>
+<td class="cb3a-bg">1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td class="cb2a-bg">1</td>
+<td>1</td>
+<td>1</td>
+<td class="cb3a-bg">1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td class="cb2a-bg">0</td>
+<td>1</td>
+<td>0</td>
+<td class="cb3a-bg">0</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="logic-rightarrow-math" class="level2 smaller crunch-title">
+<h2 class="smaller crunch-title anchored" data-anchor-id="logic-rightarrow-math">Logic <span class="math inline">\(\rightarrow\)</span> Math</h2>
+<ul>
+<li><strong>Mathematically</strong>: (1) Math can be performed in <strong>base 2</strong>, and (2) If we have a way to <span class="cb1"><strong>add</strong></span> and <span class="cb2"><strong>multiply</strong></span> in base 2, we have the basic <strong>algebraic ring</strong> <span class="math inline">\(\mathbb{Z}_2\)</span> used for “doing math”!</li>
+<li>But, let’s look at what happens when we do math in <span class="math inline">\(\mathbb{Z}_2\)</span>:</li>
+</ul>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="addition" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<center class="center-head">
+<strong>Addition</strong> (<span class="math inline">\(+\)</span>)
+</center>
+<center>
+
+<table class="centered-table table" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(x\)</span></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(y\)</span></th>
+<th class="cb1a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(x +_{\mathbb{Z}_2} y\)</span></th>
+<th class="cb3a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(x \oplus y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td class="cb1a-bg" style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td class="cb1a-bg" style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td class="cb1a-bg" style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td class="cb1a-bg" style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
+</tr>
+</tbody>
+</table>
+
+</center>
+</div>
+<div id="multiplication" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<center class="center-head">
+<strong>Multiplication</strong> (<span class="math inline">\(\times\)</span>)
+</center>
+<center>
+
+<table class="centered-table table" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(x\)</span></th>
+<th style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(y\)</span></th>
+<th class="cb2a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(x \times_{\mathbb{Z}_2} y\)</span></th>
+<th class="cb3a-bg" style="text-align: left;" data-quarto-table-cell-role="th"><span class="math inline">\(x \wedge y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td class="cb2a-bg" style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td class="cb2a-bg" style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td class="cb2a-bg" style="text-align: left;">0</td>
+<td class="cb3a-bg" style="text-align: left;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">1</td>
+<td class="cb2a-bg" style="text-align: left;">1</td>
+<td class="cb3a-bg" style="text-align: left;">1</td>
+</tr>
+</tbody>
+</table>
+
+</center>
+</div>
+</div>
+</div>
+<ul>
+<li>Takeaway: <strong>Mathematical operations</strong> in <span class="math inline">\(\mathbb{Z}_2\)</span> are <strong>isomorphic</strong> to <strong>logical operators</strong> (over <span class="math inline">\(\text{T}, \text{F}\)</span>)!</li>
+</ul>
+</section>
+<section id="implication-for-privacy-preserving-ai" class="level2 smaller crunch-math">
+<h2 class="smaller crunch-math anchored" data-anchor-id="implication-for-privacy-preserving-ai">Implication for Privacy-Preserving AI</h2>
+<ul>
+<li>If we can develop an algorithm allowing <strong>addition</strong> and <strong>multiplication</strong> on <strong>encrypted values</strong>, we can run <strong>any AI algorithm we want</strong> on the data!</li>
+<li>We can (a) input <strong>encrypted data</strong>, then (b) use encrypted-addition and encrypted-multiplication in place of regular addition and multiplication</li>
+<li>Example: in <strong>RSA</strong>, the most widely-used encryption algorithm, <span class="math inline">\(\mathcal{E}(m) = m^e\mod{n}\)</span>, so multiplying the <strong>encrypted</strong> values produces the <strong>encrypyed version</strong> of the product!</li>
+</ul>
+<p><span class="math display">\[
+\begin{align*}
+\mathcal{E}(m_1)\times \mathcal{E}(m_2) &amp;= m_1^em_2^e\mod{n} \\
+&amp;= (m_1m_2)^e\mod{n} \\
+&amp;= \mathcal{E}(m_1 \times m_2)
+\end{align*}
+\]</span></p>
+<ul>
+<li>Doesn’t preserve <strong>addition</strong>, however:</li>
+</ul>
+<p><span class="math display">\[
+\begin{align*}
+\mathcal{E}(m_1) + \mathcal{E}(m_2) &amp;= m_1^e + m_2^e\mod{n} \\
+\mathcal{E}(m_1 + m_2) &amp;= (m_1 + m_2)^e\mod{n}
+\end{align*}
+\]</span></p>
+</section>
+<section id="fully-homomorphic-encryption-possible-but-difficult" class="level2 title-07">
+<h2 class="title-07 anchored" data-anchor-id="fully-homomorphic-encryption-possible-but-difficult">Fully-Homomorphic Encryption: Possible But Difficult</h2>
+<ul>
+<li>The gist is: each operation performed on the encrypted data adds a certain amount of <strong>noise</strong>, which means that after several computations the data becomes indecipherable (“Somewhat Homomorphic Encryption”)</li>
+<li><strong>But</strong>, as <span class="citation" data-cites="gentry_implementing_2011">Gentry and Halevi (<a href="#ref-gentry_implementing_2011" role="doc-biblioref">2011</a>)</span> showed, you can eliminate this problem by periodically “refreshing” the encryption before it reaches the indecipherable state</li>
+<li>More robust and advanced FHE schemes have been developed in the years since, but this was the “it’s possible!” result that got the ball rolling</li>
+</ul>
+</section>
+<section id="application-zero-knowledge-proofs-and-voting" class="level2 smaller title-09 crunch-quarto-figure crunch-figcaption crunch-iframe">
+<h2 class="smaller title-09 crunch-quarto-figure crunch-figcaption crunch-iframe anchored" data-anchor-id="application-zero-knowledge-proofs-and-voting">Application: Zero-Knowledge Proofs and Voting</h2>
+<div id="fig-voting" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-voting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-video"><iframe data-external="1" src="https://www.youtube.com/embed/BYRTvoZ3Rho" width="100%" height="600" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-voting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <a href="https://www.youtube.com/watch?v=BYRTvoZ3Rho" target="_blank">https://www.youtube.com/watch?v=BYRTvoZ3Rho</a>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-dworkin_taking_1977" class="csl-entry" role="listitem">
+Dworkin, Ronald. 1977. <em>Taking <span>Rights Seriously</span></em>. <span>A&amp;C Black</span>.
+</div>
+<div id="ref-gentry_implementing_2011" class="csl-entry" role="listitem">
+Gentry, Craig, and Shai Halevi. 2011. <span>“Implementing Gentry’s Fully-Homomorphic Encryption Scheme.”</span> In <em>Annual International Conference on the Theory and Applications of Cryptographic Techniques</em>, 129–48. <span>Springer</span>.
+</div>
+<div id="ref-rousey_friends_2001" class="csl-entry" role="listitem">
+Rousey, Dennis C. 2001. <span>“Friends and <span>Foes</span> of <span>Slavery</span>: <span>Foreigners</span> and <span>Northerners</span> in the <span>Old South</span>.”</span> <em>Journal of Social History</em> 35 (2): 373–96. <a href="https://www.jstor.org/stable/3790193">https://www.jstor.org/stable/3790193</a>.
+</div>
+<div id="ref-rubin_statistical_1993" class="csl-entry" role="listitem">
+Rubin, Donald B. 1993. <span>“Statistical <span>Disclosure Limitation</span>.”</span> <em>Journal of Official Statistics</em> 9 (2): 461–68.
+</div>
+<div id="ref-simons_algorithms_2023" class="csl-entry" role="listitem">
+Simons, Josh. 2023. <em>Algorithms for the <span>People</span>: <span>Democracy</span> in the <span>Age</span> of <span>AI</span></em>. <span>Princeton University Press</span>.
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

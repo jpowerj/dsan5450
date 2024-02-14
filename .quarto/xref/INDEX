@@ -61,5 +61,9 @@
   },
   "assignments.qmd": {
     "assignments.html": "fb61989b"
+  },
+  "w08/index.qmd": {
+    "slides.html": "5e93a319",
+    "index.html": "7be4234a"
   }
 }

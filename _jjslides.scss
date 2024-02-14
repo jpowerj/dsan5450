@@ -194,6 +194,10 @@ figcaption {
     margin-bottom: 2px !important;
 }
 
+.fix-callout-font .callout {
+    font-size: 100% !important;
+}
+
 .fn-span {
     font-size: 80% !important;
 }
@@ -266,6 +270,10 @@ figcaption {
 .subsubtitle {
     font-size: 70% !important;
     line-height: 0.5em !important;
+}
+
+.text-90 {
+    font-size: 90% !important;
 }
 
 // title smaller
