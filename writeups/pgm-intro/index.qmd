@@ -2,6 +2,8 @@
 title: "A Quick Introduction to Probabilistic Graphical Models"
 author: "Jeff Jacobs"
 sidebar: mainnav
+categories:
+  - "Extra Writeups"
 format:
   html:
     df-print: kable
