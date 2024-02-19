@@ -65,5 +65,8 @@
   "w08/index.qmd": {
     "slides.html": "5e93a319",
     "index.html": "7be4234a"
+  },
+  "writeups/pgm-intro/index.qmd": {
+    "index.html": "30f0b23b"
   }
 }

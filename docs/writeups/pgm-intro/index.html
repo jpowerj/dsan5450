@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jeff Jacobs">
 
-<title>DSAN 5450 - Syllabus</title>
+<title>DSAN 5450 - A Quick Introduction to Probabilistic Graphical Models</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -67,10 +68,39 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="./jjcustom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../../jjcustom.js"></script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -82,7 +112,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./syllabus.html">Syllabus</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      DSAN 5450: Data Ethics and Policy
+      </li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -97,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">DSAN 5450: Data Ethics and Policy</a> 
+      <a href="../../">DSAN 5450: Data Ethics and Policy</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -109,62 +141,62 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><i class="bi bi-house pe-1"></i> Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Writeups</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./assignments.html" class="sidebar-item-text sidebar-link">
+  <a href="../../assignments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignments</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./recordings/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../recordings/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Recordings</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w01/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w01/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 1: Jan 17</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w02/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w02/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2: Jan 24</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w03/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w03/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3: Jan 30</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w04/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w04/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4: Feb 6</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w05/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w05/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 5: Feb 13</span></a>
   </div>
 </li>
@@ -181,35 +213,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#course-staff" id="toc-course-staff" class="nav-link active" data-scroll-target="#course-staff">Course Staff</a></li>
-  <li><a href="#course-description" id="toc-course-description" class="nav-link" data-scroll-target="#course-description">Course Description</a></li>
-  <li><a href="#course-overview" id="toc-course-overview" class="nav-link" data-scroll-target="#course-overview">Course Overview</a>
-  <ul class="collapse">
-  <li><a href="#data-science" id="toc-data-science" class="nav-link" data-scroll-target="#data-science">Data Science</a></li>
-  <li><a href="#ethics" id="toc-ethics" class="nav-link" data-scroll-target="#ethics">Ethics</a></li>
-  <li><a href="#public-policy" id="toc-public-policy" class="nav-link" data-scroll-target="#public-policy">Public Policy</a></li>
-  </ul></li>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
-  <li><a href="#assignments-and-grading" id="toc-assignments-and-grading" class="nav-link" data-scroll-target="#assignments-and-grading">Assignments and Grading</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Syllabus</h1>
+<h1 class="title">A Quick Introduction to Probabilistic Graphical Models</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jeff Jacobs </p>
+          </div>
+  </div>
     
   
     
@@ -220,252 +243,87 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Welcome to DSAN 5450: Data Ethics and Policy at Georgetown University!</strong></p>
-<p>The course meets on <strong>Wednesdays from 3:30-6pm in the <a href="https://maps.app.goo.gl/fVVfDFpp4MEuukXa9" target="_blank">Walsh Building<i class="bi bi-box-arrow-up-right ps-1"></i></a>, Room 498</strong></p>
-<section id="course-staff" class="level2">
-<h2 class="anchored" data-anchor-id="course-staff">Course Staff</h2>
+<p>A Probabilistic Graphical Model (PGM) is just a formal mathematical representation of a <strong>data-generating process</strong>. So, if we wanted to model the relationship between weather and a person’s choice of whether to go out and party or stay in and watch a movie on a given Saturday evening, we could begin by proposing the following data-generating process:</p>
+<ol type="1">
+<li>A person <span class="math inline">\(i\)</span> looks out the window and observes the weather.</li>
+<li>If the weather is sunny, <span class="math inline">\(i\)</span> goes out to a party. Otherwise, <span class="math inline">\(i\)</span> stays in and watches a movie.</li>
+</ol>
+<p>Now, given the description of a PGM given above (nodes as variables, edges as relationships between variables), we can perform the move alluded to in the previous section: we can convert our data-generating process into a PGM, by defining nodes (variables) and edges (relationships) as follows:</p>
 <ul>
-<li>Prof.&nbsp;Jeff Jacobs, <a href="mailto:jj1088@georgetown.edu" target="_blank"><code>jj1088@georgetown.edu</code></a>
+<li>A Random Variable <span class="math inline">\(W\)</span> which can take on values in <span class="math inline">\(\mathcal{R}_W = \{\textsf{Sunny}, \textsf{Rainy}\}\)</span></li>
+<li>A Random Variable <span class="math inline">\(Y\)</span> which can take on values in <span class="math inline">\(\mathcal{R}_Y = \{\textsf{Go Out}, \textsf{Stay In}\}\)</span>, and</li>
+<li>An edge <span class="math inline">\(W \rightarrow Y\)</span> from <span class="math inline">\(W\)</span> to <span class="math inline">\(Y\)</span> which encodes the intuition that one is more likely to go out if it’s sunny than if it’s rainy via the probability distribution:
 <ul>
-<li>Office hours (Click to schedule): <a href="https://calendar.app.google/WiA9Jqit5d9mXsJf9" target="_blank">Monday, Tuesday, 3:30-6pm</a></li>
+<li><span class="math inline">\(\Pr(Y = \textsf{Go Out} \mid W = \textsf{Sunny}) = 0.75\)</span></li>
+<li><span class="math inline">\(\Pr(Y = \textsf{Stay In} \mid W = \textsf{Sunny}) = 0.25\)</span></li>
+<li><span class="math inline">\(\Pr(Y = \textsf{Go Out} \mid W = \textsf{Rainy}) = 0.25\)</span></li>
+<li><span class="math inline">\(\Pr(Y = \textsf{Stay In} \mid W = \textsf{Rainy}) = 0.75\)</span>.</li>
 </ul></li>
-<li>TA Amelia Baier, <a href="mailto:ab3868@georgetown.edu" target="_blank"><code>ab3868@georgetown.edu</code></a>
-<ul>
-<li>Office hours: By appointment</li>
-</ul></li>
-<li>TA Sonali Dabhi, <a href="mailto:sd1387@georgetown.edu" target="_blank"><code>sd1387@georgetown.edu</code></a>
-<ul>
-<li>Office hours: By appointment</li>
-</ul></li>
 </ul>
-</section>
-<section id="course-description" class="level2">
-<h2 class="anchored" data-anchor-id="course-description">Course Description</h2>
-<p>This graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).</p>
-<p>Beginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.</p>
-<p>The course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. <em>Prerequisites: None. 3 credits</em>.</p>
-</section>
-<section id="course-overview" class="level2">
-<h2 class="anchored" data-anchor-id="course-overview">Course Overview</h2>
-<p>The course revolves around three “pillars”, which we’ll examine individually before bringing them together for your final projects at the end of the class.</p>
-<section id="data-science" class="level3">
-<h3 class="anchored" data-anchor-id="data-science">Data Science</h3>
-<p>A portion of the course will focus on introductions to cutting-edge technologies like self-driving cars, ChatGPT, facial detection algorithms, and various applications of AI to police and military technologies. For this portion, we’ll draw fairly often from the contents of the following books:</p>
-<ul>
-<li>Catherine D’Ignazio and Lauren F. Klein (2020). <i><a href="https://data-feminism.mitpress.mit.edu/" target="_blank">Data Feminism</a></i>. Cambridge, MA: MIT Press. [Free, open-source!]</li>
-<li>Cathy O’Neil (2016). <i><a href="https://en.wikipedia.org/wiki/Weapons_of_Math_Destruction" target="_blank">Weapons of Math Destruction</a></i>. New York, NY: Crown Books.</li>
-</ul>
-<p>Since there are plenty of in-depth resources available to you (e.g., other Georgetown courses!) for learning the <em>technical details</em> of these technologies, our goal in this course will be to learn just the particular <em>aspects</em> of each technology which are most relevant to the ethical and policy issues they present.</p>
-<p>For example, we will look at Neural Netwok-based Machine Learning algorithms, but we will focus specifically on how the <strong>performance</strong> of these algorithms on a given task depends crucially on the existence of effective <strong>training data</strong> for that task. The breakthroughs in Artificial Intelligence which have had an immense impact on society over the past few decades, for example, have <strong>not</strong> come about because of new algorithms (neural networks, for example, have been around since the 1950s). Rather, they have come about because of the massive, exponential increase in the amount of <strong>data</strong> available to <strong>train</strong> these already-existing algorithms: for example, data scraped from across the entire web, or from millions of scanned books, or from Wikipedia’s massive collection of articles. This means, therefore, that these algorithms simply <strong>encode</strong> pre-existing human biases into algorithmically-derived “rules”, thus motivating the next pillar of the course: Ethics!</p>
-</section>
-<section id="ethics" class="level3">
-<h3 class="anchored" data-anchor-id="ethics">Ethics</h3>
-<p>For the ethics-focused portion of the course, we’ll be reading selections from the following textbook:</p>
-<ul>
-<li>Lewis Vaughn and Louis P. Pojman (2021). <i><a href="https://global.oup.com/ushe/product/the-moral-life-9780197610060?cc=us&amp;lang=en&amp;" target="_blank">The Moral Life: An Introductory Reader in Ethics and Literature</a></i>. Oxford, UK: Oxford University Press. [<a href="https://www.dropbox.com/scl/fi/edx5t4xedli9pcfxm3330/Louis-P.-Pojman-The-Moral-Life_-An-Introductory-Reader-in-Ethics-and-Literature.pdf?rlkey=6pwuvdfed6m8mzp3d0l5rsajv&amp;dl=1" target="_blank">PDF</a>]</li>
-</ul>
-<p>From the vast array of readings contained in this collection, we’ll look at both “standard” ethical readings from e.g.&nbsp;Jeremy Bentham and Immanuel Kant plus readings from literary sources like Ursula Le Guin and Ambrose Bierce.</p>
-</section>
-<section id="public-policy" class="level3">
-<h3 class="anchored" data-anchor-id="public-policy">Public Policy</h3>
-<p>For the final piece of the course we will take the <strong>technological developments</strong> discussed the first portion, analyze them using the <strong>ethical frameworks</strong> discussed in the second portion, and come to <strong>conclusions</strong> as to what types of things lawmakers, governments, and civil society organizations (NGOs, for example, and Think Tanks) can do <strong>in practice</strong> to address the ethical issues raised by these technologies. This means that, specifically, the recommended final project for the course will be a <strong>Policy Whitepaper</strong>, where you will choose a particular institution and make a <strong>recommendation</strong> to them in terms of how they can use their power (for example, the power to pass laws) to most effectively address an ethical issue that you believe is important.</p>
-<p>For this portion of the class we’ll have to draw on a wide range of different readings, depending on what particular subdomains of public policy are most interesting to you all, but as a general textbook on ethics in data science which does focus a good amount on <strong>policy</strong> specifically, we will look at:</p>
-<ul>
-<li>Anne L. Washington (2023). <i><a href=" https://annewashington.com/book-ethical-data-science-prediction-in-the-public-interest/" target="_blank">Ethical Data Science: Prediction in the Public Interest</a></i>. New York, NY: Oxford University Press.</li>
-</ul>
-<p>Now that you have an overview of the trajectory of the course, the following section contains the particulars of what we’ll be reading and working on each week!</p>
-</section>
-</section>
-<section id="schedule" class="level2">
-<h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
-<p>The following is a rough map of what we will work through together throughout the semester; given that <strong>everyone learns at a different pace</strong>, my aim is to leave us with a good amount of <strong>flexibility</strong> in terms of how much time we spend on each topic: if I find that it takes me longer than a week to convey a certain topic in sufficient depth, for example, then I view it as a strength rather than a weakness of the course that we can then rearrange the calendar below by adding an extra week on that particular topic! Similarly, if it seems like I am spending too much time on a topic, to the point that students seem bored or impatient to move onto the next topic, we can move a topic intended for the next week to the current week!</p>
-<table class="sticky-table table" data-quarto-postprocess="true">
-<thead>
-<tr class="header sticky-head">
-<th data-quarto-table-cell-role="th">Unit</th>
-<th data-quarto-table-cell-role="th">Week</th>
-<th data-quarto-table-cell-role="th">Date</th>
-<th data-quarto-table-cell-role="th">Topic</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Unit 1</strong>: Ethical Frameworks and Fairness in AI</td>
-<td>1</td>
-<td>Jan 17</td>
-<td>Course Intro</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>2</td>
-<td>Jan 24</td>
-<td>Machine Learning, Training Data, and Bias</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>3</td>
-<td>Jan 31</td>
-<td>(Descriptive) Fairness in AI</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>4</td>
-<td>Feb 7</td>
-<td>Fairness in AI</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td><em>Feb 9 (Friday), 11:59pm EST</em></td>
-<td><em>[Deliverable] HW1: Nuts and Bolts for Fairness in AI</em></td>
-</tr>
-<tr class="even new-unit">
-<td><strong>Unit 2</strong>: Privacy</td>
-<td>5</td>
-<td>Feb 14</td>
-<td>Data Privacy and Anonymity</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>6</td>
-<td>Feb 21</td>
-<td>Privacy-Preserving Computation</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td><em>Feb 23 (Friday)</em></td>
-<td><em>[Deliverable] HW2: Privacy-Preserving Computation</em></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>7</td>
-<td>Feb 28</td>
-<td>In-Class Midterm (Data Ethics, Fairness, Privacy)</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td><em>Mar 6</em></td>
-<td><em>No Class (Spring Break)</em></td>
-</tr>
-<tr class="odd new-unit">
-<td><strong>Unit 3:</strong> Policy Frameworks</td>
-<td>8</td>
-<td>Mar 13</td>
-<td>Applying Ethical Frameworks: Self-Driving Cars, Facial Recognition, and ChatGPT</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>9</td>
-<td>Mar 20</td>
-<td>Applying Ethical Frameworks: Police and Military Applications of AI</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td><em>Mar 22 (Friday)</em></td>
-<td><em>[Deliverable] HW3: Policy Frameworks</em></td>
-</tr>
-<tr class="even new-unit">
-<td><strong>Unit 4</strong>: Policy Evaluation</td>
-<td>10</td>
-<td>Mar 27</td>
-<td>Policy Evaluation and Reverse Fairness</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>11</td>
-<td>Apr 3</td>
-<td>Authoring Policy Whitepapers</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td><em>Apr 5 (Friday)</em></td>
-<td><em>[Deliverable] HW4: Policy Evaluation</em></td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>12</td>
-<td>Apr 10</td>
-<td>Applications: Public Policy and Climate Justice</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>13</td>
-<td>Apr 17</td>
-<td>Applications: Race, Class, Gender, Sexuality, and Disability (Data Feminism)</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>14</td>
-<td>April 24</td>
-<td>Applications: Public Policy and International Law</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td><em>May 3 (Friday)</em></td>
-<td><em>[Deliverable] Policy Whitepaper</em></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="assignments-and-grading" class="level2">
-<h2 class="anchored" data-anchor-id="assignments-and-grading">Assignments and Grading</h2>
-<p>The main assignment in the course will be your <strong>policy whitepaper</strong>, submitted at the end of the semester. However, there will also be a midterm exam and a series of assignments which exist to let you explore each of the modules of the course, in turn.</p>
+<p>The resulting PGM, in graphical form<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, is presented below, followed by the Conditional Probability Table describing the edge from the <span class="math inline">\(W\)</span> node to the <span class="math inline">\(Y\)</span> node.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/pgm.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
 <table class="table">
-<colgroup>
-<col style="width: 55%">
-<col style="width: 25%">
-<col style="width: 20%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Assignment</th>
-<th>Due Date</th>
-<th>% of Grade</th>
+<th style="text-align: right;"></th>
+<th style="text-align: center;"><span class="math inline">\(Y = \textsf{Go Out}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(Y = \textsf{Stay In}\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>HW1: Nuts and Bolts for Fairness in AI</td>
-<td>Friday, <strong>February 9</strong></td>
-<td>10%</td>
+<td style="text-align: right;"><span class="math inline">\(W = \textsf{Sunny}\)</span></td>
+<td style="text-align: center;">0.75</td>
+<td style="text-align: center;">0.25</td>
 </tr>
 <tr class="even">
-<td>HW2: Privacy-Preserving Computation</td>
-<td>Friday, <strong>February 23</strong></td>
-<td>10%</td>
-</tr>
-<tr class="odd">
-<td>Midterm</td>
-<td>Wednesday, <strong>February 28</strong></td>
-<td>30%</td>
-</tr>
-<tr class="even">
-<td>HW3: Policy Frameworks</td>
-<td>Friday, <strong>March 22</strong></td>
-<td>10%</td>
-</tr>
-<tr class="odd">
-<td>HW4: Policy Evaluation</td>
-<td>Friday, <strong>April 5</strong></td>
-<td>10%</td>
-</tr>
-<tr class="even">
-<td>Policy Whitepaper</td>
-<td>Friday, <strong>May 3</strong></td>
-<td>30%</td>
+<td style="text-align: right;"><span class="math inline">\(W = \textsf{Rainy}\)</span></td>
+<td style="text-align: center;">0.25</td>
+<td style="text-align: center;">0.75</td>
 </tr>
 </tbody>
 </table>
+<p>PGMs can help us make inferences about the world in the face of incomplete information, which is the situation in nearly every real-world problem. The key tool here is the separation of nodes into two categories: <strong>observed</strong> (represented graphically as a shaded node) and <strong>latent</strong> (represented graphically as an unshaded node).</p>
+<p>Thus we can now use our model as a weather-inference machine: if we observe that the person we’re modeling is out at a party with us, what can we infer from this information about the weather outside? We can draw this situation as a PGM with shaded and unshaded nodes, as in the figure below, and then use Bayes’ Rule to perform calculations over the network, to see how the observed information about the person at the party “flows” back into the node representing the weather.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/pgm_yobs.svg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:40.0%"></p>
+</figure>
+</div>
+<p>Keeping in mind that Bayes’ Rule tells us, for any two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, how to use information about <span class="math inline">\(\Pr(B \mid A)\)</span> to obtain information about <span class="math inline">\(\Pr(A \mid B)\)</span>:</p>
+<p><span class="math display">\[
+\Pr(A \mid B) = \frac{\Pr(B \mid A)\Pr(A)}{\Pr(B)},
+\]</span></p>
+<p>We can now apply this rule to obtain our new probability distribution over the weather, taking into account the new information that the person has chosen to go out:</p>
+<p><span class="math display">\[
+\begin{align*}
+&amp;\Pr(W = \textsf{Sunny} \mid Y = \textsf{Go Out})
+= \frac{\Pr(Y = \textsf{Go Out} \mid W = \textsf{Sunny})}{\Pr(Y = \textsf{Go Out})} \\
+= &amp;\frac{\Pr(Y = \textsf{Go Out} \mid W = \textsf{Sunny})}{\Pr(Y = \textsf{Go Out} \mid W = \textsf{Sunny}) + \Pr(Y = \textsf{Go Out} \mid W = \textsf{Rainy})}
+\end{align*}
+\]</span></p>
+<p>And now we simply plug in the information we already have from our conditional probability table to obtain our new (conditional) probability of interest:</p>
+<p><span class="math display">\[
+\begin{align*}
+\Pr(W = \textsf{Sunny} \mid Y = \textsf{Go Out}) &amp;= \frac{(0.8)(0.5)}{(0.8)(0.5) + (0.1)(0.5)} \\
+&amp;= \frac{0.4}{0.4 + 0.05} = \frac{0.4}{0.45} \approx 0.89.
+\end{align*}
+\]</span></p>
+<p>We have learned something interesting: now that we’ve observed the person out at a party, the probability that it is sunny out jumps from <span class="math inline">\(0.5\)</span> (called the <strong>“prior”</strong> estimate of <span class="math inline">\(W\)</span>, i.e., our best guess without any other relevant information) to <span class="math inline">\(0.89\)</span> (called the <strong>“posterior”</strong> estimate of <span class="math inline">\(W\)</span>, i.e., our best guess after incorporating relevant information).</p>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The term “Graphical” in Probabilistic Graphical Model is not used in the same sense as the “graphical” we’re used to from vernacular English. Capital-G Graphical denotes that the Probabilistic Model is represented as a Graph, a well-defined mathematical object consisting of nodes and edges, which does not have to be represented graphically (though it could be, like in our example here with circles and arrows). In fact, when a computer program is estimating a PGM, it is by definition not in a graphical form—it’s in the form of 0s and 1s, stored in the computer’s memory.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

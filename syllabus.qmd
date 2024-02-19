@@ -87,13 +87,13 @@ The following is a rough map of what we will work through together throughout th
     <td></td>
     <td>3</td>
     <td>Jan 31</td>
-    <td>Normative vs. Descriptive, Confusion Matrix Fairness</td>
+    <td>(Descriptive) Fairness in AI</td>
 </tr>
 <tr>
     <td></td>
     <td>4</td>
     <td>Feb 7</td>
-    <td>Similarity-Based and Causal-Path Fairness</td>
+    <td>Fairness in AI</td>
 </tr>
 <tr>
     <td></td>
