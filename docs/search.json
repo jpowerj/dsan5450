@@ -3188,140 +3188,200 @@
     "href": "w06/index.html",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "",
-    "text": "Open slides in new window →"
+    "text": "Open slides in new window →",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#data-generating-processes-dgps",
     "href": "w06/index.html#data-generating-processes-dgps",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "Data-Generating Processes (DGPs)",
-    "text": "Data-Generating Processes (DGPs)"
+    "text": "Data-Generating Processes (DGPs)",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#the-emergence-of-order",
     "href": "w06/index.html#the-emergence-of-order",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "The Emergence of Order",
-    "text": "The Emergence of Order\n\n\n\n\n\n\n\nWho (besides Aaron) can guess the state of this process after 10 steps, with 1 person?\n10 people? 50? 100? (If they find themselves on the same spot, they stand on each other’s heads)\n100 steps? 1000?"
+    "text": "The Emergence of Order\n\n\n\n\n\n\n\nWho (besides Aaron) can guess the state of this process after 10 steps, with 1 person?\n10 people? 50? 100? (If they find themselves on the same spot, they stand on each other’s heads)\n100 steps? 1000?",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#the-result-16-steps",
     "href": "w06/index.html#the-result-16-steps",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "The Result: 16 Steps",
-    "text": "The Result: 16 Steps\n\n\nCode\nlibrary(tibble)\nlibrary(ggplot2)\nlibrary(ggExtra)\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nCode\nlibrary(tidyr)\n# From McElreath!\ngen_histo &lt;- function(reps, num_steps) {\n  support &lt;- c(-1,1)\n  pos &lt;-replicate(reps, sum(sample(support,num_steps,replace=TRUE,prob=c(0.5,0.5))))\n  #print(mean(pos))\n  #print(var(pos))\n  pos_df &lt;- tibble(x=pos)\n  clt_distr &lt;- function(x) dnorm(x, 0, sqrt(num_steps))\n  plot &lt;- ggplot(pos_df, aes(x=x)) +\n    geom_histogram(aes(y = after_stat(density)), fill=cbPalette[1], binwidth = 2) +\n    stat_function(fun = clt_distr) +\n    dsan_theme(\"quarter\") +\n    theme(title=element_text(size=16)) +\n    labs(\n      title=paste0(reps,\" Random Walks, \",num_steps,\" Steps\")\n    )\n  return(plot)\n}\ngen_walkplot &lt;- function(num_people, num_steps, opacity=0.15) {\n  support &lt;- c(-1, 1)\n  # Unique id for each person\n  pid &lt;- seq(1, num_people)\n  pid_tib &lt;- tibble(pid)\n  pos_df &lt;- tibble()\n  end_df &lt;- tibble()\n  all_steps &lt;- t(replicate(num_people, sample(support, num_steps, replace = TRUE, prob = c(0.5, 0.5))))\n  csums &lt;- t(apply(all_steps, 1, cumsum))\n  csums &lt;- cbind(0, csums)\n  # Last col is the ending positions\n  ending_pos &lt;- csums[, dim(csums)[2]]\n  end_tib &lt;- tibble(pid = seq(1, num_people), endpos = ending_pos, x = num_steps)\n  # Now convert to tibble\n  ctib &lt;- as_tibble(csums, name_repair = \"none\")\n  merged_tib &lt;- bind_cols(pid_tib, ctib)\n  long_tib &lt;- merged_tib %&gt;% pivot_longer(!pid)\n  # Convert name -&gt; step_num\n  long_tib &lt;- long_tib %&gt;% mutate(step_num = strtoi(gsub(\"V\", \"\", name)) - 1)\n  # print(end_df)\n  grid_color &lt;- rgb(0, 0, 0, 0.1)\n\n  # And plot!\n  walkplot &lt;- ggplot(\n      long_tib,\n      aes(\n          x = step_num,\n          y = value,\n          group = pid,\n          # color=factor(label)\n      )\n  ) +\n      geom_line(linewidth = g_linesize, alpha = opacity, color = cbPalette[1]) +\n      geom_point(data = end_tib, aes(x = x, y = endpos), alpha = 0) +\n      scale_x_continuous(breaks = seq(0, num_steps, num_steps / 4)) +\n      scale_y_continuous(breaks = seq(-20, 20, 10)) +\n      dsan_theme(\"quarter\") +\n      theme(\n          legend.position = \"none\",\n          title = element_text(size = 16)\n      ) +\n      theme(\n          panel.grid.major.y = element_line(color = grid_color, linewidth = 1, linetype = 1)\n      ) +\n      labs(\n          title = paste0(num_people, \" Random Walks, \", num_steps, \" Steps\"),\n          x = \"Number of Steps\",\n          y = \"Position\"\n      )\n}\nwp1 &lt;- gen_walkplot(500, 16, 0.05)\n\n\nWarning: The `x` argument of `as_tibble.matrix()` must have unique column names if\n`.name_repair` is omitted as of tibble 2.0.0.\nℹ Using compatibility `.name_repair`.\n\n\nCode\nggMarginal(wp1, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))"
+    "text": "The Result: 16 Steps\n\n\nCode\nlibrary(tibble)\nlibrary(ggplot2)\nlibrary(ggExtra)\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nCode\nlibrary(tidyr)\n# From McElreath!\ngen_histo &lt;- function(reps, num_steps) {\n  support &lt;- c(-1,1)\n  pos &lt;-replicate(reps, sum(sample(support,num_steps,replace=TRUE,prob=c(0.5,0.5))))\n  #print(mean(pos))\n  #print(var(pos))\n  pos_df &lt;- tibble(x=pos)\n  clt_distr &lt;- function(x) dnorm(x, 0, sqrt(num_steps))\n  plot &lt;- ggplot(pos_df, aes(x=x)) +\n    geom_histogram(aes(y = after_stat(density)), fill=cbPalette[1], binwidth = 2) +\n    stat_function(fun = clt_distr) +\n    dsan_theme(\"quarter\") +\n    theme(title=element_text(size=16)) +\n    labs(\n      title=paste0(reps,\" Random Walks, \",num_steps,\" Steps\")\n    )\n  return(plot)\n}\ngen_walkplot &lt;- function(num_people, num_steps, opacity=0.15) {\n  support &lt;- c(-1, 1)\n  # Unique id for each person\n  pid &lt;- seq(1, num_people)\n  pid_tib &lt;- tibble(pid)\n  pos_df &lt;- tibble()\n  end_df &lt;- tibble()\n  all_steps &lt;- t(replicate(num_people, sample(support, num_steps, replace = TRUE, prob = c(0.5, 0.5))))\n  csums &lt;- t(apply(all_steps, 1, cumsum))\n  csums &lt;- cbind(0, csums)\n  # Last col is the ending positions\n  ending_pos &lt;- csums[, dim(csums)[2]]\n  end_tib &lt;- tibble(pid = seq(1, num_people), endpos = ending_pos, x = num_steps)\n  # Now convert to tibble\n  ctib &lt;- as_tibble(csums, name_repair = \"none\")\n  merged_tib &lt;- bind_cols(pid_tib, ctib)\n  long_tib &lt;- merged_tib %&gt;% pivot_longer(!pid)\n  # Convert name -&gt; step_num\n  long_tib &lt;- long_tib %&gt;% mutate(step_num = strtoi(gsub(\"V\", \"\", name)) - 1)\n  # print(end_df)\n  grid_color &lt;- rgb(0, 0, 0, 0.1)\n\n  # And plot!\n  walkplot &lt;- ggplot(\n      long_tib,\n      aes(\n          x = step_num,\n          y = value,\n          group = pid,\n          # color=factor(label)\n      )\n  ) +\n      geom_line(linewidth = g_linesize, alpha = opacity, color = cbPalette[1]) +\n      geom_point(data = end_tib, aes(x = x, y = endpos), alpha = 0) +\n      scale_x_continuous(breaks = seq(0, num_steps, num_steps / 4)) +\n      scale_y_continuous(breaks = seq(-20, 20, 10)) +\n      dsan_theme(\"quarter\") +\n      theme(\n          legend.position = \"none\",\n          title = element_text(size = 16)\n      ) +\n      theme(\n          panel.grid.major.y = element_line(color = grid_color, linewidth = 1, linetype = 1)\n      ) +\n      labs(\n          title = paste0(num_people, \" Random Walks, \", num_steps, \" Steps\"),\n          x = \"Number of Steps\",\n          y = \"Position\"\n      )\n}\nwp1 &lt;- gen_walkplot(500, 16, 0.05)\n\n\nWarning: The `x` argument of `as_tibble.matrix()` must have unique column names if\n`.name_repair` is omitted as of tibble 2.0.0.\nℹ Using compatibility `.name_repair`.\n\n\nCode\nggMarginal(wp1, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#the-result-64-steps",
     "href": "w06/index.html#the-result-64-steps",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "The Result: 64 Steps",
-    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))"
+    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#mathematicalscientific-modeling",
     "href": "w06/index.html#mathematicalscientific-modeling",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "“Mathematical/Scientific Modeling”",
-    "text": "“Mathematical/Scientific Modeling”\n\nThing we observe (poking out of water): data\nHidden but possibly discoverable through deeper investigation (ecosystem under surface): model / DGP"
+    "text": "“Mathematical/Scientific Modeling”\n\nThing we observe (poking out of water): data\nHidden but possibly discoverable through deeper investigation (ecosystem under surface): model / DGP",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#so-whats-the-problem",
     "href": "w06/index.html#so-whats-the-problem",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "So What’s the Problem?",
-    "text": "So What’s the Problem?\n\nNon-probabilistic models: High potential for being garbage (see: Bayesianism)\nProbabilistic models: Getting there, still “surface” phenomena\n\nOf the \\(N = 100\\) times we observed event \\(X\\) occurring, event \\(Y\\) also occurred \\(90\\) of those times\n\\(\\implies \\Pr(Y \\mid X) = \\frac{\\#[X, Y]}{\\#[X]} = \\frac{90}{100} = 0.9\\)\n\nCausal models: Does \\(Y\\) happen because of \\(X\\) happening? For that, need to start modeling what’s happening under the surface that make \\(X\\) and \\(Y\\) “pop up” together so often"
+    "text": "So What’s the Problem?\n\nNon-probabilistic models: High potential for being garbage (see: Bayesianism)\nProbabilistic models: Getting there, still “surface” phenomena\n\nOf the \\(N = 100\\) times we observed event \\(X\\) occurring, event \\(Y\\) also occurred \\(90\\) of those times\n\\(\\implies \\Pr(Y \\mid X) = \\frac{\\#[X, Y]}{\\#[X]} = \\frac{90}{100} = 0.9\\)\n\nCausal models: Does \\(Y\\) happen because of \\(X\\) happening? For that, need to start modeling what’s happening under the surface that make \\(X\\) and \\(Y\\) “pop up” together so often",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#the-intuitive-problem-of-inferring-causality",
     "href": "w06/index.html#the-intuitive-problem-of-inferring-causality",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "The Intuitive Problem of Inferring Causality",
-    "text": "The Intuitive Problem of Inferring Causality\n\n\n\nsource(\"../_globals.r\")\nlibrary(dplyr)\nlibrary(ggplot2)\nga_lawyers &lt;- c(21362, 22254, 23134, 23698, 24367, 24930, 25632, 26459, 27227, 27457)\nski_df &lt;- tibble::tribble(\n  ~year, ~varname, ~value,\n  2000, \"ski_revenue\", 1551,\n  2001, \"ski_revenue\", 1635,\n  2002, \"ski_revenue\", 1801,\n  2003, \"ski_revenue\", 1827,\n  2004, \"ski_revenue\", 1956,\n  2005, \"ski_revenue\", 1989,\n  2006, \"ski_revenue\", 2178,\n  2007, \"ski_revenue\", 2257,\n  2008, \"ski_revenue\", 2476,\n  2009, \"ski_revenue\", 2438,\n)\nski_mean &lt;- mean(ski_df$value)\nski_sd &lt;- sd(ski_df$value)\nski_df &lt;- ski_df %&gt;% mutate(val_scaled = 12*value, val_norm = (value - ski_mean)/ski_sd)\nlaw_df &lt;- tibble::tibble(year=2000:2009, varname=\"ga_lawyers\", value=ga_lawyers)\nlaw_mean &lt;- mean(law_df$value)\nlaw_sd &lt;- sd(law_df$value)\nlaw_df &lt;- law_df %&gt;% mutate(val_norm = (value - law_mean)/law_sd)\nspur_df &lt;- dplyr::bind_rows(ski_df, law_df)\nggplot(spur_df, aes(x=year, y=val_norm, color=factor(varname, labels = c(\"Ski Revenue\",\"Lawyers in Georgia\")))) +\n  stat_smooth(method=\"loess\", se=FALSE) +\n  geom_point(size=g_pointsize/1.5) +\n  labs(\n    fill=\"\",\n    title=\"Ski Revenue vs. Georgia Lawyers\",\n    x=\"Year\",\n    color=\"Correlation: 99.2%\",\n    linetype=NULL\n  ) +\n  dsan_theme(\"custom\", 18) +\n  scale_x_continuous(\n    breaks=seq(from=2000, to=2014, by=2)\n  ) +\n  #scale_y_continuous(\n  #  name=\"Total Revenue, Ski Facilities (Million USD)\",\n  #  sec.axis = sec_axis(~ . * law_sd + law_mean, name = \"Number of Lawyers in Georgia\")\n  #) +\n  scale_y_continuous(breaks = -1:1,\n    labels = ~ . * round(ski_sd,1) + round(ski_mean,1),\n    name=\"Total Revenue, Ski Facilities (Million USD)\",\n    sec.axis = sec_axis(~ . * law_sd + law_mean, name = \"Number of Lawyers in Georgia\")) +\n  expand_limits(x=2010) +\n  #geom_hline(aes(yintercept=x, color=\"Mean Values\"), as.data.frame(list(x=0)), linewidth=0.75, alpha=1.0, show.legend = TRUE) +\n  scale_color_manual(\n    breaks=c('Ski Revenue', 'Lawyers in Georgia'),\n    values=c('Ski Revenue'=cbPalette[1], 'Lawyers in Georgia'=cbPalette[2]))\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n\n\ncor(ski_df$value, law_df$value)\n\n[1] 0.9921178\n\n\n\n(Based on Spurious Correlations, Tyler Vigen)\n\n\nThis, however, is only a mini-boss. Beyond it lies the truly invincible FINAL BOSS… 🙀"
+    "text": "The Intuitive Problem of Inferring Causality\n\n\n\nsource(\"../_globals.r\")\nlibrary(dplyr)\nlibrary(ggplot2)\nga_lawyers &lt;- c(21362, 22254, 23134, 23698, 24367, 24930, 25632, 26459, 27227, 27457)\nski_df &lt;- tibble::tribble(\n  ~year, ~varname, ~value,\n  2000, \"ski_revenue\", 1551,\n  2001, \"ski_revenue\", 1635,\n  2002, \"ski_revenue\", 1801,\n  2003, \"ski_revenue\", 1827,\n  2004, \"ski_revenue\", 1956,\n  2005, \"ski_revenue\", 1989,\n  2006, \"ski_revenue\", 2178,\n  2007, \"ski_revenue\", 2257,\n  2008, \"ski_revenue\", 2476,\n  2009, \"ski_revenue\", 2438,\n)\nski_mean &lt;- mean(ski_df$value)\nski_sd &lt;- sd(ski_df$value)\nski_df &lt;- ski_df %&gt;% mutate(val_scaled = 12*value, val_norm = (value - ski_mean)/ski_sd)\nlaw_df &lt;- tibble::tibble(year=2000:2009, varname=\"ga_lawyers\", value=ga_lawyers)\nlaw_mean &lt;- mean(law_df$value)\nlaw_sd &lt;- sd(law_df$value)\nlaw_df &lt;- law_df %&gt;% mutate(val_norm = (value - law_mean)/law_sd)\nspur_df &lt;- dplyr::bind_rows(ski_df, law_df)\nggplot(spur_df, aes(x=year, y=val_norm, color=factor(varname, labels = c(\"Ski Revenue\",\"Lawyers in Georgia\")))) +\n  stat_smooth(method=\"loess\", se=FALSE) +\n  geom_point(size=g_pointsize/1.5) +\n  labs(\n    fill=\"\",\n    title=\"Ski Revenue vs. Georgia Lawyers\",\n    x=\"Year\",\n    color=\"Correlation: 99.2%\",\n    linetype=NULL\n  ) +\n  dsan_theme(\"custom\", 18) +\n  scale_x_continuous(\n    breaks=seq(from=2000, to=2014, by=2)\n  ) +\n  #scale_y_continuous(\n  #  name=\"Total Revenue, Ski Facilities (Million USD)\",\n  #  sec.axis = sec_axis(~ . * law_sd + law_mean, name = \"Number of Lawyers in Georgia\")\n  #) +\n  scale_y_continuous(breaks = -1:1,\n    labels = ~ . * round(ski_sd,1) + round(ski_mean,1),\n    name=\"Total Revenue, Ski Facilities (Million USD)\",\n    sec.axis = sec_axis(~ . * law_sd + law_mean, name = \"Number of Lawyers in Georgia\")) +\n  expand_limits(x=2010) +\n  #geom_hline(aes(yintercept=x, color=\"Mean Values\"), as.data.frame(list(x=0)), linewidth=0.75, alpha=1.0, show.legend = TRUE) +\n  scale_color_manual(\n    breaks=c('Ski Revenue', 'Lawyers in Georgia'),\n    values=c('Ski Revenue'=cbPalette[1], 'Lawyers in Georgia'=cbPalette[2]))\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n\n\ncor(ski_df$value, law_df$value)\n\n[1] 0.9921178\n\n\n\n(Based on Spurious Correlations, Tyler Vigen)\n\n\nThis, however, is only a mini-boss. Beyond it lies the truly invincible FINAL BOSS… 🙀",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#the-fundamental-problem-of-causal-inference",
     "href": "w06/index.html#the-fundamental-problem-of-causal-inference",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "The Fundamental Problem of Causal Inference",
-    "text": "The Fundamental Problem of Causal Inference\nThe only workable definition of “\\(X\\) causes \\(Y\\)”:\n\n\n\n\n\n\n Defining Causality\n\n\n\n\\(X\\) causes \\(Y\\) if and only if:\n\n\\(X\\) temporally precedes \\(Y\\) and\n\nIn two worlds \\(W_0\\) and \\(W_1\\) where\neverything is exactly the same except that \\(X = 0\\) in \\(W_0\\) and \\(X = 1\\) in \\(W_1\\),\n\\(Y = 0\\) in \\(W_0\\) and \\(Y = 1\\) in \\(W_1\\).\n\n\n(Hume 1739, ruining everything as usual 😤)\n\n\n\nThe problem? We live in one world, not two identical worlds simultaneously 😭"
+    "text": "The Fundamental Problem of Causal Inference\nThe only workable definition of “\\(X\\) causes \\(Y\\)”:\n\n\n\n\n\n\n Defining Causality\n\n\n\n\\(X\\) causes \\(Y\\) if and only if:\n\n\\(X\\) temporally precedes \\(Y\\) and\n\nIn two worlds \\(W_0\\) and \\(W_1\\) where\neverything is exactly the same except that \\(X = 0\\) in \\(W_0\\) and \\(X = 1\\) in \\(W_1\\),\n\\(Y = 0\\) in \\(W_0\\) and \\(Y = 1\\) in \\(W_1\\).\n\n\n(Hume 1739, ruining everything as usual 😤)\n\n\n\nThe problem? We live in one world, not two identical worlds simultaneously 😭",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#what-is-to-be-done",
     "href": "w06/index.html#what-is-to-be-done",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "What Is To Be Done?",
-    "text": "What Is To Be Done?"
+    "text": "What Is To Be Done?",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#face-everything-and-rise-controlled-randomized-experiment-paradigm",
     "href": "w06/index.html#face-everything-and-rise-controlled-randomized-experiment-paradigm",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "Face Everything And Rise: Controlled, Randomized Experiment Paradigm",
-    "text": "Face Everything And Rise: Controlled, Randomized Experiment Paradigm\n\nFind good comparison cases: Treatment and Control\nWithout a control group, you cannot make inferences!\nSelecting on the dependent variable…"
+    "text": "Face Everything And Rise: Controlled, Randomized Experiment Paradigm\n\nFind good comparison cases: Treatment and Control\nWithout a control group, you cannot make inferences!\nSelecting on the dependent variable…",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#selecting-on-the-dependent-variable",
     "href": "w06/index.html#selecting-on-the-dependent-variable",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "Selecting on the Dependent Variable",
-    "text": "Selecting on the Dependent Variable\n\n\n\nWhat “““research”“” “““says”“” about identifying people who might commit mass shootings\n\n\n\nJeff’s rant: If you care about actually solving social issues, this should infuriate you"
+    "text": "Selecting on the Dependent Variable\n\n\n\nWhat “““research”“” “““says”“” about identifying people who might commit mass shootings\n\n\n\nJeff’s rant: If you care about actually solving social issues, this should infuriate you",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#complications-selection",
     "href": "w06/index.html#complications-selection",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "Complications: Selection",
-    "text": "Complications: Selection\n\nTldr: Why did this person (unit) end up in the treatment group? Why did this other person (unit) end up in the control group?\nAre there systematic differences?\nIndochinese Genocide Draft: Why can’t we just study [men who join the military] versus [men who don’t], and take the difference as a causal estimate?"
+    "text": "Complications: Selection\n\nTldr: Why did this person (unit) end up in the treatment group? Why did this other person (unit) end up in the control group?\nAre there systematic differences?\nIndochinese Genocide Draft: Why can’t we just study [men who join the military] versus [men who don’t], and take the difference as a causal estimate?",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#for-now-matching",
     "href": "w06/index.html#for-now-matching",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "For Now: Matching",
-    "text": "For Now: Matching\n\nControlled experiment: we can ensure (since we have control over the assignment mechanism) the only systematic difference between \\(C\\) and \\(T\\) is: \\(T\\) received treatment, \\(C\\) did not\nIn an observational study, we’re “too late”! Thus, we no longer refer to assignment but to selection\nOur job is to figure out (reverse engineer!) the selection mechanism, then correct for its non-randomness. Spoiler: “transform” observational \\(\\rightarrow\\) experimental via weighting.\nThat’s the gold at end of rainbow. The rainbow itself is…"
+    "text": "For Now: Matching\n\nControlled experiment: we can ensure (since we have control over the assignment mechanism) the only systematic difference between \\(C\\) and \\(T\\) is: \\(T\\) received treatment, \\(C\\) did not\nIn an observational study, we’re “too late”! Thus, we no longer refer to assignment but to selection\nOur job is to figure out (reverse engineer!) the selection mechanism, then correct for its non-randomness. Spoiler: “transform” observational \\(\\rightarrow\\) experimental via weighting.\nThat’s the gold at end of rainbow. The rainbow itself is…",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#do-calculus-starting-with-dgp",
     "href": "w06/index.html#do-calculus-starting-with-dgp",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "Do-Calculus! Starting with DGP",
-    "text": "Do-Calculus! Starting with DGP\n\n\\(Y\\): Future success, \\(\\mathcal{R}_Y = \\{0, 1\\}\\)\n\\(E\\): Private school education, \\(\\mathcal{R}_E = \\{0, 1\\}\\)\n\\(V\\): Born into poverty, \\(\\mathcal{R}_V = \\{0, 1\\}\\)\n\n\n\n\n\n\n\nThe Private School \\(\\leadsto\\) Success Pipeline 🤑\n\n\n\n\nSample independent RVs \\(U_1 \\sim \\mathcal{B}(1/2)\\), \\(U_2 \\sim \\mathcal{B}(1/3)\\), \\(U_3 \\sim \\mathcal{B}(1/3)\\)\n\\(V \\leftarrow U_1\\)\n\\(E \\leftarrow \\textsf{if }(V = 1)\\textsf{ then } 0\\textsf{ else }U_2\\)\n\\(Y \\leftarrow \\textsf{if }(V = 1)\\textsf{ then }0\\textsf{ else }U_3\\)"
+    "text": "Do-Calculus! Starting with DGP\n\n\\(Y\\): Future success, \\(\\mathcal{R}_Y = \\{0, 1\\}\\)\n\\(E\\): Private school education, \\(\\mathcal{R}_E = \\{0, 1\\}\\)\n\\(V\\): Born into poverty, \\(\\mathcal{R}_V = \\{0, 1\\}\\)\n\n\n\n\n\n\n\nThe Private School \\(\\leadsto\\) Success Pipeline 🤑\n\n\n\n\nSample independent RVs \\(U_1 \\sim \\mathcal{B}(1/2)\\), \\(U_2 \\sim \\mathcal{B}(1/3)\\), \\(U_3 \\sim \\mathcal{B}(1/3)\\)\n\\(V \\leftarrow U_1\\)\n\\(E \\leftarrow \\textsf{if }(V = 1)\\textsf{ then } 0\\textsf{ else }U_2\\)\n\\(Y \\leftarrow \\textsf{if }(V = 1)\\textsf{ then }0\\textsf{ else }U_3\\)",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#chalkboard-time",
     "href": "w06/index.html#chalkboard-time",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "Chalkboard Time…",
-    "text": "Chalkboard Time…\n\n\\(\\Pr(Y = 1) = \\; ?\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\; ?\\)"
+    "text": "Chalkboard Time…\n\n\\(\\Pr(Y = 1) = \\; ?\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\; ?\\)",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#top-secret-answers-slide-dont-peek",
     "href": "w06/index.html#top-secret-answers-slide-dont-peek",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "Top Secret Answers Slide (Don’t Peek)",
-    "text": "Top Secret Answers Slide (Don’t Peek)\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\overset{✅}{\\implies}\\) One out of every three private-school graduates is successful, vs. one out of every six graduates overall\n\\(\\overset{❓}{\\implies}\\) Private school education doubles likelihood of success!\nThe latter is only true if intervening/changing/doing \\(E = 0 \\leadsto E = 1\\) is what moves \\(\\Pr(Y = 1)\\) from \\(\\frac{1}{6}\\) to \\(\\frac{1}{3}\\)!"
+    "text": "Top Secret Answers Slide (Don’t Peek)\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\overset{✅}{\\implies}\\) One out of every three private-school graduates is successful, vs. one out of every six graduates overall\n\\(\\overset{❓}{\\implies}\\) Private school education doubles likelihood of success!\nThe latter is only true if intervening/changing/doing \\(E = 0 \\leadsto E = 1\\) is what moves \\(\\Pr(Y = 1)\\) from \\(\\frac{1}{6}\\) to \\(\\frac{1}{3}\\)!",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#chalkboard-time-2-electric-boogaloo",
     "href": "w06/index.html#chalkboard-time-2-electric-boogaloo",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "Chalkboard Time 2: Electric Boogaloo",
-    "text": "Chalkboard Time 2: Electric Boogaloo\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\Pr(Y = 1 \\mid \\textsf{do}(E = 1)) = \\; ?\\)\nHere, \\(\\textsf{do}(E = 1)\\) means diving into the DGP below the surface and changing it so that \\(E = 1\\)… Setting \\(E\\) to be \\(1\\)\n\n\n\n\n\n\n\n\\(\\text{DGP}(Y \\mid \\textsf{do}(E = 1))\\)\n\n\n\n\nSample independent RVs \\(U_1 \\sim \\mathcal{B}(1/2)\\), \\(U_2 \\sim \\mathcal{B}(1/3)\\), \\(U_3 \\sim \\mathcal{B}(1/3)\\)\n\\(V \\leftarrow U_1\\)\n\\(E \\leftarrow \\textsf{if }(V = 1)\\textsf{ then } 0\\textsf{ else }U_2\\)\n\\(Y \\leftarrow \\textsf{if }(V = 1)\\textsf{ then }0\\textsf{ else }U_3\\)"
+    "text": "Chalkboard Time 2: Electric Boogaloo\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\Pr(Y = 1 \\mid \\textsf{do}(E = 1)) = \\; ?\\)\nHere, \\(\\textsf{do}(E = 1)\\) means diving into the DGP below the surface and changing it so that \\(E = 1\\)… Setting \\(E\\) to be \\(1\\)\n\n\n\n\n\n\n\n\\(\\text{DGP}(Y \\mid \\textsf{do}(E = 1))\\)\n\n\n\n\nSample independent RVs \\(U_1 \\sim \\mathcal{B}(1/2)\\), \\(U_2 \\sim \\mathcal{B}(1/3)\\), \\(U_3 \\sim \\mathcal{B}(1/3)\\)\n\\(V \\leftarrow U_1\\)\n\\(E \\leftarrow \\textsf{if }(V = 1)\\textsf{ then } 0\\textsf{ else }U_2\\)\n\\(Y \\leftarrow \\textsf{if }(V = 1)\\textsf{ then }0\\textsf{ else }U_3\\)",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#double-quadruple-secret-answer-slide",
     "href": "w06/index.html#double-quadruple-secret-answer-slide",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "Double Quadruple Secret Answer Slide",
-    "text": "Double Quadruple Secret Answer Slide\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\Pr(Y = 1 \\mid \\textsf{do}(E = 1)) = \\frac{1}{6}\\)"
+    "text": "Double Quadruple Secret Answer Slide\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\Pr(Y = 1 \\mid \\textsf{do}(E = 1)) = \\frac{1}{6}\\)",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/index.html#references",
     "href": "w06/index.html#references",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "References",
-    "text": "References\n\n\nHume, David. 1739. A Treatise of Human Nature: Being an Attempt to Introduce the Experimental Method of Reasoning Into Moral Subjects; and Dialogues Concerning Natural Religion. Longmans, Green."
+    "text": "References\n\n\nHume, David. 1739. A Treatise of Human Nature: Being an Attempt to Introduce the Experimental Method of Reasoning Into Moral Subjects; and Dialogues Concerning Natural Religion. Longmans, Green.",
+    "crumbs": [
+      "Week 6: Feb 20"
+    ]
   },
   {
     "objectID": "w06/slides.html#data-generating-processes-dgps",
