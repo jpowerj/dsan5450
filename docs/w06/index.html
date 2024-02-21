@@ -278,20 +278,25 @@ window.Quarto = {
   <li><a href="#recap-eureka-moment-for-midterm-prep-purposes" id="toc-recap-eureka-moment-for-midterm-prep-purposes" class="nav-link active" data-scroll-target="#recap-eureka-moment-for-midterm-prep-purposes">Recap / Eureka Moment (for Midterm Prep Purposes)</a></li>
   <li><a href="#blasting-off-into-causality" id="toc-blasting-off-into-causality" class="nav-link" data-scroll-target="#blasting-off-into-causality">Blasting Off Into Causality!</a>
   <ul class="collapse">
-  <li><a href="#data-generating-processes-dgps" id="toc-data-generating-processes-dgps" class="nav-link" data-scroll-target="#data-generating-processes-dgps">Data-Generating Processes (DGPs)</a></li>
-  <li><a href="#the-emergence-of-order" id="toc-the-emergence-of-order" class="nav-link" data-scroll-target="#the-emergence-of-order">The Emergence of Order</a></li>
+  <li><a href="#dgps-and-the-emergence-of-order" id="toc-dgps-and-the-emergence-of-order" class="nav-link" data-scroll-target="#dgps-and-the-emergence-of-order">DGPs and the Emergence of Order</a></li>
   <li><a href="#the-result-16-steps" id="toc-the-result-16-steps" class="nav-link" data-scroll-target="#the-result-16-steps">The Result: 16 Steps</a></li>
   <li><a href="#the-result-64-steps" id="toc-the-result-64-steps" class="nav-link" data-scroll-target="#the-result-64-steps">The Result: 64 Steps</a></li>
   <li><a href="#mathematicalscientific-modeling" id="toc-mathematicalscientific-modeling" class="nav-link" data-scroll-target="#mathematicalscientific-modeling">“Mathematical/Scientific Modeling”</a></li>
   <li><a href="#so-whats-the-problem" id="toc-so-whats-the-problem" class="nav-link" data-scroll-target="#so-whats-the-problem">So What’s the Problem?</a></li>
+  </ul></li>
+  <li><a href="#causal-inference" id="toc-causal-inference" class="nav-link" data-scroll-target="#causal-inference">Causal Inference</a>
+  <ul class="collapse">
   <li><a href="#the-intuitive-problem-of-inferring-causality" id="toc-the-intuitive-problem-of-inferring-causality" class="nav-link" data-scroll-target="#the-intuitive-problem-of-inferring-causality">The <em>Intuitive</em> Problem of Inferring Causality</a></li>
   <li><a href="#the-fundamental-problem-of-causal-inference" id="toc-the-fundamental-problem-of-causal-inference" class="nav-link" data-scroll-target="#the-fundamental-problem-of-causal-inference">The <em>Fundamental</em> Problem of Causal Inference</a></li>
   <li><a href="#what-is-to-be-done" id="toc-what-is-to-be-done" class="nav-link" data-scroll-target="#what-is-to-be-done">What Is To Be Done?</a></li>
   <li><a href="#face-everything-and-rise-controlled-randomized-experiment-paradigm" id="toc-face-everything-and-rise-controlled-randomized-experiment-paradigm" class="nav-link" data-scroll-target="#face-everything-and-rise-controlled-randomized-experiment-paradigm">Face Everything And Rise: Controlled, Randomized Experiment Paradigm</a></li>
   <li><a href="#selecting-on-the-dependent-variable" id="toc-selecting-on-the-dependent-variable" class="nav-link" data-scroll-target="#selecting-on-the-dependent-variable">Selecting on the Dependent Variable</a></li>
   <li><a href="#complications-selection" id="toc-complications-selection" class="nav-link" data-scroll-target="#complications-selection">Complications: Selection</a></li>
-  <li><a href="#for-now-matching" id="toc-for-now-matching" class="nav-link" data-scroll-target="#for-now-matching">For Now: <em>Matching</em></a></li>
-  <li><a href="#do-calculus-starting-with-dgp" id="toc-do-calculus-starting-with-dgp" class="nav-link" data-scroll-target="#do-calculus-starting-with-dgp">Do-Calculus! Starting with DGP</a></li>
+  <li><a href="#the-solution-matching" id="toc-the-solution-matching" class="nav-link" data-scroll-target="#the-solution-matching">The Solution: <em>Matching</em></a></li>
+  </ul></li>
+  <li><a href="#do-calculus" id="toc-do-calculus" class="nav-link" data-scroll-target="#do-calculus">Do-Calculus</a>
+  <ul class="collapse">
+  <li><a href="#our-data-generating-process" id="toc-our-data-generating-process" class="nav-link" data-scroll-target="#our-data-generating-process">Our Data-Generating Process</a></li>
   <li><a href="#chalkboard-time" id="toc-chalkboard-time" class="nav-link" data-scroll-target="#chalkboard-time">Chalkboard Time…</a></li>
   <li><a href="#top-secret-answers-slide-dont-peek" id="toc-top-secret-answers-slide-dont-peek" class="nav-link" data-scroll-target="#top-secret-answers-slide-dont-peek">Top Secret Answers Slide (Don’t Peek)</a></li>
   <li><a href="#chalkboard-time-2-electric-boogaloo" id="toc-chalkboard-time-2-electric-boogaloo" class="nav-link" data-scroll-target="#chalkboard-time-2-electric-boogaloo">Chalkboard Time 2: Electric Boogaloo</a></li>
@@ -349,8 +354,8 @@ window.Quarto = {
 <center>
 <a class="h2" href="./slides.html" target="_blank">Open slides in new window →</a>
 </center>
-<section id="recap-eureka-moment-for-midterm-prep-purposes" class="level1 not-title-slide title-10" data-stack-name="Midterm Things">
-<h1 class="not-title-slide title-10" data-stack-name="Midterm Things">Recap / Eureka Moment (for Midterm Prep Purposes)</h1>
+<section id="recap-eureka-moment-for-midterm-prep-purposes" class="level1 not-title-slide title-10" data-name="Quick Midterm Thing">
+<h1 class="not-title-slide title-10" data-name="Quick Midterm Thing">Recap / Eureka Moment (for Midterm Prep Purposes)</h1>
 <div class="hidden">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"../_globals.r"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -365,18 +370,15 @@ window.Quarto = {
 </figure>
 </div>
 </section>
-<section id="blasting-off-into-causality" class="level1 title-10 not-title-slide" data-stack-name="Causality">
-<h1 class="title-10 not-title-slide" data-stack-name="Causality">Blasting Off Into Causality!</h1>
+<section id="blasting-off-into-causality" class="level1 title-10 not-title-slide" data-stack-name="Data-Generating Processes">
+<h1 class="title-10 not-title-slide" data-stack-name="Data-Generating Processes">Blasting Off Into Causality!</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/posadism_causal.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
-<section id="data-generating-processes-dgps" class="level2">
-<h2 class="anchored" data-anchor-id="data-generating-processes-dgps">Data-Generating Processes (DGPs)</h2>
-</section>
-<section id="the-emergence-of-order" class="level2 crunch-title crunch-quarto-layout-panel">
-<h2 class="crunch-title crunch-quarto-layout-panel anchored" data-anchor-id="the-emergence-of-order">The Emergence of Order</h2>
+<section id="dgps-and-the-emergence-of-order" class="level2 crunch-title crunch-quarto-layout-panel">
+<h2 class="crunch-title crunch-quarto-layout-panel anchored" data-anchor-id="dgps-and-the-emergence-of-order">DGPs and the Emergence of Order</h2>
 <div>
 
 </div>
@@ -565,6 +567,9 @@ Adding another scale for y, which will replace the existing scale.</code></pre>
 <li>Causal models: Does <span class="math inline">\(Y\)</span> happen <strong>because of</strong> <span class="math inline">\(X\)</span> happening? For that, need to start modeling <strong>what’s happening under the surface</strong> that make <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> “pop up” together so often</li>
 </ul>
 </section>
+</section>
+<section id="causal-inference" class="level1" data-stack-name="Causal Inference">
+<h1 data-stack-name="Causal Inference">Causal Inference</h1>
 <section id="the-intuitive-problem-of-inferring-causality" class="level2 title-08">
 <h2 class="title-08 anchored" data-anchor-id="the-intuitive-problem-of-inferring-causality">The <em>Intuitive</em> Problem of Inferring Causality</h2>
 <div class="columns">
@@ -714,8 +719,8 @@ Adding another scale for y, which will replace the existing scale.</code></pre>
 <li>Indochinese Genocide Draft: Why can’t we just study [men who join the military] versus [men who don’t], and take the difference as a causal estimate?</li>
 </ul>
 </section>
-<section id="for-now-matching" class="level2 crunch-title crunch-ul">
-<h2 class="crunch-title crunch-ul anchored" data-anchor-id="for-now-matching">For Now: <em>Matching</em></h2>
+<section id="the-solution-matching" class="level2 crunch-title crunch-ul">
+<h2 class="crunch-title crunch-ul anchored" data-anchor-id="the-solution-matching">The Solution: <em>Matching</em></h2>
 <ul>
 <li><strong>Controlled experiment</strong>: we can <strong>ensure</strong> (since we have control over the <strong>assignment mechanism</strong>) the <strong>only systematic difference</strong> between <span class="math inline">\(C\)</span> and <span class="math inline">\(T\)</span> is: <span class="math inline">\(T\)</span> received treatment, <span class="math inline">\(C\)</span> did not</li>
 <li>In an <strong>observational study</strong>, we’re “too late”! Thus, we no longer refer to <strong>assignment</strong> but to <strong>selection</strong></li>
@@ -723,8 +728,11 @@ Adding another scale for y, which will replace the existing scale.</code></pre>
 <li>That’s the gold at end of rainbow. The <strong>rainbow itself</strong> is…</li>
 </ul>
 </section>
-<section id="do-calculus-starting-with-dgp" class="level2 crunch-title crunch-ul">
-<h2 class="crunch-title crunch-ul anchored" data-anchor-id="do-calculus-starting-with-dgp">Do-Calculus! Starting with DGP</h2>
+</section>
+<section id="do-calculus" class="level1" data-stack-name="Do-Calculus">
+<h1 data-stack-name="Do-Calculus">Do-Calculus</h1>
+<section id="our-data-generating-process" class="level2 crunch-title crunch-ul">
+<h2 class="crunch-title crunch-ul anchored" data-anchor-id="our-data-generating-process">Our Data-Generating Process</h2>
 <ul>
 <li><span class="math inline">\(Y\)</span>: Future success, <span class="math inline">\(\mathcal{R}_Y = \{0, 1\}\)</span></li>
 <li><span class="math inline">\(E\)</span>: Private school education, <span class="math inline">\(\mathcal{R}_E = \{0, 1\}\)</span></li>

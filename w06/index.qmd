@@ -39,7 +39,7 @@ format:
 
 :::
 
-# Recap / Eureka Moment (for Midterm Prep Purposes) {.not-title-slide .title-10 data-stack-name="Midterm Things"}
+# Recap / Eureka Moment (for Midterm Prep Purposes) {.not-title-slide .title-10 data-name="Quick Midterm Thing"}
 
 ::: {.hidden}
 
@@ -53,14 +53,11 @@ source("../_globals.r")
 
 ![](images/js-mill-eureka.jpg){fig-align="center"}
 
-# Blasting Off Into Causality! {.title-10 .not-title-slide data-stack-name="Causality"}
+# Blasting Off Into Causality! {.title-10 .not-title-slide data-stack-name="Data-Generating Processes"}
 
 ![](images/posadism_causal.jpg){fig-align="center"}
 
-## Data-Generating Processes (DGPs)
-
-
-## The Emergence of Order {.crunch-title .crunch-quarto-layout-panel}
+## DGPs and the Emergence of Order {.crunch-title .crunch-quarto-layout-panel}
 
 ::: {layout="[1,1]"}
 
@@ -181,6 +178,8 @@ ggMarginal(wp2, margins = "y", type = "histogram", yparams = list(binwidth = 1))
   * Of the $N = 100$ times we observed event $X$ occurring, event $Y$ also occurred $90$ of those times
   * $\implies \Pr(Y \mid X) = \frac{\#[X, Y]}{\#[X]} = \frac{90}{100} = 0.9$
 * Causal models: Does $Y$ happen **because of** $X$ happening? For that, need to start modeling **what's happening under the surface** that make $X$ and $Y$ "pop up" together so often
+
+# Causal Inference {data-stack-name="Causal Inference"}
 
 ## The *Intuitive* Problem of Inferring Causality {.title-08}
 
@@ -303,14 +302,16 @@ $X$ causes $Y$ if and only if:
 * Are there systematic differences?
 * Indochinese Genocide Draft: Why can't we just study [men who join the military] versus [men who don't], and take the difference as a causal estimate?
 
-## For Now: *Matching* {.crunch-title .crunch-ul}
+## The Solution: *Matching* {.crunch-title .crunch-ul}
 
 * **Controlled experiment**: we can **ensure** (since we have control over the **assignment mechanism**) the **only systematic difference** between $C$ and $T$ is: $T$ received treatment, $C$ did not
 * In an **observational study**, we're "too late"! Thus, we no longer refer to **assignment** but to **selection**
 * Our job is to **figure out** (reverse engineer!) the **selection mechanism**, then **correct for its non-randomness**. Spoiler: "transform" observational $\rightarrow$ experimental via **weighting**.
 * That's the gold at end of rainbow. The **rainbow itself** is...
 
-## Do-Calculus! Starting with DGP {.crunch-title .crunch-ul}
+# Do-Calculus {data-stack-name="Do-Calculus"}
+
+## Our Data-Generating Process {.crunch-title .crunch-ul}
 
 * $Y$: Future success, $\mathcal{R}_Y = \{0, 1\}$
 * $E$: Private school education, $\mathcal{R}_E = \{0, 1\}$
