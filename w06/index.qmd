@@ -300,7 +300,7 @@ $X$ causes $Y$ if and only if:
 
 * Tldr: Why did this person (unit) end up in the treatment group? Why did this other person (unit) end up in the control group?
 * Are there systematic differences?
-* """Vietnam War""" Draft: Why can't we just study [men who join the military] versus [men who don't], and take the difference as a causal estimate?
+* """Vietnam""" """War""" Draft: Why can't we just study [men who join the military] versus [men who don't], and take the difference as a causal estimate?
 
 ## The Solution: *Matching* {.crunch-title .crunch-ul}
 
