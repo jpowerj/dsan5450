@@ -1,0 +1,35 @@
+w01:
+  weeknum: 1
+  title: "Introduction to the Course"
+  footer: "Introduction to the Course"
+  date-md: "Jan 17"
+w02:
+  weeknum: 2
+  title: "Machine Learning, Training Data, and Bias"
+  footer: "Machine Learning, Training Data, and Bias"
+  date-md: "Jan 24"
+w03:
+  weeknum: 3
+  title: "(Descriptive) Fairness in AI"
+  footer: "(Descriptive) Fairness in AI"
+  date-md: "Jan 31"
+w04:
+  weeknum: 4
+  title: "Fairness in AI"
+  footer: "Fairness in AI"
+  date-md: "Feb 7"
+w05:
+  weeknum: 5
+  title: "Context-Sensitive Fairness"
+  footer: "Context-Sensitive Fairness"
+  date-md: "Feb 14"
+w06:
+  weeknum: 6
+  title: "Causality in Ethics and Policy"
+  footer: "Causality in Ethics and Policy"
+  date-md: "Feb 21"
+w07:
+  weeknum: 7
+  title: "In-Class Midterm: Data Ethics, Fairness, Privacy, Causality"
+  footer: "In-Class Midterm"
+  date-md: "Feb 28"

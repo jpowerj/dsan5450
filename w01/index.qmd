@@ -11,7 +11,7 @@ categories:
 format:
   revealjs:
     df-print: kable
-    footer: "DSAN 5450 Week 1: Introduction"
+    footer: "DSAN 5450 Week 1: {{< var w01.footer >}}"
     output-file: "slides.html"
     html-math-method: mathjax
     theme: ["../_jjslides.scss"]

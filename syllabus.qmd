@@ -72,28 +72,28 @@ The following is a rough map of what we will work through together throughout th
 </thead>
 <tbody>
 <tr>
-    <td><span data-qmd="**Unit 1**: Ethical Frameworks and Fairness in AI"></span></td>
+    <td><span data-qmd="**Unit 1**: Ethical Frameworks"></span></td>
     <td>1</td>
-    <td><span data-qmd="Jan 17"></span></td>
-    <td>Course Intro</td>
+    <td><span data-qmd="{{< var w01.date-md >}}"></span></td>
+    <td><span data-qmd="{{< var w01.title >}}"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>2</td>
-    <td>Jan 24</td>
-    <td>Machine Learning, Training Data, and Bias</td>
+    <td><span data-qmd="{{< var w02.date-md >}}"></span></td>
+    <td><span data-qmd="{{< var w02.title >}}"></span></td>
 </tr>
-<tr>
-    <td></td>
+<tr class="new-unit">
+    <td><span data-qmd="**Unit 2**: Fairness"></span></td>
     <td>3</td>
-    <td>Jan 31</td>
-    <td>(Descriptive) Fairness in AI</td>
+    <td><span data-qmd="{{< var w03.date-md >}}"></span></td>
+    <td><span data-qmd="{{< var w03.title >}}"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>4</td>
-    <td>Feb 7</td>
-    <td>Fairness in AI</td>
+    <td><span data-qmd="{{< var w04.date-md >}}"></span></td>
+    <td><span data-qmd="{{< var w04.title >}}"></span></td>
 </tr>
 <tr>
     <td></td>
@@ -101,29 +101,29 @@ The following is a rough map of what we will work through together throughout th
     <td><span data-qmd="*Feb 9 (Friday), 11:59pm EST*"></span></td>
     <td><span data-qmd="*[Deliverable] HW1: Nuts and Bolts for Fairness in AI*"></span></td>
 </tr>
-<tr class='new-unit'>
-    <td><span data-qmd="**Unit 2**: Privacy"></span></td>
+<tr>
+    <td></td>
     <td>5</td>
-    <td>Feb 14</td>
-    <td>Data Privacy and Anonymity</td>
+    <td><span data-qmd="{{< var w05.date-md >}}"></span></td>
+    <td><span data-qmd="{{< var w05.title >}}"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>6</td>
-    <td>Feb 21</td>
-    <td>Privacy-Preserving Computation</td>
+    <td><span data-qmd="{{< var w06.date-md >}}"></span></td>
+    <td><span data-qmd="{{<var w06.title >}}"></span></td>
 </tr>
 <tr>
     <td></td>
     <td></td>
-    <td><span data-qmd="*Feb 23 (Friday)*"></span></td>
-    <td><span data-qmd="*[Deliverable] HW2: Privacy-Preserving Computation*"></span></td>
+    <td><span data-qmd="*Feb 26 (Monday), 11:59pm EST*"></span></td>
+    <td><span data-qmd="*[Deliverable] HW2: Context-Sensitive Fairness*"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>7</td>
-    <td>Feb 28</td>
-    <td>In-Class Midterm (Data Ethics, Fairness, Privacy)</td>
+    <td><span data-qmd="{{< var w07.date-md >}}"></span></td>
+    <td><span data-qmd="{{< var w07.title >}}"></span></td>
 </tr>
 <tr>
     <td></td>
@@ -202,10 +202,21 @@ The main assignment in the course will be your **policy whitepaper**, submitted 
 | Assignment | Due Date | % of Grade |
 | - | - | - |
 | HW1: Nuts and Bolts for Fairness in AI | Friday, **February 9** | 10% |
-| HW2: Privacy-Preserving Computation | Friday, **February 23** | 10% |
+| HW2: Context-Sensitive Fairness | Monday, **February 26** | 10% |
 | Midterm | Wednesday, **February 28** | 30% |
 | HW3: Policy Frameworks | Friday, **March 22** | 10% |
 | HW4: Policy Evaluation | Friday, **April 5** | 10% |
 | Policy Whitepaper | Friday, **May 3** | 30% |
 
 : {tbl-colwidths="[55,25,20]"}
+
+### Homework Lateness Policy
+
+After the due date, for each **homework** assignment, you will have a grace period of 24 hours to submit the assignment without a lateness penalty. After this 24-hour grace period, late penalties will be applied based on the following scale (unless you obtain an excused lateness from one of the instructional staff!):
+
+* 0 to 24 hours late: no penalty
+* 24 to 30 hours late: 2.5% penalty
+* 30 to 42 hours late: 5% penalty
+* 42 to 54 hours late: 10% penalty
+* 54 to 66 hours late: 20% penalty
+* More than 66 hours late: Assignment submissions no longer accepted (without instructor approval)
