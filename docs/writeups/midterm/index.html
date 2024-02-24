@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jeff Jacobs">
+<meta name="dcterms.date" content="2024-02-20">
 
-<title>DSAN 5450 - Extra Writeups</title>
+<title>DSAN 5450 - DSAN 5450 Midterm Study Guide</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,68 +69,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../../jjcustom.js"></script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../jjcustom.js"></script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -142,7 +84,9 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../writeups/index.html">Writeups</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      DSAN 5450: Data Ethics and Policy
+      </li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -157,7 +101,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">DSAN 5450: Data Ethics and Policy</a> 
+      <a href="../../">DSAN 5450: Data Ethics and Policy</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -169,74 +113,74 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><i class="bi bi-house pe-1"></i> Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../writeups/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../writeups/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Writeups</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../assignments.html" class="sidebar-item-text sidebar-link">
+  <a href="../../assignments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignments</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../recordings/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../recordings/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Recordings</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../w01/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w01/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 1: Jan 17</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../w02/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w02/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2: Jan 24</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../w03/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w03/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3: Jan 31</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../w04/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w04/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4: Feb 7</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../w05/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w05/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 5: Feb 14</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../w06/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w06/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 6: Feb 21</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../w07/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w07/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 7: Feb 28</span></a>
   </div>
 </li>
@@ -253,21 +197,55 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Extra Writeups">Extra Writeups <span class="quarto-category-count">(4)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#part-1-high-level-data-ethics-considerations" id="toc-part-1-high-level-data-ethics-considerations" class="nav-link" data-scroll-target="#part-1-high-level-data-ethics-considerations">Part 1: High-Level Data Ethics Considerations</a>
+  <ul class="collapse">
+  <li><a href="#the-library-of-missing-datasets" id="toc-the-library-of-missing-datasets" class="nav-link" data-scroll-target="#the-library-of-missing-datasets">(1.1) The Library of Missing Datasets</a></li>
+  <li><a href="#operationalization" id="toc-operationalization" class="nav-link" data-scroll-target="#operationalization">(1.2) Operationalization</a></li>
+  </ul></li>
+  <li><a href="#part-2-ethical-frameworks" id="toc-part-2-ethical-frameworks" class="nav-link" data-scroll-target="#part-2-ethical-frameworks">Part 2: Ethical Frameworks</a>
+  <ul class="collapse">
+  <li><a href="#descriptive-vs.-normative" id="toc-descriptive-vs.-normative" class="nav-link" data-scroll-target="#descriptive-vs.-normative">(2.1) Descriptive vs.&nbsp;Normative</a></li>
+  <li><a href="#consequentialism-vs.-deontological-ethics" id="toc-consequentialism-vs.-deontological-ethics" class="nav-link" data-scroll-target="#consequentialism-vs.-deontological-ethics">(2.2) Consequentialism vs.&nbsp;Deontological Ethics</a></li>
+  </ul></li>
+  <li><a href="#part-3-context-free-fairness-and-proxy-variables" id="toc-part-3-context-free-fairness-and-proxy-variables" class="nav-link" data-scroll-target="#part-3-context-free-fairness-and-proxy-variables">Part 3: Context-Free Fairness and Proxy Variables</a></li>
+  <li><a href="#part-4-context-sensitive-fairness" id="toc-part-4-context-sensitive-fairness" class="nav-link" data-scroll-target="#part-4-context-sensitive-fairness">Part 4: Context-Sensitive Fairness</a></li>
+  <li><a href="#part-5-doin-thangs-causality" id="toc-part-5-doin-thangs-causality" class="nav-link" data-scroll-target="#part-5-doin-thangs-causality">Part 5: Doin Thangs (Causality)</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Extra Writeups</h1>
-</div>
+<h1 class="title">DSAN 5450 Midterm Study Guide</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Extra Writeups</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jeff Jacobs </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 20, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -277,102 +255,85 @@ window.Quarto = {
 </header>
 
 
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The DSAN 5450 in-class midterm will start at <strong>3:30pm on Wednesday, February 28th</strong>. It is intended to take only 1.5 hours, but you will have 3 hours to take it just in case, so that it will be due by <strong>6:30pm</strong>.</p>
+<p>We’ve covered a lot of… sometimes-disjointed topics thus far, so our goal for the midterm is to emphasize the most important takeaways from across the first six weeks of the class, by putting them in your brain’s short-term memory <strong>one more time</strong> before we dive into the second, policy-focused half of the course when you come back from spring break! As a reminder, there is a very good reason to continually try and <strong>re-remember</strong> the same course topics, coming from studies of long-term memory retention:</p>
+<center>
+<img width="60%" src="https://jpj.georgetown.domains/dsan5450-scratch/midterm/spaced_rep.jpg">
+</center>
+</section>
+<section id="part-1-high-level-data-ethics-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="part-1-high-level-data-ethics-considerations">Part 1: High-Level Data Ethics Considerations</h2>
+<p>This part corresponds roughly to the first two sessions of the course, where we talked about key “high-level” questions in data ethics.</p>
+<section id="the-library-of-missing-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="the-library-of-missing-datasets">(1.1) The Library of Missing Datasets</h3>
+<p>Why does some information <strong>already exist</strong> in the form of nicely-formatted, easily-accessible datasets, while other information does not?</p>
+<ul>
+<li>Here the specific reference in class was to the <a href="https://mimionuoha.com/the-library-of-missing-datasets" target="_blank">Library of Missing Datasets</a>, so you can check out the photos at that link for examples of missing datasets.</li>
+<li>The midterm question here could, therefore, ask you to think through the process by which a certain dataset <strong>came into existence</strong> as (e.g.) a clean, easily-available <code>.csv</code> file, and/or why another set of data might not exist in this form.</li>
+</ul>
+</section>
+<section id="operationalization" class="level3">
+<h3 class="anchored" data-anchor-id="operationalization">(1.2) Operationalization</h3>
+<p>What types of data-ethical issues arise because of the “gap” between <strong>conceptual</strong> variables and <strong>operationalized</strong> variables?</p>
+<ul>
+<li><p>Here the main reference for you is <a href="https://jjacobs.me/dsan5450/w02/slides.html#/operationalization" target="_blank">this slide</a> from Week 2</p></li>
+<li><p>For the possible midterm question here, specifically, you should focus on the idea behind the book on the right side of that slide: “Mis-Measuring Our Lives”. That book points out the gap between the conceptual variable <strong>[economic well-being]</strong> and its <strong>operationalization</strong> as <strong>[GDP]</strong>.</p>
+<ul>
+<li>So, for the midterm, we might ask you to consider a conceptual variable like “fairness” or “privacy”, and think through different ways they could be operationalized as measurable quantities.</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="part-2-ethical-frameworks" class="level2">
+<h2 class="anchored" data-anchor-id="part-2-ethical-frameworks">Part 2: Ethical Frameworks</h2>
+<section id="descriptive-vs.-normative" class="level3">
+<h3 class="anchored" data-anchor-id="descriptive-vs.-normative">(2.1) Descriptive vs.&nbsp;Normative</h3>
+</section>
+<section id="consequentialism-vs.-deontological-ethics" class="level3">
+<h3 class="anchored" data-anchor-id="consequentialism-vs.-deontological-ethics">(2.2) Consequentialism vs.&nbsp;Deontological Ethics</h3>
+<p>This portion would also very much involve the <strong>two most common concrete versions</strong> of these two ethical frameworks: * <strong>Utilitarianism</strong> as the most common consequentialist framework * <strong>Kantian Ethics</strong> as the most common deontological-ethical framework</p>
+<p>On the latter two points specifically, I didn’t make the distinction as clearly as I should have in class, so I’m making it here!</p>
+<p><strong>Question 2.5</strong> from <strong>Homework 1</strong> provided the following statement:</p>
+<blockquote class="blockquote">
+<p>«Lying is bad, since you wouldn’t want others to lie to you.»</p>
+</blockquote>
+<p>And then, between Consequentialism and Deontological Ethics, the correct answer was that this statement is more straightforwardly implied by <strong>Deontological Ethics</strong>. I know this one is particularly difficult to think through, but I wanted to highlight it here because this is the question that really reveals the subtle-but-important distinction between these two systems:</p>
+<ul>
+<li>A <strong>consequentialist</strong> approach to “resolving” a dilemma around lying would, crucially, be based on a <strong>prediction</strong> of the <strong>actual consequences</strong> that would result from a possible choice, whereas</li>
+<li>A <strong>deontological</strong> approach differs from this in considering <strong>what makes a possible choice good or bad in-and-of-itself</strong>, <strong>without</strong> reference to the predicted consequences.</li>
+</ul>
+<p>The reason I phrase the distinction in this way is because, in the above statement, you can focus on the portion after the word “since” (“since you wouldn’t want others to lie to you”):</p>
+<ul>
+<li>Within a <strong>consequentialist</strong> framework, this reasoning would <strong>not</strong> itself constitute a justification for not lying, since it would have to be <strong>paired with</strong> a statement like “If I lie, then it is likely that others will lie to me”, which is <strong>not true in general!</strong> The idiom of a <a href="https://www.merriam-webster.com/dictionary/white%20lie" target="_blank">“white lie”</a>, for example, comes precisely from the fact that there are often times when we feel like we <strong>should</strong> lie to people to avoid the <strong>consequence</strong> of hurting them.</li>
+<li>Within a <strong>deontological</strong> framework, on the other hand, this reasoning <strong>would</strong> constitute a justification for not lying, since it corresponds precisely to the <strong>rule</strong> that was mentioned in the prior two questions: Kant’s <strong>Categorical Imperative</strong>.</li>
+<li>This <strong>Categorical Imperative</strong> rule is of special interest, relative to the full set of “ethical rules” you could imagine using, because it is a rule for making ethical decisions <strong>without reference to the consequences</strong> of a particular choice:
+<ul>
+<li>Instead of <strong>predicting</strong> what might happen if I make this choice, and judging whether it is an ethical choice on that basis…</li>
+<li>I now <strong>imagine</strong> what would happen <strong>hypothetically</strong> if <strong>everyone else in the world</strong> made the choice, <strong>whether or not</strong> my action would in fact make everyone else in the world make the same choice!</li>
+</ul></li>
+</ul>
+<p>I hope that explanation, and the reference to “white lies” as an example, can help make it more clear why the answer to Question 2.5 was “Deontological Ethics”. As one final point, to make it super concrete:</p>
+<ul>
+<li>The reason why the answer is <strong>not</strong> Consequentialism here is because, a Consequentialist might <strong>agree</strong> that “I wouldn’t want others to lie to me”, and yet also think “But that’s <strong>not</strong> a good reason to not lie, since I could lie here without it <strong>causing</strong> others to lie to me.”</li>
+<li>That is what would enable “white lies” to be acceptable under consequentialism: since you only consider the predicted consequences of your action in the “real world”, rather than in a hypothetical world where everyone does the same action, you are then able to move to a comparison of whether the <strong>benefits</strong> of lying outweigh the <strong>costs</strong> of lying, as one way to make the decision (by “calculating” the consequences!).</li>
+</ul>
+</section>
+</section>
+<section id="part-3-context-free-fairness-and-proxy-variables" class="level2">
+<h2 class="anchored" data-anchor-id="part-3-context-free-fairness-and-proxy-variables">Part 3: Context-Free Fairness and Proxy Variables</h2>
+</section>
+<section id="part-4-context-sensitive-fairness" class="level2">
+<h2 class="anchored" data-anchor-id="part-4-context-sensitive-fairness">Part 4: Context-Sensitive Fairness</h2>
+</section>
+<section id="part-5-doin-thangs-causality" class="level2">
+<h2 class="anchored" data-anchor-id="part-5-doin-thangs-causality">Part 5: Doin Thangs (Causality)</h2>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-date-sort" data-direction="asc">
-          Last Updated - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Last Updated - Newest
-        </option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<table class="quarto-listing-table table table-hover">
-<thead>
-<tr>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Last Updated</a>
-</th>
-<th>
-Category
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="Extra Writeups" data-listing-date-sort="1708405200000" data-listing-file-modified-sort="1708818329522" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="961" data-listing-title-sort="DSAN 5450 Midterm Study Guide" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="../writeups/midterm/index.html" class="title listing-title">DSAN 5450 Midterm Study Guide</a>
-</td>
-<td>
-<span class="listing-date">Tuesday, February 20, 2024</span>
-</td>
-<td>
-<span class="listing-categories">Extra Writeups</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="Extra Writeups" data-listing-date-sort="1708232400000" data-listing-file-modified-sort="1708303172186" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="733" data-listing-title-sort="A Quick Introduction to Probabilistic Graphical Models" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="../writeups/pgm-intro/index.html" class="title listing-title">A Quick Introduction to Probabilistic Graphical Models</a>
-</td>
-<td>
-<span class="listing-date">Sunday, February 18, 2024</span>
-</td>
-<td>
-<span class="listing-categories">Extra Writeups</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="Extra Writeups" data-listing-date-sort="1706936400000" data-listing-file-modified-sort="1707023151054" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2421" data-listing-title-sort="Week 3 Resources / Loose-Thread Tying" data-listing-filename-sort="w03.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="../writeups/w03.html" class="title listing-title">Week 3 Resources / Loose-Thread Tying</a>
-</td>
-<td>
-<span class="listing-date">Saturday, February 3, 2024</span>
-</td>
-<td>
-<span class="listing-categories">Extra Writeups</span>
-</td>
-</tr>
-<tr data-index="3" data-categories="Extra Writeups" data-listing-date-sort="1706072400000" data-listing-file-modified-sort="1707020711625" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2500" data-listing-title-sort="Week 2 Resources / Priming Your Brain for HW1" data-listing-filename-sort="w02.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<a href="../writeups/w02.html" class="title listing-title">Week 2 Resources / Priming Your Brain for HW1</a>
-</td>
-<td>
-<span class="listing-date">Wednesday, January 24, 2024</span>
-</td>
-<td>
-<span class="listing-categories">Extra Writeups</span>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

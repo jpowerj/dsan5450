@@ -12,15 +12,16 @@
     ]
   },
   {
+    "listing": "/recordings/index.html",
+    "items": []
+  },
+  {
     "listing": "/writeups/index.html",
     "items": [
+      "/writeups/midterm/index.html",
       "/writeups/pgm-intro/index.html",
       "/writeups/w03.html",
       "/writeups/w02.html"
     ]
-  },
-  {
-    "listing": "/recordings/index.html",
-    "items": []
   }
 ]

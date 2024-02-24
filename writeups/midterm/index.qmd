@@ -1,0 +1,83 @@
+---
+title: "DSAN 5450 Midterm Study Guide"
+author: "Jeff Jacobs"
+sidebar: mainnav
+date: 2024-02-20
+categories:
+  - "Extra Writeups"
+format:
+  html:
+    df-print: kable
+    html-math-method: mathjax
+---
+
+## Overview
+
+The DSAN 5450 in-class midterm will start at **3:30pm on Wednesday, February 28th**. It is intended to take only 1.5 hours, but you will have 3 hours to take it just in case, so that it will be due by **6:30pm**.
+
+We've covered a lot of... sometimes-disjointed topics thus far, so our goal for the midterm is to emphasize the most important takeaways from across the first six weeks of the class, by putting them in your brain's short-term memory **one more time** before we dive into the second, policy-focused half of the course when you come back from spring break! As a reminder, there is a very good reason to continually try and **re-remember** the same course topics, coming from studies of long-term memory retention:
+
+<center>
+<img width="60%" src="https://jpj.georgetown.domains/dsan5450-scratch/midterm/spaced_rep.jpg"></img>
+</center>
+
+## Part 1: High-Level Data Ethics Considerations
+
+This part corresponds roughly to the first two sessions of the course, where we talked about key "high-level" questions in data ethics.
+
+### (1.1) The Library of Missing Datasets
+
+Why does some information **already exist** in the form of nicely-formatted, easily-accessible datasets, while other information does not?
+
+* Here the specific reference in class was to the <a href='https://mimionuoha.com/the-library-of-missing-datasets' target='_blank'>Library of Missing Datasets</a>, so you can check out the photos at that link for examples of missing datasets.
+* The midterm question here could, therefore, ask you to think through the process by which a certain dataset **came into existence** as (e.g.) a clean, easily-available `.csv` file, and/or why another set of data might not exist in this form.
+
+### (1.2) Operationalization
+
+What types of data-ethical issues arise because of the "gap" between **conceptual** variables and **operationalized** variables?
+
+* Here the main reference for you is <a href='https://jjacobs.me/dsan5450/w02/slides.html#/operationalization' target='_blank'>this slide</a> from Week 2
+
+* For the possible midterm question here, specifically, you should focus on the idea behind the book on the right side of that slide: "Mis-Measuring Our Lives". That book points out the gap between the conceptual variable **[economic well-being]** and its **operationalization** as **[GDP]**.
+  * So, for the midterm, we might ask you to consider a conceptual variable like "fairness" or "privacy", and think through different ways they could be operationalized as measurable quantities.
+
+## Part 2: Ethical Frameworks
+
+### (2.1) Descriptive vs. Normative
+
+### (2.2) Consequentialism vs. Deontological Ethics
+
+This portion would also very much involve the **two most common concrete versions** of these two ethical frameworks:
+* **Utilitarianism** as the most common consequentialist framework
+* **Kantian Ethics** as the most common deontological-ethical framework
+
+On the latter two points specifically, I didn't make the distinction as clearly as I should have in class, so I'm making it here!
+
+**Question 2.5** from **Homework 1** provided the following statement:
+
+> «Lying is bad, since you wouldn't want others to lie to you.»
+
+And then, between Consequentialism and Deontological Ethics, the correct answer was that this statement is more straightforwardly implied by **Deontological Ethics**. I know this one is particularly difficult to think through, but I wanted to highlight it here because this is the question that really reveals the subtle-but-important distinction between these two systems:
+
+* A **consequentialist** approach to "resolving" a dilemma around lying would, crucially, be based on a **prediction** of the **actual consequences** that would result from a possible choice, whereas
+* A **deontological** approach differs from this in considering **what makes a possible choice good or bad in-and-of-itself**, **without** reference to the predicted consequences.
+
+The reason I phrase the distinction in this way is because, in the above statement, you can focus on the portion after the word "since" ("since you wouldn't want others to lie to you"):
+
+* Within a **consequentialist** framework, this reasoning would **not** itself constitute a justification for not lying, since it would have to be **paired with** a statement like "If I lie, then it is likely that others will lie to me", which is **not true in general!** The idiom of a <a href='https://www.merriam-webster.com/dictionary/white%20lie' target='_blank'>"white lie"</a>, for example, comes precisely from the fact that there are often times when we feel like we **should** lie to people to avoid the **consequence** of hurting them.
+* Within a **deontological** framework, on the other hand, this reasoning **would** constitute a justification for not lying, since it corresponds precisely to the **rule** that was mentioned in the prior two questions: Kant's **Categorical Imperative**.
+* This **Categorical Imperative** rule is of special interest, relative to the full set of "ethical rules" you could imagine using, because it is a rule for making ethical decisions **without reference to the consequences** of a particular choice:
+  * Instead of **predicting** what might happen if I make this choice, and judging whether it is an ethical choice on that basis...
+  * I now **imagine** what would happen **hypothetically** if **everyone else in the world** made the choice, **whether or not** my action would in fact make everyone else in the world make the same choice!
+
+I hope that explanation, and the reference to "white lies" as an example, can help make it more clear why the answer to Question 2.5 was "Deontological Ethics". As one final point, to make it super concrete:
+
+* The reason why the answer is **not** Consequentialism here is because, a Consequentialist might **agree** that "I wouldn't want others to lie to me", and yet also think "But that's **not** a good reason to not lie, since I could lie here without it **causing** others to lie to me."
+* That is what would enable "white lies" to be acceptable under consequentialism: since you only consider the predicted consequences of your action in the "real world", rather than in a hypothetical world where everyone does the same action, you are then able to move to a comparison of whether the **benefits** of lying outweigh the **costs** of lying, as one way to make the decision (by "calculating" the consequences!).
+
+## Part 3: Context-Free Fairness and Proxy Variables
+
+## Part 4: Context-Sensitive Fairness
+
+## Part 5: Doin Thangs (Causality)
+
