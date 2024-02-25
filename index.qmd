@@ -2,7 +2,7 @@
 title: "DSAN 5450: Data Ethics and Policy"
 subtitle: "Wednesdays 3:30-6pm, Walsh 498"
 author: "Jeff Jacobs (<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>)"
-institute: "Georgetown University, Spring 2024 {{< var w07.date >}}"
+institute: "Georgetown University, Spring 2024"
 listing:
   sort-ui: false
   filter-ui: false
@@ -15,8 +15,6 @@ listing:
 #  date-format: full
   date-format: "MMMM D"
 ---
-
-{{< var w07.date >}}
 
 Welcome to the homepage for ***DSAN 5450: Data Ethics and Policy*** at Georgetown University, for the Spring 2024 semester!
 
