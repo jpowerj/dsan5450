@@ -77,6 +77,24 @@ I hope that explanation, and the reference to "white lies" as an example, can he
 
 ## Part 3: Context-Free Fairness and Proxy Variables
 
+Here the main idea will be to think through the fairness definitions introduced in this part:
+
+* Fairness Through Unawareness (Removing "sensitive" variables from the dataset)
+* Fairness as Equalized Positive Rate
+* Fairness as Equalized False Positive Rate
+* Fairness as Equalized False Negative Rate
+* Fairness as Calibration
+
+And especially to be able to understand the "simple" cases when these might work, but also the non-simple cases where these fail to capture what we'd like a robust / **actually-usable** fairness measure to capture. Some straightforward questions to guide you in this thinking for this part would be, e.g.:
+
+* Can we have **all** of these measures at once?
+  * Short answer: No. But, you should also have some degree of intuition from class about **why** we can't (the impossibility results)
+* The first four are probably more straightforward, as things we can achieve by dropping variables (Unawarness) or by reading the entries in a confusion matrix. **Calibration**, however, requires a bit more thought:
+  * How is calibration defined? The most succinct definition would just be: the requirement that the value of the **risk score $r(X)$** that "underlies" the decision-making algorithm (in that it is used to produce our predictions $\widehat{Y}$) is itself a **probability** value---namely, the probability that a person with attributes $X$ has associated outcome $Y$.
+  * Why is calibration **desirable**? Why does it help us in terms of assessing fairness? The definition in the previous bullet point is not very easy-to-understand (to me, at least), so that I interpret it as just a requirement that **the risk score "tracks" the relationship between $X$ and $Y$ in a direct way**: for example, high values of $\Pr(Y \mid X)$ mean high values of the underlying representation $r(X)$ that is used to generate $\widehat{Y}$ as a prediction of $Y$.
+  * Viewed in this way, then, I hope it makes sense that this property would be **desirable** in terms of **interpretability**: it means that, if we wanted to know why our prediction algorithm was producing some specific prediction $\widehat{Y}_i$ for a person with attributes $X_i$, we could "open up the black box" of the algorithm and look directly at the **risk score** $r(X_i)$ with respect to the **risk score function $r(\cdot)$ in general**, to see **why** it produced such a high/low value of $\widehat{Y}_i$.
+  * I know even that last point can still be confusing, so to me the final "piece" for understanding is to think about how: if we **didn't** have calibration, then we would have **no natural way of interpreting the risk function $r(\cdot)$**. Since without calibration it is not **constrained** to represent a probability, it could take on any value---$\pi$, $-1000$, $\sqrt{2^{100}}$---and we would have no way of knowing the relationship between these values and the resulting predictions $\widehat{Y}$; no way of knowing, for example, why plugging in a person with characteristics $X_i$ produced $r(X_i) = \pi$ which then led to the prediction $\widehat{Y}_i = 1$, to detain this person until trial!
+
 ## Part 4: Context-Sensitive Fairness
 
 ## Part 5: Doin Thangs (Causality)

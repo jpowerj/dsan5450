@@ -71,6 +71,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../../jjcustom.js"></script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -323,6 +352,28 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="part-3-context-free-fairness-and-proxy-variables" class="level2">
 <h2 class="anchored" data-anchor-id="part-3-context-free-fairness-and-proxy-variables">Part 3: Context-Free Fairness and Proxy Variables</h2>
+<p>Here the main idea will be to think through the fairness definitions introduced in this part:</p>
+<ul>
+<li>Fairness Through Unawareness (Removing “sensitive” variables from the dataset)</li>
+<li>Fairness as Equalized Positive Rate</li>
+<li>Fairness as Equalized False Positive Rate</li>
+<li>Fairness as Equalized False Negative Rate</li>
+<li>Fairness as Calibration</li>
+</ul>
+<p>And especially to be able to understand the “simple” cases when these might work, but also the non-simple cases where these fail to capture what we’d like a robust / <strong>actually-usable</strong> fairness measure to capture. Some straightforward questions to guide you in this thinking for this part would be, e.g.:</p>
+<ul>
+<li>Can we have <strong>all</strong> of these measures at once?
+<ul>
+<li>Short answer: No.&nbsp;But, you should also have some degree of intuition from class about <strong>why</strong> we can’t (the impossibility results)</li>
+</ul></li>
+<li>The first four are probably more straightforward, as things we can achieve by dropping variables (Unawarness) or by reading the entries in a confusion matrix. <strong>Calibration</strong>, however, requires a bit more thought:
+<ul>
+<li>How is calibration defined? The most succinct definition would just be: the requirement that the value of the <strong>risk score <span class="math inline">\(r(X)\)</span></strong> that “underlies” the decision-making algorithm (in that it is used to produce our predictions <span class="math inline">\(\widehat{Y}\)</span>) is itself a <strong>probability</strong> value—namely, the probability that a person with attributes <span class="math inline">\(X\)</span> has associated outcome <span class="math inline">\(Y\)</span>.</li>
+<li>Why is calibration <strong>desirable</strong>? Why does it help us in terms of assessing fairness? The definition in the previous bullet point is not very easy-to-understand (to me, at least), so that I interpret it as just a requirement that <strong>the risk score “tracks” the relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> in a direct way</strong>: for example, high values of <span class="math inline">\(\Pr(Y \mid X)\)</span> mean high values of the underlying representation <span class="math inline">\(r(X)\)</span> that is used to generate <span class="math inline">\(\widehat{Y}\)</span> as a prediction of <span class="math inline">\(Y\)</span>.</li>
+<li>Viewed in this way, then, I hope it makes sense that this property would be <strong>desirable</strong> in terms of <strong>interpretability</strong>: it means that, if we wanted to know why our prediction algorithm was producing some specific prediction <span class="math inline">\(\widehat{Y}_i\)</span> for a person with attributes <span class="math inline">\(X_i\)</span>, we could “open up the black box” of the algorithm and look directly at the <strong>risk score</strong> <span class="math inline">\(r(X_i)\)</span> with respect to the <strong>risk score function <span class="math inline">\(r(\cdot)\)</span> in general</strong>, to see <strong>why</strong> it produced such a high/low value of <span class="math inline">\(\widehat{Y}_i\)</span>.</li>
+<li>I know even that last point can still be confusing, so to me the final “piece” for understanding is to think about how: if we <strong>didn’t</strong> have calibration, then we would have <strong>no natural way of interpreting the risk function <span class="math inline">\(r(\cdot)\)</span></strong>. Since without calibration it is not <strong>constrained</strong> to represent a probability, it could take on any value—<span class="math inline">\(\pi\)</span>, <span class="math inline">\(-1000\)</span>, <span class="math inline">\(\sqrt{2^{100}}\)</span>—and we would have no way of knowing the relationship between these values and the resulting predictions <span class="math inline">\(\widehat{Y}\)</span>; no way of knowing, for example, why plugging in a person with characteristics <span class="math inline">\(X_i\)</span> produced <span class="math inline">\(r(X_i) = \pi\)</span> which then led to the prediction <span class="math inline">\(\widehat{Y}_i = 1\)</span>, to detain this person until trial!</li>
+</ul></li>
+</ul>
 </section>
 <section id="part-4-context-sensitive-fairness" class="level2">
 <h2 class="anchored" data-anchor-id="part-4-context-sensitive-fairness">Part 4: Context-Sensitive Fairness</h2>
