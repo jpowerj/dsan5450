@@ -49,6 +49,7 @@ What types of data-ethical issues arise because of the "gap" between **conceptua
 ### (2.2) Consequentialism vs. Deontological Ethics
 
 This portion would also very much involve the **two most common concrete versions** of these two ethical frameworks:
+
 * **Utilitarianism** as the most common consequentialist framework
 * **Kantian Ethics** as the most common deontological-ethical framework
 
