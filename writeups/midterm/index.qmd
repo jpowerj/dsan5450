@@ -139,7 +139,7 @@ The first thing I want you to note about this approach is that it specifically a
 
 You can also hopefully see how this notion (Fairness Through Awarness) could provide a Rawls-style **ordering**: individual fairness **lexically prior** to group-level fairness (optimize group-level fairness once individual-level is satisfied).
 
-Then lastly, as you saw on HW2, this general notion of Fairness Through Awareness can be **operationalized** as a measurable quantity by, for example, implementing what is generally called **metric fairness**: Given a similarity metric $m: \mathcal{I} \times \mathcal{I} \rightarrow $\mathbb{R}$, where $\mathcal{I}$ is the set of all individuals,
+Then lastly, as you saw on HW2, this general notion of Fairness Through Awareness can be **operationalized** as a measurable quantity by, for example, implementing what is generally called **metric fairness**: Given a similarity metric $m: \mathcal{I} \times \mathcal{I} \rightarrow \mathbb{R}$, where $\mathcal{I}$ is the set of all individuals,
 
 $$
 |D_i - D_j| \leq m(i, j)
