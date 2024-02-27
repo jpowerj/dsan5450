@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -242,8 +262,13 @@ window.Quarto = {
   <li><a href="#consequentialism-vs.-deontological-ethics" id="toc-consequentialism-vs.-deontological-ethics" class="nav-link" data-scroll-target="#consequentialism-vs.-deontological-ethics">(2.2) Consequentialism vs.&nbsp;Deontological Ethics</a></li>
   </ul></li>
   <li><a href="#part-3-context-free-fairness-and-proxy-variables" id="toc-part-3-context-free-fairness-and-proxy-variables" class="nav-link" data-scroll-target="#part-3-context-free-fairness-and-proxy-variables">Part 3: Context-Free Fairness and Proxy Variables</a></li>
-  <li><a href="#part-4-context-sensitive-fairness" id="toc-part-4-context-sensitive-fairness" class="nav-link" data-scroll-target="#part-4-context-sensitive-fairness">Part 4: Context-Sensitive Fairness</a></li>
+  <li><a href="#part-4-context-sensitive-fairness" id="toc-part-4-context-sensitive-fairness" class="nav-link" data-scroll-target="#part-4-context-sensitive-fairness">Part 4: Context-Sensitive Fairness</a>
+  <ul class="collapse">
+  <li><a href="#individual-similarity-based-fairness" id="toc-individual-similarity-based-fairness" class="nav-link" data-scroll-target="#individual-similarity-based-fairness">(4.1) Individual-Similarity-Based Fairness</a></li>
+  <li><a href="#causal-fairness" id="toc-causal-fairness" class="nav-link" data-scroll-target="#causal-fairness">(4.2) Causal Fairness</a></li>
+  </ul></li>
   <li><a href="#part-5-doin-thangs-causality" id="toc-part-5-doin-thangs-causality" class="nav-link" data-scroll-target="#part-5-doin-thangs-causality">Part 5: Doin Thangs (Causality)</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -377,9 +402,56 @@ window.Quarto = {
 </section>
 <section id="part-4-context-sensitive-fairness" class="level2">
 <h2 class="anchored" data-anchor-id="part-4-context-sensitive-fairness">Part 4: Context-Sensitive Fairness</h2>
+<p>We spent some amount of time <strong>critiquing</strong> the fairness definitions mentioned in the previous section. This was not for the sake of judging whether they’re “good” or “bad” as such, but rather, for the sake of <strong>understanding specifically what they’re missing</strong>. Two different characterizations of what they’re missing give us our two key <strong>context-sensitive</strong> approaches to fairness, discussed in the next two sections:</p>
+<section id="individual-similarity-based-fairness" class="level3">
+<h3 class="anchored" data-anchor-id="individual-similarity-based-fairness">(4.1) Individual-Similarity-Based Fairness</h3>
+<ol type="1">
+<li>The Context-Free measures fail to consider how <strong>satisfying a criterion</strong> (e.g., Equalized False Positive Rate) at a <strong>group level</strong> could trample over the rights of <strong>individuals</strong>.</li>
+</ol>
+<p>The illustration of this failure that I mentioned in class boiled down to:</p>
+<ul>
+<li>Let <span class="math inline">\(A_i\)</span> represent a sensitive attribute of individuals, such that <span class="math inline">\(A_i = 0\)</span> if person <span class="math inline">\(i\)</span> is white, and <span class="math inline">\(A_i = 1\)</span> if person <span class="math inline">\(i\)</span> is black.</li>
+<li>If a police department finds itself failing to satisfy a fairness criterion like Equality of Positive Rates, in the sense that their arrest rate <span class="math inline">\(r_1\)</span> for individuals with <span class="math inline">\(A_i = 1\)</span> is higher than their arrest rate <span class="math inline">\(r_0\)</span> for individuals with <span class="math inline">\(A_i = 0\)</span>, then…</li>
+<li>They can quickly “resolve” this failure and satisfy the criterion by running outside and arresting the first <span class="math inline">\(N\)</span> white people they see, where <span class="math inline">\(N\)</span> is the number of additional white arrestees that would be necessary to make <span class="math inline">\(r_0 = r_1\)</span>.</li>
+</ul>
+<p>However, as this illustration hopefully makes clear, this procedure would allow <strong>satisfaction of the group-level fairness criterion</strong>, but only at the <strong>expense</strong> of violating our intuitive notions of <strong>fairness towards individuals</strong>.</p>
+<p>Although there are lots and lots of ways that this notion of <strong>individual-level fairness</strong> could be incorporated into the Context-Free fairness measures to make them Context-Sensitive, one of the most popular and straightforward ways is by constructing an <strong>indiviudal-similarity-based</strong> fairness measure, and then using it to constrain the space of possible decisions by enforcing the rule that:</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Fairness Through Awareness [@dwork_fairness_2011]">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Fairness Through Awareness <span class="citation" data-cites="dwork_fairness_2011">(<a href="#ref-dwork_fairness_2011" role="doc-biblioref">Dwork et al. 2011</a>)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Individuals who are similar with respect to a task should be classified similarly.</strong></p>
+</div>
+</div>
+<p>The first thing I want you to note about this approach is that it specifically aims to resolve the issue we’ve already seen with <strong>utilitarianism</strong>, namely, that * Optimizing <strong>society-level</strong> desiderata (like “overall happiness”) may lead to * <strong>individuals</strong> being brutally mistreated (e.g., having their rights violated)</p>
+<p>You can also hopefully see how this notion (Fairness Through Awarness) could provide a Rawls-style <strong>ordering</strong>: individual fairness <strong>lexically prior</strong> to group-level fairness (optimize group-level fairness once individual-level is satisfied).</p>
+<p>Then lastly, as you saw on HW2, this general notion of Fairness Through Awareness can be <strong>operationalized</strong> as a measurable quantity by, for example, implementing what is generally called <strong>metric fairness</strong>: Given a similarity metric $m: <span class="math inline">\(\mathbb{R}\)</span>, where <span class="math inline">\(\mathcal{I}\)</span> is the set of all individuals,</p>
+<p><span class="math display">\[
+|D_i - D_j| \leq m(i, j)
+\]</span></p>
+<p>for all pairs of individuals <span class="math inline">\((i, j)\)</span>. Or in other words, that the difference between the <strong>decisions</strong> <span class="math inline">\(D_i\)</span> and <span class="math inline">\(D_j\)</span> should be <strong>bounded above</strong> by the <strong>similarity</strong> <span class="math inline">\(m(i,j)\)</span> between <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>.</p>
+</section>
+<section id="causal-fairness" class="level3">
+<h3 class="anchored" data-anchor-id="causal-fairness">(4.2) Causal Fairness</h3>
+<p>This is the capital-B capital-D Big Deal approach to fairness, in my view, but you’ve already heard enough about that in class and on HW2!</p>
+</section>
 </section>
 <section id="part-5-doin-thangs-causality" class="level2">
 <h2 class="anchored" data-anchor-id="part-5-doin-thangs-causality">Part 5: Doin Thangs (Causality)</h2>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-dwork_fairness_2011" class="csl-entry" role="listitem">
+Dwork, Cynthia, Moritz Hardt, Toniann Pitassi, Omer Reingold, and Rich Zemel. 2011. <span>“Fairness <span>Through Awareness</span>.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.1104.3913">https://doi.org/10.48550/arXiv.1104.3913</a>.
+</div>
+</div>
 
 
 </section>

@@ -697,7 +697,7 @@
     "href": "writeups/midterm/index.html#part-4-context-sensitive-fairness",
     "title": "DSAN 5450 Midterm Study Guide",
     "section": "Part 4: Context-Sensitive Fairness",
-    "text": "Part 4: Context-Sensitive Fairness"
+    "text": "Part 4: Context-Sensitive Fairness\nWe spent some amount of time critiquing the fairness definitions mentioned in the previous section. This was not for the sake of judging whether they’re “good” or “bad” as such, but rather, for the sake of understanding specifically what they’re missing. Two different characterizations of what they’re missing give us our two key context-sensitive approaches to fairness, discussed in the next two sections:\n\n(4.1) Individual-Similarity-Based Fairness\n\nThe Context-Free measures fail to consider how satisfying a criterion (e.g., Equalized False Positive Rate) at a group level could trample over the rights of individuals.\n\nThe illustration of this failure that I mentioned in class boiled down to:\n\nLet \\(A_i\\) represent a sensitive attribute of individuals, such that \\(A_i = 0\\) if person \\(i\\) is white, and \\(A_i = 1\\) if person \\(i\\) is black.\nIf a police department finds itself failing to satisfy a fairness criterion like Equality of Positive Rates, in the sense that their arrest rate \\(r_1\\) for individuals with \\(A_i = 1\\) is higher than their arrest rate \\(r_0\\) for individuals with \\(A_i = 0\\), then…\nThey can quickly “resolve” this failure and satisfy the criterion by running outside and arresting the first \\(N\\) white people they see, where \\(N\\) is the number of additional white arrestees that would be necessary to make \\(r_0 = r_1\\).\n\nHowever, as this illustration hopefully makes clear, this procedure would allow satisfaction of the group-level fairness criterion, but only at the expense of violating our intuitive notions of fairness towards individuals.\nAlthough there are lots and lots of ways that this notion of individual-level fairness could be incorporated into the Context-Free fairness measures to make them Context-Sensitive, one of the most popular and straightforward ways is by constructing an indiviudal-similarity-based fairness measure, and then using it to constrain the space of possible decisions by enforcing the rule that:\n\n\n\n\n\n\nFairness Through Awareness (Dwork et al. 2011)\n\n\n\nIndividuals who are similar with respect to a task should be classified similarly.\n\n\nThe first thing I want you to note about this approach is that it specifically aims to resolve the issue we’ve already seen with utilitarianism, namely, that * Optimizing society-level desiderata (like “overall happiness”) may lead to * individuals being brutally mistreated (e.g., having their rights violated)\nYou can also hopefully see how this notion (Fairness Through Awarness) could provide a Rawls-style ordering: individual fairness lexically prior to group-level fairness (optimize group-level fairness once individual-level is satisfied).\nThen lastly, as you saw on HW2, this general notion of Fairness Through Awareness can be operationalized as a measurable quantity by, for example, implementing what is generally called metric fairness: Given a similarity metric $m: \\(\\mathbb{R}\\), where \\(\\mathcal{I}\\) is the set of all individuals,\n\\[\n|D_i - D_j| \\leq m(i, j)\n\\]\nfor all pairs of individuals \\((i, j)\\). Or in other words, that the difference between the decisions \\(D_i\\) and \\(D_j\\) should be bounded above by the similarity \\(m(i,j)\\) between \\(i\\) and \\(j\\).\n\n\n(4.2) Causal Fairness\nThis is the capital-B capital-D Big Deal approach to fairness, in my view, but you’ve already heard enough about that in class and on HW2!"
   },
   {
     "objectID": "writeups/midterm/index.html#part-5-doin-thangs-causality",
@@ -705,6 +705,13 @@
     "title": "DSAN 5450 Midterm Study Guide",
     "section": "Part 5: Doin Thangs (Causality)",
     "text": "Part 5: Doin Thangs (Causality)"
+  },
+  {
+    "objectID": "writeups/midterm/index.html#references",
+    "href": "writeups/midterm/index.html#references",
+    "title": "DSAN 5450 Midterm Study Guide",
+    "section": "References",
+    "text": "References\n\n\nDwork, Cynthia, Moritz Hardt, Toniann Pitassi, Omer Reingold, and Rich Zemel. 2011. “Fairness Through Awareness.” arXiv. https://doi.org/10.48550/arXiv.1104.3913."
   },
   {
     "objectID": "writeups/w03.html",
@@ -2909,6 +2916,16 @@
     "title": "A Quick Introduction to Probabilistic Graphical Models",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nThe term “Graphical” in Probabilistic Graphical Model is not used in the same sense as the “graphical” we’re used to from vernacular English. Capital-G Graphical denotes that the Probabilistic Model is represented as a Graph, a well-defined mathematical object consisting of nodes and edges, which does not have to be represented graphically (though it could be, like in our example here with circles and arrows). In fact, when a computer program is estimating a PGM, it is by definition not in a graphical form—it’s in the form of 0s and 1s, stored in the computer’s memory.↩︎"
+  },
+  {
+    "objectID": "w07/index.html",
+    "href": "w07/index.html",
+    "title": "Week 7: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "section": "",
+    "text": "The midterm will be posted on Google Classroom",
+    "crumbs": [
+      "Week 7: {{< var w07.date-md >}}"
+    ]
   },
   {
     "objectID": "w06/index.html",

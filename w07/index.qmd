@@ -15,3 +15,5 @@ format:
     output-file: "index.html"
     html-math-method: mathjax
 ---
+
+The midterm will be posted on <a href='https://classroom.google.com/c/NjU0OTA4OTk2MTQ3?cjc=rbxeuhj' target='_blank'>Google Classroom</a>
