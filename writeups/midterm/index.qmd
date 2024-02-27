@@ -156,10 +156,9 @@ You should be able to "translate" this into a causal diagram based on:
 
 Then, once you're comfortable with this process of "implementing" hypotheses by constructing causal diagrams, the only other thing I think will be important for the midterm is your ability to **adjudicate between** two or more such diagrams on the basis of their plausibility.
 
-What I mean by that is; keep in mind the definition of causality from @hume_treatise_1739 that was given in a slide in class:
+What I mean by that is... keep in mind the definition of causality that was given in a slide in class:
 
-
-::: {.callout-note icon="false" title="<i class='bi bi-info-circle pe-1'></i> Defining Causality"}
+::: {.callout-tip title="Defining Causality [@hume_treatise_1739]"}
 
 $X$ causes $Y$ if and only if:
 
