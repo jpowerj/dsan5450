@@ -46,6 +46,18 @@ What types of data-ethical issues arise because of the "gap" between **conceptua
 
 ### (2.1) Descriptive vs. Normative
 
+I think you all did a great job of demonstrating that you understand this distinction, through homeworks and discussions (in class and in office hours)! So, on this topic I think you can just review the basic "gist" of how this works:
+
+**Two types of *Descriptive* statements:**
+
+* **Non-implicational statements** that describe facts, like $1 + 1 = 2$, are *descriptive* but *indeterminate* without a set of axioms (definitions for the symbols, in this case)
+* **Implicational statements** that describe facts, like $ZFC \implies 1 + 1 = 2$, are *descriptive* and also *determinate* (in this case, determinately true)
+
+**Two types of *Normative* statements:**
+
+* When the statements are not **descriptions** of empirically/observationally (and intersubjectively) verifiable predicates about how things **are** ("Grass is green"), but are instead **prescriptions** of how things **ought** to be ("Grass ought to be green"/"It is good for grass to be green and bad for grass to be blue"), they have additional **normative** dimensions
+* However, in the same way that the descriptive statement $1 + 1 = 2$ goes from indeterminate to determine when we provide a set of **axioms**, normative statements are also transformed from indeterminate to determinate when we provide an **ethical framework** within which the normative statement can be evaluated.
+
 ### (2.2) Consequentialism vs. Deontological Ethics
 
 This portion would also very much involve the **two most common concrete versions** of these two ethical frameworks:
