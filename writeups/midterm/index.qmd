@@ -134,9 +134,23 @@ $$
 
 for all pairs of individuals $(i, j)$. Or in other words, that the difference between the **decisions** $D_i$ and $D_j$ should be **bounded above** by the **similarity** $m(i,j)$ between $i$ and $j$.
 
+This, to me, is already slightly more than you need to know for the midterm, but if you want to dive into this Context-Sensitive approach specifically, Section 5.1 of @mitchell_algorithmic_2021 has a really great discussion of **Metric Fairness** specifically.
+
 ### (4.2) Causal Fairness
 
 This is the capital-B capital-D Big Deal approach to fairness, in my view, but you've already heard enough about that in class and on HW2!
+
+So, for the midterm, instead I will just say that the key thing I want you to be comfortable with for now is **drawing and interpreting Causal Diagrams** like the ones I've shown in the slides and drawn on the board in class.
+
+First and foremost, if you absorb the [Quick Intro to Probabilistic Graphical Models](../pgm-intro/index.qmd) writeup, you are most of the way there to understanding Causal Diagrams in general, since (sweeping some details under the rug) these Causal Diagrams are primarily just PGMs where we interpret the **edges** (the **arrows** in the PGMs) as hypothesized **causal effects**.
+
+Thus, for the midterm, my first goal is to test your ability to read these PGMs and understand what they're **positing** ("saying") about the world. For example, if I give you a hypothesis like
+
+* $H_1$: Individual $i$ was arrested because they are black
+
+You should be able to "translate" this into a causal diagram based on:
+
+* A random variable $Y_i$ representing whether or not an individual $i$ was arrested (where we use $Y$ here to represent an **outcome** that we're hoping to **explain**)
 
 ## Part 5: Doin Thangs (Causality)
 

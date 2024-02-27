@@ -436,10 +436,21 @@ Fairness Through Awareness <span class="citation" data-cites="dwork_fairness_201
 |D_i - D_j| \leq m(i, j)
 \]</span></p>
 <p>for all pairs of individuals <span class="math inline">\((i, j)\)</span>. Or in other words, that the difference between the <strong>decisions</strong> <span class="math inline">\(D_i\)</span> and <span class="math inline">\(D_j\)</span> should be <strong>bounded above</strong> by the <strong>similarity</strong> <span class="math inline">\(m(i,j)\)</span> between <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>.</p>
+<p>This, to me, is already slightly more than you need to know for the midterm, but if you want to dive into this Context-Sensitive approach specifically, Section 5.1 of <span class="citation" data-cites="mitchell_algorithmic_2021">Mitchell et al. (<a href="#ref-mitchell_algorithmic_2021" role="doc-biblioref">2021</a>)</span> has a really great discussion of <strong>Metric Fairness</strong> specifically.</p>
 </section>
 <section id="causal-fairness" class="level3">
 <h3 class="anchored" data-anchor-id="causal-fairness">(4.2) Causal Fairness</h3>
 <p>This is the capital-B capital-D Big Deal approach to fairness, in my view, but you’ve already heard enough about that in class and on HW2!</p>
+<p>So, for the midterm, instead I will just say that the key thing I want you to be comfortable with for now is <strong>drawing and interpreting Causal Diagrams</strong> like the ones I’ve shown in the slides and drawn on the board in class.</p>
+<p>First and foremost, if you absorb the <a href="../../writeups/pgm-intro/index.html">Quick Intro to Probabilistic Graphical Models</a> writeup, you are most of the way there to understanding Causal Diagrams in general, since (sweeping some details under the rug) these Causal Diagrams are primarily just PGMs where we interpret the <strong>edges</strong> (the <strong>arrows</strong> in the PGMs) as hypothesized <strong>causal effects</strong>.</p>
+<p>Thus, for the midterm, my first goal is to test your ability to read these PGMs and understand what they’re <strong>positing</strong> (“saying”) about the world. For example, if I give you a hypothesis like</p>
+<ul>
+<li><span class="math inline">\(H_1\)</span>: Individual <span class="math inline">\(i\)</span> was arrested because they are black</li>
+</ul>
+<p>You should be able to “translate” this into a causal diagram based on:</p>
+<ul>
+<li>A random variable <span class="math inline">\(Y_i\)</span> representing whether or not an individual <span class="math inline">\(i\)</span> was arrested (where we use <span class="math inline">\(Y\)</span> here to represent an <strong>outcome</strong> that we’re hoping to <strong>explain</strong>)</li>
+</ul>
 </section>
 </section>
 <section id="part-5-doin-thangs-causality" class="level2">
@@ -450,6 +461,9 @@ Fairness Through Awareness <span class="citation" data-cites="dwork_fairness_201
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-dwork_fairness_2011" class="csl-entry" role="listitem">
 Dwork, Cynthia, Moritz Hardt, Toniann Pitassi, Omer Reingold, and Rich Zemel. 2011. <span>“Fairness <span>Through Awareness</span>.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.1104.3913">https://doi.org/10.48550/arXiv.1104.3913</a>.
+</div>
+<div id="ref-mitchell_algorithmic_2021" class="csl-entry" role="listitem">
+Mitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. <span>“Algorithmic <span>Fairness</span>: <span>Choices</span>, <span>Assumptions</span>, and <span>Definitions</span>.”</span> <em>Annual Review of Statistics and Its Application</em> 8 (1): 141–63. <a href="https://doi.org/10.1146/annurev-statistics-042720-125902">https://doi.org/10.1146/annurev-statistics-042720-125902</a>.
 </div>
 </div>
 
