@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.4.550">
 
   <meta name="author" content="Jeff Jacobs">
-  <title>DSAN 5450 - Week 6: Causality in Ethics and Policy</title>
+  <title>DSAN 5450 - Week 8: From Data Ethics to Data Policy</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -30,71 +30,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     /* CSS for citations */
     div.csl-bib-body { }
     div.csl-entry {
@@ -414,7 +349,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 6: Causality in Ethics and Policy</h1>
+  <h1 class="title">Week 8: From Data Ethics to Data Policy</h1>
   <p class="subtitle"><em>DSAN 5450: Data Ethics and Policy</em><br><span class="subsubtitle">Spring 2024, Georgetown University</span></p>
 
 <div class="quarto-title-authors">
@@ -428,270 +363,201 @@ Jeff Jacobs
     </div>
 </div>
 
-  <p class="date">Wednesday, February 21, 2024</p>
+  <p class="date">Wednesday, March 13, 2024</p>
 </section>
-<section id="recap-eureka-moment-for-midterm-prep-purposes" class="title-slide slide level1 not-title-slide title-10 center" data-name="Quick Midterm Thing">
-<h1>Recap / Eureka Moment (for Midterm Prep Purposes)</h1>
-<div class="hidden">
-
-</div>
-<ul>
-<li>I totally forgot to mention: John Stuart Mill, the progenitor of what we today identify as <strong>utilitarianism</strong>, was himself tortured mercilessly, by his father John Mill (bffs with Jeremy Bentham) for the “greater good of society”!</li>
-</ul>
-
-<img data-src="images/js-mill-eureka.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
-
 <section>
-<section id="blasting-off-into-causality" class="title-slide slide level1 title-10 not-title-slide center" data-stack-name="Data-Generating Processes">
-<h1>Blasting Off Into Causality!</h1>
+<section id="what-is-policy-and-what-is-data-policy" class="title-slide slide level1 center" data-stack-name="Policy Overview">
+<h1>What is Policy? And What is <em>Data</em> Policy?</h1>
 
-<img data-src="images/posadism_causal.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="dgps-and-the-emergence-of-order" class="slide level2 crunch-title crunch-quarto-layout-panel">
-<h2>DGPs and the Emergence of Order</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<ul>
-<li>Who (besides Aaron) can guess the state of this process after 10 steps, with 1 person?</li>
-<li>10 people? 50? 100? (If they find themselves on the same spot, they stand on each other’s heads)</li>
-<li>100 steps? 1000?</li>
-</ul>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/random_walk.svg" class="quarto-figure quarto-figure-center" width="430"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
 </section>
-<section id="the-result-16-steps" class="slide level2">
-<h2>The Result: 16 Steps</h2>
-
-<img data-src="index_files/figure-revealjs/random-walk-16-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="the-result-64-steps" class="slide level2">
-<h2>The Result: 64 Steps</h2>
-
-<img data-src="index_files/figure-revealjs/random-walk-64-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
-<section id="mathematicalscientific-modeling" class="slide level2 smaller">
-<h2>“Mathematical/Scientific Modeling”</h2>
+<section id="prelim-conflict-of-interest-disclosure" class="slide level2 smaller crunch-ul crunch-title">
+<h2>Prelim: Conflict-of-Interest Disclosure</h2>
 <ul>
-<li>Thing we observe (poking out of water): <strong>data</strong></li>
-<li>Hidden but possibly discoverable through deeper investigation (ecosystem under surface): <strong>model</strong> / <strong>DGP</strong></li>
+<li>Just as I laid out my biases at the beginning of the “high-level” ethics unit…</li>
+<li>Now I lay out my biases at the beginning of the policy unit!</li>
+<li>tldr: in US context, when I encounter “policy debates”, this is what they look like to me:</li>
 </ul>
-<!-- My sincere belief and definitely not an image forwarded to me unironically by a family member when I was a tween -->
 
-<img data-src="images/fwds_from_grandma.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="so-whats-the-problem" class="slide level2 crunch-title">
-<h2>So What’s the Problem?</h2>
+<img data-src="images/republicans-democrats-women.gif" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="discourse-around-data-policy-in-the-us-senate" class="slide level2 smaller title-11 crunch-title">
+<h2>Discourse Around “Data Policy” in the US Senate</h2>
 <ul>
-<li>Non-probabilistic models: High potential for being garbage (see: Bayesianism)</li>
-<li>Probabilistic models: Getting there, still “surface” phenomena
+<li>(This is ~the level at which “national conversations” are conducted around big data)</li>
+</ul>
+<center>
+<a href="https://www.youtube.com/watch?v=5W-ufw5Z7ac" target="_blank"><img data-src="images/mr_cotton.jpeg" class="quarto-figure quarto-figure-center" width="800"></a>
+</center>
+</section>
+<section id="prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have" class="slide level2 smaller title-07 crunch-ul crunch-blockquote crunch-title">
+<h2>Prelim: Conclusion (Again, Solely My Opinion, Which I Wish I Didn’t Have)</h2>
 <ul>
-<li>Of the <span class="math inline">\(N = 100\)</span> times we observed event <span class="math inline">\(X\)</span> occurring, event <span class="math inline">\(Y\)</span> also occurred <span class="math inline">\(90\)</span> of those times</li>
-<li><span class="math inline">\(\implies \Pr(Y \mid X) = \frac{\#[X, Y]}{\#[X]} = \frac{90}{100} = 0.9\)</span></li>
+<li>The US is, imo, entirely hopeless on this front… short of a massive socio-political realignment on a scale that has never before occurred, sensible and just policies (data-focused or otherwise) are for all intents and purposes impossible</li>
+<li>US approach to social problems: fight “wars” against them, deport people, throw millions into prisons, blame CCP and their Singaporean CEO running dogs, blame Russian election-interferers, give billions of $ to Israeli election-interferers, and so on
+<ul>
+<li>(Previous examples) War on Drugs, War on Poverty, War on “Welfare Queens”</li>
+<li>(Future examples, you owe me a lunch when they are announced) War on School Shootings, War on Climate Change, War on Lack of Healthcare, War on Long Lines</li>
 </ul></li>
-<li>Causal models: Does <span class="math inline">\(Y\)</span> happen <strong>because of</strong> <span class="math inline">\(X\)</span> happening? For that, need to start modeling <strong>what’s happening under the surface</strong> that make <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> “pop up” together so often</li>
+<li>But also: my opinion truly doesn’t matter for purposes of learning about data policy</li>
+<li><strong>Important takeaway #1</strong>: I would be very very happy to be proven wrong!</li>
+</ul>
+<blockquote>
+<p><strong><em>Pessimism of the intellect, optimism of the will</em></strong>.</p>
+<p>—Antonio Gramsci, Founder of the PCI, 1920 (Imprisoned by Mussolini in 1926, died in prison in 1937)</p>
+</blockquote>
+</section>
+<section id="actually-relevant-takeaway" class="slide level2 smaller">
+<h2>Actually-Relevant Takeaway</h2>
+<ul>
+<li>Unlike the US, there <strong>are</strong> countries and national/international institutions where policies are formed, in varying degrees, by processes in which <strong>data</strong> comes into play</li>
+<li>We’ll discuss more examples; two I can speak to directly given work as data consultant:</li>
+<li><strong>EU</strong>: Consulted on project around implementation of <strong>GDPR</strong></li>
+<li><strong>UNESCO</strong>: Received grant for data-analysis of international <strong>translation policies</strong>
+<ul>
+<li>194 UN member states who participate in formation of these policies</li>
+<li>2 UN member states who refuse to participate on basis of “anti-Israel bias” (you’ll never guess which ones! Hint: Apartheid South Africa, Rhodesia used to provide 3rd and 4th vote in this bloc, but no longer exist)</li>
+</ul></li>
+<li><strong>NY MTA</strong>: Consulted on project studying NYC subway data, until passage of <a href="https://ogs.ny.gov/executive-order-157" target="_blank">NYS Executive Order 157</a> banning state funding for any person or organization supporting boycott of Israel <code>¯\_(ツ)_/¯</code></li>
+</ul>
+</section>
+<section id="implies-comparative-perspective" class="slide level2 crunch-title crunch-ul">
+<h2><span class="math inline">\(\implies\)</span> <em>Comparative</em> Perspective</h2>
+<ul>
+<li>We’ll study various countries / international orgs and their attempts to tackle data policy issues (with hope that takeaways can be applied to the US someday as well)</li>
+<li>Important to retain <strong>descriptive/normative distinction</strong>!</li>
+<li>They’ll become harder to distinguish, as we discuss:
+<ul>
+<li>What <strong>are</strong> the policies currently in existence?</li>
+<li>What are their <strong>drawbacks</strong>?</li>
+<li>And, among the latter, which ones <strong>could</strong> be addressed via policy? (requires understanding <strong>processes of policy formation</strong>) Which ones <strong>could not?</strong> (<em>impossibility results…</em>)</li>
+</ul></li>
 </ul>
 </section></section>
 <section>
-<section id="causal-inference" class="title-slide slide level1 center" data-stack-name="Causal Inference">
-<h1>Causal Inference</h1>
+<section id="the-present-day-policy-framework-descriptive-notice-and-consent" class="title-slide slide level1 center" data-stack-name="Notice and Consent">
+<h1>The Present-Day Policy Framework (Descriptive): <em>Notice</em> and <em>Consent</em></h1>
 
 </section>
-<section id="the-intuitive-problem-of-inferring-causality" class="slide level2 title-08">
-<h2>The <em>Intuitive</em> Problem of Inferring Causality</h2>
-<div class="columns">
-<div class="column" style="width:65%;">
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
+<section id="oecd-guidelines-1980" class="slide level2">
+<h2>OECD <em>Guidelines</em>, 1980</h2>
+<ul>
+<li>“The basis for most modern privacy laws” <span class="citation" data-cites="sugimoto_big_2016">(<a href="#/references" role="doc-biblioref" onclick="">Sugimoto, Ekbia, and Mattioli 2016</a>)</span></li>
+<li><strong>Collection Limitation Principle</strong>: data may be collected “where appropriate, with the knowledge or <strong>consent</strong> of the data subject.” <span class="citation" data-cites="oecd_oecd_1980">(<a href="#/references" role="doc-biblioref" onclick="">OECD 1980, 14</a>)</span></li>
+<li><strong>Use Limitation Principle</strong>: “Personal data should not be disclosed, made available or otherwise used for purposes other than those specified [at time of collection] except with the <strong>consent</strong> of the data subject” <span class="citation" data-cites="oecd_oecd_1980">(<a href="#/references" role="doc-biblioref" onclick="">OECD 1980, 15</a>)</span></li>
+</ul>
+</section>
+<section id="eu-data-protection-directive-1995" class="slide level2">
+<h2>EU Data Protection Directive, 1995</h2>
+<ul>
+<li>Art. 7: Processing allowed when “the data subject <strong>has unambiguously given his [sic] consent</strong>.”</li>
+<li>Art. 8: Use of sensitive data is restricted, except where “the data subject <strong>has given his [sic] explicit consent</strong> to the processing of those data.”</li>
+<li>Art. 26: Prohibits export of personal data to non-European countries lacking “adequate data protection”, except when “the data subject <strong>has given his [sic] consent</strong> unambiguously to the proposed transfer” <span class="citation" data-cites="europeanunion_directive_1995">(<a href="#/references" role="doc-biblioref" onclick="">European Union 1995</a>)</span></li>
+<li>Superceded by <strong>GDPR</strong> in <strong>2018</strong></li>
+</ul>
+</section>
+<section id="eu-general-data-protection-regulation-gdpr-2018" class="slide level2 smaller crunch-title title-10">
+<h2>EU General Data Protection Regulation (GDPR), 2018</h2>
+
+<img data-src="images/gdpr.jpeg" class="quarto-figure quarto-figure-center r-stretch"><blockquote>
+<p>«Consent is one of the easiest to satisfy because it allows you to do just about anything with the data» (—the text right below this screenshot)</p>
+</blockquote>
+</section>
+<section id="reading-implementing-the-gdpr" class="slide level2">
+<h2>Reading / Implementing the GDPR</h2>
+<ul>
+<li>Main document: 261 pages</li>
+<li>For SaaS companies: a nice, 34-page <a href="https://www.enterpriseready.io/gdpr/how-to-read-gdpr/" target="_blank">abridgement</a></li>
+</ul>
+</section>
+<section id="why-we-have-to-stop-the-individual-policy-level-descriptive-part-here" class="slide level2 smaller crunch-title title-11">
+<h2>Why We Have To Stop the Individual-Policy-Level Descriptive Part Here</h2>
+<p><em>(And await your final policy papers!)</em></p>
+
+<img data-src="images/piwik.jpeg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">From Piwik.pro, <a href="https://piwik.pro/privacy-laws-around-globe/" target="_blank">“17 Privacy Laws Around the Globe”</a></p></section></section>
+<section>
+<section id="normative-issues-with-notice-and-consent" class="title-slide slide level1 center" data-stack-name="Normative Issues">
+<h1>(Normative) Issues with Notice and Consent</h1>
+
+</section>
+<section id="the-crux-of-the-normative-issues" class="slide level2 crunch-title smaller nostretch">
+<h2>The Crux of the Normative Issues</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="index_files/figure-revealjs/ski-revenue-lawyers-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+<p><img data-src="images/terms_of_service_info.jpg" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
-</div>
-</div>
-</div><div class="column" style="width:35%;">
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">cor</span>(ski_df<span class="sc">$</span>value, law_df<span class="sc">$</span>value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9921178</code></pre>
-</div>
-</div>
-<div style="font-size: 50% !important;">
-<p>(Based on <a href="http://web.archive.org/web/20191006000802/http://tylervigen.com/view_correlation?id=29272" target="_blank">Spurious Correlations</a>, Tyler Vigen)</p>
-</div>
-<ul>
-<li>This, however, is only a <em>mini-boss</em>. Beyond it lies the truly invincible <strong>FINAL BOSS</strong>… 🙀</li>
-</ul>
-</div>
-</div>
 </section>
-<section id="the-fundamental-problem-of-causal-inference" class="slide level2 crunch-title crunch-ul crunch-callout title-08 scrollable">
-<h2>The <em>Fundamental</em> Problem of Causal Inference</h2>
-<p>The only workable definition of “<span class="math inline">\(X\)</span> causes <span class="math inline">\(Y\)</span>”:</p>
-<div title="<i class='bi bi-info-circle pe-1'></i> Defining Causality">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong><i class="bi bi-info-circle pe-1"></i> Defining Causality</strong></p>
-</div>
-<div class="callout-content">
-<p><span class="math inline">\(X\)</span> causes <span class="math inline">\(Y\)</span> if and only if:</p>
-<ol type="1">
-<li><span class="math inline">\(X\)</span> <em>temporally precedes</em> <span class="math inline">\(Y\)</span> and</li>
-<li><ul>
-<li>In <strong>two worlds</strong> <span class="math inline">\(W_0\)</span> and <span class="math inline">\(W_1\)</span> where</li>
-<li>everything is exactly the same <strong>except that</strong> <span class="math inline">\(X = 0\)</span> in <span class="math inline">\(W_0\)</span> and <span class="math inline">\(X = 1\)</span> in <span class="math inline">\(W_1\)</span>,</li>
-<li><span class="math inline">\(Y = 0\)</span> in <span class="math inline">\(W_0\)</span> and <span class="math inline">\(Y = 1\)</span> in <span class="math inline">\(W_1\)</span>.</li>
+<section id="does-reading-understanding" class="slide level2 smaller crunch-title crunch-ul">
+<h2>Does Reading = Understanding?</h2>
+<ul>
+<li>Does reading <span class="math inline">\(\implies\)</span> understanding <strong>implications</strong> / <strong>contingencies</strong> / <strong>ambiguities</strong>?</li>
+<li>NLP <em>could</em> (and <em>should!</em>) be helpful (<em>“making privacy policies <strong>machine readable</strong> […] would help users match <strong>privacy preferences</strong> against <strong>policies</strong> offered by web services”</em>), but mostly just reveals how bad the problem is:</li>
+</ul>
+
+<img data-src="images/wagner_fig.svg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">Figure 15 from <span class="citation" data-cites="wagner_privacy_2023">Wagner (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span>. “Obfuscatory words” are words like <em>acceptable</em>, <em>significant</em>, <em>mainly</em>, or <em>predominantly</em>, interpretated at the discretion of companies rather than users (see next slide!)</p></section>
+<section id="the-fundamental-problem-of-contracts" class="slide level2 crunch-title crunch-ul title-09">
+<h2>The Fundamental Problem of Contracts</h2>
+<ul>
+<li>Just as we can’t observe <strong>two simultaneous worlds</strong> <span class="math inline">\(W_{X = 0}\)</span> and <span class="math inline">\(W_{X = 1}\)</span> which differ only in the value of <span class="math inline">\(X\)</span>,</li>
+<li>We can’t <strong>foresee all possible contingencies</strong> that need to be included in a <strong>contract</strong>
+<ul>
+<li>(We can try, though! Hence use of obfuscatory words to <strong>minimize liability</strong>)</li>
 </ul></li>
-</ol>
-<p><span class="citation" data-cites="hume_treatise_1739">(<a href="#/references" role="doc-biblioref" onclick="">Hume 1739</a>, ruining everything as usual 😤)</span></p>
-</div>
-</div>
-</div>
-</div>
+<li>So, when a situation arises which is not covered by a clause in the contract, what happens? What principle determines <strong>whose interpretation wins out</strong>?
 <ul>
-<li>The problem? We live in <strong>one</strong> world, not two identical worlds simultaneously 😭</li>
+<li>(<em>Hint</em>: It is actually literally my legal middle name…)</li>
+</ul></li>
 </ul>
 </section>
-<section id="what-is-to-be-done" class="slide level2">
-<h2>What Is To Be Done?</h2>
-
-<img data-src="images/face_everything_and_rise.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="face-everything-and-rise-controlled-randomized-experiment-paradigm" class="slide level2">
-<h2>Face Everything And Rise: Controlled, Randomized Experiment Paradigm</h2>
+<section id="power" class="slide level2">
+<h2>…POWER!</h2>
 <ul>
-<li>Find good comparison cases: <strong>Treatment</strong> and <strong>Control</strong></li>
-<li>Without a control group, you cannot make inferences!</li>
-<li><em>Selecting on the dependent variable…</em></li>
+<li>Examples from employment contracts (tooting own horn):</li>
+<li>In a private, cooperatively-owned, democratic firm, outcome determined by <em>conversation</em>, <em>majority vote</em>, <em>unanimity</em>, etc.
+<ul>
+<li>These technically exist in the US! Employing <a href="https://resources.uwcc.wisc.edu/Research/REIC_FINAL.pdf" target="_blank">2,380 workers</a>, <span class="math inline">\(\frac{2380}{127509000} \approx 0.0019\%\)</span> of US workforce</li>
+</ul></li>
+<li>Otherwise, in a non-unionized private firm (94% of total), the outcome is determined by <em>organizational hierarchy</em>
+<ul>
+<li>This is the case for <span class="math inline">\(\frac{125000000}{127509000} \approx 98.03\%\)</span> of <a href="https://fred.stlouisfed.org/series/USPRIV" target="_blank">US workforce</a></li>
+</ul></li>
 </ul>
 </section>
-<section id="selecting-on-the-dependent-variable" class="slide level2 smaller">
-<h2>Selecting on the Dependent Variable</h2>
-
-<img data-src="images/school-shootings.jpeg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption"><a href="https://www.pbs.org/newshour/show/what-research-says-about-identifying-people-who-might-commit-mass-shootings" target="_blank">What “““research”“” “““says”“” about identifying people who might commit mass shootings</a></p><ul>
-<li>Jeff’s rant: If you care about actually solving social issues, this should <strong>infuriate you</strong></li>
-</ul>
-</section>
-<section id="complications-selection" class="slide level2">
-<h2>Complications: Selection</h2>
+<section id="descriptive-and-normative-implications" class="slide level2 crunch-title title-09 crunch-ul crunch-blockquote">
+<h2>Descriptive and Normative Implications</h2>
 <ul>
-<li>Tldr: Why did this person (unit) end up in the treatment group? Why did this other person (unit) end up in the control group?</li>
-<li>Are there systematic differences?</li>
-<li>“““Vietnam”“” “““War”“” Draft: Why can’t we just study [men who join the military] versus [men who don’t], and take the difference as a causal estimate?</li>
-</ul>
-</section>
-<section id="the-solution-matching" class="slide level2 crunch-title crunch-ul">
-<h2>The Solution: <em>Matching</em></h2>
+<li>Who has power w.r.t. incompleteness of contracts?</li>
+<li>Who <strong>ought</strong> to have power w.r.t. incompleteness of contracts?</li>
+<li>And now I can talk about the EU thing…
 <ul>
-<li><strong>Controlled experiment</strong>: we can <strong>ensure</strong> (since we have control over the <strong>assignment mechanism</strong>) the <strong>only systematic difference</strong> between <span class="math inline">\(C\)</span> and <span class="math inline">\(T\)</span> is: <span class="math inline">\(T\)</span> received treatment, <span class="math inline">\(C\)</span> did not</li>
-<li>In an <strong>observational study</strong>, we’re “too late”! Thus, we no longer refer to <strong>assignment</strong> but to <strong>selection</strong></li>
-<li>Our job is to <strong>figure out</strong> (reverse engineer!) the <strong>selection mechanism</strong>, then <strong>correct for its non-randomness</strong>. Spoiler: “transform” observational <span class="math inline">\(\rightarrow\)</span> experimental via <strong>weighting</strong>.</li>
-<li>That’s the gold at end of rainbow. The <strong>rainbow itself</strong> is…</li>
+<li>(It wasn’t implemented)</li>
+<li>(But idk statute of limitations)</li>
+<li>(Oh well)</li>
+</ul></li>
 </ul>
-</section></section>
-<section>
-<section id="do-calculus" class="title-slide slide level1 center" data-stack-name="Do-Calculus">
-<h1>Do-Calculus</h1>
-
-</section>
-<section id="our-data-generating-process" class="slide level2 crunch-title crunch-ul scrollable">
-<h2>Our Data-Generating Process</h2>
-<ul>
-<li><span class="math inline">\(Y\)</span>: Future success, <span class="math inline">\(\mathcal{R}_Y = \{0, 1\}\)</span></li>
-<li><span class="math inline">\(E\)</span>: Private school education, <span class="math inline">\(\mathcal{R}_E = \{0, 1\}\)</span></li>
-<li><span class="math inline">\(V\)</span>: Born into poverty, <span class="math inline">\(\mathcal{R}_V = \{0, 1\}\)</span></li>
-</ul>
-<div title="The Private School $\leadsto$ Success Pipeline 🤑">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>The Private School <span class="math inline">\(\leadsto\)</span> Success Pipeline 🤑</strong></p>
-</div>
-<div class="callout-content">
-<ol type="1">
-<li>Sample independent RVs <span class="math inline">\(U_1 \sim \mathcal{B}(1/2)\)</span>, <span class="math inline">\(U_2 \sim \mathcal{B}(1/3)\)</span>, <span class="math inline">\(U_3 \sim \mathcal{B}(1/3)\)</span></li>
-<li><span class="math inline">\(V \leftarrow U_1\)</span></li>
-<li><span class="math inline">\(E \leftarrow \textsf{if }(V = 1)\textsf{ then } 0\textsf{ else }U_2\)</span></li>
-<li><span class="math inline">\(Y \leftarrow \textsf{if }(V = 1)\textsf{ then }0\textsf{ else }U_3\)</span></li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="chalkboard-time" class="slide level2">
-<h2>Chalkboard Time…</h2>
-<ul>
-<li><span class="math inline">\(\Pr(Y = 1) = \; ?\)</span></li>
-<li><span class="math inline">\(\Pr(Y = 1 \mid E = 1) = \; ?\)</span></li>
-</ul>
-</section>
-<section id="top-secret-answers-slide-dont-peek" class="slide level2">
-<h2>Top Secret Answers Slide (Don’t Peek)</h2>
-<ul>
-<li><span class="math inline">\(\Pr(Y = 1) = \frac{1}{6}\)</span></li>
-<li><span class="math inline">\(\Pr(Y = 1 \mid E = 1) = \frac{1}{3}\)</span></li>
-<li><span class="math inline">\(\overset{✅}{\implies}\)</span> One out of every three private-school graduates is successful, vs.&nbsp;one out of every six graduates overall</li>
-<li><span class="math inline">\(\overset{❓}{\implies}\)</span> Private school education <strong>doubles</strong> likelihood of success!</li>
-<li>The latter is only true if <em>intervening</em>/<em>changing</em>/<strong>do</strong><em>ing</em> <span class="math inline">\(E = 0 \leadsto E = 1\)</span> is what moves <span class="math inline">\(\Pr(Y = 1)\)</span> from <span class="math inline">\(\frac{1}{6}\)</span> to <span class="math inline">\(\frac{1}{3}\)</span>!</li>
-</ul>
-</section>
-<section id="chalkboard-time-2-electric-boogaloo" class="slide level2 crunch-title crunch-ul crunch-callout scrollable">
-<h2>Chalkboard Time 2: Electric Boogaloo</h2>
-<ul>
-<li><span class="math-90"><span class="math inline">\(\Pr(Y = 1) = \frac{1}{6}\)</span></span></li>
-<li><span class="math-90"><span class="math inline">\(\Pr(Y = 1 \mid E = 1) = \frac{1}{3}\)</span></span></li>
-<li><span class="math-90"><span class="math inline">\(\Pr(Y = 1 \mid \textsf{do}(E = 1)) = \; ?\)</span></span></li>
-<li>Here, <span class="math-90"><span class="math inline">\(\textsf{do}(E = 1)\)</span></span> means <strong>diving into the DGP below the surface</strong> and <strong>changing it</strong> so that <span class="math-90"><span class="math inline">\(E = 1\)</span></span>… <strong>Setting</strong> <span class="math-90"><span class="math inline">\(E\)</span></span> to be <span class="math-90"><span class="math inline">\(1\)</span></span></li>
-</ul>
-<div title="$\text{DGP}(Y \mid \textsf{do}(E = 1))$">
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong><span class="math inline">\(\text{DGP}(Y \mid \textsf{do}(E = 1))\)</span></strong></p>
-</div>
-<div class="callout-content">
-<ol type="1">
-<li>Sample independent RVs <span class="math inline">\(U_1 \sim \mathcal{B}(1/2)\)</span>, <span class="math inline">\(U_2 \sim \mathcal{B}(1/3)\)</span>, <span class="math inline">\(U_3 \sim \mathcal{B}(1/3)\)</span></li>
-<li><span class="math inline">\(V \leftarrow U_1\)</span></li>
-<li><span class="math inline">\(E \leftarrow \textsf{if }(V = 1)\textsf{ then } 0\textsf{ else }U_2\)</span></li>
-<li><span class="math inline">\(Y \leftarrow \textsf{if }(V = 1)\textsf{ then }0\textsf{ else }U_3\)</span></li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="double-quadruple-secret-answer-slide" class="slide level2">
-<h2>Double Quadruple Secret Answer Slide</h2>
-<ul>
-<li><span class="math inline">\(\Pr(Y = 1) = \frac{1}{6}\)</span></li>
-<li><span class="math inline">\(\Pr(Y = 1 \mid E = 1) = \frac{1}{3}\)</span></li>
-<li><span class="math inline">\(\Pr(Y = 1 \mid \textsf{do}(E = 1)) = \frac{1}{6}\)</span></li>
-</ul>
+<blockquote>
+<p>🔥<em>I think it’s more useful to, like, make things happen now, and then, like, apologize later</em>🔥 —<a href="https://www.snopes.com/fact-check/move-fast-break-things-facebook-motto/" target="_blank">Mark Zuckerberg the 🐐</a></p>
+</blockquote>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-hume_treatise_1739" class="csl-entry" role="listitem">
-Hume, David. 1739. <em>A <span>Treatise</span> of <span>Human Nature</span>: <span>Being</span> an <span>Attempt</span> to <span>Introduce</span> the <span>Experimental Method</span> of <span>Reasoning Into Moral Subjects</span>; and <span>Dialogues Concerning Natural Religion</span></em>. Longmans, Green.
+<div id="ref-europeanunion_directive_1995" class="csl-entry" role="listitem">
+European Union. 1995. <span>“Directive 95/46/<span>EC</span> of the <span>European Parliament</span> and of the <span>Council</span> of 24 <span>October</span> 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data.”</span> <a href="http://data.europa.eu/eli/dir/1995/46/oj/eng">http://data.europa.eu/eli/dir/1995/46/oj/eng</a>.
+</div>
+<div id="ref-oecd_oecd_1980" class="csl-entry" role="listitem">
+OECD. 1980. <em><span>OECD Guidelines</span> on the <span>Protection</span> of <span>Privacy</span> and <span>Transborder Flows</span> of <span>Personal Data</span></em>. Paris: <span>Organisation for Economic Co-operation and Development</span>. <a href="https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en">https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en</a>.
+</div>
+<div id="ref-sugimoto_big_2016" class="csl-entry" role="listitem">
+Sugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. <em>Big <span>Data Is Not</span> a <span>Monolith</span></em>. MIT Press.
+</div>
+<div id="ref-wagner_privacy_2023" class="csl-entry" role="listitem">
+Wagner, Isabel. 2023. <span>“Privacy <span>Policies</span> Across the <span>Ages</span>: <span>Content</span> of <span>Privacy Policies</span> 1996–2021.”</span> <em>ACM Transactions on Privacy and Security</em> 26 (3): 32:1–32. <a href="https://doi.org/10.1145/3590152">https://doi.org/10.1145/3590152</a>.
 </div>
 </div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p>DSAN 5450 Week 6: Causality</p>
+<p>DSAN 5450 Week 8: Data Policy</p>
 </div>
 </div>
 </section></section>
@@ -907,44 +773,6 @@ Hume, David. 1739. <em>A <span>Treatise</span> of <span>Human Nature</span>: <sp
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
