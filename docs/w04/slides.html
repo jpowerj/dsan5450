@@ -9,11 +9,11 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.550">
+  <meta name="generator" content="quarto-1.5.23">
 
   <meta name="author" content="Jeff Jacobs">
   <meta name="dcterms.date" content="2024-02-06">
-  <title>DSAN 5450 - Week 4: Fairness in AI</title>
+  <title>DSAN 5450 – Week 4: Fairness in AI</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -494,7 +494,7 @@ Jeff Jacobs
 <li>Also in HW1: <strong>Facebook</strong> ad matching service provides <strong>over 1,000 different user attributes</strong> for <strong>(micro)targeting</strong></li>
 </ul>
 
-<img data-src="images/proxy.svg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">From <span class="citation" data-cites="datta_proxy_2017">Datta et al. (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span></p></section>
+<img data-src="images/proxy.svg" class="r-stretch quarto-figure-center"><p class="caption">From <span class="citation" data-cites="datta_proxy_2017">Datta et al. (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span></p></section>
 <section id="to-make-it-even-more-concrete" class="slide level2 smaller crunch-title">
 <h2>To Make It Even More Concrete…</h2>
 <ul>
@@ -672,7 +672,7 @@ A_i = \begin{cases}
 <li>If you’re in the latter group, welcome to the <strong>cult of Probabilistic Graphical Models</strong> 😈</li>
 </ul>
 
-<img data-src="images/pgm_fairness.svg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">Your first <strong>PGM</strong>, illustrating <strong>hypothesized causal relationships</strong> between three random variables <span class="math inline">\(Y\)</span> (outcome), <span class="math inline">\(D\)</span> (decision), and <span class="math inline">\(A\)</span> (protected attribute). The <span class="math inline">\(Y\)</span> node is <strong>shaded</strong> to indicate that it is an <strong>observed</strong> value in our model, rendering the <strong>unobserved</strong> values <span class="math inline">\(D\)</span> and <span class="math inline">\(A\)</span> <strong>independent</strong> conditional on it. If I was elected Emperor of Math, equations would be abolished in favor of PGMs.</p></section>
+<img data-src="images/pgm_fairness.svg" class="r-stretch quarto-figure-center"><p class="caption">Your first <strong>PGM</strong>, illustrating <strong>hypothesized causal relationships</strong> between three random variables <span class="math inline">\(Y\)</span> (outcome), <span class="math inline">\(D\)</span> (decision), and <span class="math inline">\(A\)</span> (protected attribute). The <span class="math inline">\(Y\)</span> node is <strong>shaded</strong> to indicate that it is an <strong>observed</strong> value in our model, rendering the <strong>unobserved</strong> values <span class="math inline">\(D\)</span> and <span class="math inline">\(A\)</span> <strong>independent</strong> conditional on it. If I was elected Emperor of Math, equations would be abolished in favor of PGMs.</p></section>
 <section id="section" class="slide level2 crunch-title crunch-callout" data-background-video="https://jpj.georgetown.domains/dsan5450-scratch/Dead_Inside_Shuffle.mp4" data-background-size="contain" data-background-opacity="0.5">
 <h2></h2>
 <div class="quarto-layout-panel" data-layout-align="right" data-layout="[-70,30]">
@@ -1165,6 +1165,24 @@ Simons, Josh. 2023. <em>Algorithms for the <span>People</span>: <span>Democracy<
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1201,7 +1219,11 @@ Simons, Josh. 2023. <em>Algorithms for the <span>People</span>: <span>Democracy<
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {

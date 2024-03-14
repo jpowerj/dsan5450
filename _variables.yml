@@ -33,3 +33,13 @@ w07:
   title: "In-Class Midterm: Data Ethics, Fairness, Privacy, Causality"
   footer: "In-Class Midterm"
   date-md: "Feb 28"
+w08:
+  weeknum: 8
+  title: "From Data Ethics to Data Policy"
+  footer: "From Data Ethics to Data Policy"
+  date-md: "Mar 13"
+w09:
+  weeknum: 9
+  title: "Privacy Policies and the Fundamental Problem of Contracts"
+  footer: "Privacy Policies and Incomplete Contracts"
+  date-md: "Mar 20"

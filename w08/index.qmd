@@ -1,5 +1,5 @@
 ---
-title: "Week 8: From Data Ethics to Data Policy"
+title: "Week 8: {{< var w08.title >}}"
 subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2024, Georgetown University</span>"
 author: "Jeff Jacobs"
 institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
@@ -12,7 +12,7 @@ categories:
 format:
   revealjs:
     df-print: kable
-    footer: "DSAN 5450 Week 8: Data Policy"
+    footer: "DSAN 5450 Week 8: {{< var w08.footer >}}"
     output-file: "slides.html"
     html-math-method: mathjax
     theme: ["../_jjslides.scss"]
@@ -30,6 +30,14 @@ format:
     output-file: "index.html"
     html-math-method: mathjax
 ---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
 
 # What is Policy? And What is *Data* Policy? {data-stack-name="Policy Overview"}
 

@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.5.23">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jeff Jacobs">
 
-<title>DSAN 5450 - Week 2: Machine Learning, Training Data, and Bias</title>
+<title>DSAN 5450 – Week 2: Machine Learning, Training Data, and Bias</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -230,6 +230,18 @@ window.Quarto = {
  <span class="menu-text">Week 7: Feb 28</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../w08/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 8: Mar 13</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../w09/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 9: Mar 20</span></a>
+  </div>
+</li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
@@ -356,7 +368,7 @@ window.Quarto = {
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/missing-datasets.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/missing-datasets.jpg" class="img-fluid figure-img"></p>
 <figcaption>The <a href="https://github.com/MimiOnuoha/missing-datasets" target="_blank">Library of Missing Datasets</a>. From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#ref-dignazio_data_2020" role="doc-biblioref">2020</a>)</span></figcaption>
 </figure>
 </div>
@@ -378,7 +390,7 @@ window.Quarto = {
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/freedom_house_funding.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/freedom_house_funding.jpeg" class="img-fluid figure-img"></p>
 <figcaption>From <a href="https://freedomhouse.org/about-us/financials">Freedom House, Inc., <em>Notes to Financial Statements</em> (2023)</a>, p.&nbsp;21</figcaption>
 </figure>
 </div>
@@ -386,7 +398,7 @@ window.Quarto = {
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/state_dept_human_rights.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<p><img src="images/state_dept_human_rights.jpeg" class="img-fluid figure-img" width="400"></p>
 <figcaption>From <a href="https://www.state.gov/reports/2022-country-reports-on-human-rights-practices/" target="_blank">state.gov/reports</a></figcaption>
 </figure>
 </div>
@@ -421,7 +433,11 @@ window.Quarto = {
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
 <p><a href="https://www.youtube.com/watch?v=cGI9MjeOTc0"><img src="images/huey_thumbnail.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="550" alt="Thumbnail from full video (Quarto crashes when I embed it directly 😑)"></a></p>
+</figure>
+</div>
 <figcaption>Thumbnail from <a href="https://www.youtube.com/watch?v=cGI9MjeOTc0" target="_blank">full video</a> (Quarto crashes when I embed it directly 😑)</figcaption>
 </figure>
 </div>
@@ -429,7 +445,7 @@ window.Quarto = {
 <div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/mismeasuring.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/mismeasuring.jpg" class="img-fluid figure-img"></p>
 <figcaption><span class="citation" data-cites="stiglitz_mismeasuring_2010">Stiglitz, Sen, and Fitoussi (<a href="#ref-stiglitz_mismeasuring_2010" role="doc-biblioref">2010</a>)</span></figcaption>
 </figure>
 </div>
@@ -446,7 +462,7 @@ window.Quarto = {
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/china_india.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/china_india.png" class="img-fluid figure-img"></p>
 <figcaption><span class="citation" data-cites="dreze_china_1991">Drèze and Sen (<a href="#ref-dreze_china_1991" role="doc-biblioref">1991</a>)</span></figcaption>
 </figure>
 </div>
@@ -461,7 +477,7 @@ window.Quarto = {
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/clery.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/clery.jpg" class="img-fluid figure-img"></p>
 <figcaption>From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#ref-dignazio_data_2020" role="doc-biblioref">2020</a>)</span>, Ch. 6 (<a href="https://www.insidehighered.com/news/2014/07/17/colleges-often-win-reduction-fines-federal-campus-safety-violations" target="_blank">see also</a>)</figcaption>
 </figure>
 </div>
@@ -474,7 +490,7 @@ window.Quarto = {
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/weaver_fig62.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="410"></p>
+<p><img src="images/weaver_fig62.jpeg" class="img-fluid figure-img" width="410"></p>
 <figcaption>From <span class="citation" data-cites="lerman_arresting_2014">Lerman and Weaver (<a href="#ref-lerman_arresting_2014" role="doc-biblioref">2014</a>)</span></figcaption>
 </figure>
 </div>
@@ -529,7 +545,7 @@ Figure&nbsp;2: From <span class="citation" data-cites="kasy_fairness_2021">Kasy 
 <h2 class="smaller crunch-title anchored" data-anchor-id="and-inverse-fairness">…And INVERSE Fairness 🤯</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/inverse_fairness.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/inverse_fairness.jpeg" class="img-fluid figure-img"></p>
 <figcaption>From <em>Machine Learning What Policymakers Value</em> <span class="citation" data-cites="bjorkegren_machine_2022">(<a href="#ref-bjorkegren_machine_2022" role="doc-biblioref">Björkegren, Blumenstock, and Knight 2022</a>)</span></figcaption>
 </figure>
 </div>
@@ -550,7 +566,7 @@ Figure&nbsp;2: From <span class="citation" data-cites="kasy_fairness_2021">Kasy 
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/facial-recognition.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<p><img src="images/facial-recognition.webp" class="img-fluid figure-img" width="400"></p>
 <figcaption><span class="citation" data-cites="facia.ai_facial_2023">Facia.ai (<a href="#ref-facia.ai_facial_2023" role="doc-biblioref">2023</a>)</span></figcaption>
 </figure>
 </div>
@@ -558,7 +574,7 @@ Figure&nbsp;2: From <span class="citation" data-cites="kasy_fairness_2021">Kasy 
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/wellcome_jewish_type_crop.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="360"></p>
+<p><img src="images/wellcome_jewish_type_crop.jpeg" class="img-fluid figure-img" width="360"></p>
 <figcaption><span class="citation" data-cites="wellcomecollection_composite_1890">Wellcome Collection (<a href="#ref-wellcomecollection_composite_1890" role="doc-biblioref">1890</a>)</span></figcaption>
 </figure>
 </div>
@@ -568,7 +584,7 @@ Figure&nbsp;2: From <span class="citation" data-cites="kasy_fairness_2021">Kasy 
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/pixel-face-unlock.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" width="400"></p>
+<p><img src="images/pixel-face-unlock.webp" class="img-fluid figure-img" width="400"></p>
 <figcaption><span class="citation" data-cites="ouz_google_2023">Ouz (<a href="#ref-ouz_google_2023" role="doc-biblioref">2023</a>)</span></figcaption>
 </figure>
 </div>
@@ -576,7 +592,7 @@ Figure&nbsp;2: From <span class="citation" data-cites="kasy_fairness_2021">Kasy 
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/deep_learning_gay_detection_crop.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="360"></p>
+<p><img src="images/deep_learning_gay_detection_crop.jpeg" class="img-fluid figure-img" width="360"></p>
 <figcaption><span class="citation" data-cites="wang_deep_2018">Wang and Kosinski (<a href="#ref-wang_deep_2018" role="doc-biblioref">2018</a>)</span></figcaption>
 </figure>
 </div>
@@ -628,7 +644,7 @@ Figure&nbsp;4: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/doroob.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="410"></p>
+<p><img src="images/doroob.jpeg" class="img-fluid figure-img" width="410"></p>
 <figcaption><span class="citation" data-cites="ayyub_app_2019">Ayyub (<a href="#ref-ayyub_app_2019" role="doc-biblioref">2019</a>)</span></figcaption>
 </figure>
 </div>
@@ -636,7 +652,7 @@ Figure&nbsp;4: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/israel-ai.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300"></p>
+<p><img src="images/israel-ai.jpeg" class="img-fluid figure-img" width="300"></p>
 <figcaption><span class="citation" data-cites="mcneil_israel_2022">McNeil (<a href="#ref-mcneil_israel_2022" role="doc-biblioref">2022</a>)</span></figcaption>
 </figure>
 </div>
@@ -699,7 +715,7 @@ Figure&nbsp;4: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 <h2 class="smaller crunch-title anchored" data-anchor-id="word-embeddings">Word Embeddings</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/bolukbasi2016.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/bolukbasi2016.png" class="img-fluid figure-img"></p>
 <figcaption><span class="citation" data-cites="bolukbasi_man_2016">Bolukbasi et al. (<a href="#ref-bolukbasi_man_2016" role="doc-biblioref">2016</a>)</span></figcaption>
 </figure>
 </div>
@@ -720,7 +736,7 @@ Figure&nbsp;4: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/kozlowski_full.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/kozlowski_full.jpeg" class="img-fluid figure-img"></p>
 <figcaption>From <span class="citation" data-cites="kozlowski_geometry_2019">Kozlowski, Taddy, and Evans (<a href="#ref-kozlowski_geometry_2019" role="doc-biblioref">2019</a>)</span></figcaption>
 </figure>
 </div>
@@ -728,7 +744,7 @@ Figure&nbsp;4: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 <div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/wordbias_custom.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="images/wordbias_custom.jpeg" class="img-fluid figure-img"></p>
 <figcaption><a href="https://www3.cs.stonybrook.edu/~mueller/research/pages/wordbias/" target="_blank">WordBias: An Interactive Tool for Discovering Intersectional Biases Encoded in Word Embeddings</a></figcaption>
 </figure>
 </div>
@@ -873,6 +889,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -907,7 +941,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');

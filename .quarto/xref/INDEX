@@ -71,5 +71,9 @@
   },
   "writeups/midterm/index.qmd": {
     "index.html": "953c4283"
+  },
+  "w09/index.qmd": {
+    "slides.html": "af5ce56c",
+    "index.html": "9c40fcfb"
   }
 }
