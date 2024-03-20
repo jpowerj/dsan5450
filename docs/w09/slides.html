@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.5.23">
 
   <meta name="author" content="Jeff Jacobs">
-  <title>DSAN 5450 – Week 9: Privacy Policies and the Fundamental Problem of Contracts</title>
+  <title>DSAN 5450 – Week 9: Privacy Policies, Incomplete Contracts, and Power</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -343,13 +343,14 @@
       margin-right: 0; 
     }
   </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 9: Privacy Policies and the Fundamental Problem of Contracts</h1>
+  <h1 class="title">Week 9: Privacy Policies, Incomplete Contracts, and Power</h1>
   <p class="subtitle"><em>DSAN 5450: Data Ethics and Policy</em><br><span class="subsubtitle">Spring 2024, Georgetown University</span></p>
 
 <div class="quarto-title-authors">
@@ -368,8 +369,17 @@ Jeff Jacobs
 <section>
 <section id="week-8-recap" class="title-slide slide level1 center" data-stack-name="Week 8 Recap">
 <h1>Week 8 Recap</h1>
+<div class="hidden">
+<div class="hidden">
+<p><span class="math display">\[
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\newcommand{\nimplies}{\;\;\not\!\!\!\!\implies}
+\]</span></p>
+</div>
+</div>
 
-</section>
+<img data-src="images/ronnie_the_bear.png" class="r-stretch quarto-figure-center"><p class="caption">Ronnie The Bear, <a href="https://www.reaganfoundation.org/ronald-reagan/reagan-quotes-speeches/inaugural-address-2/" target="_blank">Presidential Acceptance Speech</a>, 20 January 1981</p></section>
 <section id="privacy-policies-take-a-long-time-to-read" class="slide level2 crunch-title title-11 smaller nostretch">
 <h2>1. Privacy Policies Take a Long Time to Read!</h2>
 <div class="quarto-figure quarto-figure-center">
@@ -385,7 +395,99 @@ Jeff Jacobs
 <li>NLP <em>could</em> (and <em>should!</em>) be helpful (<em>“making privacy policies <strong>machine readable</strong> […] would help users match <strong>privacy preferences</strong> against <strong>policies</strong> offered by web services”</em>), but mostly just reveals how bad the problem is:</li>
 </ul>
 
-<img data-src="images/wagner_fig.svg" class="r-stretch quarto-figure-center"><p class="caption">Figure 15 from <span class="citation" data-cites="wagner_privacy_2023">Wagner (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span>. “Obfuscatory words” are words like <em>acceptable</em>, <em>significant</em>, <em>mainly</em>, or <em>predominantly</em>, interpretated at the discretion of companies rather than users (see next slide!)</p></section></section>
+<img data-src="images/wagner_fig.svg" class="r-stretch quarto-figure-center"><p class="caption">Figure 15 from <span class="citation" data-cites="wagner_privacy_2023">Wagner (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span>. “Obfuscatory words” are words like <em>acceptable</em>, <em>significant</em>, <em>mainly</em>, or <em>predominantly</em>, interpretated at the discretion of companies rather than users (see next slide!)</p></section>
+<section id="the-intuitive-problem-of-contracts" class="slide level2 smaller crunch-ul crunch-title crunch-quarto-figure crunch-images">
+<h2>The Intuitive Problem of Contracts</h2>
+<div class="quarto-layout-panel" data-layout="[60,40]">
+<div class="quarto-layout-row">
+<div id="intuitive-problem-left" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<ul>
+<li>Hard to read, harder to understand, possibly rly bad stuff in them, won’t know until you read + understand</li>
+<li>Solution (in theory… in modern liberal market-based democracies): Collective action!</li>
+<li>Option 1 (Exit): Find better platform, use it instead <span class="math inline">\(\Rightarrow\)</span> company dies (competitive market)</li>
+<li>Option 2 (Voice): Raise a fuss, hoot and holler, make a big stink about it, etc.
+<ul>
+<li><span class="math inline">\(\Rightarrow\)</span> (2a) Company will change/remove it to avoid embarrassment and/or prevent Option 1 becoming an option</li>
+<li><span class="math inline">\(\Rightarrow\)</span> (2b) Government intervention (hypothetical functional government)</li>
+</ul></li>
+</ul>
+</div>
+<div id="intuitive-problem-right" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/exit-voice-page.jpeg" class="quarto-figure quarto-figure-center" width="240"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/corbyn_down.jpeg" class="quarto-figure quarto-figure-center" width="240"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-adversarial-sisyphusian-problem-of-contracts" class="slide level2 crunch-title title-07">
+<h2>The Adversarial-Sisyphusian Problem of Contracts</h2>
+<ul>
+<li>Recall Intuitive Problem of Causal Inference: Correlation <span class="math inline">\(\nimplies\)</span> Causation, <strong>but</strong> can do a bunch of work to overcome</li>
+<li>Adversarial-Sisyphusian Problem is <strong>one level worse</strong> 😱
+<ul>
+<li>IPCI: You vs.&nbsp;discovered correlation (inanimate)</li>
+<li>ASPC: You vs.&nbsp;companies investing <strong>resources</strong> 💰 into making the problem <strong>harder and harder for you</strong></li>
+</ul></li>
+<li>tldr: The moment you (<span class="math inline">\(N=1\)</span>, $) finally find and “fix” bad thing, company (<span class="math inline">\(N \gg 1\)</span>, $$$) adds more ambiguity to re-enable / sends your data to """new""", """different""" 3rd-party processor 🥸</li>
+</ul>
+</section>
+<section id="the-devastating-consequences-of-corporate-scandals" class="slide level2 crunch-title crunch-ul title-07">
+<h2>The Devastating Consequences of Corporate Scandals</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Nisour_Square_massacre" target="_blank">Nisour Square Massacre</a> (16 Sept 2007): Four Blackwater private military contractors mow down unarmed Iraqi civilians, killing 17, injuring 20</li>
+<li>Devastating for innocent Iraqis, but… perhaps even more devastating for Blackwater?</li>
+<li>(TW for next slide: Horrific consequences for murdering 17 civilians in a country 6915 miles away)</li>
+</ul>
+</section>
+<section id="consequences-for-the-contractors" class="slide level2 crunch-title">
+<h2>Consequences for the Contractors</h2>
+<ul>
+<li>All pardoned (#GodsPlan)</li>
+</ul>
+
+<img data-src="images/pardoned.jpeg" class="r-stretch quarto-figure-center"><p class="caption">From <a href="https://www.youtube.com/watch?v=DUvO0yO7N5I" target="_blank">The Shawn Ryan Show</a>, Episode 11</p><ul>
+<li>Can make <a href="https://pipehitterfoundation.org/blackwater4/" target="_blank">tax-deductible donation</a> to charity supporting them (I couldn’t find the tax-deductible donation page for the Iraqi families, lmk if you find)</li>
+</ul>
+</section>
+<section id="consequences-for-blackwater" class="slide level2 crunch-images crunch-title crunch-ul crunch-quarto-figure">
+<h2>Consequences for Blackwater</h2>
+<ul>
+<li>They had to, like, design a whole new logo and stuff</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/academi.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Constellis_logo.svg" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</section>
+<section id="no-logo-why-johnny-cant-dissent" class="slide level2 crunch-title crunch-ul crunch-blockquote">
+<h2><em>No Logo</em> / Why Johnny Can’t Dissent</h2>
+<ul>
+<li>Naomi Klein’s <em>No Logo</em> (1999) sparked a nationwide boycott of companies employing sweatshop labor</li>
+<li>Great success; all companies responded and (out of the kindness of their hearts) cut ties with all of the sweatshops</li>
+<li>Instead, they established ties with supply chain management companies, who made the profit-maximizing decision to re-establish ties with all of the sweatshops</li>
+</ul>
+<blockquote>
+<p>“You can’t outrun them, or even stay ahead of them for very long: it’s their racetrack, and that’s them waiting at the finish line to congratulate you” <span class="citation" data-cites="frank_dark_1994">(<a href="#/references" role="doc-biblioref" onclick="">Frank 1994</a>)</span></p>
+</blockquote>
+</section>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
+
+<img data-src="images/my_life_dont_mean_shit.jpg" class="quarto-figure quarto-figure-center r-stretch"></section></section>
 <section>
 <section id="incomplete-contracts" class="title-slide slide level1 center" data-stack-name="Incomplete Contracts">
 <h1>Incomplete Contracts</h1>
@@ -405,7 +507,7 @@ Jeff Jacobs
 </ul></li>
 </ul>
 </section>
-<section id="power" class="slide level2">
+<section id="power" class="slide level2 crunch-title">
 <h2>…POWER!</h2>
 <ul>
 <li>Examples from employment contracts (tooting own horn):</li>
@@ -419,25 +521,184 @@ Jeff Jacobs
 </ul></li>
 </ul>
 </section>
-<section id="descriptive-and-normative-implications" class="slide level2 crunch-title title-09 crunch-ul crunch-blockquote">
-<h2>Descriptive and Normative Implications</h2>
+<section id="descriptive-and-normative-considerations" class="slide level2 crunch-title title-09 crunch-ul crunch-blockquote">
+<h2>Descriptive and Normative Considerations</h2>
+<blockquote>
+<p>The combined effect of <strong>incomplete contracts</strong> and <strong>conflicts of interest</strong> is that the determination of outcomes depends on who exercises <strong>power</strong> in the transaction.</p>
+<p>Power is generally exercised by those who hold the residual rights of control, meaning <strong>the right to determine what is not specified contractually</strong></p>
+</blockquote>
 <ul>
-<li>Who has power w.r.t. incompleteness of contracts?</li>
-<li>Who <strong>ought</strong> to have power w.r.t. incompleteness of contracts?</li>
-<li>And now I can talk about the EU thing…
+<li>[Step 1: Measurable, empirically verifiable, etc.] <strong>Who has power</strong> w.r.t. a given incomplete contract?</li>
+<li>[Step 2: Up to you and your ethical axioms] <strong>Who ought to have power</strong> w.r.t. incomplete contracts?</li>
+</ul>
+<!-- * And now I can talk about the EU thing...
+  * (It wasn't implemented)
+  * (But idk statute of limitations)
+  * (Oh well)
+
+> 🔥*I think it's more useful to, like, make things happen now, and then, like, apologize later*🔥 ---<a href='https://www.snopes.com/fact-check/move-fast-break-things-facebook-motto/' target='_blank'>Mark Zuckerberg the 🐐</a> -->
+</section>
+<section id="working-definition-of-power" class="slide level2">
+<h2>Working Definition of Power</h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 80%;">
+<div title="<i class='bi bi-info-circle pe-1'></i> Defining (Dyadic) Power [@bowles_power_1992, 326-327]">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><i class="bi bi-info-circle pe-1"></i> Defining (Dyadic) Power <span class="citation" data-cites="bowles_power_1992">(<a href="#/references" role="doc-biblioref" onclick="">Bowles and Gintis 1992, 326–27</a>)</span></strong></p>
+</div>
+<div class="callout-content">
+<p>For agent <span class="math inline">\(A\)</span> to have power over agent <span class="math inline">\(B\)</span> it is sufficient that, by imposing or threatening to impose sanctions on <span class="math inline">\(B\)</span>, <span class="math inline">\(A\)</span> is capable of affecting <span class="math inline">\(B\)</span>’s actions in ways that further <span class="math inline">\(A\)</span>’s interests, while <span class="math inline">\(B\)</span> lacks this capacity with respect to <span class="math inline">\(A\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="measuring-contractual-power" class="title-slide slide level1 center" data-stack-name="Measuring Contractual Power">
+<h1>Measuring Contractual Power</h1>
+
+</section>
+<section id="gist-of-wealth-power-correspondence-theorem" class="slide level2 crunch-title crunch-ul title-08 inline-09 smallish scrollable">
+<h2>(Gist of) Wealth-Power Correspondence Theorem</h2>
+<p><em>[Axiom] Standard (Walrasian) perfectly-competitive equilibrium, no entry/exit barriers, <strong>minus</strong> complete-contracts assumption</em></p>
+<ol type="1">
+<li>“Individual wealth levels <span class="math inline">\(\omega_{i,t}\)</span> determine how individuals come to hold differing structural positions”: <span class="math inline">\(i\)</span>’s structural position <span class="math inline">\(P_{i,t}\)</span> determined by set of feasible contracts available at <span class="math inline">\(t\)</span></li>
+<li>Individual optimization of contractual arrangements between <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span> (effort level <span class="math inline">\(e_i^*\)</span>, monitoring <span class="math inline">\(m_j^*\)</span>) gives rise to <strong>authority structure</strong> <span class="math inline">\(\Rightarrow\)</span> well-defined, <strong>measurable degree of power</strong> <span class="math inline">\(\rho_{i \rightarrow j}(w_i, z_j)\)</span> (<span class="math inline">\(j\)</span> has outside option <span class="math inline">\(z_j\)</span>, <span class="math inline">\(i\)</span> offers wage <span class="math inline">\(w_i &gt; z_j\)</span>)</li>
+<li>[Given two agents <span class="math inline">\(i, j\)</span>] <span class="math inline">\(\rho_{i \rightarrow j} &gt; \rho_{j \rightarrow i}\)</span> if and only if <span class="math inline">\(\omega_i &gt; \omega_j\)</span> 👀🧐</li>
+</ol>
+</section>
+<section id="possible-steady-state-equilibria-skipping-lots-of-math" class="slide level2 crunch-title smaller title-09">
+<h2>Possible Steady-State Equilibria (Skipping Lots of Math)</h2>
+<div>
+<table class="small-table" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">Produces for Self?</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Hires Labor?</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Sells Labor?</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Agricultural</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Industrial</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Post-Industrial</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Wealth <span class="math inline">\(\omega_i^*\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd td-section-head">
+<td colspan="7" style="text-align: center;"><strong>Bourgeoisie</strong> (Bosses)</td>
+</tr>
+<tr class="even td-no-bottom">
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">Landlord</td>
+<td style="text-align: center;">Capitalist</td>
+<td style="text-align: center;">CEO</td>
+<td style="text-align: center;"><span class="math inline">\(\omega_i^* \geq \frac{b}{\pi}\)</span></td>
+</tr>
+<tr class="odd">
+<td colspan="7" style="text-align: center;">Doesn't need to work at all (provides capital to their workers)</td>
+</tr>
+<tr class="even td-no-bottom">
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">Rich peasant (Kulak)</td>
+<td style="text-align: center;">Capitalist</td>
+<td style="text-align: center;">Small business owner</td>
+<td style="text-align: center;"><span class="math inline">\(\frac{ba}{1-a} &lt; \omega_i^* &lt; \frac{b}{\pi}\)</span></td>
+</tr>
+<tr class="odd">
+<td colspan="7" style="text-align: center;">Not enough capital to hire workers to produce full consumption bundle</td>
+</tr>
+<tr class="even td-section-head">
+<td colspan="7" style="text-align: center;"><strong>Petit Bourgeoisie</strong> (Independent / ‘Yeoman’ Workers)</td>
+</tr>
+<tr class="odd td-no-bottom">
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">Peasant</td>
+<td style="text-align: center;">Artisan</td>
+<td style="text-align: center;">Full-time Etsy</td>
+<td style="text-align: center;"><span class="math inline">\(\omega_i^* = \frac{ba}{1-a}\)</span></td>
+</tr>
+<tr class="even">
+<td colspan="7" style="text-align: center;">Has no boss; doesn't boss others</td>
+</tr>
+<tr class="odd td-section-head">
+<td colspan="7" style="text-align: center;"><strong>Proletariat</strong> (Working Class)</td>
+</tr>
+<tr class="even td-no-bottom">
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">Poor Peasant</td>
+<td style="text-align: center;">Semi-Proletarian</td>
+<td style="text-align: center;">Uber driver after work</td>
+<td style="text-align: center;"><span class="math inline">\(0 &lt; \omega_i^* &lt; \frac{ba}{1-a}\)</span></td>
+</tr>
+<tr class="odd">
+<td colspan="7" style="text-align: center;">Small plot of land, insufficient for producing consumption bundle; "Proletarianizing"</td>
+</tr>
+<tr class="even td-no-bottom">
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">Landless peasant</td>
+<td style="text-align: center;">Proletarian</td>
+<td style="text-align: center;">Service worker</td>
+<td style="text-align: center;"><span class="math inline">\(\omega_i^* = 0\)</span></td>
+</tr>
+<tr class="odd">
+<td colspan="7" style="text-align: center;">Nothing but labor power to sell ("Nothing but chains to lose")</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="the-crucial-input-initial-conditions" class="slide level2">
+<h2>The Crucial Input: Initial Conditions</h2>
 <ul>
-<li>(It wasn’t implemented)</li>
-<li>(But idk statute of limitations)</li>
-<li>(Oh well)</li>
+<li>Steady states on previous slide are <strong>absorbing states</strong> of stochastic process! <span class="math inline">\(w_{i,0} \rightarrow w_{i,1} \rightarrow \cdots\)</span></li>
+<li>For every agent <span class="math inline">\(i\)</span>, some time <span class="math inline">\(T_i\)</span> such that <span class="math inline">\(\omega_{i,t}\)</span> will be in one of those five states for <span class="math inline">\(t \geq T_i\)</span></li>
+<li>But how do we know <strong>which</strong> of the five states a given person will end up in?
+<ul>
+<li>It’s a <strong>stochastic system</strong>, so can’t say with certainty, but <strong>can</strong> derive results about which initial conditions maximize <span class="math inline">\(\Pr(\omega_i^* = S \mid \omega_{i,0})\)</span>…</li>
 </ul></li>
 </ul>
-<blockquote>
-<p>🔥<em>I think it’s more useful to, like, make things happen now, and then, like, apologize later</em>🔥 —<a href="https://www.snopes.com/fact-check/move-fast-break-things-facebook-motto/" target="_blank">Mark Zuckerberg the 🐐</a></p>
-</blockquote>
+</section>
+<section id="tldr" class="slide level2">
+<h2>tldr</h2>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="enclosure-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>The full story: Late-feudal Enclosure Movement / Samir Amin, <em>Accumulation on a World Scale</em> (1970)</li>
+<li>The overly-flippant gist →</li>
+<li>The less-flippant gist: Locke’s <em>Second Treatise of Government</em> (1689)</li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fight_you.webp" class="quarto-figure quarto-figure-center" width="400"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-bowles_power_1992" class="csl-entry" role="listitem">
+Bowles, Samuel, and Herbert Gintis. 1992. <span>“Power and <span>Wealth</span> in a <span>Competitive Capitalist Economy</span>.”</span> <em>Philosophy &amp; Public Affairs</em> 21 (4): 324–53. <a href="https://www.jstor.org/stable/2265369">https://www.jstor.org/stable/2265369</a>.
+</div>
+<div id="ref-frank_dark_1994" class="csl-entry" role="listitem">
+Frank, Tom. 1994. <span>“<span>DARK AGE</span>: <span>Why Johnny Can</span>’t <span>Dissent</span>.”</span> <em>The Baffler</em>, no. 6: 5–192. <a href="https://www.jstor.org/stable/43555671">https://www.jstor.org/stable/43555671</a>.
+</div>
 <div id="ref-wagner_privacy_2023" class="csl-entry" role="listitem">
 Wagner, Isabel. 2023. <span>“Privacy <span>Policies</span> Across the <span>Ages</span>: <span>Content</span> of <span>Privacy Policies</span> 1996–2021.”</span> <em>ACM Transactions on Privacy and Security</em> 26 (3): 32:1–32. <a href="https://doi.org/10.1145/3590152">https://doi.org/10.1145/3590152</a>.
 </div>
@@ -445,7 +706,7 @@ Wagner, Isabel. 2023. <span>“Privacy <span>Policies</span> Across the <span>Ag
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p>DSAN 5450 Week 9: Privacy Policies and Incomplete Contracts</p>
+<p>DSAN 5450 Week 9: Privacy Policies, Incomplete Contracts, and Power</p>
 </div>
 </div>
 </section></section>

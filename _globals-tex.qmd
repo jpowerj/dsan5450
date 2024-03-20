@@ -3,7 +3,7 @@
 $$
 \DeclareMathOperator*{\argmax}{argmax}
 \DeclareMathOperator*{\argmin}{argmin}
-\newcommand{\nimplies}{\;\not\!\!\!\!\implies}
+\newcommand{\nimplies}{\;\;\not\!\!\!\!\implies}
 $$
 
 :::

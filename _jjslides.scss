@@ -93,6 +93,16 @@ figcaption {
     margin-bottom: 6px !important;
 }
 
+// https://github.com/quarto-dev/quarto-cli/discussions/2951
+.center-xy {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateY(-50%), translateX(-50%);
+    transform: translateY(-50%), translateX(-50%);
+}
+
 .centered-table td {
     text-align: center !important;
     vertical-align: middle !important;
@@ -264,6 +274,14 @@ figcaption {
     padding-left: 0;
 }
 
+.smallish {
+    font-size: 95% !important;
+}
+
+.small-table {
+    font-size: 75% !important;
+}
+
 .split-table {
     border-right: 2px solid black !important;
 }
@@ -271,6 +289,14 @@ figcaption {
 .subsubtitle {
     font-size: 70% !important;
     line-height: 0.5em !important;
+}
+
+.td-no-bottom td {
+    border-bottom: 0px !important;
+}
+
+.td-section-head td {
+    background-color: $cb2-alpha;
 }
 
 .text-90 {

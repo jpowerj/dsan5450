@@ -40,6 +40,11 @@ w08:
   date-md: "Mar 13"
 w09:
   weeknum: 9
-  title: "Privacy Policies and the Fundamental Problem of Contracts"
-  footer: "Privacy Policies and Incomplete Contracts"
+  title: "Privacy Policies, Incomplete Contracts, and Power"
+  footer: "Privacy Policies, Incomplete Contracts, and Power"
   date-md: "Mar 20"
+w10:
+  weeknum: 10
+  title: "Policy Evaluation and Inverse Fairness"
+  footer: "Policy Evaluation and Inverse Fairness"
+  date-md: "Mar 27"

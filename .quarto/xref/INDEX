@@ -75,5 +75,8 @@
   "w09/index.qmd": {
     "slides.html": "af5ce56c",
     "index.html": "9c40fcfb"
+  },
+  "w09/images/blackwater.md": {
+    "blackwater.html": "608ba5e0"
   }
 }
