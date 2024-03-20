@@ -669,6 +669,13 @@
     "text": "The Intuitive Problem of Contracts\n\n\n\n\nHard to read, harder to understand, possibly rly bad stuff in them, won’t know until you read + understand\nSolution (in theory… in modern liberal market-based democracies): Collective action!\nOption 1 (Exit): Find better platform, use it instead \\(\\Rightarrow\\) company dies (competitive market)\nOption 2 (Voice): Raise a fuss, hoot and holler, make a big stink about it, etc.\n\n\\(\\Rightarrow\\) (2a) Company will change/remove it to avoid embarrassment and/or prevent Option 1 becoming an option\n\\(\\Rightarrow\\) (2b) Government intervention (hypothetical functional government)"
   },
   {
+    "objectID": "w09/slides.html#understanding-rights-leftrightarrow-fighting-for-rights",
+    "href": "w09/slides.html#understanding-rights-leftrightarrow-fighting-for-rights",
+    "title": "Week 9: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights",
+    "text": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights\n\n“Hohfeldian” framework (Hohfeld 1913)\nA right \\(r_i\\) granted to person \\(i\\) \\(\\implies\\) A duty/obligation imposed on everyone in the world besides \\(i\\) (to respect \\(r_i\\))\nA duty or obligation \\(d_i\\) imposed on a person \\(i\\) \\(\\implies\\) A right granted to everyone in the world besides \\(i\\) (to… be a potential beneficiary of \\(d_i\\))\n\\(\\implies\\) rough measures of relative power in a contract:\n\n\\[\n\\frac{\\text{rights}_i}{\\text{rights}_j} = \\frac{\\text{obligations}_j}{\\text{rights}_j} = \\frac{\\text{rights}_i}{\\text{obligations}_j} = \\frac{\\text{obligations}_j}{\\text{obligations}_i}\n\\]"
+  },
+  {
     "objectID": "w09/slides.html#the-adversarial-sisyphusian-problem-of-contracts",
     "href": "w09/slides.html#the-adversarial-sisyphusian-problem-of-contracts",
     "title": "Week 9: Privacy Policies, Incomplete Contracts, and Power",
@@ -771,7 +778,7 @@
     "href": "w09/slides.html#references",
     "title": "Week 9: Privacy Policies, Incomplete Contracts, and Power",
     "section": "References",
-    "text": "References\n\n\nBowles, Samuel, and Herbert Gintis. 1992. “Power and Wealth in a Competitive Capitalist Economy.” Philosophy & Public Affairs 21 (4): 324–53. https://www.jstor.org/stable/2265369.\n\n\nFrank, Tom. 1994. “DARK AGE: Why Johnny Can’t Dissent.” The Baffler, no. 6: 5–192. https://www.jstor.org/stable/43555671.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.\n\n\n\n\n\nDSAN 5450 Week 9: Privacy Policies, Incomplete Contracts, and Power"
+    "text": "References\n\n\nBowles, Samuel, and Herbert Gintis. 1992. “Power and Wealth in a Competitive Capitalist Economy.” Philosophy & Public Affairs 21 (4): 324–53. https://www.jstor.org/stable/2265369.\n\n\nFrank, Tom. 1994. “DARK AGE: Why Johnny Can’t Dissent.” The Baffler, no. 6: 5–192. https://www.jstor.org/stable/43555671.\n\n\nHohfeld, Wesley Newcomb. 1913. “Some Fundamental Legal Conceptions as Applied in Judicial Reasoning.” Yale Law Journal 23. https://heinonline.org/HOL/Page?handle=hein.journals/ylr23&id=24&div=&collection=.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.\n\n\n\n\n\nDSAN 5450 Week 9: Privacy Policies, Incomplete Contracts, and Power"
   },
   {
     "objectID": "w09/index.html",
@@ -809,6 +816,16 @@
     "title": "Week 9: Privacy Policies, Incomplete Contracts, and Power",
     "section": "The Intuitive Problem of Contracts",
     "text": "The Intuitive Problem of Contracts\n\n\n\n\n\n\n\nHard to read, harder to understand, possibly rly bad stuff in them, won’t know until you read + understand\nSolution (in theory… in modern liberal market-based democracies): Collective action!\nOption 1 (Exit): Find better platform, use it instead \\(\\Rightarrow\\) company dies (competitive market)\nOption 2 (Voice): Raise a fuss, hoot and holler, make a big stink about it, etc.\n\n\\(\\Rightarrow\\) (2a) Company will change/remove it to avoid embarrassment and/or prevent Option 1 becoming an option\n\\(\\Rightarrow\\) (2b) Government intervention (hypothetical functional government)",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#understanding-rights-leftrightarrow-fighting-for-rights",
+    "href": "w09/index.html#understanding-rights-leftrightarrow-fighting-for-rights",
+    "title": "Week 9: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights",
+    "text": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights\n\n“Hohfeldian” framework (Hohfeld 1913)\nA right \\(r_i\\) granted to person \\(i\\) \\(\\implies\\) A duty/obligation imposed on everyone in the world besides \\(i\\) (to respect \\(r_i\\))\nA duty or obligation \\(d_i\\) imposed on a person \\(i\\) \\(\\implies\\) A right granted to everyone in the world besides \\(i\\) (to… be a potential beneficiary of \\(d_i\\))\n\\(\\implies\\) rough measures of relative power in a contract:\n\n\\[\n\\frac{\\text{rights}_i}{\\text{rights}_j} = \\frac{\\text{obligations}_j}{\\text{rights}_j} = \\frac{\\text{rights}_i}{\\text{obligations}_j} = \\frac{\\text{obligations}_j}{\\text{obligations}_i}\n\\]",
     "crumbs": [
       "Week 9: {{< var w09.date-md >}}"
     ]
@@ -958,7 +975,7 @@
     "href": "w09/index.html#references",
     "title": "Week 9: Privacy Policies, Incomplete Contracts, and Power",
     "section": "References",
-    "text": "References\n\n\nBowles, Samuel, and Herbert Gintis. 1992. “Power and Wealth in a Competitive Capitalist Economy.” Philosophy & Public Affairs 21 (4): 324–53. https://www.jstor.org/stable/2265369.\n\n\nFrank, Tom. 1994. “DARK AGE: Why Johnny Can’t Dissent.” The Baffler, no. 6: 5–192. https://www.jstor.org/stable/43555671.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.",
+    "text": "References\n\n\nBowles, Samuel, and Herbert Gintis. 1992. “Power and Wealth in a Competitive Capitalist Economy.” Philosophy & Public Affairs 21 (4): 324–53. https://www.jstor.org/stable/2265369.\n\n\nFrank, Tom. 1994. “DARK AGE: Why Johnny Can’t Dissent.” The Baffler, no. 6: 5–192. https://www.jstor.org/stable/43555671.\n\n\nHohfeld, Wesley Newcomb. 1913. “Some Fundamental Legal Conceptions as Applied in Judicial Reasoning.” Yale Law Journal 23. https://heinonline.org/HOL/Page?handle=hein.journals/ylr23&id=24&div=&collection=.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.",
     "crumbs": [
       "Week 9: {{< var w09.date-md >}}"
     ]

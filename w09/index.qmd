@@ -84,6 +84,17 @@ format:
 :::
 :::
 
+## Understanding Rights $\leftrightarrow$ Fighting for Rights {.title-08 .crunch-ul}
+
+* "Hohfeldian" framework [@hohfeld_fundamental_1913]
+* A right $r_i$ granted to person $i$ $\implies$ A duty/obligation imposed on everyone in the world besides $i$ (to respect $r_i$)
+* A duty or obligation $d_i$ imposed on a person $i$ $\implies$ A right granted to everyone in the world besides $i$ (to... be a potential beneficiary of $d_i$)
+* $\implies$ rough measures of **relative power** in a contract:
+
+$$
+\frac{\text{rights}_i}{\text{rights}_j} = \frac{\text{obligations}_j}{\text{rights}_j} = \frac{\text{rights}_i}{\text{obligations}_j} = \frac{\text{obligations}_j}{\text{obligations}_i}
+$$
+
 ## The Adversarial-Sisyphusian Problem of Contracts {.crunch-title .title-07}
 
 * Recall Intuitive Problem of Causal Inference: Correlation $\nimplies$ Causation, **but** can do a bunch of work to overcome
@@ -296,6 +307,10 @@ For agent $A$ to have power over agent $B$ it is sufficient that, by imposing or
 ![](images/fight_you.webp){fig-align="center" width="400"}
 
 :::
+
+# Contracts in the Wild {data-stack-name="Empirical Studies"}
+
+## 
 
 ## References
 
