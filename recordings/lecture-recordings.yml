@@ -1,3 +1,8 @@
+- week: 9
+  title: "<a href='https://georgetown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a822ba2a-7bb5-48d2-a16c-b139017ab738' target='_blank'>Week 9: {{< var w09.title >}}</a>"
+  url: "https://georgetown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a822ba2a-7bb5-48d2-a16c-b139017ab738"
+  date: 2024-03-20
+  categories: ["Lecture Recordings"]
 - week: 6
   title: "<a href='https://georgetown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8e0b80f4-21d2-46da-bed4-b11d018b3de4' target='_blank'>Week 6: Causality in Ethics and Policy</a>"
   url: "https://georgetown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8e0b80f4-21d2-46da-bed4-b11d018b3de4"

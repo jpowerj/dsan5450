@@ -17,10 +17,10 @@ website:
         href: writeups/index.qmd
       - text: "Assignments"
         href: assignments.qmd
-      - text: "Recordings"
-        href: recordings/index.qmd
       - text: "Final Project"
         href: final.qmd
+      - text: "Recordings"
+        href: recordings/index.qmd
       - "---"
       - text: "Week 1: {{< var w01.date-md >}}"
         href: "w01/index.qmd"
