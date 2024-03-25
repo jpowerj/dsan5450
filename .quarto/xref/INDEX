@@ -78,5 +78,12 @@
   },
   "w09/images/blackwater.md": {
     "blackwater.html": "608ba5e0"
+  },
+  "final.qmd": {
+    "final.html": "9690a46c"
+  },
+  "w10/index.qmd": {
+    "slides.html": "88ea93b4",
+    "index.html": "0dc5b072"
   }
 }

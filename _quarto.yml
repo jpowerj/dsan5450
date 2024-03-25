@@ -19,6 +19,8 @@ website:
         href: assignments.qmd
       - text: "Recordings"
         href: recordings/index.qmd
+      - text: "Final Project"
+        href: final.qmd
       - "---"
       - text: "Week 1: {{< var w01.date-md >}}"
         href: "w01/index.qmd"
@@ -38,8 +40,8 @@ website:
         href: "w08/index.qmd"
       - text: "Week 9: {{< var w09.date-md >}}"
         href: "w09/index.qmd"
-      # - text: "Week 10: {{< var w10.date-md >}}"
-      #   href: "w10/index.qmd"
+      - text: "Week 10: {{< var w10.date-md >}}"
+        href: "w10/index.qmd"
       # - text: "Week 11: {{< var w11.date-md >}}"
       #   href: "w11/index.qmd"
       # - text: "Week 12: {{< var w12.date-md >}}"
