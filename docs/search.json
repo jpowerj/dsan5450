@@ -995,14 +995,105 @@
     "href": "w10/slides.html#why-call-it-econometric-policy-evaluation",
     "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
     "section": "Why Call It “Econometric” Policy Evaluation?",
-    "text": "Why Call It “Econometric” Policy Evaluation?"
+    "text": "Why Call It “Econometric” Policy Evaluation?\n\nIn the same way that data science can be used for good or for not-so-good…\nEconomics provides methods that allow us to evaluate a policy with respect to an ethical framework\nTypically efficiency and/or profit maximization, but just as easily Rawlsian or Roemerian\n“The master’s tools will never dismantle the master’s house”❓❓❓\n(“It’s certainly true that the master uses the tool of [data science], but that doesn’t mean he owns it.”)"
   },
   {
-    "objectID": "w10/slides.html#our-case-study-mexicos-progreso-program",
-    "href": "w10/slides.html#our-case-study-mexicos-progreso-program",
+    "objectID": "w10/slides.html#the-tools-of-economics-as-wielded-by-economists",
+    "href": "w10/slides.html#the-tools-of-economics-as-wielded-by-economists",
     "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
-    "section": "Our Case Study: Mexico’s PROGRESO Program",
-    "text": "Our Case Study: Mexico’s PROGRESO Program\n\n\n\nDSAN 5450 Week 10: Econometric Policy Evaluation and Inverse Fairness"
+    "section": "The Tools of Economics as Wielded by Economists",
+    "text": "The Tools of Economics as Wielded by Economists\n\nFun in-class pop quiz!"
+  },
+  {
+    "objectID": "w10/slides.html#the-tools-of-economics-as-wielded-by-economists-1",
+    "href": "w10/slides.html#the-tools-of-economics-as-wielded-by-economists-1",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "The Tools of Economics as Wielded by Economists",
+    "text": "The Tools of Economics as Wielded by Economists\n\nDid you answer correctly???"
+  },
+  {
+    "objectID": "w10/slides.html#the-tools-of-economics-as-wielded-by-economists-2",
+    "href": "w10/slides.html#the-tools-of-economics-as-wielded-by-economists-2",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "The Tools of Economics as Wielded by Economists",
+    "text": "The Tools of Economics as Wielded by Economists\n\nAddendum / reminder (see also)"
+  },
+  {
+    "objectID": "w10/slides.html#eaamo-2023-accepted-papers",
+    "href": "w10/slides.html#eaamo-2023-accepted-papers",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "EAAMO 2023 Accepted Papers",
+    "text": "EAAMO 2023 Accepted Papers\n\nEquity and Access in Algorithms, Mechanisms, and Optimization\n“Disincentivizing Polarization in Social Networks”\n“30 Million Canvas Grading Records Reveal Widespread Sequential Bias and System-Induced Surname Initial Disparity”\n\nAssignments graded later in the sequence tend to (1) receive lower grades, (2) receive comments that are notably more negative and less polite, and (3) exhibit lower grading quality measured by post-grade complaints.\n\n“Potty Parity: Process Flexibility via Unisex Restroom”\n\nHaving a one-unit unisex restroom, either by converting a unit of the men’s restroom or building an additional one, goes a long way toward improving wait time or user utility, and reducing their disparities\n\n“Overbooking with Priority-Respecting Reassignment”"
+  },
+  {
+    "objectID": "w10/slides.html#co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe",
+    "href": "w10/slides.html#co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "Co-Founder of MD4SG \\(\\rightarrow\\) EAAMO: Rediet Abebe",
+    "text": "Co-Founder of MD4SG \\(\\rightarrow\\) EAAMO: Rediet Abebe\n\nFrom “When the Majority is Wrong: Modeling Annotator Disagreement for Subjective Tasks”, EMNLP 2023"
+  },
+  {
+    "objectID": "w10/slides.html#lily-hu",
+    "href": "w10/slides.html#lily-hu",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "Lily Hu",
+    "text": "Lily Hu\n\n\n\n\nCS excludes ethical considerations “by design”, via focus on how computers do work, not how they ought to work.\nThe latter “falls within the purview of the normative disciplines, most notably ethics, a subfield of philosophy. For students to succeed at learning not only how to build innovative computing systems, but also how to determine whether they should build those systems or how ethical considerations should constrain their design, it is imperative that these two disciplines work together. To this end, Harvard CS and Philosophy faculty have been partnering to develop the Embedded EthiCS curriculum.”\n\n\n\n\n\n\nEmbedded EthiCS"
+  },
+  {
+    "objectID": "w10/slides.html#ninja-coder-hackerz-think-it-dream-it-do-it",
+    "href": "w10/slides.html#ninja-coder-hackerz-think-it-dream-it-do-it",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "Ninja Coder Hackerz / Think It! Dream It! Do It!",
+    "text": "Ninja Coder Hackerz / Think It! Dream It! Do It!\n\nCS: Learn The Coolest, Newest Stuff, Move Fast And Break Things!!!\nEthics: Listen to a man in a tweed jacket with elbow pads pontificate about Kant for 3 hours\nThe TED Talk Circuit"
+  },
+  {
+    "objectID": "w10/slides.html#functionals",
+    "href": "w10/slides.html#functionals",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "Functionals?",
+    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)"
+  },
+  {
+    "objectID": "w10/slides.html#we-live-in-a-society-part-2",
+    "href": "w10/slides.html#we-live-in-a-society-part-2",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "We Live In A Society, Part 2",
+    "text": "We Live In A Society, Part 2\n\nUtilitarianism, Kantian Ethics, and Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\n\\(W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\). \\(\\omega_i\\) is \\(i\\)’s welfare weight\n(Preview) Decomposition: evaluate policies by estimating marginal utility \\(u'_i(x)\\) compared to \\(\\omega_i\\))"
+  },
+  {
+    "objectID": "w10/slides.html#alternative-swf-specifications",
+    "href": "w10/slides.html#alternative-swf-specifications",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "Alternative SWF Specifications",
+    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)"
+  },
+  {
+    "objectID": "w10/slides.html#utilitarian-swf",
+    "href": "w10/slides.html#utilitarian-swf",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "Utilitarian SWF",
+    "text": "Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -\\infty\\)?"
+  },
+  {
+    "objectID": "w10/slides.html#the-hard-problem-of-utilitarian-swf",
+    "href": "w10/slides.html#the-hard-problem-of-utilitarian-swf",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "The Hard Problem of Utilitarian SWF",
+    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom?"
+  },
+  {
+    "objectID": "w10/slides.html#we-can-finally-understand-this-image-from-week-1",
+    "href": "w10/slides.html#we-can-finally-understand-this-image-from-week-1",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "We Can Finally Understand This Image from Week 1!",
+    "text": "We Can Finally Understand This Image from Week 1!"
+  },
+  {
+    "objectID": "w10/slides.html#references",
+    "href": "w10/slides.html#references",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "References",
+    "text": "References\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\n\n\n\nDSAN 5450 Week 10: Econometric Policy Evaluation and Inverse Fairness"
   },
   {
     "objectID": "w10/index.html",
@@ -1019,17 +1110,147 @@
     "href": "w10/index.html#why-call-it-econometric-policy-evaluation",
     "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
     "section": "Why Call It “Econometric” Policy Evaluation?",
-    "text": "Why Call It “Econometric” Policy Evaluation?",
+    "text": "Why Call It “Econometric” Policy Evaluation?\n\nIn the same way that data science can be used for good or for not-so-good…\nEconomics provides methods that allow us to evaluate a policy with respect to an ethical framework\nTypically efficiency and/or profit maximization, but just as easily Rawlsian or Roemerian\n“The master’s tools will never dismantle the master’s house”❓❓❓\n(“It’s certainly true that the master uses the tool of [data science], but that doesn’t mean he owns it.”)",
     "crumbs": [
       "Week 10: {{< var w10.date-md >}}"
     ]
   },
   {
-    "objectID": "w10/index.html#our-case-study-mexicos-progreso-program",
-    "href": "w10/index.html#our-case-study-mexicos-progreso-program",
+    "objectID": "w10/index.html#the-tools-of-economics-as-wielded-by-economists",
+    "href": "w10/index.html#the-tools-of-economics-as-wielded-by-economists",
     "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
-    "section": "Our Case Study: Mexico’s PROGRESO Program",
-    "text": "Our Case Study: Mexico’s PROGRESO Program",
+    "section": "The Tools of Economics as Wielded by Economists",
+    "text": "The Tools of Economics as Wielded by Economists\n\nFun in-class pop quiz!",
+    "crumbs": [
+      "Week 10: {{< var w10.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w10/index.html#the-tools-of-economics-as-wielded-by-economists-1",
+    "href": "w10/index.html#the-tools-of-economics-as-wielded-by-economists-1",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "The Tools of Economics as Wielded by Economists",
+    "text": "The Tools of Economics as Wielded by Economists\n\nDid you answer correctly???",
+    "crumbs": [
+      "Week 10: {{< var w10.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w10/index.html#the-tools-of-economics-as-wielded-by-economists-2",
+    "href": "w10/index.html#the-tools-of-economics-as-wielded-by-economists-2",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "The Tools of Economics as Wielded by Economists",
+    "text": "The Tools of Economics as Wielded by Economists\n\nAddendum / reminder (see also)",
+    "crumbs": [
+      "Week 10: {{< var w10.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w10/index.html#eaamo-2023-accepted-papers",
+    "href": "w10/index.html#eaamo-2023-accepted-papers",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "EAAMO 2023 Accepted Papers",
+    "text": "EAAMO 2023 Accepted Papers\n\nEquity and Access in Algorithms, Mechanisms, and Optimization\n“Disincentivizing Polarization in Social Networks”\n“30 Million Canvas Grading Records Reveal Widespread Sequential Bias and System-Induced Surname Initial Disparity”\n\nAssignments graded later in the sequence tend to (1) receive lower grades, (2) receive comments that are notably more negative and less polite, and (3) exhibit lower grading quality measured by post-grade complaints.\n\n“Potty Parity: Process Flexibility via Unisex Restroom”\n\nHaving a one-unit unisex restroom, either by converting a unit of the men’s restroom or building an additional one, goes a long way toward improving wait time or user utility, and reducing their disparities\n\n“Overbooking with Priority-Respecting Reassignment”",
+    "crumbs": [
+      "Week 10: {{< var w10.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w10/index.html#co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe",
+    "href": "w10/index.html#co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "Co-Founder of MD4SG \\(\\rightarrow\\) EAAMO: Rediet Abebe",
+    "text": "Co-Founder of MD4SG \\(\\rightarrow\\) EAAMO: Rediet Abebe\n\n\n\nFrom “When the Majority is Wrong: Modeling Annotator Disagreement for Subjective Tasks”, EMNLP 2023",
+    "crumbs": [
+      "Week 10: {{< var w10.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w10/index.html#lily-hu",
+    "href": "w10/index.html#lily-hu",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "Lily Hu",
+    "text": "Lily Hu\n\n\n\n\n\n\n\nCS excludes ethical considerations “by design”, via focus on how computers do work, not how they ought to work.\nThe latter “falls within the purview of the normative disciplines, most notably ethics, a subfield of philosophy. For students to succeed at learning not only how to build innovative computing systems, but also how to determine whether they should build those systems or how ethical considerations should constrain their design, it is imperative that these two disciplines work together. To this end, Harvard CS and Philosophy faculty have been partnering to develop the Embedded EthiCS curriculum.”\n\n\n\n\n\n\nEmbedded EthiCS",
+    "crumbs": [
+      "Week 10: {{< var w10.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w10/index.html#ninja-coder-hackerz-think-it-dream-it-do-it",
+    "href": "w10/index.html#ninja-coder-hackerz-think-it-dream-it-do-it",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "Ninja Coder Hackerz / Think It! Dream It! Do It!",
+    "text": "Ninja Coder Hackerz / Think It! Dream It! Do It!\n\nCS: Learn The Coolest, Newest Stuff, Move Fast And Break Things!!!\nEthics: Listen to a man in a tweed jacket with elbow pads pontificate about Kant for 3 hours\nThe TED Talk Circuit",
+    "crumbs": [
+      "Week 10: {{< var w10.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w10/index.html#functionals",
+    "href": "w10/index.html#functionals",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "Functionals?",
+    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)",
+    "crumbs": [
+      "Week 10: {{< var w10.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w10/index.html#we-live-in-a-society-part-2",
+    "href": "w10/index.html#we-live-in-a-society-part-2",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "We Live In A Society, Part 2",
+    "text": "We Live In A Society, Part 2\n\nUtilitarianism, Kantian Ethics, and Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\n\\(W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\). \\(\\omega_i\\) is \\(i\\)’s welfare weight\n(Preview) Decomposition: evaluate policies by estimating marginal utility \\(u'_i(x)\\) compared to \\(\\omega_i\\))",
+    "crumbs": [
+      "Week 10: {{< var w10.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w10/index.html#alternative-swf-specifications",
+    "href": "w10/index.html#alternative-swf-specifications",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "Alternative SWF Specifications",
+    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)",
+    "crumbs": [
+      "Week 10: {{< var w10.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w10/index.html#utilitarian-swf",
+    "href": "w10/index.html#utilitarian-swf",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "Utilitarian SWF",
+    "text": "Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -\\infty\\)?",
+    "crumbs": [
+      "Week 10: {{< var w10.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w10/index.html#the-hard-problem-of-utilitarian-swf",
+    "href": "w10/index.html#the-hard-problem-of-utilitarian-swf",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "The Hard Problem of Utilitarian SWF",
+    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom?",
+    "crumbs": [
+      "Week 10: {{< var w10.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w10/index.html#we-can-finally-understand-this-image-from-week-1",
+    "href": "w10/index.html#we-can-finally-understand-this-image-from-week-1",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "We Can Finally Understand This Image from Week 1!",
+    "text": "We Can Finally Understand This Image from Week 1!",
+    "crumbs": [
+      "Week 10: {{< var w10.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w10/index.html#references",
+    "href": "w10/index.html#references",
+    "title": "Week 10: Econometric Policy Evaluation and Inverse Fairness",
+    "section": "References",
+    "text": "References\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.",
     "crumbs": [
       "Week 10: {{< var w10.date-md >}}"
     ]

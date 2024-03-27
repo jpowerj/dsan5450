@@ -163,10 +163,6 @@ figcaption {
     margin-bottom: 5px !important;
 }
 
-.crunch-ul-0 ul {
-    margin-bottom: 0px !important;
-}
-
 // math
 .crunch-math mjx-container {
     margin: 3px !important;
@@ -203,6 +199,14 @@ figcaption {
 .crunch-ul ul {
     margin-top: 2px !important;
     margin-bottom: 2px !important;
+}
+
+.crunch-ul-0 ul {
+    margin-bottom: 0px !important;
+}
+
+.crunch-ul-top ul {
+    margin-top: 0px !important;
 }
 
 .fix-callout-font .callout {
@@ -263,6 +267,10 @@ figcaption {
 
 .inline-09 span.math.inline {
     font-size: 90% !important;
+}
+
+.inline-95 span.math.inline {
+    font-size: 95% !important;
 }
 
 .not-title-slide {
