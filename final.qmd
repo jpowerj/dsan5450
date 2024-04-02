@@ -12,6 +12,24 @@ Our goal is to make the final project as open-ended as possible, to give you the
 
 So, given this, we have randomly assigned each of you to a **mentor**, who will help you select a topic and pursue it in such a way that it fits within the scope of the remaining weeks in the semester. You will receive an email letting you know who your mentor is, by the end of the weekend (Sunday, March 24th). The mentor assignments can always be re-arranged, however! For example, if you decide to pursue a project that another mentor has particular experience with, we can re-assign you to that mentor!
 
+::: {.callout-note title="The Goal: Research $\rightarrow$ Policy Recommendation"}
+
+Although the structure can be mostly similar to projects you've done for e.g. DSAN 5000 and 5100, the new element for the DSAN 5450 project is that we want you to develop and argue for a particular **policy recommendation** that you'd make, for example if you were asked to speak in Congress as a data science expert!
+
+This means, for example, that your deliverable can have the following structure in terms of section headings, which should be familiar from DSAN 5000 and 5100 except for the final section:
+
+* Introduction
+* Literature Review
+* Data and Methods
+* Results
+* **Policy Recommendation**
+
+The policy recommendation portion will look different depending on the particular topic you decide to explore, but the idea is that it should be somewhat like a <a href='https://writingcenter.gmu.edu/writing-resources/different-genres/white-papers' target='_blank'>**policy whitepaper**</a>, where you would move away from the details of your study and towards its **implications** for a (real or imagined) policymaker who is hoping for information about a given topic.
+
+One recent example that you can look at as a rough template would be Chris Callison-Burch's <a href='https://docs.house.gov/meetings/JU/JU03/20230517/115951/HHRG-118-JU03-Wstate-Callison-BurchC-20230517.pdf' target='_blank'>Congressional testimony</a>, given last year as part of a Congressional hearing around issues that LLMs might present for intellectual property and copyright law. Prof. Callison-Burch discusses the process in this <a href='https://on.soundcloud.com/w2yVgLM1ooieUs1w8' target='_blank'>podcast episode</a>, so you can listen to that for details about the approach he took towards the invitation from Congress, but the tldr is: he needed to communicate **just enough detail** to allow the policymakers to understand what he was talking about, but not **so much detail** that they would need to have a PhD in Computer Science to understand his recommendations. 
+
+:::
+
 ## Timeline
 
 These are rough estimates, but the project will go most smoothly if you are able to hold yourself to the following schedule:
@@ -19,6 +37,15 @@ These are rough estimates, but the project will go most smoothly if you are able
 * **Proposal**: Approved by mentor by **Wednesday, April 3rd**
 * **Final Draft**: Sent to mentor for review by **Wednesday, April 24th**
 * **Submission**: Completed project submitted to course staff by **Friday, May 3rd, 11:59pm EDT**
+
+## Submission Format
+
+There is now an <a href='https://classroom.google.com/c/NjU0OTA4OTk2MTQ3/a/NjcyMDcxNjYxODIz/details' target='_blank'>assignment page</a> for the final project (within the Google Classroom site for the course), where you will upload your final submission for grading. The following is a rough sketch of what we're looking for in terms of the structure of your submission:
+
+* HTML format, as a rendered <a href='https://quarto.org/docs/manuscripts/' target='_blank'>Quarto manuscript</a>, would be optimal, but can be PDF if there are issues with Quarto. If PDF, LaTeX would be preferred, but also can be a Word doc or Google doc
+* If PDF format, 8-20 pages double-spaced, and then the Quarto HTML length can be the equivalent of this (for example, you can print-preview the Quarto doc to see how many pages it would print as)
+* It should have an abstract, a 250-500 word summary at the top, of (a) what you did and (b) the policy recommendation you're making
+* Citations should be set up so that they're handled automatically, by <a href='https://quarto.org/docs/authoring/footnotes-and-citations.html' target='_blank'>Quarto's citation manager</a> for example, or by <a href='https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex' target='_blank'>Bibtex</a> if you use LaTeX to generate a PDF, or by Word/GDocs otherwise.
 
 ## The Proposal Stage
 
@@ -168,7 +195,7 @@ Here there were a couple of points during Week 8 and Week 9 where I mentioned po
     
     Scope-wise, that would be pretty ambitious, so to me a very reasonable final project could just be a more "naïve" version of this, where users could just specify key terms of interest to them (say, "medical data"), and then maybe the app could be a browser extension which **removes** all of the parts of the privacy policy besides the parts which may be relevant to the user's key terms. Then, in your paper, you would want to make an argument to policymakers on the basis of what you "found" in making the app---for example, if you found that there were clauses that were relevant to medical data but where this relevance was "hidden" because of the ambiguity of the language used, then perhaps you could recommend that they pass a law requiring companies to **tag** each paragraph of their privacy policies with what aspects of privacy they relate to, as a concrete way to ameliorate the "ambiguity problem"!
 
-### Policy Evaluation
+### Policy Evaluation / Recommendation
 
 Since we haven't covered this yet, I will just provide an example of a policy-evaluation final project in class this week (Week 10), and then I will copy it into this section.
 

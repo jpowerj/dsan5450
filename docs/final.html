@@ -274,6 +274,7 @@ window.Quarto = {
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#timeline" id="toc-timeline" class="nav-link" data-scroll-target="#timeline">Timeline</a></li>
+  <li><a href="#submission-format" id="toc-submission-format" class="nav-link" data-scroll-target="#submission-format">Submission Format</a></li>
   <li><a href="#the-proposal-stage" id="toc-the-proposal-stage" class="nav-link" data-scroll-target="#the-proposal-stage">The Proposal Stage</a></li>
   <li><a href="#the-implementation-stage" id="toc-the-implementation-stage" class="nav-link" data-scroll-target="#the-implementation-stage">The Implementation Stage</a></li>
   <li><a href="#example-project-ideas" id="toc-example-project-ideas" class="nav-link" data-scroll-target="#example-project-ideas">Example Project Ideas</a>
@@ -282,7 +283,7 @@ window.Quarto = {
   <li><a href="#fairness" id="toc-fairness" class="nav-link" data-scroll-target="#fairness">Fairness</a></li>
   <li><a href="#causality" id="toc-causality" class="nav-link" data-scroll-target="#causality">Causality</a></li>
   <li><a href="#privacy-and-data-protection-policies" id="toc-privacy-and-data-protection-policies" class="nav-link" data-scroll-target="#privacy-and-data-protection-policies">Privacy and Data Protection Policies</a></li>
-  <li><a href="#policy-evaluation" id="toc-policy-evaluation" class="nav-link" data-scroll-target="#policy-evaluation">Policy Evaluation</a></li>
+  <li><a href="#policy-evaluation-recommendation" id="toc-policy-evaluation-recommendation" class="nav-link" data-scroll-target="#policy-evaluation-recommendation">Policy Evaluation / Recommendation</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -327,6 +328,29 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>Our goal is to make the final project as open-ended as possible, to give you the space to explore any particular topic that may have piqued your interest throughout the semester! At the same time, we hope to provide you with guidance and mentorship so that you don’t feel lost as to how to start, how to proceed, and/or what to submit for the final deliverable!<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>So, given this, we have randomly assigned each of you to a <strong>mentor</strong>, who will help you select a topic and pursue it in such a way that it fits within the scope of the remaining weeks in the semester. You will receive an email letting you know who your mentor is, by the end of the weekend (Sunday, March 24th). The mentor assignments can always be re-arranged, however! For example, if you decide to pursue a project that another mentor has particular experience with, we can re-assign you to that mentor!</p>
+<div class="callout callout-style-default callout-note callout-titled" title="The Goal: Research $\rightarrow$ Policy Recommendation">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The Goal: Research <span class="math inline">\(\rightarrow\)</span> Policy Recommendation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Although the structure can be mostly similar to projects you’ve done for e.g.&nbsp;DSAN 5000 and 5100, the new element for the DSAN 5450 project is that we want you to develop and argue for a particular <strong>policy recommendation</strong> that you’d make, for example if you were asked to speak in Congress as a data science expert!</p>
+<p>This means, for example, that your deliverable can have the following structure in terms of section headings, which should be familiar from DSAN 5000 and 5100 except for the final section:</p>
+<ul>
+<li>Introduction</li>
+<li>Literature Review</li>
+<li>Data and Methods</li>
+<li>Results</li>
+<li><strong>Policy Recommendation</strong></li>
+</ul>
+<p>The policy recommendation portion will look different depending on the particular topic you decide to explore, but the idea is that it should be somewhat like a <a href="https://writingcenter.gmu.edu/writing-resources/different-genres/white-papers" target="_blank"><strong>policy whitepaper</strong></a>, where you would move away from the details of your study and towards its <strong>implications</strong> for a (real or imagined) policymaker who is hoping for information about a given topic.</p>
+<p>One recent example that you can look at as a rough template would be Chris Callison-Burch’s <a href="https://docs.house.gov/meetings/JU/JU03/20230517/115951/HHRG-118-JU03-Wstate-Callison-BurchC-20230517.pdf" target="_blank">Congressional testimony</a>, given last year as part of a Congressional hearing around issues that LLMs might present for intellectual property and copyright law. Prof.&nbsp;Callison-Burch discusses the process in this <a href="https://on.soundcloud.com/w2yVgLM1ooieUs1w8" target="_blank">podcast episode</a>, so you can listen to that for details about the approach he took towards the invitation from Congress, but the tldr is: he needed to communicate <strong>just enough detail</strong> to allow the policymakers to understand what he was talking about, but not <strong>so much detail</strong> that they would need to have a PhD in Computer Science to understand his recommendations.</p>
+</div>
+</div>
 </section>
 <section id="timeline" class="level2">
 <h2 class="anchored" data-anchor-id="timeline">Timeline</h2>
@@ -335,6 +359,16 @@ window.Quarto = {
 <li><strong>Proposal</strong>: Approved by mentor by <strong>Wednesday, April 3rd</strong></li>
 <li><strong>Final Draft</strong>: Sent to mentor for review by <strong>Wednesday, April 24th</strong></li>
 <li><strong>Submission</strong>: Completed project submitted to course staff by <strong>Friday, May 3rd, 11:59pm EDT</strong></li>
+</ul>
+</section>
+<section id="submission-format" class="level2">
+<h2 class="anchored" data-anchor-id="submission-format">Submission Format</h2>
+<p>There is now an <a href="https://classroom.google.com/c/NjU0OTA4OTk2MTQ3/a/NjcyMDcxNjYxODIz/details" target="_blank">assignment page</a> for the final project (within the Google Classroom site for the course), where you will upload your final submission for grading. The following is a rough sketch of what we’re looking for in terms of the structure of your submission:</p>
+<ul>
+<li>HTML format, as a rendered <a href="https://quarto.org/docs/manuscripts/" target="_blank">Quarto manuscript</a>, would be optimal, but can be PDF if there are issues with Quarto. If PDF, LaTeX would be preferred, but also can be a Word doc or Google doc</li>
+<li>If PDF format, 8-20 pages double-spaced, and then the Quarto HTML length can be the equivalent of this (for example, you can print-preview the Quarto doc to see how many pages it would print as)</li>
+<li>It should have an abstract, a 250-500 word summary at the top, of (a) what you did and (b) the policy recommendation you’re making</li>
+<li>Citations should be set up so that they’re handled automatically, by <a href="https://quarto.org/docs/authoring/footnotes-and-citations.html" target="_blank">Quarto’s citation manager</a> for example, or by <a href="https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex" target="_blank">Bibtex</a> if you use LaTeX to generate a PDF, or by Word/GDocs otherwise.</li>
 </ul>
 </section>
 <section id="the-proposal-stage" class="level2">
@@ -479,8 +513,8 @@ window.Quarto = {
 <p>Scope-wise, that would be pretty ambitious, so to me a very reasonable final project could just be a more “naïve” version of this, where users could just specify key terms of interest to them (say, “medical data”), and then maybe the app could be a browser extension which <strong>removes</strong> all of the parts of the privacy policy besides the parts which may be relevant to the user’s key terms. Then, in your paper, you would want to make an argument to policymakers on the basis of what you “found” in making the app—for example, if you found that there were clauses that were relevant to medical data but where this relevance was “hidden” because of the ambiguity of the language used, then perhaps you could recommend that they pass a law requiring companies to <strong>tag</strong> each paragraph of their privacy policies with what aspects of privacy they relate to, as a concrete way to ameliorate the “ambiguity problem”!</p></li>
 </ol>
 </section>
-<section id="policy-evaluation" class="level3">
-<h3 class="anchored" data-anchor-id="policy-evaluation">Policy Evaluation</h3>
+<section id="policy-evaluation-recommendation" class="level3">
+<h3 class="anchored" data-anchor-id="policy-evaluation-recommendation">Policy Evaluation / Recommendation</h3>
 <p>Since we haven’t covered this yet, I will just provide an example of a policy-evaluation final project in class this week (Week 10), and then I will copy it into this section.</p>
 </section>
 </section>
