@@ -72,58 +72,58 @@ The following is a rough map of what we will work through together throughout th
 </thead>
 <tbody>
 <tr>
-    <td><span data-qmd="**Unit 1**: Ethical Frameworks"></span></td>
+    <td><span data-qmd="**Unit 1**: Ethical Frameworks and Fairness in AI"></span></td>
     <td>1</td>
     <td><span data-qmd="{{< var w01.date-md >}}"></span></td>
-    <td><span data-qmd="{{< var w01.title >}}"></span></td>
+    <td><span data-qmd="[{{< var w01.title >}}](./w01/)"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>2</td>
     <td><span data-qmd="{{< var w02.date-md >}}"></span></td>
-    <td><span data-qmd="{{< var w02.title >}}"></span></td>
+    <td><span data-qmd="[{{< var w02.title >}}](./w02/)"></span></td>
 </tr>
-<tr class="new-unit">
-    <td><span data-qmd="**Unit 2**: Fairness"></span></td>
+<tr>
+    <td></td>
     <td>3</td>
     <td><span data-qmd="{{< var w03.date-md >}}"></span></td>
-    <td><span data-qmd="{{< var w03.title >}}"></span></td>
+    <td><span data-qmd="[{{< var w03.title >}}](./w03/)"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>4</td>
     <td><span data-qmd="{{< var w04.date-md >}}"></span></td>
-    <td><span data-qmd="{{< var w04.title >}}"></span></td>
+    <td><span data-qmd="[{{< var w04.title >}}](./w04/)"></span></td>
 </tr>
 <tr>
     <td></td>
     <td></td>
     <td><span data-qmd="*Feb 9 (Friday), 11:59pm EST*"></span></td>
-    <td><span data-qmd="*[Deliverable] HW1: Nuts and Bolts for Fairness in AI*"></span></td>
+    <td><span data-qmd="*[Deliverable] <a href='{{< var hw1.url >}}' target='_blank'>HW1: {{< var hw1.title >}} <i class='bi bi-box-arrow-up-right ps-1'></i></a>*"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>5</td>
     <td><span data-qmd="{{< var w05.date-md >}}"></span></td>
-    <td><span data-qmd="{{< var w05.title >}}"></span></td>
+    <td><span data-qmd="[{{< var w05.title >}}](./w05/)"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>6</td>
     <td><span data-qmd="{{< var w06.date-md >}}"></span></td>
-    <td><span data-qmd="{{<var w06.title >}}"></span></td>
+    <td><span data-qmd="[{{<var w06.title >}}](./w06/)"></span></td>
 </tr>
 <tr>
     <td></td>
     <td></td>
     <td><span data-qmd="*Feb 26 (Monday), 11:59pm EST*"></span></td>
-    <td><span data-qmd="*[Deliverable] HW2: Context-Sensitive Fairness*"></span></td>
+    <td><span data-qmd="*[Deliverable] <a href='{{< var hw2.url >}}' target='_blank'>HW2: {{< var hw2.title >}} <i class='bi bi-box-arrow-up-right ps-1'></i></a>*"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>7</td>
     <td><span data-qmd="{{< var w07.date-md >}}"></span></td>
-    <td><span data-qmd="{{< var w07.title >}}"></span></td>
+    <td><span data-qmd="[{{< var w07.title >}}](./w07/)"></span></td>
 </tr>
 <tr>
     <td></td>
@@ -134,62 +134,62 @@ The following is a rough map of what we will work through together throughout th
 <tr class='new-unit'>
     <td><span data-qmd="**Unit 3:** Policy Frameworks"></span></td>
     <td>8</td>
-    <td>Mar 13</td>
-    <td>Applying Ethical Frameworks: Self-Driving Cars, Facial Recognition, and ChatGPT</td>
+    <td><span data-qmd="{{< var w08.date-md >}}"></span></td>
+    <td><span data-qmd="[{{< var w08.title >}}](./w08/)"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>9</td>
-    <td>Mar 20</td>
-    <td>Applying Ethical Frameworks: Police and Military Applications of AI</td>
+    <td><span data-qmd="{{< var w09.date-md >}}"></span></td>
+    <td><span data-qmd="[{{< var w09.title >}}](./w09/)"></span></td>
 </tr>
 <tr>
     <td></td>
-    <td></td>
-    <td><span data-qmd="*Mar 22 (Friday)*"></span></td>
-    <td><span data-qmd="*[Deliverable] HW3: Policy Frameworks*"></span></td>
-</tr>
-<tr class='new-unit'>
-    <td><span data-qmd="**Unit 4**: Policy Evaluation"></span></td>
     <td>10</td>
-    <td>Mar 27</td>
-    <td>Policy Evaluation and Reverse Fairness</td>
+    <td><span data-qmd="{{< var w10.date-md >}}"></span></td>
+    <td><span data-qmd="[{{< var w10.title >}}](./w10/)"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>11</td>
-    <td>Apr 3</td>
-    <td>Authoring Policy Whitepapers</td>
-</tr>
-<tr>
-    <td></td>
-    <td></td>
-    <td><span data-qmd="*Apr 5 (Friday)*"></span></td>
-    <td><span data-qmd="*[Deliverable] HW4: Policy Evaluation*"></span></td>
+    <td><span data-qmd="{{< var w11.date-md >}}"></span></td>
+    <td><span data-qmd="[{{< var w11.title >}}](./w11/)"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>12</td>
-    <td>Apr 10</td>
-    <td>Applications: Public Policy and Climate Justice</td>
+    <td><span data-qmd="{{< var w12.date-md >}}"></span></td>
+    <td><span data-qmd="{{< var w12.title >}}"></span></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td><span data-qmd="*Apr 12 (Friday)*"></span></td>
+    <td><span data-qmd="*[Deliverable] <a href='{{< var hw3.url >}}' target='_blank'>HW3: {{< var hw3.title >}} <i class='bi bi-box-arrow-up-right ps-1'></i></a>*"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>13</td>
-    <td>Apr 17</td>
-    <td>Applications: Race, Class, Gender, Sexuality, and Disability (Data Feminism)</td>
+    <td><span data-qmd="{{< var w13.date-md >}}"></span></td>
+    <td><span data-qmd="{{< var w13.title >}}"></span></td>
 </tr>
 <tr>
     <td></td>
     <td>14</td>
-    <td>April 24</td>
-    <td>Applications: Public Policy and International Law</td>
+    <td><span data-qmd="{{< var w14.date-md >}}"></span></td>
+    <td><span data-qmd="{{< var w14.title >}}"></span></td>
 </tr>
 <tr>
     <td></td>
     <td></td>
-    <td><span data-qmd="*May 3 (Friday)*"></span></td>
-    <td><span data-qmd="*[Deliverable] Policy Whitepaper*"></span></td>
+    <td><span data-qmd="*Apr 26 (Friday)*"></span></td>
+    <td><span data-qmd="*[Deliverable] HW4: {{< var hw4.title >}}*"></span></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td><span data-qmd="*May 10 (Friday)*"></span></td>
+    <td><span data-qmd="*[Deliverable] [Policy Whitepaper](./final.qmd)*"></span></td>
 </tr>
 </tbody>
 </table>
@@ -201,12 +201,12 @@ The main assignment in the course will be your **policy whitepaper**, submitted 
 
 | Assignment | Due Date | % of Grade |
 | - | - | - |
-| HW1: Nuts and Bolts for Fairness in AI | Friday, **February 9** | 10% |
-| HW2: Context-Sensitive Fairness | Monday, **February 26** | 10% |
+| <a href='{{< var hw1.url >}}' target='_blank'>HW1: {{< var hw1.title >}} <i class='bi bi-box-arrow-up-right ps-1'></i></a> | {{< var hw1.date-full >}} | 10% |
+| <a href='{{< var hw2.url >}}' target='_blank'>HW2: {{< var hw2.title >}} <i class='bi bi-box-arrow-up-right ps-1'></i></a> | {{< var hw2.date-full >}} | 10% |
 | Midterm | Wednesday, **February 28** | 30% |
-| HW3: Policy Frameworks | Friday, **March 22** | 10% |
-| HW4: Policy Evaluation | Friday, **April 5** | 10% |
-| Policy Whitepaper | Friday, **May 3** | 30% |
+| <a href='{{< var hw3.url >}}' target='_blank'>HW3: {{< var hw3.title >}} <i class='bi bi-box-arrow-up-right ps-1'></i></a> | {{< var hw3.date-full >}} | 10% |
+| HW4: {{< var hw4.title >}} | {{< var hw4.date-full >}} | 10% |
+| [Policy Whitepaper](./final.qmd) | Friday, **May 10** | 30% |
 
 : {tbl-colwidths="[55,25,20]"}
 
