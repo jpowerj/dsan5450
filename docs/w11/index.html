@@ -8,7 +8,7 @@
 
 <meta name="author" content="Jeff Jacobs">
 
-<title>DSAN 5450 – Week 11: Social Welfare Functionals</title>
+<title>DSAN 5450 – Week 11: Fairness vs.&nbsp;Social Welfare</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,27 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -135,30 +149,18 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#policy-evaluation-in-general" id="toc-policy-evaluation-in-general" class="nav-link active" data-scroll-target="#policy-evaluation-in-general">Policy Evaluation in General</a>
+  <li><a href="#utility-rightarrow-social-welfare" id="toc-utility-rightarrow-social-welfare" class="nav-link active" data-scroll-target="#utility-rightarrow-social-welfare">Utility <span class="math inline">\(\rightarrow\)</span> Social Welfare</a>
   <ul class="collapse">
-  <li><a href="#why-call-it-econometric-policy-evaluation" id="toc-why-call-it-econometric-policy-evaluation" class="nav-link" data-scroll-target="#why-call-it-econometric-policy-evaluation">Why Call It “Econometric” Policy Evaluation?</a></li>
-  <li><a href="#the-tools-of-economics-as-wielded-by-economists" id="toc-the-tools-of-economics-as-wielded-by-economists" class="nav-link" data-scroll-target="#the-tools-of-economics-as-wielded-by-economists">The Tools of Economics as Wielded by Economists</a></li>
-  <li><a href="#the-tools-of-economics-as-wielded-by-economists-1" id="toc-the-tools-of-economics-as-wielded-by-economists-1" class="nav-link" data-scroll-target="#the-tools-of-economics-as-wielded-by-economists-1">The Tools of Economics as Wielded by Economists</a></li>
-  <li><a href="#the-tools-of-economics-as-wielded-by-economists-2" id="toc-the-tools-of-economics-as-wielded-by-economists-2" class="nav-link" data-scroll-target="#the-tools-of-economics-as-wielded-by-economists-2">The Tools of Economics as Wielded by Economists</a></li>
-  <li><a href="#eaamo-2023-accepted-papers" id="toc-eaamo-2023-accepted-papers" class="nav-link" data-scroll-target="#eaamo-2023-accepted-papers">EAAMO 2023 Accepted Papers</a></li>
-  <li><a href="#co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe" id="toc-co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe" class="nav-link" data-scroll-target="#co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe">Co-Founder of MD4SG <span class="math inline">\(\rightarrow\)</span> EAAMO: Rediet Abebe</a></li>
-  <li><a href="#lily-hu" id="toc-lily-hu" class="nav-link" data-scroll-target="#lily-hu">Lily Hu</a></li>
-  <li><a href="#ninja-coder-hackerz-think-it-dream-it-do-it" id="toc-ninja-coder-hackerz-think-it-dream-it-do-it" class="nav-link" data-scroll-target="#ninja-coder-hackerz-think-it-dream-it-do-it">Ninja Coder Hackerz / Think It! Dream It! Do It!</a></li>
+  <li><a href="#externalities" id="toc-externalities" class="nav-link" data-scroll-target="#externalities">Externalities</a></li>
+  <li><a href="#so-whats-the-issue" id="toc-so-whats-the-issue" class="nav-link" data-scroll-target="#so-whats-the-issue">So What’s the Issue?</a></li>
+  <li><a href="#now-with-scarce-resources" id="toc-now-with-scarce-resources" class="nav-link" data-scroll-target="#now-with-scarce-resources">Now with Scarce Resources</a></li>
   </ul></li>
-  <li><a href="#social-welfare-functionals" id="toc-social-welfare-functionals" class="nav-link" data-scroll-target="#social-welfare-functionals">Social Welfare Functionals</a>
+  <li><a href="#the-dark-secret-behind-fairness-in-ai" id="toc-the-dark-secret-behind-fairness-in-ai" class="nav-link" data-scroll-target="#the-dark-secret-behind-fairness-in-ai">The Dark Secret Behind Fairness in AI</a>
   <ul class="collapse">
-  <li><a href="#functionals" id="toc-functionals" class="nav-link" data-scroll-target="#functionals">Functionals?</a></li>
-  <li><a href="#we-live-in-a-society-part-2" id="toc-we-live-in-a-society-part-2" class="nav-link" data-scroll-target="#we-live-in-a-society-part-2">We Live In A Society, Part 2</a></li>
-  <li><a href="#alternative-swf-specifications" id="toc-alternative-swf-specifications" class="nav-link" data-scroll-target="#alternative-swf-specifications">Alternative SWF Specifications</a></li>
-  <li><a href="#utilitarian-swf" id="toc-utilitarian-swf" class="nav-link" data-scroll-target="#utilitarian-swf">Utilitarian SWF</a></li>
-  <li><a href="#the-hard-problem-of-utilitarian-swf" id="toc-the-hard-problem-of-utilitarian-swf" class="nav-link" data-scroll-target="#the-hard-problem-of-utilitarian-swf">The Hard Problem of Utilitarian SWF</a></li>
+  <li><a href="#the-conveniently-left-out-detail" id="toc-the-conveniently-left-out-detail" class="nav-link" data-scroll-target="#the-conveniently-left-out-detail">The Conveniently-Left-Out Detail</a></li>
+  <li><a href="#remaining-challenging-details" id="toc-remaining-challenging-details" class="nav-link" data-scroll-target="#remaining-challenging-details">Remaining (Challenging) Details</a></li>
   </ul></li>
-  <li><a href="#policy-evaluation-via-inverse-fairness" id="toc-policy-evaluation-via-inverse-fairness" class="nav-link" data-scroll-target="#policy-evaluation-via-inverse-fairness">Policy Evaluation via Inverse Fairness</a>
-  <ul class="collapse">
-  <li><a href="#we-can-finally-understand-this-image-from-week-1" id="toc-we-can-finally-understand-this-image-from-week-1" class="nav-link" data-scroll-target="#we-can-finally-understand-this-image-from-week-1">We Can Finally Understand This Image from Week 1!</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></li>
+  <li><a href="#lets-talk-projects" id="toc-lets-talk-projects" class="nav-link" data-scroll-target="#lets-talk-projects">Let’s Talk Projects!</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
     </div>
@@ -167,7 +169,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 11: Social Welfare Functionals</h1>
+<h1 class="title">Week 11: Fairness vs.&nbsp;Social Welfare</h1>
 <p class="subtitle lead"><em>DSAN 5450: Data Ethics and Policy</em><br><span class="subsubtitle">Spring 2024, Georgetown University</span></p>
   <div class="quarto-categories">
     <div class="quarto-category">Class Sessions</div>
@@ -210,196 +212,205 @@ window.Quarto = {
 <center>
 <a class="h2" href="./slides.html" target="_blank">Open slides in new window →</a>
 </center>
-<section id="policy-evaluation-in-general" class="level1" data-stack-name="The Master's Tools">
-<h1 data-stack-name="The Master's Tools">Policy Evaluation in General</h1>
-<section id="why-call-it-econometric-policy-evaluation" class="level2 crunch-title title-08 crunch-ul">
-<h2 class="crunch-title title-08 crunch-ul anchored" data-anchor-id="why-call-it-econometric-policy-evaluation">Why Call It “Econometric” Policy Evaluation?</h2>
+<section id="utility-rightarrow-social-welfare" class="level1" data-stack-name="Utility and Social Welfare">
+<h1 data-stack-name="Utility and Social Welfare">Utility <span class="math inline">\(\rightarrow\)</span> Social Welfare</h1>
+<section id="externalities" class="level2 crunch-title smaller crunch-quarto-figure">
+<h2 class="crunch-title smaller crunch-quarto-figure anchored" data-anchor-id="externalities">Externalities</h2>
 <ul>
-<li>In the same way that data science can be used for good or for not-so-good…</li>
-<li>Economics provides methods that allow us to <strong>evaluate</strong> a policy with respect to an <strong>ethical framework</strong></li>
-<li>Typically <strong>efficiency</strong> and/or <strong>profit maximization</strong>, but just as easily <strong>Rawlsian</strong> or <strong>Roemerian</strong></li>
-<li>“The master’s tools will never dismantle the master’s house”❓❓❓</li>
-<li>(“It’s certainly true that the master uses the tool of [data science], but that doesn’t mean he owns it.”)</li>
+<li><strong>Jeef</strong> and <strong>Keef</strong> are roommates: Jeef loves listening to <a href="https://www.youtube.com/watch?v=OlQTn7gI8cw" target="_blank">Tony Danza Tapdance Extravaganza</a>, but Keef is normal and slowly dies inside with each additional song</li>
 </ul>
-</section>
-<section id="the-tools-of-economics-as-wielded-by-economists" class="level2 smaller crunch-title title-11">
-<h2 class="smaller crunch-title title-11 anchored" data-anchor-id="the-tools-of-economics-as-wielded-by-economists">The Tools of Economics as Wielded by Economists</h2>
-<ul>
-<li>Fun in-class pop quiz!</li>
-</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.2     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.4.3     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"../_globals.r"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>music_df <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>Songs, <span class="sc">~</span>Jeef, <span class="sc">~</span>Keef,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>, <span class="dv">13</span>, <span class="sc">-</span><span class="dv">2</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span>, <span class="dv">18</span>, <span class="sc">-</span><span class="dv">6</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="dv">3</span>, <span class="dv">24</span>, <span class="sc">-</span><span class="dv">13</span>,</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="dv">4</span>, <span class="dv">28</span>, <span class="sc">-</span><span class="dv">20</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="dv">5</span>, <span class="dv">30</span>, <span class="sc">-</span><span class="dv">42</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>music_df <span class="ot">&lt;-</span> music_df <span class="sc">|&gt;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Total =</span> Jeef <span class="sc">+</span> Keef)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>music_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Songs</th>
+<th style="text-align: right;">Jeef</th>
+<th style="text-align: right;">Keef</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">-6</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">-13</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">-20</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">-42</td>
+<td style="text-align: right;">-12</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>long_df <span class="ot">&lt;-</span> music_df <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="sc">!</span>Songs, <span class="at">names_to=</span><span class="st">"Roommate"</span>, <span class="at">values_to=</span><span class="st">"Utility"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>util_df <span class="ot">&lt;-</span> long_df <span class="sc">|&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Roommate <span class="sc">!=</span> <span class="st">"Total"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(util_df, <span class="fu">aes</span>(<span class="at">x=</span>Songs, <span class="at">y=</span>Utility, <span class="at">color=</span>Roommate)) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth=</span>g_linewidth) <span class="sc">+</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span>g_pointsize) <span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Individual Utility: Jeef vs. Keef"</span>,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Number of Songs Played"</span>,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Utility"</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dsan_theme</span>(<span class="st">"quarter"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/economist1.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="index_files/figure-html/roommate-plot-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
-</section>
-<section id="the-tools-of-economics-as-wielded-by-economists-1" class="level2 smaller crunch-title title-11">
-<h2 class="smaller crunch-title title-11 anchored" data-anchor-id="the-tools-of-economics-as-wielded-by-economists-1">The Tools of Economics as Wielded by Economists</h2>
-<ul>
-<li>Did you answer correctly???</li>
-</ul>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>welfare_df <span class="ot">&lt;-</span> long_df <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Roommate <span class="sc">==</span> <span class="st">"Total"</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(welfare_df, <span class="fu">aes</span>(<span class="at">x=</span>Songs, <span class="at">y=</span>Utility, <span class="at">color=</span>Roommate)) <span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth=</span>g_linewidth) <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span>g_pointsize) <span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Social Welfare: Jeef and Keef"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Number of Songs Played"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Social Welfare"</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span><span class="fu">c</span>(cbPalette[<span class="dv">3</span>]), <span class="at">labels=</span><span class="fu">c</span>(<span class="st">"Total      "</span>)) <span class="sc">+</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dsan_theme</span>(<span class="st">"quarter"</span>) <span class="sc">+</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">remove_legend_title</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/economist2.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+<p><img src="index_files/figure-html/welfare-plot-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672"></p>
 </figure>
 </div>
-</section>
-<section id="the-tools-of-economics-as-wielded-by-economists-2" class="level2 smaller crunch-title title-11">
-<h2 class="smaller crunch-title title-11 anchored" data-anchor-id="the-tools-of-economics-as-wielded-by-economists-2">The Tools of Economics as Wielded by Economists</h2>
-<ul>
-<li>Addendum / reminder (<a href="https://psmag.com/magazine/cellphone-revolutionary-objects" target="_blank">see also</a>)</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/no_iphone.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
+</div>
+</div>
+</div>
 </div>
 </section>
-<section id="eaamo-2023-accepted-papers" class="level2 smaller crunch-title crunch-ul">
-<h2 class="smaller crunch-title crunch-ul anchored" data-anchor-id="eaamo-2023-accepted-papers">EAAMO 2023 Accepted Papers</h2>
+<section id="so-whats-the-issue" class="level2">
+<h2 class="anchored" data-anchor-id="so-whats-the-issue">So What’s the Issue?</h2>
 <ul>
-<li><p><a href="https://conference2023.eaamo.org/papers/" target="_blank">Equity and Access in Algorithms, Mechanisms, and Optimization</a></p></li>
-<li><p><a href="https://arxiv.org/abs/2305.14537" target="_blank">“Disincentivizing Polarization in Social Networks”</a></p></li>
-<li><p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4603146" target="_blank">“30 Million Canvas Grading Records Reveal Widespread Sequential Bias and System-Induced Surname Initial Disparity”</a></p>
-<blockquote class="blockquote">
-<p>Assignments graded later in the sequence tend to (1) receive lower grades, (2) receive comments that are notably more negative and less polite, and (3) exhibit lower grading quality measured by post-grade complaints.</p>
-</blockquote></li>
-<li><p><a href="https://guaguakai.github.io/aasg2022/assets/AASG2022_paper_8.pdf" target="_blank">“Potty Parity: Process Flexibility via Unisex Restroom”</a></p>
-<blockquote class="blockquote">
-<p>Having a one-unit unisex restroom, either by converting a unit of the men’s restroom or building an additional one, goes a long way toward improving wait time or user utility, and reducing their disparities</p>
-</blockquote></li>
-<li><p><a href="https://www.youtube.com/watch?v=FpaRGZkdnWo" target="_blank">“Overbooking with Priority-Respecting Reassignment”</a></p></li>
+<li>These utility values are <strong>not observed</strong></li>
+<li>If we try to <strong>elicit</strong> them, both Jeef and Keef have <strong>strategic incentives</strong> to <strong>lie</strong> (over-exaggerate)</li>
+<li>Jeef maximizes own utility by reporting <span class="math inline">\(u_j(s) = \infty\)</span></li>
+<li>Keef maximizes own utility by reporting <span class="math inline">\(u_k(s) = -\infty\)</span></li>
+<li>(…Second price auctions tho)</li>
 </ul>
 </section>
-<section id="co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe" class="level2">
-<h2 class="anchored" data-anchor-id="co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe">Co-Founder of MD4SG <span class="math inline">\(\rightarrow\)</span> EAAMO: Rediet Abebe</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/abebe.jpeg" class="img-fluid figure-img"></p>
-<figcaption>From <a href="https://aclanthology.org/2023.emnlp-main.415/">“When the Majority is Wrong: Modeling Annotator Disagreement for Subjective Tasks”</a>, <em>EMNLP</em> 2023</figcaption>
-</figure>
-</div>
+<section id="now-with-scarce-resources" class="level2 crunch-title crunch-ul crunch-math">
+<h2 class="crunch-title crunch-ul crunch-math anchored" data-anchor-id="now-with-scarce-resources">Now with Scarce Resources</h2>
+<ul>
+<li>In a given week, Jeef and Keef have <strong>14 meals</strong> and <strong>7 aux hours</strong> to divide amongst them</li>
+</ul>
+<p><span class="math display">\[
+\begin{align*}
+\max_{m_1,m_2,a_1,a_2}&amp; W(u_1(m_1,a_1),u_2(m_2,a_2)) \\
+\text{s.t. }&amp; m_1 + m_2 \leq 14 \\
+\phantom{\text{s.t. }} &amp; ~ \, a_1 + a_2 \; \leq 7
+\end{align*}
+\]</span></p>
+<ul>
+<li>Let’s assume <span class="math inline">\(u_i(m_i, a_i) = m_i + a_i\)</span> for both</li>
+<li><span class="math inline">\(\Rightarrow\)</span> One solution: <span class="math inline">\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\)</span>…</li>
+<li><span class="math inline">\(\Rightarrow\)</span> Another: <span class="math inline">\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\)</span>…</li>
+<li>Who decides? Any decision implies <span class="math inline">\(\omega_1, \omega_2\)</span> (<span class="math inline">\(\omega_1 + \omega_2 = 1\)</span>)</li>
+</ul>
 </section>
-<section id="lily-hu" class="level2 smaller crunch-title crunch-ul crunch-quarto-layout-panel">
-<h2 class="smaller crunch-title crunch-ul crunch-quarto-layout-panel anchored" data-anchor-id="lily-hu">Lily Hu</h2>
-<div>
+</section>
+<section id="the-dark-secret-behind-fairness-in-ai" class="level1" data-stack-name="Fairness vs. Welfare">
+<h1 data-stack-name="Fairness vs. Welfare">The Dark Secret Behind Fairness in AI</h1>
+<section id="the-conveniently-left-out-detail" class="level2 crunch-title crunch-ul">
+<h2 class="crunch-title crunch-ul anchored" data-anchor-id="the-conveniently-left-out-detail">The Conveniently-Left-Out Detail</h2>
+<ul>
+<li>Recall <strong>predictive parity</strong>:</li>
+</ul>
+<p><span class="math display">\[
+\mathbb{E}[Y \mid D = 1, A = 1] = \mathbb{E}[Y \mid D = 1, A = 0]
+\]</span></p>
+<ul>
+<li>Who decides which <span class="math inline">\(Y\)</span> to pick?</li>
+<li>Answer: Whoever picks the <strong>objective function</strong>!</li>
+<li>For <strong>profit-maximizing firm</strong>: <span class="math inline">\(\mathbb{E}[D (Y - c)]\)</span></li>
+<li>For <strong>welfare-maximizing society</strong>: <span class="math inline">\(W(u_1(D), \ldots, u_n(D))\)</span></li>
+<li>Do these align? Sometimes yes, often no (affirmative action!)</li>
+</ul>
+</section>
+<section id="remaining-challenging-details" class="level2">
+<h2 class="anchored" data-anchor-id="remaining-challenging-details">Remaining (Challenging) Details</h2>
+<ul>
+<li>Who gets included in the SWF?</li>
+<li>People in one community? One state? One country?</li>
+<li>People in the future?</li>
+<li>Animals?</li>
+</ul>
+</section>
+</section>
+<section id="lets-talk-projects" class="level1">
+<h1>Let’s Talk Projects!</h1>
 
-</div>
-<div class="quarto-layout-panel" data-layout="[4,3]">
-<div class="quarto-layout-row">
-<div id="hu-left" class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: flex-start;">
-<ul>
-<li>CS excludes ethical considerations “by design”, via focus on how computers <strong>do</strong> work, not how they <strong>ought to work</strong>.</li>
-<li>The latter “falls within the purview of the normative disciplines, most notably ethics, a subfield of philosophy. For students to succeed at learning not only how to build innovative computing systems, but also how to determine whether they should build those systems or how ethical considerations should constrain their design, it is imperative that these two disciplines work together. To this end, Harvard CS and Philosophy faculty have been partnering to develop the Embedded EthiCS curriculum.”</li>
-</ul>
-</div>
-<div id="hu-right" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: flex-start;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/hu.jpeg" class="img-fluid figure-img" width="380"></p>
-<figcaption><a href="https://dl.acm.org/doi/pdf/10.1145/3330794" target="_blank">Embedded EthiCS</a></figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="ninja-coder-hackerz-think-it-dream-it-do-it" class="level2">
-<h2 class="anchored" data-anchor-id="ninja-coder-hackerz-think-it-dream-it-do-it">Ninja Coder Hackerz / Think It! Dream It! Do It!</h2>
-<ul>
-<li>CS: Learn The Coolest, Newest Stuff, Move Fast And Break Things!!!</li>
-<li>Ethics: Listen to a man in a tweed jacket with elbow pads pontificate about Kant for 3 hours</li>
-<li>The <a href="https://www.youtube.com/watch?v=KTJn_DBTnrY" target="_blank">TED Talk Circuit</a></li>
-</ul>
-</section>
-</section>
-<section id="social-welfare-functionals" class="level1" data-stack-name="Social Welfare Functionals">
-<h1 data-stack-name="Social Welfare Functionals">Social Welfare Functionals</h1>
-<section id="functionals" class="level2">
-<h2 class="anchored" data-anchor-id="functionals">Functionals?</h2>
-<ul>
-<li>You probably know what a <strong>function</strong> <span class="math inline">\(f(x)\)</span> is; a <strong>functional</strong> is a function of functions: <span class="math inline">\(\mathscr{G}(f)\)</span></li>
-<li>It’s from math, which is scary, but it’s just notation to remind us that we’re analyzing <strong>functions of functions</strong></li>
-<li>In our case, they “work the same way” as regular functions, e.g., <span class="math inline">\(\mathscr{G}(f,g) = f^2 + g^2\)</span>, so <span class="math inline">\(f(x) = x, g(x) = 2x \Rightarrow \mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\)</span></li>
-</ul>
-</section>
-<section id="we-live-in-a-society-part-2" class="level2 crunch-title crunch-ul crunch-math crunch-p crunch-ul-top inline-95 math-95">
-<h2 class="crunch-title crunch-ul crunch-math crunch-p crunch-ul-top inline-95 math-95 anchored" data-anchor-id="we-live-in-a-society-part-2">We Live In A Society, Part 2</h2>
-<ul>
-<li>Utilitarianism, Kantian Ethics, and Rawls can all be modeled as <strong>Social Welfare Functionals</strong></li>
-</ul>
-<p><span class="math display">\[
-W(\mathbf{u}) = W(u_1, \ldots, u_n) \Rightarrow W(\mathbf{u})(x) = W(u_1(x), \ldots, u_n(x))
-\]</span></p>
-<ul>
-<li><span class="math inline">\(u_i(x)\)</span>: Given bundle of resources <span class="math inline">\(x\)</span>, how much utility does <span class="math inline">\(i\)</span> experience? <span class="math inline">\(u_i: \mathcal{X} \rightarrow \mathbb{R}\)</span></li>
-<li><span class="math inline">\(W(\mathbf{u})\)</span>: <strong>Aggregates</strong> <span class="math inline">\(u_i(x)\)</span> over all <span class="math inline">\(i\)</span>, to produce measure of <strong>overall welfare of society</strong>. <span class="math inline">\(W: (\mathcal{X} \rightarrow \mathbb{R})^N \rightarrow \mathbb{R}\)</span>.</li>
-<li><span class="math inline">\(W(\mathbf{u}) = \sum_{i=1}^n \omega_iu_i(x)\)</span>. <span class="math inline">\(\omega_i\)</span> is <span class="math inline">\(i\)</span>’s <strong>welfare weight</strong></li>
-<li>(Preview) Decomposition: evaluate <strong>policies</strong> by estimating <strong>marginal utility</strong> <span class="math inline">\(u'_i(x)\)</span> compared to <span class="math inline">\(\omega_i\)</span>)</li>
-</ul>
-</section>
-<section id="alternative-swf-specifications" class="level2 crunch-title crunch-ul smaller">
-<h2 class="crunch-title crunch-ul smaller anchored" data-anchor-id="alternative-swf-specifications">Alternative SWF Specifications</h2>
-<ul>
-<li>Social values</li>
-</ul>
-<p><span class="math display">\[
-W(\underbrace{v_1, \ldots, v_n}_{\text{Values}})(x) \overset{\text{e.g.}}{=} \omega_1\underbrace{v_1(x)}_{\text{Privacy}} + \omega_2\underbrace{v_2(x)}_{\mathclap{\text{Public Health}}}
-\]</span></p>
-<ul>
-<li>Stakeholder Analysis</li>
-</ul>
-<p><span class="math display">\[
-W(\underbrace{s_1, \ldots, s_n}_{\text{Stakeholders}})(x) = \omega_1\underbrace{u_{s_1}(x)}_{\text{Teachers}} + \omega_2\underbrace{u_{s_2}(x)}_{\text{Parents}} + \omega_3\underbrace{u_{s_3}(x)}_{\text{Students}} + \omega_4\underbrace{u_{s_4}(x)}_{\mathclap{\text{Community}}}
-\]</span></p>
-<ul>
-<li>(Adapted from this <a href="https://www.youtube.com/watch?v=9VQw5N4qkhM&amp;list=PLL6RiAl2WHXH1AdhB3fT5dxKIRbijvl34&amp;index=18" target="_blank">great intro video</a>!)</li>
-</ul>
-</section>
-<section id="utilitarian-swf" class="level2">
-<h2 class="anchored" data-anchor-id="utilitarian-swf">Utilitarian SWF</h2>
-<ul>
-<li>Easy mode (possibly/probably your intuition?): Everyone’s welfare weight should be <strong>equal</strong>, <span class="math inline">\(\omega_i = \frac{1}{n}\)</span></li>
-</ul>
-<p><span class="math display">\[
-W(u_1, \ldots, u_n)(x) = \frac{1}{n}u_1(x) + \cdots + \frac{1}{n}u_n(x)
-\]</span></p>
-<ul>
-<li><span class="math inline">\(\implies\)</span> <strong>Utilitarian</strong> Social Welfare Functional!</li>
-<li>The Silly Problem of Utilitarian SWF: What if everyone is made happy by <span class="math inline">\(u_{\text{Jeef}} = -\infty\)</span>?</li>
-</ul>
-</section>
-<section id="the-hard-problem-of-utilitarian-swf" class="level2">
-<h2 class="anchored" data-anchor-id="the-hard-problem-of-utilitarian-swf">The Hard Problem of Utilitarian SWF</h2>
-<blockquote class="blockquote">
-<p>While the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged <span class="citation" data-cites="sen_inequality_1992">(<a href="#ref-sen_inequality_1992" role="doc-biblioref">Sen 1992</a>)</span></p>
-</blockquote>
-<ul>
-<li><span class="math inline">\(\implies\)</span> “Equality of What?”</li>
-<li>What is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): <strong>Utility</strong>? <strong>Opportunity</strong>? <strong>Resources</strong>? <strong>Money</strong>? <strong>Freedom</strong>?</li>
-</ul>
-</section>
-</section>
-<section id="policy-evaluation-via-inverse-fairness" class="level1" data-stack-name="Inverse Fairness">
-<h1 data-stack-name="Inverse Fairness">Policy Evaluation via Inverse Fairness</h1>
-<section id="we-can-finally-understand-this-image-from-week-1" class="level2 smaller crunch-title title-10">
-<h2 class="smaller crunch-title title-10 anchored" data-anchor-id="we-can-finally-understand-this-image-from-week-1">We Can Finally Understand This Image from Week 1!</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/inverse_fairness.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
-</div>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-sen_inequality_1992" class="csl-entry" role="listitem">
-Sen, Amartya. 1992. <em>Inequality <span>Reexamined</span></em>. Clarendon Press.
-</div>
-</div>
 
-
-</section>
 </section>
 
 </main> <!-- /main -->

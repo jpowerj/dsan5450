@@ -44,7 +44,7 @@
     "href": "syllabus.html#schedule",
     "title": "Syllabus",
     "section": "Schedule",
-    "text": "Schedule\nThe following is a rough map of what we will work through together throughout the semester; given that everyone learns at a different pace, my aim is to leave us with a good amount of flexibility in terms of how much time we spend on each topic: if I find that it takes me longer than a week to convey a certain topic in sufficient depth, for example, then I view it as a strength rather than a weakness of the course that we can then rearrange the calendar below by adding an extra week on that particular topic! Similarly, if it seems like I am spending too much time on a topic, to the point that students seem bored or impatient to move onto the next topic, we can move a topic intended for the next week to the current week!\n\n\n\n\nUnit\nWeek\nDate\nTopic\n\n\n\n\nUnit 1: Ethical Frameworks and Fairness in AI\n1\nJan 17\nIntroduction to the Course\n\n\n\n2\nJan 24\nMachine Learning, Training Data, and Bias\n\n\n\n3\nJan 31\n(Descriptive) Fairness in AI\n\n\n\n4\nFeb 7\nFairness in AI\n\n\n\n\nFeb 9 (Friday), 11:59pm EST\n[Deliverable] HW1: Nuts and Bolts for Fairness in AI \n\n\n\n5\nFeb 14\nContext-Sensitive Fairness\n\n\n\n6\nFeb 21\nCausality in Ethics and Policy\n\n\n\n\nFeb 26 (Monday), 11:59pm EST\n[Deliverable] HW2: Context-Sensitive Fairness \n\n\n\n7\nFeb 28\nIn-Class Midterm: Data Ethics, Fairness, Privacy, Causality\n\n\n\n\nMar 6\nNo Class (Spring Break)\n\n\nUnit 3: Policy Frameworks\n8\nMar 13\nFrom Data Ethics to Data Policy\n\n\n\n9\nMar 20\nPrivacy Policies, Incomplete Contracts, and Power\n\n\n\n10\nMar 27\nEconometric Policy Evaluation and Inverse Fairness\n\n\n\n11\nApr 3\nSocial Welfare Functionals\n\n\n\n12\nApr 10\nApplications: Climate Justice\n\n\n\n\nApr 12 (Friday)\n[Deliverable] HW3: Privacy Policies as Incomplete Contracts \n\n\n\n13\nApr 17\nApplications: Race, Class, Gender, Sexuality, and Disability (Data Feminism)\n\n\n\n14\nApr 24\nApplications: International Law\n\n\n\n\nApr 26 (Friday)\n[Deliverable] HW4: Policy Evaluation\n\n\n\n\nMay 10 (Friday)\n[Deliverable] Policy Whitepaper",
+    "text": "Schedule\nThe following is a rough map of what we will work through together throughout the semester; given that everyone learns at a different pace, my aim is to leave us with a good amount of flexibility in terms of how much time we spend on each topic: if I find that it takes me longer than a week to convey a certain topic in sufficient depth, for example, then I view it as a strength rather than a weakness of the course that we can then rearrange the calendar below by adding an extra week on that particular topic! Similarly, if it seems like I am spending too much time on a topic, to the point that students seem bored or impatient to move onto the next topic, we can move a topic intended for the next week to the current week!\n\n\n\n\nUnit\nWeek\nDate\nTopic\n\n\n\n\nUnit 1: Ethical Frameworks and Fairness in AI\n1\nJan 17\nIntroduction to the Course\n\n\n\n2\nJan 24\nMachine Learning, Training Data, and Bias\n\n\n\n3\nJan 31\n(Descriptive) Fairness in AI\n\n\n\n4\nFeb 7\nFairness in AI\n\n\n\n\nFeb 9 (Friday), 11:59pm EST\n[Deliverable] HW1: Nuts and Bolts for Fairness in AI \n\n\n\n5\nFeb 14\nContext-Sensitive Fairness\n\n\n\n6\nFeb 21\nCausality in Ethics and Policy\n\n\n\n\nFeb 26 (Monday), 11:59pm EST\n[Deliverable] HW2: Context-Sensitive Fairness \n\n\n\n7\nFeb 28\nIn-Class Midterm: Data Ethics, Fairness, Privacy, Causality\n\n\n\n\nMar 6\nNo Class (Spring Break)\n\n\nUnit 3: Policy Frameworks\n8\nMar 13\nFrom Data Ethics to Data Policy\n\n\n\n9\nMar 20\nPrivacy Policies, Incomplete Contracts, and Power\n\n\n\n10\nMar 27\nEconometric Policy Evaluation and Inverse Fairness\n\n\n\n11\nApr 3\nFairness vs. Social Welfare\n\n\n\n12\nApr 10\nApplications: Climate Justice\n\n\n\n\nApr 12 (Friday)\n[Deliverable] HW3: Privacy Policies as Incomplete Contracts \n\n\n\n13\nApr 17\nApplications: Race, Class, Gender, Sexuality, and Disability (Data Feminism)\n\n\n\n14\nApr 24\nApplications: International Law\n\n\n\n\nApr 26 (Friday)\n[Deliverable] HW4: Policy Evaluation\n\n\n\n\nMay 10 (Friday)\n[Deliverable] Policy Whitepaper",
     "crumbs": [
       "Syllabus"
     ]
@@ -3615,226 +3615,86 @@
   {
     "objectID": "w11/index.html",
     "href": "w11/index.html",
-    "title": "Week 11: Social Welfare Functionals",
+    "title": "Week 11: Fairness vs. Social Welfare",
     "section": "",
     "text": "Open slides in new window →"
   },
   {
-    "objectID": "w11/index.html#why-call-it-econometric-policy-evaluation",
-    "href": "w11/index.html#why-call-it-econometric-policy-evaluation",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Why Call It “Econometric” Policy Evaluation?",
-    "text": "Why Call It “Econometric” Policy Evaluation?\n\nIn the same way that data science can be used for good or for not-so-good…\nEconomics provides methods that allow us to evaluate a policy with respect to an ethical framework\nTypically efficiency and/or profit maximization, but just as easily Rawlsian or Roemerian\n“The master’s tools will never dismantle the master’s house”❓❓❓\n(“It’s certainly true that the master uses the tool of [data science], but that doesn’t mean he owns it.”)"
+    "objectID": "w11/index.html#externalities",
+    "href": "w11/index.html#externalities",
+    "title": "Week 11: Fairness vs. Social Welfare",
+    "section": "Externalities",
+    "text": "Externalities\n\nJeef and Keef are roommates: Jeef loves listening to Tony Danza Tapdance Extravaganza, but Keef is normal and slowly dies inside with each additional song\n\n\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.4.3     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nsource(\"../_globals.r\")\nmusic_df &lt;- tribble(\n  ~Songs, ~Jeef, ~Keef,\n  0, 0, 0,\n  1, 13, -2,\n  2, 18, -6,\n  3, 24, -13,\n  4, 28, -20,\n  5, 30, -42\n)\nmusic_df &lt;- music_df |&gt;\n  mutate(Total = Jeef + Keef)\nmusic_df\n\n\n\n\n\nSongs\nJeef\nKeef\nTotal\n\n\n\n\n0\n0\n0\n0\n\n\n1\n13\n-2\n11\n\n\n2\n18\n-6\n12\n\n\n3\n24\n-13\n11\n\n\n4\n28\n-20\n8\n\n\n5\n30\n-42\n-12\n\n\n\n\n\n\n\n\nlong_df &lt;- music_df |&gt;\n  pivot_longer(!Songs, names_to=\"Roommate\", values_to=\"Utility\")\nutil_df &lt;- long_df |&gt;\n  filter(Roommate != \"Total\")\nggplot(util_df, aes(x=Songs, y=Utility, color=Roommate)) +\n  geom_line(linewidth=g_linewidth) +\n  geom_point(size=g_pointsize) +\n  labs(\n    title=\"Individual Utility: Jeef vs. Keef\",\n    x=\"Number of Songs Played\",\n    y=\"Utility\"\n  ) +\n  dsan_theme(\"quarter\")\n\n\n\n\n\n\n\n\n\nwelfare_df &lt;- long_df |&gt;\n  filter(Roommate == \"Total\")\nggplot(welfare_df, aes(x=Songs, y=Utility, color=Roommate)) +\n  geom_line(linewidth=g_linewidth) +\n  geom_point(size=g_pointsize) +\n  labs(\n    title=\"Social Welfare: Jeef and Keef\",\n    x=\"Number of Songs Played\",\n    y=\"Social Welfare\"\n  ) +\n  scale_color_manual(values=c(cbPalette[3]), labels=c(\"Total      \")) +\n  dsan_theme(\"quarter\") +\n  remove_legend_title()"
   },
   {
-    "objectID": "w11/index.html#the-tools-of-economics-as-wielded-by-economists",
-    "href": "w11/index.html#the-tools-of-economics-as-wielded-by-economists",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "The Tools of Economics as Wielded by Economists",
-    "text": "The Tools of Economics as Wielded by Economists\n\nFun in-class pop quiz!"
+    "objectID": "w11/index.html#so-whats-the-issue",
+    "href": "w11/index.html#so-whats-the-issue",
+    "title": "Week 11: Fairness vs. Social Welfare",
+    "section": "So What’s the Issue?",
+    "text": "So What’s the Issue?\n\nThese utility values are not observed\nIf we try to elicit them, both Jeef and Keef have strategic incentives to lie (over-exaggerate)\nJeef maximizes own utility by reporting \\(u_j(s) = \\infty\\)\nKeef maximizes own utility by reporting \\(u_k(s) = -\\infty\\)\n(…Second price auctions tho)"
   },
   {
-    "objectID": "w11/index.html#the-tools-of-economics-as-wielded-by-economists-1",
-    "href": "w11/index.html#the-tools-of-economics-as-wielded-by-economists-1",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "The Tools of Economics as Wielded by Economists",
-    "text": "The Tools of Economics as Wielded by Economists\n\nDid you answer correctly???"
+    "objectID": "w11/index.html#now-with-scarce-resources",
+    "href": "w11/index.html#now-with-scarce-resources",
+    "title": "Week 11: Fairness vs. Social Welfare",
+    "section": "Now with Scarce Resources",
+    "text": "Now with Scarce Resources\n\nIn a given week, Jeef and Keef have 14 meals and 7 aux hours to divide amongst them\n\n\\[\n\\begin{align*}\n\\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\\\\n\\text{s.t. }& m_1 + m_2 \\leq 14 \\\\\n\\phantom{\\text{s.t. }} & ~ \\, a_1 + a_2 \\; \\leq 7\n\\end{align*}\n\\]\n\nLet’s assume \\(u_i(m_i, a_i) = m_i + a_i\\) for both\n\\(\\Rightarrow\\) One solution: \\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\\)…\n\\(\\Rightarrow\\) Another: \\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\\)…\nWho decides? Any decision implies \\(\\omega_1, \\omega_2\\) (\\(\\omega_1 + \\omega_2 = 1\\))"
   },
   {
-    "objectID": "w11/index.html#the-tools-of-economics-as-wielded-by-economists-2",
-    "href": "w11/index.html#the-tools-of-economics-as-wielded-by-economists-2",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "The Tools of Economics as Wielded by Economists",
-    "text": "The Tools of Economics as Wielded by Economists\n\nAddendum / reminder (see also)"
+    "objectID": "w11/index.html#the-conveniently-left-out-detail",
+    "href": "w11/index.html#the-conveniently-left-out-detail",
+    "title": "Week 11: Fairness vs. Social Welfare",
+    "section": "The Conveniently-Left-Out Detail",
+    "text": "The Conveniently-Left-Out Detail\n\nRecall predictive parity:\n\n\\[\n\\mathbb{E}[Y \\mid D = 1, A = 1] = \\mathbb{E}[Y \\mid D = 1, A = 0]\n\\]\n\nWho decides which \\(Y\\) to pick?\nAnswer: Whoever picks the objective function!\nFor profit-maximizing firm: \\(\\mathbb{E}[D (Y - c)]\\)\nFor welfare-maximizing society: \\(W(u_1(D), \\ldots, u_n(D))\\)\nDo these align? Sometimes yes, often no (affirmative action!)"
   },
   {
-    "objectID": "w11/index.html#eaamo-2023-accepted-papers",
-    "href": "w11/index.html#eaamo-2023-accepted-papers",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "EAAMO 2023 Accepted Papers",
-    "text": "EAAMO 2023 Accepted Papers\n\nEquity and Access in Algorithms, Mechanisms, and Optimization\n“Disincentivizing Polarization in Social Networks”\n“30 Million Canvas Grading Records Reveal Widespread Sequential Bias and System-Induced Surname Initial Disparity”\n\nAssignments graded later in the sequence tend to (1) receive lower grades, (2) receive comments that are notably more negative and less polite, and (3) exhibit lower grading quality measured by post-grade complaints.\n\n“Potty Parity: Process Flexibility via Unisex Restroom”\n\nHaving a one-unit unisex restroom, either by converting a unit of the men’s restroom or building an additional one, goes a long way toward improving wait time or user utility, and reducing their disparities\n\n“Overbooking with Priority-Respecting Reassignment”"
+    "objectID": "w11/index.html#remaining-challenging-details",
+    "href": "w11/index.html#remaining-challenging-details",
+    "title": "Week 11: Fairness vs. Social Welfare",
+    "section": "Remaining (Challenging) Details",
+    "text": "Remaining (Challenging) Details\n\nWho gets included in the SWF?\nPeople in one community? One state? One country?\nPeople in the future?\nAnimals?"
   },
   {
-    "objectID": "w11/index.html#co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe",
-    "href": "w11/index.html#co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Co-Founder of MD4SG \\(\\rightarrow\\) EAAMO: Rediet Abebe",
-    "text": "Co-Founder of MD4SG \\(\\rightarrow\\) EAAMO: Rediet Abebe\n\n\n\nFrom “When the Majority is Wrong: Modeling Annotator Disagreement for Subjective Tasks”, EMNLP 2023"
+    "objectID": "w11/slides.html#externalities",
+    "href": "w11/slides.html#externalities",
+    "title": "Week 11: Fairness vs. Social Welfare",
+    "section": "Externalities",
+    "text": "Externalities\n\nJeef and Keef are roommates: Jeef loves listening to Tony Danza Tapdance Extravaganza, but Keef is normal and slowly dies inside with each additional song\n\n\n\n\n\n\n\n\n\nSongs\nJeef\nKeef\nTotal\n\n\n\n\n0\n0\n0\n0\n\n\n1\n13\n-2\n11\n\n\n2\n18\n-6\n12\n\n\n3\n24\n-13\n11\n\n\n4\n28\n-20\n8\n\n\n5\n30\n-42\n-12"
   },
   {
-    "objectID": "w11/index.html#lily-hu",
-    "href": "w11/index.html#lily-hu",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Lily Hu",
-    "text": "Lily Hu\n\n\n\n\n\n\n\nCS excludes ethical considerations “by design”, via focus on how computers do work, not how they ought to work.\nThe latter “falls within the purview of the normative disciplines, most notably ethics, a subfield of philosophy. For students to succeed at learning not only how to build innovative computing systems, but also how to determine whether they should build those systems or how ethical considerations should constrain their design, it is imperative that these two disciplines work together. To this end, Harvard CS and Philosophy faculty have been partnering to develop the Embedded EthiCS curriculum.”\n\n\n\n\n\n\nEmbedded EthiCS"
+    "objectID": "w11/slides.html#so-whats-the-issue",
+    "href": "w11/slides.html#so-whats-the-issue",
+    "title": "Week 11: Fairness vs. Social Welfare",
+    "section": "So What’s the Issue?",
+    "text": "So What’s the Issue?\n\nThese utility values are not observed\nIf we try to elicit them, both Jeef and Keef have strategic incentives to lie (over-exaggerate)\nJeef maximizes own utility by reporting \\(u_j(s) = \\infty\\)\nKeef maximizes own utility by reporting \\(u_k(s) = -\\infty\\)\n(…Second price auctions tho)"
   },
   {
-    "objectID": "w11/index.html#ninja-coder-hackerz-think-it-dream-it-do-it",
-    "href": "w11/index.html#ninja-coder-hackerz-think-it-dream-it-do-it",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Ninja Coder Hackerz / Think It! Dream It! Do It!",
-    "text": "Ninja Coder Hackerz / Think It! Dream It! Do It!\n\nCS: Learn The Coolest, Newest Stuff, Move Fast And Break Things!!!\nEthics: Listen to a man in a tweed jacket with elbow pads pontificate about Kant for 3 hours\nThe TED Talk Circuit"
+    "objectID": "w11/slides.html#now-with-scarce-resources",
+    "href": "w11/slides.html#now-with-scarce-resources",
+    "title": "Week 11: Fairness vs. Social Welfare",
+    "section": "Now with Scarce Resources",
+    "text": "Now with Scarce Resources\n\nIn a given week, Jeef and Keef have 14 meals and 7 aux hours to divide amongst them\n\n\\[\n\\begin{align*}\n\\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\\\\n\\text{s.t. }& m_1 + m_2 \\leq 14 \\\\\n\\phantom{\\text{s.t. }} & ~ \\, a_1 + a_2 \\; \\leq 7\n\\end{align*}\n\\]\n\nLet’s assume \\(u_i(m_i, a_i) = m_i + a_i\\) for both\n\\(\\Rightarrow\\) One solution: \\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\\)…\n\\(\\Rightarrow\\) Another: \\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\\)…\nWho decides? Any decision implies \\(\\omega_1, \\omega_2\\) (\\(\\omega_1 + \\omega_2 = 1\\))"
   },
   {
-    "objectID": "w11/index.html#functionals",
-    "href": "w11/index.html#functionals",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Functionals?",
-    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)"
+    "objectID": "w11/slides.html#the-conveniently-left-out-detail",
+    "href": "w11/slides.html#the-conveniently-left-out-detail",
+    "title": "Week 11: Fairness vs. Social Welfare",
+    "section": "The Conveniently-Left-Out Detail",
+    "text": "The Conveniently-Left-Out Detail\n\nRecall predictive parity:\n\n\\[\n\\mathbb{E}[Y \\mid D = 1, A = 1] = \\mathbb{E}[Y \\mid D = 1, A = 0]\n\\]\n\nWho decides which \\(Y\\) to pick?\nAnswer: Whoever picks the objective function!\nFor profit-maximizing firm: \\(\\mathbb{E}[D (Y - c)]\\)\nFor welfare-maximizing society: \\(W(u_1(D), \\ldots, u_n(D))\\)\nDo these align? Sometimes yes, often no (affirmative action!)"
   },
   {
-    "objectID": "w11/index.html#we-live-in-a-society-part-2",
-    "href": "w11/index.html#we-live-in-a-society-part-2",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "We Live In A Society, Part 2",
-    "text": "We Live In A Society, Part 2\n\nUtilitarianism, Kantian Ethics, and Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\n\\(W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\). \\(\\omega_i\\) is \\(i\\)’s welfare weight\n(Preview) Decomposition: evaluate policies by estimating marginal utility \\(u'_i(x)\\) compared to \\(\\omega_i\\))"
-  },
-  {
-    "objectID": "w11/index.html#alternative-swf-specifications",
-    "href": "w11/index.html#alternative-swf-specifications",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Alternative SWF Specifications",
-    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)"
-  },
-  {
-    "objectID": "w11/index.html#utilitarian-swf",
-    "href": "w11/index.html#utilitarian-swf",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Utilitarian SWF",
-    "text": "Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -\\infty\\)?"
-  },
-  {
-    "objectID": "w11/index.html#the-hard-problem-of-utilitarian-swf",
-    "href": "w11/index.html#the-hard-problem-of-utilitarian-swf",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "The Hard Problem of Utilitarian SWF",
-    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom?"
-  },
-  {
-    "objectID": "w11/index.html#we-can-finally-understand-this-image-from-week-1",
-    "href": "w11/index.html#we-can-finally-understand-this-image-from-week-1",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "We Can Finally Understand This Image from Week 1!",
-    "text": "We Can Finally Understand This Image from Week 1!"
-  },
-  {
-    "objectID": "w11/index.html#references",
-    "href": "w11/index.html#references",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "References",
-    "text": "References\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press."
-  },
-  {
-    "objectID": "w11/slides.html#why-call-it-econometric-policy-evaluation",
-    "href": "w11/slides.html#why-call-it-econometric-policy-evaluation",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Why Call It “Econometric” Policy Evaluation?",
-    "text": "Why Call It “Econometric” Policy Evaluation?\n\nIn the same way that data science can be used for good or for not-so-good…\nEconomics provides methods that allow us to evaluate a policy with respect to an ethical framework\nTypically efficiency and/or profit maximization, but just as easily Rawlsian or Roemerian\n“The master’s tools will never dismantle the master’s house”❓❓❓\n(“It’s certainly true that the master uses the tool of [data science], but that doesn’t mean he owns it.”)"
-  },
-  {
-    "objectID": "w11/slides.html#the-tools-of-economics-as-wielded-by-economists",
-    "href": "w11/slides.html#the-tools-of-economics-as-wielded-by-economists",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "The Tools of Economics as Wielded by Economists",
-    "text": "The Tools of Economics as Wielded by Economists\n\nFun in-class pop quiz!"
-  },
-  {
-    "objectID": "w11/slides.html#the-tools-of-economics-as-wielded-by-economists-1",
-    "href": "w11/slides.html#the-tools-of-economics-as-wielded-by-economists-1",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "The Tools of Economics as Wielded by Economists",
-    "text": "The Tools of Economics as Wielded by Economists\n\nDid you answer correctly???"
-  },
-  {
-    "objectID": "w11/slides.html#the-tools-of-economics-as-wielded-by-economists-2",
-    "href": "w11/slides.html#the-tools-of-economics-as-wielded-by-economists-2",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "The Tools of Economics as Wielded by Economists",
-    "text": "The Tools of Economics as Wielded by Economists\n\nAddendum / reminder (see also)"
-  },
-  {
-    "objectID": "w11/slides.html#eaamo-2023-accepted-papers",
-    "href": "w11/slides.html#eaamo-2023-accepted-papers",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "EAAMO 2023 Accepted Papers",
-    "text": "EAAMO 2023 Accepted Papers\n\nEquity and Access in Algorithms, Mechanisms, and Optimization\n“Disincentivizing Polarization in Social Networks”\n“30 Million Canvas Grading Records Reveal Widespread Sequential Bias and System-Induced Surname Initial Disparity”\n\nAssignments graded later in the sequence tend to (1) receive lower grades, (2) receive comments that are notably more negative and less polite, and (3) exhibit lower grading quality measured by post-grade complaints.\n\n“Potty Parity: Process Flexibility via Unisex Restroom”\n\nHaving a one-unit unisex restroom, either by converting a unit of the men’s restroom or building an additional one, goes a long way toward improving wait time or user utility, and reducing their disparities\n\n“Overbooking with Priority-Respecting Reassignment”"
-  },
-  {
-    "objectID": "w11/slides.html#co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe",
-    "href": "w11/slides.html#co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Co-Founder of MD4SG \\(\\rightarrow\\) EAAMO: Rediet Abebe",
-    "text": "Co-Founder of MD4SG \\(\\rightarrow\\) EAAMO: Rediet Abebe\n\nFrom “When the Majority is Wrong: Modeling Annotator Disagreement for Subjective Tasks”, EMNLP 2023"
-  },
-  {
-    "objectID": "w11/slides.html#lily-hu",
-    "href": "w11/slides.html#lily-hu",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Lily Hu",
-    "text": "Lily Hu\n\n\n\n\nCS excludes ethical considerations “by design”, via focus on how computers do work, not how they ought to work.\nThe latter “falls within the purview of the normative disciplines, most notably ethics, a subfield of philosophy. For students to succeed at learning not only how to build innovative computing systems, but also how to determine whether they should build those systems or how ethical considerations should constrain their design, it is imperative that these two disciplines work together. To this end, Harvard CS and Philosophy faculty have been partnering to develop the Embedded EthiCS curriculum.”\n\n\n\n\n\n\nEmbedded EthiCS"
-  },
-  {
-    "objectID": "w11/slides.html#ninja-coder-hackerz-think-it-dream-it-do-it",
-    "href": "w11/slides.html#ninja-coder-hackerz-think-it-dream-it-do-it",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Ninja Coder Hackerz / Think It! Dream It! Do It!",
-    "text": "Ninja Coder Hackerz / Think It! Dream It! Do It!\n\nCS: Learn The Coolest, Newest Stuff, Move Fast And Break Things!!!\nEthics: Listen to a man in a tweed jacket with elbow pads pontificate about Kant for 3 hours\nThe TED Talk Circuit"
-  },
-  {
-    "objectID": "w11/slides.html#functionals",
-    "href": "w11/slides.html#functionals",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Functionals?",
-    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)"
-  },
-  {
-    "objectID": "w11/slides.html#we-live-in-a-society-part-2",
-    "href": "w11/slides.html#we-live-in-a-society-part-2",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "We Live In A Society, Part 2",
-    "text": "We Live In A Society, Part 2\n\nUtilitarianism, Kantian Ethics, and Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\n\\(W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\). \\(\\omega_i\\) is \\(i\\)’s welfare weight\n(Preview) Decomposition: evaluate policies by estimating marginal utility \\(u'_i(x)\\) compared to \\(\\omega_i\\))"
-  },
-  {
-    "objectID": "w11/slides.html#alternative-swf-specifications",
-    "href": "w11/slides.html#alternative-swf-specifications",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Alternative SWF Specifications",
-    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)"
-  },
-  {
-    "objectID": "w11/slides.html#utilitarian-swf",
-    "href": "w11/slides.html#utilitarian-swf",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "Utilitarian SWF",
-    "text": "Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -\\infty\\)?"
-  },
-  {
-    "objectID": "w11/slides.html#the-hard-problem-of-utilitarian-swf",
-    "href": "w11/slides.html#the-hard-problem-of-utilitarian-swf",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "The Hard Problem of Utilitarian SWF",
-    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom?"
-  },
-  {
-    "objectID": "w11/slides.html#we-can-finally-understand-this-image-from-week-1",
-    "href": "w11/slides.html#we-can-finally-understand-this-image-from-week-1",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "We Can Finally Understand This Image from Week 1!",
-    "text": "We Can Finally Understand This Image from Week 1!"
-  },
-  {
-    "objectID": "w11/slides.html#references",
-    "href": "w11/slides.html#references",
-    "title": "Week 11: Social Welfare Functionals",
-    "section": "References",
-    "text": "References\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\n\n\n\nDSAN 5450 Week 11: Social Welfare Functionals"
+    "objectID": "w11/slides.html#remaining-challenging-details",
+    "href": "w11/slides.html#remaining-challenging-details",
+    "title": "Week 11: Fairness vs. Social Welfare",
+    "section": "Remaining (Challenging) Details",
+    "text": "Remaining (Challenging) Details\n\nWho gets included in the SWF?\nPeople in one community? One state? One country?\nPeople in the future?\nAnimals?"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "DSAN 5450: Data Ethics and Policy",
     "section": "",
-    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2024 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 17\n\n\n\n\nWeek 2: Machine Learning, Training Data, and Bias\n\n\nJanuary 24\n\n\n\n\nWeek 3: (Descriptive) Fairness in AI\n\n\nJanuary 31\n\n\n\n\nWeek 4: Fairness in AI\n\n\nFebruary 6\n\n\n\n\nWeek 5: Context-Sensitive Fairness\n\n\nFebruary 14\n\n\n\n\nWeek 6: Causality in Ethics and Policy\n\n\nFebruary 21\n\n\n\n\nWeek 7: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality\n\n\nFebruary 28\n\n\n\n\nWeek 8: From Data Ethics to Data Policy\n\n\nMarch 13\n\n\n\n\nWeek 9: Privacy Policies, Incomplete Contracts, and Power\n\n\nMarch 20\n\n\n\n\nWeek 10: Econometric Policy Evaluation and Inverse Fairness\n\n\nMarch 27\n\n\n\n\nWeek 11: Social Welfare Functionals\n\n\nApril 3\n\n\n\n\n\nNo matching items\n\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits.",
+    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2024 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 17\n\n\n\n\nWeek 2: Machine Learning, Training Data, and Bias\n\n\nJanuary 24\n\n\n\n\nWeek 3: (Descriptive) Fairness in AI\n\n\nJanuary 31\n\n\n\n\nWeek 4: Fairness in AI\n\n\nFebruary 6\n\n\n\n\nWeek 5: Context-Sensitive Fairness\n\n\nFebruary 14\n\n\n\n\nWeek 6: Causality in Ethics and Policy\n\n\nFebruary 21\n\n\n\n\nWeek 7: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality\n\n\nFebruary 28\n\n\n\n\nWeek 8: From Data Ethics to Data Policy\n\n\nMarch 13\n\n\n\n\nWeek 9: Privacy Policies, Incomplete Contracts, and Power\n\n\nMarch 20\n\n\n\n\nWeek 10: Econometric Policy Evaluation and Inverse Fairness\n\n\nMarch 27\n\n\n\n\nWeek 11: Fairness vs. Social Welfare\n\n\nApril 3\n\n\n\n\n\nNo matching items\n\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits.",
     "crumbs": [
       "<i class='bi bi-house pe-1'></i> Home"
     ]
