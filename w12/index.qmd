@@ -17,7 +17,7 @@ format:
     html-math-method: mathjax
     theme: ["../_jjslides.scss"]
     include-in-header:
-      text: "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'>"
+      text: "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Honk&display=swap' rel='stylesheet'>"
     scrollable: true
     slide-number: true
     simplemenu:
@@ -43,13 +43,20 @@ format:
 
 # Making Projects Less Scary {data-stack-name="Final Projects"}
 
+## How Do I Pick A Topic?
+
+* I know that "whatever is interesting to you" can be way overly-vague!
+* So, one approach is: imagine yourself in a job interview for your dream job, and they bring up DSAN 5450: "Interesting, what did you do in that class?" 
+* [Insert final project elevator pitch] "Wow, that's such a cool project, we really want someone who can [say] take a data-driven approach to a policy question like that. You're hired!"
+* (Jeff gets a commission: 10% of your salary)
+
 ## The Rating System {.crunch-title .smaller .crunch-images}
 
 ::: {#fig-ratings}
 
-<a href='https://youtu.be/RpMjjx-m-BM?si=9Vhx2V-Gi8jznA6J' target='_blank'>![](images/rating.png)</a>
+<a href='https://jpj.georgetown.domains/dsan5450-scratch/cinema.mp4' target='_blank'>![](images/rating.png)</a>
 
-<a href='https://youtu.be/RpMjjx-m-BM?si=9Vhx2V-Gi8jznA6J' target='_blank'>On Cinema at the Cinema S1E09 <i class='bi bi-box-arrow-up-right ps-1'></i></a>
+<a href='https://jpj.georgetown.domains/dsan5450-scratch/cinema.mp4' target='_blank'>On Cinema at the Cinema S1E09 <i class='bi bi-box-arrow-up-right ps-1'></i></a>
 :::
 
 ## Discussing Fairness {.crunch-title .smaller}
@@ -106,16 +113,70 @@ format:
 </table>
 ```
 
+## Frequently Awesome Questions {.crunch-title .crunch-ul .crunch-li-6}
+
+* *How much data-processing/R/Python is required?* None!
+  * You can think of it like: In every other DSAN class, we plop a dataset in front of you and say "do the thing"
+  * Here you can (and should) first ask, "is [data sci technique] an **effective way to address** this issue?"
+* Example: **archive of missing datasets**
+* Sometimes the problem is not "We haven't trained a neural net on this yet!" but instead "nobody with power cares enough about this to make a dataset in the first place [or they purposefully prevent it]"
+
+<!-- ## Fruitfully Asked Questions {.crunch-title .crunch-ul .crunch-li-6}
+
+* * -->
+
+## Getting From Here to There
+
+```{=html}
+<style>
+.honk-honk {
+  font-size: 180% !important;
+  /* font-family: "Bungee Spice", sans-serif; */
+  font-family: "Honk", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
+```
+
+* [**Minimum Viable Product**]{.honk-honk} (**MVP**) 
+* $\leadsto$ Final Product (but... Hofstadter's Law)
+
+::: {.callout-note title="<i class='bi bi-info-circle pe-1'></i> Hofstadter's Law (Paraphrase)" icon="false"}
+
+The pieces of your DSAN final project will take longer than you expect, even if you take Hofstadter's Law into account
+
+:::
+
 # Causality and Identity Formation {data-stack-name="Racecraft"}
 
 * Race as a **Noun** vs. Race as a **Verb** ("Racecraft")
 * Race as a static property vs. race as a **social practice**
 
+## But First... Phenomenology {.crunch-title .crunch-blockquote .smaller .crunch-ul .crunch-quarto-figure}
+
+* "Objective" account: Roquentin sits down on a bus seat; "Subjective" account:
+
+> I lean my hand on **the seat** but pull it back hurriedly: it exists. This thing I’m sitting on, leaning my hand on, is called a seat. They made it purposely for people to sit on, they took leather, springs and cloth, they went to work with the idea of making a seat and when they finished, that was what they had made. They carried it here, into this car and the car is now rolling and jolting with its rattling windows, carrying this red thing in its bosom. I murmur: “It’s a seat,” a little like an exorcism. But the word stays on my lips: it refuses to go and put itself on the thing. It stays what it is, with its red plush, thousands of little red paws in the air, all still, little dead paws...
+
+![(From <a href='https://eternalisedofficial.com/2021/04/21/book-review-nausea-jean-paul-sartre/' target='_blank'>"Book Review: Nausea - Jean-Paul Sartre</a>)](images/train_seat.webp){fig-align="center"}
+
+## W.E.B. Du Bois and the Epistemological One-Way Mirror {.smaller .crunch-title .title-09}
+
+> Black people in America are [...] born with a veil [...] in this
+American world---a world which yields him no true self-consciousness, but only lets him see himself through the revelation of the other world. It is a peculiar sensation, this double-consciousness, this sense of always looking at oneself through the eyes of others, of measuring one’s soul by the tape of a world that looks on in amused contempt and pity. One ever feels his two-ness—an American, a Negro; two souls, two thoughts, two unreconciled strivings; two warring ideals in one dark body. [@dubois_souls_1903]
+
+* The veil: the world is seen and **experienced differently** on either side of the color line
+* **One-way mirror**: Whites project their constructions of Blacks onto the veil and see their projections reflected on it $\Rightarrow$ the power to **define themselves and others**
+* The projections of whites onto the veil **become realities** that Black subjects have to contend with in their self-formation.
+* **Twoness**: in process of self-formation, the racialized subject **must account for** the views of two different social worlds—the Black world, constructed behind the veil, and the white world, which dehumanizes via lack of recognition of their humanity. 
+
 ## $\textsf{Race}_{\textsf{Variable}}$ vs. $\textsf{Race}_{\textsf{Construct}}$ {.crunch-title .crunch-ul}
 
 * Careful scientific, causal studies measure the effect that **changing $X$** ($do(X)$) has on $Y$, controlling for $C$ (via, at least under the hood, "Do-Calculus")
 * But, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into "race" and "not race"
-* Keep in back of your mind as we look at just one example of how (measured by thorough, statistically-principled randomized experiment), **race can have direct, measurable, causal impacts on important aspects of our everyday lives**
+* Keep in back of your mind as we look at example of how (measured by thorough, statistically-principled experiment), **race can have direct, measurable, causal impacts on important aspects of our everyday lives**
 
 ## Racial Discrimination {.smaller .crunch-title}
 

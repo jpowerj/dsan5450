@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "w12/slides.html#how-do-i-pick-a-topic",
+    "href": "w12/slides.html#how-do-i-pick-a-topic",
+    "title": "Week 12: Final Projects, Causality and Racecraft",
+    "section": "How Do I Pick A Topic?",
+    "text": "How Do I Pick A Topic?\n\nI know that “whatever is interesting to you” can be way overly-vague!\nSo, one approach is: imagine yourself in a job interview for your dream job, and they bring up DSAN 5450: “Interesting, what did you do in that class?”\n[Insert final project elevator pitch] “Wow, that’s such a cool project, we really want someone who can [say] take a data-driven approach to a policy question like that. You’re hired!”\n(Jeff gets a commission: 10% of your salary)"
+  },
+  {
     "objectID": "w12/slides.html#the-rating-system",
     "href": "w12/slides.html#the-rating-system",
     "title": "Week 12: Final Projects, Causality and Racecraft",
@@ -21,11 +28,39 @@
     "text": "Evaluating Policy\n\n\n\n\n\n\n\n\nBelow Expectations\n\n\"This policy is bad\"\n\n\nMeets Expectations\n\n\"This policy is bad bc it's biased towards [group 1], and doesn't take sufficient account of the welfare of [group 2]\"\n\n\nExceeds Expectations\n\n\"This policy is bad bc it's biased towards [group 1], and doesn't take sufficient account of the welfare of [group 2], which violates the Rawlsian notion of what would be chosen by rational agents behind a 'veil of ignorance'\"\n\n\nDoing Too Much\n  \n\"This policy is bad bc the inferred welfare weights \\(\\omega_i\\) are \\(0.1632\\) off from the optimal welfare weights \\(\\omega_i^*\\)\""
   },
   {
+    "objectID": "w12/slides.html#frequently-awesome-questions",
+    "href": "w12/slides.html#frequently-awesome-questions",
+    "title": "Week 12: Final Projects, Causality and Racecraft",
+    "section": "Frequently Awesome Questions",
+    "text": "Frequently Awesome Questions\n\nHow much data-processing/R/Python is required? None!\n\nYou can think of it like: In every other DSAN class, we plop a dataset in front of you and say “do the thing”\nHere you can (and should) first ask, “is [data sci technique] an effective way to address this issue?”\n\nExample: archive of missing datasets\nSometimes the problem is not “We haven’t trained a neural net on this yet!” but instead “nobody with power cares enough about this to make a dataset in the first place [or they purposefully prevent it]”"
+  },
+  {
+    "objectID": "w12/slides.html#getting-from-here-to-there",
+    "href": "w12/slides.html#getting-from-here-to-there",
+    "title": "Week 12: Final Projects, Causality and Racecraft",
+    "section": "Getting From Here to There",
+    "text": "Getting From Here to There\n\n\nMinimum Viable Product (MVP)\n\\(\\leadsto\\) Final Product (but… Hofstadter’s Law)\n\n\n\n\n\n Hofstadter’s Law (Paraphrase)\n\n\nThe pieces of your DSAN final project will take longer than you expect, even if you take Hofstadter’s Law into account"
+  },
+  {
+    "objectID": "w12/slides.html#but-first-phenomenology",
+    "href": "w12/slides.html#but-first-phenomenology",
+    "title": "Week 12: Final Projects, Causality and Racecraft",
+    "section": "But First… Phenomenology",
+    "text": "But First… Phenomenology\n\n“Objective” account: Roquentin sits down on a bus seat; “Subjective” account:\n\n\nI lean my hand on the seat but pull it back hurriedly: it exists. This thing I’m sitting on, leaning my hand on, is called a seat. They made it purposely for people to sit on, they took leather, springs and cloth, they went to work with the idea of making a seat and when they finished, that was what they had made. They carried it here, into this car and the car is now rolling and jolting with its rattling windows, carrying this red thing in its bosom. I murmur: “It’s a seat,” a little like an exorcism. But the word stays on my lips: it refuses to go and put itself on the thing. It stays what it is, with its red plush, thousands of little red paws in the air, all still, little dead paws…\n\n\n(From “Book Review: Nausea - Jean-Paul Sartre)"
+  },
+  {
+    "objectID": "w12/slides.html#w.e.b.-du-bois-and-the-epistemological-one-way-mirror",
+    "href": "w12/slides.html#w.e.b.-du-bois-and-the-epistemological-one-way-mirror",
+    "title": "Week 12: Final Projects, Causality and Racecraft",
+    "section": "W.E.B. Du Bois and the Epistemological One-Way Mirror",
+    "text": "W.E.B. Du Bois and the Epistemological One-Way Mirror\n\nBlack people in America are […] born with a veil […] in this American world—a world which yields him no true self-consciousness, but only lets him see himself through the revelation of the other world. It is a peculiar sensation, this double-consciousness, this sense of always looking at oneself through the eyes of others, of measuring one’s soul by the tape of a world that looks on in amused contempt and pity. One ever feels his two-ness—an American, a Negro; two souls, two thoughts, two unreconciled strivings; two warring ideals in one dark body. (Du Bois 1903)\n\n\nThe veil: the world is seen and experienced differently on either side of the color line\nOne-way mirror: Whites project their constructions of Blacks onto the veil and see their projections reflected on it \\(\\Rightarrow\\) the power to define themselves and others\nThe projections of whites onto the veil become realities that Black subjects have to contend with in their self-formation.\nTwoness: in process of self-formation, the racialized subject must account for the views of two different social worlds—the Black world, constructed behind the veil, and the white world, which dehumanizes via lack of recognition of their humanity."
+  },
+  {
     "objectID": "w12/slides.html#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct",
     "href": "w12/slides.html#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct",
     "title": "Week 12: Final Projects, Causality and Racecraft",
     "section": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)",
-    "text": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)\n\nCareful scientific, causal studies measure the effect that changing \\(X\\) (\\(do(X)\\)) has on \\(Y\\), controlling for \\(C\\) (via, at least under the hood, “Do-Calculus”)\nBut, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into “race” and “not race”\nKeep in back of your mind as we look at just one example of how (measured by thorough, statistically-principled randomized experiment), race can have direct, measurable, causal impacts on important aspects of our everyday lives"
+    "text": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)\n\nCareful scientific, causal studies measure the effect that changing \\(X\\) (\\(do(X)\\)) has on \\(Y\\), controlling for \\(C\\) (via, at least under the hood, “Do-Calculus”)\nBut, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into “race” and “not race”\nKeep in back of your mind as we look at example of how (measured by thorough, statistically-principled experiment), race can have direct, measurable, causal impacts on important aspects of our everyday lives"
   },
   {
     "objectID": "w12/slides.html#racial-discrimination",
@@ -95,7 +130,7 @@
     "href": "w12/slides.html#references",
     "title": "Week 12: Final Projects, Causality and Racecraft",
     "section": "References",
-    "text": "References\n\n\nBertrand, Marianne, and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” American Economic Review 94 (4): 991–1013. https://doi.org/10.1257/0002828042002561.\n\n\n\n\n\nDSAN 5450 Week 12: Project Talk, Causality and Identity Formation"
+    "text": "References\n\n\nBertrand, Marianne, and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” American Economic Review 94 (4): 991–1013. https://doi.org/10.1257/0002828042002561.\n\n\nDu Bois, W. E. B. 1903. The Souls of Black Folk: Essays and Sketches. A. C. McClurg.\n\n\n\n\n\nDSAN 5450 Week 12: Project Talk, Causality and Identity Formation"
   },
   {
     "objectID": "w12/index.html",
@@ -103,6 +138,13 @@
     "title": "Week 12: Final Projects, Causality and Racecraft",
     "section": "",
     "text": "Open slides in new window →"
+  },
+  {
+    "objectID": "w12/index.html#how-do-i-pick-a-topic",
+    "href": "w12/index.html#how-do-i-pick-a-topic",
+    "title": "Week 12: Final Projects, Causality and Racecraft",
+    "section": "How Do I Pick A Topic?",
+    "text": "How Do I Pick A Topic?\n\nI know that “whatever is interesting to you” can be way overly-vague!\nSo, one approach is: imagine yourself in a job interview for your dream job, and they bring up DSAN 5450: “Interesting, what did you do in that class?”\n[Insert final project elevator pitch] “Wow, that’s such a cool project, we really want someone who can [say] take a data-driven approach to a policy question like that. You’re hired!”\n(Jeff gets a commission: 10% of your salary)"
   },
   {
     "objectID": "w12/index.html#the-rating-system",
@@ -126,11 +168,39 @@
     "text": "Evaluating Policy\n\n\n\n\n\n\n\n\nBelow Expectations\n\n\"This policy is bad\"\n\n\nMeets Expectations\n\n\"This policy is bad bc it's biased towards [group 1], and doesn't take sufficient account of the welfare of [group 2]\"\n\n\nExceeds Expectations\n\n\"This policy is bad bc it's biased towards [group 1], and doesn't take sufficient account of the welfare of [group 2], which violates the Rawlsian notion of what would be chosen by rational agents behind a 'veil of ignorance'\"\n\n\nDoing Too Much\n  \n\"This policy is bad bc the inferred welfare weights \\(\\omega_i\\) are \\(0.1632\\) off from the optimal welfare weights \\(\\omega_i^*\\)\""
   },
   {
+    "objectID": "w12/index.html#frequently-awesome-questions",
+    "href": "w12/index.html#frequently-awesome-questions",
+    "title": "Week 12: Final Projects, Causality and Racecraft",
+    "section": "Frequently Awesome Questions",
+    "text": "Frequently Awesome Questions\n\nHow much data-processing/R/Python is required? None!\n\nYou can think of it like: In every other DSAN class, we plop a dataset in front of you and say “do the thing”\nHere you can (and should) first ask, “is [data sci technique] an effective way to address this issue?”\n\nExample: archive of missing datasets\nSometimes the problem is not “We haven’t trained a neural net on this yet!” but instead “nobody with power cares enough about this to make a dataset in the first place [or they purposefully prevent it]”"
+  },
+  {
+    "objectID": "w12/index.html#getting-from-here-to-there",
+    "href": "w12/index.html#getting-from-here-to-there",
+    "title": "Week 12: Final Projects, Causality and Racecraft",
+    "section": "Getting From Here to There",
+    "text": "Getting From Here to There\n\n\nMinimum Viable Product (MVP)\n\\(\\leadsto\\) Final Product (but… Hofstadter’s Law)\n\n\n\n\n\n\n\n Hofstadter’s Law (Paraphrase)\n\n\n\nThe pieces of your DSAN final project will take longer than you expect, even if you take Hofstadter’s Law into account"
+  },
+  {
+    "objectID": "w12/index.html#but-first-phenomenology",
+    "href": "w12/index.html#but-first-phenomenology",
+    "title": "Week 12: Final Projects, Causality and Racecraft",
+    "section": "But First… Phenomenology",
+    "text": "But First… Phenomenology\n\n“Objective” account: Roquentin sits down on a bus seat; “Subjective” account:\n\n\nI lean my hand on the seat but pull it back hurriedly: it exists. This thing I’m sitting on, leaning my hand on, is called a seat. They made it purposely for people to sit on, they took leather, springs and cloth, they went to work with the idea of making a seat and when they finished, that was what they had made. They carried it here, into this car and the car is now rolling and jolting with its rattling windows, carrying this red thing in its bosom. I murmur: “It’s a seat,” a little like an exorcism. But the word stays on my lips: it refuses to go and put itself on the thing. It stays what it is, with its red plush, thousands of little red paws in the air, all still, little dead paws…\n\n\n\n\n(From “Book Review: Nausea - Jean-Paul Sartre)"
+  },
+  {
+    "objectID": "w12/index.html#w.e.b.-du-bois-and-the-epistemological-one-way-mirror",
+    "href": "w12/index.html#w.e.b.-du-bois-and-the-epistemological-one-way-mirror",
+    "title": "Week 12: Final Projects, Causality and Racecraft",
+    "section": "W.E.B. Du Bois and the Epistemological One-Way Mirror",
+    "text": "W.E.B. Du Bois and the Epistemological One-Way Mirror\n\nBlack people in America are […] born with a veil […] in this American world—a world which yields him no true self-consciousness, but only lets him see himself through the revelation of the other world. It is a peculiar sensation, this double-consciousness, this sense of always looking at oneself through the eyes of others, of measuring one’s soul by the tape of a world that looks on in amused contempt and pity. One ever feels his two-ness—an American, a Negro; two souls, two thoughts, two unreconciled strivings; two warring ideals in one dark body. (Du Bois 1903)\n\n\nThe veil: the world is seen and experienced differently on either side of the color line\nOne-way mirror: Whites project their constructions of Blacks onto the veil and see their projections reflected on it \\(\\Rightarrow\\) the power to define themselves and others\nThe projections of whites onto the veil become realities that Black subjects have to contend with in their self-formation.\nTwoness: in process of self-formation, the racialized subject must account for the views of two different social worlds—the Black world, constructed behind the veil, and the white world, which dehumanizes via lack of recognition of their humanity."
+  },
+  {
     "objectID": "w12/index.html#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct",
     "href": "w12/index.html#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct",
     "title": "Week 12: Final Projects, Causality and Racecraft",
     "section": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)",
-    "text": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)\n\nCareful scientific, causal studies measure the effect that changing \\(X\\) (\\(do(X)\\)) has on \\(Y\\), controlling for \\(C\\) (via, at least under the hood, “Do-Calculus”)\nBut, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into “race” and “not race”\nKeep in back of your mind as we look at just one example of how (measured by thorough, statistically-principled randomized experiment), race can have direct, measurable, causal impacts on important aspects of our everyday lives"
+    "text": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)\n\nCareful scientific, causal studies measure the effect that changing \\(X\\) (\\(do(X)\\)) has on \\(Y\\), controlling for \\(C\\) (via, at least under the hood, “Do-Calculus”)\nBut, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into “race” and “not race”\nKeep in back of your mind as we look at example of how (measured by thorough, statistically-principled experiment), race can have direct, measurable, causal impacts on important aspects of our everyday lives"
   },
   {
     "objectID": "w12/index.html#racial-discrimination",
@@ -200,7 +270,7 @@
     "href": "w12/index.html#references",
     "title": "Week 12: Final Projects, Causality and Racecraft",
     "section": "References",
-    "text": "References\n\n\nBertrand, Marianne, and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” American Economic Review 94 (4): 991–1013. https://doi.org/10.1257/0002828042002561."
+    "text": "References\n\n\nBertrand, Marianne, and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” American Economic Review 94 (4): 991–1013. https://doi.org/10.1257/0002828042002561.\n\n\nDu Bois, W. E. B. 1903. The Souls of Black Folk: Essays and Sketches. A. C. McClurg."
   },
   {
     "objectID": "w06/slides.html#dgps-and-the-emergence-of-order",
