@@ -1,3 +1,13 @@
+- week: 14
+  title: "<a href='https://georgetown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f67660cf-6420-4d88-83d1-b15c01563674' target='_blank'>Week 14: {{< var w14.title >}}</a>"
+  url: "https://georgetown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f67660cf-6420-4d88-83d1-b15c01563674"
+  date: 2024-04-24
+  categories: ["Lecture Recordings"]
+- week: 13
+  title: "<a href='https://georgetown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5354b498-3218-46e3-ba17-b15501814d90' target='_blank'>Week 13: {{< var w13.title >}}</a>"
+  url: "https://georgetown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5354b498-3218-46e3-ba17-b15501814d90"
+  date: 2024-04-17
+  categories: ["Lecture Recordings"]
 - week: 12
   title: "<a href='https://georgetown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ccae5b34-88a8-400a-a665-b14e017db1f4' target='_blank'>Week 12: {{< var w12.title >}}</a>"
   url: "https://georgetown.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ccae5b34-88a8-400a-a665-b14e017db1f4"
