@@ -2,7 +2,7 @@
 title: "Week 5: Context-Sensitive Fairness"
 subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2024, Georgetown University</span>"
 author: "Jeff Jacobs"
-institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
 bibliography: "../_DSAN5450.bib"
 date: 2024-02-14
 date-format: full
@@ -17,7 +17,7 @@ format:
     footer: "DSAN 5450 Week 5: Context-Sensitive Fairness"
     output-file: "slides.html"
     html-math-method: mathjax
-    theme: ["../_jjslides.scss"]
+    css: "../dsan-globals/jjstyles.css"
     scrollable: true
     slide-number: true
     simplemenu:
@@ -43,7 +43,9 @@ format:
 
 # Context-Free $\rightarrow$ Context-Sensitive {data-stack-name="Impossibility Results"}
 
-{{< include ../_globals-tex.qmd >}}
+{{< include ../dsan-globals/_globals-tex.qmd >}}
+
+{{< include ../dsan-globals/_globals-gg.qmd >}}
 
 ## Impossibility Results
 
@@ -272,7 +274,6 @@ Given this, the first subpart of this portion of the assignment will focus speci
 #| label: ski-revenue-lawyers
 #| fig-align: center
 #| fig-height: 8
-source("../_globals.r")
 library(dplyr)
 library(ggplot2)
 ga_lawyers <- c(21362, 22254, 23134, 23698, 24367, 24930, 25632, 26459, 27227, 27457)
@@ -307,7 +308,7 @@ ggplot(spur_df, aes(x=year, y=val_norm, color=factor(varname, labels = c("Ski Re
     color="Correlation: 99.2%",
     linetype=NULL
   ) +
-  dsan_theme("custom", 18) +
+  theme_dsan() +
   scale_x_continuous(
     breaks=seq(from=2000, to=2014, by=2)
   ) +
@@ -323,7 +324,8 @@ ggplot(spur_df, aes(x=year, y=val_norm, color=factor(varname, labels = c("Ski Re
   #geom_hline(aes(yintercept=x, color="Mean Values"), as.data.frame(list(x=0)), linewidth=0.75, alpha=1.0, show.legend = TRUE) +
   scale_color_manual(
     breaks=c('Ski Revenue', 'Lawyers in Georgia'),
-    values=c('Ski Revenue'=cbPalette[1], 'Lawyers in Georgia'=cbPalette[2]))
+    values=c('Ski Revenue'=cbPalette[1], 'Lawyers in Georgia'=cbPalette[2])
+  )
 ```
 
 :::

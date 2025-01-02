@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.23">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jeff Jacobs">
 
-<title>DSAN 5450 – Week 3: (Descriptive) Fairness in AI</title>
+<title>Week 3: (Descriptive) Fairness in AI – DSAN 5450</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -34,7 +34,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -122,9 +122,9 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../jjcustom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../sidebar.js"></script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -163,13 +163,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../w03/index.html">Week 3: {{&lt; var w03.date-md &gt;}}</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -199,6 +199,12 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="https://georgetown.zoom.us/j/94931835080?pwd=f9xg1L66RDOXjoySuPCSCLK1adbJwM.1" class="sidebar-item-text sidebar-link" target="_blank">
+ <span class="menu-text">Zoom Link</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
@@ -223,7 +229,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../recordings/index.html" class="sidebar-item-text sidebar-link">
+  <a href="https://georgetown.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=d240de45-5abb-4eea-8b13-b2590063001d" class="sidebar-item-text sidebar-link" target="_blank">
  <span class="menu-text">Recordings</span></a>
   </div>
 </li>
@@ -231,91 +237,91 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w01/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 1: Jan 17</span></a>
+ <span class="menu-text">Week 1: Jan 8</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w02/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 2: Jan 24</span></a>
+ <span class="menu-text">Week 2: Jan 15</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w03/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Week 3: Jan 31</span></a>
+ <span class="menu-text">Week 3: Jan 22</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w04/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 4: Feb 7</span></a>
+ <span class="menu-text">Week 4: Jan 29</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w05/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 5: Feb 14</span></a>
+ <span class="menu-text">Week 5: Feb 5</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w06/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 6: Feb 21</span></a>
+ <span class="menu-text">Week 6: Feb 12</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w07/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 7: Feb 28</span></a>
+ <span class="menu-text">Week 7: Feb 19</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w08/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 8: Mar 13</span></a>
+ <span class="menu-text">Week 8: Feb 26</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w09/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 9: Mar 20</span></a>
+ <span class="menu-text">Week 9: Mar 12</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w10/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 10: Mar 27</span></a>
+ <span class="menu-text">Week 10: Mar 19</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w11/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 11: Apr 3</span></a>
+ <span class="menu-text">Week 11: Mar 26</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w12/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 12: Apr 10</span></a>
+ <span class="menu-text">Week 12: Apr 2</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w13/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 13: Apr 17</span></a>
+ <span class="menu-text">Week 13: Apr 9</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../w14/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 14: Apr 24</span></a>
+ <span class="menu-text">Week 14: Apr 16</span></a>
   </div>
 </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="https://forms.gle/LLQsiwGy5kkH5n3PA" class="sidebar-item-text sidebar-link" target="&quot;_blank&quot;">
+  <a href="https://forms.gle/LLQsiwGy5kkH5n3PA" class="sidebar-item-text sidebar-link" target="_blank">
  <span class="menu-text">Anonymous Suggestions<i class="bi bi-box-arrow-up-right ps-1"></i></span></a>
   </div>
 </li>
@@ -520,7 +526,7 @@ window.Quarto = {
 <figcaption>Snorkel.AI, <a href="assets/snorkel.pdf" target="_blank"><em>An Introduction to Snorkel and Data-Centric AI</em></a></figcaption>
 </figure>
 </div>
-<div id="fig-snorkel-quote" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-snorkel-quote" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-snorkel-quote-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <blockquote class="blockquote">
@@ -544,7 +550,7 @@ Figure&nbsp;1: <em>ibid. (PS, if it seems like I’m picking on them: these are 
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-human-labor-left" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-human-labor-left" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-human-labor-left-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-figure quarto-figure-center">
@@ -710,7 +716,7 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 </section>
 <section id="descriptive-vs.-normative-judgements" class="level1 not-title-page title-11">
 <h1 class="not-title-page title-11">Descriptive vs.&nbsp;Normative Judgements</h1>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Descriptive (Is)</th>
@@ -1157,8 +1163,7 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <li>We encounter this type of problem every day if we <strong>drive</strong>! You (<span class="math inline">\(A\)</span>) and another driver (<span class="math inline">\(B\)</span>) arrive at an <strong>intersection</strong>:</li>
 </ul>
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<table class="game-table table" data-quarto-postprocess="true">
+<table class="game-table caption-top table" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd">
 <td class="game-label" style="text-align: left;"></td>
@@ -1186,7 +1191,6 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 </table>
 </div>
 </div>
-</div>
 <ul>
 <li>If <strong>both stop</strong>, we’re mostly bored: <span class="math inline">\(u_A = -1\)</span></li>
 <li>If we stop and the other person drives, we’re mad that they got to go and we didn’t: <span class="math inline">\(u_A = -3\)</span></li>
@@ -1207,8 +1211,7 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 </ul>
 </div>
 <div id="no-convention-table" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
-<div>
-<table class="game-table table" data-quarto-postprocess="true">
+<table class="game-table caption-top table" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd">
 <td class="game-label" style="text-align: left;"></td>
@@ -1234,7 +1237,6 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 </tr>
 </tbody>
 </table>
-</div>
 </div>
 </div>
 </div>
@@ -1266,8 +1268,7 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 </ul>
 </div>
 <div id="traffic-light-table" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div>
-<table class="game-table table" data-quarto-postprocess="true">
+<table class="game-table caption-top table" data-quarto-postprocess="true">
 <tbody>
 <tr class="odd">
 <td class="game-label" style="text-align: left;"></td>
@@ -1296,7 +1297,6 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 </div>
 </div>
 </div>
-</div>
 <ul>
 <li>Empirical (anthropological) findings across literally thousands of different cultures throughout the world: people are willing to <strong>give up rewards</strong> to <strong>ensure fairness</strong> (see, e.g., <span class="citation" data-cites="henrich_search_2001">Henrich et al. (<a href="#ref-henrich_search_2001" role="doc-biblioref">2001</a>)</span>)</li>
 </ul>
@@ -1305,7 +1305,7 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <section id="so-how-should-we-makechoose-conventions" class="level2 title-08">
 <h2 class="title-08 anchored" data-anchor-id="so-how-should-we-makechoose-conventions">So How Should We Make/Choose Conventions?</h2>
 <ul>
-<li><span class="citation" data-cites="hobbes_leviathan_1651">Hobbes (<a href="#ref-hobbes_leviathan_1651" role="doc-biblioref">1651</a>)</span>: Only way out of “war of all against all” is to surrender all power to one <strong>sovereign</strong> (the <em>Leviathan</em>)</li>
+<li><span class="citation" data-cites="hobbes_leviathan_1668">Hobbes (<a href="#ref-hobbes_leviathan_1668" role="doc-biblioref">1668</a>)</span>: Only way out of “war of all against all” is to surrender all power to one <strong>sovereign</strong> (the <em>Leviathan</em>)</li>
 <li><span class="citation" data-cites="rousseau_social_1762">Rousseau (<a href="#ref-rousseau_social_1762" role="doc-biblioref">1762</a>)</span>: Social contract</li>
 <li><em>[Big big ~200 year gap here… can you think of why? Hint: French Revolution in 1789]</em></li>
 <li><span class="citation" data-cites="rawls_theory_1971">Rawls (<a href="#ref-rawls_theory_1971" role="doc-biblioref">1971</a>)</span>: Social contract <strong>behind the “veil of ignorance”</strong>
@@ -1599,7 +1599,7 @@ D \perp A \iff \Pr(D = d, A = a) = \Pr(D = d)\Pr(A = a)
 </section>
 <section id="baby-steps-a-real-world-confusion-matrix" class="level2 title-11 crunch-title smaller">
 <h2 class="title-11 crunch-title smaller anchored" data-anchor-id="baby-steps-a-real-world-confusion-matrix">Baby Steps: A Real-World Confusion Matrix</h2>
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 27%">
 <col style="width: 36%">
@@ -1682,8 +1682,8 @@ Gray, Mary L., and Siddharth Suri. 2019. <em>Ghost <span>Work</span>: <span>How<
 <div id="ref-henrich_search_2001" class="csl-entry" role="listitem">
 Henrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert Gintis, and Richard McElreath. 2001. <span>“In <span>Search</span> of <span>Homo Economicus</span>: <span>Behavioral Experiments</span> in 15 <span>Small-Scale Societies</span>.”</span> <em>American Economic Review</em> 91 (2): 73–78. <a href="https://doi.org/10.1257/aer.91.2.73">https://doi.org/10.1257/aer.91.2.73</a>.
 </div>
-<div id="ref-hobbes_leviathan_1651" class="csl-entry" role="listitem">
-Hobbes, Thomas. 1651. <em>Leviathan: <span>With</span> Selected Variants from the <span>Latin</span> Edition of 1668</em>. Hackett Publishing.
+<div id="ref-hobbes_leviathan_1668" class="csl-entry" role="listitem">
+Hobbes, Thomas. 1668. <em>Leviathan: <span>With</span> Selected Variants from the <span>Latin</span> Edition of 1668</em>. Hackett Publishing.
 </div>
 <div id="ref-ingold_amazon_2016" class="csl-entry" role="listitem">
 Ingold, David, and Spencer Soper. 2016. <span>“Amazon <span>Doesn</span>’t <span>Consider</span> the <span>Race</span> of <span>Its Customers</span>. <span>Should It</span>?”</span> <em>Bloomberg</em>, April. <a href="http://www.bloomberg.com/graphics/2016-amazon-same-day/">http://www.bloomberg.com/graphics/2016-amazon-same-day/</a>.
@@ -1784,18 +1784,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1827,7 +1816,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1835,7 +1846,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

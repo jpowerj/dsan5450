@@ -11,6 +11,9 @@ website:
     contents:
       - text: "<i class='bi bi-house pe-1'></i> Home"
         href: index.qmd
+      - text: "Zoom Link"
+        href: "https://georgetown.zoom.us/j/94931835080?pwd=f9xg1L66RDOXjoySuPCSCLK1adbJwM.1"
+        target: "_blank"
       - text: "Syllabus"
         href: syllabus.qmd
       - text: "Writeups"
@@ -20,7 +23,8 @@ website:
       - text: "Final Project"
         href: final.qmd
       - text: "Recordings"
-        href: recordings/index.qmd
+        href: "https://georgetown.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=d240de45-5abb-4eea-8b13-b2590063001d"
+        target: "_blank"
       - "---"
       - text: "Week 1: {{< var w01.date-md >}}"
         href: "w01/index.qmd"
@@ -61,8 +65,4 @@ format:
     css: styles.css
     toc: true
     include-in-header:
-      text: "<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==' crossorigin='anonymous' referrerpolicy='no-referrer'></script><script src='/jjcustom.js'></script>"
-
-
-
-
+      text: "<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==' crossorigin='anonymous' referrerpolicy='no-referrer'></script><script src='/sidebar.js'></script>"

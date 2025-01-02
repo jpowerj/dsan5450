@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.23">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Jeff Jacobs">
   <title>DSAN 5450 – Week 6: Causality in Ethics and Policy</title>
@@ -43,7 +43,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -117,6 +117,7 @@
       margin-left: 2em;
     }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../dsan-globals/jjstyles.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -423,7 +424,7 @@
 Jeff Jacobs 
 </div>
         <p class="quarto-title-affiliation">
-            <a href="mailto:jj1088@georgetown.edu" target="_blank"><code>jj1088@georgetown.edu</code></a>
+            <a href="mailto:jj1088@georgetown.edu"><code>jj1088@georgetown.edu</code></a>
           </p>
     </div>
 </div>
@@ -448,6 +449,9 @@ Jeff Jacobs
 <img data-src="images/posadism_causal.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="dgps-and-the-emergence-of-order" class="slide level2 crunch-title crunch-quarto-layout-panel">
 <h2>DGPs and the Emergence of Order</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -527,8 +531,7 @@ Jeff Jacobs
 <ul>
 <li>This, however, is only a <em>mini-boss</em>. Beyond it lies the truly invincible <strong>FINAL BOSS</strong>… 🙀</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="the-fundamental-problem-of-causal-inference" class="slide level2 crunch-title crunch-ul crunch-callout title-08 scrollable">
 <h2>The <em>Fundamental</em> Problem of Causal Inference</h2>
@@ -691,7 +694,7 @@ Hume, David. 1739. <em>A <span>Treatise</span> of <span>Human Nature</span>: <sp
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p>DSAN 5450 Week 6: Causality</p>
+<p>DSAN 5450 Week 6: Causality in Ethics and Policy</p>
 </div>
 </div>
 </section></section>
@@ -977,18 +980,7 @@ Hume, David. 1739. <em>A <span>Treatise</span> of <span>Human Nature</span>: <sp
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1020,7 +1012,29 @@ Hume, David. 1739. <em>A <span>Treatise</span> of <span>Human Nature</span>: <sp
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1028,7 +1042,7 @@ Hume, David. 1739. <em>A <span>Treatise</span> of <span>Human Nature</span>: <sp
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

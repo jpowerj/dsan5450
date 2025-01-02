@@ -9,10 +9,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.23">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Jeff Jacobs">
-  <title>DSAN 5450 – Week 9: Privacy Policies, Incomplete Contracts, and Power</title>
+  <title>DSAN 5450 – Week 9: From Data Ethics to Data Policy</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -52,6 +52,7 @@
       margin-left: 2em;
     }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../dsan-globals/jjstyles.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -350,7 +351,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 9: Privacy Policies, Incomplete Contracts, and Power</h1>
+  <h1 class="title">Week 9: From Data Ethics to Data Policy</h1>
   <p class="subtitle"><em>DSAN 5450: Data Ethics and Policy</em><br><span class="subsubtitle">Spring 2024, Georgetown University</span></p>
 
 <div class="quarto-title-authors">
@@ -359,7 +360,7 @@
 Jeff Jacobs 
 </div>
         <p class="quarto-title-affiliation">
-            <a href="mailto:jj1088@georgetown.edu" target="_blank"><code>jj1088@georgetown.edu</code></a>
+            <a href="mailto:jj1088@georgetown.edu"><code>jj1088@georgetown.edu</code></a>
           </p>
     </div>
 </div>
@@ -374,7 +375,37 @@ Jeff Jacobs
 <p><span class="math display">\[
 \DeclareMathOperator*{\argmax}{argmax}
 \DeclareMathOperator*{\argmin}{argmin}
-\newcommand{\nimplies}{\;\;\not\!\!\!\!\implies}
+\newcommand{\bigexp}[1]{\exp\mkern-4mu\left[ #1 \right]}
+\newcommand{\bigexpect}[1]{\mathbb{E}\mkern-4mu \left[ #1 \right]}
+\newcommand{\definedas}{\overset{\text{defn}}{=}}
+\newcommand{\definedalign}{\overset{\phantom{\text{defn}}}{=}}
+\newcommand{\eqeventual}{\overset{\text{eventually}}{=}}
+\newcommand{\Err}{\text{Err}}
+\newcommand{\expect}[1]{\mathbb{E}[#1]}
+\newcommand{\expectsq}[1]{\mathbb{E}^2[#1]}
+\newcommand{\fw}[1]{\texttt{#1}}
+\newcommand{\given}{\mid}
+\newcommand{\green}[1]{\color{green}{#1}}
+\newcommand{\heads}{\outcome{heads}}
+\newcommand{\iid}{\overset{\text{\small{iid}}}{\sim}}
+\newcommand{\lik}{\mathcal{L}}
+\newcommand{\loglik}{\ell}
+\DeclareMathOperator*{\maximize}{maximize}
+\DeclareMathOperator*{\minimize}{minimize}
+\newcommand{\mle}{\textsf{ML}}
+\newcommand{\nimplies}{\;\not\!\!\!\!\implies}
+\newcommand{\orange}[1]{\color{orange}{#1}}
+\newcommand{\outcome}[1]{\textsf{#1}}
+\newcommand{\param}[1]{{\color{purple} #1}}
+\newcommand{\pgsamplespace}{\{\green{1},\green{2},\green{3},\purp{4},\purp{5},\purp{6}\}}
+\newcommand{\prob}[1]{P\left( #1 \right)}
+\newcommand{\purp}[1]{\color{purple}{#1}}
+\newcommand{\sign}{\text{Sign}}
+\newcommand{\spacecap}{\; \cap \;}
+\newcommand{\spacewedge}{\; \wedge \;}
+\newcommand{\tails}{\outcome{tails}}
+\newcommand{\Var}[1]{\text{Var}[#1]}
+\newcommand{\bigVar}[1]{\text{Var}\mkern-4mu \left[ #1 \right]}
 \]</span></p>
 </div>
 </div>
@@ -398,6 +429,9 @@ Jeff Jacobs
 <img data-src="images/wagner_fig.svg" class="r-stretch quarto-figure-center"><p class="caption">Figure 15 from <span class="citation" data-cites="wagner_privacy_2023">Wagner (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span>. “Obfuscatory words” are words like <em>acceptable</em>, <em>significant</em>, <em>mainly</em>, or <em>predominantly</em>, interpretated at the discretion of companies rather than users (see next slide!)</p></section>
 <section id="the-intuitive-problem-of-contracts" class="slide level2 smaller crunch-ul crunch-title crunch-quarto-figure crunch-images">
 <h2>The Intuitive Problem of Contracts</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[60,40]">
 <div class="quarto-layout-row">
 <div id="intuitive-problem-left" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
@@ -583,8 +617,7 @@ Jeff Jacobs
 </section>
 <section id="possible-steady-state-equilibria-skipping-lots-of-math" class="slide level2 crunch-title smaller title-09">
 <h2>Possible Steady-State Equilibria (Skipping Lots of Math)</h2>
-<div>
-<table class="small-table" data-quarto-postprocess="true">
+<table class="small-table caption-top" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th style="text-align: center;" data-quarto-table-cell-role="th">Produces for Self?</th>
@@ -668,7 +701,6 @@ Jeff Jacobs
 </tr>
 </tbody>
 </table>
-</div>
 </section>
 <section id="the-crucial-input-initial-conditions" class="slide level2">
 <h2>The Crucial Input: Initial Conditions</h2>
@@ -683,6 +715,9 @@ Jeff Jacobs
 </section>
 <section id="tldr" class="slide level2">
 <h2>tldr</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div id="enclosure-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -729,7 +764,7 @@ Wagner, Isabel. 2023. <span>“Privacy <span>Policies</span> Across the <span>Ag
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p>DSAN 5450 Week 9: Privacy Policies, Incomplete Contracts, and Power</p>
+<p>DSAN 5450 Week 9: From Data Ethics to Data Policy</p>
 </div>
 </div>
 </section></section>
@@ -977,18 +1012,7 @@ Wagner, Isabel. 2023. <span>“Privacy <span>Policies</span> Across the <span>Ag
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1020,7 +1044,29 @@ Wagner, Isabel. 2023. <span>“Privacy <span>Policies</span> Across the <span>Ag
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1028,7 +1074,7 @@ Wagner, Isabel. 2023. <span>“Privacy <span>Policies</span> Across the <span>Ag
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

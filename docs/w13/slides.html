@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.23">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Jeff Jacobs">
   <title>DSAN 5450 – Week 13: Standpoint Epistemology, Data Feminism</title>
@@ -52,6 +52,7 @@
       margin-left: 2em;
     }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../dsan-globals/jjstyles.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -391,6 +392,9 @@ Jeff Jacobs
 <ul>
 <li>Which they dutifully reported in a very fair paraphrase:</li>
 </ul>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[3,4]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: center;">
@@ -417,6 +421,9 @@ Jeff Jacobs
 </section>
 <section id="the-reason-i-mention-that" class="slide level2 crunch-title crunch-ul crunch-quarto-figure">
 <h2>The Reason I Mention That!</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[5,3]">
 <div class="quarto-layout-row">
 <div id="excluded-left" class="quarto-layout-cell" style="flex-basis: 62.5%;justify-content: center;">
@@ -451,6 +458,9 @@ Jeff Jacobs
 </section>
 <section id="specifically-chosen-examples" class="slide level2 crunch-title">
 <h2>Specifically-Chosen Examples</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1,1]">
 <div class="quarto-layout-row">
 <div id="labor-left" class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
@@ -520,6 +530,9 @@ Jeff Jacobs
 <ul>
 <li>(Only single-quoted, bc not as bad as “““terrorism”“” or “““smartness”““, but still p ill-defined!)</li>
 </ul>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="diversity-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -533,6 +546,9 @@ Jeff Jacobs
 </section>
 <section id="diversity-vs.-fairness-justice-1" class="slide level2">
 <h2>Diversity vs.&nbsp;Fairness / Justice</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -580,6 +596,9 @@ Representation of the world, like the world itself, is the work of men; they des
 </section>
 <section id="the-cowan-paradox" class="slide level2 crunch-title smaller">
 <h2>The Cowan “Paradox”</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div id="cowan-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -902,18 +921,7 @@ Vervecken, Dries, Bettina Hannover, and Ilka Wolter. 2013. <span>“Changing (<s
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -945,7 +953,29 @@ Vervecken, Dries, Bettina Hannover, and Ilka Wolter. 2013. <span>“Changing (<s
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -953,7 +983,7 @@ Vervecken, Dries, Bettina Hannover, and Ilka Wolter. 2013. <span>“Changing (<s
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

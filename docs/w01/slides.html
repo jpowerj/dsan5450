@@ -11,10 +11,10 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
 <link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.23">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Jeff Jacobs">
-  <meta name="dcterms.date" content="2024-01-17">
+  <meta name="dcterms.date" content="2024-01-08">
   <title>DSAN 5450 – Week 1: Introduction to the Course</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -55,6 +55,7 @@
       margin-left: 2em;
     }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../dsan-globals/jjstyles.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -385,18 +386,55 @@
 Jeff Jacobs 
 </div>
         <p class="quarto-title-affiliation">
-            <a href="mailto:jj1088@georgetown.edu" target="_blank"><code>jj1088@georgetown.edu</code></a>
+            <a href="mailto:jj1088@georgetown.edu"><code>jj1088@georgetown.edu</code></a>
           </p>
     </div>
 </div>
 
-  <p class="date">2024-01-17</p>
+  <p class="date">2024-01-08</p>
 </section>
 <section>
 <section id="who-am-i-why-is-georgetown-having-me-teach-this" class="title-slide slide level1 center" data-stack-name="Intro">
 <h1>Who Am I? Why Is Georgetown Having Me Teach This?</h1>
 <div class="hidden">
 
+</div>
+<div class="hidden">
+<p><span class="math display">\[
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\newcommand{\bigexp}[1]{\exp\mkern-4mu\left[ #1 \right]}
+\newcommand{\bigexpect}[1]{\mathbb{E}\mkern-4mu \left[ #1 \right]}
+\newcommand{\definedas}{\overset{\text{defn}}{=}}
+\newcommand{\definedalign}{\overset{\phantom{\text{defn}}}{=}}
+\newcommand{\eqeventual}{\overset{\text{eventually}}{=}}
+\newcommand{\Err}{\text{Err}}
+\newcommand{\expect}[1]{\mathbb{E}[#1]}
+\newcommand{\expectsq}[1]{\mathbb{E}^2[#1]}
+\newcommand{\fw}[1]{\texttt{#1}}
+\newcommand{\given}{\mid}
+\newcommand{\green}[1]{\color{green}{#1}}
+\newcommand{\heads}{\outcome{heads}}
+\newcommand{\iid}{\overset{\text{\small{iid}}}{\sim}}
+\newcommand{\lik}{\mathcal{L}}
+\newcommand{\loglik}{\ell}
+\DeclareMathOperator*{\maximize}{maximize}
+\DeclareMathOperator*{\minimize}{minimize}
+\newcommand{\mle}{\textsf{ML}}
+\newcommand{\nimplies}{\;\not\!\!\!\!\implies}
+\newcommand{\orange}[1]{\color{orange}{#1}}
+\newcommand{\outcome}[1]{\textsf{#1}}
+\newcommand{\param}[1]{{\color{purple} #1}}
+\newcommand{\pgsamplespace}{\{\green{1},\green{2},\green{3},\purp{4},\purp{5},\purp{6}\}}
+\newcommand{\prob}[1]{P\left( #1 \right)}
+\newcommand{\purp}[1]{\color{purple}{#1}}
+\newcommand{\sign}{\text{Sign}}
+\newcommand{\spacecap}{\; \cap \;}
+\newcommand{\spacewedge}{\; \wedge \;}
+\newcommand{\tails}{\outcome{tails}}
+\newcommand{\Var}[1]{\text{Var}[#1]}
+\newcommand{\bigVar}[1]{\text{Var}\mkern-4mu \left[ #1 \right]}
+\]</span></p>
 </div>
 </section>
 <section id="prof.-jeff-introduction" class="slide level2 crunch-title">
@@ -420,8 +458,7 @@ Jeff Jacobs
 </ul>
 </div><div class="column" style="width:45%;">
 <p><img data-src="images/bay_area_crop.png"></p>
-</div>
-</div>
+</div></div>
 <ul>
 <li><strong>Columbia</strong> (NYC) for PhD[+Postdoc] in Political Science <em>(2015-2023)</em></li>
 </ul>
@@ -433,7 +470,10 @@ Jeff Jacobs
 <img data-src="images/diss.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="why-is-georgetown-having-me-teach-this" class="slide level2 smaller title-09 crunch-title crunch-ul crunch-quarto-layout-panel">
 <h2>Why Is Georgetown Having Me Teach This?</h2>
-<div class="quarto-layout-panel" data-layout-align="center" data-layout="[1,1]">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]" data-layout-align="center">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="why-background-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <ul>
@@ -443,15 +483,15 @@ Jeff Jacobs
 </ul>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-background-right" class="quarto-figure quarto-figure-center quarto-float">
+<div id="fig-background-right" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-background-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <center>
 <div id="cell-bg-sunburst" class="cell" data-align="center" data-execution_count="2">
 <div id="bg-sunburst" class="cell-output cell-output-display">
-<div>                            <div id="5a40c9cc-a25f-49eb-b450-0e5936ce8a5a" class="plotly-graph-div" style="height:400px; width:450px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("5a40c9cc-a25f-49eb-b450-0e5936ce8a5a")) {                    Plotly.newPlot(                        "5a40c9cc-a25f-49eb-b450-0e5936ce8a5a",                        [{"branchvalues":"total","customdata":[["Quant"],["Quant"],["Social Sci"],["Social Sci"],["Humanities"],["Humanities"],["Quant"],["Social Sci"]],"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"ids":["Quant\u002fMath\u003cbr\u003e(BS)","Quant\u002fCS\u003cbr\u003e(BS,MS)","Social Sci\u002fEcon\u003cbr\u003e(BS+Job)","Social Sci\u002fPol Econ\u003cbr\u003e(PhD Pt 2)","Humanities\u002fPol Phil\u003cbr\u003e(PhD Pt 1)","Humanities","Quant","Social Sci"],"labels":["Math\u003cbr\u003e(BS)","CS\u003cbr\u003e(BS,MS)","Econ\u003cbr\u003e(BS+Job)","Pol Econ\u003cbr\u003e(PhD Pt 2)","Pol Phil\u003cbr\u003e(PhD Pt 1)","Humanities","Quant","Social Sci"],"marker":{"colors":["#E69F00","#E69F00","#009E73","#009E73","#56B4E9","#56B4E9","#E69F00","#009E73"]},"name":"","parents":["Quant","Quant","Social Sci","Social Sci","Humanities","","",""],"values":[4,6,6,5,3,3,10,11],"type":"sunburst","hoverinfo":"skip"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"legend":{"tracegroupgap":0},"height":400,"width":450,"margin":{"t":0,"l":0,"r":0,"b":0}},                        {"responsive": true}                    ).then(function(){
+<div>                            <div id="37da2756-26c2-43b3-a494-155dbafd6b43" class="plotly-graph-div" style="height:400px; width:450px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("37da2756-26c2-43b3-a494-155dbafd6b43")) {                    Plotly.newPlot(                        "37da2756-26c2-43b3-a494-155dbafd6b43",                        [{"branchvalues":"total","customdata":[["Quant"],["Quant"],["Social Sci"],["Social Sci"],["Humanities"],["Humanities"],["Quant"],["Social Sci"]],"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"ids":["Quant\u002fMath\u003cbr\u003e(BS)","Quant\u002fCS\u003cbr\u003e(BS,MS)","Social Sci\u002fEcon\u003cbr\u003e(BS+Job)","Social Sci\u002fPol Econ\u003cbr\u003e(PhD Pt 2)","Humanities\u002fPol Phil\u003cbr\u003e(PhD Pt 1)","Humanities","Quant","Social Sci"],"labels":["Math\u003cbr\u003e(BS)","CS\u003cbr\u003e(BS,MS)","Econ\u003cbr\u003e(BS+Job)","Pol Econ\u003cbr\u003e(PhD Pt 2)","Pol Phil\u003cbr\u003e(PhD Pt 1)","Humanities","Quant","Social Sci"],"marker":{"colors":["#E69F00","#E69F00","#009E73","#009E73","#56B4E9","#56B4E9","#E69F00","#009E73"]},"name":"","parents":["Quant","Quant","Social Sci","Social Sci","Humanities","","",""],"values":[4,6,6,5,3,3,10,11],"type":"sunburst","hoverinfo":"skip"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"legend":{"tracegroupgap":0},"height":400,"width":450,"margin":{"t":0,"l":0,"r":0,"b":0}},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('5a40c9cc-a25f-49eb-b450-0e5936ce8a5a');
+var gd = document.getElementById('37da2756-26c2-43b3-a494-155dbafd6b43');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -497,6 +537,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 <img data-src="images/angela_davis.webp" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="my-backgroundbiases" class="slide level2 smaller crunch-title crunch-ul crunch-quarto-layout-figure crunch-quarto-figure">
 <h2>My Background/Biases</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[4,3]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="biases-left" class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: flex-start;">
@@ -519,6 +562,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </section>
 <section id="on-the-one-hand" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-images crunch-quarto-figure">
 <h2>On the One Hand…</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div id="emails-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -545,6 +591,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </section>
 <section id="on-the-other-hand" class="slide level2 smaller crunch-title crunch-quarto-layout-panel">
 <h2>On the Other Hand…</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -572,6 +621,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </section>
 <section id="rules-of-thumb" class="slide level2 crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-images crunch-figcaption crunch-li-4 crunch-figures">
 <h2>Rules of Thumb</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div id="approach-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -595,16 +647,13 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 <section>
 <section id="ethics-as-an-axiomatic-system" class="title-slide slide level1 crunch-title crunch-figcaption crunch-images center" data-stack-name="Axioms">
 <h1>Ethics as an Axiomatic System</h1>
-<div class="hidden">
-<p><span class="math display">\[
-\DeclareMathOperator*{\argmax}{argmax}
-\DeclareMathOperator*{\argmin}{argmin}
-\newcommand{\nimplies}{\;\;\not\!\!\!\!\implies}
-\]</span></p>
-</div>
+
 </section>
 <section id="axiomatics" class="slide level2 smaller crunch-title crunch-images crunch-figcaption crunch-quarto-layout-panel crunch-quarto-figure">
 <h2>Axiomatics</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="axioms-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -637,6 +686,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </section>
 <section id="example-1-1-2" class="slide level2">
 <h2>Example: <span class="math inline">\(1 + 1 = 2\)</span></h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="one-one-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -702,6 +754,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 <li><strong>Euclid’s Fifth Postulate</strong> <span class="math inline">\(P_5\)</span>: Given a line and a point not on it, exactly one line parallel to the given line can be drawn through the point.</li>
 </ul>
 <!-- Technically, when phrased in this way, this axiom is called <a href='https://en.wikipedia.org/wiki/Playfair%27s_axiom' target='_blank'>Playfair's Axiom</a>. But it is **logically equivalent** to Euclid's Fifth Postulate! -->
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]" data-layout-align="center">
 <div class="quarto-layout-row">
 <div id="euclidean" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -721,6 +776,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </center>
 </div>
 </div>
+</div>
+<div>
+
 </div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
@@ -744,6 +802,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 <li>Suddenly, you turn the corner to encounter a hostage situation: the hostage-taker is going to kill their hostage unless someone gives them a pie in the next 30 seconds</li>
 <li>Do you give the hostage-taker the pie?</li>
 </ul>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div id="conseqentialism" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -776,7 +837,10 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </section>
 <section id="descriptive-vs.-normative" class="slide level2 smaller crunch-title crunch-quarto-layout-panel">
 <h2>Descriptive vs.&nbsp;Normative</h2>
-<div class="quarto-layout-panel" data-layout-align="center" data-layout="[1,1]">
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]" data-layout-align="center">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="norm-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <center>
@@ -795,7 +859,7 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </div>
 </div>
 </div>
-<table>
+<table class="caption-top">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -831,7 +895,7 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </div>
 </div>
 </div>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th>Descriptive (Is)</th>
@@ -852,6 +916,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </section>
 <section id="what-happens-when-we-confuse-the-two" class="slide level2 crunch-title title-08 crunch-quarto-layout-panel crunch-quarto-figure">
 <h2>What Happens When We Confuse The Two?</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div id="interpretation" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -874,6 +941,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </section>
 <section id="collective-vs.-self-interest" class="slide level2 smaller crunch-quarto-layout-panel crunch-title crunch-quarto-figure">
 <h2>Collective vs.&nbsp;Self-Interest</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div id="collective-action" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -899,6 +969,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </section>
 <section id="modeling-individual-vs.-societal-outcomes" class="slide level2 smaller title-09 crunch-title crunch-quarto-figure">
 <h2>Modeling Individual vs.&nbsp;Societal Outcomes</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="individual-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -925,6 +998,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </section>
 <section id="takeaway-for-policy-whitepapers" class="slide level2">
 <h2>Takeaway for Policy Whitepapers</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div id="takeaway-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -963,6 +1039,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 <img data-src="images/missing-datasets.jpg" class="r-stretch quarto-figure-center"><p class="caption">The <a href="https://github.com/MimiOnuoha/missing-datasets" target="_blank">Library of Missing Datasets</a>. From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></section>
 <section id="example-measuring-freedom-and-human-rights" class="slide level2">
 <h2>Example: Measuring “Freedom” and “Human Rights”</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -984,6 +1063,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </section>
 <section id="operationalization" class="slide level2 smaller crunch-title crunch-li">
 <h2>Operationalization</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[3,2]">
 <div class="quarto-layout-row">
 <div id="oper-text" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
@@ -1022,6 +1104,9 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 <img data-src="images/china_india.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="dreze_china_1991">Drèze and Sen (<a href="#/references" role="doc-biblioref" onclick="">1991</a>)</span></p></section>
 <section id="implementation" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption crunch-images">
 <h2>Implementation</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -1050,10 +1135,13 @@ Figure&nbsp;1: Years spent questing in various dungeons of academia
 </section>
 <section id="fairness" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption">
 <h2>Fairness… 🧐</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[4,3]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: flex-start;">
-<div id="fig-fairness-left" class="quarto-figure quarto-figure-center quarto-float">
+<div id="fig-fairness-left" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-fairness-left-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-figure quarto-figure-center">
@@ -1074,7 +1162,7 @@ Figure&nbsp;2: From Lily Hu, <a href="https://www.phenomenalworld.org/analysis/d
 </div>
 </div>
 <div id="fairness-right" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: flex-start;">
-<div id="fig-kasy" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
+<div id="fig-kasy" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-kasy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img data-src="images/kasy_abebe.jpeg" class="quarto-figure quarto-figure-center">
@@ -1101,6 +1189,9 @@ Figure&nbsp;3: From <span class="citation" data-cites="kasy_fairness_2021">Kasy 
 </section>
 <section id="facial-recognition-algorithms" class="slide level2 crunch-title smaller crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption">
 <h2>Facial Recognition Algorithms</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[[1,1],[1,1]]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -1142,10 +1233,13 @@ Figure&nbsp;3: From <span class="citation" data-cites="kasy_fairness_2021">Kasy 
 </section>
 <section id="large-language-models" class="slide level2 crunch-title smaller">
 <h2>Large Language Models</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[2,3]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
-<div id="fig-pronouns" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
+<div id="fig-pronouns" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-pronouns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img data-src="images/pronouns.jpg" class="quarto-figure quarto-figure-center">
@@ -1157,7 +1251,7 @@ Figure&nbsp;4: From <span class="citation" data-cites="schiebinger_machine_2020"
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
-<div id="fig-embedding-bias-right" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
+<div id="fig-embedding-bias-right" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-embedding-bias-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img data-src="images/neutralizing.png" class="quarto-figure quarto-figure-center">
@@ -1173,6 +1267,9 @@ Figure&nbsp;5: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 </section>
 <section id="military-and-police-applications-of-ai" class="slide level2 crunch-title smaller">
 <h2>Military and Police Applications of AI</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -1205,6 +1302,9 @@ Figure&nbsp;5: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 </section>
 <section id="from-week-7-onwards-you-work-at-a-think-tank" class="slide level2 smaller crunch-title title-11 crunch-images crunch-quarto-figure">
 <h2>From Week 7 Onwards, You Work At A Think Tank</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[3,4]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="think-tank-left" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: center;">
@@ -1567,18 +1667,7 @@ Whitehead, Alfred North, and Bertrand Russell. 1910. <em>Principia <span>Mathema
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1610,7 +1699,29 @@ Whitehead, Alfred North, and Bertrand Russell. 1910. <em>Principia <span>Mathema
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1618,7 +1729,7 @@ Whitehead, Alfred North, and Bertrand Russell. 1910. <em>Principia <span>Mathema
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

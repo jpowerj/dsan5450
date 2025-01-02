@@ -1,73 +1,79 @@
+zoom_url: "https://georgetown.zoom.us/j/94931835080?pwd=f9xg1L66RDOXjoySuPCSCLK1adbJwM.1"
 w01:
   weeknum: 1
   title: "Introduction to the Course"
   footer: "Introduction to the Course"
-  date-md: "Jan 17"
+  date-md: "Jan 8"
 w02:
   weeknum: 2
   title: "Machine Learning, Training Data, and Bias"
   footer: "Machine Learning, Training Data, and Bias"
-  date-md: "Jan 24"
+  date-md: "Jan 15"
 w03:
   weeknum: 3
   title: "(Descriptive) Fairness in AI"
   footer: "(Descriptive) Fairness in AI"
-  date-md: "Jan 31"
+  date-md: "Jan 22"
 w04:
   weeknum: 4
   title: "Fairness in AI"
   footer: "Fairness in AI"
-  date-md: "Feb 7"
+  date-md: "Jan 29"
 w05:
   weeknum: 5
   title: "Context-Sensitive Fairness"
   footer: "Context-Sensitive Fairness"
-  date-md: "Feb 14"
+  date-md: "Feb 5"
 w06:
   weeknum: 6
   title: "Causality in Ethics and Policy"
   footer: "Causality in Ethics and Policy"
-  date-md: "Feb 21"
+  date-md: "Feb 12"
 w07:
   weeknum: 7
-  title: "In-Class Midterm: Data Ethics, Fairness, Privacy, Causality"
-  footer: "In-Class Midterm"
-  date-md: "Feb 28"
-w08:
-  weeknum: 8
-  title: "From Data Ethics to Data Policy"
-  footer: "From Data Ethics to Data Policy"
-  date-md: "Mar 13"
-w09:
-  weeknum: 9
   title: "Privacy Policies, Incomplete Contracts, and Power"
   footer: "Privacy Policies, Incomplete Contracts, and Power"
-  date-md: "Mar 20"
+  date-md: "Feb 19"
+w08:
+  weeknum: 8
+  title: "In-Class Midterm: Data Ethics, Fairness, Privacy, Causality"
+  footer: "In-Class Midterm"
+  date-md: "Feb 26"
+w09:
+  weeknum: 9
+  title: "From Data Ethics to Data Policy"
+  footer: "From Data Ethics to Data Policy"
+  date-md: "Mar 12"
 w10:
   weeknum: 10
   title: "Econometric Policy Evaluation and Inverse Fairness"
   footer: "Econometric Policy Evaluation and Inverse Fairness"
-  date-md: "Mar 27"
+  date-md: "Mar 19"
 w11:
   weeknum: 11
   title: "Fairness vs. Social Welfare"
   footer: "Fairness vs. Social Welfare"
-  date-md: "Apr 3"
+  date-md: "Mar 26"
 w12:
   weeknum: 12
   title: "Project Talk, Causality and Identity Formation"
   footer: "Project Talk, Causality and Identity Formation"
-  date-md: "Apr 10"
+  date-md: "Apr 2"
 w13:
   weeknum: 13
   title: "Applications: Race, Class, Gender, Sexuality, and Disability (Data Feminism)"
   footer: "Data Feminism"
-  date-md: "Apr 17"
+  date-md: "Apr 9"
 w14:
   weeknum: 14
   title: "Republican Liberty and the Kindly Slavemaster"
   footer: "Republican Liberty"
-  date-md: "Apr 24"
+  date-md: "Apr 16"
+w15:
+  weeknum: 15
+  title: "Final Project Day"
+  footer: "Final Projects"
+  date-md: "Apr 23"
 hw1:
   title: "Nuts and Bolts for Fairness in AI"
   date-md: "Feb 9 (Friday), 5:59pm EST"

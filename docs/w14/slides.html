@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.23">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Jeff Jacobs">
   <title>DSAN 5450 – Week 14: Republican Liberty and the Kindly Slavemaster</title>
@@ -52,6 +52,7 @@
       margin-left: 2em;
     }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../dsan-globals/jjstyles.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -381,6 +382,9 @@ Jeff Jacobs
 </section>
 <section id="the-receipts" class="slide level2 smaller crunch-title">
 <h2>The Receipts</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -433,7 +437,7 @@ Jeff Jacobs
 <p>The weight of chains, number of stripes, hardness of labour, and other effects of a master’s cruelty, may make one servitude more miserable than another, but nevertheless, <strong>he is a slave who serves the best and gentlest man in the world, as well as he who serves the worst</strong>. <span class="citation" data-cites="sidney_discourses_1698">(<a href="#/references" role="doc-biblioref" onclick="">Sidney 1698</a>)</span>.</p>
 </blockquote>
 <blockquote>
-<p>Our home has been nothing but a playroom. I have been <strong>your doll-wife</strong>, just as at home I was <strong>papa’s doll-child</strong>; and here the <strong>children</strong> have been <strong>my dolls</strong>. <span class="citation" data-cites="ibsen_doll_1879">(<a href="#/references" role="doc-biblioref" onclick="">Ibsen 1879</a>)</span></p>
+<p>Our home has been nothing but a playroom. I have been <strong>your doll-wife</strong>, just as at home I was <strong>papa’s doll-child</strong>; and here the <strong>children</strong> have been <strong>my dolls</strong>. <span class="citation" data-cites="ibsen_dolls_1879">(<a href="#/references" role="doc-biblioref" onclick="">Ibsen 1879</a>)</span></p>
 </blockquote>
 </section>
 <section id="interpersonal-domination-mary-wollstonecraft-frederick-douglass-and-the-kindly-slavemaster" class="slide level2 crunch-title title-07">
@@ -490,7 +494,7 @@ Jeff Jacobs
 <div id="ref-douglass_my_1855" class="csl-entry" role="listitem">
 Douglass, Frederick. 1855. <em>My <span>Bondage</span> and <span>My Freedom</span></em>. Yale University Press.
 </div>
-<div id="ref-ibsen_doll_1879" class="csl-entry" role="listitem">
+<div id="ref-ibsen_dolls_1879" class="csl-entry" role="listitem">
 Ibsen, Henrik. 1879. <em>The <span>Doll</span>’s <span>House</span>: <span>A Play</span></em>. D. Appleton &amp; Company.
 </div>
 <div id="ref-jacobs_operationalizing_2024" class="csl-entry" role="listitem">
@@ -757,18 +761,7 @@ Wollstonecraft, Mary. 1792. <em>A <span>Vindication</span> of the <span>Rights</
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -800,7 +793,29 @@ Wollstonecraft, Mary. 1792. <em>A <span>Vindication</span> of the <span>Rights</
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -808,7 +823,7 @@ Wollstonecraft, Mary. 1792. <em>A <span>Vindication</span> of the <span>Rights</
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

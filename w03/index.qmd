@@ -17,7 +17,7 @@ format:
       text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'>"
     output-file: "slides.html"
     html-math-method: mathjax
-    theme: ["../_jjslides.scss"]
+    css: "../dsan-globals/jjstyles.css"
     scrollable: true
     slide-number: true
     simplemenu:
@@ -634,7 +634,7 @@ $$
 
 ## So How Should We Make/Choose Conventions? {.title-08}
 
-* @hobbes_leviathan_1651: Only way out of "war of all against all" is to surrender all power to one **sovereign** (the *Leviathan*)
+* @hobbes_leviathan_1668: Only way out of "war of all against all" is to surrender all power to one **sovereign** (the *Leviathan*)
 * @rousseau_social_1762: Social contract
 * *[Big big ~200 year gap here... can you think of why? Hint: French Revolution in 1789]*
 * @rawls_theory_1971: Social contract **behind the "veil of ignorance"**

@@ -1,5 +1,6 @@
 ---
 title: "Syllabus"
+bibliography: "_DSAN5450.bib"
 ---
 
 **Welcome to DSAN 5450: Data Ethics and Policy at Georgetown University!**
@@ -9,11 +10,11 @@ The course meets on **Wednesdays from 3:30-6pm in the <a href='https://maps.app.
 ## Course Staff
 
 * Prof. Jeff Jacobs, <a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>
-  * Office hours (Click to schedule): <a href='https://calendar.app.google/WiA9Jqit5d9mXsJf9' target='_blank'>Monday, Tuesday, 3:30-6pm</a>
-* TA Amelia Baier, <a href='mailto:ab3868@georgetown.edu' target='_blank'>`ab3868@georgetown.edu`</a>
-  * Office hours: By appointment
-* TA Sonali Dabhi, <a href='mailto:sd1387@georgetown.edu' target='_blank'>`sd1387@georgetown.edu`</a>
-  * Office hours: By appointment
+  * Office hours (Click to schedule): <a href='https://jjacobs.me/meet' target='_blank'>Monday, Tuesday, 3:30-6pm</a>
+* TA Marie Vaughan, <a href='mailto:mev71@georgetown.edu' target='_blank'>`mev71@georgetown.edu`</a>
+  * Office hours: TBD
+* TA Sam Sofman, <a href='mailto:sbs106@georgetown.edu' target='_blank'>`sbs106@georgetown.edu`</a>
+  * Office hours: TBD
 
 ## Course Description
 
@@ -25,14 +26,15 @@ The course will thus equip students with a robust ethical "toolbox" for conscien
 
 ## Course Overview
 
-The course revolves around three "pillars", which we'll examine individually before bringing them together for your final projects at the end of the class.
+The course revolves around three "pillars", which we'll examine individually before bringing them together for your final projects at the end of the class: high-level ethical issues in data science, general ethical frameworks, and public policy applications.
 
 ### Data Science
 
 A portion of the course will focus on introductions to cutting-edge technologies like self-driving cars, ChatGPT, facial detection algorithms, and various applications of AI to police and military technologies. For this portion, we'll draw fairly often from the contents of the following books:
 
+* @perez_invisible_2019: *Invisible Women: Data Bias in a World Designed for Men*.
 * Catherine D'Ignazio and Lauren F. Klein (2020). <i><a href='https://data-feminism.mitpress.mit.edu/' target='_blank'>Data Feminism</a></i>. Cambridge, MA: MIT Press. [Free, open-source!]
-* Cathy O'Neil (2016). <i><a href='https://en.wikipedia.org/wiki/Weapons_of_Math_Destruction' target='_blank'>Weapons of Math Destruction</a></i>. New York, NY: Crown Books.
+* Cathy O'Neil (2016). *[Weapons of Math Destruction](https://en.wikipedia.org/wiki/Weapons_of_Math_Destruction)*. New York, NY: Crown Books.
 
 Since there are plenty of in-depth resources available to you (e.g., other Georgetown courses!) for learning the *technical details* of these technologies, our goal in this course will be to learn just the particular *aspects* of each technology which are most relevant to the ethical and policy issues they present.
 

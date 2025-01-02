@@ -2,7 +2,7 @@
 title: "Week 6: Causality in Ethics and Policy"
 subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2024, Georgetown University</span>"
 author: "Jeff Jacobs"
-institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
 bibliography: "../_DSAN5450.bib"
 date: 2024-02-21
 date-format: full
@@ -12,10 +12,10 @@ categories:
 format:
   revealjs:
     df-print: kable
-    footer: "DSAN 5450 Week 6: Causality"
+    footer: "DSAN 5450 Week 6: {{< var w06.footer >}}"
     output-file: "slides.html"
     html-math-method: mathjax
-    theme: ["../_jjslides.scss"]
+    css: "../dsan-globals/jjstyles.css"
     scrollable: true
     slide-number: true
     simplemenu:
@@ -41,13 +41,7 @@ format:
 
 # Recap / Eureka Moment (for Midterm Prep Purposes) {.not-title-slide .title-10 data-name="Quick Midterm Thing"}
 
-::: {.hidden}
-
-```{r}
-source("../_globals.r")
-```
-
-:::
+{{< include ../dsan-globals/_globals-gg.qmd >}}
 
 * I totally forgot to mention: John Stuart Mill, the progenitor of what we today identify as **utilitarianism**, was himself tortured mercilessly, by his father John Mill (bffs with Jeremy Bentham) for the "greater good of society"!
 
@@ -90,7 +84,7 @@ gen_histo <- function(reps, num_steps) {
   plot <- ggplot(pos_df, aes(x=x)) +
     geom_histogram(aes(y = after_stat(density)), fill=cbPalette[1], binwidth = 2) +
     stat_function(fun = clt_distr) +
-    dsan_theme("quarter") +
+    theme_dsan("quarter") +
     theme(title=element_text(size=16)) +
     labs(
       title=paste0(reps," Random Walks, ",num_steps," Steps")
@@ -133,7 +127,7 @@ gen_walkplot <- function(num_people, num_steps, opacity=0.15) {
       geom_point(data = end_tib, aes(x = x, y = endpos), alpha = 0) +
       scale_x_continuous(breaks = seq(0, num_steps, num_steps / 4)) +
       scale_y_continuous(breaks = seq(-20, 20, 10)) +
-      dsan_theme("quarter") +
+      theme_dsan("quarter") +
       theme(
           legend.position = "none",
           title = element_text(size = 16)
@@ -190,7 +184,6 @@ ggMarginal(wp2, margins = "y", type = "histogram", yparams = list(binwidth = 1))
 #| label: ski-revenue-lawyers
 #| fig-align: center
 #| fig-height: 8
-source("../_globals.r")
 library(dplyr)
 library(ggplot2)
 ga_lawyers <- c(21362, 22254, 23134, 23698, 24367, 24930, 25632, 26459, 27227, 27457)
@@ -225,7 +218,7 @@ ggplot(spur_df, aes(x=year, y=val_norm, color=factor(varname, labels = c("Ski Re
     color="Correlation: 99.2%",
     linetype=NULL
   ) +
-  dsan_theme("custom", 18) +
+  theme_dsan() +
   scale_x_continuous(
     breaks=seq(from=2000, to=2014, by=2)
   ) +
@@ -241,7 +234,8 @@ ggplot(spur_df, aes(x=year, y=val_norm, color=factor(varname, labels = c("Ski Re
   #geom_hline(aes(yintercept=x, color="Mean Values"), as.data.frame(list(x=0)), linewidth=0.75, alpha=1.0, show.legend = TRUE) +
   scale_color_manual(
     breaks=c('Ski Revenue', 'Lawyers in Georgia'),
-    values=c('Ski Revenue'=cbPalette[1], 'Lawyers in Georgia'=cbPalette[2]))
+    values=c('Ski Revenue'=cbPalette[1], 'Lawyers in Georgia'=cbPalette[2])
+  )
 ```
 
 :::

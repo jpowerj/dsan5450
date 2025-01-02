@@ -2,9 +2,9 @@
 title: "Week 1: Introduction to the Course"
 subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2024, Georgetown University</span>"
 author: "Jeff Jacobs"
-institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
 bibliography: "../_DSAN5450.bib"
-date: 2024-01-17
+date: 2024-01-08
 lecnum: 1
 categories:
   - "Class Sessions"
@@ -14,8 +14,8 @@ format:
     footer: "DSAN 5450 Week 1: {{< var w01.footer >}}"
     output-file: "slides.html"
     html-math-method: mathjax
-    theme: ["../_jjslides.scss"]
     scrollable: true
+    css: "../dsan-globals/jjstyles.css"
     slide-number: true
     simplemenu:
       flat: true
@@ -40,7 +40,9 @@ format:
 
 # Who Am I? Why Is Georgetown Having Me Teach This? {data-stack-name="Intro"}
 
-{{< include ../_globals-py.qmd >}}
+{{< include ../dsan-globals/_globals-py.qmd >}}
+
+{{< include ../dsan-globals/_globals-tex.qmd >}}
 
 ## Prof. Jeff Introduction! {.crunch-title}
 
@@ -197,8 +199,6 @@ Years spent questing in various dungeons of academia
 :::
 
 # Ethics as an Axiomatic System {data-stack-name="Axioms" .crunch-title .crunch-figcaption .crunch-images}
-
-{{< include ../_globals-tex.qmd >}}
 
 ## Axiomatics {.smaller .crunch-title .crunch-images .crunch-figcaption .crunch-quarto-layout-panel .crunch-quarto-figure}
 

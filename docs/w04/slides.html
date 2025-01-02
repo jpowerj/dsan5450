@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.23">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Jeff Jacobs">
   <meta name="dcterms.date" content="2024-02-06">
@@ -53,6 +53,7 @@
       margin-left: 2em;
     }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../dsan-globals/jjstyles.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -360,7 +361,7 @@
 Jeff Jacobs 
 </div>
         <p class="quarto-title-affiliation">
-            <a href="mailto:jj1088@georgetown.edu" target="_blank"><code>jj1088@georgetown.edu</code></a>
+            <a href="mailto:jj1088@georgetown.edu"><code>jj1088@georgetown.edu</code></a>
           </p>
     </div>
 </div>
@@ -384,7 +385,7 @@ Jeff Jacobs
 </section>
 <section id="baby-steps-a-real-world-confusion-matrix" class="slide level2 title-11 crunch-title smaller">
 <h2>Baby Steps: A Real-World Confusion Matrix</h2>
-<table style="width:99%;">
+<table class="caption-top" style="width:99%;">
 <colgroup>
 <col style="width: 27%">
 <col style="width: 36%">
@@ -464,8 +465,7 @@ Jeff Jacobs
 <li>Causal Definitions</li>
 </ul>
 </div>
-</div>
-</div>
+</div></div>
 </div>
 <!-- end quarto box -->
 <ul>
@@ -675,6 +675,9 @@ A_i = \begin{cases}
 <img data-src="images/pgm_fairness.svg" class="r-stretch quarto-figure-center"><p class="caption">Your first <strong>PGM</strong>, illustrating <strong>hypothesized causal relationships</strong> between three random variables <span class="math inline">\(Y\)</span> (outcome), <span class="math inline">\(D\)</span> (decision), and <span class="math inline">\(A\)</span> (protected attribute). The <span class="math inline">\(Y\)</span> node is <strong>shaded</strong> to indicate that it is an <strong>observed</strong> value in our model, rendering the <strong>unobserved</strong> values <span class="math inline">\(D\)</span> and <span class="math inline">\(A\)</span> <strong>independent</strong> conditional on it. If I was elected Emperor of Math, equations would be abolished in favor of PGMs.</p></section>
 <section id="section" class="slide level2 crunch-title crunch-callout" data-background-video="https://jpj.georgetown.domains/dsan5450-scratch/Dead_Inside_Shuffle.mp4" data-background-size="contain" data-background-opacity="0.5">
 <h2></h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout-align="right" data-layout="[-70,30]">
 <div class="quarto-layout-row">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 70.0%;justify-content: flex-end;">
@@ -762,7 +765,7 @@ A_i = \begin{cases}
 <ul>
 <li>Aziza, Bogdan, and Charles are competing in a <strong>fitness test</strong> with four events. Goal: determine who is <strong>most fit overall</strong></li>
 </ul>
-<table>
+<table class="caption-top">
 <thead>
 <tr class="header">
 <th></th>
@@ -1121,18 +1124,7 @@ Simons, Josh. 2023. <em>Algorithms for the <span>People</span>: <span>Democracy<
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1164,7 +1156,29 @@ Simons, Josh. 2023. <em>Algorithms for the <span>People</span>: <span>Democracy<
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1172,7 +1186,7 @@ Simons, Josh. 2023. <em>Algorithms for the <span>People</span>: <span>Democracy<
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {

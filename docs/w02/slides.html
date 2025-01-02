@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.23">
+  <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Jeff Jacobs">
   <title>DSAN 5450 – Week 2: Machine Learning, Training Data, and Bias</title>
@@ -52,6 +52,7 @@
       margin-left: 2em;
     }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="../dsan-globals/jjstyles.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -359,12 +360,12 @@
 Jeff Jacobs 
 </div>
         <p class="quarto-title-affiliation">
-            <a href="mailto:jj1088@georgetown.edu" target="_blank"><code>jj1088@georgetown.edu</code></a>
+            <a href="mailto:jj1088@georgetown.edu"><code>jj1088@georgetown.edu</code></a>
           </p>
     </div>
 </div>
 
-  <p class="date">Wednesday, January 24, 2024</p>
+  <p class="date">Monday, January 15, 2024</p>
 </section>
 <section id="overview-slouching-towards-fairness" class="title-slide slide level1 smaller not-title-slide title-09 center" data-stack-name="Overview">
 <h1>Overview: Slouching Towards Fairness</h1>
@@ -409,6 +410,9 @@ Jeff Jacobs
 </ul></li>
 <li>…So what’s the issue? (What is Jeff whining about this time?)</li>
 </ul>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -436,6 +440,9 @@ Jeff Jacobs
 <img data-src="images/yells_at_cloud_edit.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="operationalization" class="slide level2 smaller crunch-title crunch-li crunch-figcaption crunch-ul crunch-quarto-layout-panel crunch-quarto-figure">
 <h2>Operationalization</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[3,2]">
 <div class="quarto-layout-row">
 <div id="oper-text" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
@@ -481,6 +488,9 @@ Jeff Jacobs
 <img data-src="images/china_india.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="dreze_china_1991">Drèze and Sen (<a href="#/references" role="doc-biblioref" onclick="">1991</a>)</span></p></section>
 <section id="implementation" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption crunch-images">
 <h2>Implementation</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -509,10 +519,13 @@ Jeff Jacobs
 </section>
 <section id="fairness" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption">
 <h2>Fairness… 🧐</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[4,3]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: flex-start;">
-<div id="fig-fairness-left" class="quarto-figure quarto-figure-center quarto-float">
+<div id="fig-fairness-left" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-fairness-left-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-figure quarto-figure-center">
@@ -533,7 +546,7 @@ Figure&nbsp;1: From Lily Hu, <a href="https://www.phenomenalworld.org/analysis/d
 </div>
 </div>
 <div id="fairness-right" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: flex-start;">
-<div id="fig-kasy" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
+<div id="fig-kasy" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-kasy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img data-src="images/kasy_abebe.jpeg" class="quarto-figure quarto-figure-center">
@@ -560,6 +573,9 @@ Figure&nbsp;2: From <span class="citation" data-cites="kasy_fairness_2021">Kasy 
 </section>
 <section id="facial-recognition-algorithms" class="slide level2 crunch-title smaller crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption">
 <h2>Facial Recognition Algorithms</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[[1,1],[1,1]]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -601,10 +617,13 @@ Figure&nbsp;2: From <span class="citation" data-cites="kasy_fairness_2021">Kasy 
 </section>
 <section id="large-language-models" class="slide level2 crunch-title smaller">
 <h2>Large Language Models</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[2,3]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
-<div id="fig-pronouns" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
+<div id="fig-pronouns" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-pronouns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img data-src="images/pronouns.jpg" class="quarto-figure quarto-figure-center">
@@ -616,7 +635,7 @@ Figure&nbsp;3: From <span class="citation" data-cites="schiebinger_machine_2020"
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
-<div id="fig-embedding-bias-right" class="quarto-figure quarto-figure-center quarto-float" data-fig-align="center">
+<div id="fig-embedding-bias-right" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-embedding-bias-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img data-src="images/neutralizing.png" class="quarto-figure quarto-figure-center">
@@ -632,6 +651,9 @@ Figure&nbsp;4: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 </section>
 <section id="military-and-police-applications-of-ai" class="slide level2 crunch-title smaller">
 <h2>Military and Police Applications of AI</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -679,6 +701,9 @@ Figure&nbsp;4: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 <li>This can, at very least, help us brainstorm how we might “correct” for it (next slides!)</li>
 </ul></li>
 </ul>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -711,6 +736,9 @@ Figure&nbsp;4: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 </section>
 <section id="removing-vs.-studying-biases" class="slide level2 smaller crunch-title">
 <h2>Removing vs.&nbsp;Studying Biases</h2>
+<div>
+
+</div>
 <div class="quarto-layout-panel" data-layout="[1,2]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
@@ -1035,18 +1063,7 @@ Wellcome Collection. 1890. <span>“Composite <span>Photographs</span>: "<span>T
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1078,7 +1095,29 @@ Wellcome Collection. 1890. <span>“Composite <span>Photographs</span>: "<span>T
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -1086,7 +1125,7 @@ Wellcome Collection. 1890. <span>“Composite <span>Photographs</span>: "<span>T
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
