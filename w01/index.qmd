@@ -4,7 +4,7 @@ subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spri
 author: "Jeff Jacobs"
 institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
 bibliography: "../_DSAN5450.bib"
-date: 2024-01-08
+date: 2024-01-15
 lecnum: 1
 categories:
   - "Class Sessions"

@@ -4,7 +4,7 @@ subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spri
 author: "Jeff Jacobs"
 institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
 bibliography: "../_DSAN5450.bib"
-date: 2024-02-06
+date: 2024-02-05
 lecnum: 4
 categories:
   - "Class Sessions"
@@ -13,7 +13,7 @@ format:
     df-print: kable
     include-in-header:
       text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'>"
-    footer: "DSAN 5450 Week 4: Fairness in AI"
+    footer: "DSAN 5450 Week 4: {{< var w04.footer >}}"
     output-file: "slides.html"
     html-math-method: mathjax
     css: "../dsan-globals/jjstyles.css"

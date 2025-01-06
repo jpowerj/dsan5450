@@ -60,8 +60,11 @@ website:
       - text: "Week 14: {{< var w14.date-md >}}"
         href: "w14/index.qmd"
       - "---"
-      - text: "Anonymous Suggestions<i class='bi bi-box-arrow-up-right ps-1'></i>"
-        href: "https://forms.gle/LLQsiwGy5kkH5n3PA"
+      - text: "Google Classroom <i class='bi bi-box-arrow-up-right ps-1'></i>"
+        href: "https://classroom.google.com/c/NzQzMjkyMzg4NjIw?cjc=ilkwdqn"
+        target: "_blank"
+      - text: "Suggestion Box <i class='bi bi-box-arrow-up-right ps-1'></i>"
+        href: "https://forms.gle/s35xJBf8Dj6XR5pr8"
         target: "_blank"
 
 format:
@@ -71,5 +74,7 @@ format:
       dark: darkly
     css: "/dsan-globals/jjstyles.css"
     toc: true
+    link-external-newwindow: true
+    link-external-icon: true
     include-in-header:
       text: "<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==' crossorigin='anonymous' referrerpolicy='no-referrer'></script><script src='/sidebar.js'></script>"

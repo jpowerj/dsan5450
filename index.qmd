@@ -1,8 +1,8 @@
 ---
 title: "DSAN 5450: Data Ethics and Policy"
 subtitle: "Wednesdays 3:30-6pm, Walsh 498"
-author: "Jeff Jacobs (<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>)"
-institute: "Georgetown University, Spring 2024"
+author: "Jeff Jacobs ([`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu))"
+institute: "Georgetown University, Spring 2025"
 listing:
   sort-ui: false
   filter-ui: false
@@ -16,9 +16,9 @@ listing:
   date-format: "MMMM D"
 ---
 
-Welcome to the homepage for ***DSAN 5450: Data Ethics and Policy*** at Georgetown University, for the Spring 2024 semester!
+Welcome to the homepage for ***DSAN 5450: Data Ethics and Policy*** at Georgetown University, for the Spring 2025 semester!
 
-The course meets on **Wednesdays from 3:30pm to 6:00pm** in the **<a href='https://maps.app.goo.gl/fVVfDFpp4MEuukXa9' target='_blank'>Walsh Building<i class='bi bi-box-arrow-up-right ps-1'></i></a>**, **Room 498**.
+The course meets on **Wednesdays from 3:30pm to 6:00pm** in the **<a href='https://maps.app.goo.gl/fVVfDFpp4MEuukXa9' target='_blank'>Walsh Building</a>**, **Room 498**.
 
 Check out the [**syllabus**](syllabus.qmd) (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:
 

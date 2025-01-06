@@ -673,7 +673,7 @@
     "href": "w06/index.html#the-result-64-steps",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "The Result: 64 Steps",
-    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))",
+    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).",
     "crumbs": [
       "Week 6: {{< var w06.date-md >}}"
     ]
@@ -831,119 +831,119 @@
   {
     "objectID": "w08/slides.html#prelim-conflict-of-interest-disclosure",
     "href": "w08/slides.html#prelim-conflict-of-interest-disclosure",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Prelim: Conflict-of-Interest Disclosure",
     "text": "Prelim: Conflict-of-Interest Disclosure\n\nJust as I laid out my biases at the beginning of the “high-level” ethics unit…\nNow I lay out my biases at the beginning of the policy unit!\ntldr: in US context, when I encounter “policy debates”, this is what they look like to me:"
   },
   {
     "objectID": "w08/slides.html#discourse-around-data-policy-in-the-us-senate",
     "href": "w08/slides.html#discourse-around-data-policy-in-the-us-senate",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Discourse Around “Data Policy” in the US Senate",
     "text": "Discourse Around “Data Policy” in the US Senate\n\n(This is ~the level at which “national conversations” are conducted around big data)"
   },
   {
     "objectID": "w08/slides.html#prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have",
     "href": "w08/slides.html#prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Prelim: Conclusion (Again, Solely My Opinion, Which I Wish I Didn’t Have)",
     "text": "Prelim: Conclusion (Again, Solely My Opinion, Which I Wish I Didn’t Have)\n\nThe US is, imo, entirely hopeless on this front… short of a massive socio-political realignment on a scale that has never before occurred, sensible and just policies (data-focused or otherwise) are for all intents and purposes impossible\nUS approach to social problems: fight “wars” against them, deport people, throw millions into prisons, blame CCP and their Singaporean CEO running dogs, blame Russian election-interferers, give billions of $ to Israeli election-interferers, and so on\n\n(Previous examples) War on Drugs, War on Poverty, War on “Welfare Queens”\n(Future examples, you owe me a lunch when they are announced) War on School Shootings, War on Climate Change, War on Lack of Healthcare, War on Long Lines\n\nBut also: my opinion truly doesn’t matter for purposes of learning about data policy\nImportant takeaway #1: I would be very very happy to be proven wrong!\n\n\nPessimism of the intellect, optimism of the will.\n—Antonio Gramsci, Founder of the PCI, 1920 (Imprisoned by Mussolini in 1926, died in prison in 1937)"
   },
   {
     "objectID": "w08/slides.html#actually-relevant-takeaway",
     "href": "w08/slides.html#actually-relevant-takeaway",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Actually-Relevant Takeaway",
     "text": "Actually-Relevant Takeaway\n\nUnlike the US, there are countries and national/international institutions where policies are formed, in varying degrees, by processes in which data comes into play\nWe’ll discuss more examples; two I can speak to directly given work as data consultant:\nEU: Consulted on project around implementation of GDPR\nUNESCO: Received grant for data-analysis of international translation policies\n\n194 UN member states who participate in formation of these policies\n2 UN member states who refuse to participate on basis of “anti-Israel bias” (you’ll never guess which ones! Hint: Apartheid South Africa, Rhodesia used to provide 3rd and 4th vote in this bloc, but no longer exist)\n\nNY MTA: Consulted on project studying NYC subway data, until passage of NYS Executive Order 157 banning state funding for any person or organization supporting boycott of Israel ¯\\_(ツ)_/¯"
   },
   {
     "objectID": "w08/slides.html#implies-comparative-perspective",
     "href": "w08/slides.html#implies-comparative-perspective",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "\\(\\implies\\) Comparative Perspective",
     "text": "\\(\\implies\\) Comparative Perspective\n\nWe’ll study various countries / international orgs and their attempts to tackle data policy issues (with hope that takeaways can be applied to the US someday as well)\nImportant to retain descriptive/normative distinction!\nThey’ll become harder to distinguish, as we discuss:\n\nWhat are the policies currently in existence?\nWhat are their drawbacks?\nAnd, among the latter, which ones could be addressed via policy? (requires understanding processes of policy formation) Which ones could not? (impossibility results…)"
   },
   {
     "objectID": "w08/slides.html#oecd-guidelines-1980",
     "href": "w08/slides.html#oecd-guidelines-1980",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "OECD Guidelines, 1980",
     "text": "OECD Guidelines, 1980\n\n“The basis for most modern privacy laws” (Sugimoto, Ekbia, and Mattioli 2016)\nCollection Limitation Principle: data may be collected “where appropriate, with the knowledge or consent of the data subject.” (OECD 1980, 14)\nUse Limitation Principle: “Personal data should not be disclosed, made available or otherwise used for purposes other than those specified [at time of collection] except with the consent of the data subject” (OECD 1980, 15)"
   },
   {
     "objectID": "w08/slides.html#eu-data-protection-directive-1995",
     "href": "w08/slides.html#eu-data-protection-directive-1995",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "EU Data Protection Directive, 1995",
     "text": "EU Data Protection Directive, 1995\n\nArt. 7: Processing allowed when “the data subject has unambiguously given his [sic] consent.”\nArt. 8: Use of sensitive data is restricted, except where “the data subject has given his [sic] explicit consent to the processing of those data.”\nArt. 26: Prohibits export of personal data to non-European countries lacking “adequate data protection”, except when “the data subject has given his [sic] consent unambiguously to the proposed transfer” (European Union 1995)\nSuperceded by GDPR in 2018"
   },
   {
     "objectID": "w08/slides.html#eu-general-data-protection-regulation-gdpr-2018",
     "href": "w08/slides.html#eu-general-data-protection-regulation-gdpr-2018",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "EU General Data Protection Regulation (GDPR), 2018",
     "text": "EU General Data Protection Regulation (GDPR), 2018\n\n\n«Consent is one of the easiest to satisfy because it allows you to do just about anything with the data» (—the text right below this screenshot)"
   },
   {
     "objectID": "w08/slides.html#reading-implementing-the-gdpr",
     "href": "w08/slides.html#reading-implementing-the-gdpr",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Reading / Implementing the GDPR",
     "text": "Reading / Implementing the GDPR\n\nMain document: 261 pages\nFor SaaS companies: a nice, 34-page abridgement"
   },
   {
     "objectID": "w08/slides.html#why-we-have-to-stop-the-individual-policy-level-descriptive-part-here",
     "href": "w08/slides.html#why-we-have-to-stop-the-individual-policy-level-descriptive-part-here",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Why We Have To Stop the Individual-Policy-Level Descriptive Part Here",
     "text": "Why We Have To Stop the Individual-Policy-Level Descriptive Part Here\n(And await your final policy papers!)\n\nFrom Piwik.pro, “17 Privacy Laws Around the Globe”"
   },
   {
     "objectID": "w08/slides.html#the-crux-of-the-normative-issues",
     "href": "w08/slides.html#the-crux-of-the-normative-issues",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "The Crux of the Normative Issues",
     "text": "The Crux of the Normative Issues"
   },
   {
     "objectID": "w08/slides.html#does-reading-understanding",
     "href": "w08/slides.html#does-reading-understanding",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Does Reading = Understanding?",
     "text": "Does Reading = Understanding?\n\nDoes reading \\(\\implies\\) understanding implications / contingencies / ambiguities?\nNLP could (and should!) be helpful (“making privacy policies machine readable […] would help users match privacy preferences against policies offered by web services”), but mostly just reveals how bad the problem is:\n\n\nFigure 15 from Wagner (2023). “Obfuscatory words” are words like acceptable, significant, mainly, or predominantly, interpretated at the discretion of companies rather than users (see next slide!)"
   },
   {
     "objectID": "w08/slides.html#the-fundamental-problem-of-contracts",
     "href": "w08/slides.html#the-fundamental-problem-of-contracts",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "The Fundamental Problem of Contracts",
     "text": "The Fundamental Problem of Contracts\n\nJust as we can’t observe two simultaneous worlds \\(W_{X = 0}\\) and \\(W_{X = 1}\\) which differ only in the value of \\(X\\),\nWe can’t foresee all possible contingencies that need to be included in a contract\n\n(We can try, though! Hence use of obfuscatory words to minimize liability)\n\nSo, when a situation arises which is not covered by a clause in the contract, what happens? What principle determines whose interpretation wins out?\n\n(Hint: It is actually literally my legal middle name…)"
   },
   {
     "objectID": "w08/slides.html#power",
     "href": "w08/slides.html#power",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "…POWER!",
     "text": "…POWER!\n\nExamples from employment contracts (tooting own horn):\nIn a private, cooperatively-owned, democratic firm, outcome determined by conversation, majority vote, unanimity, etc.\n\nThese technically exist in the US! Employing 2,380 workers, \\(\\frac{2380}{127509000} \\approx 0.0019\\%\\) of US workforce\n\nOtherwise, in a non-unionized private firm (94% of total), the outcome is determined by organizational hierarchy\n\nThis is the case for \\(\\frac{125000000}{127509000} \\approx 98.03\\%\\) of US workforce"
   },
   {
     "objectID": "w08/slides.html#descriptive-and-normative-implications",
     "href": "w08/slides.html#descriptive-and-normative-implications",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Descriptive and Normative Implications",
     "text": "Descriptive and Normative Implications\n\nWho has power w.r.t. incompleteness of contracts?\nWho ought to have power w.r.t. incompleteness of contracts?\nAnd now I can talk about the EU thing…\n\n(It wasn’t implemented)\n(But idk statute of limitations)\n(Oh well)\n\n\n\n🔥I think it’s more useful to, like, make things happen now, and then, like, apologize later🔥 —Mark Zuckerberg the 🐐"
   },
   {
     "objectID": "w08/slides.html#references",
     "href": "w08/slides.html#references",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "References",
-    "text": "References\n\n\nEuropean Union. 1995. “Directive 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data.” http://data.europa.eu/eli/dir/1995/46/oj/eng.\n\n\nOECD. 1980. OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data. Paris: Organisation for Economic Co-operation and Development. https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.\n\n\nSugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. Big Data Is Not a Monolith. MIT Press.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.\n\n\n\n\n\nDSAN 5450 Week 8: In-Class Midterm"
+    "text": "References\n\n\nEuropean Union. 1995. “Directive 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data.” http://data.europa.eu/eli/dir/1995/46/oj/eng.\n\n\nOECD. 1980. OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data. Paris: Organisation for Economic Co-operation and Development. https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.\n\n\nSugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. Big Data Is Not a Monolith. MIT Press.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.\n\n\n\n\n\nDSAN 5450 Week 8: Privacy Policies, Incomplete Contracts, and Power"
   },
   {
     "objectID": "w08/index.html",
     "href": "w08/index.html",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "",
     "text": "Open slides in new window →",
     "crumbs": [
@@ -953,7 +953,7 @@
   {
     "objectID": "w08/index.html#prelim-conflict-of-interest-disclosure",
     "href": "w08/index.html#prelim-conflict-of-interest-disclosure",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Prelim: Conflict-of-Interest Disclosure",
     "text": "Prelim: Conflict-of-Interest Disclosure\n\nJust as I laid out my biases at the beginning of the “high-level” ethics unit…\nNow I lay out my biases at the beginning of the policy unit!\ntldr: in US context, when I encounter “policy debates”, this is what they look like to me:",
     "crumbs": [
@@ -963,7 +963,7 @@
   {
     "objectID": "w08/index.html#discourse-around-data-policy-in-the-us-senate",
     "href": "w08/index.html#discourse-around-data-policy-in-the-us-senate",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Discourse Around “Data Policy” in the US Senate",
     "text": "Discourse Around “Data Policy” in the US Senate\n\n(This is ~the level at which “national conversations” are conducted around big data)",
     "crumbs": [
@@ -973,7 +973,7 @@
   {
     "objectID": "w08/index.html#prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have",
     "href": "w08/index.html#prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Prelim: Conclusion (Again, Solely My Opinion, Which I Wish I Didn’t Have)",
     "text": "Prelim: Conclusion (Again, Solely My Opinion, Which I Wish I Didn’t Have)\n\nThe US is, imo, entirely hopeless on this front… short of a massive socio-political realignment on a scale that has never before occurred, sensible and just policies (data-focused or otherwise) are for all intents and purposes impossible\nUS approach to social problems: fight “wars” against them, deport people, throw millions into prisons, blame CCP and their Singaporean CEO running dogs, blame Russian election-interferers, give billions of $ to Israeli election-interferers, and so on\n\n(Previous examples) War on Drugs, War on Poverty, War on “Welfare Queens”\n(Future examples, you owe me a lunch when they are announced) War on School Shootings, War on Climate Change, War on Lack of Healthcare, War on Long Lines\n\nBut also: my opinion truly doesn’t matter for purposes of learning about data policy\nImportant takeaway #1: I would be very very happy to be proven wrong!\n\n\nPessimism of the intellect, optimism of the will.\n—Antonio Gramsci, Founder of the PCI, 1920 (Imprisoned by Mussolini in 1926, died in prison in 1937)",
     "crumbs": [
@@ -983,7 +983,7 @@
   {
     "objectID": "w08/index.html#actually-relevant-takeaway",
     "href": "w08/index.html#actually-relevant-takeaway",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Actually-Relevant Takeaway",
     "text": "Actually-Relevant Takeaway\n\nUnlike the US, there are countries and national/international institutions where policies are formed, in varying degrees, by processes in which data comes into play\nWe’ll discuss more examples; two I can speak to directly given work as data consultant:\nEU: Consulted on project around implementation of GDPR\nUNESCO: Received grant for data-analysis of international translation policies\n\n194 UN member states who participate in formation of these policies\n2 UN member states who refuse to participate on basis of “anti-Israel bias” (you’ll never guess which ones! Hint: Apartheid South Africa, Rhodesia used to provide 3rd and 4th vote in this bloc, but no longer exist)\n\nNY MTA: Consulted on project studying NYC subway data, until passage of NYS Executive Order 157 banning state funding for any person or organization supporting boycott of Israel ¯\\_(ツ)_/¯",
     "crumbs": [
@@ -993,7 +993,7 @@
   {
     "objectID": "w08/index.html#implies-comparative-perspective",
     "href": "w08/index.html#implies-comparative-perspective",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "\\(\\implies\\) Comparative Perspective",
     "text": "\\(\\implies\\) Comparative Perspective\n\nWe’ll study various countries / international orgs and their attempts to tackle data policy issues (with hope that takeaways can be applied to the US someday as well)\nImportant to retain descriptive/normative distinction!\nThey’ll become harder to distinguish, as we discuss:\n\nWhat are the policies currently in existence?\nWhat are their drawbacks?\nAnd, among the latter, which ones could be addressed via policy? (requires understanding processes of policy formation) Which ones could not? (impossibility results…)",
     "crumbs": [
@@ -1003,7 +1003,7 @@
   {
     "objectID": "w08/index.html#oecd-guidelines-1980",
     "href": "w08/index.html#oecd-guidelines-1980",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "OECD Guidelines, 1980",
     "text": "OECD Guidelines, 1980\n\n“The basis for most modern privacy laws” (Sugimoto, Ekbia, and Mattioli 2016)\nCollection Limitation Principle: data may be collected “where appropriate, with the knowledge or consent of the data subject.” (OECD 1980, 14)\nUse Limitation Principle: “Personal data should not be disclosed, made available or otherwise used for purposes other than those specified [at time of collection] except with the consent of the data subject” (OECD 1980, 15)",
     "crumbs": [
@@ -1013,7 +1013,7 @@
   {
     "objectID": "w08/index.html#eu-data-protection-directive-1995",
     "href": "w08/index.html#eu-data-protection-directive-1995",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "EU Data Protection Directive, 1995",
     "text": "EU Data Protection Directive, 1995\n\nArt. 7: Processing allowed when “the data subject has unambiguously given his [sic] consent.”\nArt. 8: Use of sensitive data is restricted, except where “the data subject has given his [sic] explicit consent to the processing of those data.”\nArt. 26: Prohibits export of personal data to non-European countries lacking “adequate data protection”, except when “the data subject has given his [sic] consent unambiguously to the proposed transfer” (European Union 1995)\nSuperceded by GDPR in 2018",
     "crumbs": [
@@ -1023,7 +1023,7 @@
   {
     "objectID": "w08/index.html#eu-general-data-protection-regulation-gdpr-2018",
     "href": "w08/index.html#eu-general-data-protection-regulation-gdpr-2018",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "EU General Data Protection Regulation (GDPR), 2018",
     "text": "EU General Data Protection Regulation (GDPR), 2018\n\n\n\n\n\n\n«Consent is one of the easiest to satisfy because it allows you to do just about anything with the data» (—the text right below this screenshot)",
     "crumbs": [
@@ -1033,7 +1033,7 @@
   {
     "objectID": "w08/index.html#reading-implementing-the-gdpr",
     "href": "w08/index.html#reading-implementing-the-gdpr",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Reading / Implementing the GDPR",
     "text": "Reading / Implementing the GDPR\n\nMain document: 261 pages\nFor SaaS companies: a nice, 34-page abridgement",
     "crumbs": [
@@ -1043,7 +1043,7 @@
   {
     "objectID": "w08/index.html#why-we-have-to-stop-the-individual-policy-level-descriptive-part-here",
     "href": "w08/index.html#why-we-have-to-stop-the-individual-policy-level-descriptive-part-here",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Why We Have To Stop the Individual-Policy-Level Descriptive Part Here",
     "text": "Why We Have To Stop the Individual-Policy-Level Descriptive Part Here\n(And await your final policy papers!)\n\n\n\nFrom Piwik.pro, “17 Privacy Laws Around the Globe”",
     "crumbs": [
@@ -1053,7 +1053,7 @@
   {
     "objectID": "w08/index.html#the-crux-of-the-normative-issues",
     "href": "w08/index.html#the-crux-of-the-normative-issues",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "The Crux of the Normative Issues",
     "text": "The Crux of the Normative Issues",
     "crumbs": [
@@ -1063,7 +1063,7 @@
   {
     "objectID": "w08/index.html#does-reading-understanding",
     "href": "w08/index.html#does-reading-understanding",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Does Reading = Understanding?",
     "text": "Does Reading = Understanding?\n\nDoes reading \\(\\implies\\) understanding implications / contingencies / ambiguities?\nNLP could (and should!) be helpful (“making privacy policies machine readable […] would help users match privacy preferences against policies offered by web services”), but mostly just reveals how bad the problem is:\n\n\n\n\nFigure 15 from Wagner (2023). “Obfuscatory words” are words like acceptable, significant, mainly, or predominantly, interpretated at the discretion of companies rather than users (see next slide!)",
     "crumbs": [
@@ -1073,7 +1073,7 @@
   {
     "objectID": "w08/index.html#the-fundamental-problem-of-contracts",
     "href": "w08/index.html#the-fundamental-problem-of-contracts",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "The Fundamental Problem of Contracts",
     "text": "The Fundamental Problem of Contracts\n\nJust as we can’t observe two simultaneous worlds \\(W_{X = 0}\\) and \\(W_{X = 1}\\) which differ only in the value of \\(X\\),\nWe can’t foresee all possible contingencies that need to be included in a contract\n\n(We can try, though! Hence use of obfuscatory words to minimize liability)\n\nSo, when a situation arises which is not covered by a clause in the contract, what happens? What principle determines whose interpretation wins out?\n\n(Hint: It is actually literally my legal middle name…)",
     "crumbs": [
@@ -1083,7 +1083,7 @@
   {
     "objectID": "w08/index.html#power",
     "href": "w08/index.html#power",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "…POWER!",
     "text": "…POWER!\n\nExamples from employment contracts (tooting own horn):\nIn a private, cooperatively-owned, democratic firm, outcome determined by conversation, majority vote, unanimity, etc.\n\nThese technically exist in the US! Employing 2,380 workers, \\(\\frac{2380}{127509000} \\approx 0.0019\\%\\) of US workforce\n\nOtherwise, in a non-unionized private firm (94% of total), the outcome is determined by organizational hierarchy\n\nThis is the case for \\(\\frac{125000000}{127509000} \\approx 98.03\\%\\) of US workforce",
     "crumbs": [
@@ -1093,7 +1093,7 @@
   {
     "objectID": "w08/index.html#descriptive-and-normative-implications",
     "href": "w08/index.html#descriptive-and-normative-implications",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Descriptive and Normative Implications",
     "text": "Descriptive and Normative Implications\n\nWho has power w.r.t. incompleteness of contracts?\nWho ought to have power w.r.t. incompleteness of contracts?\nAnd now I can talk about the EU thing…\n\n(It wasn’t implemented)\n(But idk statute of limitations)\n(Oh well)\n\n\n\n🔥I think it’s more useful to, like, make things happen now, and then, like, apologize later🔥 —Mark Zuckerberg the 🐐",
     "crumbs": [
@@ -1103,7 +1103,7 @@
   {
     "objectID": "w08/index.html#references",
     "href": "w08/index.html#references",
-    "title": "Week 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "References",
     "text": "References\n\n\nEuropean Union. 1995. “Directive 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data.” http://data.europa.eu/eli/dir/1995/46/oj/eng.\n\n\nOECD. 1980. OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data. Paris: Organisation for Economic Co-operation and Development. https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.\n\n\nSugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. Big Data Is Not a Monolith. MIT Press.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.",
     "crumbs": [
@@ -1122,7 +1122,7 @@
     "href": "index.html",
     "title": "DSAN 5450: Data Ethics and Policy",
     "section": "",
-    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2024 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 8\n\n\n\n\nWeek 2: Machine Learning, Training Data, and Bias\n\n\nJanuary 15\n\n\n\n\nWeek 3: (Descriptive) Fairness in AI\n\n\nJanuary 31\n\n\n\n\nWeek 4: Fairness in AI\n\n\nFebruary 6\n\n\n\n\nWeek 5: Context-Sensitive Fairness\n\n\nFebruary 14\n\n\n\n\nWeek 6: Causality in Ethics and Policy\n\n\nFebruary 21\n\n\n\n\nWeek 7: Privacy Policies, Incomplete Contracts, and Power\n\n\nFebruary 28\n\n\n\n\nWeek 8: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality\n\n\nMarch 13\n\n\n\n\nWeek 9: From Data Ethics to Data Policy\n\n\nMarch 20\n\n\n\n\nWeek 10: Econometric Policy Evaluation and Inverse Fairness\n\n\nMarch 27\n\n\n\n\nWeek 11: Fairness vs. Social Welfare\n\n\nApril 3\n\n\n\n\nWeek 12: Final Projects, Causality and Racecraft\n\n\nApril 10\n\n\n\n\nWeek 13: Standpoint Epistemology, Data Feminism\n\n\nApril 17\n\n\n\n\nWeek 14: Republican Liberty and the Kindly Slavemaster\n\n\nApril 24\n\n\n\n\n\nNo matching items\n\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits.",
+    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2025 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 15\n\n\n\n\nWeek 2: Machine Learning, Training Data, and Bias\n\n\nJanuary 22\n\n\n\n\nWeek 3: (Descriptive) Fairness in AI\n\n\nJanuary 29\n\n\n\n\nWeek 4: Fairness in AI\n\n\nFebruary 5\n\n\n\n\nWeek 5: Context-Sensitive Fairness\n\n\nFebruary 14\n\n\n\n\nWeek 6: Causality in Ethics and Policy\n\n\nFebruary 21\n\n\n\n\nWeek 7: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality\n\n\nFebruary 28\n\n\n\n\nWeek 8: Privacy Policies, Incomplete Contracts, and Power\n\n\nMarch 13\n\n\n\n\nWeek 9: From Data Ethics to Data Policy\n\n\nMarch 20\n\n\n\n\nWeek 10: Econometric Policy Evaluation and Inverse Fairness\n\n\nMarch 27\n\n\n\n\nWeek 11: Fairness vs. Social Welfare\n\n\nApril 3\n\n\n\n\nWeek 12: Final Projects, Causality and Racecraft\n\n\nApril 10\n\n\n\n\nWeek 13: Standpoint Epistemology, Data Feminism\n\n\nApril 17\n\n\n\n\nWeek 14: Republican Liberty and the Kindly Slavemaster\n\n\nApril 24\n\n\n\n\n\nNo matching items\n\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits.",
     "crumbs": [
       "<i class='bi bi-house pe-1'></i> Home"
     ]
@@ -3844,7 +3844,7 @@
   {
     "objectID": "w07/index.html",
     "href": "w07/index.html",
-    "title": "Week 7: Privacy Policies, Incomplete Contracts, and Power",
+    "title": "Week 7: In-Class Midterm: Data Ethics, Fairness, Privacy, Causality",
     "section": "",
     "text": "The midterm will be posted on Google Classroom",
     "crumbs": [
@@ -4787,7 +4787,7 @@
     "href": "syllabus.html#course-staff",
     "title": "Syllabus",
     "section": "Course Staff",
-    "text": "Course Staff\n\nProf. Jeff Jacobs, jj1088@georgetown.edu\n\nOffice hours (Click to schedule): Monday, Tuesday, 3:30-6pm\n\nTA Marie Vaughan, mev71@georgetown.edu\n\nOffice hours: TBD\n\nTA Sam Sofman, sbs106@georgetown.edu\n\nOffice hours: TBD",
+    "text": "Course Staff\n\nProf. Jeff Jacobs, jj1088@georgetown.edu\n\nOffice hours (Click to schedule): Tuesdays, 3-6pm\n\nTA Marie Vaughan, mev71@georgetown.edu\n\nOffice hours: TBD\n\nTA Sam Sofman, sbs106@georgetown.edu\n\nOffice hours: TBD",
     "crumbs": [
       "Syllabus"
     ]
@@ -4817,7 +4817,7 @@
     "href": "syllabus.html#schedule",
     "title": "Syllabus",
     "section": "Schedule",
-    "text": "Schedule\nThe following is a rough map of what we will work through together throughout the semester; given that everyone learns at a different pace, my aim is to leave us with a good amount of flexibility in terms of how much time we spend on each topic: if I find that it takes me longer than a week to convey a certain topic in sufficient depth, for example, then I view it as a strength rather than a weakness of the course that we can then rearrange the calendar below by adding an extra week on that particular topic! Similarly, if it seems like I am spending too much time on a topic, to the point that students seem bored or impatient to move onto the next topic, we can move a topic intended for the next week to the current week!\n\n\n\nUnit\nWeek\nDate\nTopic\n\n\n\n\nUnit 1: Ethical Frameworks and Fairness in AI\n1\nJan 8\nIntroduction to the Course\n\n\n\n2\nJan 15\nMachine Learning, Training Data, and Bias\n\n\n\n3\nJan 22\n(Descriptive) Fairness in AI\n\n\n\n4\nJan 29\nFairness in AI\n\n\n\n\nFeb 9 (Friday), 11:59pm EST\n[Deliverable] HW1: Nuts and Bolts for Fairness in AI \n\n\n\n5\nFeb 5\nContext-Sensitive Fairness\n\n\n\n6\nFeb 12\nCausality in Ethics and Policy\n\n\n\n\nFeb 26 (Monday), 11:59pm EST\n[Deliverable] HW2: Context-Sensitive Fairness \n\n\n\n7\nFeb 19\nPrivacy Policies, Incomplete Contracts, and Power\n\n\n\n\nMar 6\nNo Class (Spring Break)\n\n\nUnit 3: Policy Frameworks\n8\nFeb 26\nIn-Class Midterm: Data Ethics, Fairness, Privacy, Causality\n\n\n\n9\nMar 12\nFrom Data Ethics to Data Policy\n\n\n\n10\nMar 19\nEconometric Policy Evaluation and Inverse Fairness\n\n\n\n11\nMar 26\nFairness vs. Social Welfare\n\n\n\n12\nApr 2\nProject Talk, Causality and Identity Formation\n\n\n\n\nApr 12 (Friday)\n[Deliverable] HW3: Privacy Policies as Incomplete Contracts \n\n\n\n13\nApr 9\nApplications: Race, Class, Gender, Sexuality, and Disability (Data Feminism)\n\n\n\n14\nApr 16\nRepublican Liberty and the Kindly Slavemaster\n\n\n\n\nApr 26 (Friday)\n[Deliverable] HW4: Policy Evaluation\n\n\n\n\nMay 10 (Friday)\n[Deliverable] Policy Whitepaper",
+    "text": "Schedule\nThe following is a rough map of what we will work through together throughout the semester; given that everyone learns at a different pace, my aim is to leave us with a good amount of flexibility in terms of how much time we spend on each topic: if I find that it takes me longer than a week to convey a certain topic in sufficient depth, for example, then I view it as a strength rather than a weakness of the course that we can then rearrange the calendar below by adding an extra week on that particular topic! Similarly, if it seems like I am spending too much time on a topic, to the point that students seem bored or impatient to move onto the next topic, we can move a topic intended for the next week to the current week!\n\n\n\nUnit\nWeek\nDate\nTopic\n\n\n\n\nUnit 1: Ethical Frameworks and Fairness in AI\n1\nJan 15\nIntroduction to the Course\n\n\n\n2\nJan 22\nMachine Learning, Training Data, and Bias\n\n\n\n3\nJan 29\n(Descriptive) Fairness in AI\n\n\n\n4\nFeb 5\nFairness in AI\n\n\n\n\nFeb 9 (Friday), 11:59pm EST\n[Deliverable] HW1: Nuts and Bolts for Fairness in AI \n\n\n\n5\nFeb 12\nContext-Sensitive Fairness\n\n\n\n6\nFeb 19\nCausality in Ethics and Policy\n\n\n\n\nFeb 26 (Monday), 11:59pm EST\n[Deliverable] HW2: Context-Sensitive Fairness \n\n\n\n7\nFeb 26\nIn-Class Midterm: Data Ethics, Fairness, Privacy, Causality\n\n\n\n\nMar 6\nNo Class (Spring Break)\n\n\nUnit 3: Policy Frameworks\n8\nMar 12\nPrivacy Policies, Incomplete Contracts, and Power\n\n\n\n9\nMar 19\nFrom Data Ethics to Data Policy\n\n\n\n10\nMar 26\nEconometric Policy Evaluation and Inverse Fairness\n\n\n\n11\nApr 2\nFairness vs. Social Welfare\n\n\n\n12\nApr 9\nProject Talk, Causality and Identity Formation\n\n\n\n\nApr 12 (Friday)\n[Deliverable] HW3: Privacy Policies as Incomplete Contracts \n\n\n\n13\nApr 16\nApplications: Race, Class, Gender, Sexuality, and Disability (Data Feminism)\n\n\n\n14\nApr 23\nRepublican Liberty and the Kindly Slavemaster\n\n\n\n\nApr 26 (Friday)\n[Deliverable] HW4: Policy Evaluation\n\n\n\n\nMay 10 (Friday)\n[Deliverable] Policy Whitepaper",
     "crumbs": [
       "Syllabus"
     ]
