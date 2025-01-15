@@ -673,7 +673,7 @@
     "href": "w06/index.html#the-result-64-steps",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "The Result: 64 Steps",
-    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).",
+    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))",
     "crumbs": [
       "Week 6: {{< var w06.date-md >}}"
     ]
@@ -4209,7 +4209,7 @@
     "href": "w01/index.html#grad-school",
     "title": "Week 1: Introduction to the Course",
     "section": "Grad School",
-    "text": "Grad School\n\nStudied abroad in Beijing (Peking University/北大) → internship with Huawei in Hong Kong (HKUST)\n\n\n\n\nStanford for MS in Computer Science (2012-2014)\nResearch Economist at UC Berkeley (2014-2015)\n\n\n\n\n\n\nColumbia (NYC) for PhD[+Postdoc] in Political Science (2015-2023)",
+    "text": "Grad School\n\nStudied abroad in Beijing (Peking University/北大) → internship with Huawei in Hong Kong (HKUST)\n\n\n\n\nStanford for MS in Computer Science (2012-2014)\nResearch Economist at UC Berkeley (2014-2015)\n\n\n\n\n\n\nColumbia for PhD[+Postdoc] in Political Science (2015-2023)",
     "crumbs": [
       "Week 1: {{< var w01.date-md >}}"
     ]
@@ -4245,11 +4245,11 @@
     ]
   },
   {
-    "objectID": "w01/index.html#my-backgroundbiases",
-    "href": "w01/index.html#my-backgroundbiases",
+    "objectID": "w01/index.html#my-biases",
+    "href": "w01/index.html#my-biases",
     "title": "Week 1: Introduction to the Course",
-    "section": "My Background/Biases",
-    "text": "My Background/Biases\n\n\n\n\n\n\n\nRaised in religious Jewish, right-wing (Revisionist Zionist) Republican environment\n“Encouraged” to emigrate to Israel for IDF service, but after learning history I renounced citizenship etc., family no longer big fans of me (Traumatic and scary to admit, ngl 🙈)\n2015-present: Teach CS + design thinking in refugee camps in West Bank and Gaza each summer (Code for Palestine)\nMetaethics: Learn about the world, challenge+update prior beliefs (Bayes’ rule!); I hope to challenge+update them throughout semester, with your help 🙂",
+    "section": "My Biases",
+    "text": "My Biases\n\n\n\n\n\n\n\nUpbringing: religious Jewish, right-wing (Revisionist Zionist) Republican environment\n“Encouraged” to emigrate to Israel for IDF service, but after learning history I renounced citizenship etc., family no longer big fans of me (Traumatic and scary to talk about, tbh 🙈)\n2015-present: Teach CS + design thinking in refugee camps in West Bank and Gaza each summer (Code for Palestine)\nMetaethics: Learn about the world, challenge+update prior beliefs (Bayes’ rule!); I hope to challenge+update them throughout semester, with your help 🙂",
     "crumbs": [
       "Week 1: {{< var w01.date-md >}}"
     ]
@@ -4289,7 +4289,7 @@
     "href": "w01/index.html#rules-of-thumb",
     "title": "Week 1: Introduction to the Course",
     "section": "Rules of Thumb",
-    "text": "Rules of Thumb\n\n\n\n\n\n\n\nAsk questions about power, about inequities and especially about structures that give rise to them!\n“Philosophers have hitherto only tried to understand the world; the point, however, is to change it.” (Marx 1845)\nDialectical implication: the more we understand it the better we’ll be at changing it\n\n\n\n\n\n\nRicardo Levins Morales Art Studio / My office",
+    "text": "Rules of Thumb\n\n\n\n\n\n\n\nAsk questions about power \\(\\leadsto\\) inequities, but especially about structures/processes that give rise to them!\n“Philosophers have hitherto only tried to understand the world; the point, however, is to change it.” (Marx 1845)\nDialectical implication: the more we understand it the better we’ll be at changing it\n\n\n\n\n\n\nRicardo Morales Art Studio / My office",
     "crumbs": [
       "Week 1: {{< var w01.date-md >}}"
     ]
@@ -4399,7 +4399,7 @@
     "href": "w01/index.html#modeling-individual-vs.-societal-outcomes",
     "title": "Week 1: Introduction to the Course",
     "section": "Modeling Individual vs. Societal Outcomes",
-    "text": "Modeling Individual vs. Societal Outcomes\n\n\n\n\n\n\n\nIndividual Perspective: Individual \\(i\\) chooses whether or not to pay union dues\n\n\n\n\n\n\n\\(\\implies\\) Social Outcome: No Union\n\n\n\n\n\nSchelling (1978)",
+    "text": "Modeling Individual vs. Societal Outcomes\n\nIndividual Perspective: Individual \\(i\\) chooses whether or not to pay union dues\n\n\n\n\n\n\n\n\n\\(\\implies\\) Social Outcome: No Union\n\n\n\n\n\n\n\\(\\implies\\) Social Outcome: Union Possible\n\n\nKey reading: Schelling (1978), Micromotives and Macrobehavior",
     "crumbs": [
       "Week 1: {{< var w01.date-md >}}"
     ]
@@ -4419,7 +4419,7 @@
     "href": "w01/index.html#data-science-for-who",
     "title": "Week 1: Introduction to the Course",
     "section": "Data Science for Who?",
-    "text": "Data Science for Who?\n\nWhat are the processes by which data is measured, recorded, and distributed?\n\n\n\n\nThe Library of Missing Datasets. From D’Ignazio and Klein (2020)",
+    "text": "Data Science for Who?\n\nWhat are the processes by which data is (or is not) measured, recorded, and distributed?\nWho are the agents doing or not-doing these things?\n\n\n\n\nThe Library of Missing Datasets. From D’Ignazio and Klein (2020)",
     "crumbs": [
       "Week 1: {{< var w01.date-md >}}"
     ]
@@ -4435,11 +4435,41 @@
     ]
   },
   {
+    "objectID": "w01/index.html#methodological-individualism",
+    "href": "w01/index.html#methodological-individualism",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Methodological Individualism",
+    "text": "Methodological Individualism\n\nAtoms exhibit properties which are fruitful for understanding the physical world: we can study these properties as “building blocks” \\(\\leadsto\\) interactions among atoms with various properties give rise to higher-level physical “things” (molecules, chemicals, cells, organisms)\nIndividuals exhibit properties which are fruitful for understanding the social world: we can study these properties as “building blocks” \\(\\leadsto\\) interactions among individuals with various properties give rise to higher-level social processes (dyads, groups, institutions)\n\n\n\nFor overthinkers: quarks \\(\\leadsto\\) atoms as mental modules \\(\\leadsto\\) individuals 😉 (Fodor 1983)",
+    "crumbs": [
+      "Week 1: {{< var w01.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w01/index.html#structural-domination-the-grapes-of-wrath",
+    "href": "w01/index.html#structural-domination-the-grapes-of-wrath",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Structural Domination: The Grapes of Wrath",
+    "text": "Structural Domination: The Grapes of Wrath\n\nBut… I built it with my hands! Straightened old nails to put the sheathing on!\nIt’s not me. There’s nothing I can do. I’ll lose my job if I don’t do it. And look—suppose you kill me? They’ll hang you, and long before you’re hung there’ll be another guy here, he’ll bump the house down. You’re not killing the right guy.\nThat’s so… Who gave you orders? I’ll go after him. He’s the one to kill.\nYou’re wrong. He got his orders from the bank. ‘Clear those people out or it’s your job.’\nWell, there’s a president of the bank. A board of directors. I’ll fill up my rifle, head to the bank.\nThe bank gets orders from the East. ‘Make the land show profit or we’ll close you up.’ We’re sorry. It’s not us. It’s the monster. The bank isn’t like a man.\nYes, but the bank is only made of men!\nNo, you’re wrong there—quite wrong. The bank is something else than men. It happens nowadays that every man in a bank hates what the bank does, and yet the bank does it. The bank is something more than men, I tell you.\nI got to figure… We all got to figure. There’s some way to stop this. There’s got to be some way to stop this. It’s not like lightning or earthquakes. We’ve got a bad thing made by men, and by God, isn’t that something we should be able to change? (Steinbeck 1939)",
+    "crumbs": [
+      "Week 1: {{< var w01.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w01/index.html#ontology-individuals-and-structures",
+    "href": "w01/index.html#ontology-individuals-and-structures",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Ontology: Individuals and Structures",
+    "text": "Ontology: Individuals and Structures\nMethodological Individualism and Structural Domination!\n\n\n\nNo longer much preoccupied with such crudities as ‘conspiracy theory’, [progressives] have become quite monolithic in attributing all things negative to handy abstractions like ‘capitalism’, ‘the state’, ‘structural oppression’, and ‘hierarchy’. Hence they have been able to conjure what might be termed the ‘miracle of immaculate genocide’, a form of genocide, that is, in which there are no actual perpetrators and no one who might ‘really’ be deemed culpable […] The parallels between this ‘cutting edge’ conception and the defense mounted by postwar Germans are as eerie as they are obvious. (Churchill 2003)\n\n\n\n\n\nGiddens (1979)",
+    "crumbs": [
+      "Week 1: {{< var w01.date-md >}}"
+    ]
+  },
+  {
     "objectID": "w01/index.html#operationalization",
     "href": "w01/index.html#operationalization",
     "title": "Week 1: Introduction to the Course",
     "section": "Operationalization",
-    "text": "Operationalization\n\n\n\n\n\n\n\nThink about claims commonly made on the basis of “data”:\n\nMarkets create economic prosperity\nA glass of wine in the evening prevents cancer\nPolicing makes communities safer\n\nHow exactly are “prosperity”, “preventing cancer”, “policing”, “community safety” being measured?\n\n\n\n\n\n\n\n\n\nStiglitz, Sen, and Fitoussi (2010)",
+    "text": "Operationalization\n\n\n\nThink of claims commonly made based on “data”:\n\nMarkets create economic prosperity\nA glass of wine in the evening prevents cancer\nPolicing makes communities safer\n\nHow exactly are “prosperity”, “preventing cancer”, “policing”, “community safety” being measured? Who is measuring? Mechanisms for feedback \\(\\leadsto\\) updates?\n\n\n\n\n\n\n\n\nStiglitz, Sen, and Fitoussi (2010)",
     "crumbs": [
       "Week 1: {{< var w01.date-md >}}"
     ]
@@ -4449,7 +4479,47 @@
     "href": "w01/index.html#what-is-being-compared",
     "title": "Week 1: Introduction to the Course",
     "section": "What Is Being Compared?",
-    "text": "What Is Being Compared?\n\nAre countries with 1 billion people comparable to countries with 10 million people?\nAre countries which were colonized comparable to the colonizing countries?\nWhen did the colonized countries gain independence?\n\n\n\n\nDrèze and Sen (1991)",
+    "text": "What Is Being Compared?\n\n\n\n\n\n\n\n\nApples\nOranges\nPears\n\n\n\n\nPolities w/250-500M people (US ~335M, UP ~250M, EU ~450M)\nPolities w/11M people in the Caribbean (Cuba, Haiti, Dominican Republic)\nPolities w/over 1 billion people (China ~1.4B, India ~1.4B, Africa ~1.4B, ⬆️+⬇️ America ~1B)\n\n\nDemocracies (US)\nDemocracies til they democratically elected someone US didn’t like (Iran, Guatemala, Chile)\nNon-democracies which brutally repress democratic movements w/US arms (Saudi Arabia)\n\n\nColonizing polities (US)\nPolities colonized by them (Philippines)\nNon-colonized polities (Ethiopia, Thailand)\n\n\nPolities w/infrastructure built up over 250+ yrs via slave labor (US 🇺🇸)\nPolities populated by former slaves (Liberia 🇱🇷)\nPolities that paid reparations to descendants of [certain] enslaved groups (Germany)\n\n\nPolities independent since 1776 (US)\nPolities independent since 1990 (Namibia)\nNon-self-governing polities (Puerto Rico, Palestine, New Caledonia)\n\n\nPolities enforcing a 60 yr embargo on Cuba (US)\nPolities with a 60 yr embargo imposed on them by US (Cuba)\nPolities without a 60 yr embargo imposed on them by US (…)",
+    "crumbs": [
+      "Week 1: {{< var w01.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w01/index.html#how-are-they-being-compared",
+    "href": "w01/index.html#how-are-they-being-compared",
+    "title": "Week 1: Introduction to the Course",
+    "section": "How Are They Being Compared?",
+    "text": "How Are They Being Compared?\n\nWhat metric? Over what timespan?\nWhat unit of obs \\(\\leadsto\\) agg function \\(\\leadsto\\) level of aggregation?\n\n\n\n\nDrèze and Sen (1991)",
+    "crumbs": [
+      "Week 1: {{< var w01.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w01/index.html#there-is-still-hope-i-promise",
+    "href": "w01/index.html#there-is-still-hope-i-promise",
+    "title": "Week 1: Introduction to the Course",
+    "section": "…There is Still Hope! I Promise!",
+    "text": "…There is Still Hope! I Promise!\n\nFair Comparison through Statistical Matching:\nLyall (2020): “Treating certain ethnic groups as second-class citizens […] leads victimized soldiers to subvert military authorities once war begins. The higher an army’s inequality, the greater its rates of desertion, side-switching, and casualties”\n\n\nMatching constructs pairs of belligerents that are similar across a wide range of traits thought to dictate battlefield performance but that vary in levels of prewar inequality. The more similar the belligerents, the better our estimate of inequality’s effects, as all other traits are shared and thus cannot explain observed differences in performance, helping assess how battlefield performance would have improved (declined) if the belligerent had a lower (higher) level of prewar inequality.\nSince [non-matched] cases are dropped […] selected cases are more representative of average belligerents/wars than outliers with few or no matches, [providing] surer ground for testing generalizability of the book’s claims than focusing solely on canonical but unrepresentative usual suspects (Germany, the United States, Israel)",
+    "crumbs": [
+      "Week 1: {{< var w01.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w01/index.html#does-inequality-cause-poor-military-performance",
+    "href": "w01/index.html#does-inequality-cause-poor-military-performance",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Does Inequality Cause Poor Military Performance?",
+    "text": "Does Inequality Cause Poor Military Performance?\n\n\n\n\n\n\n\n\nCovariates\nSultanate of Morocco Spanish-Moroccan War, 1859-60\nKhanate of Kokand War with Russia, 1864-65\n\n\n\n\n\\(X\\): Military Inequality\nLow (0.01)\nExtreme (0.70)\n\n\n\\(\\mathbf{Z}\\): Matched Covariates:\n\n\n\n\nInitial relative power\n66%\n66%\n\n\nTotal fielded force\n55,000\n50,000\n\n\nRegime type\nAbsolutist Monarchy (−6)\nAbsolute Monarchy (−7)\n\n\nDistance from capital\n208km\n265km\n\n\nStanding army\nYes\nYes\n\n\nComposite military\nYes\nYes\n\n\nInitiator\nNo\nNo\n\n\nJoiner\nNo\nNo\n\n\nDemocratic opponent\nNo\nNo\n\n\nGreat Power\nNo\nNo\n\n\nCivil war\nNo\nNo\n\n\nCombined arms\nYes\nYes\n\n\nDoctrine\nOffensive\nOffensive\n\n\nSuperior weapons\nNo\nNo\n\n\nFortifications\nYes\nYes\n\n\nForeign advisors\nYes\nYes\n\n\nTerrain\nSemiarid coastal plain\nSemiarid grassland plain\n\n\nTopography\nRugged\nRugged\n\n\nWar duration\n126 days\n378 days\n\n\nRecent war history w/opp\nYes\nYes\n\n\nFacing colonizer\nYes\nYes\n\n\nIdentity dimension\nSunni Islam/Christian\nSunni Islam/Christian\n\n\nNew leader\nYes\nYes\n\n\nPopulation\n8–8.5 million\n5–6 million\n\n\nEthnoling fractionalization (ELF)\nHigh\nHigh\n\n\nCiv-mil relations\nRuler as commander\nRuler as commander\n\n\n\\(Y\\): Battlefield Performance:\n\n\n\n\nLoss-exchange ratio\n0.43\n0.02\n\n\nMass desertion\nNo\nYes\n\n\nMass defection\nNo\nNo\n\n\nFratricidal violence\nNo\nYes",
+    "crumbs": [
+      "Week 1: {{< var w01.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w01/index.html#bro-snapped",
+    "href": "w01/index.html#bro-snapped",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Bro Snapped",
+    "text": "Bro Snapped\n(I have no dog in this fight, I’m not trying to improve military performance of an army, but got damn)",
     "crumbs": [
       "Week 1: {{< var w01.date-md >}}"
     ]
@@ -4459,7 +4529,7 @@
     "href": "w01/index.html#implementation",
     "title": "Week 1: Introduction to the Course",
     "section": "Implementation",
-    "text": "Implementation\n\n\n\n\n\n\n\n\n\nFrom D’Ignazio and Klein (2020), Ch. 6 (see also)\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Lerman and Weaver (2014)",
+    "text": "Implementation\n\n\n\n\n\n\n\n\n\nFrom D’Ignazio and Klein (2020), Ch. 6 (see also)\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Lerman and Weaver (2014) (see also)",
     "crumbs": [
       "Week 1: {{< var w01.date-md >}}"
     ]
@@ -4499,7 +4569,7 @@
     "href": "w01/index.html#large-language-models",
     "title": "Week 1: Introduction to the Course",
     "section": "Large Language Models",
-    "text": "Large Language Models\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: From Schiebinger et al. (2020)\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: From DeepLearning.AI’s Deep Learning course",
+    "text": "Large Language Models\n\n\n\nWhen to retain biases…\n\n\n\n…and when to debias\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: From Schiebinger et al. (2020)\n\n\n\n\n\n\n\n\n\n\nFigure 5: From DeepLearning.AI’s Deep Learning course",
     "crumbs": [
       "Week 1: {{< var w01.date-md >}}"
     ]
@@ -4529,7 +4599,7 @@
     "href": "w01/index.html#references",
     "title": "Week 1: Introduction to the Course",
     "section": "References",
-    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBowles, Samuel. 2016. The Moral Economy: Why Good Incentives Are No Substitute for Good Citizens. Yale University Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nHume, David. 1739. A Treatise of Human Nature: Being an Attempt to Introduce the Experimental Method of Reasoning Into Moral Subjects; and Dialogues Concerning Natural Religion. Longmans, Green.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nMarx, Karl. 1845. Thesen über Feuerbach. Stuttgart: J. H. W. Dietz. https://de.wikisource.org/wiki/Thesen_%C3%BCber_Feuerbach.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press.",
+    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBowles, Samuel. 2016. The Moral Economy: Why Good Incentives Are No Substitute for Good Citizens. Yale University Press.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFodor, Jerry A. 1983. The Modularity of Mind. MIT Press.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nGiddens, Anthony. 1979. Central Problems in Social Theory: Action, Structure, and Contradiction in Social Analysis. University of California Press.\n\n\nHume, David. 1739. A Treatise of Human Nature: Being an Attempt to Introduce the Experimental Method of Reasoning Into Moral Subjects; and Dialogues Concerning Natural Religion. Longmans, Green.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1845. Thesen über Feuerbach. Stuttgart: J. H. W. Dietz. https://de.wikisource.org/wiki/Thesen_%C3%BCber_Feuerbach.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press.",
     "crumbs": [
       "Week 1: {{< var w01.date-md >}}"
     ]
@@ -4546,7 +4616,7 @@
     "href": "w01/slides.html#grad-school",
     "title": "Week 1: Introduction to the Course",
     "section": "Grad School",
-    "text": "Grad School\n\nStudied abroad in Beijing (Peking University/北大) → internship with Huawei in Hong Kong (HKUST)\n\n\n\n\nStanford for MS in Computer Science (2012-2014)\nResearch Economist at UC Berkeley (2014-2015)\n\n\n\n\n\nColumbia (NYC) for PhD[+Postdoc] in Political Science (2015-2023)"
+    "text": "Grad School\n\nStudied abroad in Beijing (Peking University/北大) → internship with Huawei in Hong Kong (HKUST)\n\n\n\n\nStanford for MS in Computer Science (2012-2014)\nResearch Economist at UC Berkeley (2014-2015)\n\n\n\n\n\nColumbia for PhD[+Postdoc] in Political Science (2015-2023)"
   },
   {
     "objectID": "w01/slides.html#dissertation-political-science-history",
@@ -4570,11 +4640,11 @@
     "text": "Dialectics"
   },
   {
-    "objectID": "w01/slides.html#my-backgroundbiases",
-    "href": "w01/slides.html#my-backgroundbiases",
+    "objectID": "w01/slides.html#my-biases",
+    "href": "w01/slides.html#my-biases",
     "title": "Week 1: Introduction to the Course",
-    "section": "My Background/Biases",
-    "text": "My Background/Biases\n\n\n\n\n\n\n\nRaised in religious Jewish, right-wing (Revisionist Zionist) Republican environment\n“Encouraged” to emigrate to Israel for IDF service, but after learning history I renounced citizenship etc., family no longer big fans of me (Traumatic and scary to admit, ngl 🙈)\n2015-present: Teach CS + design thinking in refugee camps in West Bank and Gaza each summer (Code for Palestine)\nMetaethics: Learn about the world, challenge+update prior beliefs (Bayes’ rule!); I hope to challenge+update them throughout semester, with your help 🙂"
+    "section": "My Biases",
+    "text": "My Biases\n\n\n\n\n\n\n\nUpbringing: religious Jewish, right-wing (Revisionist Zionist) Republican environment\n“Encouraged” to emigrate to Israel for IDF service, but after learning history I renounced citizenship etc., family no longer big fans of me (Traumatic and scary to talk about, tbh 🙈)\n2015-present: Teach CS + design thinking in refugee camps in West Bank and Gaza each summer (Code for Palestine)\nMetaethics: Learn about the world, challenge+update prior beliefs (Bayes’ rule!); I hope to challenge+update them throughout semester, with your help 🙂"
   },
   {
     "objectID": "w01/slides.html#on-the-one-hand",
@@ -4602,7 +4672,7 @@
     "href": "w01/slides.html#rules-of-thumb",
     "title": "Week 1: Introduction to the Course",
     "section": "Rules of Thumb",
-    "text": "Rules of Thumb\n\n\n\n\n\n\n\nAsk questions about power, about inequities and especially about structures that give rise to them!\n“Philosophers have hitherto only tried to understand the world; the point, however, is to change it.” (Marx 1845)\nDialectical implication: the more we understand it the better we’ll be at changing it\n\n\n\n\n\n\nRicardo Levins Morales Art Studio / My office"
+    "text": "Rules of Thumb\n\n\n\n\n\n\n\nAsk questions about power \\(\\leadsto\\) inequities, but especially about structures/processes that give rise to them!\n“Philosophers have hitherto only tried to understand the world; the point, however, is to change it.” (Marx 1845)\nDialectical implication: the more we understand it the better we’ll be at changing it\n\n\n\n\n\n\nRicardo Morales Art Studio / My office"
   },
   {
     "objectID": "w01/slides.html#axiomatics",
@@ -4679,7 +4749,7 @@
     "href": "w01/slides.html#modeling-individual-vs.-societal-outcomes",
     "title": "Week 1: Introduction to the Course",
     "section": "Modeling Individual vs. Societal Outcomes",
-    "text": "Modeling Individual vs. Societal Outcomes\n\n\n\n\n\n\n\nIndividual Perspective: Individual \\(i\\) chooses whether or not to pay union dues\n\n\n\n\n\n\n\\(\\implies\\) Social Outcome: No Union\n\n\n\n\n\nSchelling (1978)"
+    "text": "Modeling Individual vs. Societal Outcomes\n\nIndividual Perspective: Individual \\(i\\) chooses whether or not to pay union dues\n\n\n\n\n\n\n\n\n\\(\\implies\\) Social Outcome: No Union\n\n\n\n\n\n\n\\(\\implies\\) Social Outcome: Union Possible\n\nKey reading: Schelling (1978), Micromotives and Macrobehavior"
   },
   {
     "objectID": "w01/slides.html#takeaway-for-policy-whitepapers",
@@ -4693,7 +4763,7 @@
     "href": "w01/slides.html#data-science-for-who",
     "title": "Week 1: Introduction to the Course",
     "section": "Data Science for Who?",
-    "text": "Data Science for Who?\n\nWhat are the processes by which data is measured, recorded, and distributed?\n\n\nThe Library of Missing Datasets. From D’Ignazio and Klein (2020)"
+    "text": "Data Science for Who?\n\nWhat are the processes by which data is (or is not) measured, recorded, and distributed?\nWho are the agents doing or not-doing these things?\n\n\nThe Library of Missing Datasets. From D’Ignazio and Klein (2020)"
   },
   {
     "objectID": "w01/slides.html#example-measuring-freedom-and-human-rights",
@@ -4703,25 +4773,74 @@
     "text": "Example: Measuring “Freedom” and “Human Rights”"
   },
   {
+    "objectID": "w01/slides.html#methodological-individualism",
+    "href": "w01/slides.html#methodological-individualism",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Methodological Individualism",
+    "text": "Methodological Individualism\n\nAtoms exhibit properties which are fruitful for understanding the physical world: we can study these properties as “building blocks” \\(\\leadsto\\) interactions among atoms with various properties give rise to higher-level physical “things” (molecules, chemicals, cells, organisms)\nIndividuals exhibit properties which are fruitful for understanding the social world: we can study these properties as “building blocks” \\(\\leadsto\\) interactions among individuals with various properties give rise to higher-level social processes (dyads, groups, institutions)\n\n\n\nFor overthinkers: quarks \\(\\leadsto\\) atoms as mental modules \\(\\leadsto\\) individuals 😉 (Fodor 1983)"
+  },
+  {
+    "objectID": "w01/slides.html#structural-domination-the-grapes-of-wrath",
+    "href": "w01/slides.html#structural-domination-the-grapes-of-wrath",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Structural Domination: The Grapes of Wrath",
+    "text": "Structural Domination: The Grapes of Wrath\n\nBut… I built it with my hands! Straightened old nails to put the sheathing on!\nIt’s not me. There’s nothing I can do. I’ll lose my job if I don’t do it. And look—suppose you kill me? They’ll hang you, and long before you’re hung there’ll be another guy here, he’ll bump the house down. You’re not killing the right guy.\nThat’s so… Who gave you orders? I’ll go after him. He’s the one to kill.\nYou’re wrong. He got his orders from the bank. ‘Clear those people out or it’s your job.’\nWell, there’s a president of the bank. A board of directors. I’ll fill up my rifle, head to the bank.\nThe bank gets orders from the East. ‘Make the land show profit or we’ll close you up.’ We’re sorry. It’s not us. It’s the monster. The bank isn’t like a man.\nYes, but the bank is only made of men!\nNo, you’re wrong there—quite wrong. The bank is something else than men. It happens nowadays that every man in a bank hates what the bank does, and yet the bank does it. The bank is something more than men, I tell you.\nI got to figure… We all got to figure. There’s some way to stop this. There’s got to be some way to stop this. It’s not like lightning or earthquakes. We’ve got a bad thing made by men, and by God, isn’t that something we should be able to change? (Steinbeck 1939)"
+  },
+  {
+    "objectID": "w01/slides.html#ontology-individuals-and-structures",
+    "href": "w01/slides.html#ontology-individuals-and-structures",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Ontology: Individuals and Structures",
+    "text": "Ontology: Individuals and Structures\nMethodological Individualism and Structural Domination!\n\n\n\nNo longer much preoccupied with such crudities as ‘conspiracy theory’, [progressives] have become quite monolithic in attributing all things negative to handy abstractions like ‘capitalism’, ‘the state’, ‘structural oppression’, and ‘hierarchy’. Hence they have been able to conjure what might be termed the ‘miracle of immaculate genocide’, a form of genocide, that is, in which there are no actual perpetrators and no one who might ‘really’ be deemed culpable […] The parallels between this ‘cutting edge’ conception and the defense mounted by postwar Germans are as eerie as they are obvious. (Churchill 2003)\n\n\n\n\n\nGiddens (1979)"
+  },
+  {
     "objectID": "w01/slides.html#operationalization",
     "href": "w01/slides.html#operationalization",
     "title": "Week 1: Introduction to the Course",
     "section": "Operationalization",
-    "text": "Operationalization\n\n\n\n\n\n\n\nThink about claims commonly made on the basis of “data”:\n\nMarkets create economic prosperity\nA glass of wine in the evening prevents cancer\nPolicing makes communities safer\n\nHow exactly are “prosperity”, “preventing cancer”, “policing”, “community safety” being measured?\n\n\n\n\n\n\n\n\n\nStiglitz, Sen, and Fitoussi (2010)"
+    "text": "Operationalization\n\n\n\nThink of claims commonly made based on “data”:\n\nMarkets create economic prosperity\nA glass of wine in the evening prevents cancer\nPolicing makes communities safer\n\nHow exactly are “prosperity”, “preventing cancer”, “policing”, “community safety” being measured? Who is measuring? Mechanisms for feedback \\(\\leadsto\\) updates?\n\n\n\n\n\n\n\n\nStiglitz, Sen, and Fitoussi (2010)"
   },
   {
     "objectID": "w01/slides.html#what-is-being-compared",
     "href": "w01/slides.html#what-is-being-compared",
     "title": "Week 1: Introduction to the Course",
     "section": "What Is Being Compared?",
-    "text": "What Is Being Compared?\n\nAre countries with 1 billion people comparable to countries with 10 million people?\nAre countries which were colonized comparable to the colonizing countries?\nWhen did the colonized countries gain independence?\n\n\nDrèze and Sen (1991)"
+    "text": "What Is Being Compared?\n\n\n\n\n\n\n\n\nApples\nOranges\nPears\n\n\n\n\nPolities w/250-500M people (US ~335M, UP ~250M, EU ~450M)\nPolities w/11M people in the Caribbean (Cuba, Haiti, Dominican Republic)\nPolities w/over 1 billion people (China ~1.4B, India ~1.4B, Africa ~1.4B, ⬆️+⬇️ America ~1B)\n\n\nDemocracies (US)\nDemocracies til they democratically elected someone US didn’t like (Iran, Guatemala, Chile)\nNon-democracies which brutally repress democratic movements w/US arms (Saudi Arabia)\n\n\nColonizing polities (US)\nPolities colonized by them (Philippines)\nNon-colonized polities (Ethiopia, Thailand)\n\n\nPolities w/infrastructure built up over 250+ yrs via slave labor (US 🇺🇸)\nPolities populated by former slaves (Liberia 🇱🇷)\nPolities that paid reparations to descendants of [certain] enslaved groups (Germany)\n\n\nPolities independent since 1776 (US)\nPolities independent since 1990 (Namibia)\nNon-self-governing polities (Puerto Rico, Palestine, New Caledonia)\n\n\nPolities enforcing a 60 yr embargo on Cuba (US)\nPolities with a 60 yr embargo imposed on them by US (Cuba)\nPolities without a 60 yr embargo imposed on them by US (…)"
+  },
+  {
+    "objectID": "w01/slides.html#how-are-they-being-compared",
+    "href": "w01/slides.html#how-are-they-being-compared",
+    "title": "Week 1: Introduction to the Course",
+    "section": "How Are They Being Compared?",
+    "text": "How Are They Being Compared?\n\nWhat metric? Over what timespan?\nWhat unit of obs \\(\\leadsto\\) agg function \\(\\leadsto\\) level of aggregation?\n\n\nDrèze and Sen (1991)"
+  },
+  {
+    "objectID": "w01/slides.html#there-is-still-hope-i-promise",
+    "href": "w01/slides.html#there-is-still-hope-i-promise",
+    "title": "Week 1: Introduction to the Course",
+    "section": "…There is Still Hope! I Promise!",
+    "text": "…There is Still Hope! I Promise!\n\nFair Comparison through Statistical Matching:\nLyall (2020): “Treating certain ethnic groups as second-class citizens […] leads victimized soldiers to subvert military authorities once war begins. The higher an army’s inequality, the greater its rates of desertion, side-switching, and casualties”\n\n\nMatching constructs pairs of belligerents that are similar across a wide range of traits thought to dictate battlefield performance but that vary in levels of prewar inequality. The more similar the belligerents, the better our estimate of inequality’s effects, as all other traits are shared and thus cannot explain observed differences in performance, helping assess how battlefield performance would have improved (declined) if the belligerent had a lower (higher) level of prewar inequality.\nSince [non-matched] cases are dropped […] selected cases are more representative of average belligerents/wars than outliers with few or no matches, [providing] surer ground for testing generalizability of the book’s claims than focusing solely on canonical but unrepresentative usual suspects (Germany, the United States, Israel)"
+  },
+  {
+    "objectID": "w01/slides.html#does-inequality-cause-poor-military-performance",
+    "href": "w01/slides.html#does-inequality-cause-poor-military-performance",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Does Inequality Cause Poor Military Performance?",
+    "text": "Does Inequality Cause Poor Military Performance?\n\n\n\n\n\n\n\n\nCovariates\nSultanate of Morocco Spanish-Moroccan War, 1859-60\nKhanate of Kokand War with Russia, 1864-65\n\n\n\n\n\\(X\\): Military Inequality\nLow (0.01)\nExtreme (0.70)\n\n\n\\(\\mathbf{Z}\\): Matched Covariates:\n\n\n\n\nInitial relative power\n66%\n66%\n\n\nTotal fielded force\n55,000\n50,000\n\n\nRegime type\nAbsolutist Monarchy (−6)\nAbsolute Monarchy (−7)\n\n\nDistance from capital\n208km\n265km\n\n\nStanding army\nYes\nYes\n\n\nComposite military\nYes\nYes\n\n\nInitiator\nNo\nNo\n\n\nJoiner\nNo\nNo\n\n\nDemocratic opponent\nNo\nNo\n\n\nGreat Power\nNo\nNo\n\n\nCivil war\nNo\nNo\n\n\nCombined arms\nYes\nYes\n\n\nDoctrine\nOffensive\nOffensive\n\n\nSuperior weapons\nNo\nNo\n\n\nFortifications\nYes\nYes\n\n\nForeign advisors\nYes\nYes\n\n\nTerrain\nSemiarid coastal plain\nSemiarid grassland plain\n\n\nTopography\nRugged\nRugged\n\n\nWar duration\n126 days\n378 days\n\n\nRecent war history w/opp\nYes\nYes\n\n\nFacing colonizer\nYes\nYes\n\n\nIdentity dimension\nSunni Islam/Christian\nSunni Islam/Christian\n\n\nNew leader\nYes\nYes\n\n\nPopulation\n8–8.5 million\n5–6 million\n\n\nEthnoling fractionalization (ELF)\nHigh\nHigh\n\n\nCiv-mil relations\nRuler as commander\nRuler as commander\n\n\n\\(Y\\): Battlefield Performance:\n\n\n\n\nLoss-exchange ratio\n0.43\n0.02\n\n\nMass desertion\nNo\nYes\n\n\nMass defection\nNo\nNo\n\n\nFratricidal violence\nNo\nYes"
+  },
+  {
+    "objectID": "w01/slides.html#bro-snapped",
+    "href": "w01/slides.html#bro-snapped",
+    "title": "Week 1: Introduction to the Course",
+    "section": "Bro Snapped",
+    "text": "Bro Snapped\n(I have no dog in this fight, I’m not trying to improve military performance of an army, but got damn)"
   },
   {
     "objectID": "w01/slides.html#implementation",
     "href": "w01/slides.html#implementation",
     "title": "Week 1: Introduction to the Course",
     "section": "Implementation",
-    "text": "Implementation\n\n\n\n\n\n\n\n\n\nFrom D’Ignazio and Klein (2020), Ch. 6 (see also)\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Lerman and Weaver (2014)"
+    "text": "Implementation\n\n\n\n\n\n\n\n\n\nFrom D’Ignazio and Klein (2020), Ch. 6 (see also)\n\n\n\n\n\n\n\n\n\n\n\n\nFrom Lerman and Weaver (2014) (see also)"
   },
   {
     "objectID": "w01/slides.html#fairness",
@@ -4749,7 +4868,7 @@
     "href": "w01/slides.html#large-language-models",
     "title": "Week 1: Introduction to the Course",
     "section": "Large Language Models",
-    "text": "Large Language Models\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: From Schiebinger et al. (2020)\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: From DeepLearning.AI’s Deep Learning course"
+    "text": "Large Language Models\n\n\n\nWhen to retain biases…\n\n\n\n…and when to debias\n\n\n\n\n\n\n\n\n\n\nFigure 4: From Schiebinger et al. (2020)\n\n\n\n\n\n\n\n\n\n\nFigure 5: From DeepLearning.AI’s Deep Learning course"
   },
   {
     "objectID": "w01/slides.html#military-and-police-applications-of-ai",
@@ -4770,7 +4889,7 @@
     "href": "w01/slides.html#references",
     "title": "Week 1: Introduction to the Course",
     "section": "References",
-    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBowles, Samuel. 2016. The Moral Economy: Why Good Incentives Are No Substitute for Good Citizens. Yale University Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nHume, David. 1739. A Treatise of Human Nature: Being an Attempt to Introduce the Experimental Method of Reasoning Into Moral Subjects; and Dialogues Concerning Natural Religion. Longmans, Green.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nMarx, Karl. 1845. Thesen über Feuerbach. Stuttgart: J. H. W. Dietz. https://de.wikisource.org/wiki/Thesen_%C3%BCber_Feuerbach.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press.\n\n\n\n\n\n\nDSAN 5450 Week 1: Introduction to the Course"
+    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBowles, Samuel. 2016. The Moral Economy: Why Good Incentives Are No Substitute for Good Citizens. Yale University Press.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFodor, Jerry A. 1983. The Modularity of Mind. MIT Press.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nGiddens, Anthony. 1979. Central Problems in Social Theory: Action, Structure, and Contradiction in Social Analysis. University of California Press.\n\n\nHume, David. 1739. A Treatise of Human Nature: Being an Attempt to Introduce the Experimental Method of Reasoning Into Moral Subjects; and Dialogues Concerning Natural Religion. Longmans, Green.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1845. Thesen über Feuerbach. Stuttgart: J. H. W. Dietz. https://de.wikisource.org/wiki/Thesen_%C3%BCber_Feuerbach.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press.\n\n\n\n\n\n\nDSAN 5450 Week 1: Introduction to the Course"
   },
   {
     "objectID": "syllabus.html",

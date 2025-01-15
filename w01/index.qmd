@@ -1,6 +1,6 @@
 ---
 title: "Week 1: Introduction to the Course"
-subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2024, Georgetown University</span>"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2025, Georgetown University</span>"
 author: "Jeff Jacobs"
 institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
 bibliography: "../_DSAN5450.bib"
@@ -68,7 +68,7 @@ format:
 :::
 :::
 
-* **Columbia** (NYC) for PhD[+Postdoc] in Political Science *(2015-2023)*
+* **Columbia** for PhD[+Postdoc] in Political Science *(2015-2023)*
 
 ## Dissertation (Political Science + History) {.title-09}
 
@@ -131,13 +131,13 @@ Years spent questing in various dungeons of academia
 
 ![](images/angela_davis.webp){fig-align="center"}
 
-## My Background/Biases {.smaller .crunch-title .crunch-ul .crunch-quarto-layout-figure .crunch-quarto-figure}
+## My Biases {.smaller .crunch-title .crunch-ul .crunch-quarto-layout-figure .crunch-quarto-figure}
 
 ::: {layout="[4,3]" layout-valign="center"}
 ::: {#biases-left}
 
-* Raised in religious Jewish, right-wing (Revisionist Zionist) Republican environment
-* "Encouraged" to emigrate to Israel for IDF service, but after learning history I renounced citizenship etc., family no longer big fans of me (Traumatic and scary to admit, ngl 🙈)
+* Upbringing: religious Jewish, right-wing (Revisionist Zionist) Republican environment
+* "Encouraged" to emigrate to Israel for IDF service, but after learning history I renounced citizenship etc., family no longer big fans of me (Traumatic and scary to talk about, tbh 🙈)
 * 2015-present: Teach CS + design thinking in refugee camps in West Bank and Gaza each summer (Code for Palestine)
 * Metaethics: Learn about the world, challenge+update prior beliefs (Bayes' rule!); I hope to challenge+update them throughout semester, with your help 🙂
 
@@ -182,19 +182,19 @@ Years spent questing in various dungeons of academia
 {{< video https://www.youtube.com/watch?v=Dq6Y6LSjulU width="100%" height="550" align="center" >}}
 </center>
 
-## Rules of Thumb {.crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-images .crunch-figcaption .crunch-li-4 .crunch-figures}
+## Rules of Thumb {.crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-img .crunch-figcaption .crunch-li-4 .crunch-figures}
 
 ::: {layout="[1,1]"}
 
 ::: {#approach-text}
 
-* Ask questions about **power**, about **inequities** and especially about **structures** that give rise to them!
+* Ask questions about **power** $\leadsto$ **inequities**, but especially about **structures/processes** that give rise to them!
 * "Philosophers have hitherto only tried to *understand* the world; the point, however, is to *change* it." [@marx_thesen_1845]
 * Dialectical implication: the more we understand it the better we'll be at changing it
 
 :::
 
-![<a href='https://www.rlmartstudio.com/product/paradox/' target='_blank'>Ricardo Levins Morales Art Studio</a> / My office](images/camara3.jpg){fig-align="center" width="320"}
+![<a href='https://www.rlmartstudio.com/product/paradox/' target='_blank'>Ricardo Morales Art Studio</a> / My office](images/camara3.jpg){fig-align="center" width="320"}
 
 :::
 
@@ -429,21 +429,26 @@ $\neg P_5 \implies T \neq 180^\circ$
 
 ## Modeling Individual vs. Societal Outcomes {.smaller .title-09 .crunch-title .crunch-quarto-figure}
 
-::: {layout="[1,1]" layout-valign="center"}
-
-::: {#individual-text}
-
 * *Individual Perspective*: **Individual $i$** chooses whether or not to pay union dues
 
-![](images/schelling.svg){fig-align="center" width="460"}
+:::: {.columns}
+::: {.column width="50%"}
+
+![](images/schelling_open_shop.svg){fig-align="center" width="520"}
 
 $\implies$ *Social Outcome*: No Union
 
 :::
+::: {.column width="50%"}
 
-![@schelling_micromotives_1978](images/schelling.jpeg){fig-align="center" width="340"}
+![](images/schelling_closed_shop.svg){fig-align="center" width="520"}
+
+$\implies$ *Social Outcome*: Union Possible
 
 :::
+::::
+
+Key reading: @schelling_micromotives_1978, *Micromotives and Macrobehavior*
 
 ## Takeaway for Policy Whitepapers
 
@@ -464,13 +469,15 @@ $\implies$ *Social Outcome*: No Union
 # Ethical Issues in Data Science {.title-11 .not-title-slide .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-title data-stack-name="Data Science"}
 
 * Data Science for Who?
+* Methodological Individualism
 * Operationalization
 * Fair Comparisons
 * Implementation
 
-## Data Science for Who?
+## Data Science for Who? {.crunch-title .crunch-ul}
 
-* What are the processes by which data is **measured**, **recorded**, and **distributed**?
+* What are the processes by which data is (or is not) **measured**, **recorded**, and **distributed**?
+* Who are the **agents** doing or not-doing these things?
 
 ![The <a href='https://github.com/MimiOnuoha/missing-datasets' target='_blank'>Library of Missing Datasets</a>. From @dignazio_data_2020](images/missing-datasets.jpg){fig-align="center"}
 
@@ -484,47 +491,172 @@ $\implies$ *Social Outcome*: No Union
 
 :::
 
+## Methodological Individualism {.crunch-title .crunch-li-8 .footnotes-0}
+
+* **Atoms** exhibit properties which are fruitful for understanding the physical world: we can study these properties as "building blocks" $\leadsto$ interactions among atoms with various properties give rise to higher-level physical "things" (molecules, chemicals, cells, organisms)
+* **Individuals** exhibit properties which are fruitful for understanding the social world: we can study these properties as "building blocks" $\leadsto$ interactions among individuals with various properties give rise to higher-level social processes (dyads, groups, institutions)
+
+::: {.aside}
+
+For overthinkers: **quarks** $\leadsto$ atoms as **mental modules** $\leadsto$ individuals 😉 [@fodor_modularity_1983]
+
+:::
+
+## Structural Domination: The Grapes of Wrath {.smaller .crunch-title .title-12 .crunch-blockquote .blockquote-90 .crunch-p-8}
+
+> But... **I built it with my hands!** Straightened old nails to put the sheathing on!
+> 
+> **It's not me. There's nothing I can do. I'll lose my job if I don't do it.** And look---suppose you kill me? They'll hang you, and long before you're hung there'll be another guy here, he'll bump the house down. You're not killing the right guy.
+> 
+> That's so... **Who gave you orders? I'll go after him. He's the one to kill.**
+> 
+> You're wrong. **He got his orders from the bank.** 'Clear those people out or it's your job.'
+>
+> Well, there's a president of the bank. A board of directors. I'll fill up my rifle, head to the bank.
+>
+> The bank gets orders from the East. 'Make the land show profit or we'll close you up.' We're sorry. **It's not us. It's the monster.** The bank isn't like a man.
+> 
+> Yes, but the bank is only made of men!
+>
+> No, you're wrong there---quite wrong. The bank is something else than men. It happens nowadays that every man in a bank hates what the bank does, and yet the bank does it. The bank is something more than men, I tell you.
+> 
+> I got to figure... We all got to figure. **There's some way to stop this. There's got to be some way to stop this. It's not like lightning or earthquakes. We've got a bad thing made by men, and by God, isn't that something we should be able to change?** [@steinbeck_grapes_1939]
+
+## Ontology: Individuals *and* Structures {.smaller .crunch-title .crunch-blockquote}
+
+Methodological Individualism **and** Structural Domination!
+
+:::: {.columns}
+::: {.column width="60%"}
+
+> No longer much preoccupied with such crudities as 'conspiracy theory', [progressives] have become quite monolithic in attributing all things negative to handy abstractions like 'capitalism', 'the state', 'structural oppression', and 'hierarchy'. Hence they have been able to conjure what might be termed the 'miracle of immaculate genocide', a form of genocide, that is, in which there are no actual perpetrators and no one who might 'really' be deemed culpable [...] The parallels between this 'cutting edge' conception and the defense mounted by postwar Germans are as eerie as they are obvious. [@churchill_justice_2003]
+
+:::
+::: {.column width="40%"}
+
+![@giddens_central_1979](images/giddens.jpg){fig-align="center"}
+
+:::
+::::
+
 ## Operationalization {.smaller .crunch-title .crunch-li}
 
-::: {layout="[3,2]"}
+:::: {.columns}
+::: {.column width="68%"}
 
-::: {#oper-text}
-
-* Think about claims commonly made on the basis of "data":
+* Think of claims commonly made based on "data":
   * Markets create economic prosperity
   * A glass of wine in the evening prevents cancer
   * Policing makes communities safer
-* How exactly are "prosperity", "preventing cancer", "policing", "community safety" being **measured**?
+* How exactly are "prosperity", "preventing cancer", "policing", "community safety" being **measured**? **Who** is measuring? Mechanisms for **feedback** $\leadsto$ updates?
 
 <center>
 {{< video https://jpj.georgetown.domains/dsan5450-scratch/huey.mp4 height="300" >}}
 </center>
 
 :::
+::: {.column width="32%"}
 
 ![@stiglitz_mismeasuring_2010](images/mismeasuring.jpg){fig-align="center"}
 
 :::
+::::
 
-## What Is Being Compared? {.crunch-title .crunch-ul}
+## What Is Being Compared? {.smaller .crunch-title .crunch-ul .table-87}
 
-* Are countries with 1 billion people comparable to countries with 10 million people?
-* Are countries which were colonized comparable to the colonizing countries?
-* When did the colonized countries gain independence?
+| Apples | Oranges | Pears |
+| - | - | - |
+| Polities w/250-500M people (US ~335M, UP ~250M, EU ~450M) | Polities w/11M people in the Caribbean (Cuba, Haiti, Dominican Republic) | Polities w/over 1 billion people (China ~1.4B, India ~1.4B, Africa ~1.4B, ⬆️+⬇️ America ~1B) |
+| Democracies (US) | Democracies til they democratically elected someone US didn't like (Iran, Guatemala, Chile) | Non-democracies which brutally repress democratic movements w/US arms (Saudi Arabia) |
+| Colonizing polities (US) | Polities colonized by them (Philippines) | Non-colonized polities (Ethiopia, Thailand) |
+| Polities w/infrastructure built up over [250+ yrs](https://www.nps.gov/articles/000/arrival-of-the-first-africans-in-1619.htm) via slave labor (US 🇺🇸) | Polities populated by former slaves (Liberia 🇱🇷) | Polities that [paid reparations](https://en.wikipedia.org/wiki/Reparations_Agreement_between_Israel_and_the_Federal_Republic_of_Germany) to descendants of [certain] enslaved groups (Germany) |
+| Polities independent since 1776 (US) | Polities independent since 1990 (Namibia) | [Non-self-governing](https://www.un.org/dppa/decolonization/en/nsgt) polities (Puerto Rico, Palestine, New Caledonia) |
+| Polities enforcing a 60 yr embargo on Cuba (US) | Polities with a 60 yr embargo imposed on them by US (Cuba) | Polities without a 60 yr embargo imposed on them by US (...) |
+
+: {tbl-colwidths="[26,37,37]"}
+
+## How Are They Being Compared?
+
+* What metric? Over what timespan?
+* What unit of obs $\leadsto$ agg function $\leadsto$ level of aggregation?
 
 ![@dreze_china_1991](images/china_india.png){fig-align="center"}
+
+## ...There is Still Hope! I Promise! {.smaller .crunch-title .crunch-ul .crunch-blockquote .crunch-li-8}
+
+* Fair Comparison through **Statistical Matching**:
+* @lyall_divided_2020: "Treating certain ethnic groups as second-class citizens [...] leads victimized soldiers to subvert military authorities once war begins. The higher an army's inequality, the greater its rates of desertion, side-switching, and casualties"
+
+> Matching constructs **pairs of belligerents** that are **similar** across a wide range of traits thought to dictate battlefield performance but that **vary** in levels of prewar inequality. The more similar the belligerents, the better our estimate of inequality's effects, as all other traits are shared and thus cannot explain observed differences in performance, helping assess how battlefield performance **would have** improved (declined) if the belligerent had a lower (higher) level of prewar inequality.
+> 
+> Since [non-matched] cases are **dropped** [...] selected cases are more representative of average belligerents/wars than outliers with few or no matches, [providing] surer ground for testing generalizability of the book's claims than focusing solely on canonical but unrepresentative usual suspects (Germany, the United States, Israel)
+
+## Does Inequality Cause Poor Military Performance? {.smaller .crunch-title .title-10 .table-80}
+
+| <br>Covariates | Sultanate of Morocco<br> *Spanish-Moroccan War, 1859-60* | Khanate of Kokand<br> *War with Russia, 1864-65* |
+| - | - | - |
+| **$X$: Military Inequality** | Low (0.01) | Extreme (0.70) |
+| **$\mathbf{Z}$: Matched Covariates:** | | |
+| Initial relative power | 66% | 66% |
+| Total fielded force | 55,000 | 50,000 |
+| Regime type | Absolutist Monarchy (−6) | Absolute Monarchy (−7) |
+| Distance from capital | 208km | 265km |
+| Standing army | Yes | Yes |
+| Composite military | Yes | Yes |
+| Initiator | No | No |
+| Joiner | No | No |
+| Democratic opponent | No | No |
+| Great Power | No | No |
+| Civil war | No | No |
+| Combined arms | Yes | Yes |
+| Doctrine | Offensive | Offensive |
+| Superior weapons | No | No |
+| Fortifications | Yes | Yes |
+| Foreign advisors | Yes | Yes |
+| Terrain | Semiarid coastal plain | Semiarid grassland plain |
+| Topography | Rugged | Rugged |
+| War duration | 126 days | 378 days |
+| Recent war history w/opp | Yes | Yes |
+| Facing colonizer | Yes | Yes |
+| Identity dimension | Sunni Islam/Christian | Sunni Islam/Christian |
+| New leader | Yes | Yes |
+| Population | 8–8.5 million | 5–6 million |
+| Ethnoling fractionalization (ELF) | High | High |
+| Civ-mil relations | Ruler as commander | Ruler as commander |
+| **$Y$: Battlefield Performance:** | | |
+| Loss-exchange ratio | 0.43 | 0.02 |
+| Mass desertion | No | Yes |
+| Mass defection | No | No |
+| Fratricidal violence | No | Yes |
+
+## Bro Snapped {.smaller .p-80 .cols-va}
+
+*(I have no dog in this fight, I'm not trying to improve military performance of an army, but got damn)*
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![](images/lakers.gif){fig-align="center" width="500"}
+
+:::
+::: {.column width="50%"}
+
+![](images/tuck_em_in.jpg){fig-align="center" width="400"}
+
+:::
+::::
 
 ## Implementation {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-figcaption .crunch-images}
 
 ::: {layout="[1,1]"}
 
-![From @dignazio_data_2020, Ch. 6 (<a href='https://www.insidehighered.com/news/2014/07/17/colleges-often-win-reduction-fines-federal-campus-safety-violations' target='_blank'>see also</a>)](images/clery.jpg){fig-align="center"}
+![From @dignazio_data_2020, Ch. 6 ([see also](https://www.insidehighered.com/news/2014/07/17/colleges-often-win-reduction-fines-federal-campus-safety-violations))](images/clery.jpg){fig-align="center"}
 
 ::: {#implementation-right}
 
 ![](images/arresting_citizenship.jpeg){fig-align="center" width="410"}
 
-![From @lerman_arresting_2014](images/weaver_fig62.jpeg){fig-align="center" width="410"}
+![From @lerman_arresting_2014 ([see also](https://www.aeaweb.org/articles?id=10.1257/aer.101.7.3221))](images/weaver_fig62.jpeg){fig-align="center" width="410"}
 
 :::
 :::
@@ -534,9 +666,9 @@ $\implies$ *Social Outcome*: No Union
 ::: {layout="[4,3]" layout-valign="center"}
 ::: {#fig-fairness-left}
 
-![](images/lily_hu_1.svg){fig-align="center" width="350"}
+![](images/lily_hu_1.svg){fig-align="center" width="340"}
 
-![](images/lily_hu_2.svg){fig-align="center" width="350"}
+![](images/lily_hu_2.svg){fig-align="center" width="340"}
 
 From Lily Hu, <a href='https://www.phenomenalworld.org/analysis/direct-effects/' target='_blank'>*Direct Effects: How Should We Measure Racial Discrimination?*</a>, *Phenomenal World*, 25 September 2020
 :::
@@ -557,25 +689,46 @@ From Lily Hu, <a href='https://www.phenomenalworld.org/analysis/direct-effects/'
 ![](images/airobot.jpeg){fig-align="center" width="800"}
 </center>
 
-## Facial Recognition Algorithms {.crunch-title .smaller .crunch-quarto-layout-panel .crunch-images .crunch-quarto-figure .crunch-figcaption}
+## Facial Recognition Algorithms {.crunch-title .smaller .crunch-quarto-layout-panel .crunch-img .crunch-quarto-figure .crunch-figcaption .crunch-quarto-layout-cell}
 
 ::: {layout="[[1,1],[1,1]]" layout-valign="center"}
 
 ![@facia.ai_facial_2023](images/facial-recognition.webp){fig-align="center" width="400"}
 
-![@wellcomecollection_composite_1890](images/wellcome_jewish_type_crop.jpeg){fig-align="center" width="360"}
+![@wellcomecollection_composite_1890](images/wellcome_jewish_type_crop.jpeg){fig-align="center" width="350"}
 
-![@ouz_google_2023](images/pixel-face-unlock.webp){fig-align="center" width="400"}
+![@ouz_google_2023](images/pixel-face-unlock.webp){fig-align="center" width="380"}
 
-![@wang_deep_2018](images/deep_learning_gay_detection_crop.jpeg){fig-align="center" width="360"}
+![@wang_deep_2018](images/deep_learning_gay_detection_crop.jpeg){fig-align="center" width="350"}
 
 :::
 
-## Large Language Models {.crunch-title .smaller}
+## Large Language Models {.crunch-title .smaller .cols-va}
 
-::: {layout="[2,3]" layout-valign="center"}
+:::: {.columns}
+::: {.column width="40%"}
+
+<center>
+When to **retain** biases...
+</center>
+
+:::
+::: {.column width="60%"}
+
+<center>
+...and when to **debias**
+</center>
+
+:::
+::::
+
+:::: {.columns}
+::: {.column width="40%"}
 
 ![From @schiebinger_machine_2020](images/pronouns.jpg){#fig-pronouns fig-align="center"}
+
+:::
+::: {.column width="60%"}
 
 ::: {#fig-embedding-bias-right}
 
@@ -584,7 +737,9 @@ From Lily Hu, <a href='https://www.phenomenalworld.org/analysis/direct-effects/'
 
 From DeepLearning.AI's <a href='https://www.coursera.org/lecture/nlp-sequence-models/debiasing-word-embeddings-zHASj' target='_blank'>Deep Learning course</a>
 :::
+
 :::
+::::
 
 ## Military and Police Applications of AI {.crunch-title .smaller}
 
