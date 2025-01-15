@@ -16,9 +16,6 @@ website:
     contents:
       - text: "<i class='bi bi-house pe-1'></i> Home"
         href: index.qmd
-      - text: "Zoom Link"
-        href: "https://georgetown.zoom.us/j/94931835080?pwd=f9xg1L66RDOXjoySuPCSCLK1adbJwM.1"
-        target: "_blank"
       - text: "Syllabus"
         href: syllabus.qmd
       - text: "Writeups"
@@ -29,6 +26,9 @@ website:
         href: final.qmd
       - text: "Recordings"
         href: "https://georgetown.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=d240de45-5abb-4eea-8b13-b2590063001d"
+        target: "_blank"
+      - text: "Zoom Link <i class='bi bi-box-arrow-up-right ps-1'></i>"
+        href: "https://georgetown.zoom.us/j/94931835080?pwd=f9xg1L66RDOXjoySuPCSCLK1adbJwM.1"
         target: "_blank"
       - "---"
       - text: "Week 1: {{< var w01.date-md >}}"
@@ -62,6 +62,9 @@ website:
       - "---"
       - text: "Google Classroom <i class='bi bi-box-arrow-up-right ps-1'></i>"
         href: "https://classroom.google.com/c/NzQzMjkyMzg4NjIw?cjc=ilkwdqn"
+        target: "_blank"
+      - text: "Office Hours <i class='bi bi-box-arrow-up-right ps-1'></i>"
+        href: "https://jjacobs.me/meet"
         target: "_blank"
       - text: "Suggestion Box <i class='bi bi-box-arrow-up-right ps-1'></i>"
         href: "https://forms.gle/s35xJBf8Dj6XR5pr8"
