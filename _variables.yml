@@ -17,7 +17,7 @@ w03:
   date-md: "Jan 29"
 w04:
   weeknum: 4
-  title: "Fairness in AI"
+  title: "(Normative) Fairness in AI"
   footer: "Fairness in AI"
   date-md: "Feb 5"
 w05:
@@ -48,7 +48,7 @@ w09:
 w10:
   weeknum: 10
   title: "Econometric Policy Evaluation and Inverse Fairness"
-  footer: "Econometric Policy Evaluation and Inverse Fairness"
+  footer: "Econometric Policy Evaluation, Inverse Fairness"
   date-md: "Mar 26"
 w11:
   weeknum: 11

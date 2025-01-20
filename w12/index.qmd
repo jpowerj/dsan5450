@@ -2,9 +2,9 @@
 title: "Week 12: Final Projects, Causality and Racecraft"
 subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2024, Georgetown University</span>"
 author: "Jeff Jacobs"
-institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
 bibliography: "../_DSAN5450.bib"
-date: 2024-04-10
+date: 2025-04-09
 date-format: full
 lecnum: 12
 categories:
@@ -29,6 +29,7 @@ format:
       - simplemenu
   html:
     df-print: kable
+    css: "../dsan-globals/jjstyles.css"
     output-file: "index.html"
     html-math-method: mathjax
 ---

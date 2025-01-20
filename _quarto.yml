@@ -18,17 +18,19 @@ website:
         href: index.qmd
       - text: "Syllabus"
         href: syllabus.qmd
+      - text: "Resources"
+        href: resources.qmd
       - text: "Writeups"
         href: writeups/index.qmd
       - text: "Assignments"
         href: assignments.qmd
       - text: "Final Project"
         href: final.qmd
-      - text: "Recordings"
-        href: "https://georgetown.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=d240de45-5abb-4eea-8b13-b2590063001d"
-        target: "_blank"
       - text: "Zoom Link <i class='bi bi-box-arrow-up-right ps-1'></i>"
         href: "https://georgetown.zoom.us/j/94931835080?pwd=f9xg1L66RDOXjoySuPCSCLK1adbJwM.1"
+        target: "_blank"
+      - text: "Recordings <i class='bi bi-box-arrow-up-right ps-1'></i>"
+        href: "https://georgetown.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=d240de45-5abb-4eea-8b13-b2590063001d"
         target: "_blank"
       - "---"
       - text: "Week 1: {{< var w01.date-md >}}"

@@ -101,5 +101,8 @@
   "w14/index.qmd": {
     "slides.html": "9c260a83",
     "index.html": "65db1e98"
+  },
+  "resources.qmd": {
+    "resources.html": "007a441c"
   }
 }

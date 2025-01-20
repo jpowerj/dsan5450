@@ -12,9 +12,7 @@ The course meets on **Wednesdays from 3:30-6pm in the <a href='https://maps.app.
 * Prof. Jeff Jacobs, <a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>
   * Office hours (Click to schedule): <a href='https://jjacobs.me/meet' target='_blank'>Tuesdays, 3-6pm</a>
 * TA Marie Vaughan, <a href='mailto:mev71@georgetown.edu' target='_blank'>`mev71@georgetown.edu`</a>
-  * Office hours: TBD
 * TA Sam Sofman, <a href='mailto:sbs106@georgetown.edu' target='_blank'>`sbs106@georgetown.edu`</a>
-  * Office hours: TBD
 
 ## Course Description
 
@@ -74,7 +72,7 @@ The following is a rough map of what we will work through together throughout th
 </thead>
 <tbody>
 <tr>
-    <td><span data-qmd="**Unit 1**: Ethical Frameworks and Fairness in AI"></span></td>
+    <td><span data-qmd="**Unit 1**: Ethical Frameworks"></span></td>
     <td>1</td>
     <td><span data-qmd="{{< var w01.date-md >}}"></span></td>
     <td><span data-qmd="[{{< var w01.title >}}](./w01/)"></span></td>
@@ -85,23 +83,23 @@ The following is a rough map of what we will work through together throughout th
     <td><span data-qmd="{{< var w02.date-md >}}"></span></td>
     <td><span data-qmd="[{{< var w02.title >}}](./w02/)"></span></td>
 </tr>
-<tr>
-    <td></td>
+<tr class='new-unit'>
+    <td><span data-qmd="**Unit 2**: Fairness in AI"></span></td>
     <td>3</td>
     <td><span data-qmd="{{< var w03.date-md >}}"></span></td>
     <td><span data-qmd="[{{< var w03.title >}}](./w03/)"></span></td>
 </tr>
 <tr>
     <td></td>
-    <td>4</td>
-    <td><span data-qmd="{{< var w04.date-md >}}"></span></td>
-    <td><span data-qmd="[{{< var w04.title >}}](./w04/)"></span></td>
+    <td></td>
+    <td><span data-qmd="*Jan 31 (Friday), 5:59pm EST*"></span></td>
+    <td><span data-qmd="*[Deliverable] <a href='{{< var hw1.url >}}' target='_blank'>HW1: {{< var hw1.title >}}</a>*"></span></td>
 </tr>
 <tr>
     <td></td>
-    <td></td>
-    <td><span data-qmd="*Feb 9 (Friday), 11:59pm EST*"></span></td>
-    <td><span data-qmd="*[Deliverable] <a href='{{< var hw1.url >}}' target='_blank'>HW1: {{< var hw1.title >}}</a>*"></span></td>
+    <td>4</td>
+    <td><span data-qmd="{{< var w04.date-md >}}"></span></td>
+    <td><span data-qmd="[{{< var w04.title >}}](./w04/)"></span></td>
 </tr>
 <tr>
     <td></td>
@@ -115,14 +113,8 @@ The following is a rough map of what we will work through together throughout th
     <td><span data-qmd="{{< var w06.date-md >}}"></span></td>
     <td><span data-qmd="[{{<var w06.title >}}](./w06/)"></span></td>
 </tr>
-<tr>
-    <td></td>
-    <td></td>
-    <td><span data-qmd="*Feb 26 (Monday), 11:59pm EST*"></span></td>
-    <td><span data-qmd="*[Deliverable] <a href='{{< var hw2.url >}}' target='_blank'>HW2: {{< var hw2.title >}}</a>*"></span></td>
-</tr>
-<tr>
-    <td></td>
+<tr class='new-unit'>
+    <td><span data-qmd="**Midterm**"></span></td>
     <td>7</td>
     <td><span data-qmd="{{< var w07.date-md >}}"></span></td>
     <td><span data-qmd="[{{< var w07.title >}}](./w07/)"></span></td>
@@ -157,17 +149,11 @@ The following is a rough map of what we will work through together throughout th
     <td><span data-qmd="{{< var w11.date-md >}}"></span></td>
     <td><span data-qmd="[{{< var w11.title >}}](./w11/)"></span></td>
 </tr>
-<tr>
-    <td></td>
+<tr class='new-unit'>
+    <td><span data-qmd="**Unit 4**: Applications"></span></td>
     <td>12</td>
     <td><span data-qmd="{{< var w12.date-md >}}"></span></td>
     <td><span data-qmd="{{< var w12.title >}}"></span></td>
-</tr>
-<tr>
-    <td></td>
-    <td></td>
-    <td><span data-qmd="*Apr 12 (Friday)*"></span></td>
-    <td><span data-qmd="*[Deliverable] <a href='{{< var hw3.url >}}' target='_blank'>HW3: {{< var hw3.title >}}</a>*"></span></td>
 </tr>
 <tr>
     <td></td>
@@ -180,12 +166,6 @@ The following is a rough map of what we will work through together throughout th
     <td>14</td>
     <td><span data-qmd="{{< var w14.date-md >}}"></span></td>
     <td><span data-qmd="{{< var w14.title >}}"></span></td>
-</tr>
-<tr>
-    <td></td>
-    <td></td>
-    <td><span data-qmd="*Apr 26 (Friday)*"></span></td>
-    <td><span data-qmd="*[Deliverable] HW4: {{< var hw4.title >}}*"></span></td>
 </tr>
 <tr>
     <td></td>

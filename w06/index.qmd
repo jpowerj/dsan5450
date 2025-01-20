@@ -1,10 +1,10 @@
 ---
 title: "Week 6: Causality in Ethics and Policy"
-subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2024, Georgetown University</span>"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2025, Georgetown University</span>"
 author: "Jeff Jacobs"
 institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
 bibliography: "../_DSAN5450.bib"
-date: 2024-02-21
+date: 2024-02-19
 date-format: full
 lecnum: 6
 categories:
@@ -27,6 +27,7 @@ format:
       - simplemenu
   html:
     df-print: kable
+    css: "../dsan-globals/jjstyles.css"
     output-file: "index.html"
     html-math-method: mathjax
 ---

@@ -1,10 +1,10 @@
 ---
-title: "Week 2: {{< var w02.title >}}"
-subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2024, Georgetown University</span>"
+title: "Week 2: Machine Learning, Training Data, and Biases"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2025, Georgetown University</span>"
 author: "Jeff Jacobs"
 institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
 bibliography: "../_DSAN5450.bib"
-date: 2024-01-22
+date: 2025-01-22
 date-format: full
 lecnum: 2
 categories:
@@ -29,6 +29,7 @@ format:
       - simplemenu
   html:
     df-print: kable
+    css: "../dsan-globals/jjstyles.css"
     output-file: "index.html"
     html-math-method: mathjax
 ---
