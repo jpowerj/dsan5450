@@ -624,6 +624,8 @@ Figures from @ingold_amazon_2016, ["Amazon Doesn't Consider the Race of its Cust
 
 ![From @cheng_art_2018 [*The Art of Logic*](https://www.youtube.com/watch?v=YHZKX0H6cUE) [plz watch, if you can!]](images/cheng_plane.jpg){fig-align="center" width="360"}
 
+<!-- 17m 58s -->
+
 :::
 ::: {.column width="50%"}
 
@@ -636,3 +638,26 @@ Figures from @ingold_amazon_2016, ["Amazon Doesn't Consider the Race of its Cust
 
 ::: {#refs}
 :::
+
+## Appendix / Bonus Showing-Up-Early Material {.smaller .title-11 .crunch-title .crunch-blockquote .crunch-ul .crunch-p .cols-va}
+
+*(Jeff's Sanctimonious Unc Corner)*
+
+:::: {.columns}
+::: {.column width="50%"}
+
+* Being Bayesian $\neq$ Not Taking Sides:
+  
+  > Rather than implying moral relativism, this position posits the formulation of **moral judgments** as **outcomes** rather than **preconditions** of research. [@kalyvas_logic_2006]
+
+* Axiom/Antecedent: *The life of a single human is worth a million times more than the property of the richest man on earth*
+* Evidence: (History of social movements)
+* Consequent: *"On the side of poor people getting organized, on the side of choice where it is in short supply, on the side of those the system doesn't authorize, LGBT, we are on the side of pride"*
+
+:::
+::: {.column width="50%"}
+
+![B. Dolan, [*Which Side Are You On?*](https://www.youtube.com/watch?v=oKHf1YVATfk)](images/free_cece.jpg){fig-align="center"}
+
+:::
+::::
