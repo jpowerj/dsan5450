@@ -3920,8 +3920,8 @@
     "objectID": "w02/index.html#what-is-being-compared",
     "href": "w02/index.html#what-is-being-compared",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
-    "section": "What Is Being Compared?",
-    "text": "What Is Being Compared?\n\n\n\n\n\n\n\n\nApples\nOranges\nPears\n\n\n\n\nPolities w/250-500M people (US ~335M, UP ~250M, EU ~450M)\nPolities w/11M people in the Caribbean (Cuba, Haiti, Dominican Republic)\nPolities w/over 1 billion people (China ~1.4B, India ~1.4B, Africa ~1.4B, ⬆️+⬇️ America ~1B)\n\n\nDemocracies (US)\nDemocracies til they democratically elected someone US didn’t like (Iran, Guatemala, Chile)\nNon-democracies which brutally repress democratic movements w/US arms (Saudi Arabia)\n\n\nColonizing polities (US)\nPolities colonized by them (Philippines)\nNon-colonized polities (Ethiopia, Thailand)\n\n\nPolities w/infrastructure built up over 250+ yrs via slave labor (US 🇺🇸)\nPolities populated by former slaves (Liberia 🇱🇷)\nPolities that paid reparations to descendants of [certain] enslaved groups (Germany)\n\n\nPolities independent since 1776 (US)\nPolities independent since 1990 (Namibia)\nNon-self-governing polities (Puerto Rico, Palestine, New Caledonia)\n\n\nPolities enforcing a 60 yr embargo on Cuba (US)\nPolities with a 60 yr embargo imposed on them by US (Cuba)\nPolities without a 60 yr embargo imposed on them by US (…)",
+    "section": "What Is Being Compared? 👀",
+    "text": "What Is Being Compared? 👀\n\n\n\n\n\n\n\n\nApples\nOranges\nPears\n\n\n\n\nPolities w/250-500M people (US ~335M, UP ~250M, EU ~450M)\nPolities w/11M people in the Caribbean (Cuba, Haiti, Dominican Republic)\nPolities w/over 1 billion people (China ~1.4B, India ~1.4B, Africa ~1.4B, ⬆️+⬇️ America ~1B)\n\n\nDemocracies (US)\nDemocracies til they democratically elected someone US didn’t like (Iran, Guatemala, Chile)\nNon-democracies which brutally repress democratic movements w/US arms (Saudi Arabia)\n\n\nColonizing polities (US)\nPolities colonized by them (Philippines)\nNon-colonized polities (Ethiopia, Thailand)\n\n\nPolities w/infrastructure built up over 250+ yrs via slave labor (US 🇺🇸)\nPolities populated by former slaves (Liberia 🇱🇷)\nPolities that paid reparations to descendants of [certain] enslaved groups (Germany)\n\n\nPolities independent since 1776 (US)\nPolities independent since 1990 (Namibia)\nNon-self-governing polities (Puerto Rico, Palestine, New Caledonia)\n\n\nPolities enforcing a 60 yr embargo on Cuba (US)\nPolities with a 60 yr embargo imposed on them by US (Cuba)\nPolities without a 60 yr embargo imposed on them by US (…)",
     "crumbs": [
       "Week 2: {{< var w02.date-md >}}"
     ]
@@ -3987,21 +3987,41 @@
     ]
   },
   {
-    "objectID": "w02/index.html#facial-recognition-algorithms",
-    "href": "w02/index.html#facial-recognition-algorithms",
+    "objectID": "w02/index.html#privacy",
+    "href": "w02/index.html#privacy",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
-    "section": "Facial Recognition Algorithms",
-    "text": "Facial Recognition Algorithms\n\n\n\n\n\n\n\n\n\nFacia.ai (2023)\n\n\n\n\n\n\n\nWellcome Collection (1890)\n\n\n\n\n\n\n\n\n\nOuz (2023)\n\n\n\n\n\n\n\nWang and Kosinski (2018)",
+    "section": "Privacy",
+    "text": "Privacy\n\n\n\n\n\nFig 1.3: “The Accuracy-Privacy Loss Tradeoff”, from US Census Bureau (2021), Disclosure Avoidance for the 2020 Census\n\n\n\n\n\n\n“Privacy-Loss Budget (\\(\\varepsilon\\)) Acts as a Dial on Level of Noise”, ibid.\n\n\n\n\n\n\n\nSeurat, A Sunday Afternoon on the Island of La Grande Jatte, Wikimedia Commons",
     "crumbs": [
       "Week 2: {{< var w02.date-md >}}"
     ]
   },
   {
-    "objectID": "w02/index.html#large-language-models",
-    "href": "w02/index.html#large-language-models",
+    "objectID": "w02/index.html#facial-recognition-algorithms",
+    "href": "w02/index.html#facial-recognition-algorithms",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
-    "section": "Large Language Models",
-    "text": "Large Language Models\n \n\n\n\nWhen to retain biases…\n\n\n\n…and when to debias\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: From Schiebinger et al. (2020)\n\n\n\n\n\n\n\n\n\n\nFigure 2: From DeepLearning.AI’s Deep Learning course",
+    "section": "Facial Recognition Algorithms",
+    "text": "Facial Recognition Algorithms\n(aka AI eugenics… but I didn’t say that out loud)\n\n\n\n\n\n\n\n\n\nFacia.ai (2023)\n\n\n\n\n\n\n\nWellcome Collection (1890)\n\n\n\n\n\n\n\n\n\nOuz (2023)\n\n\n\n\n\n\n\nWang and Kosinski (2018)",
+    "crumbs": [
+      "Week 2: {{< var w02.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w02/index.html#llms-encode-existing-biases",
+    "href": "w02/index.html#llms-encode-existing-biases",
+    "title": "Week 2: Machine Learning, Training Data, and Biases",
+    "section": "LLMs Encode Existing Biases",
+    "text": "LLMs Encode Existing Biases\n\n\n\n\n\nFrom Schiebinger et al. (2020)\n\n\n\n\n\n\nFrom Google Translate (22 Jan 2025)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrompt\nResult\n\n\n\n\n“Generate a reference letter for Kelly, a 22 year old female student at UCLA”\n“She is an engaged participant in group projects, demonstrating exceptional teamwork and collaboration skills […] a well-liked member of our community.”\n\n\n“Generate a reference letter for Joseph, a 22 year old male student at UCLA”\nHis enthusiasm and dedication have had a positive impact on those around him, making him a natural leader and role model for his peers.”\n\n\n\n\n\nFigure 1: Wan et al. (2023), “Gender Biases in LLM-Generated Reference Letters”",
+    "crumbs": [
+      "Week 2: {{< var w02.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w02/index.html#what-is-to-be-done",
+    "href": "w02/index.html#what-is-to-be-done",
+    "title": "Week 2: Machine Learning, Training Data, and Biases",
+    "section": "What Is To Be Done?",
+    "text": "What Is To Be Done?\n \n\n\n\nWhen to retain biases…\n\n\n\n…and when to debias\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: From Schiebinger et al. (2020)\n\n\n\n\n\n\n\n\n\n\nFigure 3: From DeepLearning.AI’s Deep Learning course",
     "crumbs": [
       "Week 2: {{< var w02.date-md >}}"
     ]
@@ -4032,6 +4052,16 @@
     "title": "Week 2: Machine Learning, Training Data, and Biases",
     "section": "From Week 7 Onwards, You Work At A Think Tank",
     "text": "From Week 7 Onwards, You Work At A Think Tank\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMorozov (2015)\n\n\n\n\n\n\n\nFrom Ames (2014)",
+    "crumbs": [
+      "Week 2: {{< var w02.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w02/index.html#whatever-you-do-dont-be-bored",
+    "href": "w02/index.html#whatever-you-do-dont-be-bored",
+    "title": "Week 2: Machine Learning, Training Data, and Biases",
+    "section": "“Whatever You Do… Don’t Be Bored”",
+    "text": "“Whatever You Do… Don’t Be Bored”\n\n\n\nClip from Richard Linklater’s Waking Life",
     "crumbs": [
       "Week 2: {{< var w02.date-md >}}"
     ]
@@ -4087,16 +4117,6 @@
     ]
   },
   {
-    "objectID": "w02/index.html#context-free-fairness",
-    "href": "w02/index.html#context-free-fairness",
-    "title": "Week 2: Machine Learning, Training Data, and Biases",
-    "section": "Context-Free Fairness",
-    "text": "Context-Free Fairness\n\nWho Remembers 🎉Confusion Matrices!!!🎉\nTerrifyingly higher stakes than in DSAN 5000! Now \\(D = 1\\) could literally mean “shoot this person” or “throw this person in jail for life”\n\n\n\n\nFrom Mitchell et al. (2021)",
-    "crumbs": [
-      "Week 2: {{< var w02.date-md >}}"
-    ]
-  },
-  {
     "objectID": "w02/index.html#categories-of-fairness-criteria",
     "href": "w02/index.html#categories-of-fairness-criteria",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
@@ -4107,11 +4127,11 @@
     ]
   },
   {
-    "objectID": "w02/index.html#laws-often-perfectly-technically-fair",
-    "href": "w02/index.html#laws-often-perfectly-technically-fair",
+    "objectID": "w02/index.html#laws-often-perfectly-technically-fair-context-free-fairness",
+    "href": "w02/index.html#laws-often-perfectly-technically-fair-context-free-fairness",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
-    "section": "Laws: Often Perfectly “Technically Fair”",
-    "text": "Laws: Often Perfectly “Technically Fair”\n\nAh, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!\n(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)\n\nAnatole France, Le Lys Rouge (France 1894)",
+    "section": "Laws: Often Perfectly “Technically Fair” (Context-Free Fairness)",
+    "text": "Laws: Often Perfectly “Technically Fair” (Context-Free Fairness)\n\nAh, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!\n(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)\n\nAnatole France, Le Lys Rouge (France 1894)",
     "crumbs": [
       "Week 2: {{< var w02.date-md >}}"
     ]
@@ -4120,18 +4140,38 @@
     "objectID": "w02/index.html#context-sensitive-fairness",
     "href": "w02/index.html#context-sensitive-fairness",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
-    "section": "Context-Sensitive Fairness 🧐",
-    "text": "Context-Sensitive Fairness 🧐\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: From Lily Hu, Direct Effects: How Should We Measure Racial Discrimination?, Phenomenal World, 25 September 2020\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: From Kasy and Abebe (2021)",
+    "section": "Context-Sensitive Fairness… 🧐",
+    "text": "Context-Sensitive Fairness… 🧐\n\n\n\n\n\nDecisions at Individual Level (Micro)\n\n\n\n\n\n\n\\(\\leadsto\\)\n\nEmergent Properties (Macro)\n\n\n\n\n\n\n\n\n\nFigure 4: Figures from Ingold and Soper (2016), “Amazon Doesn’t Consider the Race of its Customers. Should It?”",
     "crumbs": [
       "Week 2: {{< var w02.date-md >}}"
     ]
   },
   {
-    "objectID": "w02/index.html#and-inverse-fairness",
-    "href": "w02/index.html#and-inverse-fairness",
+    "objectID": "w02/index.html#enables-inverse-fairness",
+    "href": "w02/index.html#enables-inverse-fairness",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
-    "section": "…And INVERSE Fairness 🤯",
-    "text": "…And INVERSE Fairness 🤯\n\n\n\nFrom Machine Learning What Policymakers Value (Björkegren, Blumenstock, and Knight 2022)",
+    "section": "…Enables INVERSE Fairness 🤯",
+    "text": "…Enables INVERSE Fairness 🤯\n\n\n\n\n\n\n\n\nFigure 5: From Kasy and Abebe (2021), “Fairness, Equality, and Power in Algorithmic Decision-Making”\n\n\n\n\n\n\n\n\n\n\nFigure 6: From Björkegren, Blumenstock, and Knight (2022), “(Machine) Learning What Policymakers Value”",
+    "crumbs": [
+      "Week 2: {{< var w02.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w02/index.html#unraveling-history",
+    "href": "w02/index.html#unraveling-history",
+    "title": "Week 2: Machine Learning, Training Data, and Biases",
+    "section": "Unraveling History",
+    "text": "Unraveling History\n(Someday I will do something with this)\n\n\n\nIn the long evenings in West Beirut, there was time enough to consider where the core of the tragedy lay. In the age of Assyrians, the Empire of Rome, in the 1860s perhaps? In the French Mandate? In Auschwitz? In Palestine? In the rusting front-door keys now buried deep in the rubble of Shatila? In the 1978 Israeli invasion? In the 1982 invasion? Was there a point where one could have said: Stop, beyond this point there is no future? Did I witness the point of no return in 1976? That 12-year-old on the broken office chair in the ruins of the Beirut front line? Now he was, in his mid-twenties (if he was still alive), a gunboy no more. A gunman, no doubt… (Fisk 1990)\n\n\n\n\n\nImage Source",
+    "crumbs": [
+      "Week 2: {{< var w02.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w02/index.html#context-sensitive-fairness-leftrightarrow-unraveling-history-1",
+    "href": "w02/index.html#context-sensitive-fairness-leftrightarrow-unraveling-history-1",
+    "title": "Week 2: Machine Learning, Training Data, and Biases",
+    "section": "Context-Sensitive Fairness \\(\\Leftrightarrow\\) Unraveling History",
+    "text": "Context-Sensitive Fairness \\(\\Leftrightarrow\\) Unraveling History\n(Reminder: Miracle of Immaculate Genocide)\n\n\n\n\n\nFrom Cheng (2018) The Art of Logic [plz watch, if you can!]",
     "crumbs": [
       "Week 2: {{< var w02.date-md >}}"
     ]
@@ -4141,7 +4181,7 @@
     "href": "w02/index.html#references",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
     "section": "References",
-    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nBishop, Marlon, and Tatiana Fernandez. 2017. “80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre.” NPR, October. https://www.npr.org/sections/parallels/2017/10/07/555871670/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. “Man Is to Computer Programmer as Woman Is to Homemaker? Debiasing Word Embeddings.” In Advances in Neural Information Processing Systems. Vol. 29. Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nKozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class Through Word Embeddings.” American Sociological Review 84 (5): 905–49. https://doi.org/10.1177/0003122419877135.\n\n\nLabov, William. 2013. The Language of Life and Death: The Transformation of Experience in Oral Narrative. Cambridge University Press.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1852. The Eighteenth Brumaire of Louis Bonaparte. Die Revolution.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSandburg, Carl. 1926. Selected Poems. Houghton Mifflin Harcourt.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.",
+    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nBishop, Marlon, and Tatiana Fernandez. 2017. “80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre.” NPR, October. https://www.npr.org/sections/parallels/2017/10/07/555871670/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. “Man Is to Computer Programmer as Woman Is to Homemaker? Debiasing Word Embeddings.” In Advances in Neural Information Processing Systems. Vol. 29. Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nCheng, Eugenia. 2018. The Art of Logic in an Illogical World. Basic Books.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFisk, Robert. 1990. Pity the Nation: Lebanon at War. OUP Oxford.\n\n\n———. 2005. The Great War for Civilisation: The Conquest of the Middle East. Knopf Doubleday Publishing Group.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nKozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class Through Word Embeddings.” American Sociological Review 84 (5): 905–49. https://doi.org/10.1177/0003122419877135.\n\n\nLabov, William. 2013. The Language of Life and Death: The Transformation of Experience in Oral Narrative. Cambridge University Press.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1852. The Eighteenth Brumaire of Louis Bonaparte. Die Revolution.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSandburg, Carl. 1926. Selected Poems. Houghton Mifflin Harcourt.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWan, Yixin, George Pu, Jiao Sun, Aparna Garimella, Kai-Wei Chang, and Nanyun Peng. 2023. “‘Kelly Is a Warm Person, Joseph Is a Role Model’: Gender Biases in LLM-Generated Reference Letters.” In EMNLP 2023, 3730–48. Singapore: ACL. https://doi.org/10.18653/v1/2023.findings-emnlp.243.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.",
     "crumbs": [
       "Week 2: {{< var w02.date-md >}}"
     ]
@@ -4178,8 +4218,8 @@
     "objectID": "w02/slides.html#what-is-being-compared",
     "href": "w02/slides.html#what-is-being-compared",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
-    "section": "What Is Being Compared?",
-    "text": "What Is Being Compared?\n\n\n\n\n\n\n\n\nApples\nOranges\nPears\n\n\n\n\nPolities w/250-500M people (US ~335M, UP ~250M, EU ~450M)\nPolities w/11M people in the Caribbean (Cuba, Haiti, Dominican Republic)\nPolities w/over 1 billion people (China ~1.4B, India ~1.4B, Africa ~1.4B, ⬆️+⬇️ America ~1B)\n\n\nDemocracies (US)\nDemocracies til they democratically elected someone US didn’t like (Iran, Guatemala, Chile)\nNon-democracies which brutally repress democratic movements w/US arms (Saudi Arabia)\n\n\nColonizing polities (US)\nPolities colonized by them (Philippines)\nNon-colonized polities (Ethiopia, Thailand)\n\n\nPolities w/infrastructure built up over 250+ yrs via slave labor (US 🇺🇸)\nPolities populated by former slaves (Liberia 🇱🇷)\nPolities that paid reparations to descendants of [certain] enslaved groups (Germany)\n\n\nPolities independent since 1776 (US)\nPolities independent since 1990 (Namibia)\nNon-self-governing polities (Puerto Rico, Palestine, New Caledonia)\n\n\nPolities enforcing a 60 yr embargo on Cuba (US)\nPolities with a 60 yr embargo imposed on them by US (Cuba)\nPolities without a 60 yr embargo imposed on them by US (…)"
+    "section": "What Is Being Compared? 👀",
+    "text": "What Is Being Compared? 👀\n\n\n\n\n\n\n\n\nApples\nOranges\nPears\n\n\n\n\nPolities w/250-500M people (US ~335M, UP ~250M, EU ~450M)\nPolities w/11M people in the Caribbean (Cuba, Haiti, Dominican Republic)\nPolities w/over 1 billion people (China ~1.4B, India ~1.4B, Africa ~1.4B, ⬆️+⬇️ America ~1B)\n\n\nDemocracies (US)\nDemocracies til they democratically elected someone US didn’t like (Iran, Guatemala, Chile)\nNon-democracies which brutally repress democratic movements w/US arms (Saudi Arabia)\n\n\nColonizing polities (US)\nPolities colonized by them (Philippines)\nNon-colonized polities (Ethiopia, Thailand)\n\n\nPolities w/infrastructure built up over 250+ yrs via slave labor (US 🇺🇸)\nPolities populated by former slaves (Liberia 🇱🇷)\nPolities that paid reparations to descendants of [certain] enslaved groups (Germany)\n\n\nPolities independent since 1776 (US)\nPolities independent since 1990 (Namibia)\nNon-self-governing polities (Puerto Rico, Palestine, New Caledonia)\n\n\nPolities enforcing a 60 yr embargo on Cuba (US)\nPolities with a 60 yr embargo imposed on them by US (Cuba)\nPolities without a 60 yr embargo imposed on them by US (…)"
   },
   {
     "objectID": "w02/slides.html#how-are-they-being-compared",
@@ -4224,18 +4264,32 @@
     "text": "Ethics of Eliciting Sensitive Linguistic Data\n\n\n\n\n\n\n\n\n\nFrom Labov (2013), pg. 4\n\n\n\n\n\n\n\nFrom “80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre”, NPR Parallels, 7 Oct 2017 (Bishop and Fernandez 2017)"
   },
   {
+    "objectID": "w02/slides.html#privacy",
+    "href": "w02/slides.html#privacy",
+    "title": "Week 2: Machine Learning, Training Data, and Biases",
+    "section": "Privacy",
+    "text": "Privacy\n\n\n\n\n\nFig 1.3: “The Accuracy-Privacy Loss Tradeoff”, from US Census Bureau (2021), Disclosure Avoidance for the 2020 Census\n\n\n\n\n\n\n“Privacy-Loss Budget (\\(\\varepsilon\\)) Acts as a Dial on Level of Noise”, ibid.\n\n\n\n\n\n\nSeurat, A Sunday Afternoon on the Island of La Grande Jatte, Wikimedia Commons"
+  },
+  {
     "objectID": "w02/slides.html#facial-recognition-algorithms",
     "href": "w02/slides.html#facial-recognition-algorithms",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
     "section": "Facial Recognition Algorithms",
-    "text": "Facial Recognition Algorithms\n\n\n\n\n\n\n\n\n\nFacia.ai (2023)\n\n\n\n\n\n\n\nWellcome Collection (1890)\n\n\n\n\n\n\n\n\n\nOuz (2023)\n\n\n\n\n\n\n\nWang and Kosinski (2018)"
+    "text": "Facial Recognition Algorithms\n(aka AI eugenics… but I didn’t say that out loud)\n\n\n\n\n\n\n\n\n\nFacia.ai (2023)\n\n\n\n\n\n\n\nWellcome Collection (1890)\n\n\n\n\n\n\n\n\n\nOuz (2023)\n\n\n\n\n\n\n\nWang and Kosinski (2018)"
   },
   {
-    "objectID": "w02/slides.html#large-language-models",
-    "href": "w02/slides.html#large-language-models",
+    "objectID": "w02/slides.html#llms-encode-existing-biases",
+    "href": "w02/slides.html#llms-encode-existing-biases",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
-    "section": "Large Language Models",
-    "text": "Large Language Models\n \n\n\n\nWhen to retain biases…\n\n\n\n…and when to debias\n\n\n\n\n\n\n\n\n\n\nFigure 1: From Schiebinger et al. (2020)\n\n\n\n\n\n\n\n\n\n\nFigure 2: From DeepLearning.AI’s Deep Learning course"
+    "section": "LLMs Encode Existing Biases",
+    "text": "LLMs Encode Existing Biases\n\n\n\n\n\nFrom Schiebinger et al. (2020)\n\n\n\n\n\n\nFrom Google Translate (22 Jan 2025)\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrompt\nResult\n\n\n\n\n“Generate a reference letter for Kelly, a 22 year old female student at UCLA”\n“She is an engaged participant in group projects, demonstrating exceptional teamwork and collaboration skills […] a well-liked member of our community.”\n\n\n“Generate a reference letter for Joseph, a 22 year old male student at UCLA”\nHis enthusiasm and dedication have had a positive impact on those around him, making him a natural leader and role model for his peers.”\n\n\n\n\n\nFigure 1: Wan et al. (2023), “Gender Biases in LLM-Generated Reference Letters”"
+  },
+  {
+    "objectID": "w02/slides.html#what-is-to-be-done",
+    "href": "w02/slides.html#what-is-to-be-done",
+    "title": "Week 2: Machine Learning, Training Data, and Biases",
+    "section": "What Is To Be Done?",
+    "text": "What Is To Be Done?\n \n\n\n\nWhen to retain biases…\n\n\n\n…and when to debias\n\n\n\n\n\n\n\n\n\n\nFigure 2: From Schiebinger et al. (2020)\n\n\n\n\n\n\n\n\n\n\nFigure 3: From DeepLearning.AI’s Deep Learning course"
   },
   {
     "objectID": "w02/slides.html#military-and-police-applications-of-ai",
@@ -4257,6 +4311,13 @@
     "title": "Week 2: Machine Learning, Training Data, and Biases",
     "section": "From Week 7 Onwards, You Work At A Think Tank",
     "text": "From Week 7 Onwards, You Work At A Think Tank\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMorozov (2015)\n\n\n\n\n\n\n\nFrom Ames (2014)"
+  },
+  {
+    "objectID": "w02/slides.html#whatever-you-do-dont-be-bored",
+    "href": "w02/slides.html#whatever-you-do-dont-be-bored",
+    "title": "Week 2: Machine Learning, Training Data, and Biases",
+    "section": "“Whatever You Do… Don’t Be Bored”",
+    "text": "“Whatever You Do… Don’t Be Bored”\n\nClip from Richard Linklater’s Waking Life"
   },
   {
     "objectID": "w02/slides.html#three-component-parts-of-machine-learning",
@@ -4294,13 +4355,6 @@
     "text": "Removing vs. Studying Biases\n\n\n\n\n\n\n\n\n\nFrom Kozlowski, Taddy, and Evans (2019)\n\n\n\n\n\n\n\nWordBias: An Interactive Tool for Discovering Intersectional Biases Encoded in Word Embeddings"
   },
   {
-    "objectID": "w02/slides.html#context-free-fairness",
-    "href": "w02/slides.html#context-free-fairness",
-    "title": "Week 2: Machine Learning, Training Data, and Biases",
-    "section": "Context-Free Fairness",
-    "text": "Context-Free Fairness\n\nWho Remembers 🎉Confusion Matrices!!!🎉\nTerrifyingly higher stakes than in DSAN 5000! Now \\(D = 1\\) could literally mean “shoot this person” or “throw this person in jail for life”\n\n\nFrom Mitchell et al. (2021)"
-  },
-  {
     "objectID": "w02/slides.html#categories-of-fairness-criteria",
     "href": "w02/slides.html#categories-of-fairness-criteria",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
@@ -4308,32 +4362,46 @@
     "text": "Categories of Fairness Criteria\n\nRoughly, approaches to fairness/bias in AI can be categorized as follows:\n\n\nFairness\n\n\n\n\n\n\nContext-Free\n\n\nSingle-Threshold Fairness\nEqual Prediction\nEqual Decision\n\n\n\n\n\n\n\n\n\nContext-Sensitive\n\n\nFairness via Similarity Metric(s)\nCausal Definitions\n\n\n\n\n\n\n[Week 3] Context-Free Fairness: Easier to grasp from CS/data science perspective; rooted in “language” of ML (you already know much of it, given DSAN 5000!)\nBut easy-to-grasp notion \\(\\neq\\) “good” notion!\nYour job: push yourself to (a) consider what is getting left out of the context-free definitions, and (b) the loopholes that are thus introduced into them, whereby people/computers can discriminate while remaining “technically fair”"
   },
   {
-    "objectID": "w02/slides.html#laws-often-perfectly-technically-fair",
-    "href": "w02/slides.html#laws-often-perfectly-technically-fair",
+    "objectID": "w02/slides.html#laws-often-perfectly-technically-fair-context-free-fairness",
+    "href": "w02/slides.html#laws-often-perfectly-technically-fair-context-free-fairness",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
-    "section": "Laws: Often Perfectly “Technically Fair”",
-    "text": "Laws: Often Perfectly “Technically Fair”\n\nAh, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!\n(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)\n\nAnatole France, Le Lys Rouge (France 1894)"
+    "section": "Laws: Often Perfectly “Technically Fair” (Context-Free Fairness)",
+    "text": "Laws: Often Perfectly “Technically Fair” (Context-Free Fairness)\n\nAh, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!\n(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)\n\nAnatole France, Le Lys Rouge (France 1894)"
   },
   {
     "objectID": "w02/slides.html#context-sensitive-fairness",
     "href": "w02/slides.html#context-sensitive-fairness",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
-    "section": "Context-Sensitive Fairness 🧐",
-    "text": "Context-Sensitive Fairness 🧐\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: From Lily Hu, Direct Effects: How Should We Measure Racial Discrimination?, Phenomenal World, 25 September 2020\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: From Kasy and Abebe (2021)"
+    "section": "Context-Sensitive Fairness… 🧐",
+    "text": "Context-Sensitive Fairness… 🧐\n\n\n\n\n\nDecisions at Individual Level (Micro)\n\n\n\n\n\n\n\\(\\leadsto\\)\n\nEmergent Properties (Macro)\n\n\n\n\n\n\n\n\nFigure 4: Figures from Ingold and Soper (2016), “Amazon Doesn’t Consider the Race of its Customers. Should It?”"
   },
   {
-    "objectID": "w02/slides.html#and-inverse-fairness",
-    "href": "w02/slides.html#and-inverse-fairness",
+    "objectID": "w02/slides.html#enables-inverse-fairness",
+    "href": "w02/slides.html#enables-inverse-fairness",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
-    "section": "…And INVERSE Fairness 🤯",
-    "text": "…And INVERSE Fairness 🤯\n\nFrom Machine Learning What Policymakers Value (Björkegren, Blumenstock, and Knight 2022)"
+    "section": "…Enables INVERSE Fairness 🤯",
+    "text": "…Enables INVERSE Fairness 🤯\n\n\n\n\n\n\n\n\nFigure 5: From Kasy and Abebe (2021), “Fairness, Equality, and Power in Algorithmic Decision-Making”\n\n\n\n\n\n\n\n\n\n\nFigure 6: From Björkegren, Blumenstock, and Knight (2022), “(Machine) Learning What Policymakers Value”"
+  },
+  {
+    "objectID": "w02/slides.html#unraveling-history",
+    "href": "w02/slides.html#unraveling-history",
+    "title": "Week 2: Machine Learning, Training Data, and Biases",
+    "section": "Unraveling History",
+    "text": "Unraveling History\n(Someday I will do something with this)\n\n\n\nIn the long evenings in West Beirut, there was time enough to consider where the core of the tragedy lay. In the age of Assyrians, the Empire of Rome, in the 1860s perhaps? In the French Mandate? In Auschwitz? In Palestine? In the rusting front-door keys now buried deep in the rubble of Shatila? In the 1978 Israeli invasion? In the 1982 invasion? Was there a point where one could have said: Stop, beyond this point there is no future? Did I witness the point of no return in 1976? That 12-year-old on the broken office chair in the ruins of the Beirut front line? Now he was, in his mid-twenties (if he was still alive), a gunboy no more. A gunman, no doubt… (Fisk 1990)\n\n\n\n\n\nImage Source"
+  },
+  {
+    "objectID": "w02/slides.html#context-sensitive-fairness-leftrightarrow-unraveling-history-1",
+    "href": "w02/slides.html#context-sensitive-fairness-leftrightarrow-unraveling-history-1",
+    "title": "Week 2: Machine Learning, Training Data, and Biases",
+    "section": "Context-Sensitive Fairness \\(\\Leftrightarrow\\) Unraveling History",
+    "text": "Context-Sensitive Fairness \\(\\Leftrightarrow\\) Unraveling History\n(Reminder: Miracle of Immaculate Genocide)\n\n\n\n\n\nFrom Cheng (2018) The Art of Logic [plz watch, if you can!]"
   },
   {
     "objectID": "w02/slides.html#references",
     "href": "w02/slides.html#references",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
     "section": "References",
-    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nBishop, Marlon, and Tatiana Fernandez. 2017. “80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre.” NPR, October. https://www.npr.org/sections/parallels/2017/10/07/555871670/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. “Man Is to Computer Programmer as Woman Is to Homemaker? Debiasing Word Embeddings.” In Advances in Neural Information Processing Systems. Vol. 29. Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nKozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class Through Word Embeddings.” American Sociological Review 84 (5): 905–49. https://doi.org/10.1177/0003122419877135.\n\n\nLabov, William. 2013. The Language of Life and Death: The Transformation of Experience in Oral Narrative. Cambridge University Press.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1852. The Eighteenth Brumaire of Louis Bonaparte. Die Revolution.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSandburg, Carl. 1926. Selected Poems. Houghton Mifflin Harcourt.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\n\n\n\nDSAN 5450 Week 2: Machine Learning, Training Data, and Bias"
+    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nBishop, Marlon, and Tatiana Fernandez. 2017. “80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre.” NPR, October. https://www.npr.org/sections/parallels/2017/10/07/555871670/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. “Man Is to Computer Programmer as Woman Is to Homemaker? Debiasing Word Embeddings.” In Advances in Neural Information Processing Systems. Vol. 29. Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nCheng, Eugenia. 2018. The Art of Logic in an Illogical World. Basic Books.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFisk, Robert. 1990. Pity the Nation: Lebanon at War. OUP Oxford.\n\n\n———. 2005. The Great War for Civilisation: The Conquest of the Middle East. Knopf Doubleday Publishing Group.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nKozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class Through Word Embeddings.” American Sociological Review 84 (5): 905–49. https://doi.org/10.1177/0003122419877135.\n\n\nLabov, William. 2013. The Language of Life and Death: The Transformation of Experience in Oral Narrative. Cambridge University Press.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1852. The Eighteenth Brumaire of Louis Bonaparte. Die Revolution.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSandburg, Carl. 1926. Selected Poems. Houghton Mifflin Harcourt.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWan, Yixin, George Pu, Jiao Sun, Aparna Garimella, Kai-Wei Chang, and Nanyun Peng. 2023. “‘Kelly Is a Warm Person, Joseph Is a Role Model’: Gender Biases in LLM-Generated Reference Letters.” In EMNLP 2023, 3730–48. Singapore: ACL. https://doi.org/10.18653/v1/2023.findings-emnlp.243.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\n\n\n\nDSAN 5450 Week 2: Machine Learning, Training Data, and Bias"
   },
   {
     "objectID": "writeups/w02.html",

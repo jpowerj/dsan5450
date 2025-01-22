@@ -175,6 +175,9 @@ a.disabled {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
 }
+.crop-quarto-figure .quarto-figure {
+  margin-bottom: 0px !important;
+}
 
 .crunch-quarto-layout-cell .quarto-layout-cell {
   margin-left: 0px !important;
@@ -257,8 +260,14 @@ figcaption {
 .p-70 p {
   font-size: 70% !important;
 }
+.p-75 p {
+  font-size: 75% !important;
+}
 .p-80 p {
   font-size: 80% !important;
+}
+.p-85 p {
+  font-size: 85% !important;
 }
 .p-90 p {
   font-size: 90% !important;
