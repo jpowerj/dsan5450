@@ -6,6 +6,7 @@ institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
 bibliography: "../_DSAN5450.bib"
 date: 2024-01-15
 lecnum: 1
+jupyter: python3
 categories:
   - "Class Sessions"
 format:
