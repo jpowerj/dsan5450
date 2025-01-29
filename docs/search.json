@@ -557,7 +557,7 @@
     "href": "syllabus.html#schedule",
     "title": "Syllabus",
     "section": "Schedule",
-    "text": "Schedule\nThe following is a rough map of what we will work through together throughout the semester; given that everyone learns at a different pace, my aim is to leave us with a good amount of flexibility in terms of how much time we spend on each topic: if I find that it takes me longer than a week to convey a certain topic in sufficient depth, for example, then I view it as a strength rather than a weakness of the course that we can then rearrange the calendar below by adding an extra week on that particular topic! Similarly, if it seems like I am spending too much time on a topic, to the point that students seem bored or impatient to move onto the next topic, we can move a topic intended for the next week to the current week!\n\n\n\nUnit\nWeek\nDate\nTopic\n\n\n\n\nUnit 1: Ethical Frameworks\n1\nJan 15\nIntroduction to the Course\n\n\n\n2\nJan 22\nMachine Learning, Training Data, and Bias\n\n\nUnit 2: Fairness in AI\n3\nJan 29\n(Descriptive) Fairness in AI\n\n\n\n\nJan 31 (Friday), 5:59pm EST\n[Deliverable] HW1: Nuts and Bolts for Fairness in AI\n\n\n\n4\nFeb 5\n(Normative) Fairness in AI\n\n\n\n5\nFeb 12\nContext-Sensitive Fairness\n\n\n\n6\nFeb 19\nCausality in Ethics and Policy\n\n\nMidterm\n7\nFeb 26\nIn-Class Midterm: Data Ethics, Fairness, Privacy, Causality\n\n\n\n\nMar 6\nNo Class (Spring Break)\n\n\nUnit 3: Policy Frameworks\n8\nMar 12\nPrivacy Policies, Incomplete Contracts, and Power\n\n\n\n9\nMar 19\nFrom Data Ethics to Data Policy\n\n\n\n10\nMar 26\nEconometric Policy Evaluation and Inverse Fairness\n\n\n\n11\nApr 2\nFairness vs. Social Welfare\n\n\nUnit 4: Applications\n12\nApr 9\nProject Talk, Causality and Identity Formation\n\n\n\n13\nApr 16\nApplications: Race, Class, Gender, Sexuality, and Disability (Data Feminism)\n\n\n\n14\nApr 23\nRepublican Liberty and the Kindly Slavemaster\n\n\n\n\nMay 10 (Friday)\n[Deliverable] Policy Whitepaper",
+    "text": "Schedule\nThe following is a rough map of what we will work through together throughout the semester; given that everyone learns at a different pace, my aim is to leave us with a good amount of flexibility in terms of how much time we spend on each topic: if I find that it takes me longer than a week to convey a certain topic in sufficient depth, for example, then I view it as a strength rather than a weakness of the course that we can then rearrange the calendar below by adding an extra week on that particular topic! Similarly, if it seems like I am spending too much time on a topic, to the point that students seem bored or impatient to move onto the next topic, we can move a topic intended for the next week to the current week!\n\n\n\nUnit\nWeek\nDate\nTopic\n\n\n\n\nUnit 1: Ethical Frameworks\n1\nJan 15\nIntroduction to the Course\n\n\n\n2\nJan 22\nMachine Learning, Training Data, and Bias\n\n\nUnit 2: Fairness in AI\n3\nJan 29\nEthical Frameworks: Rights, Discrimination, and Fairness\n\n\n\n\nJan 31 (Friday), 5:59pm EST\n[Deliverable] HW1: Nuts and Bolts for Fairness in AI\n\n\n\n4\nFeb 5\n(Descriptive) Fairness in AI\n\n\n\n5\nFeb 12\nContext-Sensitive Fairness\n\n\n\n6\nFeb 19\nCausality in Ethics and Policy\n\n\nMidterm\n7\nFeb 26\nIn-Class Midterm: Data Ethics, Fairness, Privacy, Causality\n\n\n\n\nMar 6\nNo Class (Spring Break)\n\n\nUnit 3: Policy Frameworks\n8\nMar 12\nPrivacy Policies, Incomplete Contracts, and Power\n\n\n\n9\nMar 19\nFrom Data Ethics to Data Policy\n\n\n\n10\nMar 26\nEconometric Policy Evaluation and Inverse Fairness\n\n\n\n11\nApr 2\nFairness vs. Social Welfare\n\n\nUnit 4: Applications\n12\nApr 9\nProject Talk, Causality and Identity Formation\n\n\n\n13\nApr 16\nApplications: Race, Class, Gender, Sexuality, and Disability (Data Feminism)\n\n\n\n14\nApr 23\nRepublican Liberty and the Kindly Slavemaster\n\n\n\n\nMay 10 (Friday)\n[Deliverable] Policy Whitepaper",
     "crumbs": [
       "Syllabus"
     ]
@@ -2785,7 +2785,7 @@
     "href": "w04/slides.html#references",
     "title": "Week 4: (Descriptive) Fairness in AI",
     "section": "References",
-    "text": "References\n\n\nBlackstone, William. 1769. Commentaries on the Laws of England, Volume 2: A Facsimile of the First Edition of 1765-1769. University of Chicago Press.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeDeo, Simon. 2016. “Wrong Side of the Tracks: Big Data and Protected Categories.” arXiv. https://doi.org/10.48550/arXiv.1412.4643.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nRousey, Dennis C. 2001. “Friends and Foes of Slavery: Foreigners and Northerners in the Old South.” Journal of Social History 35 (2): 373–96. https://www.jstor.org/stable/3790193.\n\n\nSimons, Josh. 2023. Algorithms for the People: Democracy in the Age of AI. Princeton University Press.\n\n\n\n\n\nDSAN 5450 Week 4: Fairness in AI"
+    "text": "References\n\n\nBlackstone, William. 1769. Commentaries on the Laws of England, Volume 2: A Facsimile of the First Edition of 1765-1769. University of Chicago Press.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeDeo, Simon. 2016. “Wrong Side of the Tracks: Big Data and Protected Categories.” arXiv. https://doi.org/10.48550/arXiv.1412.4643.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nRousey, Dennis C. 2001. “Friends and Foes of Slavery: Foreigners and Northerners in the Old South.” Journal of Social History 35 (2): 373–96. https://www.jstor.org/stable/3790193.\n\n\nSimons, Josh. 2023. Algorithms for the People: Democracy in the Age of AI. Princeton University Press.\n\n\n\n\n\nDSAN 5450 Week 4: (Descriptive) Fairness in AI"
   },
   {
     "objectID": "w04/index.html",
@@ -3040,7 +3040,7 @@
   {
     "objectID": "w03/index.html",
     "href": "w03/index.html",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "",
     "text": "Open slides in new window →",
     "crumbs": [
@@ -3050,7 +3050,7 @@
   {
     "objectID": "w03/index.html#loose-ends",
     "href": "w03/index.html#loose-ends",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Loose Ends",
     "text": "Loose Ends\n\nNormative vs. Descriptive “Exploitation”: How can we disentangle these in our understanding of the term? (Roemer 1988)\n\nUnder descriptive definition, one can “exploit” corn or land in the exact same way one “exploits” human labor (just another type of input into the production process)\nUtility-wise, an economy with exploitation can be unambiguously better than one without exploitation: if 10 people \\(H\\) own means of production, and 990 people \\(S\\) own only their labor power (landless peasants, for example), allowing \\(H\\) to exploit \\(S\\) for a wage increases utility for both: \\(H\\) acquires profits, \\(S\\) doesn’t starve to death\n\n“Tracing back” causes / unraveling history\n\n“The result [of modern 24-hour news cycles] is a litany of events with no beginning and no real end, thrown together only because they occurred at the same time[,] cut off from their antecedents and consequenes” (Bourdieu 2010)",
     "crumbs": [
@@ -3060,7 +3060,7 @@
   {
     "objectID": "w03/index.html#part-3-the-training-data-bottleneck",
     "href": "w03/index.html#part-3-the-training-data-bottleneck",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Part 3: The “Training Data Bottleneck”",
     "text": "Part 3: The “Training Data Bottleneck”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSnorkel.AI, An Introduction to Snorkel and Data-Centric AI\n\n\n\n\n\n\nWith so much technical progress […] why is there so little real enterprise success? The answer all too often is that many enterprises continue to be bottlenecked by one key ingredient: the large amounts of labeled data [needed] to train these new systems.\n\n\n\nFigure 1: ibid. (PS, if it seems like I’m picking on them: these are the ‘good guys’ IMO! W.r.t. foregrounding training data as labor)",
     "crumbs": [
@@ -3070,7 +3070,7 @@
   {
     "objectID": "w03/index.html#human-labor",
     "href": "w03/index.html#human-labor",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Human Labor",
     "text": "Human Labor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: From Snorkel AI, “The Principles of Data-Centric AI Development by Alex Ratner” (YouTube)\n\n\n\n\n\n\n\n\nGray and Suri (2019)",
     "crumbs": [
@@ -3080,19 +3080,9 @@
   {
     "objectID": "w03/index.html#computer-scientists-being-responsible-at-georgetown",
     "href": "w03/index.html#computer-scientists-being-responsible-at-georgetown",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Computer Scientists Being Responsible (At Georgetown!)",
-    "text": "Computer Scientists Being Responsible (At Georgetown!)\n\n\n\nDr. Redmiles’ homepage (Since Quarto also freezes when I try to embed it…)\n\n\n\n(PS… UMD undergrad CS class of 2013 extremely overrepresented here 😜)",
-    "crumbs": [
-      "Week 3: {{< var w03.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w03/index.html#computer-scientists-being-responsible-at-georgetown-1",
-    "href": "w03/index.html#computer-scientists-being-responsible-at-georgetown-1",
-    "title": "Week 3: (Descriptive) Fairness in AI",
-    "section": "Computer Scientists Being Responsible (At Georgetown!)",
-    "text": "Computer Scientists Being Responsible (At Georgetown!)\n\n\n\nGU360 Course Page",
+    "text": "Computer Scientists Being Responsible (At Georgetown!)\n\n\n\nGU360 Course Page\n\n\n\n(PS… UMD undergrad CS class of 2013 extremely overrepresented here 😜 go Terps)",
     "crumbs": [
       "Week 3: {{< var w03.date-md >}}"
     ]
@@ -3100,7 +3090,7 @@
   {
     "objectID": "w03/index.html#so-what-comes-with-human-labels-human-biases",
     "href": "w03/index.html#so-what-comes-with-human-labels-human-biases",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "So, What Comes With Human Labels? Human Biases!",
     "text": "So, What Comes With Human Labels? Human Biases!\n\n\n\n\n\n\n\n\n\nCrawford and Paglen (2019)\n\n\n\n\n\n\n\nImage tagged in ImageNet with the label “BOLSHEVIK”. From Crawford and Paglen (2019)",
     "crumbs": [
@@ -3110,7 +3100,7 @@
   {
     "objectID": "w03/index.html#biases-in-our-brains-rightarrow-biases-in-our-models-rightarrow-material-effects",
     "href": "w03/index.html#biases-in-our-brains-rightarrow-biases-in-our-models-rightarrow-material-effects",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Biases In Our Brains \\(\\rightarrow\\) Biases in Our Models \\(\\rightarrow\\) Material Effects",
     "text": "Biases In Our Brains \\(\\rightarrow\\) Biases in Our Models \\(\\rightarrow\\) Material Effects\n\n\n\n\n\n\n\n“Reification”: Pretentious word for an important phenomenon, whereby talking about something (e.g., race) as if it was real ends up leading to it becoming real (having real impacts on people’s lives)1\n\n\nOn average, being classified as a White man as opposed to a Coloured man would have more than quadrupled a person’s income. (Pellicer and Ranchhod 2023)",
     "crumbs": [
@@ -3120,7 +3110,7 @@
   {
     "objectID": "w03/index.html#reification-in-science",
     "href": "w03/index.html#reification-in-science",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Reification in Science",
     "text": "Reification in Science\n\n\n\n\n\n\n\n“““Intelligence”“” Testing\n\n\n\n\nGould (1980)\n\n\n\n\n\nMore Generally\n\n\nGoodhart’s Law: “When a measure becomes a target, it ceases to be a good measure”\nCat-and-mouse game between goals (🚩) and ways of measuring progress towards goals (also 🚩)",
     "crumbs": [
@@ -3130,7 +3120,7 @@
   {
     "objectID": "w03/index.html#reflective-equilibrium",
     "href": "w03/index.html#reflective-equilibrium",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Reflective Equilibrium",
     "text": "Reflective Equilibrium\n\nMost criticisms of any framework boil down to, “great in theory, but doesn’t work in practice”\nThe way to take this seriously: reflective equilibrium\nIntroduced by Rawls (1951), but popularized by Rawls (1971)\n\n\n\n\nFrom Awad et al. (2022)",
     "crumbs": [
@@ -3140,9 +3130,9 @@
   {
     "objectID": "w03/index.html#easy-mode-descriptive-judgements",
     "href": "w03/index.html#easy-mode-descriptive-judgements",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Easy Mode: Descriptive Judgements",
-    "text": "Easy Mode: Descriptive Judgements\nHow did you acquire the concept “red”?\n\nPeople pointed to stuff with certain properties and said “red” (or “rojo” or “红”), as pieces of an intersubjective communication system\nThese descriptive labels enable coordination, like driving on left or right side of road!\nNothing very profound or difficult in committing to this descriptive coordination: “for ease of communication, I’ll vibrate my vocal chords like this (or write these symbols) to indicate \\(x\\), and vibrate them like this (or write these other symbols) to indicate \\(y\\)” \nLinguistic choices, when it comes to description, are arbitrary*: Our mouths can make these sounds, and each language is a mapping: [combinations of sounds] \\(\\leftrightarrow\\) [things]\n\ndiːsˈæn ˈfɪfti fɔr ˈfɪfti [US Accent  / Icelandic Accent ]\n\n\n\n\n*(Tiny text footnote: Except for, perhaps, a few fun but rare onomatopoetic cases)",
+    "text": "Easy Mode: Descriptive Judgements\nHow did you acquire the concept “red”?\n\nPeople pointed to stuff with certain properties and said “red” (or “rojo” or “红”), as pieces of an intersubjective communication system\nThese descriptive labels enable coordination, like driving on left or right side of road!\nNothing very profound or difficult in committing to this descriptive coordination: “for ease of communication, I’ll vibrate my vocal chords like this (or write these symbols) to indicate \\(x\\), and vibrate them like this (or write these other symbols) to indicate \\(y\\)” \nLinguistic choices, when it comes to description, are arbitrary*: Our mouths can make these sounds, and each language is a mapping: [combinations of sounds] \\(\\leftrightarrow\\) [things]\n\ndiːsˈæn ˈfɪfti fɔr ˈfɪfti US Accent / Icelandic Accent\n\n\n\n\n\n\n*(Tiny text footnote: Except for, perhaps, a few fun but rare onomatopoetic cases)",
     "crumbs": [
       "Week 3: {{< var w03.date-md >}}"
     ]
@@ -3150,7 +3140,7 @@
   {
     "objectID": "w03/index.html#what-makes-ethical-judgements-more-difficult",
     "href": "w03/index.html#what-makes-ethical-judgements-more-difficult",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "What Makes Ethical Judgements “More Difficult”?",
     "text": "What Makes Ethical Judgements “More Difficult”?\nHow did you acquire the concept “good”?\n\nPeople pointed to actions with certain properties and said “good” (and pointed at others and said “bad”), as part of instilling values in you\n“Grass is green” just links two descriptive referents together, while “Honesty is good” takes the descriptive concept “honesty” and links it with the normative concept “good”\nIn doing this, parents/teachers/friends are doing way more than just linking sounds and things in the world (describing): they are also prescribing rules of moral conduct!\nNormative concepts go beyond “mere” communication: course of your life / future / [things that matter deeply to people] differ if you act on one set of norms vs. another\n\\(\\implies\\) Ethics centrally involves non-arbitrarily-chosen commitments!",
     "crumbs": [
@@ -3160,9 +3150,9 @@
   {
     "objectID": "w03/index.html#tldr",
     "href": "w03/index.html#tldr",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Tl;dr",
-    "text": "Tl;dr\n\nLanguages are arbitrary conventions for communication\nEthical systems build on this language to non-arbitrarily mark out things that are good/bad\nLife would not be very different if we “shuffled” words (we’d just vibrate our vocal chords differently), but would be very different if we “shuffled” good/bad labeling",
+    "text": "Tl;dr\n\n\n\nLanguages are arbitrary conventions for communication\nEthical systems build on this language to non-arbitrarily mark out things that are good/bad\nSociety wouldn’t be too different if we “shuffled” words (we’d just vibrate our vocal chords differently), but would be very different if we “shuffled” good/bad labeling\n\n\n\n\n\nHare (1952)",
     "crumbs": [
       "Week 3: {{< var w03.date-md >}}"
     ]
@@ -3170,7 +3160,7 @@
   {
     "objectID": "w03/index.html#quick-aside-top-10-linguist-beefs",
     "href": "w03/index.html#quick-aside-top-10-linguist-beefs",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Quick Aside: Top 10 Linguist Beefs",
     "text": "Quick Aside: Top 10 Linguist Beefs\n\nStatement on previous slide (“Life would not be very different if we shuffled words”), might seem weird/closed-minded/dismissive if you have a certain popular prior belief…\n\n\n\n\n\n\n\n\n\n\nDeutscher (2010)\n\n\n\n\n\n\n\nMcWhorter (2014)",
     "crumbs": [
@@ -3180,7 +3170,7 @@
   {
     "objectID": "w03/index.html#the-last-time-i-use-this-i-promise",
     "href": "w03/index.html#the-last-time-i-use-this-i-promise",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "The Last Time I Use This, I Promise",
     "text": "The Last Time I Use This, I Promise",
     "crumbs": [
@@ -3190,9 +3180,19 @@
   {
     "objectID": "w03/index.html#historical-example-capitalism-and-the-protestant-ethic",
     "href": "w03/index.html#historical-example-capitalism-and-the-protestant-ethic",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Historical Example: Capitalism and the “Protestant Ethic”",
-    "text": "Historical Example: Capitalism and the “Protestant Ethic”\n\nBig changes in history are associated with changes in this good/bad labeling!\nMax Weber (second most-cited sociologist of all time*): Protestant value system gave rise to capitalist system by relabeling what things are good vs. bad (Weber 1904):\n\n\n\n\n\n\n\n\nJesus said to his disciples, “Truly, I say to you, only with difficulty will a rich person enter the kingdom of heaven. Again I tell you, it is easier for a camel to go through the eye of a needle than for a rich person to enter the kingdom of God.” (Matthew 19:23-24)\n\n\nOh, were we loving God worthily, we should have no love at all for money! (St. Augustine 1874, pg. 28)\n\n*(…jumpscare: REIFICATION!)\n\n\n\nThe earliest capitalists lacked legitimacy in the moral climate in which they found themselves. One of the means they found [to legitimize their behavior] was to appropriate the evaluative vocabulary of Protestantism. (Skinner 2012, pg. 157)\n\n\nCalvinism added [to Luther’s doctrine] the necessity of proving one’s faith in worldly activity, [replacing] spiritual aristocracy of monks outside of/above the world with spiritual aristocracy of predestined saints within it. (pg. 121).",
+    "text": "Historical Example: Capitalism and the “Protestant Ethic”\n\nBig changes in history are associated with changes in this good/bad labeling!\nMax Weber (second most-cited sociologist of all time*): Protestant value system gave rise to capitalist system by relabeling what things are good vs. bad (Weber 1904):\n\n\n\n\n\n\n\n\nJesus said to his disciples, “Truly, I say to you, only with difficulty will a rich person enter the kingdom of heaven. Again I tell you, it is easier for a camel to go through the eye of a needle than for a rich person to enter the kingdom of God.” (Matthew 19:23-24)\n\n\nOh, were we loving God worthily, we should have no love at all for money! (St. Augustine 1874, pg. 28)\n\n \n*(…jumpscare: REIFICATION!)\n\n\n\nThe earliest capitalists lacked legitimacy in the moral climate in which they found themselves. One of the means they found [to legitimize their behavior] was to appropriate the evaluative vocabulary of Protestantism. (Skinner 2012, pg. 157)\n\n\nCalvinism added [to Luther’s doctrine] the necessity of proving one’s faith in worldly activity, [replacing] spiritual aristocracy of monks outside of/above the world with spiritual aristocracy of predestined saints within it. (pg. 121).",
+    "crumbs": [
+      "Week 3: {{< var w03.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w03/index.html#aggressively-tossing-books-at-your-head",
+    "href": "w03/index.html#aggressively-tossing-books-at-your-head",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
+    "section": "Aggressively Tossing Books at Your Head",
+    "text": "Aggressively Tossing Books at Your Head\n\n\n\n(Reminder that there are no required readings, but that this means you should pick a few which seem mildly interesting to you and try them out, as first step towards final paper lit review! 😉)\nAlso, we’ll be bringing this Hirschman guy back into the mix when we get to policy: specifically, his earlier book, Exit, Voice, and Loyalty (Hirschman 1970)\n\n\n\n\n\nHirschman (1977)",
     "crumbs": [
       "Week 3: {{< var w03.date-md >}}"
     ]
@@ -3200,7 +3200,7 @@
   {
     "objectID": "w03/index.html#contemporary-example-palestine",
     "href": "w03/index.html#contemporary-example-palestine",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Contemporary Example: Palestine",
     "text": "Contemporary Example: Palestine\n\nVery few of the relevant empirical facts are in dispute, since opening of crucial archives to three so-called “New Historians” in the 1980s. So why do people still argue?\n\n\n\n\n\n\n\n\nIlan Pappe, one of these historians, concluded from this material that:\n\nThe Israeli state was built upon a massive ethnic cleansing, and\nIs not morally justifiable (Pappe 2006)\n\n\n\nThe immunity Israel has received over the last fifty years encourages others, regimes and oppositions alike, to believe that human and civil rights are irrelevant in the Middle East. The dismantling of the mega-prison in Palestine will send a different, and more hopeful, message.\n\n\n\n\nBenny Morris, another of these historians, concluded that:\n\nThe Israeli state was built upon a massive ethnic cleansing, and\nIs morally justifiable (Morris 1987)\n\n\n\nA Jewish state would not have come into being without the uprooting of 700,000 Palestinians. Therefore it was necessary to uproot them. There was no choice but to expel that population. It was necessary to cleanse the hinterland and cleanse the border areas and cleanse the main roads.",
     "crumbs": [
@@ -3208,11 +3208,11 @@
     ]
   },
   {
-    "objectID": "w03/index.html#from-week-1-counterargument-to-consequentialism",
-    "href": "w03/index.html#from-week-1-counterargument-to-consequentialism",
-    "title": "Week 3: (Descriptive) Fairness in AI",
-    "section": "(From Week 1) Counterargument to Consequentialism",
-    "text": "(From Week 1) Counterargument to Consequentialism\n\n\n\n\n\n\n\nMillions are kept permanently happy, on the one simple condition that a certain lost soul on the far-off edge of things should lead a life of lonely torture (James 1891)\n\n\nModern example: people “out there” suffer so we can have iPhones, etc.\n\n\n\n\n\n\nLe Guin (1973)",
+    "objectID": "w03/index.html#standard-counterargument-to-consequentialism",
+    "href": "w03/index.html#standard-counterargument-to-consequentialism",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
+    "section": "Standard Counterargument to Consequentialism",
+    "text": "Standard Counterargument to Consequentialism\n\n\n\n\n\n\n\nMillions are kept permanently happy, on the one simple condition that a certain lost soul on the far-off edge of things should lead a life of lonely torture (James 1891)\n\n\nModern example: people “out there” suffer so we can have iPhones, etc.\n\n\n\n\n\n\nLe Guin (1973)",
     "crumbs": [
       "Week 3: {{< var w03.date-md >}}"
     ]
@@ -3220,7 +3220,7 @@
   {
     "objectID": "w03/index.html#one-solution-individual-rights",
     "href": "w03/index.html#one-solution-individual-rights",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "One Solution: Individual Rights",
     "text": "One Solution: Individual Rights\n\n\n\n\n\n\n\nRights are vetoes which individuals can use to cancel out collective/institutional decisions which affect them (key example for us: right to privacy)\nRawls/liberalism: individual rights are lexically prior to “efficiency” and/or distributional concerns\nWhy the buzzword “lexically”? Enter (non-scary) math!\nWe can put lowercase letters of English alphabet in an order: \\(\\texttt{a} \\prec \\texttt{b} \\prec \\cdots \\texttt{z}\\)\nWe can put capital letters of English alphabet in an order: \\(\\texttt{A} \\prec \\texttt{B} \\prec \\cdots \\prec \\texttt{Z}\\)\nWhat if we need to sort stuff with both types? We can decide that capital letters are lexically prior to lowercase letters, giving us a combined ordering:\n\n\n\n\n\n\nDworkin (1977)\n\n\n\n\n\n\\[\n\\boxed{\\texttt{A} \\prec \\texttt{B} \\prec \\cdots \\prec \\texttt{Z} \\prec \\texttt{a} \\prec \\texttt{b} \\prec \\cdots \\prec \\texttt{z}}\n\\]",
     "crumbs": [
@@ -3230,7 +3230,7 @@
   {
     "objectID": "w03/index.html#lexical-ordering-i-tricked-you",
     "href": "w03/index.html#lexical-ordering-i-tricked-you",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Lexical Ordering (I Tricked You 😈)",
     "text": "Lexical Ordering (I Tricked You 😈)\n\n\n\n\n\n\n\nYou thought I was just talking about letters, but they’re actually variables: capital letters are rights, lowercase letters are distributive principles\n\n\\[\n\\underbrace{\\texttt{A} \\prec \\texttt{B} \\prec \\cdots \\prec \\texttt{Z}}_{\\mathclap{\\substack{\\text{Individual Rights} \\\\ \\text{Basic Goods}}}} \\phantom{\\prec} \\prec \\phantom{\\prec} \\underbrace{\\texttt{a} \\prec \\texttt{b} \\prec \\cdots \\prec \\texttt{z}}_{\\mathclap{\\substack{\\text{Distributive Principles} \\\\ \\text{Money and whatnot}}}}\n\\]",
     "crumbs": [
@@ -3240,7 +3240,7 @@
   {
     "objectID": "w03/index.html#better-metaphor-than-letters",
     "href": "w03/index.html#better-metaphor-than-letters",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Better Metaphor Than Letters",
     "text": "Better Metaphor Than Letters\n\nLetters are where Rawls gets “lexically prior” from, but letters are total orderings (we know where every letter “stands” in relation to every other letter)\nBetter metaphor: a high school with a hierarchy such that\n\n\\[\n\\text{Seniors} \\prec \\text{Juniors} \\prec \\text{Sophomores}  \\prec \\text{Freshmen}\n\\]\n\n\\(\\implies\\) If you’re a Freshman, whether at the “top” or “bottom” of a ranking of Freshmen, you’re still prior to all Sophomores…\nWhy is this more helpful? Because we don’t need to define the rankings within classes to know the rankings between classes in this case",
     "crumbs": [
@@ -3250,9 +3250,9 @@
   {
     "objectID": "w03/index.html#counterarguments-to-deontology",
     "href": "w03/index.html#counterarguments-to-deontology",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Counterargument(s) to Deontology",
-    "text": "Counterargument(s) to Deontology\n\n\n\n\n\n\n\nDeontological rule: “Don’t lie”\n\nBut then: Nazis come to your house, ask you if you’re harboring any Jews\n\nk, new deontological rule: “Don’t lie unless necessary”\n\nWho decides when it’s necessary?\n\nDeontological commitment: Pacifism / Nonviolence\n\nBut then: someone swingin on you\n\nk, new deontological commitment: Pacifism / Nonviolence Except In Self-Defense\n\nWho decides what counts as self-defense?\n\nDeontological maxim: “The master’s tools will never dismantle the master’s house”\n\nWho conceded “ownership” to the master?\n\n(Trolley problems, etc.)\n\n\n\n\n\n\nChurchill and Ryan (1998) (Derrick Jensen intro removed from later editions so… I put it on dang GitHub)",
+    "text": "Counterargument(s) to Deontology\n\n\n\n\n\n\n\nDeontological rule: “Don’t lie”\n\nBut then: Nazis come to your house, ask you if you’re harboring any Jews\n\nk, new deontological rule: “Don’t lie unless necessary”\n\nWho decides when it’s necessary?\n\nDeontological commitment: Pacifism / Nonviolence\n\nBut then: someone swingin on you\n\nk, new deontological commitment: Pacifism / Nonviolence Except In Self-Defense\n\nWho decides what counts as self-defense?\n\n(Trolley problems, etc.)\n\n\n\n\n\n\nChurchill and Ryan (1998) (Derrick Jensen intro removed from later editions so I put it on dang GitHub",
     "crumbs": [
       "Week 3: {{< var w03.date-md >}}"
     ]
@@ -3260,7 +3260,7 @@
   {
     "objectID": "w03/index.html#a-synthesis-two-level-utilitarianism",
     "href": "w03/index.html#a-synthesis-two-level-utilitarianism",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "A Synthesis: Two-Level Utilitarianism",
     "text": "A Synthesis: Two-Level Utilitarianism\n\n\n\n\n\n\n\nIt would be exhausting to compute Nash equilibrium strategies for every scenario\nInstead, we can develop heuristics that work for most cases, then reevaluate and update when we encounter tough cases\n(Brings us back to reflective equilibrium!)\n\n\n\n\n\n\nKahneman (2011)",
     "crumbs": [
@@ -3270,7 +3270,7 @@
   {
     "objectID": "w03/index.html#individual-vs.-social-morality",
     "href": "w03/index.html#individual-vs.-social-morality",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Individual vs. Social Morality",
     "text": "Individual vs. Social Morality\n\nThat was all already hard enough, to reason about individual morality\nNow add in the fact that we live in a society 😰\nThings that happen depend not only on our choices but also the choices of others\n\n\n\n\n\n\n\n\nSeinfeld: Living in a Society (Clip) | TBS",
     "crumbs": [
@@ -3280,7 +3280,7 @@
   {
     "objectID": "w03/index.html#enter-game-theory",
     "href": "w03/index.html#enter-game-theory",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Enter Game Theory",
     "text": "Enter Game Theory\n\nA tool for analyzing how individual choices + choices of others \\(\\rightarrow\\) outcomes!\n\n\n\n\n\n\n\n\nExample: You (\\(A\\)) and a friend (\\(B\\)) committed a robbery, and you’re brought into the police station for questioning.\nYou’re placed in separate rooms, and each of you is offered a plea deal: if you testify while your partner stays silent, you go free and they go to jail for 3 years.\nOtherwise, if you both stay silent, they have very little evidence and can only jail you for 1 year\nHowever, there’s a catch: if you both confess, you both get two years in jail, since they now have maximal evidence\n\n\n\n\n\n\nSource: Wikimedia Commons",
     "crumbs": [
@@ -3290,7 +3290,7 @@
   {
     "objectID": "w03/index.html#individual-decision-making",
     "href": "w03/index.html#individual-decision-making",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Individual Decision-Making",
     "text": "Individual Decision-Making\n\n\n\n\n\n\n\nLet’s think through \\(A\\)’s best responses to the possible choices \\(B\\) could make:\nIf \\(B\\) stays silent, what is \\(A\\)’s best option?\n\nStaying silent results in 1 year of jail\nTestifying results in 0 years of jail\nSo it is better to testify\n\nIf \\(B\\) testifies, what is \\(A\\)’s best option?\n\nStaying silent results in 3 years of jail\nTestifying results in 2 years of jail\nSo it is better to testify\n\nThe result: regardless of what \\(B\\) does, \\(A\\) is better off testifying!\n\n\n\n\n\n\nSource: Wikimedia Commons",
     "crumbs": [
@@ -3300,7 +3300,7 @@
   {
     "objectID": "w03/index.html#the-social-outcome",
     "href": "w03/index.html#the-social-outcome",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "The Social Outcome",
     "text": "The Social Outcome\n\n\n\n\n\n\n\nThe game is symmetric, so the same logic applies for \\(B\\)\nConclusion: the outcome of the game will be \\(s^* = (\\text{Testify}, \\text{Testify})\\)\nThis is called a Nash equilibrium: no player \\(i\\) can make themselves better off by deviating from \\(s_i\\)\n\n\n\n\n\n\nSource: Wikimedia Commons",
     "crumbs": [
@@ -3310,7 +3310,7 @@
   {
     "objectID": "w03/index.html#how-do-we-fix-this-conventions",
     "href": "w03/index.html#how-do-we-fix-this-conventions",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "How Do We Fix This? Conventions!",
     "text": "How Do We Fix This? Conventions!\n\n\n\n\n\n\n\nWe encounter this type of problem every day if we drive! You (\\(A\\)) and another driver (\\(B\\)) arrive at an intersection:\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nStop\nDrive\n\n\n\\(A\\)\nStop\n\\(-1,-1\\)\n\\(-3,\\phantom{-}0\\)\n\n\nDrive\n\\(\\phantom{-}0, -3\\)\n\\(-10,-10\\)\n\n\n\n\n\n\nIf both stop, we’re mostly bored: \\(u_A = -1\\)\nIf we stop and the other person drives, we’re mad that they got to go and we didn’t: \\(u_A = -3\\)\nIf both drive, we crash: \\(u_A = -10\\)",
     "crumbs": [
@@ -3320,7 +3320,7 @@
   {
     "objectID": "w03/index.html#without-a-convention",
     "href": "w03/index.html#without-a-convention",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Without A Convention",
     "text": "Without A Convention\n\n\n\n\n\n\n\nWe’re “frozen”: this game has no unique Nash equilibrium, so we cannot say (on the basis of individual rationality) what will happen!\nWithout a convention: power/aggression takes over. “War of all against all”, only the strong survive, etc. (life is “nasty, brutish, and short”)\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nStop\nDrive\n\n\n\\(A\\)\nStop\n\\({\\color{orange}\\cancel{\\color{black}-1}},{\\color{lightblue}\\cancel{\\color{black}-1}}\\)\n\\(\\boxed{-3},\\boxed{0}\\)\n\n\nDrive\n\\(\\boxed{0}, \\boxed{-3}\\)\n\\({\\color{orange}\\cancel{\\color{black}-10}},{\\color{lightblue}\\cancel{\\color{black}-10}}\\)\n\n\n\n\n\n\n\nIf \\(A\\)’s aggression is \\(\\Pr(s_A = \\textsf{Drive}) = X \\sim \\mathcal{U}[0,1]\\), \\(B\\)’s aggression is \\(\\Pr(s_B = \\textsf{Drive}) = Y \\sim \\mathcal{U}[0,1]\\), what happens at individual and societal levels?\n\n\\[\n\\begin{align*}\n\\mathbb{E}[u_A] = \\mathbb{E}[u_B] &= \\int_{0}^{1}\\int_{0}^{1}\\left(x - 2y -8xy - 1\\right)dy \\, dx = -3.5 \\\\\n\\underbrace{\\mathbb{E}\\mkern-3mu\\left[u_A + u_B\\right]}_{\\mathclap{\\text{Utilitarian Social Welfare}}} &= -3.5\n\\end{align*}\n\\]",
     "crumbs": [
@@ -3330,7 +3330,7 @@
   {
     "objectID": "w03/index.html#the-convention-of-traffic-lights",
     "href": "w03/index.html#the-convention-of-traffic-lights",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "The Convention of Traffic Lights",
     "text": "The Convention of Traffic Lights\n\nIf we don’t want a world where \\(\\text{Happiness}(i) \\propto \\Pr(i \\text{ more aggro than }j)\\), we can introduce traffic lights:\n\n\n\n\n\n\n\n\nNow in “correlated equilibrium”, where we ensure* coordinated \\(\\Pr((\\textsf{Drive}, \\textsf{Stop})) = 0.5\\), \\(\\Pr((\\textsf{Stop}, \\textsf{Drive})) = 0.5\\)\n\\(\\mathbb{E}[u_A] = (0.5)(0) + (0.5)(-3) = -1.5\\)\n\\(\\mathbb{E}[u_B] = (0.5)(-3) + (0.5)(0) = -1.5\\)\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nStop\nDrive\n\n\n\\(A\\)\nStop\n\\({\\color{orange}\\cancel{\\color{black}-1}},{\\color{lightblue}\\cancel{\\color{black}-1}}\\)\n\\(\\boxed{-3},\\boxed{0}\\)\n\n\nDrive\n\\(\\boxed{0}, \\boxed{-3}\\)\n\\({\\color{orange}\\cancel{\\color{black}-10}},{\\color{lightblue}\\cancel{\\color{black}-10}}\\)\n\n\n\n\n\n\n\nEmpirical (anthropological) findings across literally thousands of different cultures throughout the world: people are willing to give up rewards to ensure fairness (see, e.g., Henrich et al. (2001))\n\n*(through, for example, traffic laws: equal in theory… In practice? Another story)",
     "crumbs": [
@@ -3340,7 +3340,7 @@
   {
     "objectID": "w03/index.html#so-how-should-we-makechoose-conventions",
     "href": "w03/index.html#so-how-should-we-makechoose-conventions",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "So How Should We Make/Choose Conventions?",
     "text": "So How Should We Make/Choose Conventions?\n\nHobbes (1668): Only way out of “war of all against all” is to surrender all power to one sovereign (the Leviathan)\nRousseau (1762): Social contract\n[Big big ~200 year gap here… can you think of why? Hint: French Revolution in 1789]\nRawls (1971): Social contract behind the “veil of ignorance”\n\nIf we didn’t know where we were going to end up in society, how would we set it up?",
     "crumbs": [
@@ -3350,7 +3350,7 @@
   {
     "objectID": "w03/index.html#rawls-veil-of-ignorance",
     "href": "w03/index.html#rawls-veil-of-ignorance",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Rawls’ Veil of Ignorance",
     "text": "Rawls’ Veil of Ignorance\n\nProbably the most important tool for policy whitepapers!\n“Justice as fairness” (next week: fairness in AI 😜)\nWe don’t know whether we’ll be \\(A\\) or \\(B\\) in the intersection game, so we’d choose the traffic light!\nMore profoundly: We don’t know what race, gender, class, ethnicity, sexuality, disability status we’ll have; We don’t know whether we’ll be Israeli or Palestinian; we don’t know whether we’ll own means of production or own only our labor power (and thus have to sell it on a market to survive)… 🤔",
     "crumbs": [
@@ -3360,7 +3360,7 @@
   {
     "objectID": "w03/index.html#one-final-reminder",
     "href": "w03/index.html#one-final-reminder",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "One Final Reminder",
     "text": "One Final Reminder\n\nIndustry rule #4080: Cannot “prove” \\(q(x) = \\text{``Algorithm }x\\text{ is fair''}\\)! Only \\(p(x) \\implies q(y)\\):\n\n\\[\n\\underbrace{p(x)}_{\\substack{\\text{Accept ethical} \\\\ \\text{framework }x}} \\implies \\underbrace{q(y)}_{\\substack{\\text{Algorithms should} \\\\ \\text{satisfy condition }y}}\n\\]\n\nBefore: possible ethical frameworks (values for \\(x\\))\nNow: possible fairness criteria (values for \\(y\\))",
     "crumbs": [
@@ -3370,7 +3370,7 @@
   {
     "objectID": "w03/index.html#categories-of-fairness-criteria",
     "href": "w03/index.html#categories-of-fairness-criteria",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Categories of Fairness Criteria",
     "text": "Categories of Fairness Criteria\n\nRoughly, approaches to fairness/bias in AI can be categorized as follows:\n\n\nFairness\n\n\n\n\n\n\nContext-Free\n\n\nSingle-Threshold Fairness\nEqual Prediction\nEqual Decision\n\n\n\n\n\n\n\n\n\nContext-Sensitive\n\n\nFairness via Similarity Metric(s)\nCausal Definitions\n\n\n\n\n\n\n\n[Today] Context-Free Fairness: Easier to grasp from CS/data science perspective; rooted in “language” of Machine Learning (you already know much of it, given DSAN 5000!)\nBut easy-to-grasp notion \\(\\neq\\) “good” notion!\nYour job: push yourself to (a) consider what is getting left out of the context-free definitions, and (b) the loopholes that are thus introduced into them, whereby people/computers can discriminate while remaining “technically fair”",
     "crumbs": [
@@ -3380,7 +3380,7 @@
   {
     "objectID": "w03/index.html#laws-often-perfectly-technically-fair",
     "href": "w03/index.html#laws-often-perfectly-technically-fair",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Laws: Often Perfectly “Technically Fair”",
     "text": "Laws: Often Perfectly “Technically Fair”\n\nAh, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!\n\n\n(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)\n\nAnatole France, Le Lys Rouge (France 1894)",
     "crumbs": [
@@ -3390,7 +3390,7 @@
   {
     "objectID": "w03/index.html#the-brogrammers-criterion",
     "href": "w03/index.html#the-brogrammers-criterion",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "The Brogrammer’s Criterion",
     "text": "The Brogrammer’s Criterion\ndf.drop(columns=[\"race\"], inplace=True)\n\nRacism solved, folks! 🥳🎊🎉 End of the course, have a great rest of your data science career ✌️",
     "crumbs": [
@@ -3400,7 +3400,7 @@
   {
     "objectID": "w03/index.html#no-fairness-through-unawareness",
     "href": "w03/index.html#no-fairness-through-unawareness",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "(No) Fairness Through Unawareness",
     "text": "(No) Fairness Through Unawareness\n\nHW1: Using tiny sample (\\(N &lt; 10K\\)) of Florida voter registrations… RandomForestClassifier (default settings, no hyperparameter tuning, no cross-validation, no ensembling with other methods) will predict self-reported race with \\(&gt;90\\%\\) accuracy (in balanced sample) from just surname and county of residence\n\nCan reach \\(70\\text{-}75\\%\\) with just surname or just county of residence\n\nAlso in HW1: Facebook ad matching service provides over 1,000 different user attributes for (micro)targeting\n\n\n\n\nFrom Datta et al. (2017)",
     "crumbs": [
@@ -3410,7 +3410,7 @@
   {
     "objectID": "w03/index.html#to-make-it-even-more-concrete",
     "href": "w03/index.html#to-make-it-even-more-concrete",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "To Make It Even More Concrete…",
     "text": "To Make It Even More Concrete…\n\nBloomberg analysis of neighborhoods with same-day delivery from Amazon:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Figures from Ingold and Soper (2016)",
     "crumbs": [
@@ -3420,7 +3420,7 @@
   {
     "objectID": "w03/index.html#we-can-do-a-bit-better",
     "href": "w03/index.html#we-can-do-a-bit-better",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "We Can Do (A Bit) Better…",
     "text": "We Can Do (A Bit) Better…\n\nUse random variables to model inferences made by an algorithm (or a human!)\n\\(\\implies\\) fairness by statistically equalizing loan rejections, error rate, etc. between groups\nObvious societal drawback: equality does not ameliorate the effects of past injustices (see: police contact vs. trust-in-government plot from last week)\n\nThis one we saw coming, given “context-free” nature!\n\nLess obvious mathematical drawback: impossibility results (because algebra 😳)\n\nRoughly: can’t satisfy [more than] two statistical fairness criteria at once; similar to how setting \\(\\Pr(X) = p\\) also determines \\(\\Pr(\\text{not }X) = 1 - p\\), or how plugging \\(x = 3\\) into \\(x + y = 5\\) leaves only one possibility \\(y = 2\\)\n\nBUT, “impossibility” \\(\\neq\\) impossibility: (a) one criteria may be “all you need” in given setting; (b) can derive more robust measures by “relaxing” confusion-matrix measures",
     "crumbs": [
@@ -3430,7 +3430,7 @@
   {
     "objectID": "w03/index.html#what-the-fairness-measures-will-feel-like-for-now",
     "href": "w03/index.html#what-the-fairness-measures-will-feel-like-for-now",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "What the Fairness Measures Will Feel Like For Now",
     "text": "What the Fairness Measures Will Feel Like For Now\n\n\n\n\n\n\n(They will get more robust and will incorporate context soon, I promise!)",
     "crumbs": [
@@ -3440,7 +3440,7 @@
   {
     "objectID": "w03/index.html#who-remembers-confusion-matrices",
     "href": "w03/index.html#who-remembers-confusion-matrices",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Who Remembers… 🎉Confusion Matrices!!!🎉",
     "text": "Who Remembers… 🎉Confusion Matrices!!!🎉\n\nTerrifyingly higher stakes than in DSAN 5000, however!\nNow \\(D = 1\\) could literally mean “shoot this person” or “throw this person in jail for life”\n\n\n\n\nFrom Mitchell et al. (2021)",
     "crumbs": [
@@ -3450,7 +3450,7 @@
   {
     "objectID": "w03/index.html#our-first-fairness-measure-finally",
     "href": "w03/index.html#our-first-fairness-measure-finally",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Our First Fairness Measure (Finally)!",
     "text": "Our First Fairness Measure (Finally)!\n\nStandard across the literature: Random Variable \\(A_i\\) “encoding” membership in protected/sensitive group. In HW1, for example:\n\n\\[\nA_i = \\begin{cases}\n0 &\\text{if }i\\text{ self-reported ``white''} \\\\\n1 &\\text{if }i\\text{ self-reported ``black''}\n\\end{cases}\n\\]\n\nNotice: choice of mapping into \\(\\{0, 1\\}\\) here non-arbitrary!\nWe want our models/criteria to be descriptively but also normatively robust; e.g.:\nIf (antecedent I hold, though majority in US do not) one believes that ending (much less repairing) centuries of unrelenting white supremacist violence here might require asymmetric race-based policies,\nThen our model should allow different normative labels and differential weights on\n\\[\n\\begin{align*}\n\\Delta &= (\\text{Fairness} \\mid A = 1) - (\\text{Fairness} \\mid A = 0) \\\\\n\\nabla &= (\\text{Fairness} \\mid A = 0) - (\\text{Fairness} \\mid A = 1)\n\\end{align*}\n\\]\ndespite the descriptive fact that \\(\\Delta = -\\nabla\\).",
     "crumbs": [
@@ -3460,7 +3460,7 @@
   {
     "objectID": "w03/index.html#where-descriptive-and-normative-become-intertwined",
     "href": "w03/index.html#where-descriptive-and-normative-become-intertwined",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Where Descriptive and Normative Become Intertwined",
     "text": "Where Descriptive and Normative Become Intertwined\n\nAllowing this asymmetry is precisely what enables bring descriptive facts to bear on normative concerns!\nMathematically we can always “flip” the mapping from racial labels into \\(\\{0, 1\\}\\)…\nBut this (in a precise, mathematical sense: namely, isomorphism) implies that we’re treating racial categorization as the same type of phenomenon as driving on left or right side of road (see: prev slides on why we make the descriptive vs. normative distinction)\n(See also: Sweden’s Dagen H!)",
     "crumbs": [
@@ -3470,7 +3470,7 @@
   {
     "objectID": "w03/index.html#fairness-through-equalized-positive-rates",
     "href": "w03/index.html#fairness-through-equalized-positive-rates",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "“Fairness” Through Equalized Positive Rates",
     "text": "“Fairness” Through Equalized Positive Rates\n\\[\n\\Pr(D = 1 \\mid A = 0) = \\Pr(D = 1 \\mid A = 1)\n\\]\n\nThis works specifically for discrete, binary-valued categories\nFor general attributes (whether discrete or continuous!), generalizes to:\n\n\\[\nD \\perp A \\iff \\Pr(D = d, A = a) = \\Pr(D = d)\\Pr(A = a)\n\\]",
     "crumbs": [
@@ -3480,7 +3480,7 @@
   {
     "objectID": "w03/index.html#fairness-through-equalized-error-rates",
     "href": "w03/index.html#fairness-through-equalized-error-rates",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "“Fairness” Through Equalized Error Rates",
     "text": "“Fairness” Through Equalized Error Rates\n\nEqualized False Positive Rate:\n\n\\[\n\\Pr(D = 1 \\mid Y = 0, A = 0) = \\Pr(D = 1 \\mid Y = 0, A = 1)\n\\]\n\nEqualized False Negative Rate:\n\n\\[\n\\Pr(D = 0 \\mid Y = 1, A = 0) = \\Pr(D = 0 \\mid Y = 1, A = 1)\n\\]\n\nFor general (non-binary) attributes: \\((D \\perp A) \\mid Y\\):\n\n\\[\n\\Pr(D = d, A = a \\mid Y = y) = \\Pr(D = d \\mid Y = y)\\Pr(A = a \\mid Y = y)\n\\]",
     "crumbs": [
@@ -3490,9 +3490,9 @@
   {
     "objectID": "w03/index.html#no-more-equations",
     "href": "w03/index.html#no-more-equations",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "NO MORE EQUATIONS! 😤",
-    "text": "NO MORE EQUATIONS! 😤\n\nDepending on your background and/or learning style (say, visual vs. auditory), you may be able to look at equations on previous slides and “see” what they’re “saying”\nIf your brain works similarly to mine, however, your eyes glazed over, you began dissociating, planning an escape route, etc.\nIf you’re in the latter group, welcome to the cult of Probabilistic Graphical Models 😈",
+    "text": "NO MORE EQUATIONS! 😤\n\nDepending on your background and/or learning style (say, visual vs. auditory), you may be able to look at equations on previous slides and “see” what they’re “saying”\nIf your brain works similarly to mine, however, your eyes glazed over, you began dissociating, planning an escape route, looking for open ventilation ducts, etc.\nIf you’re in the latter group, welcome to the cult of Probabilistic Graphical Models 😈",
     "crumbs": [
       "Week 3: {{< var w03.date-md >}}"
     ]
@@ -3500,7 +3500,7 @@
   {
     "objectID": "w03/index.html#baby-steps-a-real-world-confusion-matrix",
     "href": "w03/index.html#baby-steps-a-real-world-confusion-matrix",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Baby Steps: A Real-World Confusion Matrix",
     "text": "Baby Steps: A Real-World Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (did vs. didn’t do more crimes)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)",
     "crumbs": [
@@ -3510,9 +3510,9 @@
   {
     "objectID": "w03/index.html#references",
     "href": "w03/index.html#references",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "References",
-    "text": "References\n\n\nAwad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. “Computational Ethics.” Trends in Cognitive Sciences 26 (5): 388–405. https://doi.org/10.1016/j.tics.2022.02.009.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nChurchill, Ward, and Michael Ryan. 1998. Pacifism as Pathology: Reflections on the Role of Armed Struggle in North America. PM Press.\n\n\nCrawford, Kate, and Trevor Paglen. 2019. “Excavating AI: The Politics of Training Sets for Machine Learning.” AI Now Institute, NYU. https://excavating.ai.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeutscher, Guy. 2010. Through the Language Glass: Why the World Looks Different in Other Languages. Henry Holt and Company.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nFields, Barbara J., and Karen E. Fields. 2012. Racecraft: The Soul of Inequality in American Life. Verso Books.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nGould, Stephen Jay. 1980. The Mismeasure of Man (Revised and Expanded). W. W. Norton & Company.\n\n\nGray, Mary L., and Siddharth Suri. 2019. Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass. HarperCollins.\n\n\nHenrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert Gintis, and Richard McElreath. 2001. “In Search of Homo Economicus: Behavioral Experiments in 15 Small-Scale Societies.” American Economic Review 91 (2): 73–78. https://doi.org/10.1257/aer.91.2.73.\n\n\nHobbes, Thomas. 1668. Leviathan: With Selected Variants from the Latin Edition of 1668. Hackett Publishing.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nJames, William. 1891. “The Moral Philosopher and the Moral Life.” International Journal of Ethics 1 (3): 330–54. https://www.jstor.org/stable/2375309.\n\n\nKahneman, Daniel. 2011. Thinking, Fast and Slow. Farrar, Straus and Giroux.\n\n\nLe Guin, Ursula K. 1973. The Ones Who Walk Away from Omelas: A Story. HarperCollins.\n\n\nMcWhorter, John H. 2014. The Language Hoax: Why the World Looks the Same in Any Language. Oxford University Press.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorris, Benny. 1987. The Birth of the Palestinian Refugee Problem, 1947-1949. Cambridge University Press.\n\n\nPappe, Ilan. 2006. The Ethnic Cleansing of Palestine. Simon and Schuster.\n\n\nPellicer, Miquel, and Vimal Ranchhod. 2023. “Understanding the Effects of Racial Classification in Apartheid South Africa.” Journal of Development Economics 160 (January): 102998. https://doi.org/10.1016/j.jdeveco.2022.102998.\n\n\nRawls, John. 1951. “Outline of a Decision Procedure for Ethics.” The Philosophical Review 60 (2): 177–97. https://doi.org/10.2307/2181696.\n\n\n———. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\nRoemer, John E. 1988. Free to Lose: An Introduction to Marxist Economic Philosophy. Harvard University Press.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSkinner, Quentin. 2012. Visions of Politics, Volume 1: Regarding Method. Cambridge: Cambridge University Press.\n\n\nSt. Augustine. 1874. The Works of Aurelius Augustine: Lectures or Tractates on the Gospel According to St. John, v. 2. T. & T. Clark.\n\n\nWeber, Max. 1904. The Protestant Ethic and the Spirit of Capitalism. Courier Corporation.",
+    "text": "References\n\n\nAwad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. “Computational Ethics.” Trends in Cognitive Sciences 26 (5): 388–405. https://doi.org/10.1016/j.tics.2022.02.009.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nChurchill, Ward, and Michael Ryan. 1998. Pacifism as Pathology: Reflections on the Role of Armed Struggle in North America. PM Press.\n\n\nCrawford, Kate, and Trevor Paglen. 2019. “Excavating AI: The Politics of Training Sets for Machine Learning.” AI Now Institute, NYU. https://excavating.ai.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeutscher, Guy. 2010. Through the Language Glass: Why the World Looks Different in Other Languages. Henry Holt and Company.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nFields, Barbara J., and Karen E. Fields. 2012. Racecraft: The Soul of Inequality in American Life. Verso Books.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nGould, Stephen Jay. 1980. The Mismeasure of Man (Revised and Expanded). W. W. Norton & Company.\n\n\nGray, Mary L., and Siddharth Suri. 2019. Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass. HarperCollins.\n\n\nHare, R. M. 1952. The Language of Morals. OUP Oxford.\n\n\nHenrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert Gintis, and Richard McElreath. 2001. “In Search of Homo Economicus: Behavioral Experiments in 15 Small-Scale Societies.” American Economic Review 91 (2): 73–78. https://doi.org/10.1257/aer.91.2.73.\n\n\nHirschman, Albert O. 1970. Exit, Voice, and Loyalty: Responses to Decline in Firms, Organizations, and States. Harvard University Press.\n\n\n———. 1977. The Passions and the Interests: Political Arguments for Capitalism Before Its Triumph. Princeton University Press.\n\n\nHobbes, Thomas. 1668. Leviathan: With Selected Variants from the Latin Edition of 1668. Hackett Publishing.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nJames, William. 1891. “The Moral Philosopher and the Moral Life.” International Journal of Ethics 1 (3): 330–54. https://www.jstor.org/stable/2375309.\n\n\nKahneman, Daniel. 2011. Thinking, Fast and Slow. Farrar, Straus and Giroux.\n\n\nLe Guin, Ursula K. 1973. The Ones Who Walk Away from Omelas: A Story. HarperCollins.\n\n\nMcWhorter, John H. 2014. The Language Hoax: Why the World Looks the Same in Any Language. Oxford University Press.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorris, Benny. 1987. The Birth of the Palestinian Refugee Problem, 1947-1949. Cambridge University Press.\n\n\nPappe, Ilan. 2006. The Ethnic Cleansing of Palestine. Simon and Schuster.\n\n\nPellicer, Miquel, and Vimal Ranchhod. 2023. “Understanding the Effects of Racial Classification in Apartheid South Africa.” Journal of Development Economics 160 (January): 102998. https://doi.org/10.1016/j.jdeveco.2022.102998.\n\n\nRawls, John. 1951. “Outline of a Decision Procedure for Ethics.” The Philosophical Review 60 (2): 177–97. https://doi.org/10.2307/2181696.\n\n\n———. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\nRoemer, John E. 1988. Free to Lose: An Introduction to Marxist Economic Philosophy. Harvard University Press.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSkinner, Quentin. 2012. Visions of Politics, Volume 1: Regarding Method. Cambridge: Cambridge University Press.\n\n\nSt. Augustine. 1874. The Works of Aurelius Augustine: Lectures or Tractates on the Gospel According to St. John, v. 2. T. & T. Clark.\n\n\nWeber, Max. 1904. The Protestant Ethic and the Spirit of Capitalism. Courier Corporation.",
     "crumbs": [
       "Week 3: {{< var w03.date-md >}}"
     ]
@@ -3520,7 +3520,7 @@
   {
     "objectID": "w03/index.html#footnotes",
     "href": "w03/index.html#footnotes",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nFields and Fields (2012), for example, coined “racecraft” to describe reification of blackness in US… much more on this later!↩︎",
     "crumbs": [
@@ -3530,331 +3530,331 @@
   {
     "objectID": "w03/slides.html#loose-ends",
     "href": "w03/slides.html#loose-ends",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Loose Ends",
     "text": "Loose Ends\n\nNormative vs. Descriptive “Exploitation”: How can we disentangle these in our understanding of the term? (Roemer 1988)\n\nUnder descriptive definition, one can “exploit” corn or land in the exact same way one “exploits” human labor (just another type of input into the production process)\nUtility-wise, an economy with exploitation can be unambiguously better than one without exploitation: if 10 people \\(H\\) own means of production, and 990 people \\(S\\) own only their labor power (landless peasants, for example), allowing \\(H\\) to exploit \\(S\\) for a wage increases utility for both: \\(H\\) acquires profits, \\(S\\) doesn’t starve to death\n\n“Tracing back” causes / unraveling history\n\n“The result [of modern 24-hour news cycles] is a litany of events with no beginning and no real end, thrown together only because they occurred at the same time[,] cut off from their antecedents and consequenes” (Bourdieu 2010)"
   },
   {
     "objectID": "w03/slides.html#part-3-the-training-data-bottleneck",
     "href": "w03/slides.html#part-3-the-training-data-bottleneck",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Part 3: The “Training Data Bottleneck”",
     "text": "Part 3: The “Training Data Bottleneck”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSnorkel.AI, An Introduction to Snorkel and Data-Centric AI\n\n\n\n\n\n\nWith so much technical progress […] why is there so little real enterprise success? The answer all too often is that many enterprises continue to be bottlenecked by one key ingredient: the large amounts of labeled data [needed] to train these new systems.\n\n\n\nFigure 1: ibid. (PS, if it seems like I’m picking on them: these are the ‘good guys’ IMO! W.r.t. foregrounding training data as labor)"
   },
   {
     "objectID": "w03/slides.html#human-labor",
     "href": "w03/slides.html#human-labor",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Human Labor",
     "text": "Human Labor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: From Snorkel AI, “The Principles of Data-Centric AI Development by Alex Ratner” (YouTube)\n\n\n\n\n\n\n\n\nGray and Suri (2019)"
   },
   {
     "objectID": "w03/slides.html#computer-scientists-being-responsible-at-georgetown",
     "href": "w03/slides.html#computer-scientists-being-responsible-at-georgetown",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Computer Scientists Being Responsible (At Georgetown!)",
-    "text": "Computer Scientists Being Responsible (At Georgetown!)\n\nDr. Redmiles’ homepage (Since Quarto also freezes when I try to embed it…)\n(PS… UMD undergrad CS class of 2013 extremely overrepresented here 😜)"
-  },
-  {
-    "objectID": "w03/slides.html#computer-scientists-being-responsible-at-georgetown-1",
-    "href": "w03/slides.html#computer-scientists-being-responsible-at-georgetown-1",
-    "title": "Week 3: (Descriptive) Fairness in AI",
-    "section": "Computer Scientists Being Responsible (At Georgetown!)",
-    "text": "Computer Scientists Being Responsible (At Georgetown!)\n\nGU360 Course Page"
+    "text": "Computer Scientists Being Responsible (At Georgetown!)\n\nGU360 Course Page\n(PS… UMD undergrad CS class of 2013 extremely overrepresented here 😜 go Terps)"
   },
   {
     "objectID": "w03/slides.html#so-what-comes-with-human-labels-human-biases",
     "href": "w03/slides.html#so-what-comes-with-human-labels-human-biases",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "So, What Comes With Human Labels? Human Biases!",
     "text": "So, What Comes With Human Labels? Human Biases!\n\n\n\n\n\n\n\n\n\nCrawford and Paglen (2019)\n\n\n\n\n\n\n\nImage tagged in ImageNet with the label “BOLSHEVIK”. From Crawford and Paglen (2019)"
   },
   {
     "objectID": "w03/slides.html#biases-in-our-brains-rightarrow-biases-in-our-models-rightarrow-material-effects",
     "href": "w03/slides.html#biases-in-our-brains-rightarrow-biases-in-our-models-rightarrow-material-effects",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Biases In Our Brains \\(\\rightarrow\\) Biases in Our Models \\(\\rightarrow\\) Material Effects",
     "text": "Biases In Our Brains \\(\\rightarrow\\) Biases in Our Models \\(\\rightarrow\\) Material Effects\n\n\n\n\n\n\n\n“Reification”: Pretentious word for an important phenomenon, whereby talking about something (e.g., race) as if it was real ends up leading to it becoming real (having real impacts on people’s lives)1\n\n\nOn average, being classified as a White man as opposed to a Coloured man would have more than quadrupled a person’s income. (Pellicer and Ranchhod 2023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFields and Fields (2012), for example, coined “racecraft” to describe reification of blackness in US… much more on this later!"
   },
   {
     "objectID": "w03/slides.html#reification-in-science",
     "href": "w03/slides.html#reification-in-science",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Reification in Science",
     "text": "Reification in Science\n\n\n\n\n\n\n\n“““Intelligence”“” Testing\n\n\n\n\nGould (1980)\n\n\n\n\n\nMore Generally\n\n\nGoodhart’s Law: “When a measure becomes a target, it ceases to be a good measure”\nCat-and-mouse game between goals (🚩) and ways of measuring progress towards goals (also 🚩)"
   },
   {
     "objectID": "w03/slides.html#reflective-equilibrium",
     "href": "w03/slides.html#reflective-equilibrium",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Reflective Equilibrium",
     "text": "Reflective Equilibrium\n\nMost criticisms of any framework boil down to, “great in theory, but doesn’t work in practice”\nThe way to take this seriously: reflective equilibrium\nIntroduced by Rawls (1951), but popularized by Rawls (1971)\n\n\nFrom Awad et al. (2022)"
   },
   {
     "objectID": "w03/slides.html#easy-mode-descriptive-judgements",
     "href": "w03/slides.html#easy-mode-descriptive-judgements",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Easy Mode: Descriptive Judgements",
-    "text": "Easy Mode: Descriptive Judgements\nHow did you acquire the concept “red”?\n\nPeople pointed to stuff with certain properties and said “red” (or “rojo” or “红”), as pieces of an intersubjective communication system\nThese descriptive labels enable coordination, like driving on left or right side of road!\nNothing very profound or difficult in committing to this descriptive coordination: “for ease of communication, I’ll vibrate my vocal chords like this (or write these symbols) to indicate \\(x\\), and vibrate them like this (or write these other symbols) to indicate \\(y\\)” \nLinguistic choices, when it comes to description, are arbitrary*: Our mouths can make these sounds, and each language is a mapping: [combinations of sounds] \\(\\leftrightarrow\\) [things]\n\ndiːsˈæn ˈfɪfti fɔr ˈfɪfti [US Accent  / Icelandic Accent ]\n\n\n\n\n*(Tiny text footnote: Except for, perhaps, a few fun but rare onomatopoetic cases)"
+    "text": "Easy Mode: Descriptive Judgements\nHow did you acquire the concept “red”?\n\nPeople pointed to stuff with certain properties and said “red” (or “rojo” or “红”), as pieces of an intersubjective communication system\nThese descriptive labels enable coordination, like driving on left or right side of road!\nNothing very profound or difficult in committing to this descriptive coordination: “for ease of communication, I’ll vibrate my vocal chords like this (or write these symbols) to indicate \\(x\\), and vibrate them like this (or write these other symbols) to indicate \\(y\\)” \nLinguistic choices, when it comes to description, are arbitrary*: Our mouths can make these sounds, and each language is a mapping: [combinations of sounds] \\(\\leftrightarrow\\) [things]\n\ndiːsˈæn ˈfɪfti fɔr ˈfɪfti US Accent / Icelandic Accent\n\n\n\n\n\n\n*(Tiny text footnote: Except for, perhaps, a few fun but rare onomatopoetic cases)"
   },
   {
     "objectID": "w03/slides.html#what-makes-ethical-judgements-more-difficult",
     "href": "w03/slides.html#what-makes-ethical-judgements-more-difficult",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "What Makes Ethical Judgements “More Difficult”?",
     "text": "What Makes Ethical Judgements “More Difficult”?\nHow did you acquire the concept “good”?\n\nPeople pointed to actions with certain properties and said “good” (and pointed at others and said “bad”), as part of instilling values in you\n“Grass is green” just links two descriptive referents together, while “Honesty is good” takes the descriptive concept “honesty” and links it with the normative concept “good”\nIn doing this, parents/teachers/friends are doing way more than just linking sounds and things in the world (describing): they are also prescribing rules of moral conduct!\nNormative concepts go beyond “mere” communication: course of your life / future / [things that matter deeply to people] differ if you act on one set of norms vs. another\n\\(\\implies\\) Ethics centrally involves non-arbitrarily-chosen commitments!"
   },
   {
     "objectID": "w03/slides.html#tldr",
     "href": "w03/slides.html#tldr",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Tl;dr",
-    "text": "Tl;dr\n\nLanguages are arbitrary conventions for communication\nEthical systems build on this language to non-arbitrarily mark out things that are good/bad\nLife would not be very different if we “shuffled” words (we’d just vibrate our vocal chords differently), but would be very different if we “shuffled” good/bad labeling"
+    "text": "Tl;dr\n\n\n\nLanguages are arbitrary conventions for communication\nEthical systems build on this language to non-arbitrarily mark out things that are good/bad\nSociety wouldn’t be too different if we “shuffled” words (we’d just vibrate our vocal chords differently), but would be very different if we “shuffled” good/bad labeling\n\n\n\n\n\nHare (1952)"
   },
   {
     "objectID": "w03/slides.html#quick-aside-top-10-linguist-beefs",
     "href": "w03/slides.html#quick-aside-top-10-linguist-beefs",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Quick Aside: Top 10 Linguist Beefs",
     "text": "Quick Aside: Top 10 Linguist Beefs\n\nStatement on previous slide (“Life would not be very different if we shuffled words”), might seem weird/closed-minded/dismissive if you have a certain popular prior belief…\n\n\n\n\n\n\n\n\n\n\nDeutscher (2010)\n\n\n\n\n\n\n\nMcWhorter (2014)"
   },
   {
     "objectID": "w03/slides.html#the-last-time-i-use-this-i-promise",
     "href": "w03/slides.html#the-last-time-i-use-this-i-promise",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "The Last Time I Use This, I Promise",
     "text": "The Last Time I Use This, I Promise"
   },
   {
     "objectID": "w03/slides.html#historical-example-capitalism-and-the-protestant-ethic",
     "href": "w03/slides.html#historical-example-capitalism-and-the-protestant-ethic",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Historical Example: Capitalism and the “Protestant Ethic”",
-    "text": "Historical Example: Capitalism and the “Protestant Ethic”\n\nBig changes in history are associated with changes in this good/bad labeling!\nMax Weber (second most-cited sociologist of all time*): Protestant value system gave rise to capitalist system by relabeling what things are good vs. bad (Weber 1904):\n\n\n\n\n\n\n\n\nJesus said to his disciples, “Truly, I say to you, only with difficulty will a rich person enter the kingdom of heaven. Again I tell you, it is easier for a camel to go through the eye of a needle than for a rich person to enter the kingdom of God.” (Matthew 19:23-24)\n\n\nOh, were we loving God worthily, we should have no love at all for money! (St. Augustine 1874, pg. 28)\n\n*(…jumpscare: REIFICATION!)\n\n\n\nThe earliest capitalists lacked legitimacy in the moral climate in which they found themselves. One of the means they found [to legitimize their behavior] was to appropriate the evaluative vocabulary of Protestantism. (Skinner 2012, pg. 157)\n\n\nCalvinism added [to Luther’s doctrine] the necessity of proving one’s faith in worldly activity, [replacing] spiritual aristocracy of monks outside of/above the world with spiritual aristocracy of predestined saints within it. (pg. 121)."
+    "text": "Historical Example: Capitalism and the “Protestant Ethic”\n\nBig changes in history are associated with changes in this good/bad labeling!\nMax Weber (second most-cited sociologist of all time*): Protestant value system gave rise to capitalist system by relabeling what things are good vs. bad (Weber 1904):\n\n\n\n\n\n\n\n\nJesus said to his disciples, “Truly, I say to you, only with difficulty will a rich person enter the kingdom of heaven. Again I tell you, it is easier for a camel to go through the eye of a needle than for a rich person to enter the kingdom of God.” (Matthew 19:23-24)\n\n\nOh, were we loving God worthily, we should have no love at all for money! (St. Augustine 1874, pg. 28)\n\n \n*(…jumpscare: REIFICATION!)\n\n\n\nThe earliest capitalists lacked legitimacy in the moral climate in which they found themselves. One of the means they found [to legitimize their behavior] was to appropriate the evaluative vocabulary of Protestantism. (Skinner 2012, pg. 157)\n\n\nCalvinism added [to Luther’s doctrine] the necessity of proving one’s faith in worldly activity, [replacing] spiritual aristocracy of monks outside of/above the world with spiritual aristocracy of predestined saints within it. (pg. 121)."
+  },
+  {
+    "objectID": "w03/slides.html#aggressively-tossing-books-at-your-head",
+    "href": "w03/slides.html#aggressively-tossing-books-at-your-head",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
+    "section": "Aggressively Tossing Books at Your Head",
+    "text": "Aggressively Tossing Books at Your Head\n\n\n\n(Reminder that there are no required readings, but that this means you should pick a few which seem mildly interesting to you and try them out, as first step towards final paper lit review! 😉)\nAlso, we’ll be bringing this Hirschman guy back into the mix when we get to policy: specifically, his earlier book, Exit, Voice, and Loyalty (Hirschman 1970)\n\n\n\n\n\nHirschman (1977)"
   },
   {
     "objectID": "w03/slides.html#contemporary-example-palestine",
     "href": "w03/slides.html#contemporary-example-palestine",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Contemporary Example: Palestine",
     "text": "Contemporary Example: Palestine\n\nVery few of the relevant empirical facts are in dispute, since opening of crucial archives to three so-called “New Historians” in the 1980s. So why do people still argue?\n\n\n\n\n\n\n\n\nIlan Pappe, one of these historians, concluded from this material that:\n\nThe Israeli state was built upon a massive ethnic cleansing, and\nIs not morally justifiable (Pappe 2006)\n\n\n\nThe immunity Israel has received over the last fifty years encourages others, regimes and oppositions alike, to believe that human and civil rights are irrelevant in the Middle East. The dismantling of the mega-prison in Palestine will send a different, and more hopeful, message.\n\n\n\n\nBenny Morris, another of these historians, concluded that:\n\nThe Israeli state was built upon a massive ethnic cleansing, and\nIs morally justifiable (Morris 1987)\n\n\n\nA Jewish state would not have come into being without the uprooting of 700,000 Palestinians. Therefore it was necessary to uproot them. There was no choice but to expel that population. It was necessary to cleanse the hinterland and cleanse the border areas and cleanse the main roads."
   },
   {
-    "objectID": "w03/slides.html#from-week-1-counterargument-to-consequentialism",
-    "href": "w03/slides.html#from-week-1-counterargument-to-consequentialism",
-    "title": "Week 3: (Descriptive) Fairness in AI",
-    "section": "(From Week 1) Counterargument to Consequentialism",
-    "text": "(From Week 1) Counterargument to Consequentialism\n\n\n\n\n\n\n\nMillions are kept permanently happy, on the one simple condition that a certain lost soul on the far-off edge of things should lead a life of lonely torture (James 1891)\n\n\nModern example: people “out there” suffer so we can have iPhones, etc.\n\n\n\n\n\n\nLe Guin (1973)"
+    "objectID": "w03/slides.html#standard-counterargument-to-consequentialism",
+    "href": "w03/slides.html#standard-counterargument-to-consequentialism",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
+    "section": "Standard Counterargument to Consequentialism",
+    "text": "Standard Counterargument to Consequentialism\n\n\n\n\n\n\n\nMillions are kept permanently happy, on the one simple condition that a certain lost soul on the far-off edge of things should lead a life of lonely torture (James 1891)\n\n\nModern example: people “out there” suffer so we can have iPhones, etc.\n\n\n\n\n\n\nLe Guin (1973)"
   },
   {
     "objectID": "w03/slides.html#one-solution-individual-rights",
     "href": "w03/slides.html#one-solution-individual-rights",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "One Solution: Individual Rights",
     "text": "One Solution: Individual Rights\n\n\n\n\n\n\n\nRights are vetoes which individuals can use to cancel out collective/institutional decisions which affect them (key example for us: right to privacy)\nRawls/liberalism: individual rights are lexically prior to “efficiency” and/or distributional concerns\nWhy the buzzword “lexically”? Enter (non-scary) math!\nWe can put lowercase letters of English alphabet in an order: \\(\\texttt{a} \\prec \\texttt{b} \\prec \\cdots \\texttt{z}\\)\nWe can put capital letters of English alphabet in an order: \\(\\texttt{A} \\prec \\texttt{B} \\prec \\cdots \\prec \\texttt{Z}\\)\nWhat if we need to sort stuff with both types? We can decide that capital letters are lexically prior to lowercase letters, giving us a combined ordering:\n\n\n\n\n\n\nDworkin (1977)\n\n\n\n\n\n\\[\n\\boxed{\\texttt{A} \\prec \\texttt{B} \\prec \\cdots \\prec \\texttt{Z} \\prec \\texttt{a} \\prec \\texttt{b} \\prec \\cdots \\prec \\texttt{z}}\n\\]"
   },
   {
     "objectID": "w03/slides.html#lexical-ordering-i-tricked-you",
     "href": "w03/slides.html#lexical-ordering-i-tricked-you",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Lexical Ordering (I Tricked You 😈)",
     "text": "Lexical Ordering (I Tricked You 😈)\n\n\n\n\n\n\n\nYou thought I was just talking about letters, but they’re actually variables: capital letters are rights, lowercase letters are distributive principles\n\n\\[\n\\underbrace{\\texttt{A} \\prec \\texttt{B} \\prec \\cdots \\prec \\texttt{Z}}_{\\mathclap{\\substack{\\text{Individual Rights} \\\\ \\text{Basic Goods}}}} \\phantom{\\prec} \\prec \\phantom{\\prec} \\underbrace{\\texttt{a} \\prec \\texttt{b} \\prec \\cdots \\prec \\texttt{z}}_{\\mathclap{\\substack{\\text{Distributive Principles} \\\\ \\text{Money and whatnot}}}}\n\\]"
   },
   {
     "objectID": "w03/slides.html#better-metaphor-than-letters",
     "href": "w03/slides.html#better-metaphor-than-letters",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Better Metaphor Than Letters",
     "text": "Better Metaphor Than Letters\n\nLetters are where Rawls gets “lexically prior” from, but letters are total orderings (we know where every letter “stands” in relation to every other letter)\nBetter metaphor: a high school with a hierarchy such that\n\n\\[\n\\text{Seniors} \\prec \\text{Juniors} \\prec \\text{Sophomores}  \\prec \\text{Freshmen}\n\\]\n\n\\(\\implies\\) If you’re a Freshman, whether at the “top” or “bottom” of a ranking of Freshmen, you’re still prior to all Sophomores…\nWhy is this more helpful? Because we don’t need to define the rankings within classes to know the rankings between classes in this case"
   },
   {
     "objectID": "w03/slides.html#counterarguments-to-deontology",
     "href": "w03/slides.html#counterarguments-to-deontology",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Counterargument(s) to Deontology",
-    "text": "Counterargument(s) to Deontology\n\n\n\n\n\n\n\nDeontological rule: “Don’t lie”\n\nBut then: Nazis come to your house, ask you if you’re harboring any Jews\n\nk, new deontological rule: “Don’t lie unless necessary”\n\nWho decides when it’s necessary?\n\nDeontological commitment: Pacifism / Nonviolence\n\nBut then: someone swingin on you\n\nk, new deontological commitment: Pacifism / Nonviolence Except In Self-Defense\n\nWho decides what counts as self-defense?\n\nDeontological maxim: “The master’s tools will never dismantle the master’s house”\n\nWho conceded “ownership” to the master?\n\n(Trolley problems, etc.)\n\n\n\n\n\n\nChurchill and Ryan (1998) (Derrick Jensen intro removed from later editions so… I put it on dang GitHub)"
+    "text": "Counterargument(s) to Deontology\n\n\n\n\n\n\n\nDeontological rule: “Don’t lie”\n\nBut then: Nazis come to your house, ask you if you’re harboring any Jews\n\nk, new deontological rule: “Don’t lie unless necessary”\n\nWho decides when it’s necessary?\n\nDeontological commitment: Pacifism / Nonviolence\n\nBut then: someone swingin on you\n\nk, new deontological commitment: Pacifism / Nonviolence Except In Self-Defense\n\nWho decides what counts as self-defense?\n\n(Trolley problems, etc.)\n\n\n\n\n\n\nChurchill and Ryan (1998) (Derrick Jensen intro removed from later editions so I put it on dang GitHub"
   },
   {
     "objectID": "w03/slides.html#a-synthesis-two-level-utilitarianism",
     "href": "w03/slides.html#a-synthesis-two-level-utilitarianism",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "A Synthesis: Two-Level Utilitarianism",
     "text": "A Synthesis: Two-Level Utilitarianism\n\n\n\n\n\n\n\nIt would be exhausting to compute Nash equilibrium strategies for every scenario\nInstead, we can develop heuristics that work for most cases, then reevaluate and update when we encounter tough cases\n(Brings us back to reflective equilibrium!)\n\n\n\n\n\n\nKahneman (2011)"
   },
   {
     "objectID": "w03/slides.html#individual-vs.-social-morality",
     "href": "w03/slides.html#individual-vs.-social-morality",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Individual vs. Social Morality",
     "text": "Individual vs. Social Morality\n\nThat was all already hard enough, to reason about individual morality\nNow add in the fact that we live in a society 😰\nThings that happen depend not only on our choices but also the choices of others\n\n\n\n\n\n\n\n\nSeinfeld: Living in a Society (Clip) | TBS"
   },
   {
     "objectID": "w03/slides.html#enter-game-theory",
     "href": "w03/slides.html#enter-game-theory",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Enter Game Theory",
     "text": "Enter Game Theory\n\nA tool for analyzing how individual choices + choices of others \\(\\rightarrow\\) outcomes!\n\n\n\n\n\n\n\n\nExample: You (\\(A\\)) and a friend (\\(B\\)) committed a robbery, and you’re brought into the police station for questioning.\nYou’re placed in separate rooms, and each of you is offered a plea deal: if you testify while your partner stays silent, you go free and they go to jail for 3 years.\nOtherwise, if you both stay silent, they have very little evidence and can only jail you for 1 year\nHowever, there’s a catch: if you both confess, you both get two years in jail, since they now have maximal evidence\n\n\n\n\n\n\nSource: Wikimedia Commons"
   },
   {
     "objectID": "w03/slides.html#individual-decision-making",
     "href": "w03/slides.html#individual-decision-making",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Individual Decision-Making",
     "text": "Individual Decision-Making\n\n\n\n\n\n\n\nLet’s think through \\(A\\)’s best responses to the possible choices \\(B\\) could make:\nIf \\(B\\) stays silent, what is \\(A\\)’s best option?\n\nStaying silent results in 1 year of jail\nTestifying results in 0 years of jail\nSo it is better to testify\n\nIf \\(B\\) testifies, what is \\(A\\)’s best option?\n\nStaying silent results in 3 years of jail\nTestifying results in 2 years of jail\nSo it is better to testify\n\nThe result: regardless of what \\(B\\) does, \\(A\\) is better off testifying!\n\n\n\n\n\n\nSource: Wikimedia Commons"
   },
   {
     "objectID": "w03/slides.html#the-social-outcome",
     "href": "w03/slides.html#the-social-outcome",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "The Social Outcome",
     "text": "The Social Outcome\n\n\n\n\n\n\n\nThe game is symmetric, so the same logic applies for \\(B\\)\nConclusion: the outcome of the game will be \\(s^* = (\\text{Testify}, \\text{Testify})\\)\nThis is called a Nash equilibrium: no player \\(i\\) can make themselves better off by deviating from \\(s_i\\)\n\n\n\n\n\n\nSource: Wikimedia Commons"
   },
   {
     "objectID": "w03/slides.html#how-do-we-fix-this-conventions",
     "href": "w03/slides.html#how-do-we-fix-this-conventions",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "How Do We Fix This? Conventions!",
     "text": "How Do We Fix This? Conventions!\n\n\n\n\n\n\n\nWe encounter this type of problem every day if we drive! You (\\(A\\)) and another driver (\\(B\\)) arrive at an intersection:\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nStop\nDrive\n\n\n\\(A\\)\nStop\n\\(-1,-1\\)\n\\(-3,\\phantom{-}0\\)\n\n\nDrive\n\\(\\phantom{-}0, -3\\)\n\\(-10,-10\\)\n\n\n\n\n\n\nIf both stop, we’re mostly bored: \\(u_A = -1\\)\nIf we stop and the other person drives, we’re mad that they got to go and we didn’t: \\(u_A = -3\\)\nIf both drive, we crash: \\(u_A = -10\\)"
   },
   {
     "objectID": "w03/slides.html#without-a-convention",
     "href": "w03/slides.html#without-a-convention",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Without A Convention",
     "text": "Without A Convention\n\n\n\n\n\n\n\nWe’re “frozen”: this game has no unique Nash equilibrium, so we cannot say (on the basis of individual rationality) what will happen!\nWithout a convention: power/aggression takes over. “War of all against all”, only the strong survive, etc. (life is “nasty, brutish, and short”)\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nStop\nDrive\n\n\n\\(A\\)\nStop\n\\({\\color{orange}\\cancel{\\color{black}-1}},{\\color{lightblue}\\cancel{\\color{black}-1}}\\)\n\\(\\boxed{-3},\\boxed{0}\\)\n\n\nDrive\n\\(\\boxed{0}, \\boxed{-3}\\)\n\\({\\color{orange}\\cancel{\\color{black}-10}},{\\color{lightblue}\\cancel{\\color{black}-10}}\\)\n\n\n\n\n\n\n\nIf \\(A\\)’s aggression is \\(\\Pr(s_A = \\textsf{Drive}) = X \\sim \\mathcal{U}[0,1]\\), \\(B\\)’s aggression is \\(\\Pr(s_B = \\textsf{Drive}) = Y \\sim \\mathcal{U}[0,1]\\), what happens at individual and societal levels?\n\n\\[\n\\begin{align*}\n\\mathbb{E}[u_A] = \\mathbb{E}[u_B] &= \\int_{0}^{1}\\int_{0}^{1}\\left(x - 2y -8xy - 1\\right)dy \\, dx = -3.5 \\\\\n\\underbrace{\\mathbb{E}\\mkern-3mu\\left[u_A + u_B\\right]}_{\\mathclap{\\text{Utilitarian Social Welfare}}} &= -3.5\n\\end{align*}\n\\]"
   },
   {
     "objectID": "w03/slides.html#the-convention-of-traffic-lights",
     "href": "w03/slides.html#the-convention-of-traffic-lights",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "The Convention of Traffic Lights",
     "text": "The Convention of Traffic Lights\n\nIf we don’t want a world where \\(\\text{Happiness}(i) \\propto \\Pr(i \\text{ more aggro than }j)\\), we can introduce traffic lights:\n\n\n\n\n\n\n\n\nNow in “correlated equilibrium”, where we ensure* coordinated \\(\\Pr((\\textsf{Drive}, \\textsf{Stop})) = 0.5\\), \\(\\Pr((\\textsf{Stop}, \\textsf{Drive})) = 0.5\\)\n\\(\\mathbb{E}[u_A] = (0.5)(0) + (0.5)(-3) = -1.5\\)\n\\(\\mathbb{E}[u_B] = (0.5)(-3) + (0.5)(0) = -1.5\\)\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nStop\nDrive\n\n\n\\(A\\)\nStop\n\\({\\color{orange}\\cancel{\\color{black}-1}},{\\color{lightblue}\\cancel{\\color{black}-1}}\\)\n\\(\\boxed{-3},\\boxed{0}\\)\n\n\nDrive\n\\(\\boxed{0}, \\boxed{-3}\\)\n\\({\\color{orange}\\cancel{\\color{black}-10}},{\\color{lightblue}\\cancel{\\color{black}-10}}\\)\n\n\n\n\n\n\n\nEmpirical (anthropological) findings across literally thousands of different cultures throughout the world: people are willing to give up rewards to ensure fairness (see, e.g., Henrich et al. (2001))\n\n*(through, for example, traffic laws: equal in theory… In practice? Another story)"
   },
   {
     "objectID": "w03/slides.html#so-how-should-we-makechoose-conventions",
     "href": "w03/slides.html#so-how-should-we-makechoose-conventions",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "So How Should We Make/Choose Conventions?",
     "text": "So How Should We Make/Choose Conventions?\n\nHobbes (1668): Only way out of “war of all against all” is to surrender all power to one sovereign (the Leviathan)\nRousseau (1762): Social contract\n[Big big ~200 year gap here… can you think of why? Hint: French Revolution in 1789]\nRawls (1971): Social contract behind the “veil of ignorance”\n\nIf we didn’t know where we were going to end up in society, how would we set it up?"
   },
   {
     "objectID": "w03/slides.html#rawls-veil-of-ignorance",
     "href": "w03/slides.html#rawls-veil-of-ignorance",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Rawls’ Veil of Ignorance",
     "text": "Rawls’ Veil of Ignorance\n\nProbably the most important tool for policy whitepapers!\n“Justice as fairness” (next week: fairness in AI 😜)\nWe don’t know whether we’ll be \\(A\\) or \\(B\\) in the intersection game, so we’d choose the traffic light!\nMore profoundly: We don’t know what race, gender, class, ethnicity, sexuality, disability status we’ll have; We don’t know whether we’ll be Israeli or Palestinian; we don’t know whether we’ll own means of production or own only our labor power (and thus have to sell it on a market to survive)… 🤔"
   },
   {
     "objectID": "w03/slides.html#one-final-reminder",
     "href": "w03/slides.html#one-final-reminder",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "One Final Reminder",
     "text": "One Final Reminder\n\nIndustry rule #4080: Cannot “prove” \\(q(x) = \\text{``Algorithm }x\\text{ is fair''}\\)! Only \\(p(x) \\implies q(y)\\):\n\n\\[\n\\underbrace{p(x)}_{\\substack{\\text{Accept ethical} \\\\ \\text{framework }x}} \\implies \\underbrace{q(y)}_{\\substack{\\text{Algorithms should} \\\\ \\text{satisfy condition }y}}\n\\]\n\nBefore: possible ethical frameworks (values for \\(x\\))\nNow: possible fairness criteria (values for \\(y\\))"
   },
   {
     "objectID": "w03/slides.html#categories-of-fairness-criteria",
     "href": "w03/slides.html#categories-of-fairness-criteria",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Categories of Fairness Criteria",
     "text": "Categories of Fairness Criteria\n\nRoughly, approaches to fairness/bias in AI can be categorized as follows:\n\n\nFairness\n\n\n\n\n\n\nContext-Free\n\n\nSingle-Threshold Fairness\nEqual Prediction\nEqual Decision\n\n\n\n\n\n\n\n\n\nContext-Sensitive\n\n\nFairness via Similarity Metric(s)\nCausal Definitions\n\n\n\n\n\n\n[Today] Context-Free Fairness: Easier to grasp from CS/data science perspective; rooted in “language” of Machine Learning (you already know much of it, given DSAN 5000!)\nBut easy-to-grasp notion \\(\\neq\\) “good” notion!\nYour job: push yourself to (a) consider what is getting left out of the context-free definitions, and (b) the loopholes that are thus introduced into them, whereby people/computers can discriminate while remaining “technically fair”"
   },
   {
     "objectID": "w03/slides.html#laws-often-perfectly-technically-fair",
     "href": "w03/slides.html#laws-often-perfectly-technically-fair",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Laws: Often Perfectly “Technically Fair”",
     "text": "Laws: Often Perfectly “Technically Fair”\n\nAh, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!\n\n\n(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)\n\nAnatole France, Le Lys Rouge (France 1894)"
   },
   {
     "objectID": "w03/slides.html#the-brogrammers-criterion",
     "href": "w03/slides.html#the-brogrammers-criterion",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "The Brogrammer’s Criterion",
     "text": "The Brogrammer’s Criterion\ndf.drop(columns=[\"race\"], inplace=True)\n\nRacism solved, folks! 🥳🎊🎉 End of the course, have a great rest of your data science career ✌️"
   },
   {
     "objectID": "w03/slides.html#no-fairness-through-unawareness",
     "href": "w03/slides.html#no-fairness-through-unawareness",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "(No) Fairness Through Unawareness",
     "text": "(No) Fairness Through Unawareness\n\nHW1: Using tiny sample (\\(N &lt; 10K\\)) of Florida voter registrations… RandomForestClassifier (default settings, no hyperparameter tuning, no cross-validation, no ensembling with other methods) will predict self-reported race with \\(&gt;90\\%\\) accuracy (in balanced sample) from just surname and county of residence\n\nCan reach \\(70\\text{-}75\\%\\) with just surname or just county of residence\n\nAlso in HW1: Facebook ad matching service provides over 1,000 different user attributes for (micro)targeting\n\n\nFrom Datta et al. (2017)"
   },
   {
     "objectID": "w03/slides.html#to-make-it-even-more-concrete",
     "href": "w03/slides.html#to-make-it-even-more-concrete",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "To Make It Even More Concrete…",
     "text": "To Make It Even More Concrete…\n\nBloomberg analysis of neighborhoods with same-day delivery from Amazon:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Figures from Ingold and Soper (2016)"
   },
   {
     "objectID": "w03/slides.html#we-can-do-a-bit-better",
     "href": "w03/slides.html#we-can-do-a-bit-better",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "We Can Do (A Bit) Better…",
     "text": "We Can Do (A Bit) Better…\n\nUse random variables to model inferences made by an algorithm (or a human!)\n\\(\\implies\\) fairness by statistically equalizing loan rejections, error rate, etc. between groups\nObvious societal drawback: equality does not ameliorate the effects of past injustices (see: police contact vs. trust-in-government plot from last week)\n\nThis one we saw coming, given “context-free” nature!\n\nLess obvious mathematical drawback: impossibility results (because algebra 😳)\n\nRoughly: can’t satisfy [more than] two statistical fairness criteria at once; similar to how setting \\(\\Pr(X) = p\\) also determines \\(\\Pr(\\text{not }X) = 1 - p\\), or how plugging \\(x = 3\\) into \\(x + y = 5\\) leaves only one possibility \\(y = 2\\)\n\nBUT, “impossibility” \\(\\neq\\) impossibility: (a) one criteria may be “all you need” in given setting; (b) can derive more robust measures by “relaxing” confusion-matrix measures"
   },
   {
     "objectID": "w03/slides.html#what-the-fairness-measures-will-feel-like-for-now",
     "href": "w03/slides.html#what-the-fairness-measures-will-feel-like-for-now",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "What the Fairness Measures Will Feel Like For Now",
     "text": "What the Fairness Measures Will Feel Like For Now\n\n\n(They will get more robust and will incorporate context soon, I promise!)"
   },
   {
     "objectID": "w03/slides.html#who-remembers-confusion-matrices",
     "href": "w03/slides.html#who-remembers-confusion-matrices",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Who Remembers… 🎉Confusion Matrices!!!🎉",
     "text": "Who Remembers… 🎉Confusion Matrices!!!🎉\n\nTerrifyingly higher stakes than in DSAN 5000, however!\nNow \\(D = 1\\) could literally mean “shoot this person” or “throw this person in jail for life”\n\n\nFrom Mitchell et al. (2021)"
   },
   {
     "objectID": "w03/slides.html#our-first-fairness-measure-finally",
     "href": "w03/slides.html#our-first-fairness-measure-finally",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Our First Fairness Measure (Finally)!",
     "text": "Our First Fairness Measure (Finally)!\n\nStandard across the literature: Random Variable \\(A_i\\) “encoding” membership in protected/sensitive group. In HW1, for example:\n\n\\[\nA_i = \\begin{cases}\n0 &\\text{if }i\\text{ self-reported ``white''} \\\\\n1 &\\text{if }i\\text{ self-reported ``black''}\n\\end{cases}\n\\]\n\nNotice: choice of mapping into \\(\\{0, 1\\}\\) here non-arbitrary!\nWe want our models/criteria to be descriptively but also normatively robust; e.g.:\nIf (antecedent I hold, though majority in US do not) one believes that ending (much less repairing) centuries of unrelenting white supremacist violence here might require asymmetric race-based policies,\nThen our model should allow different normative labels and differential weights on\n\\[\n\\begin{align*}\n\\Delta &= (\\text{Fairness} \\mid A = 1) - (\\text{Fairness} \\mid A = 0) \\\\\n\\nabla &= (\\text{Fairness} \\mid A = 0) - (\\text{Fairness} \\mid A = 1)\n\\end{align*}\n\\]\ndespite the descriptive fact that \\(\\Delta = -\\nabla\\)."
   },
   {
     "objectID": "w03/slides.html#where-descriptive-and-normative-become-intertwined",
     "href": "w03/slides.html#where-descriptive-and-normative-become-intertwined",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Where Descriptive and Normative Become Intertwined",
     "text": "Where Descriptive and Normative Become Intertwined\n\nAllowing this asymmetry is precisely what enables bring descriptive facts to bear on normative concerns!\nMathematically we can always “flip” the mapping from racial labels into \\(\\{0, 1\\}\\)…\nBut this (in a precise, mathematical sense: namely, isomorphism) implies that we’re treating racial categorization as the same type of phenomenon as driving on left or right side of road (see: prev slides on why we make the descriptive vs. normative distinction)\n(See also: Sweden’s Dagen H!)"
   },
   {
     "objectID": "w03/slides.html#fairness-through-equalized-positive-rates",
     "href": "w03/slides.html#fairness-through-equalized-positive-rates",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "“Fairness” Through Equalized Positive Rates",
     "text": "“Fairness” Through Equalized Positive Rates\n\\[\n\\Pr(D = 1 \\mid A = 0) = \\Pr(D = 1 \\mid A = 1)\n\\]\n\nThis works specifically for discrete, binary-valued categories\nFor general attributes (whether discrete or continuous!), generalizes to:\n\n\\[\nD \\perp A \\iff \\Pr(D = d, A = a) = \\Pr(D = d)\\Pr(A = a)\n\\]"
   },
   {
     "objectID": "w03/slides.html#fairness-through-equalized-error-rates",
     "href": "w03/slides.html#fairness-through-equalized-error-rates",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "“Fairness” Through Equalized Error Rates",
     "text": "“Fairness” Through Equalized Error Rates\n\nEqualized False Positive Rate:\n\n\\[\n\\Pr(D = 1 \\mid Y = 0, A = 0) = \\Pr(D = 1 \\mid Y = 0, A = 1)\n\\]\n\nEqualized False Negative Rate:\n\n\\[\n\\Pr(D = 0 \\mid Y = 1, A = 0) = \\Pr(D = 0 \\mid Y = 1, A = 1)\n\\]\n\nFor general (non-binary) attributes: \\((D \\perp A) \\mid Y\\):\n\n\\[\n\\Pr(D = d, A = a \\mid Y = y) = \\Pr(D = d \\mid Y = y)\\Pr(A = a \\mid Y = y)\n\\]"
   },
   {
     "objectID": "w03/slides.html#no-more-equations",
     "href": "w03/slides.html#no-more-equations",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "NO MORE EQUATIONS! 😤",
-    "text": "NO MORE EQUATIONS! 😤\n\nDepending on your background and/or learning style (say, visual vs. auditory), you may be able to look at equations on previous slides and “see” what they’re “saying”\nIf your brain works similarly to mine, however, your eyes glazed over, you began dissociating, planning an escape route, etc.\nIf you’re in the latter group, welcome to the cult of Probabilistic Graphical Models 😈"
+    "text": "NO MORE EQUATIONS! 😤\n\nDepending on your background and/or learning style (say, visual vs. auditory), you may be able to look at equations on previous slides and “see” what they’re “saying”\nIf your brain works similarly to mine, however, your eyes glazed over, you began dissociating, planning an escape route, looking for open ventilation ducts, etc.\nIf you’re in the latter group, welcome to the cult of Probabilistic Graphical Models 😈"
   },
   {
     "objectID": "w03/slides.html#baby-steps-a-real-world-confusion-matrix",
     "href": "w03/slides.html#baby-steps-a-real-world-confusion-matrix",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "Baby Steps: A Real-World Confusion Matrix",
     "text": "Baby Steps: A Real-World Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (did vs. didn’t do more crimes)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)"
   },
   {
     "objectID": "w03/slides.html#references",
     "href": "w03/slides.html#references",
-    "title": "Week 3: (Descriptive) Fairness in AI",
+    "title": "Week 3: Ethical Frameworks, Rights, and Discrimination",
     "section": "References",
-    "text": "References\n\n\nAwad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. “Computational Ethics.” Trends in Cognitive Sciences 26 (5): 388–405. https://doi.org/10.1016/j.tics.2022.02.009.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nChurchill, Ward, and Michael Ryan. 1998. Pacifism as Pathology: Reflections on the Role of Armed Struggle in North America. PM Press.\n\n\nCrawford, Kate, and Trevor Paglen. 2019. “Excavating AI: The Politics of Training Sets for Machine Learning.” AI Now Institute, NYU. https://excavating.ai.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeutscher, Guy. 2010. Through the Language Glass: Why the World Looks Different in Other Languages. Henry Holt and Company.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nFields, Barbara J., and Karen E. Fields. 2012. Racecraft: The Soul of Inequality in American Life. Verso Books.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nGould, Stephen Jay. 1980. The Mismeasure of Man (Revised and Expanded). W. W. Norton & Company.\n\n\nGray, Mary L., and Siddharth Suri. 2019. Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass. HarperCollins.\n\n\nHenrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert Gintis, and Richard McElreath. 2001. “In Search of Homo Economicus: Behavioral Experiments in 15 Small-Scale Societies.” American Economic Review 91 (2): 73–78. https://doi.org/10.1257/aer.91.2.73.\n\n\nHobbes, Thomas. 1668. Leviathan: With Selected Variants from the Latin Edition of 1668. Hackett Publishing.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nJames, William. 1891. “The Moral Philosopher and the Moral Life.” International Journal of Ethics 1 (3): 330–54. https://www.jstor.org/stable/2375309.\n\n\nKahneman, Daniel. 2011. Thinking, Fast and Slow. Farrar, Straus and Giroux.\n\n\nLe Guin, Ursula K. 1973. The Ones Who Walk Away from Omelas: A Story. HarperCollins.\n\n\nMcWhorter, John H. 2014. The Language Hoax: Why the World Looks the Same in Any Language. Oxford University Press.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorris, Benny. 1987. The Birth of the Palestinian Refugee Problem, 1947-1949. Cambridge University Press.\n\n\nPappe, Ilan. 2006. The Ethnic Cleansing of Palestine. Simon and Schuster.\n\n\nPellicer, Miquel, and Vimal Ranchhod. 2023. “Understanding the Effects of Racial Classification in Apartheid South Africa.” Journal of Development Economics 160 (January): 102998. https://doi.org/10.1016/j.jdeveco.2022.102998.\n\n\nRawls, John. 1951. “Outline of a Decision Procedure for Ethics.” The Philosophical Review 60 (2): 177–97. https://doi.org/10.2307/2181696.\n\n\n———. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\nRoemer, John E. 1988. Free to Lose: An Introduction to Marxist Economic Philosophy. Harvard University Press.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSkinner, Quentin. 2012. Visions of Politics, Volume 1: Regarding Method. Cambridge: Cambridge University Press.\n\n\nSt. Augustine. 1874. The Works of Aurelius Augustine: Lectures or Tractates on the Gospel According to St. John, v. 2. T. & T. Clark.\n\n\nWeber, Max. 1904. The Protestant Ethic and the Spirit of Capitalism. Courier Corporation.\n\n\n\n\n\nDSAN 5450 Week 3: (Descriptive) Fairness in AI"
+    "text": "References\n\n\nAwad, Edmond, Sydney Levine, Michael Anderson, Susan Leigh Anderson, Vincent Conitzer, M. J. Crockett, Jim A. C. Everett, et al. 2022. “Computational Ethics.” Trends in Cognitive Sciences 26 (5): 388–405. https://doi.org/10.1016/j.tics.2022.02.009.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nChurchill, Ward, and Michael Ryan. 1998. Pacifism as Pathology: Reflections on the Role of Armed Struggle in North America. PM Press.\n\n\nCrawford, Kate, and Trevor Paglen. 2019. “Excavating AI: The Politics of Training Sets for Machine Learning.” AI Now Institute, NYU. https://excavating.ai.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeutscher, Guy. 2010. Through the Language Glass: Why the World Looks Different in Other Languages. Henry Holt and Company.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nDworkin, Ronald. 1977. Taking Rights Seriously. A&C Black.\n\n\nFields, Barbara J., and Karen E. Fields. 2012. Racecraft: The Soul of Inequality in American Life. Verso Books.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nGould, Stephen Jay. 1980. The Mismeasure of Man (Revised and Expanded). W. W. Norton & Company.\n\n\nGray, Mary L., and Siddharth Suri. 2019. Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass. HarperCollins.\n\n\nHare, R. M. 1952. The Language of Morals. OUP Oxford.\n\n\nHenrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert Gintis, and Richard McElreath. 2001. “In Search of Homo Economicus: Behavioral Experiments in 15 Small-Scale Societies.” American Economic Review 91 (2): 73–78. https://doi.org/10.1257/aer.91.2.73.\n\n\nHirschman, Albert O. 1970. Exit, Voice, and Loyalty: Responses to Decline in Firms, Organizations, and States. Harvard University Press.\n\n\n———. 1977. The Passions and the Interests: Political Arguments for Capitalism Before Its Triumph. Princeton University Press.\n\n\nHobbes, Thomas. 1668. Leviathan: With Selected Variants from the Latin Edition of 1668. Hackett Publishing.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nJames, William. 1891. “The Moral Philosopher and the Moral Life.” International Journal of Ethics 1 (3): 330–54. https://www.jstor.org/stable/2375309.\n\n\nKahneman, Daniel. 2011. Thinking, Fast and Slow. Farrar, Straus and Giroux.\n\n\nLe Guin, Ursula K. 1973. The Ones Who Walk Away from Omelas: A Story. HarperCollins.\n\n\nMcWhorter, John H. 2014. The Language Hoax: Why the World Looks the Same in Any Language. Oxford University Press.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorris, Benny. 1987. The Birth of the Palestinian Refugee Problem, 1947-1949. Cambridge University Press.\n\n\nPappe, Ilan. 2006. The Ethnic Cleansing of Palestine. Simon and Schuster.\n\n\nPellicer, Miquel, and Vimal Ranchhod. 2023. “Understanding the Effects of Racial Classification in Apartheid South Africa.” Journal of Development Economics 160 (January): 102998. https://doi.org/10.1016/j.jdeveco.2022.102998.\n\n\nRawls, John. 1951. “Outline of a Decision Procedure for Ethics.” The Philosophical Review 60 (2): 177–97. https://doi.org/10.2307/2181696.\n\n\n———. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\nRoemer, John E. 1988. Free to Lose: An Introduction to Marxist Economic Philosophy. Harvard University Press.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSkinner, Quentin. 2012. Visions of Politics, Volume 1: Regarding Method. Cambridge: Cambridge University Press.\n\n\nSt. Augustine. 1874. The Works of Aurelius Augustine: Lectures or Tractates on the Gospel According to St. John, v. 2. T. & T. Clark.\n\n\nWeber, Max. 1904. The Protestant Ethic and the Spirit of Capitalism. Courier Corporation.\n\n\n\n\n\nDSAN 5450 Week 3: Ethical Frameworks"
   },
   {
     "objectID": "assignments.html",
@@ -4579,7 +4579,7 @@
     "href": "index.html",
     "title": "DSAN 5450: Data Ethics and Policy",
     "section": "",
-    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2025 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 15\n\n\n\n\nWeek 2: Machine Learning, Training Data, and Biases\n\n\nJanuary 22\n\n\n\n\nWeek 3: (Descriptive) Fairness in AI\n\n\nJanuary 29\n\n\n\n\nWeek 4: (Descriptive) Fairness in AI\n\n\nFebruary 5\n\n\n\n\nWeek 5: Context-Sensitive Fairness\n\n\nFebruary 12\n\n\n\n\nWeek 6: Causality in Ethics and Policy\n\n\nFebruary 19\n\n\n\n\nWeek 7: In-Class Midterm\n\n\nFebruary 26\n\n\n\n\nWeek 8: Privacy Policies, Incomplete Contracts, and Power\n\n\nMarch 12\n\n\n\n\nWeek 9: From Data Ethics to Data Policy\n\n\nMarch 19\n\n\n\n\nWeek 10: Econometric Policy Evaluation and Inverse Fairness\n\n\nMarch 26\n\n\n\n\nWeek 11: Fairness vs. Social Welfare\n\n\nApril 2\n\n\n\n\nWeek 12: Final Projects, Causality and Racecraft\n\n\nApril 9\n\n\n\n\nWeek 13: Standpoint Epistemology, Data Feminism\n\n\nApril 16\n\n\n\n\nWeek 14: Republican Liberty and the Kindly Slavemaster\n\n\nApril 23\n\n\n\n\n\nNo matching items\n\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits.",
+    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2025 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 15\n\n\n\n\nWeek 2: Machine Learning, Training Data, and Biases\n\n\nJanuary 22\n\n\n\n\nWeek 3: Ethical Frameworks, Rights, and Discrimination\n\n\nJanuary 29\n\n\n\n\nWeek 4: (Descriptive) Fairness in AI\n\n\nFebruary 5\n\n\n\n\nWeek 5: Context-Sensitive Fairness\n\n\nFebruary 12\n\n\n\n\nWeek 6: Causality in Ethics and Policy\n\n\nFebruary 19\n\n\n\n\nWeek 7: In-Class Midterm\n\n\nFebruary 26\n\n\n\n\nWeek 8: Privacy Policies, Incomplete Contracts, and Power\n\n\nMarch 12\n\n\n\n\nWeek 9: From Data Ethics to Data Policy\n\n\nMarch 19\n\n\n\n\nWeek 10: Econometric Policy Evaluation and Inverse Fairness\n\n\nMarch 26\n\n\n\n\nWeek 11: Fairness vs. Social Welfare\n\n\nApril 2\n\n\n\n\nWeek 12: Final Projects, Causality and Racecraft\n\n\nApril 9\n\n\n\n\nWeek 13: Standpoint Epistemology, Data Feminism\n\n\nApril 16\n\n\n\n\nWeek 14: Republican Liberty and the Kindly Slavemaster\n\n\nApril 23\n\n\n\n\n\nNo matching items\n\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits.",
     "crumbs": [
       "<i class='bi bi-house pe-1'></i> Home"
     ]
@@ -4908,7 +4908,7 @@
     "href": "w06/index.html#the-result-64-steps",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "The Result: 64 Steps",
-    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).",
+    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))",
     "crumbs": [
       "Week 6: {{< var w06.date-md >}}"
     ]

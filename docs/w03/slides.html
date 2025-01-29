@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Jeff Jacobs">
-  <title>DSAN 5450 – Week 3: (Descriptive) Fairness in AI</title>
+  <title>DSAN 5450 – Week 3: Ethical Frameworks, Rights, and Discrimination</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -416,7 +416,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 3: (Descriptive) Fairness in AI</h1>
+  <h1 class="title">Week 3: Ethical Frameworks, Rights, and Discrimination</h1>
   <p class="subtitle"><em>DSAN 5450: Data Ethics and Policy</em><br><span class="subsubtitle">Spring 2025, Georgetown University</span></p>
 
 <div class="quarto-title-authors">
@@ -432,6 +432,65 @@ Jeff Jacobs
 
   <p class="date">Wednesday, January 29, 2025</p>
 </section>
+<section id="schedule" class="title-slide slide level1 smaller small-title crunch-title crunch-callout center">
+<h1>Schedule</h1>
+<p>Today’s Planned Schedule:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Start</th>
+<th style="text-align: left;">End</th>
+<th style="text-align: left;">Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Lecture</strong></td>
+<td style="text-align: left;">3:30pm</td>
+<td style="text-align: left;">3:40pm</td>
+<td style="text-align: left;">TA Intros!</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">3:40pm</td>
+<td style="text-align: left;">4:00pm</td>
+<td style="text-align: left;"><a href="#/recap-three-component-parts-of-machine-learning">Training Data = Human Labor →</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">4:00pm</td>
+<td style="text-align: left;">4:30pm</td>
+<td style="text-align: left;"><a href="#/metaethics">Metaethics →</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">4:30pm</td>
+<td style="text-align: left;">5:00pm</td>
+<td style="text-align: left;"><a href="#/individual-vs.-social-morality">Individual <span class="math inline">\(\leadsto\)</span> Social Ethics →</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Break!</strong></td>
+<td style="text-align: left;">5:00pm</td>
+<td style="text-align: left;">5:10pm</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">5:10pm</td>
+<td style="text-align: left;">6:00pm</td>
+<td style="text-align: left;"><a href="#/enter-game-theory">Game Theory! →</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+
 <section>
 <section id="recap-loose-ends" class="title-slide slide level1 center" data-stack-name="Week 2 Wrapup">
 <h1>Recap / Loose Ends</h1>
@@ -539,14 +598,10 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <section id="computer-scientists-being-responsible-at-georgetown" class="slide level2 smaller crunch-title crunch-iframe title-09">
 <h2>Computer Scientists Being Responsible (At Georgetown!)</h2>
 
-<img data-src="images/dr_redmiles_homepage.jpeg" class="r-stretch quarto-figure-center"><p class="caption"><a href="" target="_blank">Dr.&nbsp;Redmiles’ homepage</a> (Since Quarto also freezes when I try to embed it…)</p><ul>
-<li><em>(PS… UMD undergrad CS class of 2013 extremely overrepresented here</em> 😜<em>)</em></li>
+<img data-src="images/dr_redmiles_class.jpeg" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://gufaculty360.georgetown.edu/s/course-catalog/a1oHp00000GvwGnIAJ/cosc882001?id=003Hp00002jN3TsIAK" target="_blank">GU360 Course Page</a></p><ul>
+<li><em>(PS… UMD undergrad CS class of 2013 extremely overrepresented here</em> 😜 <em>go Terps)</em></li>
 </ul>
 </section>
-<section id="computer-scientists-being-responsible-at-georgetown-1" class="slide level2 smaller crunch-title crunch-iframe title-09">
-<h2>Computer Scientists Being Responsible (At Georgetown!)</h2>
-
-<img data-src="images/dr_redmiles_class.jpeg" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://gufaculty360.georgetown.edu/s/course-catalog/a1oHp00000GvwGnIAJ/cosc882001?id=003Hp00002jN3TsIAK" target="_blank">GU360 Course Page</a></p></section>
 <section id="so-what-comes-with-human-labels-human-biases" class="slide level2 smaller title-10 crunch-quarto-layout-panel crunch-quarto-figure crunch-title crunch-ul crunch-figcaption">
 <h2>So, What Comes With Human Labels? Human Biases!</h2>
 <div>
@@ -683,15 +738,17 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <li>People pointed to stuff with certain properties and said “red” (or “rojo” or “红”), as pieces of an <strong>intersubjective</strong> communication system</li>
 <li>These <strong>descriptive</strong> labels enable <em>coordination</em>, like driving on left or right side of road!</li>
 <li>Nothing very profound or difficult in <strong>committing</strong> to this descriptive coordination: <em>“for <strong>ease of communication</strong>, I’ll vibrate my vocal chords like this (or write these symbols) to indicate <span class="math inline">\(x\)</span>, and vibrate them like this (or write these other symbols) to indicate <span class="math inline">\(y\)</span>”</em> <!-- * Technically you have the free will to **refuse** this prescription. But, nothing very "" --></li>
-<li>Linguistic choices, when it comes to <strong>description</strong>, are arbitrary*: Our mouths can make <a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet" target="_blank">these sounds</a>, and each language is a mapping: [combinations of sounds] <span class="math inline">\(\leftrightarrow\)</span> [things]
+<li>Linguistic choices, when it comes to <strong>description</strong>, are arbitrary*: Our mouths can make <a href="https://en.wikipedia.org/wiki/International_Phonetic_Alphabet">these sounds</a>, and each language is a mapping: [combinations of sounds] <span class="math inline">\(\leftrightarrow\)</span> [things]
 <ul>
-<li>diːsˈæn ˈfɪfti fɔr ˈfɪfti [<a href="http://ipa-reader.xyz/?text=dis%C3%A6n%CB%88f%C9%AAfdif%C9%94%C9%B9%CB%88f%C9%AAfti" target="_blank">US Accent <i class="bi bi-box-arrow-up-right"></i></a> / <a href="http://ipa-reader.xyz/?text=dis%C3%A6n%CB%88f%C9%AAfdif%C9%94%C9%B9%CB%88f%C9%AAfti&amp;voice=Dora" target="_blank">Icelandic Accent <i class="bi bi-box-arrow-up-right"></i></a>]</li>
+<li>diːsˈæn ˈfɪfti fɔr ˈfɪfti <a href="https://ipa-reader.com/?text=di%CB%90s%CB%88%C3%A6n%20%CB%88f%C9%AAfti%20f%C9%94r%20%CB%88f%C9%AAfti">US Accent</a> / <a href="https://ipa-reader.com/?text=dis%C3%A6n%CB%88f%C9%AAfdif%C9%94%C9%B9%CB%88f%C9%AAfti&amp;voice=Dora">Icelandic Accent</a></li>
 </ul></li>
 </ul>
 <!-- disænˈfɪfdifɔɹˈfɪfti  / disænˈfɪfdifɔɹˈfɪfti -->
 <!-- * Our lives/the world would not be very different if "red" was switched with "green"; i.e., the main change would just be vibrating different vocal chords or writing different symbols to communicate the concept -->
+
+<aside><div>
 <p>*<em>(Tiny text footnote: Except for, perhaps, a few <a href="https://en.wikipedia.org/wiki/Bouba/kiki_effect" target="_blank">fun but rare onomatopoetic cases</a>)</em></p>
-</section>
+</div></aside></section>
 <section id="what-makes-ethical-judgements-more-difficult" class="slide level2 smaller title-11 crunch-title crunch-p">
 <h2>What Makes Ethical Judgements “More Difficult”?</h2>
 <p><strong>How did you acquire the concept “good”?</strong></p>
@@ -703,13 +760,23 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <li><span class="math inline">\(\implies\)</span> Ethics centrally involves non-arbitrarily-chosen <strong>commitments</strong>!</li>
 </ul>
 </section>
-<section id="tldr" class="slide level2">
+<section id="tldr" class="slide level2 crunch-title crunch-ul crunch-figcaption crunch-quarto-figure">
 <h2>Tl;dr</h2>
+<div class="columns">
+<div class="column" style="width:62%;">
 <ul>
 <li><strong>Languages</strong> are <strong>arbitrary conventions</strong> for communication</li>
 <li><strong>Ethical systems</strong> <strong>build on</strong> this language to <strong>non-arbitrarily</strong> mark out things that are good/bad</li>
-<li>Life would <strong>not</strong> be very different if we “shuffled” words (we’d just vibrate our vocal chords differently), but <strong>would</strong> be very different if we “shuffled” good/bad labeling</li>
+<li>Society <strong>wouldn’t</strong> be too different if we “shuffled” words (we’d just vibrate our vocal chords differently), but <strong>would</strong> be very different if we “shuffled” good/bad labeling</li>
 </ul>
+</div><div class="column" style="width:38%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/hare_morals.jpg" width="330"></p>
+<figcaption><span class="citation" data-cites="hare_language_1952">Hare (<a href="#/references" role="doc-biblioref" onclick="">1952</a>)</span></figcaption>
+</figure>
+</div>
+</div></div>
 </section>
 <section id="quick-aside-top-10-linguist-beefs" class="slide level2 smaller crunch-title crunch-figcaption crunch-quarto-layout-panel crunch-ul crunch-images">
 <h2>Quick Aside: Top 10 Linguist Beefs</h2>
@@ -748,7 +815,7 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <h2>Historical Example: Capitalism and the “Protestant Ethic”</h2>
 <ul>
 <li>Big changes in history are associated with changes in this <strong>good/bad labeling</strong>!</li>
-<li>Max Weber (<a href="https://www.researchgate.net/figure/Top-50-sociologists-according-to-aggregate-weighted-citation-scores-normalized-score_fig1_332447162" target="_blank">second most-cited</a> sociologist of all time*): <em>Protestant value system</em> gave rise to <em>capitalist system</em> by <strong>relabeling</strong> what things are good vs.&nbsp;bad <span class="citation" data-cites="weber_protestant_1904">(<a href="#/references" role="doc-biblioref" onclick="">Weber 1904</a>)</span>:</li>
+<li>Max Weber (<a href="https://www.researchgate.net/figure/Top-50-sociologists-according-to-aggregate-weighted-citation-scores-normalized-score_fig1_332447162" target="_blank">second most-cited</a> sociologist of all time*): <em>Protestant value system</em> gave rise to <em>capitalist system</em> by <strong>relabeling what things are good vs.&nbsp;bad</strong> <span class="citation" data-cites="weber_protestant_1904">(<a href="#/references" role="doc-biblioref" onclick="">Weber 1904</a>)</span>:</li>
 </ul>
 <div>
 
@@ -760,13 +827,14 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <p>Jesus said to his disciples, “Truly, I say to you, only with difficulty will a rich person enter the kingdom of heaven. Again I tell you, it is easier for a camel to go through the eye of a needle than for a rich person to enter the kingdom of God.” (<a href="https://www.biblegateway.com/passage/?search=Matthew%2019&amp;version=ESV" target="_blank">Matthew 19:23-24</a>)</p>
 </blockquote>
 <blockquote>
-<p>Oh, were we loving God worthily, we should have no love at all for money! <span class="citation" data-cites="st.augustine_works_1874">(<a href="#/references" role="doc-biblioref" onclick="">St. Augustine 1874</a>, pg. 28)</span></p>
+<p>Oh, were we loving God worthily, we should have <strong>no love at all for money!</strong> <span class="citation" data-cites="st.augustine_works_1874">(<a href="#/references" role="doc-biblioref" onclick="">St. Augustine 1874</a>, pg. 28)</span></p>
 </blockquote>
+<p>&nbsp;<br></p>
 <p><span class="fn-span">*<em>(…jumpscare: REIFICATION!)</em></span></p>
 </div>
 <div id="protestant-ethic" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <blockquote>
-<p>The earliest capitalists lacked legitimacy in the moral climate in which they found themselves. One of the means they found [to legitimize their behavior] was to appropriate the evaluative vocabulary of Protestantism. <span class="citation" data-cites="skinner_visions_2012">(<a href="#/references" role="doc-biblioref" onclick="">Skinner 2012</a>, pg. 157)</span></p>
+<p>The earliest capitalists lacked legitimacy in the moral climate in which they found themselves. One of the means they found [to legitimize their behavior] was to appropriate the <strong>evaluative vocabulary</strong> of Protestantism. <span class="citation" data-cites="skinner_visions_2012">(<a href="#/references" role="doc-biblioref" onclick="">Skinner 2012</a>, pg. 157)</span></p>
 </blockquote>
 <blockquote>
 <p>Calvinism added [to Luther’s doctrine] the necessity of <strong>proving one’s faith</strong> in worldly activity, [replacing] spiritual aristocracy of monks outside of/above the world with spiritual aristocracy of predestined saints within it. (pg. 121).</p>
@@ -774,6 +842,23 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 </div>
 </div>
 </div>
+</section>
+<section id="aggressively-tossing-books-at-your-head" class="slide level2 smaller crunch-title title-12">
+<h2>Aggressively Tossing Books at Your Head</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>(Reminder that there are no <strong>required</strong> readings, but that this means you should pick a few which seem mildly interesting to you and try them out, as first step towards final paper <strong>lit review!</strong> 😉)</li>
+<li>Also, we’ll be bringing this Hirschman guy back into the mix when we get to <strong>policy</strong>: specifically, his earlier book, <em>Exit, Voice, and Loyalty</em> <span class="citation" data-cites="hirschman_exit_1970">(<a href="#/references" role="doc-biblioref" onclick="">Hirschman 1970</a>)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/hirschman.jpg" width="350"></p>
+<figcaption><span class="citation" data-cites="hirschman_passions_1977">Hirschman (<a href="#/references" role="doc-biblioref" onclick="">1977</a>)</span></figcaption>
+</figure>
+</div>
+</div></div>
 </section>
 <section id="contemporary-example-palestine" class="slide level2 smaller crunch-quarto-layout-panel crunch-title crunch-ul crunch-blockquote crunch-li crunch-p">
 <h2>Contemporary Example: Palestine</h2>
@@ -818,8 +903,8 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <h1>Individual Ethics <span class="math inline">\(\rightarrow\)</span> Social Ethics</h1>
 
 </section>
-<section id="from-week-1-counterargument-to-consequentialism" class="slide level2 crunch-title title-07 crunch-quarto-layout-panel crunch-ul crunch-quarto-figure crunch-images">
-<h2>(From Week 1) Counterargument to Consequentialism</h2>
+<section id="standard-counterargument-to-consequentialism" class="slide level2 crunch-title title-07 crunch-quarto-layout-panel crunch-ul crunch-quarto-figure crunch-images crunch-blockquote">
+<h2>Standard Counterargument to Consequentialism</h2>
 <div>
 
 </div>
@@ -900,7 +985,7 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 </div>
 </div>
 </section>
-<section id="better-metaphor-than-letters" class="slide level2 smaller crunch-title crunch-ul crunch-math">
+<section id="better-metaphor-than-letters" class="slide level2 smaller crunch-title crunch-ul crunch-math crunch-quarto-figure">
 <h2>Better Metaphor Than Letters</h2>
 <ul>
 <li>Letters are where Rawls gets “lexically prior” from, but letters are <strong>total orderings</strong> (we know where <em>every</em> letter “stands” in relation to <em>every</em> other letter)</li>
@@ -940,10 +1025,6 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <ul>
 <li>Who decides what counts as self-defense?</li>
 </ul></li>
-<li>Deontological <strong>maxim</strong>: <em>“The master’s tools will never dismantle the master’s house”</em>
-<ul>
-<li>Who conceded “ownership” to the master?</li>
-</ul></li>
 <li>(Trolley problems, etc.)</li>
 </ul>
 </div>
@@ -951,7 +1032,7 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/pacifism.jpg" width="340"></p>
-<figcaption><span class="citation" data-cites="churchill_pacifism_1998">Churchill and Ryan (<a href="#/references" role="doc-biblioref" onclick="">1998</a>)</span> <em>(Derrick Jensen intro removed from later editions so… I <a href="https://github.com/jpowerj/mdb/blob/main/1998_Churchill_PacifismAsPathology.md" target="_blank">put it on dang GitHub</a>)</em></figcaption>
+<figcaption><span class="citation" data-cites="churchill_pacifism_1998">Churchill and Ryan (<a href="#/references" role="doc-biblioref" onclick="">1998</a>)</span> <em>(Derrick Jensen intro removed from later editions so I <a href="https://github.com/jpowerj/mdb/blob/main/1998_Churchill_PacifismAsPathology.md">put it on dang GitHub</a></em></figcaption>
 </figure>
 </div>
 </div>
@@ -975,7 +1056,7 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/thinking.jpg" width="360"></p>
+<p><img data-src="images/thinking.jpg" width="350"></p>
 <figcaption><span class="citation" data-cites="kahneman_thinking_2011">Kahneman (<a href="#/references" role="doc-biblioref" onclick="">2011</a>)</span></figcaption>
 </figure>
 </div>
@@ -1117,7 +1198,7 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <td class="game-label" style="text-align: center;">Drive</td>
 </tr>
 <tr class="odd">
-<td rowspan="2" class="game-label" style="text-align: left; vertical-align: middle;"><span class="math inline">\(A\)</span></td>
+<td rowspan="2" class="game-label no-bottom-border" style="text-align: left; vertical-align: middle;"><span class="math inline">\(A\)</span></td>
 <td class="game-label" style="text-align: left;">Stop</td>
 <td class="game-cell" style="text-align: center;"><span class="math inline">\(-1,-1\)</span></td>
 <td class="game-cell" style="text-align: center;"><span class="math inline">\(-3,\phantom{-}0\)</span></td>
@@ -1165,7 +1246,7 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <td class="game-label" style="text-align: center;">Drive</td>
 </tr>
 <tr class="odd">
-<td rowspan="2" class="game-label" style="text-align: left; vertical-align: middle;"><span class="math inline">\(A\)</span></td>
+<td rowspan="2" class="game-label no-bottom-border" style="text-align: left; vertical-align: middle;"><span class="math inline">\(A\)</span></td>
 <td class="game-label" style="text-align: left;">Stop</td>
 <td class="game-cell" style="text-align: center;"><span class="math inline">\({\color{orange}\cancel{\color{black}-1}},{\color{lightblue}\cancel{\color{black}-1}}\)</span></td>
 <td class="game-cell" style="text-align: center;"><span class="math inline">\(\boxed{-3},\boxed{0}\)</span></td>
@@ -1222,7 +1303,7 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <td class="game-label" style="text-align: center;">Drive</td>
 </tr>
 <tr class="odd">
-<td rowspan="2" class="game-label" style="text-align: left; vertical-align: middle;"><span class="math inline">\(A\)</span></td>
+<td rowspan="2" class="game-label no-bottom-border" style="text-align: left; vertical-align: middle;"><span class="math inline">\(A\)</span></td>
 <td class="game-label" style="text-align: left;">Stop</td>
 <td class="game-cell" style="text-align: center;"><span class="math inline">\({\color{orange}\cancel{\color{black}-1}},{\color{lightblue}\cancel{\color{black}-1}}\)</span></td>
 <td class="game-cell" style="text-align: center;"><span class="math inline">\(\boxed{-3},\boxed{0}\)</span></td>
@@ -1351,7 +1432,7 @@ Figure&nbsp;2: From Snorkel AI, <a href="https://www.youtube.com/watch?v=cb9DP3_
 <section id="context-free-fairness" class="title-slide slide level1 smaller not-title-slide crunch-title center">
 <h1>Context-Free Fairness</h1>
 
-<img data-src="images/chomsky-hierarchy.jpeg" class="no-stretch r-stretch quarto-figure-center" width="200"><p class="caption">From <a href="https://www.cs.sfu.ca/~anoop/courses/MACM-300-Spring-2006/complexity.pdf" target="_blank"><em>Introduction to Formal Languages and Automata</em></a>, Simon Fraser University (2006). This figure summarizes the <strong>Chomsky Hierarchy</strong> of Languages, developed by Noam Chomsky, who also has a lot to say about Ethics and Policy…</p></section>
+<img data-src="images/chomsky-hierarchy.jpeg" class="no-stretch r-stretch quarto-figure-center" width="200"><p class="caption">From <a href="https://www.cs.sfu.ca/~anoop/courses/MACM-300-Spring-2006/complexity.pdf" target="_blank"><em>Introduction to Formal Languages and Automata</em></a>, Simon Fraser University (2006). This figure summarizes the <strong>Chomsky Hierarchy</strong> of Languages, developed by Noam Chomsky, who also has a lot to say about Ethics and Policy!</p></section>
 <section id="the-brogrammers-criterion" class="slide level2 crunch-title crunch-ul">
 <h2>The Brogrammer’s Criterion</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>df.drop(columns<span class="op">=</span>[<span class="st">"race"</span>], inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1474,7 +1555,7 @@ A_i = \begin{cases}
 <li>(See also: Sweden’s <a href="https://en.wikipedia.org/wiki/Dagen_H" target="_blank">Dagen H</a>!)</li>
 </ul>
 </section>
-<section id="fairness-through-equalized-positive-rates" class="slide level2 crunch-title crunch-ul title-08">
+<section id="fairness-through-equalized-positive-rates" class="slide level2 crunch-title crunch-ul title-08 math-90">
 <h2>“Fairness” Through Equalized <em>Positive</em> Rates</h2>
 <p><span class="math display">\[
 \Pr(D = 1 \mid A = 0) = \Pr(D = 1 \mid A = 1)
@@ -1512,7 +1593,7 @@ D \perp A \iff \Pr(D = d, A = a) = \Pr(D = d)\Pr(A = a)
 <h2>NO MORE EQUATIONS! 😤</h2>
 <ul>
 <li>Depending on your background and/or learning style (say, visual vs.&nbsp;auditory), you may be able to look at equations on previous slides and “see” what they’re “saying”</li>
-<li>If your brain works similarly to <strong>mine</strong>, however, your eyes glazed over, you began dissociating, planning an escape route, etc.</li>
+<li>If your brain works similarly to <strong>mine</strong>, however, your eyes glazed over, you began dissociating, planning an escape route, looking for open ventilation ducts, etc.</li>
 <li>If you’re in the latter group, welcome to the <strong>cult of Probabilistic Graphical Models</strong> 😈</li>
 </ul>
 </section>
@@ -1595,8 +1676,17 @@ Gould, Stephen Jay. 1980. <em>The <span>Mismeasure</span> of <span>Man</span> (<
 <div id="ref-gray_ghost_2019" class="csl-entry" role="listitem">
 Gray, Mary L., and Siddharth Suri. 2019. <em>Ghost <span>Work</span>: <span>How</span> to <span>Stop Silicon Valley</span> from <span>Building</span> a <span>New Global Underclass</span></em>. HarperCollins.
 </div>
+<div id="ref-hare_language_1952" class="csl-entry" role="listitem">
+Hare, R. M. 1952. <em>The <span>Language</span> of <span>Morals</span></em>. OUP Oxford.
+</div>
 <div id="ref-henrich_search_2001" class="csl-entry" role="listitem">
 Henrich, Joseph, Robert Boyd, Samuel Bowles, Colin Camerer, Ernst Fehr, Herbert Gintis, and Richard McElreath. 2001. <span>“In <span>Search</span> of <span>Homo Economicus</span>: <span>Behavioral Experiments</span> in 15 <span>Small-Scale Societies</span>.”</span> <em>American Economic Review</em> 91 (2): 73–78. <a href="https://doi.org/10.1257/aer.91.2.73">https://doi.org/10.1257/aer.91.2.73</a>.
+</div>
+<div id="ref-hirschman_exit_1970" class="csl-entry" role="listitem">
+Hirschman, Albert O. 1970. <em>Exit, <span>Voice</span>, and <span>Loyalty</span>: <span>Responses</span> to <span>Decline</span> in <span>Firms</span>, <span>Organizations</span>, and <span>States</span></em>. Harvard University Press.
+</div>
+<div id="ref-hirschman_passions_1977" class="csl-entry" role="listitem">
+———. 1977. <em>The <span>Passions</span> and the <span>Interests</span>: <span>Political Arguments</span> for <span>Capitalism Before Its Triumph</span></em>. Princeton University Press.
 </div>
 <div id="ref-hobbes_leviathan_1668" class="csl-entry" role="listitem">
 Hobbes, Thomas. 1668. <em>Leviathan: <span>With</span> Selected Variants from the <span>Latin</span> Edition of 1668</em>. Hackett Publishing.
@@ -1653,7 +1743,7 @@ Weber, Max. 1904. <em>The <span>Protestant Ethic</span> and the <span>Spirit</sp
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p>DSAN 5450 Week 3: (Descriptive) Fairness in AI</p>
+<p>DSAN 5450 Week 3: Ethical Frameworks</p>
 </div>
 </div>
 </section></section>
@@ -1973,6 +2063,13 @@ Weber, Max. 1904. <em>The <span>Protestant Ethic</span> and the <span>Spirit</sp
             if (link.dataset.originalHref !== undefined) {
               link.href = link.dataset.originalHref;
             }
+              // target, if specified
+              link.setAttribute("target", "_blank");
+              if (link.getAttribute("rel") === null) {
+                link.setAttribute("rel", "noopener");
+              }
+              // default icon
+              link.classList.add("external");
           }
         }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
