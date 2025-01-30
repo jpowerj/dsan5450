@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jeff Jacobs">
+<meta name="dcterms.date" content="2025-01-29">
 
-<title>Resources – DSAN 5450</title>
+<title>Essentially Contested Concepts – DSAN 5450</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,25 +45,25 @@ div.csl-indent {
 }</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -89,10 +91,39 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="./sidebar.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../../sidebar.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="./dsan-globals/jjstyles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../dsan-globals/jjstyles.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -104,7 +135,9 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./resources.html">Resources</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      DSAN 5450: Data Ethics and Policy
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -119,7 +152,7 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">DSAN 5450: Data Ethics and Policy</a> 
+      <a href="../../">DSAN 5450: Data Ethics and Policy</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -134,37 +167,37 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><i class="bi bi-house pe-1"></i> Home</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./writeups/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../writeups/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Writeups</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./assignments.html" class="sidebar-item-text sidebar-link">
+  <a href="../../assignments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignments</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./final.html" class="sidebar-item-text sidebar-link">
+  <a href="../../final.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Final Project</span></a>
   </div>
 </li>
@@ -183,85 +216,85 @@ div.csl-indent {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w01/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w01/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 1: Jan 15</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w02/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w02/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2: Jan 22</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w03/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w03/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3: Jan 29</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w04/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w04/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4: Feb 5</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w05/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w05/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 5: Feb 12</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w06/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w06/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 6: Feb 19</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w07/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w07/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 7: Feb 26</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w08/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w08/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 8: Mar 12</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w09/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w09/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 9: Mar 19</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w10/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w10/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 10: Mar 26</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w11/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w11/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 11: Apr 2</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w12/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w12/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 12: Apr 9</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w13/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w13/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 13: Apr 16</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./w14/index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../w14/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 14: Apr 23</span></a>
   </div>
 </li>
@@ -296,29 +329,40 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#normative-vs.-descriptive-ethical-frameworks" id="toc-normative-vs.-descriptive-ethical-frameworks" class="nav-link active" data-scroll-target="#normative-vs.-descriptive-ethical-frameworks">Normative vs.&nbsp;Descriptive / Ethical Frameworks</a>
-  <ul class="collapse">
-  <li><a href="#general-high-level-overviews" id="toc-general-high-level-overviews" class="nav-link" data-scroll-target="#general-high-level-overviews">General / High-Level Overviews</a></li>
-  <li><a href="#particular-examples-frameworks" id="toc-particular-examples-frameworks" class="nav-link" data-scroll-target="#particular-examples-frameworks">Particular Examples / Frameworks</a></li>
-  </ul></li>
-  <li><a href="#fairness-in-ai-context-sensitive-fairness" id="toc-fairness-in-ai-context-sensitive-fairness" class="nav-link" data-scroll-target="#fairness-in-ai-context-sensitive-fairness">Fairness in AI / Context-Sensitive Fairness</a></li>
-  <li><a href="#econometric-policy-evaluation" id="toc-econometric-policy-evaluation" class="nav-link" data-scroll-target="#econometric-policy-evaluation">Econometric Policy Evaluation</a></li>
+  <li><a href="#achieving-intersubjective-truth" id="toc-achieving-intersubjective-truth" class="nav-link active" data-scroll-target="#achieving-intersubjective-truth">Achieving Intersubjective “Truth”</a></li>
+  <li><a href="#essentially-contested-terms" id="toc-essentially-contested-terms" class="nav-link" data-scroll-target="#essentially-contested-terms">Essentially-Contested Terms</a></li>
+  <li><a href="#policy-whitepaper-takeaway-operationalize" id="toc-policy-whitepaper-takeaway-operationalize" class="nav-link" data-scroll-target="#policy-whitepaper-takeaway-operationalize">Policy Whitepaper Takeaway: <em>Operationalize</em>!</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/jpowerj/dsan5450/blob/main/resources.qmd" target="_blank" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/jpowerj/dsan5450/blob/main/writeups/contested/index.qmd" target="_blank" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Resources</h1>
-</div>
+<h1 class="title">Essentially Contested Concepts</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Extra Writeups</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jeff Jacobs </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 29, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -328,50 +372,52 @@ div.csl-indent {
 </header>
 
 
-<section id="normative-vs.-descriptive-ethical-frameworks" class="level2">
-<h2 class="anchored" data-anchor-id="normative-vs.-descriptive-ethical-frameworks">Normative vs.&nbsp;Descriptive / Ethical Frameworks</h2>
-<section id="general-high-level-overviews" class="level3">
-<h3 class="anchored" data-anchor-id="general-high-level-overviews">General / High-Level Overviews</h3>
+<p>Since I know that I often mention things in passing and quickly jump to the next topic, I hope this writeup can serve to (a) take the time that some of yall’s in-class comments deserve(!), and (b) tie together the “core” class content (the stuff on the slides and in the homework) with this “peripheral” class content (the stuff that comes up during sidebars/questions/comments)</p>
+<section id="achieving-intersubjective-truth" class="level2">
+<h2 class="anchored" data-anchor-id="achieving-intersubjective-truth">Achieving Intersubjective “Truth”</h2>
+<p>I (thankfully) remembered to describe Quine’s “gavagai” problem in class today, where the takeaway was that we never technically “know” the meaning of a word in a definitive sense—we are always “triangulating” the meaning by collecting more and more “data” in the form of <strong>contexts</strong> in which we observe the word being used. In the gavagai example from class, we have the following process of narrowing-in on the meaning of “gavagai”:</p>
+<ol type="1">
+<li>A <strong>rabbit</strong> runs by, and a member of the group whose language we don’t know points at the rabbit and says “gavagai!” <span class="math inline">\(\leadsto\)</span> “gavagai” could mean “rabbit”, or “furry animal”, or “thing with legs”, or “thing with less than 5 legs”, or “thing with less than 6 legs”, or “thing with less than 7 legs”, etc… (an infinitude of possible meanings)</li>
+<li>Later that day, someone from the same linguistic community points at a <strong>table</strong> with <strong>6 legs</strong> and says “gavagai!” <span class="math inline">\(\leadsto\)</span> we can now eliminate the “rabbit” and “furry animal” hypotheses, as well as the “thing with less than 5 legs” and “thing with less than 6 legs” hypotheses.</li>
+<li>We continue this (when it comes to our first language, it’s a process running from early childhood onwards), such that we (asymptotically) converge to a fairly stable distribution of how likely and unlikely we think the different hypotheses are.</li>
+</ol>
+<p>One thing that emerges, though, is that we can also start to “mark out” different classes of words, spanning from:</p>
 <ul>
-<li><span class="citation" data-cites="hare_language_1952">Hare (<a href="#ref-hare_language_1952" role="doc-biblioref">1952</a>)</span>, <em>The Language of Morals</em> [<a href="https://www.dropbox.com/scl/fi/ida3a4sc6rutfrckz2rxt/R.-M.-Hare-The-Language-of-Morals-Oxford-University-Press-1952.pdf?rlkey=pfnhm8g4hxqogdo9egfqvhln8&amp;dl=1">PDF</a>]
-<ul>
-<li>This is <strong>the</strong> canonical book that explains, in excruciating but necessary detail, the linguistic “core” of the descriptive-versus-normative distinction. It’s overkill to read from cover-to-cover if you just want the gist of the concepts, but if you’re curious about how we can develop a “logic” of normative statements like we have for descriptive statements, this is the key text imo!</li>
-</ul></li>
-<li><span class="citation" data-cites="korsgaard_sources_1996">Korsgaard (<a href="#ref-korsgaard_sources_1996" role="doc-biblioref">1996</a>)</span>, <em>The Sources of Normativity</em> [<a href="https://www.dropbox.com/scl/fi/xlhda31dbc2m32rvrcci6/The-Sources-of-Normativity-Christine-M.-Korsgaard.pdf?rlkey=7li5rkrluoqyokmh386y5a82c&amp;dl=1">PDF</a>]
-<ul>
-<li>This is… definitely up there among my favorite books of all time on this topic (after wading through many of them during the PhD exam gauntlet I mentioned in Week 1): it does what I wish every ethical-philosophy book did, which is, continuing to ask <strong>but <em>why</em>?!?</strong> to every theory of ethical justification, until it reaches a perspective which (not coincidentally) is quite close to the perspective we adopt early on in this course!</li>
-</ul></li>
-<li><span class="citation" data-cites="roemer_theories_1996">Roemer (<a href="#ref-roemer_theories_1996" role="doc-biblioref">1996</a>)</span>, <em>Theories of Distributive Justice</em> [<a href="https://www.dropbox.com/scl/fi/9ihy7f04qvg1o684uxecx/John_E._Roemer-_Theories_of_Distributive_Justice-BookFi.org.pdf?rlkey=c7g0jictkvmoktokp3p4jhvcr&amp;dl=1">PDF</a>]
-<ul>
-<li>I won’t lie to you, this book is pretty brutal in terms of being a mathematical “deep dive” into how the ethical frameworks we discuss in this class can be built up from a set of axioms. So, I don’t recommend the whole thing (that’s why there are two more Roemer books in this section, which are more applied looks at particular ethical frameworks!)</li>
-<li>The two parts we will draw on, which I <em>do</em> therefore recommend, are the explanations of <strong>utility functions</strong> in Chapter 1 and of <strong>Social Welfare Functionals</strong> in Chapter 4</li>
-</ul></li>
+<li><p>Those which are <strong>easiest to achieve intersubjective agreement</strong> on, such as the words in a sentence like: <em>“this table is taller than that table”</em>, which can be intersubjectively verified by allowing all the subjects to e.g.&nbsp;use their depth perception and/or a meter stick to measure the two tables (our distribution of hypotheses around these words converge to a stable state pretty quickly), to</p></li>
+<li><p>Those which are more difficult because we <strong>don’t have an intersubjectively-agreed meter stick</strong>, like <em>“I love you more than they love you”</em>: words whose subjective meanings (i.e., our distributions of hypotheses about what these words refer to or demarcate in the world) are frequently challenged and updated as we grow and have more experiences; these latter cases are why I wish I could’ve played this full video that I summarized in class!</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/iDGMS_tjRxU" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div></li>
 </ul>
 </section>
-<section id="particular-examples-frameworks" class="level3">
-<h3 class="anchored" data-anchor-id="particular-examples-frameworks">Particular Examples / Frameworks</h3>
-<ul>
-<li><span class="citation" data-cites="roemer_free_1988">Roemer (<a href="#ref-roemer_free_1988" role="doc-biblioref">1988</a>)</span>, <em>Free to Lose: An Introduction to Marxist Economic Philosophy</em> [<a href="https://www.dropbox.com/scl/fi/2bh9ydhvpjvk7369qrf6y/John_E._Roemer-_Free_to_Lose.pdf?rlkey=drao1xt5sse02hrm6ld3ypidn&amp;dl=1">PDF</a>]</li>
-<li><span class="citation" data-cites="anderson_private_2017">Anderson (<a href="#ref-anderson_private_2017" role="doc-biblioref">2017</a>)</span>, <em>Private Government: How Employers Rule Our Lives (And Why We Don’t Talk About It)</em> [<a href="https://www.dropbox.com/scl/fi/a7y3unk7aumb71mor4xo6/Anderson-Elizabeth-Private-Government.pdf?rlkey=w57vr6kv5rjo9mfb8j1kpdzd4&amp;dl=1">PDF</a>] [<a href="https://www.dropbox.com/scl/fi/hxo3r8acdjusf69k0sxg6/Private-Government_-How-Employe-Elizabeth-Anderson.epub?rlkey=5yhut4etml2ysivfc1tte774u&amp;dl=1">EPUB</a>] [<a href="https://www.dropbox.com/scl/fi/p6sjlo7j1i17ml1s64rp4/Private-Government_-How-Employe-Elizabeth-Anderson.mobi?rlkey=hbnvgi2c0a5ko8i3egt924sb3&amp;dl=1">MOBI</a>]</li>
-<li><span class="citation" data-cites="rawls_theory_1971">Rawls (<a href="#ref-rawls_theory_1971" role="doc-biblioref">1971</a>)</span>, <em>A Theory of Justice</em> [<a href="https://www.dropbox.com/scl/fi/6gfh08zzyhiyki1tyt9fa/John_Rawls-_A_Theory_of_Justice-Revised.pdf?rlkey=3lwpncxz1f8hxzhrdvr9wwn6m&amp;dl=1">PDF</a>]</li>
-<li><span class="citation" data-cites="roemer_equality_1998">Roemer (<a href="#ref-roemer_equality_1998" role="doc-biblioref">1998</a>)</span>, <em>Equality of Opportunity</em> [<a href="https://www.dropbox.com/scl/fi/dnomgm32s9c4o5kxv9eoz/John-E.-Roemer-Equality-of-Opportunity.pdf?rlkey=hifos73t2ryt9wlsit83wlp4f&amp;dl=1">PDF</a>]</li>
-</ul>
+<section id="essentially-contested-terms" class="level2">
+<h2 class="anchored" data-anchor-id="essentially-contested-terms">Essentially-Contested Terms</h2>
+<p>If this was just a class on the <strong>language</strong> of ethics, we could in a sense stop there (for example, the range of language covered in the above two bullet points corresponds to a large chunk of the linguistic theory in <span class="citation" data-cites="hare_language_1952">Hare (<a href="#ref-hare_language_1952" role="doc-biblioref">1952</a>)</span>). But, in a class where the point of all this is to build up frameworks for <strong>ethics and policy</strong>, we can posit a <strong>third</strong> type of word, which <span class="citation" data-cites="connolly_terms_1974">Connolly (<a href="#ref-connolly_terms_1974" role="doc-biblioref">1974</a>)</span> calls an <strong>“essentially contested”</strong> word or concept.</p>
+<p>The easiest way to understand what might qualify as an “essentially contested” word is probably through example. So, as the first example that comes to my mind, consider how US schools usually ask students to stand up at the beginning of each school day, put their hands to their hearts, and recite the <a href="https://en.wikipedia.org/wiki/Pledge_of_Allegiance">Pledge of Allegiance</a>, which ends with the phrase:</p>
+<blockquote class="blockquote">
+<p>With <strong>liberty</strong> and <strong>justice</strong> for all.</p>
+</blockquote>
+<p>So, we can take the two bolded words there, and we can think about how it’s probably going to be <strong>more difficult</strong> to achieve intersubjective agreement about what these terms mean to people in the US than, say, “fish” or “pencil”, precisely because there are <strong>higher stakes</strong>: intersubjective disagreements about what “liberty” and “justice” mean cut straight to the core of what it means to be “American” in a way that disagreements about “fish” or “pencil” do not.</p>
+<p>This idea can also help shed light on how, for example, the relationship between <strong>political power</strong> and the <strong>degree of linkage</strong> one can establish between one’s own political program and the meanings of these words. To put it in a less wordy way: the success of a political party often correlates with how well it can “fit” its own program to particular subjective meanings of these terms held among constituents. So that, in the US, there are political struggles in which debates (usually implicitly, but sometimes explicitly) are waged over how the politician will uphold the “liberty” and “justice” that is in constituents’ heads better than their opponents.</p>
+<p>Or, to make it less US-centric, someone in China may succeed or fail to succeed in enacting some sort of change in the system to the extent that they can link their program with a particular meaning of <strong>中国特色社会主义</strong> or <strong><a href="https://en.wikipedia.org/wiki/Socialism_with_Chinese_characteristics">socialism (社会主义) with Chinese characteristics (中国特色)</a></strong>—a term which appears many times in this famous <a href="https://syss.12371.cn/2015/05/18/ARTI1431918530288642.shtml">2013 speech</a> from Xi Jinping, for example, which has the title (using my terrible Chinese translation skills but I think I got this bc I cross-checked it with the English translation):</p>
+<blockquote class="blockquote">
+<p>毫不动摇坚持和发展<strong>中国特色社会主义</strong></p>
+<p>(Uphold and Extend <strong>Socialism with Chinese Characteristics</strong>)</p>
+</blockquote>
+<p>and which makes the argument that (using my terrible Chinese comprehension skills to their maximum degree here, since I didn’t cross-check the whole thing), the tenets of Xi Jinping Thought that are outlined in the speech are a “best” implementation of 中国特色社会主义, among ideas/proposals being discussed at the end of Hu Jintao’s term as CCP General Secretary in 2012.</p>
 </section>
-</section>
-<section id="fairness-in-ai-context-sensitive-fairness" class="level2">
-<h2 class="anchored" data-anchor-id="fairness-in-ai-context-sensitive-fairness">Fairness in AI / Context-Sensitive Fairness</h2>
+<section id="policy-whitepaper-takeaway-operationalize" class="level2">
+<h2 class="anchored" data-anchor-id="policy-whitepaper-takeaway-operationalize">Policy Whitepaper Takeaway: <em>Operationalize</em>!</h2>
+<p>The takeaway from these two examples to your policy whitepapers, therefore, can be summarized like: you’re going to make your task harder than it needs to be if you say that (e.g.) your policy is better than existing policies because it better upholds “liberty”, or “justice”, or “Socialism with Chinese Characteristics”, as such… For someone to accept that type of argument, they would probably also have to share a whole lot of other “background” antecedents with you in the first place, about what these terms mean, which would kind of undercut the point of making the argument (you would be <a href="https://www.merriam-webster.com/dictionary/preach%20to%20the%20choir">“preaching to the choir”</a>).</p>
+<p>So, this means that I might circle some part(s) of your proposals for example and write “essentially contested concept!”, meaning, you probably need to <strong>operationalize</strong> what you mean, more concretely, by specifying a <strong>metric</strong> on which your policy might be better, if you want to convince people in your audience who don’t already agree with you!</p>
+<p>As a final two-bullet-point example, consider the <span class="citation" data-cites="dreze_china_1991">Drèze and Sen (<a href="#ref-dreze_china_1991" role="doc-biblioref">1991</a>)</span> example from the Week 2 slides, where we looked at this passage:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/china_india.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<p>The point there was that, if you want to say e.g.&nbsp;that your policy would <strong>increase freedom</strong>, then you can first specify <strong>freedom from hunger</strong> to “decouple” this type of freedom from “freedom” writ large. But, even then, you should also specify whether your <strong>operationalization</strong> of “hunger” is:</p>
 <ul>
-<li><span class="citation" data-cites="barocas_fairness_2023">Barocas, Hardt, and Narayanan (<a href="#ref-barocas_fairness_2023" role="doc-biblioref">2023</a>)</span>, <em>Fairness and Machine Learning: Limitations and Opportunities</em> [<a href="https://fairmlbook.org/pdf/fairmlbook.pdf">PDF</a>]
-<ul>
-<li>This will be our main reference during this portion of the course, and is <a href="https://fairmlbook.org/">available for free</a> (legally!) online!</li>
-</ul></li>
-<li><span class="citation" data-cites="kasy_fairness_2021">Kasy and Abebe (<a href="#ref-kasy_fairness_2021" role="doc-biblioref">2021</a>)</span>, “Fairness, Equality, and Power in Algorithmic Decision-Making”, <em>FAccT ’21: Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency</em> [<a href="https://maxkasy.github.io/home/files/papers/fairness_equality_power.pdf">PDF</a>]</li>
-</ul>
-</section>
-<section id="econometric-policy-evaluation" class="level2">
-<h2 class="anchored" data-anchor-id="econometric-policy-evaluation">Econometric Policy Evaluation</h2>
-<ul>
-<li><span class="citation" data-cites="bjorkegren_machine_2022">Björkegren, Blumenstock, and Knight (<a href="#ref-bjorkegren_machine_2022" role="doc-biblioref">2022</a>)</span>, “(Machine) Learning what Policymakers Value”, <em>EAAMO (Equity and Access in Algorithms, Mechanisms, and Optimization)</em> [<a href="https://www.jblumenstock.com/files/papers/bbk_2021_eaamo.pdf">PDF</a>]</li>
+<li>Literal starvation, in the form of e.g.&nbsp;deaths that occur over a short period of time due to acute famine conditions (like the Great Famine referenced in the above passage), or</li>
+<li>Nutritional deprivation, in the form of e.g.&nbsp;the longer-term effects of subsistence-level food and water, and the deaths that occur over a longer span of time that wouldn’t have otherwise occurred with an above-subsistence-level food and water intake.</li>
 </ul>
 
 
@@ -379,35 +425,14 @@ div.csl-indent {
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-anderson_private_2017" class="csl-entry" role="listitem">
-Anderson, Elizabeth. 2017. <em>Private <span>Government</span>: <span>How Employers Rule Our Lives</span> (and <span>Why We Don</span>’t <span>Talk</span> about <span>It</span>)</em>. Princeton University Press.
+<div id="ref-connolly_terms_1974" class="csl-entry" role="listitem">
+Connolly, William E. 1974. <em>The <span>Terms</span> of <span>Political Discourse</span></em>. Princeton University Press.
 </div>
-<div id="ref-barocas_fairness_2023" class="csl-entry" role="listitem">
-Barocas, Solon, Moritz Hardt, and Arvind Narayanan. 2023. <em>Fairness and <span>Machine Learning</span>: <span>Limitations</span> and <span>Opportunities</span></em>. MIT Press.
-</div>
-<div id="ref-bjorkegren_machine_2022" class="csl-entry" role="listitem">
-Björkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. <span>“(<span>Machine</span>) <span>Learning What Policies Value</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.2206.00727">https://doi.org/10.48550/arXiv.2206.00727</a>.
+<div id="ref-dreze_china_1991" class="csl-entry" role="listitem">
+Drèze, Jean, and Amartya Sen. 1991. <span>“China and <span>India</span>.”</span> In <em>Hunger and <span>Public Action</span></em>, 0. Oxford University Press. <a href="https://doi.org/10.1093/0198283652.003.0011">https://doi.org/10.1093/0198283652.003.0011</a>.
 </div>
 <div id="ref-hare_language_1952" class="csl-entry" role="listitem">
 Hare, R. M. 1952. <em>The <span>Language</span> of <span>Morals</span></em>. OUP Oxford.
-</div>
-<div id="ref-kasy_fairness_2021" class="csl-entry" role="listitem">
-Kasy, Maximilian, and Rediet Abebe. 2021. <span>“Fairness, <span>Equality</span>, and <span>Power</span> in <span>Algorithmic Decision-Making</span>.”</span> In <em>Proceedings of the 2021 <span>ACM Conference</span> on <span>Fairness</span>, <span>Accountability</span>, and <span>Transparency</span></em>, 576–86. <span>FAccT</span> ’21. New York, NY, USA: Association for Computing Machinery. <a href="https://doi.org/10.1145/3442188.3445919">https://doi.org/10.1145/3442188.3445919</a>.
-</div>
-<div id="ref-korsgaard_sources_1996" class="csl-entry" role="listitem">
-Korsgaard, Christine M. 1996. <em>The <span>Sources</span> of <span>Normativity</span></em>. Cambridge University Press.
-</div>
-<div id="ref-rawls_theory_1971" class="csl-entry" role="listitem">
-Rawls, John. 1971. <em>A <span>Theory</span> of <span>Justice</span>: <span>Original Edition</span></em>. Harvard University Press.
-</div>
-<div id="ref-roemer_free_1988" class="csl-entry" role="listitem">
-Roemer, John E. 1988. <em>Free to <span>Lose</span>: <span>An Introduction</span> to <span>Marxist Economic Philosophy</span></em>. Harvard University Press.
-</div>
-<div id="ref-roemer_theories_1996" class="csl-entry" role="listitem">
-———. 1996. <em>Theories of <span>Distributive Justice</span></em>. Harvard University Press.
-</div>
-<div id="ref-roemer_equality_1998" class="csl-entry" role="listitem">
-———. 1998. <em>Equality of <span>Opportunity</span></em>. Harvard University Press.
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -986,4 +1011,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jpowerj/dsan5450/blob/main/resources.qmd" target="_blank" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jpowerj/dsan5450/blob/main/writeups/contested/index.qmd" target="_blank" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>

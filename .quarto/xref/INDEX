@@ -104,5 +104,8 @@
   },
   "resources.qmd": {
     "resources.html": "007a441c"
+  },
+  "writeups/contested/index.qmd": {
+    "index.html": "18e825d3"
   }
 }
