@@ -9,12 +9,12 @@ format:
 
 **Welcome to DSAN 5450: Data Ethics and Policy at Georgetown University!**
 
-The course meets on **Wednesdays from 3:30-6pm in the <a href='https://maps.app.goo.gl/fVVfDFpp4MEuukXa9' target='_blank'>Walsh Building</a>, Room 498**
+The course meets on **Wednesdays from 3:30-6pm in the [Walsh Building](https://maps.app.goo.gl/fVVfDFpp4MEuukXa9), Room 498**
 
 ## Course Staff
 
 * Prof. Jeff Jacobs, [`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)
-  * Office hours (Click to schedule): [Tuesdays, 3-6pm](https://jjacobs.me/meet)
+  * Office hours (Click to schedule): [Tuesdays, 3:30-6:30pm](https://jjacobs.me/meet)
 * TA Marie Vaughan, [`mev71@georgetown.edu`](mailto:mev71@georgetown.edu)
 * TA Sam Sofman, [`sbs106@georgetown.edu`](mailto:sbs106@georgetown.edu)
 
