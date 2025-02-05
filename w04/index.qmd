@@ -155,21 +155,6 @@ Anatole France, *Le Lys Rouge* [@france_lys_1894]
 
 ![From @datta_proxy_2017](images/proxy.svg){fig-align="center"}
 
-## To Make It Even More Concrete... {.smaller .crunch-title}
-
-* *Bloomberg* analysis of neighborhoods with same-day delivery from Amazon:
-
-::: {#fig-bloomberg layout="[1,1,1]" layout-valign="center"}
-
-![](images/amazon-six-cities-at.png){fig-align="center"}
-
-![](images/amazon-six-cities-ch.png){fig-align="center"}
-
-![](images/amazon-six-cities-dc.png){fig-align="center"}
-
-Figures from @ingold_amazon_2016
-:::
-
 ## Last One I Promise
 
 ![Predicting self-reported **whiteness** with **70% accuracy**](images/census-tract-bethesda.png)
