@@ -3497,11 +3497,31 @@
     ]
   },
   {
-    "objectID": "w04/index.html#baby-steps-a-real-world-confusion-matrix",
-    "href": "w04/index.html#baby-steps-a-real-world-confusion-matrix",
+    "objectID": "w04/index.html#so-how-should-we-makechoose-conventions",
+    "href": "w04/index.html#so-how-should-we-makechoose-conventions",
     "title": "Week 4: (Descriptive) Fairness in AI",
-    "section": "Baby Steps: A Real-World Confusion Matrix",
-    "text": "Baby Steps: A Real-World Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (did vs. didn’t do more crimes)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)",
+    "section": "So How Should We Make/Choose Conventions?",
+    "text": "So How Should We Make/Choose Conventions?\n\nHobbes (1668): Only way out of “war of all against all” is to surrender all power to one sovereign (the Leviathan)\nRousseau (1762): Social contract\n[Big big ~200 year gap here… can you think of why? Hint: French Revolution in 1789]\nRawls (1971): Social contract behind the “veil of ignorance”\n\nIf we didn’t know where we were going to end up in society, how would we set it up?",
+    "crumbs": [
+      "Week 4: {{< var w04.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w04/index.html#rawls-veil-of-ignorance",
+    "href": "w04/index.html#rawls-veil-of-ignorance",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "Rawls’ Veil of Ignorance",
+    "text": "Rawls’ Veil of Ignorance\n\nProbably the most important tool for policy whitepapers!\n“Justice as fairness” (next week: fairness in AI 😜)\nWe don’t know whether we’ll be \\(A\\) or \\(B\\) in the intersection game, so we’d choose the traffic light!\nMore profoundly: We don’t know what race, gender, class, ethnicity, sexuality, disability status we’ll have; We don’t know whether we’ll be Israeli or Palestinian; we don’t know whether we’ll own means of production or own only our labor power (and thus have to sell it on a market to survive)… 🤔",
+    "crumbs": [
+      "Week 4: {{< var w04.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w04/index.html#one-final-reminder",
+    "href": "w04/index.html#one-final-reminder",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "One Final Reminder",
+    "text": "One Final Reminder\n\nIndustry rule #4080: Cannot “prove” \\(q(x) = \\text{``Algorithm }x\\text{ is fair''}\\)! Only \\(p(x) \\implies q(y)\\):\n\n\\[\n\\underbrace{p(x)}_{\\substack{\\text{Accept ethical} \\\\ \\text{framework }x}} \\implies \\underbrace{q(y)}_{\\substack{\\text{Algorithms should} \\\\ \\text{satisfy condition }y}}\n\\]\n\nBefore: possible ethical frameworks (values for \\(x\\))\nNow: possible fairness criteria (values for \\(y\\))",
     "crumbs": [
       "Week 4: {{< var w04.date-md >}}"
     ]
@@ -3527,8 +3547,88 @@
     ]
   },
   {
+    "objectID": "w04/index.html#the-brogrammers-criterion",
+    "href": "w04/index.html#the-brogrammers-criterion",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "The Brogrammer’s Criterion",
+    "text": "The Brogrammer’s Criterion\ndf.drop(columns=[\"race\"], inplace=True)\n\nRacism solved, folks! 🥳🎊🎉 End of the course, have a great rest of your data science career ✌️",
+    "crumbs": [
+      "Week 4: {{< var w04.date-md >}}"
+    ]
+  },
+  {
     "objectID": "w04/index.html#no-fairness-through-unawareness",
     "href": "w04/index.html#no-fairness-through-unawareness",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "(No) Fairness Through Unawareness",
+    "text": "(No) Fairness Through Unawareness\n\nHW1: Using tiny sample (\\(N &lt; 10K\\)) of Florida voter registrations… RandomForestClassifier (default settings, no hyperparameter tuning, no cross-validation, no ensembling with other methods) will predict self-reported race with \\(&gt;90\\%\\) accuracy (in balanced sample) from just surname and county of residence\n\nCan reach \\(70\\text{-}75\\%\\) with just surname or just county of residence\n\nEnd-of-HW1 discussion: Facebook ad matching service provides over 1,000 different user attributes for (micro)targeting\n\n\n\n\nFrom Datta et al. (2017)",
+    "crumbs": [
+      "Week 4: {{< var w04.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w04/index.html#we-can-do-a-bit-better",
+    "href": "w04/index.html#we-can-do-a-bit-better",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "We Can Do (A Bit) Better…",
+    "text": "We Can Do (A Bit) Better…\n\nUse random variables to model inferences made by an algorithm (or a human!)\n\\(\\implies\\) fairness by statistically equalizing loan rejections, error rate, etc. between groups\nObvious societal drawback: equality does not ameliorate the effects of past injustices (see: police contact vs. trust-in-government plot from last week)\n\nThis one we saw coming, given “context-free” nature!\n\nLess obvious mathematical drawback: impossibility results (because algebra 😳)\n\nRoughly: can’t satisfy [more than] two statistical fairness criteria at once; similar to how setting \\(\\Pr(X) = p\\) also determines \\(\\Pr(\\neg X) = 1 - p\\), or how plugging \\(x = 3\\) into \\(x + y = 5\\) leaves only one possibility \\(y = 2\\)\n\nBUT, “impossibility” \\(\\neq\\) impossibility: (a) one criteria may be “all you need” in given setting; (b) can derive more robust measures by “relaxing” confusion-matrix measures",
+    "crumbs": [
+      "Week 4: {{< var w04.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w04/index.html#what-the-fairness-measures-will-feel-like-for-now",
+    "href": "w04/index.html#what-the-fairness-measures-will-feel-like-for-now",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "What the Fairness Measures Will Feel Like For Now",
+    "text": "What the Fairness Measures Will Feel Like For Now\n\n\n\n\n\n\n(They will get more robust and will incorporate context soon, I promise!)",
+    "crumbs": [
+      "Week 4: {{< var w04.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w04/index.html#who-remembers-confusion-matrices",
+    "href": "w04/index.html#who-remembers-confusion-matrices",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "Who Remembers… 🎉Confusion Matrices!!!🎉",
+    "text": "Who Remembers… 🎉Confusion Matrices!!!🎉\n\nTerrifyingly higher stakes than in DSAN 5000, however!\nNow \\(D = 1\\) could literally mean “shoot this person” or “throw this person in jail for life”\n\n\n\n\nFrom Mitchell et al. (2021)",
+    "crumbs": [
+      "Week 4: {{< var w04.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w04/index.html#baby-steps-a-real-world-confusion-matrix",
+    "href": "w04/index.html#baby-steps-a-real-world-confusion-matrix",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "Baby Steps: A Real-World Confusion Matrix",
+    "text": "Baby Steps: A Real-World Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (did vs. didn’t do more crimes)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)",
+    "crumbs": [
+      "Week 4: {{< var w04.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w04/index.html#categories-of-fairness-criteria-1",
+    "href": "w04/index.html#categories-of-fairness-criteria-1",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "Categories of Fairness Criteria",
+    "text": "Categories of Fairness Criteria\n\nRoughly, approaches to fairness/bias in AI can be categorized as follows:\n\n\nFairness\n\n\n\n\n\n\nContext-Free\n\n\nSingle-Threshold Fairness\nEqual Prediction\nEqual Decision\n\n\n\n\n\n\n\n\n\nContext-Sensitive\n\n\nFairness via Similarity Metric(s)\nCausal Definitions\n\n\n\n\n\n\n\n[Today] Context-Free Fairness: Easier to grasp from CS/data science perspective; rooted in “language” of Machine Learning (you already know much of it, given DSAN 5000!)\nBut easy-to-grasp notion \\(\\neq\\) “good” notion!\nYour job: push yourself to (a) consider what is getting left out of the context-free definitions, and (b) the loopholes that are thus introduced into them, whereby people/computers can discriminate while remaining “technically fair”",
+    "crumbs": [
+      "Week 4: {{< var w04.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w04/index.html#laws-often-perfectly-technically-fair-1",
+    "href": "w04/index.html#laws-often-perfectly-technically-fair-1",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "Laws: Often Perfectly “Technically Fair”",
+    "text": "Laws: Often Perfectly “Technically Fair”\n\nAh, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!\n\n\n(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)\n\nAnatole France, Le Lys Rouge (France 1894)",
+    "crumbs": [
+      "Week 4: {{< var w04.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w04/index.html#no-fairness-through-unawareness-1",
+    "href": "w04/index.html#no-fairness-through-unawareness-1",
     "title": "Week 4: (Descriptive) Fairness in AI",
     "section": "(No) Fairness Through Unawareness",
     "text": "(No) Fairness Through Unawareness\n\nHW1: Using tiny sample (\\(N &lt; 10K\\)) of Florida voter registrations… RandomForestClassifier (default settings, no hyperparameter tuning, no cross-validation, no ensembling with other methods) will predict self-reported race with \\(&gt;90\\%\\) accuracy (in balanced sample) from just surname and county of residence\n\nCan reach \\(70\\text{-}75\\%\\) with just surname or just county of residence\n\nAlso in HW1: Facebook ad matching service provides over 1,000 different user attributes for (micro)targeting\n\n\n\n\nFrom Datta et al. (2017)",
@@ -3557,8 +3657,8 @@
     ]
   },
   {
-    "objectID": "w04/index.html#we-can-do-a-bit-better",
-    "href": "w04/index.html#we-can-do-a-bit-better",
+    "objectID": "w04/index.html#we-can-do-a-bit-better-1",
+    "href": "w04/index.html#we-can-do-a-bit-better-1",
     "title": "Week 4: (Descriptive) Fairness in AI",
     "section": "We Can Do (A Bit) Better…",
     "text": "We Can Do (A Bit) Better…\n\nUse random variables to model inferences made by an algorithm (or a human!)\n\\(\\implies\\) fairness by statistically equalizing loan rejections, error rate, etc. between groups\nObvious societal drawback: equality does not ameliorate the effects of past injustices (see: police contact vs. trust-in-government plot from last week)\n\nThis one we saw coming, given “context-free” nature!\n\nLess obvious mathematical drawback: impossibility results (because algebra 😳)\n\nRoughly: can’t satisfy [more than] two statistical fairness criteria at once; similar to how setting \\(\\Pr(X) = p\\) also determines \\(\\Pr(\\text{not }X) = 1 - p\\), or how plugging \\(x = 3\\) into \\(x + y = 5\\) leaves only one possibility \\(y = 2\\)\n\nBUT, “impossibility” \\(\\neq\\) impossibility: (a) one criteria may be “all you need” in given setting; (b) can derive more robust measures by “relaxing” confusion-matrix measures",
@@ -3721,17 +3821,31 @@
     "href": "w04/index.html#references",
     "title": "Week 4: (Descriptive) Fairness in AI",
     "section": "References",
-    "text": "References\n\n\nBlackstone, William. 1769. Commentaries on the Laws of England, Volume 2: A Facsimile of the First Edition of 1765-1769. University of Chicago Press.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeDeo, Simon. 2016. “Wrong Side of the Tracks: Big Data and Protected Categories.” arXiv. https://doi.org/10.48550/arXiv.1412.4643.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nRousey, Dennis C. 2001. “Friends and Foes of Slavery: Foreigners and Northerners in the Old South.” Journal of Social History 35 (2): 373–96. https://www.jstor.org/stable/3790193.\n\n\nSimons, Josh. 2023. Algorithms for the People: Democracy in the Age of AI. Princeton University Press.",
+    "text": "References\n\n\nBlackstone, William. 1769. Commentaries on the Laws of England, Volume 2: A Facsimile of the First Edition of 1765-1769. University of Chicago Press.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeDeo, Simon. 2016. “Wrong Side of the Tracks: Big Data and Protected Categories.” arXiv. https://doi.org/10.48550/arXiv.1412.4643.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nHobbes, Thomas. 1668. Leviathan: With Selected Variants from the Latin Edition of 1668. Hackett Publishing.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nRawls, John. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\nRousey, Dennis C. 2001. “Friends and Foes of Slavery: Foreigners and Northerners in the Old South.” Journal of Social History 35 (2): 373–96. https://www.jstor.org/stable/3790193.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSimons, Josh. 2023. Algorithms for the People: Democracy in the Age of AI. Princeton University Press.",
     "crumbs": [
       "Week 4: {{< var w04.date-md >}}"
     ]
   },
   {
-    "objectID": "w04/slides.html#baby-steps-a-real-world-confusion-matrix",
-    "href": "w04/slides.html#baby-steps-a-real-world-confusion-matrix",
+    "objectID": "w04/slides.html#so-how-should-we-makechoose-conventions",
+    "href": "w04/slides.html#so-how-should-we-makechoose-conventions",
     "title": "Week 4: (Descriptive) Fairness in AI",
-    "section": "Baby Steps: A Real-World Confusion Matrix",
-    "text": "Baby Steps: A Real-World Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (did vs. didn’t do more crimes)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)"
+    "section": "So How Should We Make/Choose Conventions?",
+    "text": "So How Should We Make/Choose Conventions?\n\nHobbes (1668): Only way out of “war of all against all” is to surrender all power to one sovereign (the Leviathan)\nRousseau (1762): Social contract\n[Big big ~200 year gap here… can you think of why? Hint: French Revolution in 1789]\nRawls (1971): Social contract behind the “veil of ignorance”\n\nIf we didn’t know where we were going to end up in society, how would we set it up?"
+  },
+  {
+    "objectID": "w04/slides.html#rawls-veil-of-ignorance",
+    "href": "w04/slides.html#rawls-veil-of-ignorance",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "Rawls’ Veil of Ignorance",
+    "text": "Rawls’ Veil of Ignorance\n\nProbably the most important tool for policy whitepapers!\n“Justice as fairness” (next week: fairness in AI 😜)\nWe don’t know whether we’ll be \\(A\\) or \\(B\\) in the intersection game, so we’d choose the traffic light!\nMore profoundly: We don’t know what race, gender, class, ethnicity, sexuality, disability status we’ll have; We don’t know whether we’ll be Israeli or Palestinian; we don’t know whether we’ll own means of production or own only our labor power (and thus have to sell it on a market to survive)… 🤔"
+  },
+  {
+    "objectID": "w04/slides.html#one-final-reminder",
+    "href": "w04/slides.html#one-final-reminder",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "One Final Reminder",
+    "text": "One Final Reminder\n\nIndustry rule #4080: Cannot “prove” \\(q(x) = \\text{``Algorithm }x\\text{ is fair''}\\)! Only \\(p(x) \\implies q(y)\\):\n\n\\[\n\\underbrace{p(x)}_{\\substack{\\text{Accept ethical} \\\\ \\text{framework }x}} \\implies \\underbrace{q(y)}_{\\substack{\\text{Algorithms should} \\\\ \\text{satisfy condition }y}}\n\\]\n\nBefore: possible ethical frameworks (values for \\(x\\))\nNow: possible fairness criteria (values for \\(y\\))"
   },
   {
     "objectID": "w04/slides.html#categories-of-fairness-criteria",
@@ -3748,8 +3862,64 @@
     "text": "Laws: Often Perfectly “Technically Fair”\n\nAh, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!\n\n\n(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)\n\nAnatole France, Le Lys Rouge (France 1894)"
   },
   {
+    "objectID": "w04/slides.html#the-brogrammers-criterion",
+    "href": "w04/slides.html#the-brogrammers-criterion",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "The Brogrammer’s Criterion",
+    "text": "The Brogrammer’s Criterion\ndf.drop(columns=[\"race\"], inplace=True)\n\nRacism solved, folks! 🥳🎊🎉 End of the course, have a great rest of your data science career ✌️"
+  },
+  {
     "objectID": "w04/slides.html#no-fairness-through-unawareness",
     "href": "w04/slides.html#no-fairness-through-unawareness",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "(No) Fairness Through Unawareness",
+    "text": "(No) Fairness Through Unawareness\n\nHW1: Using tiny sample (\\(N &lt; 10K\\)) of Florida voter registrations… RandomForestClassifier (default settings, no hyperparameter tuning, no cross-validation, no ensembling with other methods) will predict self-reported race with \\(&gt;90\\%\\) accuracy (in balanced sample) from just surname and county of residence\n\nCan reach \\(70\\text{-}75\\%\\) with just surname or just county of residence\n\nEnd-of-HW1 discussion: Facebook ad matching service provides over 1,000 different user attributes for (micro)targeting\n\n\nFrom Datta et al. (2017)"
+  },
+  {
+    "objectID": "w04/slides.html#we-can-do-a-bit-better",
+    "href": "w04/slides.html#we-can-do-a-bit-better",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "We Can Do (A Bit) Better…",
+    "text": "We Can Do (A Bit) Better…\n\nUse random variables to model inferences made by an algorithm (or a human!)\n\\(\\implies\\) fairness by statistically equalizing loan rejections, error rate, etc. between groups\nObvious societal drawback: equality does not ameliorate the effects of past injustices (see: police contact vs. trust-in-government plot from last week)\n\nThis one we saw coming, given “context-free” nature!\n\nLess obvious mathematical drawback: impossibility results (because algebra 😳)\n\nRoughly: can’t satisfy [more than] two statistical fairness criteria at once; similar to how setting \\(\\Pr(X) = p\\) also determines \\(\\Pr(\\neg X) = 1 - p\\), or how plugging \\(x = 3\\) into \\(x + y = 5\\) leaves only one possibility \\(y = 2\\)\n\nBUT, “impossibility” \\(\\neq\\) impossibility: (a) one criteria may be “all you need” in given setting; (b) can derive more robust measures by “relaxing” confusion-matrix measures"
+  },
+  {
+    "objectID": "w04/slides.html#what-the-fairness-measures-will-feel-like-for-now",
+    "href": "w04/slides.html#what-the-fairness-measures-will-feel-like-for-now",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "What the Fairness Measures Will Feel Like For Now",
+    "text": "What the Fairness Measures Will Feel Like For Now\n\n\n(They will get more robust and will incorporate context soon, I promise!)"
+  },
+  {
+    "objectID": "w04/slides.html#who-remembers-confusion-matrices",
+    "href": "w04/slides.html#who-remembers-confusion-matrices",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "Who Remembers… 🎉Confusion Matrices!!!🎉",
+    "text": "Who Remembers… 🎉Confusion Matrices!!!🎉\n\nTerrifyingly higher stakes than in DSAN 5000, however!\nNow \\(D = 1\\) could literally mean “shoot this person” or “throw this person in jail for life”\n\n\nFrom Mitchell et al. (2021)"
+  },
+  {
+    "objectID": "w04/slides.html#baby-steps-a-real-world-confusion-matrix",
+    "href": "w04/slides.html#baby-steps-a-real-world-confusion-matrix",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "Baby Steps: A Real-World Confusion Matrix",
+    "text": "Baby Steps: A Real-World Confusion Matrix\n\n\n\n\n\n\n\n\n\nLabeled Low-Risk\nLabeled High-Risk\n\n\n\n\nDidn’t Do More Crimes\nTrue Negative\nFalse Positive\n\n\nDid More Crimes\nFalse Negative\nTrue Positive\n\n\n\n\nWhat kinds of causal connections and/or feedback loops might there be between our decision variable (low vs. high risk) and our outcome variable (did vs. didn’t do more crimes)\nWhat types of policy implications might this process have, after it “runs” for several “iterations”?\nWhy might some segments of society, with some shared ethical framework(s), weigh the “costs” of false negatives and false positives differently from other segments of society with different shared ethical framework(s)?\n(Non-rhetorical questions!)"
+  },
+  {
+    "objectID": "w04/slides.html#categories-of-fairness-criteria-1",
+    "href": "w04/slides.html#categories-of-fairness-criteria-1",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "Categories of Fairness Criteria",
+    "text": "Categories of Fairness Criteria\n\nRoughly, approaches to fairness/bias in AI can be categorized as follows:\n\n\nFairness\n\n\n\n\n\n\nContext-Free\n\n\nSingle-Threshold Fairness\nEqual Prediction\nEqual Decision\n\n\n\n\n\n\n\n\n\nContext-Sensitive\n\n\nFairness via Similarity Metric(s)\nCausal Definitions\n\n\n\n\n\n\n[Today] Context-Free Fairness: Easier to grasp from CS/data science perspective; rooted in “language” of Machine Learning (you already know much of it, given DSAN 5000!)\nBut easy-to-grasp notion \\(\\neq\\) “good” notion!\nYour job: push yourself to (a) consider what is getting left out of the context-free definitions, and (b) the loopholes that are thus introduced into them, whereby people/computers can discriminate while remaining “technically fair”"
+  },
+  {
+    "objectID": "w04/slides.html#laws-often-perfectly-technically-fair-1",
+    "href": "w04/slides.html#laws-often-perfectly-technically-fair-1",
+    "title": "Week 4: (Descriptive) Fairness in AI",
+    "section": "Laws: Often Perfectly “Technically Fair”",
+    "text": "Laws: Often Perfectly “Technically Fair”\n\nAh, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!\n\n\n(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)\n\nAnatole France, Le Lys Rouge (France 1894)"
+  },
+  {
+    "objectID": "w04/slides.html#no-fairness-through-unawareness-1",
+    "href": "w04/slides.html#no-fairness-through-unawareness-1",
     "title": "Week 4: (Descriptive) Fairness in AI",
     "section": "(No) Fairness Through Unawareness",
     "text": "(No) Fairness Through Unawareness\n\nHW1: Using tiny sample (\\(N &lt; 10K\\)) of Florida voter registrations… RandomForestClassifier (default settings, no hyperparameter tuning, no cross-validation, no ensembling with other methods) will predict self-reported race with \\(&gt;90\\%\\) accuracy (in balanced sample) from just surname and county of residence\n\nCan reach \\(70\\text{-}75\\%\\) with just surname or just county of residence\n\nAlso in HW1: Facebook ad matching service provides over 1,000 different user attributes for (micro)targeting\n\n\nFrom Datta et al. (2017)"
@@ -3769,8 +3939,8 @@
     "text": "Last One I Promise\n\nPredicting self-reported non-whiteness with 90% accuracy"
   },
   {
-    "objectID": "w04/slides.html#we-can-do-a-bit-better",
-    "href": "w04/slides.html#we-can-do-a-bit-better",
+    "objectID": "w04/slides.html#we-can-do-a-bit-better-1",
+    "href": "w04/slides.html#we-can-do-a-bit-better-1",
     "title": "Week 4: (Descriptive) Fairness in AI",
     "section": "We Can Do (A Bit) Better…",
     "text": "We Can Do (A Bit) Better…\n\nUse random variables to model inferences made by an algorithm (or a human!)\n\\(\\implies\\) fairness by statistically equalizing loan rejections, error rate, etc. between groups\nObvious societal drawback: equality does not ameliorate the effects of past injustices (see: police contact vs. trust-in-government plot from last week)\n\nThis one we saw coming, given “context-free” nature!\n\nLess obvious mathematical drawback: impossibility results (because algebra 😳)\n\nRoughly: can’t satisfy [more than] two statistical fairness criteria at once; similar to how setting \\(\\Pr(X) = p\\) also determines \\(\\Pr(\\text{not }X) = 1 - p\\), or how plugging \\(x = 3\\) into \\(x + y = 5\\) leaves only one possibility \\(y = 2\\)\n\nBUT, “impossibility” \\(\\neq\\) impossibility: (a) one criteria may be “all you need” in given setting; (b) can derive more robust measures by “relaxing” confusion-matrix measures"
@@ -3885,7 +4055,7 @@
     "href": "w04/slides.html#references",
     "title": "Week 4: (Descriptive) Fairness in AI",
     "section": "References",
-    "text": "References\n\n\nBlackstone, William. 1769. Commentaries on the Laws of England, Volume 2: A Facsimile of the First Edition of 1765-1769. University of Chicago Press.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeDeo, Simon. 2016. “Wrong Side of the Tracks: Big Data and Protected Categories.” arXiv. https://doi.org/10.48550/arXiv.1412.4643.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nRousey, Dennis C. 2001. “Friends and Foes of Slavery: Foreigners and Northerners in the Old South.” Journal of Social History 35 (2): 373–96. https://www.jstor.org/stable/3790193.\n\n\nSimons, Josh. 2023. Algorithms for the People: Democracy in the Age of AI. Princeton University Press.\n\n\n\n\n\nDSAN 5450 Week 4: (Descriptive) Fairness in AI"
+    "text": "References\n\n\nBlackstone, William. 1769. Commentaries on the Laws of England, Volume 2: A Facsimile of the First Edition of 1765-1769. University of Chicago Press.\n\n\nDatta, Anupam, Matt Fredrikson, Gihyuk Ko, Piotr Mardziel, and Shayak Sen. 2017. “Proxy Non-Discrimination in Data-Driven Systems.” arXiv. https://doi.org/10.48550/arXiv.1707.08120.\n\n\nDeDeo, Simon. 2016. “Wrong Side of the Tracks: Big Data and Protected Categories.” arXiv. https://doi.org/10.48550/arXiv.1412.4643.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nHobbes, Thomas. 1668. Leviathan: With Selected Variants from the Latin Edition of 1668. Hackett Publishing.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nRawls, John. 1971. A Theory of Justice: Original Edition. Harvard University Press.\n\n\nRousey, Dennis C. 2001. “Friends and Foes of Slavery: Foreigners and Northerners in the Old South.” Journal of Social History 35 (2): 373–96. https://www.jstor.org/stable/3790193.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSimons, Josh. 2023. Algorithms for the People: Democracy in the Age of AI. Princeton University Press.\n\n\n\n\n\nDSAN 5450 Week 4: (Descriptive) Fairness in AI"
   },
   {
     "objectID": "w05/index.html",

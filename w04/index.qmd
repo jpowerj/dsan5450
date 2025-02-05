@@ -20,6 +20,8 @@ format:
     css: "../dsan-globals/jjstyles.css"
     scrollable: true
     slide-number: true
+    link-external-newwindow: true
+    link-external-icon: true
     simplemenu:
       flat: true
       barhtml:
@@ -32,6 +34,8 @@ format:
     css: "../dsan-globals/jjstyles.css"
     output-file: "index.html"
     html-math-method: mathjax
+    link-external-newwindow: true
+    link-external-icon: true
 ---
 
 ::: {.content-visible unless-format="revealjs"}
@@ -42,7 +46,7 @@ format:
 
 :::
 
-# Week 3 Recap {data-stack-name="Recap"}
+# Tumbling into Fairness {data-stack-name="Recap"}
 
 ::: {.hidden}
 
@@ -53,6 +57,160 @@ $$
 :::
 
 > "Repetition is the mother of perfection" - Dwayne Michael "Lil Wayne" Carter, Jr.
+
+
+## So How Should We Make/Choose Conventions? {.title-08}
+
+* @hobbes_leviathan_1668: Only way out of "war of all against all" is to surrender all power to one **sovereign** (the *Leviathan*)
+* @rousseau_social_1762: Social contract
+* *[Big big ~200 year gap here... can you think of why? Hint: French Revolution in 1789]*
+* @rawls_theory_1971: Social contract **behind the "veil of ignorance"**
+  * If we didn't know **where we were going to end up** in society, how would we set it up?
+<!-- * @dworkin_what_1981: Yes, plus also people can **buy insurance** against ending up in a bad place $\rightarrow$ level of "just" redistribution -->
+
+## Rawls' Veil of Ignorance {.crunch-title}
+
+* Probably the most important tool for policy whitepapers!
+* "Justice as fairness" (next week: fairness in AI 😜)
+* We don't know whether we'll be $A$ or $B$ in the intersection game, so we'd choose the **traffic light**!
+* More profoundly: We don't know what **race**, **gender**, **class**, **ethnicity**, **sexuality**, **disability status** we'll have; We don't know whether we'll be **Israeli** or **Palestinian**; we don't know whether we'll own **means of production** or own only our **labor power** (and thus have to sell it on a market to survive)... 🤔
+
+# Nuts and Bolts for Fairness {data-stack-name="Fairness"}
+
+## One Final Reminder {.crunch-title}
+
+* Industry rule #4080: Cannot "prove" $q(x) = \text{``Algorithm }x\text{ is fair''}$! Only $p(x) \implies q(y)$:
+
+$$
+\underbrace{p(x)}_{\substack{\text{Accept ethical} \\ \text{framework }x}} \implies \underbrace{q(y)}_{\substack{\text{Algorithms should} \\ \text{satisfy condition }y}}
+$$
+
+* Before: **possible ethical frameworks** (values for $x$)
+* Now: **possible fairness criteria** (values for $y$)
+
+## Categories of Fairness Criteria {.smaller .crunch-title}
+
+```{=html}
+<style>
+#fairness-box .columns {
+  display: flex !important;
+  height: 100% !important;
+}
+
+#fairness-box .column {
+  /* border: 2px solid black !important; */
+  padding: 14px !important;
+  box-sizing: border-box !important;
+  /* height: 100% !important; */
+}
+</style>
+```
+
+Roughly, approaches to fairness/bias in AI can be categorized as follows:
+
+<div id="fairness-box" style="border: 2px solid black !important; box-sizing: border-box !important;">
+
+<center>
+**Fairness**
+</center>
+
+<!-- start columns -->
+::: {.columns}
+::: {.column width="46%"}
+
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center>
+**Context-Free**
+</center>
+
+* Single-Threshold Fairness
+* Equal Prediction
+* Equal Decision
+
+</div>
+
+:::
+::: {.column width="8%"}
+
+<center>
+<span style="font-size: 180% !important;"><i class='bi bi-repeat'></i>
+</center>
+
+:::
+::: {.column width="46%"}
+
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center style="margin: 0px !important;">
+**Context-Sensitive**
+</center>
+
+* Fairness via Similarity Metric(s)
+* Causal Definitions
+
+</div>
+
+:::
+:::
+
+</div>
+<!-- end quarto box -->
+
+* [Today] **Context-Free** Fairness: Easier to grasp from CS/data science perspective; rooted in "language" of Machine Learning (you already know much of it, given DSAN 5000!)
+* But **easy-to-grasp notion** $\neq$ **"good" notion**!
+* Your job: push yourself to (a) consider what is getting **left out of** the context-free definitions, and (b) the **loopholes** that are thus introduced into them, whereby people/computers can discriminate while remaining "technically fair"
+
+## Laws: Often Perfectly "Technically Fair" {.title-09}
+
+> *Ah, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!*
+
+> (Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)
+
+Anatole France, *Le Lys Rouge* [@france_lys_1894]
+
+# Context-Free Fairness {.smaller .not-title-slide .crunch-title}
+
+![From <a href='https://www.cs.sfu.ca/~anoop/courses/MACM-300-Spring-2006/complexity.pdf' target='_blank'>*Introduction to Formal Languages and Automata*</a>, Simon Fraser University (2006). This figure summarizes the **Chomsky Hierarchy** of Languages, developed by Noam Chomsky, who also has a lot to say about Ethics and Policy!](images/chomsky-hierarchy.jpeg){.no-stretch fig-align="center" width="200"}
+
+## The Brogrammer's Criterion {.crunch-title .crunch-ul}
+
+```python
+df.drop(columns=["race"], inplace=True)
+```
+
+* Racism solved, folks! 🥳🎊🎉 End of the course, have a great rest of your data science career ✌️
+
+![](images/flocka.jpeg){fig-align="center"}
+
+## (No) Fairness Through Unawareness {.smaller .crunch-title .crunch-ul .crunch-figcaption}
+
+* **HW1**: Using tiny sample ($N < 10K$) of Florida voter registrations... <a href='https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html' target='_blank'>RandomForestClassifier</a> (default settings, no hyperparameter tuning, no cross-validation, no ensembling with other methods) will predict self-reported race with $>90\%$ accuracy (in balanced sample) from just **surname** and **county of residence**
+  * Can reach $70\text{-}75\%$ with **just** surname or **just** county of residence
+* End-of-HW1 discussion: **Facebook** ad matching service provides **over 1,000 different user attributes** for **(micro)targeting**
+
+![From @datta_proxy_2017](images/proxy.svg){fig-align="center"}
+
+## We Can Do (A Bit) Better... {.smaller}
+
+* Use **random variables** to model inferences made by an algorithm (or a human!)
+* $\implies$ fairness by statistically **equalizing** loan rejections, error rate, etc. between groups
+* Obvious **societal** drawback: **equality** does not ameliorate the effects of **past injustices** (see: police contact vs. trust-in-government plot from last week)
+  * This one we saw coming, given "context-free" nature!
+* Less obvious **mathematical** drawback: **impossibility results** (because algebra 😳)
+  * Roughly: can't satisfy [more than] two statistical fairness criteria at once; similar to how setting $\Pr(X) = p$ also determines $\Pr(\neg X) = 1 - p$, or how plugging $x = 3$ into $x + y = 5$ leaves only one possibility $y = 2$
+* **BUT**, "impossibility" $\neq$ impossibility: (a) one criteria may be "all you need" in given setting; (b) can derive **more robust** measures by "relaxing" confusion-matrix measures
+
+## What the Fairness Measures Will Feel Like For Now {.smaller .crunch-title .title-10}
+
+![](images/rock_on_rich_brian.jpeg){fig-align="center"}
+
+* (They will get more robust and will **incorporate context** soon, I promise!)
+
+## Who Remembers... 🎉*Confusion Matrices!!!*🎉 {.smaller .crunch-title .title-11}
+
+* Terrifyingly higher stakes than in DSAN 5000, however!
+* Now $D = 1$ could literally mean *"shoot this person"* or *"throw this person in jail for life"*
+
+![From @mitchell_algorithmic_2021](images/mitchell_et_al.svg){fig-align="center"}
 
 ## Baby Steps: A Real-World Confusion Matrix {.title-11 .crunch-title .smaller}
 
@@ -213,6 +371,10 @@ $$
 * **Mathematically** we can always "flip" the mapping from racial labels into $\{0, 1\}$...
 * But this (in a precise, mathematical sense: namely, *isomorphism*) implies that we're treating **racial categorization** as the same type of phenomenon as **driving on left or right side of road** (see: prev slides on why we make the descriptive vs. normative distinction)
 * (See also: Sweden's <a href='https://en.wikipedia.org/wiki/Dagen_H' target='_blank'>Dagen H</a>!)
+
+# Lab Time! {data-stack-name="Lab"}
+
+* [Lab 1: Coming face to face with Marlon Brando](https://colab.research.google.com/drive/1Gucih9aILHt7r7Qklv6xM-EB7Rkoqj6C?usp=sharing)
 
 ## "Fairness" Through Equalized *Positive* Rates (EPR) {.crunch-ul .title-07 .math-95 .crunch-math .crunch-blockquote}
 

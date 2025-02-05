@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -318,7 +352,7 @@ window.Quarto = {
     </ul>
     </div>
 <div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
-<p><em>Updated 2025-02-05, 09:34:49 AM</em></p>
+<p><em>Updated 2025-02-05, 02:52:06 PM</em></p>
 </div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -327,20 +361,39 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-3-recap" id="toc-week-3-recap" class="nav-link active" data-scroll-target="#week-3-recap">Week 3 Recap</a>
+  <li><a href="#tumbling-into-fairness" id="toc-tumbling-into-fairness" class="nav-link active" data-scroll-target="#tumbling-into-fairness">Tumbling into Fairness</a>
   <ul class="collapse">
-  <li><a href="#baby-steps-a-real-world-confusion-matrix" id="toc-baby-steps-a-real-world-confusion-matrix" class="nav-link" data-scroll-target="#baby-steps-a-real-world-confusion-matrix">Baby Steps: A Real-World Confusion Matrix</a></li>
+  <li><a href="#so-how-should-we-makechoose-conventions" id="toc-so-how-should-we-makechoose-conventions" class="nav-link" data-scroll-target="#so-how-should-we-makechoose-conventions">So How Should We Make/Choose Conventions?</a></li>
+  <li><a href="#rawls-veil-of-ignorance" id="toc-rawls-veil-of-ignorance" class="nav-link" data-scroll-target="#rawls-veil-of-ignorance">Rawls’ Veil of Ignorance</a></li>
+  </ul></li>
+  <li><a href="#nuts-and-bolts-for-fairness" id="toc-nuts-and-bolts-for-fairness" class="nav-link" data-scroll-target="#nuts-and-bolts-for-fairness">Nuts and Bolts for Fairness</a>
+  <ul class="collapse">
+  <li><a href="#one-final-reminder" id="toc-one-final-reminder" class="nav-link" data-scroll-target="#one-final-reminder">One Final Reminder</a></li>
   <li><a href="#categories-of-fairness-criteria" id="toc-categories-of-fairness-criteria" class="nav-link" data-scroll-target="#categories-of-fairness-criteria">Categories of Fairness Criteria</a></li>
   <li><a href="#laws-often-perfectly-technically-fair" id="toc-laws-often-perfectly-technically-fair" class="nav-link" data-scroll-target="#laws-often-perfectly-technically-fair">Laws: Often Perfectly “Technically Fair”</a></li>
+  </ul></li>
+  <li><a href="#context-free-fairness" id="toc-context-free-fairness" class="nav-link" data-scroll-target="#context-free-fairness">Context-Free Fairness</a>
+  <ul class="collapse">
+  <li><a href="#the-brogrammers-criterion" id="toc-the-brogrammers-criterion" class="nav-link" data-scroll-target="#the-brogrammers-criterion">The Brogrammer’s Criterion</a></li>
   <li><a href="#no-fairness-through-unawareness" id="toc-no-fairness-through-unawareness" class="nav-link" data-scroll-target="#no-fairness-through-unawareness">(No) Fairness Through Unawareness</a></li>
+  <li><a href="#we-can-do-a-bit-better" id="toc-we-can-do-a-bit-better" class="nav-link" data-scroll-target="#we-can-do-a-bit-better">We Can Do (A Bit) Better…</a></li>
+  <li><a href="#what-the-fairness-measures-will-feel-like-for-now" id="toc-what-the-fairness-measures-will-feel-like-for-now" class="nav-link" data-scroll-target="#what-the-fairness-measures-will-feel-like-for-now">What the Fairness Measures Will Feel Like For Now</a></li>
+  <li><a href="#who-remembers-confusion-matrices" id="toc-who-remembers-confusion-matrices" class="nav-link" data-scroll-target="#who-remembers-confusion-matrices">Who Remembers… 🎉<em>Confusion Matrices!!!</em>🎉</a></li>
+  <li><a href="#baby-steps-a-real-world-confusion-matrix" id="toc-baby-steps-a-real-world-confusion-matrix" class="nav-link" data-scroll-target="#baby-steps-a-real-world-confusion-matrix">Baby Steps: A Real-World Confusion Matrix</a></li>
+  <li><a href="#categories-of-fairness-criteria-1" id="toc-categories-of-fairness-criteria-1" class="nav-link" data-scroll-target="#categories-of-fairness-criteria-1">Categories of Fairness Criteria</a></li>
+  <li><a href="#laws-often-perfectly-technically-fair-1" id="toc-laws-often-perfectly-technically-fair-1" class="nav-link" data-scroll-target="#laws-often-perfectly-technically-fair-1">Laws: Often Perfectly “Technically Fair”</a></li>
+  <li><a href="#no-fairness-through-unawareness-1" id="toc-no-fairness-through-unawareness-1" class="nav-link" data-scroll-target="#no-fairness-through-unawareness-1">(No) Fairness Through Unawareness</a></li>
   <li><a href="#last-one-i-promise" id="toc-last-one-i-promise" class="nav-link" data-scroll-target="#last-one-i-promise">Last One I Promise</a></li>
   <li><a href="#last-one-i-promise-1" id="toc-last-one-i-promise-1" class="nav-link" data-scroll-target="#last-one-i-promise-1">Last One I Promise</a></li>
-  <li><a href="#we-can-do-a-bit-better" id="toc-we-can-do-a-bit-better" class="nav-link" data-scroll-target="#we-can-do-a-bit-better">We Can Do (A Bit) Better…</a></li>
+  <li><a href="#we-can-do-a-bit-better-1" id="toc-we-can-do-a-bit-better-1" class="nav-link" data-scroll-target="#we-can-do-a-bit-better-1">We Can Do (A Bit) Better…</a></li>
   </ul></li>
   <li><a href="#definitions-and-impossibility-results" id="toc-definitions-and-impossibility-results" class="nav-link" data-scroll-target="#definitions-and-impossibility-results">Definitions and (Impossibility) Results</a>
   <ul class="collapse">
   <li><a href="#protectedsensitive-attributes" id="toc-protectedsensitive-attributes" class="nav-link" data-scroll-target="#protectedsensitive-attributes">Protected/Sensitive Attributes</a></li>
   <li><a href="#where-descriptive-and-normative-become-intertwined" id="toc-where-descriptive-and-normative-become-intertwined" class="nav-link" data-scroll-target="#where-descriptive-and-normative-become-intertwined">Where Descriptive and Normative Become Intertwined</a></li>
+  </ul></li>
+  <li><a href="#lab-time" id="toc-lab-time" class="nav-link" data-scroll-target="#lab-time">Lab Time!</a>
+  <ul class="collapse">
   <li><a href="#fairness-through-equalized-positive-rates-epr" id="toc-fairness-through-equalized-positive-rates-epr" class="nav-link" data-scroll-target="#fairness-through-equalized-positive-rates-epr">“Fairness” Through Equalized <em>Positive</em> Rates (EPR)</a></li>
   <li><a href="#achieving-equalized-positive-rates" id="toc-achieving-equalized-positive-rates" class="nav-link" data-scroll-target="#achieving-equalized-positive-rates">Achieving Equalized Positive Rates</a></li>
   <li><a href="#fairness-through-equalized-error-rates" id="toc-fairness-through-equalized-error-rates" class="nav-link" data-scroll-target="#fairness-through-equalized-error-rates">“Fairness” Through Equalized <em>Error</em> Rates</a></li>
@@ -407,8 +460,8 @@ window.Quarto = {
 <center>
 <a class="h2" href="./slides.html" target="_blank">Open slides in new window →</a>
 </center>
-<section id="week-3-recap" class="level1" data-stack-name="Recap">
-<h1 data-stack-name="Recap">Week 3 Recap</h1>
+<section id="tumbling-into-fairness" class="level1" data-stack-name="Recap">
+<h1 data-stack-name="Recap">Tumbling into Fairness</h1>
 <div class="hidden">
 <p><span class="math display">\[
 \newcommand{\nimplies}{\;\not\!\!\!\!\implies}
@@ -417,39 +470,41 @@ window.Quarto = {
 <blockquote class="blockquote">
 <p>“Repetition is the mother of perfection” - Dwayne Michael “Lil Wayne” Carter, Jr.</p>
 </blockquote>
-<section id="baby-steps-a-real-world-confusion-matrix" class="level2 title-11 crunch-title smaller">
-<h2 class="title-11 crunch-title smaller anchored" data-anchor-id="baby-steps-a-real-world-confusion-matrix">Baby Steps: A Real-World Confusion Matrix</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 27%">
-<col style="width: 36%">
-<col style="width: 36%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Labeled Low-Risk</th>
-<th>Labeled High-Risk</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Didn’t Do More Crimes</strong></td>
-<td><em>True Negative</em></td>
-<td><em>False Positive</em></td>
-</tr>
-<tr class="even">
-<td><strong>Did More Crimes</strong></td>
-<td><em>False Negative</em></td>
-<td><em>True Positive</em></td>
-</tr>
-</tbody>
-</table>
+<section id="so-how-should-we-makechoose-conventions" class="level2 title-08">
+<h2 class="title-08 anchored" data-anchor-id="so-how-should-we-makechoose-conventions">So How Should We Make/Choose Conventions?</h2>
 <ul>
-<li>What kinds of <strong>causal connections</strong> and/or <strong>feedback loops</strong> might there be between our <strong>decision variable</strong> (low vs.&nbsp;high risk) and our <strong>outcome variable</strong> (did vs.&nbsp;didn’t do more crimes)</li>
-<li>What types of <strong>policy implications</strong> might this process have, after it “runs” for several “iterations”?</li>
-<li>Why might some segments of society, with some shared ethical framework(s), <strong>weigh</strong> the <strong>“costs”</strong> of false negatives and false positives <strong>differently</strong> from other segments of society with different shared ethical framework(s)?</li>
-<li>(Non-rhetorical questions!)</li>
+<li><span class="citation" data-cites="hobbes_leviathan_1668">Hobbes (<a href="#ref-hobbes_leviathan_1668" role="doc-biblioref">1668</a>)</span>: Only way out of “war of all against all” is to surrender all power to one <strong>sovereign</strong> (the <em>Leviathan</em>)</li>
+<li><span class="citation" data-cites="rousseau_social_1762">Rousseau (<a href="#ref-rousseau_social_1762" role="doc-biblioref">1762</a>)</span>: Social contract</li>
+<li><em>[Big big ~200 year gap here… can you think of why? Hint: French Revolution in 1789]</em></li>
+<li><span class="citation" data-cites="rawls_theory_1971">Rawls (<a href="#ref-rawls_theory_1971" role="doc-biblioref">1971</a>)</span>: Social contract <strong>behind the “veil of ignorance”</strong>
+<ul>
+<li>If we didn’t know <strong>where we were going to end up</strong> in society, how would we set it up? <!-- * @dworkin_what_1981: Yes, plus also people can **buy insurance** against ending up in a bad place $\rightarrow$ level of "just" redistribution --></li>
+</ul></li>
+</ul>
+</section>
+<section id="rawls-veil-of-ignorance" class="level2 crunch-title">
+<h2 class="crunch-title anchored" data-anchor-id="rawls-veil-of-ignorance">Rawls’ Veil of Ignorance</h2>
+<ul>
+<li>Probably the most important tool for policy whitepapers!</li>
+<li>“Justice as fairness” (next week: fairness in AI 😜)</li>
+<li>We don’t know whether we’ll be <span class="math inline">\(A\)</span> or <span class="math inline">\(B\)</span> in the intersection game, so we’d choose the <strong>traffic light</strong>!</li>
+<li>More profoundly: We don’t know what <strong>race</strong>, <strong>gender</strong>, <strong>class</strong>, <strong>ethnicity</strong>, <strong>sexuality</strong>, <strong>disability status</strong> we’ll have; We don’t know whether we’ll be <strong>Israeli</strong> or <strong>Palestinian</strong>; we don’t know whether we’ll own <strong>means of production</strong> or own only our <strong>labor power</strong> (and thus have to sell it on a market to survive)… 🤔</li>
+</ul>
+</section>
+</section>
+<section id="nuts-and-bolts-for-fairness" class="level1" data-stack-name="Fairness">
+<h1 data-stack-name="Fairness">Nuts and Bolts for Fairness</h1>
+<section id="one-final-reminder" class="level2 crunch-title">
+<h2 class="crunch-title anchored" data-anchor-id="one-final-reminder">One Final Reminder</h2>
+<ul>
+<li>Industry rule #4080: Cannot “prove” <span class="math inline">\(q(x) = \text{``Algorithm }x\text{ is fair''}\)</span>! Only <span class="math inline">\(p(x) \implies q(y)\)</span>:</li>
+</ul>
+<p><span class="math display">\[
+\underbrace{p(x)}_{\substack{\text{Accept ethical} \\ \text{framework }x}} \implies \underbrace{q(y)}_{\substack{\text{Algorithms should} \\ \text{satisfy condition }y}}
+\]</span></p>
+<ul>
+<li>Before: <strong>possible ethical frameworks</strong> (values for <span class="math inline">\(x\)</span>)</li>
+<li>Now: <strong>possible fairness criteria</strong> (values for <span class="math inline">\(y\)</span>)</li>
 </ul>
 </section>
 <section id="categories-of-fairness-criteria" class="level2 smaller crunch-title">
@@ -519,8 +574,187 @@ window.Quarto = {
 </blockquote>
 <p>Anatole France, <em>Le Lys Rouge</em> <span class="citation" data-cites="france_lys_1894">(<a href="#ref-france_lys_1894" role="doc-biblioref">France 1894</a>)</span></p>
 </section>
+</section>
+<section id="context-free-fairness" class="level1 smaller not-title-slide crunch-title">
+<h1 class="smaller not-title-slide crunch-title">Context-Free Fairness</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/chomsky-hierarchy.jpeg" class="no-stretch img-fluid figure-img" width="200"></p>
+<figcaption>From <a href="https://www.cs.sfu.ca/~anoop/courses/MACM-300-Spring-2006/complexity.pdf" target="_blank"><em>Introduction to Formal Languages and Automata</em></a>, Simon Fraser University (2006). This figure summarizes the <strong>Chomsky Hierarchy</strong> of Languages, developed by Noam Chomsky, who also has a lot to say about Ethics and Policy!</figcaption>
+</figure>
+</div>
+<section id="the-brogrammers-criterion" class="level2 crunch-title crunch-ul">
+<h2 class="crunch-title crunch-ul anchored" data-anchor-id="the-brogrammers-criterion">The Brogrammer’s Criterion</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df.drop(columns<span class="op">=</span>[<span class="st">"race"</span>], inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Racism solved, folks! 🥳🎊🎉 End of the course, have a great rest of your data science career ✌️</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/flocka.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
 <section id="no-fairness-through-unawareness" class="level2 smaller crunch-title crunch-ul crunch-figcaption">
 <h2 class="smaller crunch-title crunch-ul crunch-figcaption anchored" data-anchor-id="no-fairness-through-unawareness">(No) Fairness Through Unawareness</h2>
+<ul>
+<li><strong>HW1</strong>: Using tiny sample (<span class="math inline">\(N &lt; 10K\)</span>) of Florida voter registrations… <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html" target="_blank">RandomForestClassifier</a> (default settings, no hyperparameter tuning, no cross-validation, no ensembling with other methods) will predict self-reported race with <span class="math inline">\(&gt;90\%\)</span> accuracy (in balanced sample) from just <strong>surname</strong> and <strong>county of residence</strong>
+<ul>
+<li>Can reach <span class="math inline">\(70\text{-}75\%\)</span> with <strong>just</strong> surname or <strong>just</strong> county of residence</li>
+</ul></li>
+<li>End-of-HW1 discussion: <strong>Facebook</strong> ad matching service provides <strong>over 1,000 different user attributes</strong> for <strong>(micro)targeting</strong></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/proxy.svg" class="img-fluid figure-img"></p>
+<figcaption>From <span class="citation" data-cites="datta_proxy_2017">Datta et al. (<a href="#ref-datta_proxy_2017" role="doc-biblioref">2017</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="we-can-do-a-bit-better" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="we-can-do-a-bit-better">We Can Do (A Bit) Better…</h2>
+<ul>
+<li>Use <strong>random variables</strong> to model inferences made by an algorithm (or a human!)</li>
+<li><span class="math inline">\(\implies\)</span> fairness by statistically <strong>equalizing</strong> loan rejections, error rate, etc. between groups</li>
+<li>Obvious <strong>societal</strong> drawback: <strong>equality</strong> does not ameliorate the effects of <strong>past injustices</strong> (see: police contact vs.&nbsp;trust-in-government plot from last week)
+<ul>
+<li>This one we saw coming, given “context-free” nature!</li>
+</ul></li>
+<li>Less obvious <strong>mathematical</strong> drawback: <strong>impossibility results</strong> (because algebra 😳)
+<ul>
+<li>Roughly: can’t satisfy [more than] two statistical fairness criteria at once; similar to how setting <span class="math inline">\(\Pr(X) = p\)</span> also determines <span class="math inline">\(\Pr(\neg X) = 1 - p\)</span>, or how plugging <span class="math inline">\(x = 3\)</span> into <span class="math inline">\(x + y = 5\)</span> leaves only one possibility <span class="math inline">\(y = 2\)</span></li>
+</ul></li>
+<li><strong>BUT</strong>, “impossibility” <span class="math inline">\(\neq\)</span> impossibility: (a) one criteria may be “all you need” in given setting; (b) can derive <strong>more robust</strong> measures by “relaxing” confusion-matrix measures</li>
+</ul>
+</section>
+<section id="what-the-fairness-measures-will-feel-like-for-now" class="level2 smaller crunch-title title-10">
+<h2 class="smaller crunch-title title-10 anchored" data-anchor-id="what-the-fairness-measures-will-feel-like-for-now">What the Fairness Measures Will Feel Like For Now</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rock_on_rich_brian.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<ul>
+<li>(They will get more robust and will <strong>incorporate context</strong> soon, I promise!)</li>
+</ul>
+</section>
+<section id="who-remembers-confusion-matrices" class="level2 smaller crunch-title title-11">
+<h2 class="smaller crunch-title title-11 anchored" data-anchor-id="who-remembers-confusion-matrices">Who Remembers… 🎉<em>Confusion Matrices!!!</em>🎉</h2>
+<ul>
+<li>Terrifyingly higher stakes than in DSAN 5000, however!</li>
+<li>Now <span class="math inline">\(D = 1\)</span> could literally mean <em>“shoot this person”</em> or <em>“throw this person in jail for life”</em></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mitchell_et_al.svg" class="img-fluid figure-img"></p>
+<figcaption>From <span class="citation" data-cites="mitchell_algorithmic_2021">Mitchell et al. (<a href="#ref-mitchell_algorithmic_2021" role="doc-biblioref">2021</a>)</span></figcaption>
+</figure>
+</div>
+</section>
+<section id="baby-steps-a-real-world-confusion-matrix" class="level2 title-11 crunch-title smaller">
+<h2 class="title-11 crunch-title smaller anchored" data-anchor-id="baby-steps-a-real-world-confusion-matrix">Baby Steps: A Real-World Confusion Matrix</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 36%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Labeled Low-Risk</th>
+<th>Labeled High-Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Didn’t Do More Crimes</strong></td>
+<td><em>True Negative</em></td>
+<td><em>False Positive</em></td>
+</tr>
+<tr class="even">
+<td><strong>Did More Crimes</strong></td>
+<td><em>False Negative</em></td>
+<td><em>True Positive</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>What kinds of <strong>causal connections</strong> and/or <strong>feedback loops</strong> might there be between our <strong>decision variable</strong> (low vs.&nbsp;high risk) and our <strong>outcome variable</strong> (did vs.&nbsp;didn’t do more crimes)</li>
+<li>What types of <strong>policy implications</strong> might this process have, after it “runs” for several “iterations”?</li>
+<li>Why might some segments of society, with some shared ethical framework(s), <strong>weigh</strong> the <strong>“costs”</strong> of false negatives and false positives <strong>differently</strong> from other segments of society with different shared ethical framework(s)?</li>
+<li>(Non-rhetorical questions!)</li>
+</ul>
+</section>
+<section id="categories-of-fairness-criteria-1" class="level2 smaller crunch-title">
+<h2 class="smaller crunch-title anchored" data-anchor-id="categories-of-fairness-criteria-1">Categories of Fairness Criteria</h2>
+<style>
+#fairness-box .columns {
+  display: flex !important;
+  height: 100% !important;
+}
+
+#fairness-box .column {
+  /* border: 2px solid black !important; */
+  padding: 14px !important;
+  box-sizing: border-box !important;
+  /* height: 100% !important; */
+}
+</style>
+<p>Roughly, approaches to fairness/bias in AI can be categorized as follows:</p>
+<div id="fairness-box" style="border: 2px solid black !important; box-sizing: border-box !important;">
+<center>
+<strong>Fairness</strong>
+</center>
+<!-- start columns -->
+<div class="columns">
+<div class="column" style="width:46%;">
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center>
+<strong>Context-Free</strong>
+</center>
+<ul>
+<li>Single-Threshold Fairness</li>
+<li>Equal Prediction</li>
+<li>Equal Decision</li>
+</ul>
+</div>
+</div><div class="column" style="width:8%;">
+<center>
+<span style="font-size: 180% !important;"><i class="bi bi-repeat"></i>
+</span></center>
+</div><div class="column" style="width:46%;">
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center style="margin: 0px !important;">
+<strong>Context-Sensitive</strong>
+</center>
+<ul>
+<li>Fairness via Similarity Metric(s)</li>
+<li>Causal Definitions</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- end quarto box -->
+<ul>
+<li>[Today] <strong>Context-Free</strong> Fairness: Easier to grasp from CS/data science perspective; rooted in “language” of Machine Learning (you already know much of it, given DSAN 5000!)</li>
+<li>But <strong>easy-to-grasp notion</strong> <span class="math inline">\(\neq\)</span> <strong>“good” notion</strong>!</li>
+<li>Your job: push yourself to (a) consider what is getting <strong>left out of</strong> the context-free definitions, and (b) the <strong>loopholes</strong> that are thus introduced into them, whereby people/computers can discriminate while remaining “technically fair”</li>
+</ul>
+</section>
+<section id="laws-often-perfectly-technically-fair-1" class="level2 title-09">
+<h2 class="title-09 anchored" data-anchor-id="laws-often-perfectly-technically-fair-1">Laws: Often Perfectly “Technically Fair”</h2>
+<blockquote class="blockquote">
+<p><em>Ah, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!</em></p>
+</blockquote>
+<blockquote class="blockquote">
+<p>(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)</p>
+</blockquote>
+<p>Anatole France, <em>Le Lys Rouge</em> <span class="citation" data-cites="france_lys_1894">(<a href="#ref-france_lys_1894" role="doc-biblioref">France 1894</a>)</span></p>
+</section>
+<section id="no-fairness-through-unawareness-1" class="level2 smaller crunch-title crunch-ul crunch-figcaption">
+<h2 class="smaller crunch-title crunch-ul crunch-figcaption anchored" data-anchor-id="no-fairness-through-unawareness-1">(No) Fairness Through Unawareness</h2>
 <ul>
 <li><strong>HW1</strong>: Using tiny sample (<span class="math inline">\(N &lt; 10K\)</span>) of Florida voter registrations… <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html" target="_blank">RandomForestClassifier</a> (default settings, no hyperparameter tuning, no cross-validation, no ensembling with other methods) will predict self-reported race with <span class="math inline">\(&gt;90\%\)</span> accuracy (in balanced sample) from just <strong>surname</strong> and <strong>county of residence</strong>
 <ul>
@@ -553,8 +787,8 @@ window.Quarto = {
 </figure>
 </div>
 </section>
-<section id="we-can-do-a-bit-better" class="level2 smaller">
-<h2 class="smaller anchored" data-anchor-id="we-can-do-a-bit-better">We Can Do (A Bit) Better…</h2>
+<section id="we-can-do-a-bit-better-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="we-can-do-a-bit-better-1">We Can Do (A Bit) Better…</h2>
 <ul>
 <li>Use <strong>random variables</strong> to model inferences made by an algorithm (or a human!)</li>
 <li><span class="math inline">\(\implies\)</span> fairness by statistically <strong>equalizing</strong> loan rejections, error rate, etc. between groups</li>
@@ -613,6 +847,12 @@ A_i = \begin{cases}
 <li>(See also: Sweden’s <a href="https://en.wikipedia.org/wiki/Dagen_H" target="_blank">Dagen H</a>!)</li>
 </ul>
 </section>
+</section>
+<section id="lab-time" class="level1" data-stack-name="Lab">
+<h1 data-stack-name="Lab">Lab Time!</h1>
+<ul>
+<li><a href="https://colab.research.google.com/drive/1Gucih9aILHt7r7Qklv6xM-EB7Rkoqj6C?usp=sharing">Lab 1: Coming face to face with Marlon Brando</a></li>
+</ul>
 <section id="fairness-through-equalized-positive-rates-epr" class="level2 crunch-ul title-07 math-95 crunch-math crunch-blockquote">
 <h2 class="crunch-ul title-07 math-95 crunch-math crunch-blockquote anchored" data-anchor-id="fairness-through-equalized-positive-rates-epr">“Fairness” Through Equalized <em>Positive</em> Rates (EPR)</h2>
 <div style="height: 8px !important;">
@@ -694,7 +934,7 @@ A_i = \begin{cases}
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout="[-70,30]" data-layout-align="right">
+<div class="quarto-layout-panel" data-layout-align="right" data-layout="[-70,30]">
 <div class="quarto-layout-row">
 <div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 70.0%;justify-content: flex-end;">
 <p>&nbsp;</p>
@@ -877,8 +1117,20 @@ DeDeo, Simon. 2016. <span>“Wrong Side of the Tracks: <span>Big Data</span> and
 <div id="ref-france_lys_1894" class="csl-entry" role="listitem">
 France, Anatole. 1894. <em>Le <span>Lys Rouge</span> (<span>The Red Lily</span>)</em>. G. Wells.
 </div>
+<div id="ref-hobbes_leviathan_1668" class="csl-entry" role="listitem">
+Hobbes, Thomas. 1668. <em>Leviathan: <span>With</span> Selected Variants from the <span>Latin</span> Edition of 1668</em>. Hackett Publishing.
+</div>
+<div id="ref-mitchell_algorithmic_2021" class="csl-entry" role="listitem">
+Mitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. <span>“Algorithmic <span>Fairness</span>: <span>Choices</span>, <span>Assumptions</span>, and <span>Definitions</span>.”</span> <em>Annual Review of Statistics and Its Application</em> 8 (1): 141–63. <a href="https://doi.org/10.1146/annurev-statistics-042720-125902">https://doi.org/10.1146/annurev-statistics-042720-125902</a>.
+</div>
+<div id="ref-rawls_theory_1971" class="csl-entry" role="listitem">
+Rawls, John. 1971. <em>A <span>Theory</span> of <span>Justice</span>: <span>Original Edition</span></em>. Harvard University Press.
+</div>
 <div id="ref-rousey_friends_2001" class="csl-entry" role="listitem">
 Rousey, Dennis C. 2001. <span>“Friends and <span>Foes</span> of <span>Slavery</span>: <span>Foreigners</span> and <span>Northerners</span> in the <span>Old South</span>.”</span> <em>Journal of Social History</em> 35 (2): 373–96. <a href="https://www.jstor.org/stable/3790193">https://www.jstor.org/stable/3790193</a>.
+</div>
+<div id="ref-rousseau_social_1762" class="csl-entry" role="listitem">
+Rousseau, Jean-Jacques. 1762. <em>The <span>Social Contract</span></em>. Geneva: J. M. Dent.
 </div>
 <div id="ref-simons_algorithms_2023" class="csl-entry" role="listitem">
 Simons, Josh. 2023. <em>Algorithms for the <span>People</span>: <span>Democracy</span> in the <span>Age</span> of <span>AI</span></em>. Princeton University Press.
