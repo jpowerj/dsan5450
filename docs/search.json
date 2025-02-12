@@ -4263,7 +4263,17 @@
     "href": "w05/index.html#roemers-algorithm",
     "title": "Week 5: Context-Sensitive Fairness",
     "section": "Roemer’s Algorithm",
-    "text": "Roemer’s Algorithm\n\nRoughly, the Equality of Opportunity algorithm boils down to:\nInput 1 (!): Attributes \\(X_{\\text{advantage}}\\) that a society (real or hypothetical) considers normatively relevant for an outcome, but that people are not individually responsible for (e.g., race or nationality via birth lottery)\nInput 2: Attributes \\(X_{\\text{merit}}\\) that a society considers people individually responsible for (e.g., effort, sacrificing short-term pleasure for longer-term benefits, etc.)\n: Set of individuals in society \\(S\\) is partitioned into subsets \\(S_i\\), where \\(i\\) is some combination of particular values for the attributes in \\(X_{\\text{advantage}}\\)\n: Individuals’ context-sensitive scores are computed relative to their group \\(S_i\\), as \\(z\\)-score of their \\(X_{\\text{merit}}\\) value relative to distribution of \\(X_{\\text{merit}}\\) values across \\(S_i\\)\nOutcome: Now that we have incorporated social context, by converting the original context-free units (e.g., numeric SAT score) into context-sensitive units (\\(z\\)-score of numeric SAT score within distribution of comparable individuals), we can compare people across groups on the basis of context-sensitive scores!",
+    "text": "Roemer’s Algorithm\n\nEquality of Opportunity algorithm boils down to (Input 0 = data on individuals \\(X_i\\)):\nInput 1 (!): Attributes \\(J_{\\text{advantage}} \\subseteq X_i\\) that a society (real or hypothetical) considers normatively relevant for an outcome, but that people are not individually responsible for (e.g., race or nationality via birth lottery)\nInput 2: Attributes \\(J_{\\text{merit}} \\subseteq X_i\\) that a society considers people individually responsible for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)\n: Set of individuals in society \\(S\\) is partitioned into subsets \\(S_i\\), where \\(i\\) is some combination of particular values for the attributes in \\(X_{\\text{advantage}}\\)\n: Individuals’ context-sensitive scores are computed relative to their group \\(S_i\\), as \\(z\\)-score of their \\(X_{\\text{merit}}\\) value relative to distribution of \\(X_{\\text{merit}}\\) values across \\(S_i\\)\nOutcome: Now that we have incorporated social context, by converting the original context-free units (e.g., numeric SAT score) into context-sensitive units (\\(z\\)-score of numeric SAT score within distribution of comparable individuals), we can compare people across groups on the basis of context-sensitive scores!",
+    "crumbs": [
+      "Week 5: {{< var w05.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w05/index.html#an-overly-simplistic-example-more-on-hw2",
+    "href": "w05/index.html#an-overly-simplistic-example-more-on-hw2",
+    "title": "Week 5: Context-Sensitive Fairness",
+    "section": "An Overly-Simplistic Example (More on HW2!)",
+    "text": "An Overly-Simplistic Example (More on HW2!)\n\n\\(\\mathbf{x}_i = (x_{i,1}, x_{i,2}, x_{i,3}) = (\\texttt{wealth}_i, \\texttt{study\\_hrs}_i, \\texttt{SAT}_i)\\)\n\\(J_{\\text{advantage}} = (1) = (\\texttt{wealth})\\)\n\\(J_{\\text{merit}} = (2) = (\\texttt{study\\_hrs})\\)",
     "crumbs": [
       "Week 5: {{< var w05.date-md >}}"
     ]
@@ -4542,7 +4552,14 @@
     "href": "w05/slides.html#roemers-algorithm",
     "title": "Week 5: Context-Sensitive Fairness",
     "section": "Roemer’s Algorithm",
-    "text": "Roemer’s Algorithm\n\nRoughly, the Equality of Opportunity algorithm boils down to:\nInput 1 (!): Attributes \\(X_{\\text{advantage}}\\) that a society (real or hypothetical) considers normatively relevant for an outcome, but that people are not individually responsible for (e.g., race or nationality via birth lottery)\nInput 2: Attributes \\(X_{\\text{merit}}\\) that a society considers people individually responsible for (e.g., effort, sacrificing short-term pleasure for longer-term benefits, etc.)\n: Set of individuals in society \\(S\\) is partitioned into subsets \\(S_i\\), where \\(i\\) is some combination of particular values for the attributes in \\(X_{\\text{advantage}}\\)\n: Individuals’ context-sensitive scores are computed relative to their group \\(S_i\\), as \\(z\\)-score of their \\(X_{\\text{merit}}\\) value relative to distribution of \\(X_{\\text{merit}}\\) values across \\(S_i\\)\nOutcome: Now that we have incorporated social context, by converting the original context-free units (e.g., numeric SAT score) into context-sensitive units (\\(z\\)-score of numeric SAT score within distribution of comparable individuals), we can compare people across groups on the basis of context-sensitive scores!"
+    "text": "Roemer’s Algorithm\n\nEquality of Opportunity algorithm boils down to (Input 0 = data on individuals \\(X_i\\)):\nInput 1 (!): Attributes \\(J_{\\text{advantage}} \\subseteq X_i\\) that a society (real or hypothetical) considers normatively relevant for an outcome, but that people are not individually responsible for (e.g., race or nationality via birth lottery)\nInput 2: Attributes \\(J_{\\text{merit}} \\subseteq X_i\\) that a society considers people individually responsible for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)\n: Set of individuals in society \\(S\\) is partitioned into subsets \\(S_i\\), where \\(i\\) is some combination of particular values for the attributes in \\(X_{\\text{advantage}}\\)\n: Individuals’ context-sensitive scores are computed relative to their group \\(S_i\\), as \\(z\\)-score of their \\(X_{\\text{merit}}\\) value relative to distribution of \\(X_{\\text{merit}}\\) values across \\(S_i\\)\nOutcome: Now that we have incorporated social context, by converting the original context-free units (e.g., numeric SAT score) into context-sensitive units (\\(z\\)-score of numeric SAT score within distribution of comparable individuals), we can compare people across groups on the basis of context-sensitive scores!"
+  },
+  {
+    "objectID": "w05/slides.html#an-overly-simplistic-example-more-on-hw2",
+    "href": "w05/slides.html#an-overly-simplistic-example-more-on-hw2",
+    "title": "Week 5: Context-Sensitive Fairness",
+    "section": "An Overly-Simplistic Example (More on HW2!)",
+    "text": "An Overly-Simplistic Example (More on HW2!)\n\n\\(\\mathbf{x}_i = (x_{i,1}, x_{i,2}, x_{i,3}) = (\\texttt{wealth}_i, \\texttt{study\\_hrs}_i, \\texttt{SAT}_i)\\)\n\\(J_{\\text{advantage}} = (1) = (\\texttt{wealth})\\)\n\\(J_{\\text{merit}} = (2) = (\\texttt{study\\_hrs})\\)"
   },
   {
     "objectID": "w05/slides.html#the-state-of-the-art",
@@ -5193,7 +5210,7 @@
     "href": "w06/index.html#the-result-64-steps",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "The Result: 64 Steps",
-    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))",
+    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).",
     "crumbs": [
       "Week 6: {{< var w06.date-md >}}"
     ]

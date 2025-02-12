@@ -124,7 +124,7 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="../sidebar.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css"><script src="../sidebar.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -351,7 +351,7 @@ window.Quarto = {
     </ul>
     </div>
 <div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
-<p><em>Updated 2025-02-12, 01:46:08 PM</em></p>
+<p><em>Updated 2025-02-12, 02:33:03 PM</em></p>
 </div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -390,6 +390,7 @@ window.Quarto = {
   <li><a href="#the-importance-of-not-excluding-race" id="toc-the-importance-of-not-excluding-race" class="nav-link" data-scroll-target="#the-importance-of-not-excluding-race">The Importance of <em>Not</em> Excluding Race!</a></li>
   <li><a href="#equality-of-opportunity" id="toc-equality-of-opportunity" class="nav-link" data-scroll-target="#equality-of-opportunity">Equality of Opportunity</a></li>
   <li><a href="#roemers-algorithm" id="toc-roemers-algorithm" class="nav-link" data-scroll-target="#roemers-algorithm">Roemer’s Algorithm</a></li>
+  <li><a href="#an-overly-simplistic-example-more-on-hw2" id="toc-an-overly-simplistic-example-more-on-hw2" class="nav-link" data-scroll-target="#an-overly-simplistic-example-more-on-hw2">An Overly-Simplistic Example (More on HW2!)</a></li>
   </ul></li>
   <li><a href="#causal-fairness" id="toc-causal-fairness" class="nav-link" data-scroll-target="#causal-fairness">Causal Fairness</a>
   <ul class="collapse">
@@ -1058,12 +1059,20 @@ Fairness Through Awareness <span class="citation" data-cites="dwork_fairness_201
 <section id="roemers-algorithm" class="level2 smaller crunch-title crunch-li-10">
 <h2 class="smaller crunch-title crunch-li-10 anchored" data-anchor-id="roemers-algorithm">Roemer’s Algorithm</h2>
 <ul>
-<li>Roughly, the Equality of Opportunity algorithm boils down to:</li>
-<li><em>Input 1 (!)</em>: Attributes <span class="math inline">\(X_{\text{advantage}}\)</span> that a society (real or hypothetical) considers <strong>normatively relevant</strong> for an outcome, but that people are not <strong>individually responsible</strong> for (e.g., race or nationality via birth lottery)</li>
-<li><em>Input 2</em>: Attributes <span class="math inline">\(X_{\text{merit}}\)</span> that a society considers people <strong>individually responsible</strong> for (e.g., effort, sacrificing short-term pleasure for longer-term benefits, etc.)</li>
+<li>Equality of Opportunity algorithm boils down to (Input 0 = data on individuals <span class="math inline">\(X_i\)</span>):</li>
+<li><em>Input 1 (!)</em>: Attributes <span class="math inline">\(J_{\text{advantage}} \subseteq X_i\)</span> that a society (real or hypothetical) considers <strong>normatively relevant</strong> for an outcome, but that people are not <strong>individually responsible</strong> for (e.g., race or nationality via birth lottery)</li>
+<li><em>Input 2</em>: Attributes <span class="math inline">\(J_{\text{merit}} \subseteq X_i\)</span> that a society considers people <strong>individually responsible</strong> for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)</li>
 <li><i class="bi bi-1-circle"></i>: Set of individuals in society <span class="math inline">\(S\)</span> is <strong>partitioned</strong> into subsets <span class="math inline">\(S_i\)</span>, where <span class="math inline">\(i\)</span> is some combination of particular <strong>values</strong> for the attributes in <span class="math inline">\(X_{\text{advantage}}\)</span></li>
 <li><i class="bi bi-2-circle"></i>: Individuals’ <strong>context-sensitive scores</strong> are computed <strong>relative to their group</strong> <span class="math inline">\(S_i\)</span>, as <span class="math inline">\(z\)</span>-score of their <span class="math inline">\(X_{\text{merit}}\)</span> value relative to <strong>distribution</strong> of <span class="math inline">\(X_{\text{merit}}\)</span> values across <span class="math inline">\(S_i\)</span></li>
 <li><em>Outcome</em>: Now that we have <strong>incorporated social context</strong>, by converting the original <strong>context-free units</strong> (e.g., numeric SAT score) into <strong>context-sensitive units</strong> (<span class="math inline">\(z\)</span>-score of numeric SAT score within distribution of comparable individuals), we can compare people <strong>across groups</strong> on the basis of <strong>context-sensitive</strong> scores!</li>
+</ul>
+</section>
+<section id="an-overly-simplistic-example-more-on-hw2" class="level2">
+<h2 class="anchored" data-anchor-id="an-overly-simplistic-example-more-on-hw2">An Overly-Simplistic Example (More on HW2!)</h2>
+<ul>
+<li><span class="math inline">\(\mathbf{x}_i = (x_{i,1}, x_{i,2}, x_{i,3}) = (\texttt{wealth}_i, \texttt{study\_hrs}_i, \texttt{SAT}_i)\)</span></li>
+<li><span class="math inline">\(J_{\text{advantage}} = (1) = (\texttt{wealth})\)</span></li>
+<li><span class="math inline">\(J_{\text{merit}} = (2) = (\texttt{study\_hrs})\)</span></li>
 </ul>
 </section>
 </section>

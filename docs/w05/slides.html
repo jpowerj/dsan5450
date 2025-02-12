@@ -795,12 +795,20 @@ Jeff Jacobs
 <section id="roemers-algorithm" class="slide level2 smaller crunch-title crunch-li-10">
 <h2>Roemer’s Algorithm</h2>
 <ul>
-<li>Roughly, the Equality of Opportunity algorithm boils down to:</li>
-<li><em>Input 1 (!)</em>: Attributes <span class="math inline">\(X_{\text{advantage}}\)</span> that a society (real or hypothetical) considers <strong>normatively relevant</strong> for an outcome, but that people are not <strong>individually responsible</strong> for (e.g., race or nationality via birth lottery)</li>
-<li><em>Input 2</em>: Attributes <span class="math inline">\(X_{\text{merit}}\)</span> that a society considers people <strong>individually responsible</strong> for (e.g., effort, sacrificing short-term pleasure for longer-term benefits, etc.)</li>
+<li>Equality of Opportunity algorithm boils down to (Input 0 = data on individuals <span class="math inline">\(X_i\)</span>):</li>
+<li><em>Input 1 (!)</em>: Attributes <span class="math inline">\(J_{\text{advantage}} \subseteq X_i\)</span> that a society (real or hypothetical) considers <strong>normatively relevant</strong> for an outcome, but that people are not <strong>individually responsible</strong> for (e.g., race or nationality via birth lottery)</li>
+<li><em>Input 2</em>: Attributes <span class="math inline">\(J_{\text{merit}} \subseteq X_i\)</span> that a society considers people <strong>individually responsible</strong> for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)</li>
 <li><i class="bi bi-1-circle"></i>: Set of individuals in society <span class="math inline">\(S\)</span> is <strong>partitioned</strong> into subsets <span class="math inline">\(S_i\)</span>, where <span class="math inline">\(i\)</span> is some combination of particular <strong>values</strong> for the attributes in <span class="math inline">\(X_{\text{advantage}}\)</span></li>
 <li><i class="bi bi-2-circle"></i>: Individuals’ <strong>context-sensitive scores</strong> are computed <strong>relative to their group</strong> <span class="math inline">\(S_i\)</span>, as <span class="math inline">\(z\)</span>-score of their <span class="math inline">\(X_{\text{merit}}\)</span> value relative to <strong>distribution</strong> of <span class="math inline">\(X_{\text{merit}}\)</span> values across <span class="math inline">\(S_i\)</span></li>
 <li><em>Outcome</em>: Now that we have <strong>incorporated social context</strong>, by converting the original <strong>context-free units</strong> (e.g., numeric SAT score) into <strong>context-sensitive units</strong> (<span class="math inline">\(z\)</span>-score of numeric SAT score within distribution of comparable individuals), we can compare people <strong>across groups</strong> on the basis of <strong>context-sensitive</strong> scores!</li>
+</ul>
+</section>
+<section id="an-overly-simplistic-example-more-on-hw2" class="slide level2">
+<h2>An Overly-Simplistic Example (More on HW2!)</h2>
+<ul>
+<li><span class="math inline">\(\mathbf{x}_i = (x_{i,1}, x_{i,2}, x_{i,3}) = (\texttt{wealth}_i, \texttt{study\_hrs}_i, \texttt{SAT}_i)\)</span></li>
+<li><span class="math inline">\(J_{\text{advantage}} = (1) = (\texttt{wealth})\)</span></li>
+<li><span class="math inline">\(J_{\text{merit}} = (2) = (\texttt{study\_hrs})\)</span></li>
 </ul>
 </section></section>
 <section>

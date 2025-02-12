@@ -392,12 +392,18 @@ all individuals $x$ and $y$, we have
 
 ## Roemer's Algorithm {.smaller .crunch-title .crunch-li-10}
 
-* Roughly, the Equality of Opportunity algorithm boils down to:
-* *Input 1 (!)*: Attributes $X_{\text{advantage}}$ that a society (real or hypothetical) considers **normatively relevant** for an outcome, but that people are not **individually responsible** for (e.g., race or nationality via birth lottery)
-* *Input 2*: Attributes $X_{\text{merit}}$ that a society considers people **individually responsible** for (e.g., effort, sacrificing short-term pleasure for longer-term benefits, etc.)
+* Equality of Opportunity algorithm boils down to (Input 0 = data on individuals $X_i$):
+* *Input 1 (!)*: Attributes $J_{\text{advantage}} \subseteq X_i$ that a society (real or hypothetical) considers **normatively relevant** for an outcome, but that people are not **individually responsible** for (e.g., race or nationality via birth lottery)
+* *Input 2*: Attributes $J_{\text{merit}} \subseteq X_i$ that a society considers people **individually responsible** for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)
 * <i class='bi bi-1-circle'></i>: Set of individuals in society $S$ is **partitioned** into subsets $S_i$, where $i$ is some combination of particular **values** for the attributes in $X_{\text{advantage}}$
 * <i class='bi bi-2-circle'></i>: Individuals' **context-sensitive scores** are computed **relative to their group** $S_i$, as $z$-score of their $X_{\text{merit}}$ value relative to **distribution** of $X_{\text{merit}}$ values across $S_i$
 * *Outcome*: Now that we have **incorporated social context**, by converting the original **context-free units** (e.g., numeric SAT score) into **context-sensitive units** ($z$-score of numeric SAT score within distribution of comparable individuals), we can compare people **across groups** on the basis of **context-sensitive** scores!
+
+## An Overly-Simplistic Example (More on HW2!)
+
+* $\mathbf{x}_i = (x_{i,1}, x_{i,2}, x_{i,3}) = (\texttt{wealth}_i, \texttt{study\_hrs}_i, \texttt{SAT}_i)$
+* $J_{\text{advantage}} = (1) = (\texttt{wealth})$
+* $J_{\text{merit}} = (2) = (\texttt{study\_hrs})$
 
 # Causal Fairness {data-stack-name="Causal Fairness"}
 
