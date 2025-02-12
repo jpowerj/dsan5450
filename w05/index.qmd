@@ -47,11 +47,12 @@ Today's Planned Schedule:
 
 | | Start | End | Topic |
 |:- |:- |:- |:- |
-| **Lecture** | 6:30pm | 6:50pm | [Setting the Table: HW1 $\leadsto$ HW2 &rarr;](#roadmap) |
-| | 6:50pm | 7:20pm | [Non-Linear Data-Generating Processes &rarr;](#a-non-linear-data-generating-process-(dgp)) |
-| | 7:20pm | 8:00pm | [Validation: Evaluating Non-Linear Models &rarr;](#cross-validation-evaluating-non-linear-models) |
+| **Lecture** | 6:30pm | 7:00pm | [Setting the Table: HW1 $\leadsto$ HW2 &rarr;](#setting-the-table-hw1-leadsto-hw2) |
+| | 7:00pm | 7:15pm | [Issues with Context-Free Fairness &rarr;](#context-free-rightarrow-context-sensitive) |
+| | 7:15pm | 7:30pm | [Bringing in Context &rarr;](#bringing-in-context) |
+| | 7:30pm | 8:00pm | [Similarity-Based Fairness &rarr;](#similarity-based-fairness) |
 | **Break!** | 8:00pm | 8:10pm | |
-| | 8:10pm | 9:00pm | [$K$-Fold Cross-Validation: Cooking with Gas &rarr;](#k-fold-cross-validation) |
+| | 8:10pm | 9:00pm | [Causal Fairness Building Blocks &rarr;](#causal-fairness) |
 
 : {tbl-colwidths="[12,12,12,64]"}
 
