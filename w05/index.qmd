@@ -427,7 +427,7 @@ all individuals $x$ and $y$, we have
 * We can then use techniques developed by statisticians who study **causal inference** to
 * **Block** certain "causal pathways" that we deem normatively unjustifiable while **allowing** other pathways that we deem to be normatively justifiable.
 
-## Causal Fairness in HW2 {.crunch-title .inline-90}
+## Causal Fairness in HW2 {.crunch-title .inline-80}
 
 * Intuition required to make the jump from **correlational** approach (from statistics and probability generally, and DSAN 5100 specifically!) to **causal** approach!
 * Causal approach **builds on** correlational, but...
