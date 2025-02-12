@@ -3,6 +3,7 @@ title: "A Quick Introduction to Probabilistic Graphical Models"
 author: "Jeff Jacobs"
 sidebar: mainnav
 date: 2024-02-18
+relevance: "Weeks 5-7 (Causality)"
 categories:
   - "Extra Writeups"
 format:

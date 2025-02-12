@@ -1,0 +1,30 @@
+
+## Impossibility Results
+
+* tldr: We cannot possibly achieve all three of **equalized positive rates** (often also termed "anti-classification"), classification **parity**, and **calibration** (regardless of **base rates**)
+* More alarmingly: We can't even achieve both classification **parity** and **calibration**, except in the special case of **equal base rates**
+
+## "Impossibility" vs. Impossibility {.smaller .crunch-title}
+
+* Sometimes "impossibility results" are, for all intents and purposes, mathematical curiosities: often there's some **pragmatic** way of getting around them
+* Example: "Arrow's Impossibility Theorem"
+  * [In theory] It is mathematically impossible to **aggregate individual preferences** into **societal preferences**
+  * [The catch] True only if people are restricted to **ordinal preferences**: "I prefer $x$ to $y$." No more information allowed
+  * [The way around it] Allow people to indicate the **magnitude** of their preferences: "I prefer $x$ 5 times more than $y$"
+* In this case, though, there are direct and (often) unavoidable real-world barriers that fairness impossibility imposes 😕
+
+## Arrow's Impossibility Theorem {.crunch-title .smaller .crunch-ul}
+
+* Aziza, Bogdan, and Charles are competing in a **fitness test** with four events. Goal: determine who is **most fit overall**
+
+| | Run | Jump | Hurdle | Weights |
+| - | - | - | - | - |
+| Aziza | 10.1" | 6.0' | 40" | 150 lb |
+| Bogdan | 9.2" | 5.9' | 42" | 140 lb |
+| Charles | 10.0" | 6.1' | 39" | 145 lb |
+
+* We **can** rank unambiguously on **individual events**: **Jump**: Charles $\succ_J$ Aziza $\succ_J$ Bogdan
+* Now, **axioms** for aggregation:
+  * $\text{WP}$ (Weak Pareto Optimality): if $x \succ_i y$ for all events $i$, $x \succ y$
+  * $\text{IIA}$ (Independence of Irrelevant Alternatives): If a fourth competitor enters, but Aziza and Bogdan still have the same relative standing on all events, their relative standing overall should not change
+* Long story short: only aggregation that can satisfy these is "dictatorship": choose one event, give it importance of 100%, the rest have importance 0% 😰

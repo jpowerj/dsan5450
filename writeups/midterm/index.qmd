@@ -4,6 +4,7 @@ author: "Jeff Jacobs"
 sidebar: mainnav
 date: 2024-02-20
 bibliography: "../../_DSAN5450.bib"
+relevance: "Midterm"
 categories:
   - "Extra Writeups"
 format:

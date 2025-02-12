@@ -117,6 +117,12 @@ The following is a rough map of what we will work through together throughout th
     <td><span data-qmd="{{< var w06.date-md >}}"></span></td>
     <td><span data-qmd="[{{<var w06.title >}}](./w06/)"></span></td>
 </tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td><span data-qmd="*Feb 21 (Friday), 5:59pm EST*"></span></td>
+    <td><span data-qmd="*[Deliverable] <a href='{{< var hw2.url >}}' target='_blank'>HW2: {{< var hw2.title >}}</a>*"></span></td>
+</tr>
 <tr class='new-unit'>
     <td><span data-qmd="**Midterm**"></span></td>
     <td>7</td>

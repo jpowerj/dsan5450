@@ -4,6 +4,7 @@ author: "Jeff Jacobs"
 sidebar: mainnav
 date: 2025-01-29
 bibliography: "../../_DSAN5450.bib"
+relevance: "Weeks 1-3"
 categories:
   - "Extra Writeups"
 format:

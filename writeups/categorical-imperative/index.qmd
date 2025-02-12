@@ -1,0 +1,37 @@
+---
+title: "Kantian Ethics: The Hypothetical and Categorical Imperative"
+author: "Jeff Jacobs"
+sidebar: mainnav
+date: 2025-02-08
+bibliography: "../../_DSAN5450.bib"
+relevance: "HW1"
+categories:
+  - "Extra Writeups"
+format:
+  html:
+    df-print: kable
+    html-math-method: mathjax
+    toc: true
+---
+
+Homework 1 had a series of questions where you were asked to distinguish whether a given statement was more "directly" implied by Consequentialism or Kantian Ethics: in this writeup, my goals are:
+
+* (a) To clarify exactly what it means for certain statements to be **"directly"** vs. **"indirectly"** implied by some ethical system^[Here, for source/inspiration-citing purposes, hats off to Trey for pushing on this point in class!], and
+* (b) To clarify how, even though it may seem at first glance like **both** of these systems require thinking about consequences:
+    * **Consequentialism** focuses on the consequences that you think **really will** follow from your actions, whereas
+    * **Kantian Ethics** focuses instead on the consequences that would result **hypothetically** if **everyone in the world** adopted your decision-making as a rule.
+
+Those two goals, however, are written in chronological order based on when they came up in the class or in office hours! So, for ease-of-explanation pursposes, I will address them in reverse order in the following two sections.
+
+## Kantian Ethics and the Push-Button Brain Zapper^[A huge thanks to Ofure for asking helpful questions that led me to this explanation!]
+
+To understand the difference between Consequentialism and Kantian Ethics, at least in the way we employed these terms for HW1, imagine you have a small handheld device called a Brain Zapper^[The Brain Zapper works kind of like the [Neuralyzer](https://meninblack.fandom.com/wiki/Neuralyzer) from the movie Men in Black. (I've never seen this movie, but, from what I understand it zaps people's brains to basically overwrite their memories of something!) The Brain Zapper is like a Neuralyzer but with two screens on it, as described below.] that works as follows:
+
+The Brain Zapper has two screens, one on the left side of the device and one on the right side:
+
+* The screen on the left side has a heading containing the text "Consequentialism"
+* The screen on the right side has a heading containing the text "Kantian Ethics"
+
+When you encounter an ethical decision $D = (d_0, d_1)$ you have to make, where $d_0$ and $d_1$ represent two possible options you have to choose between, the Brain Zapper immediately turns on and starts recording your ethical thinking (like a voice recorder, but, for your brain).
+
+You start by thinking about $d_0$: "Should I choose $d_0$?" At this point, the Brain Zapper runs a series of ultra-advanced societal simulations, 

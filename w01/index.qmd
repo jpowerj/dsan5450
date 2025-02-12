@@ -16,6 +16,9 @@ format:
     output-file: "slides.html"
     html-math-method: mathjax
     scrollable: true
+    theme: [default, "../dsan-globals/jjquarto.scss"]
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css'>"
     css: "../dsan-globals/jjstyles.css"
     slide-number: true
     simplemenu:

@@ -6,6 +6,7 @@
   {
     "listing": "/writeups/index.html",
     "items": [
+      "/writeups/categorical-imperative/index.html",
       "/writeups/contested/index.html",
       "/writeups/midterm/index.html",
       "/writeups/pgm-intro/index.html",

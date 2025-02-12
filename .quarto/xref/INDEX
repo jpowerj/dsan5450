@@ -107,5 +107,8 @@
   },
   "writeups/contested/index.qmd": {
     "index.html": "18e825d3"
+  },
+  "writeups/categorical-imperative/index.qmd": {
+    "index.html": "ac86b075"
   }
 }

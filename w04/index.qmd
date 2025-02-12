@@ -13,11 +13,11 @@ format:
   revealjs:
     df-print: kable
     include-in-header:
-      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'>"
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css'>"
     footer: "DSAN 5450 Week 4: {{< var w04.footer >}}"
     output-file: "slides.html"
     html-math-method: mathjax
-    css: "../dsan-globals/jjstyles.css"
+    theme: [default, "../dsan-globals/jjquarto.scss"]
     scrollable: true
     slide-number: true
     link-external-newwindow: true

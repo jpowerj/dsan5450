@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -57,12 +57,12 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-79108a0fc1995748cbd19a5b0e3e3e7c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-b2511bcbb01c2159fd96a78deb42ffd9.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -318,7 +318,7 @@ window.Quarto = {
     </ul>
     </div>
 <div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
-<p><em>Updated 2025-02-05, 02:52:06 PM</em></p>
+<p><em>Updated 2025-02-12, 01:36:58 PM</em></p>
 </div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -687,10 +687,10 @@ window.Quarto = {
 </tr>
 </thead>
 <tbody>
-<tr class="odd td-section-head">
+<tr class="td-section-head odd">
 <td colspan="7" style="text-align: center;"><strong>Bourgeoisie</strong> (Bosses)</td>
 </tr>
-<tr class="even td-no-bottom">
+<tr class="td-no-bottom even">
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
@@ -702,7 +702,7 @@ window.Quarto = {
 <tr class="odd">
 <td colspan="7" style="text-align: center;">Doesn't need to work at all (provides capital to their workers)</td>
 </tr>
-<tr class="even td-no-bottom">
+<tr class="td-no-bottom even">
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
@@ -714,10 +714,10 @@ window.Quarto = {
 <tr class="odd">
 <td colspan="7" style="text-align: center;">Not enough capital to hire workers to produce full consumption bundle</td>
 </tr>
-<tr class="even td-section-head">
+<tr class="td-section-head even">
 <td colspan="7" style="text-align: center;"><strong>Petit Bourgeoisie</strong> (Independent / ‘Yeoman’ Workers)</td>
 </tr>
-<tr class="odd td-no-bottom">
+<tr class="td-no-bottom odd">
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
@@ -729,10 +729,10 @@ window.Quarto = {
 <tr class="even">
 <td colspan="7" style="text-align: center;">Has no boss; doesn't boss others</td>
 </tr>
-<tr class="odd td-section-head">
+<tr class="td-section-head odd">
 <td colspan="7" style="text-align: center;"><strong>Proletariat</strong> (Working Class)</td>
 </tr>
-<tr class="even td-no-bottom">
+<tr class="td-no-bottom even">
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
@@ -744,7 +744,7 @@ window.Quarto = {
 <tr class="odd">
 <td colspan="7" style="text-align: center;">Small plot of land, insufficient for producing consumption bundle; "Proletarianizing"</td>
 </tr>
-<tr class="even td-no-bottom">
+<tr class="td-no-bottom even">
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
@@ -1048,8 +1048,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -1167,7 +1165,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
