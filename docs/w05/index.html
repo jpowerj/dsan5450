@@ -351,7 +351,7 @@ window.Quarto = {
     </ul>
     </div>
 <div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
-<p><em>Updated 2025-02-12, 03:18:10 PM</em></p>
+<p><em>Updated 2025-02-12, 03:28:03 PM</em></p>
 </div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -372,6 +372,8 @@ window.Quarto = {
   <li><a href="#context-free-rightarrow-context-sensitive" id="toc-context-free-rightarrow-context-sensitive" class="nav-link" data-scroll-target="#context-free-rightarrow-context-sensitive">Context-Free <span class="math inline">\(\rightarrow\)</span> Context-Sensitive</a>
   <ul class="collapse">
   <li><a href="#propublica-vs.-northpointe" id="toc-propublica-vs.-northpointe" class="nav-link" data-scroll-target="#propublica-vs.-northpointe">ProPublica vs.&nbsp;Northpointe</a></li>
+  <li><a href="#compas-overview" id="toc-compas-overview" class="nav-link" data-scroll-target="#compas-overview">COMPAS Overview</a></li>
+  <li><a href="#compas-overview-1" id="toc-compas-overview-1" class="nav-link" data-scroll-target="#compas-overview-1">COMPAS Overview</a></li>
   <li><a href="#so-what-do-we-do" id="toc-so-what-do-we-do" class="nav-link" data-scroll-target="#so-what-do-we-do">So… What Do We Do?</a></li>
   <li><a href="#why-not-both" id="toc-why-not-both" class="nav-link" data-scroll-target="#why-not-both">Why Not Both??</a></li>
   </ul></li>
@@ -862,6 +864,18 @@ window.Quarto = {
 <li>People have argued about who is “right” for 8 years, with some progress, but… not a lot</li>
 </ul>
 </section>
+<section id="compas-overview" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="compas-overview">COMPAS Overview</h2>
+<blockquote class="blockquote">
+<p>When defendants are booked into jail in Broward County, Florida, they are asked to respond to a COMPAS questionnaire with 137 questions, including “Was one of your parents ever sent to jail or prison?,” “How many of your friends/acquaintances are taking drugs illegally?,” and “How often did you get into fights at school?” Arrestees are also asked to agree or disagree with the statements “A hungry person has the right to steal” and “If people make me angry or I lose my temper, I can be dangerous.” Answers are fed into the COMPAS model, which generates an individual risk score that is reported in three buckets: “low risk” (1 to 4), “medium risk” (5 to 7), and “high risk” (8 to 10).</p>
+</blockquote>
+</section>
+<section id="compas-overview-1" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="compas-overview-1">COMPAS Overview</h2>
+<blockquote class="blockquote">
+<p>ProPublica accused COMPAS of racism: “There’s software used across the country to predict future criminals. And it’s biased against blacks,” read the subheading on the article. ProPublica found that COMPAS’s error rates—the rate at which the model got it wrong—were unequal across racial groups. COMPAS’s predictions were more likely to incorrectly label African Americans as high risk and more likely to incorrectly label white Americans as low risk. “In the criminal justice context,” said Julia Angwin, coauthor of the ProPublica article, “false findings can have far-reaching effects on the lives of the people charged with crimes.</p>
+</blockquote>
+</section>
 <section id="so-what-do-we-do" class="level2 smaller crunch-title crunch-ul crunch-blockquote">
 <h2 class="smaller crunch-title crunch-ul crunch-blockquote anchored" data-anchor-id="so-what-do-we-do">So… What Do We Do?</h2>
 <ul>
@@ -1070,7 +1084,7 @@ Fairness Through Awareness <span class="citation" data-cites="dwork_fairness_201
 <li><em>Input 1 (!)</em>: Attributes <span class="math inline">\(J_{\text{advantage}} \subseteq X_i\)</span> that a society (real or hypothetical) considers <strong>normatively relevant</strong> for an outcome, but that people are not <strong>individually responsible</strong> for (e.g., race or nationality via birth lottery)</li>
 <li><em>Input 2</em>: Attributes <span class="math inline">\(J_{\text{merit}} \subseteq X_i\)</span> that a society considers people <strong>individually responsible</strong> for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)</li>
 <li><i class="bi bi-1-circle"></i>: Set of individuals in society <span class="math inline">\(S\)</span> is <strong>partitioned</strong> into subsets <span class="math inline">\(S_i\)</span>, where <span class="math inline">\(i\)</span> is some combination of particular <strong>values</strong> for the attributes in <span class="math inline">\(X_{\text{advantage}}\)</span></li>
-<li><i class="bi bi-2-circle"></i>: Individuals’ <strong>context-sensitive scores</strong> are computed <strong>relative to their group</strong> <span class="math inline">\(S_i\)</span>, as <span class="math inline">\(z\)</span>-score of their <span class="math inline">\(X_{\text{merit}}\)</span> value relative to <strong>distribution</strong> of <span class="math inline">\(X_{\text{merit}}\)</span> values across <span class="math inline">\(S_i\)</span></li>
+<li><i class="bi bi-2-circle"></i>: Individuals’ <strong>context-sensitive scores</strong> are computed <strong>relative to their group</strong> <span class="math inline">\(S_i\)</span>, as <strong>percentile</strong> of their <span class="math inline">\(X_{\text{merit}}\)</span> value relative to <strong>distribution</strong> of <span class="math inline">\(X_{\text{merit}}\)</span> values across <span class="math inline">\(S_i\)</span></li>
 <li><em>Outcome</em>: Now that we have <strong>incorporated social context</strong>, by converting the original <strong>context-free units</strong> (e.g., numeric SAT score) into <strong>context-sensitive units</strong> (<span class="math inline">\(z\)</span>-score of numeric SAT score within distribution of comparable individuals), we can compare people <strong>across groups</strong> on the basis of <strong>context-sensitive</strong> scores!</li>
 </ul>
 </section>

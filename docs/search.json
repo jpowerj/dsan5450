@@ -2167,6 +2167,20 @@
     "text": "ProPublica vs. Northpointe\n\nThis is… an example with 1000s of books and papers and discussions around it! (A red flag 🚩, since, obsession with one example may conceal much wider range of issues!)\nBut, tldr, Northpointe created a ML algorithm called COMPAS, used by court systems all over the US to predict “risk” of arrestees\nIn 2016, ProPublica published results from an investigative report documenting COMPAS’s racial discrimination, in the form of violating equal error rates between black and white arrestees\nNorthpointe responded that COMPAS does not discriminate, as it satisfies calibration\nPeople have argued about who is “right” for 8 years, with some progress, but… not a lot"
   },
   {
+    "objectID": "w05/slides.html#compas-overview",
+    "href": "w05/slides.html#compas-overview",
+    "title": "Week 5: Context-Sensitive Fairness",
+    "section": "COMPAS Overview",
+    "text": "COMPAS Overview\n\nWhen defendants are booked into jail in Broward County, Florida, they are asked to respond to a COMPAS questionnaire with 137 questions, including “Was one of your parents ever sent to jail or prison?,” “How many of your friends/acquaintances are taking drugs illegally?,” and “How often did you get into fights at school?” Arrestees are also asked to agree or disagree with the statements “A hungry person has the right to steal” and “If people make me angry or I lose my temper, I can be dangerous.” Answers are fed into the COMPAS model, which generates an individual risk score that is reported in three buckets: “low risk” (1 to 4), “medium risk” (5 to 7), and “high risk” (8 to 10)."
+  },
+  {
+    "objectID": "w05/slides.html#compas-overview-1",
+    "href": "w05/slides.html#compas-overview-1",
+    "title": "Week 5: Context-Sensitive Fairness",
+    "section": "COMPAS Overview",
+    "text": "COMPAS Overview\n\nProPublica accused COMPAS of racism: “There’s software used across the country to predict future criminals. And it’s biased against blacks,” read the subheading on the article. ProPublica found that COMPAS’s error rates—the rate at which the model got it wrong—were unequal across racial groups. COMPAS’s predictions were more likely to incorrectly label African Americans as high risk and more likely to incorrectly label white Americans as low risk. “In the criminal justice context,” said Julia Angwin, coauthor of the ProPublica article, “false findings can have far-reaching effects on the lives of the people charged with crimes."
+  },
+  {
     "objectID": "w05/slides.html#so-what-do-we-do",
     "href": "w05/slides.html#so-what-do-we-do",
     "title": "Week 5: Context-Sensitive Fairness",
@@ -2248,7 +2262,7 @@
     "href": "w05/slides.html#roemers-algorithm",
     "title": "Week 5: Context-Sensitive Fairness",
     "section": "Roemer’s Algorithm",
-    "text": "Roemer’s Algorithm\n\nEquality of Opportunity algorithm boils down to (Input 0 = data on individuals \\(X_i\\)):\nInput 1 (!): Attributes \\(J_{\\text{advantage}} \\subseteq X_i\\) that a society (real or hypothetical) considers normatively relevant for an outcome, but that people are not individually responsible for (e.g., race or nationality via birth lottery)\nInput 2: Attributes \\(J_{\\text{merit}} \\subseteq X_i\\) that a society considers people individually responsible for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)\n: Set of individuals in society \\(S\\) is partitioned into subsets \\(S_i\\), where \\(i\\) is some combination of particular values for the attributes in \\(X_{\\text{advantage}}\\)\n: Individuals’ context-sensitive scores are computed relative to their group \\(S_i\\), as \\(z\\)-score of their \\(X_{\\text{merit}}\\) value relative to distribution of \\(X_{\\text{merit}}\\) values across \\(S_i\\)\nOutcome: Now that we have incorporated social context, by converting the original context-free units (e.g., numeric SAT score) into context-sensitive units (\\(z\\)-score of numeric SAT score within distribution of comparable individuals), we can compare people across groups on the basis of context-sensitive scores!"
+    "text": "Roemer’s Algorithm\n\nEquality of Opportunity algorithm boils down to (Input 0 = data on individuals \\(X_i\\)):\nInput 1 (!): Attributes \\(J_{\\text{advantage}} \\subseteq X_i\\) that a society (real or hypothetical) considers normatively relevant for an outcome, but that people are not individually responsible for (e.g., race or nationality via birth lottery)\nInput 2: Attributes \\(J_{\\text{merit}} \\subseteq X_i\\) that a society considers people individually responsible for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)\n: Set of individuals in society \\(S\\) is partitioned into subsets \\(S_i\\), where \\(i\\) is some combination of particular values for the attributes in \\(X_{\\text{advantage}}\\)\n: Individuals’ context-sensitive scores are computed relative to their group \\(S_i\\), as percentile of their \\(X_{\\text{merit}}\\) value relative to distribution of \\(X_{\\text{merit}}\\) values across \\(S_i\\)\nOutcome: Now that we have incorporated social context, by converting the original context-free units (e.g., numeric SAT score) into context-sensitive units (\\(z\\)-score of numeric SAT score within distribution of comparable individuals), we can compare people across groups on the basis of context-sensitive scores!"
   },
   {
     "objectID": "w05/slides.html#an-overly-simplistic-example-more-on-hw2",
@@ -2440,6 +2454,26 @@
     ]
   },
   {
+    "objectID": "w05/index.html#compas-overview",
+    "href": "w05/index.html#compas-overview",
+    "title": "Week 5: Context-Sensitive Fairness",
+    "section": "COMPAS Overview",
+    "text": "COMPAS Overview\n\nWhen defendants are booked into jail in Broward County, Florida, they are asked to respond to a COMPAS questionnaire with 137 questions, including “Was one of your parents ever sent to jail or prison?,” “How many of your friends/acquaintances are taking drugs illegally?,” and “How often did you get into fights at school?” Arrestees are also asked to agree or disagree with the statements “A hungry person has the right to steal” and “If people make me angry or I lose my temper, I can be dangerous.” Answers are fed into the COMPAS model, which generates an individual risk score that is reported in three buckets: “low risk” (1 to 4), “medium risk” (5 to 7), and “high risk” (8 to 10).",
+    "crumbs": [
+      "Week 5: {{< var w05.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w05/index.html#compas-overview-1",
+    "href": "w05/index.html#compas-overview-1",
+    "title": "Week 5: Context-Sensitive Fairness",
+    "section": "COMPAS Overview",
+    "text": "COMPAS Overview\n\nProPublica accused COMPAS of racism: “There’s software used across the country to predict future criminals. And it’s biased against blacks,” read the subheading on the article. ProPublica found that COMPAS’s error rates—the rate at which the model got it wrong—were unequal across racial groups. COMPAS’s predictions were more likely to incorrectly label African Americans as high risk and more likely to incorrectly label white Americans as low risk. “In the criminal justice context,” said Julia Angwin, coauthor of the ProPublica article, “false findings can have far-reaching effects on the lives of the people charged with crimes.",
+    "crumbs": [
+      "Week 5: {{< var w05.date-md >}}"
+    ]
+  },
+  {
     "objectID": "w05/index.html#so-what-do-we-do",
     "href": "w05/index.html#so-what-do-we-do",
     "title": "Week 5: Context-Sensitive Fairness",
@@ -2554,7 +2588,7 @@
     "href": "w05/index.html#roemers-algorithm",
     "title": "Week 5: Context-Sensitive Fairness",
     "section": "Roemer’s Algorithm",
-    "text": "Roemer’s Algorithm\n\nEquality of Opportunity algorithm boils down to (Input 0 = data on individuals \\(X_i\\)):\nInput 1 (!): Attributes \\(J_{\\text{advantage}} \\subseteq X_i\\) that a society (real or hypothetical) considers normatively relevant for an outcome, but that people are not individually responsible for (e.g., race or nationality via birth lottery)\nInput 2: Attributes \\(J_{\\text{merit}} \\subseteq X_i\\) that a society considers people individually responsible for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)\n: Set of individuals in society \\(S\\) is partitioned into subsets \\(S_i\\), where \\(i\\) is some combination of particular values for the attributes in \\(X_{\\text{advantage}}\\)\n: Individuals’ context-sensitive scores are computed relative to their group \\(S_i\\), as \\(z\\)-score of their \\(X_{\\text{merit}}\\) value relative to distribution of \\(X_{\\text{merit}}\\) values across \\(S_i\\)\nOutcome: Now that we have incorporated social context, by converting the original context-free units (e.g., numeric SAT score) into context-sensitive units (\\(z\\)-score of numeric SAT score within distribution of comparable individuals), we can compare people across groups on the basis of context-sensitive scores!",
+    "text": "Roemer’s Algorithm\n\nEquality of Opportunity algorithm boils down to (Input 0 = data on individuals \\(X_i\\)):\nInput 1 (!): Attributes \\(J_{\\text{advantage}} \\subseteq X_i\\) that a society (real or hypothetical) considers normatively relevant for an outcome, but that people are not individually responsible for (e.g., race or nationality via birth lottery)\nInput 2: Attributes \\(J_{\\text{merit}} \\subseteq X_i\\) that a society considers people individually responsible for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)\n: Set of individuals in society \\(S\\) is partitioned into subsets \\(S_i\\), where \\(i\\) is some combination of particular values for the attributes in \\(X_{\\text{advantage}}\\)\n: Individuals’ context-sensitive scores are computed relative to their group \\(S_i\\), as percentile of their \\(X_{\\text{merit}}\\) value relative to distribution of \\(X_{\\text{merit}}\\) values across \\(S_i\\)\nOutcome: Now that we have incorporated social context, by converting the original context-free units (e.g., numeric SAT score) into context-sensitive units (\\(z\\)-score of numeric SAT score within distribution of comparable individuals), we can compare people across groups on the basis of context-sensitive scores!",
     "crumbs": [
       "Week 5: {{< var w05.date-md >}}"
     ]
