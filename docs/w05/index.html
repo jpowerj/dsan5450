@@ -351,7 +351,7 @@ window.Quarto = {
     </ul>
     </div>
 <div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
-<p><em>Updated 2025-02-12, 02:47:55 PM</em></p>
+<p><em>Updated 2025-02-12, 03:18:10 PM</em></p>
 </div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -391,6 +391,7 @@ window.Quarto = {
   <li><a href="#equality-of-opportunity" id="toc-equality-of-opportunity" class="nav-link" data-scroll-target="#equality-of-opportunity">Equality of Opportunity</a></li>
   <li><a href="#roemers-algorithm" id="toc-roemers-algorithm" class="nav-link" data-scroll-target="#roemers-algorithm">Roemer’s Algorithm</a></li>
   <li><a href="#an-overly-simplistic-example-more-on-hw2" id="toc-an-overly-simplistic-example-more-on-hw2" class="nav-link" data-scroll-target="#an-overly-simplistic-example-more-on-hw2">An Overly-Simplistic Example (More on HW2!)</a></li>
+  <li><a href="#at-a-macro-level" id="toc-at-a-macro-level" class="nav-link" data-scroll-target="#at-a-macro-level">At a Macro Level!</a></li>
   </ul></li>
   <li><a href="#causal-fairness" id="toc-causal-fairness" class="nav-link" data-scroll-target="#causal-fairness">Causal Fairness</a>
   <ul class="collapse">
@@ -1077,9 +1078,19 @@ Fairness Through Awareness <span class="citation" data-cites="dwork_fairness_201
 <h2 class="anchored" data-anchor-id="an-overly-simplistic-example-more-on-hw2">An Overly-Simplistic Example (More on HW2!)</h2>
 <ul>
 <li><span class="math inline">\(\mathbf{x}_i = (x_{i,1}, x_{i,2}, x_{i,3}) = (\texttt{wealth}_i, \texttt{study\_hrs}_i, \texttt{SAT}_i)\)</span></li>
-<li><span class="math inline">\(J_{\text{advantage}} = (1) = (\texttt{wealth})\)</span></li>
-<li><span class="math inline">\(J_{\text{merit}} = (2) = (\texttt{study\_hrs})\)</span></li>
+<li><span class="math inline">\(J_{\text{advantage}} = (1) = (\texttt{wealth})\)</span>, <span class="math inline">\(J_{\text{merit}} = (2) = (\texttt{study\_hrs})\)</span></li>
+<li><span class="math inline">\(\Rightarrow \texttt{study\_hrs} \rightarrow \texttt{SAT}\)</span> a “fair” pathway</li>
+<li><span class="math inline">\(\Rightarrow \texttt{wealth} \rightarrow \texttt{SAT}\)</span> an “unfair” pathway</li>
+<li><span class="math inline">\(\Rightarrow\)</span> School admission decisions “fair” to the extent that they capture the <strong>direct effect</strong> <span class="math inline">\(\texttt{study\_hrs} \rightarrow \texttt{SAT} \rightarrow \texttt{admit}\)</span>, but aren’t affected by <strong>indirect effect</strong> <span class="math inline">\(\texttt{wealth} \rightarrow \texttt{SAT} \rightarrow \texttt{admit}\)</span></li>
 </ul>
+</section>
+<section id="at-a-macro-level" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="at-a-macro-level">At a Macro Level!</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/roemer.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
 </section>
 </section>
 <section id="causal-fairness" class="level1" data-stack-name="Causal Fairness">

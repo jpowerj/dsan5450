@@ -403,8 +403,14 @@ all individuals $x$ and $y$, we have
 ## An Overly-Simplistic Example (More on HW2!)
 
 * $\mathbf{x}_i = (x_{i,1}, x_{i,2}, x_{i,3}) = (\texttt{wealth}_i, \texttt{study\_hrs}_i, \texttt{SAT}_i)$
-* $J_{\text{advantage}} = (1) = (\texttt{wealth})$
-* $J_{\text{merit}} = (2) = (\texttt{study\_hrs})$
+* $J_{\text{advantage}} = (1) = (\texttt{wealth})$, $J_{\text{merit}} = (2) = (\texttt{study\_hrs})$
+* $\Rightarrow \texttt{study\_hrs} \rightarrow \texttt{SAT}$ a "fair" pathway
+* $\Rightarrow \texttt{wealth} \rightarrow \texttt{SAT}$ an "unfair" pathway
+* $\Rightarrow$ School admission decisions "fair" to the extent that they capture the **direct effect** $\texttt{study\_hrs} \rightarrow \texttt{SAT} \rightarrow \texttt{admit}$, but aren't affected by **indirect effect** $\texttt{wealth} \rightarrow \texttt{SAT} \rightarrow \texttt{admit}$
+
+## At a Macro Level! {.smaller}
+
+![](images/roemer.svg){fig-align="center"}
 
 # Causal Fairness {data-stack-name="Causal Fairness"}
 

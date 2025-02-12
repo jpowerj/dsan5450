@@ -813,10 +813,16 @@ Jeff Jacobs
 <h2>An Overly-Simplistic Example (More on HW2!)</h2>
 <ul>
 <li><span class="math inline">\(\mathbf{x}_i = (x_{i,1}, x_{i,2}, x_{i,3}) = (\texttt{wealth}_i, \texttt{study\_hrs}_i, \texttt{SAT}_i)\)</span></li>
-<li><span class="math inline">\(J_{\text{advantage}} = (1) = (\texttt{wealth})\)</span></li>
-<li><span class="math inline">\(J_{\text{merit}} = (2) = (\texttt{study\_hrs})\)</span></li>
+<li><span class="math inline">\(J_{\text{advantage}} = (1) = (\texttt{wealth})\)</span>, <span class="math inline">\(J_{\text{merit}} = (2) = (\texttt{study\_hrs})\)</span></li>
+<li><span class="math inline">\(\Rightarrow \texttt{study\_hrs} \rightarrow \texttt{SAT}\)</span> a “fair” pathway</li>
+<li><span class="math inline">\(\Rightarrow \texttt{wealth} \rightarrow \texttt{SAT}\)</span> an “unfair” pathway</li>
+<li><span class="math inline">\(\Rightarrow\)</span> School admission decisions “fair” to the extent that they capture the <strong>direct effect</strong> <span class="math inline">\(\texttt{study\_hrs} \rightarrow \texttt{SAT} \rightarrow \texttt{admit}\)</span>, but aren’t affected by <strong>indirect effect</strong> <span class="math inline">\(\texttt{wealth} \rightarrow \texttt{SAT} \rightarrow \texttt{admit}\)</span></li>
 </ul>
-</section></section>
+</section>
+<section id="at-a-macro-level" class="slide level2 smaller">
+<h2>At a Macro Level!</h2>
+
+<img data-src="images/roemer.svg" class="quarto-figure quarto-figure-center r-stretch"></section></section>
 <section>
 <section id="causal-fairness" class="title-slide slide level1 center" data-stack-name="Causal Fairness">
 <h1>Causal Fairness</h1>
