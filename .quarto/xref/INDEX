@@ -110,5 +110,8 @@
   },
   "writeups/categorical-imperative/index.qmd": {
     "index.html": "ac86b075"
+  },
+  "writeups/ai_fairness.ipynb": {
+    "ai_fairness.html": "5fe7d745"
   }
 }
