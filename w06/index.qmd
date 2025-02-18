@@ -12,12 +12,16 @@ categories:
 format:
   revealjs:
     df-print: kable
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css'>"
     footer: "DSAN 5450 Week 6: {{< var w06.footer >}}"
     output-file: "slides.html"
     html-math-method: mathjax
-    css: "../dsan-globals/jjstyles.css"
+    theme: [default, "../dsan-globals/jjquarto.scss"]
     scrollable: true
     slide-number: true
+    link-external-icon: true
+    link-external-newwindow: true
     simplemenu:
       flat: true
       barhtml:
@@ -27,9 +31,10 @@ format:
       - simplemenu
   html:
     df-print: kable
-    css: "../dsan-globals/jjstyles.css"
     output-file: "index.html"
     html-math-method: mathjax
+    link-external-icon: true
+    link-external-newwindow: true
 ---
 
 ::: {.content-visible unless-format="revealjs"}
@@ -56,7 +61,7 @@ format:
 
 ::: {layout="[1,1]"}
 
-* Who (besides Aaron) can guess the state of this process after 10 steps, with 1 person?
+* Who can guess the state of this process after 10 steps, with 1 person?
 * 10 people? 50? 100? (If they find themselves on the same spot, they stand on each other's heads)
 * 100 steps? 1000?
 
@@ -166,17 +171,18 @@ ggMarginal(wp2, margins = "y", type = "histogram", yparams = list(binwidth = 1))
 
 ![](images/fwds_from_grandma.jpg){fig-align="center"}
 
-## So What's the Problem? {.crunch-title}
+## So What's the Problem? {.crunch-title .crunch-ul .crunch-li-8 .inline-90}
 
-* Non-probabilistic models: High potential for being garbage (see: Bayesianism)
-* Probabilistic models: Getting there, still "surface" phenomena
+* Non-probabilistic models: High potential for being garbage
+  * *tldr: even if SUPER certain, using $\Pr(\mathcal{H}) = 1-\varepsilon$ with tiny $\varepsilon$ has literal life-saving advantages* [@finetti1972probability]
+* Probabilistic models: Getting there, still looking at "surface"
   * Of the $N = 100$ times we observed event $X$ occurring, event $Y$ also occurred $90$ of those times
   * $\implies \Pr(Y \mid X) = \frac{\#[X, Y]}{\#[X]} = \frac{90}{100} = 0.9$
-* Causal models: Does $Y$ happen **because of** $X$ happening? For that, need to start modeling **what's happening under the surface** that make $X$ and $Y$ "pop up" together so often
+* Causal models: Does $Y$ happen **because of** $X$ happening? For that, need to start modeling **what's happening under the surface** making $X$ and $Y$ **"pop up" together** so often
 
 # Causal Inference {data-stack-name="Causal Inference"}
 
-## The *Intuitive* Problem of Inferring Causality {.title-08}
+## The *Intuitive But Boring* Problem of Causal Inference {.title-06}
 
 ::: columns
 ::: {.column width="65%"}
@@ -255,7 +261,7 @@ cor(ski_df$value, law_df$value)
 :::
 :::
 
-## The *Fundamental* Problem of Causal Inference {.crunch-title .crunch-ul .crunch-callout .title-08}
+## The *Fundamental* Problem of Causal Inference {.crunch-title .crunch-ul .crunch-callout .title-07}
 
 The only workable definition of "$X$ causes $Y$":
 
@@ -285,11 +291,17 @@ $X$ causes $Y$ if and only if:
 * Without a control group, you cannot make inferences!
 * *Selecting on the dependent variable...*
 
-## Selecting on the Dependent Variable {.smaller}
+## Selecting on the Dependent Variable {.smaller .title-12}
 
 ![<a href='https://www.pbs.org/newshour/show/what-research-says-about-identifying-people-who-might-commit-mass-shootings' target='_blank'>What """research""" """says""" about identifying people who might commit mass shootings</a>](images/school-shootings.jpeg){fig-align="center"}
 
-* Jeff's rant: If you care about actually solving social issues, this should **infuriate you**
+* Jeff's ABHYSIOWDCI claim: If we care about intervening to reduce social ills, this literally has negative value (Goes up to zero value if you don't publish it though! 😉)
+
+::: {.text-70}
+
+*(**A**nnoying **B**ut **H**opefully **Y**ou'll **S**ee the **I**mportance **O**nce **W**e **D**igest **C**ausal **I**nference... a standard term in The Sciences)*
+
+:::
 
 ## Complications: Selection
 
@@ -297,11 +309,17 @@ $X$ causes $Y$ if and only if:
 * Are there systematic differences?
 * """Vietnam""" """War""" Draft: Why can't we just study [men who join the military] versus [men who don't], and take the difference as a causal estimate?
 
-## The Solution: *Matching* {.crunch-title .crunch-ul}
+## The Solution: *Matching* {.crunch-title .crunch-ul .crunch-p .crunch-li-8}
+
+::: {.text-70}
+
+*(W02 we looked at **propensity score** matching... kind of the Naïve Bayes of matching)*
+
+:::
 
 * **Controlled experiment**: we can **ensure** (since we have control over the **assignment mechanism**) the **only systematic difference** between $C$ and $T$ is: $T$ received treatment, $C$ did not
 * In an **observational study**, we're "too late"! Thus, we no longer refer to **assignment** but to **selection**
-* Our job is to **figure out** (reverse engineer!) the **selection mechanism**, then **correct for its non-randomness**. Spoiler: "transform" observational $\rightarrow$ experimental via **weighting**.
+* Our job is to **reverse engineer** the **selection mechanism**, then **correct for its non-randomness**. Spoiler: "transform" observational $\rightarrow$ experimental via **weighting**.
 * That's the gold at end of rainbow. The **rainbow itself** is...
 
 # Do-Calculus {data-stack-name="Do-Calculus"}
@@ -326,7 +344,7 @@ $X$ causes $Y$ if and only if:
 * $\Pr(Y = 1) = \; ?$
 * $\Pr(Y = 1 \mid E = 1) = \; ?$
 
-## Top Secret Answers Slide (Don't Peek)
+## Top Secret Answers Slide (Don't Peek) {.title-09}
 
 * $\Pr(Y = 1) = \frac{1}{6}$
 * $\Pr(Y = 1 \mid E = 1) = \frac{1}{3}$
@@ -334,12 +352,12 @@ $X$ causes $Y$ if and only if:
 * $\overset{❓}{\implies}$ Private school education **doubles** likelihood of success!
 * The latter is only true if *intervening*/*changing*/**do***ing* $E = 0 \leadsto E = 1$ is what moves $\Pr(Y = 1)$ from $\frac{1}{6}$ to $\frac{1}{3}$!
 
-## Chalkboard Time 2: Electric Boogaloo {.crunch-title .crunch-ul .crunch-callout}
+## Chalkboard Time 2: Electric Boogaloo {.crunch-title .crunch-ul .crunch-callout .title-09}
 
 * [$\Pr(Y = 1) = \frac{1}{6}$]{.math-90}
 * [$\Pr(Y = 1 \mid E = 1) = \frac{1}{3}$]{.math-90}
 * [$\Pr(Y = 1 \mid \textsf{do}(E = 1)) = \; ?$]{.math-90}
-* Here, [$\textsf{do}(E = 1)$]{.math-90} means **diving into the DGP below the surface** and **changing it** so that [$E = 1$]{.math-90}... **Setting** [$E$]{.math-90} to be [$1$]{.math-90}
+* Here, [$\textsf{do}(E = 1)$]{.math-90} means **diving into the DGP below the surface** and **changing it** so [$E = 1$]{.math-90}... **Setting** [$E$]{.math-90} to be [$1$]{.math-90}
 
 ::: {.callout-note title="$\text{DGP}(Y \mid \textsf{do}(E = 1))$"}
 
@@ -355,6 +373,29 @@ $X$ causes $Y$ if and only if:
 * $\Pr(Y = 1) = \frac{1}{6}$
 * $\Pr(Y = 1 \mid E = 1) = \frac{1}{3}$
 * $\Pr(Y = 1 \mid \textsf{do}(E = 1)) = \frac{1}{6}$
+
+## The Problem of Colliders
+
+* [Berkson's Paradox](https://en.wikipedia.org/wiki/Berkson%27s_paradox) example: $X \rightarrow Z \leftarrow Y$
+
+## The Final Diagrammatic Boss: SWIGs {.title-09 .crunch-title}
+
+* **S**ingle **W**orld **I**ntervention **G**raphs
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![](images/swigs_a0.svg){fig-align="center" width="400"}
+
+:::
+::: {.column width="50%"}
+
+![](images/swigs_a1.svg){fig-align="center" width="400"}
+
+:::
+::::
+
+![](images/swigs_combined.svg){fig-align="center" width="600"}
 
 ## References
 
