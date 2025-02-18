@@ -182,7 +182,7 @@ But, to make it more digestible, we can define some "helper axioms":
 * Given Axiom <i class='bi bi-1-circle'></i> and Theorem 1, we can **derive** Axiom <i class='bi bi-dash-circle'></i> as a **theorem**:
 
   $$
-  [\text{Theorem}] ~ \neg(p \barwedge q) \text{ satisfies all properties of }p \wedge q
+  [\text{Theorem 2}] ~ \neg(p \barwedge q) \text{ satisfies all properties of }p \wedge q
   $$
 
   Therefore, define $p \wedge q \triangleq \neg(p \barwedge q)$
@@ -410,9 +410,9 @@ all individuals $x$ and $y$, we have
 * *Input 2*: Attributes $J_{\text{merit}} \subseteq X_i$ that a society considers people **individually responsible** for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)
 * <i class='bi bi-1-circle'></i>: Set of individuals in society $S$ is **partitioned** into subsets $S_i$, where $i$ is some combination of particular **values** for the attributes in $X_{\text{advantage}}$
 * <i class='bi bi-2-circle'></i>: Individuals' **context-sensitive scores** are computed **relative to their group** $S_i$, as **percentile** of their $X_{\text{merit}}$ value relative to **distribution** of $X_{\text{merit}}$ values across $S_i$
-* *Outcome*: Now that we have **incorporated social context**, by converting the original **context-free units** (e.g., numeric SAT score) into **context-sensitive units** ($z$-score of numeric SAT score within distribution of comparable individuals), we can compare people **across groups** on the basis of **context-sensitive** scores!
+* *Outcome*: Now that we have **incorporated social context**, by converting the original **context-free units** (e.g., numeric SAT score) into **context-sensitive units** (percentile of numeric SAT score within distribution of comparable individuals), we can compare people **across groups** on the basis of **context-sensitive** scores!
 
-## An Overly-Simplistic Example (More on HW2!)
+## An Overly-Simplistic Example (More on HW2!) {.crunch-title .inline-90}
 
 * $\mathbf{x}_i = (x_{i,1}, x_{i,2}, x_{i,3}) = (\texttt{wealth}_i, \texttt{study\_hrs}_i, \texttt{SAT}_i)$
 * $J_{\text{advantage}} = (1) = (\texttt{wealth})$, $J_{\text{merit}} = (2) = (\texttt{study\_hrs})$

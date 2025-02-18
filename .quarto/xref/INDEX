@@ -113,5 +113,11 @@
   },
   "writeups/ai_fairness.ipynb": {
     "ai_fairness.html": "5fe7d745"
+  },
+  "writeups/fusing-horizons/index.qmd": {
+    "index.html": "d1a50a8a"
+  },
+  "writeups/habermas/index.qmd": {
+    "index.html": "6213a9fd"
   }
 }
