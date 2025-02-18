@@ -24,6 +24,8 @@ website:
         href: writeups/index.qmd
       - text: "Assignments"
         href: assignments.qmd
+      - text: "Midterm"
+        href: midterm.qmd
       - text: "Final Project"
         href: final.qmd
       - text: "Zoom Link <i class='bi bi-box-arrow-up-right ps-1'></i>"

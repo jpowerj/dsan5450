@@ -1,18 +1,5 @@
 [
   {
-    "listing": "/writeups/index.html",
-    "items": [
-      "/writeups/fusing-horizons/index.html",
-      "/writeups/categorical-imperative/index.html",
-      "/writeups/ai_fairness.html",
-      "/writeups/contested/index.html",
-      "/writeups/midterm/index.html",
-      "/writeups/pgm-intro/index.html",
-      "/writeups/w03.html",
-      "/writeups/w02.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/w01/index.html",
@@ -29,6 +16,18 @@
       "/w12/index.html",
       "/w13/index.html",
       "/w14/index.html"
+    ]
+  },
+  {
+    "listing": "/writeups/index.html",
+    "items": [
+      "/writeups/fusing-horizons/index.html",
+      "/writeups/categorical-imperative/index.html",
+      "/writeups/ai_fairness.html",
+      "/writeups/contested/index.html",
+      "/writeups/pgm-intro/index.html",
+      "/writeups/w03.html",
+      "/writeups/w02.html"
     ]
   }
 ]

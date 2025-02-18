@@ -2,8 +2,8 @@
 title: "DSAN 5450 Midterm Study Guide"
 author: "Jeff Jacobs"
 sidebar: mainnav
-date: 2024-02-20
-bibliography: "../../_DSAN5450.bib"
+date: 2025-02-18
+bibliography: "./_DSAN5450.bib"
 relevance: "Midterm"
 categories:
   - "Extra Writeups"
@@ -15,7 +15,7 @@ format:
 
 ## Overview
 
-The DSAN 5450 in-class midterm will start at **3:30pm on Wednesday, February 28th**. It is intended to take only 1.5 hours, but you will have 3 hours to take it just in case, so that it will be due by **6:30pm**.
+The DSAN 5450 in-class midterm will start at **3:30pm on Wednesday, February 26th**. It is intended to take only 1.5 hours, but you will have 3 hours to take it just in case, so that it will be due by **6:30pm**.
 
 We've covered a lot of... sometimes-disjointed topics thus far, so our goal for the midterm is to emphasize the most important takeaways from across the first six weeks of the class, by putting them in your brain's short-term memory **one more time** before we dive into the second, policy-focused half of the course when you come back from spring break! As a reminder, there is a very good reason to continually try and **re-remember** the same course topics, coming from studies of long-term memory retention:
 
@@ -156,7 +156,7 @@ This is the capital-B capital-D Big Deal approach to fairness, in my view, but y
 
 So, for the midterm, instead I will just say that the key thing I want you to be comfortable with for now is **drawing and interpreting Causal Diagrams** like the ones I've shown in the slides and drawn on the board in class.
 
-First and foremost, if you absorb the [Quick Intro to Probabilistic Graphical Models](../pgm-intro/index.qmd) writeup, you are most of the way there to understanding Causal Diagrams in general, since (sweeping some details under the rug) these Causal Diagrams are primarily just PGMs where we interpret the **edges** (the **arrows** in the PGMs) as hypothesized **causal effects**.
+First and foremost, if you absorb the [Quick Intro to Probabilistic Graphical Models](./writeups/pgm-intro/index.qmd) writeup, you are most of the way there to understanding Causal Diagrams in general, since (sweeping some details under the rug) these Causal Diagrams are primarily just PGMs where we interpret the **edges** (the **arrows** in the PGMs) as hypothesized **causal effects**.
 
 Thus, for the midterm, my first goal is to test your ability to read these PGMs and understand what they're **positing** ("saying") about the world. For example, if I give you a hypothesis like
 
