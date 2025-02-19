@@ -45,7 +45,32 @@ format:
 
 :::
 
-# Recap / Eureka Moment (for Midterm Prep Purposes) {.not-title-slide .title-10 data-name="Quick Midterm Thing"}
+
+# Schedule {.smaller .small-title .crunch-title .crunch-callout data-name="Schedule"}
+
+Today's Planned Schedule:
+
+| | Start | End | Topic |
+|:- |:- |:- |:- |
+| **Lecture** | 3:30pm | 3:45pm | [Recaps / Clarifications &rarr;](#quick-clarifications--recaps) |
+| | 3:45pm | 4:00pm | [Determinism $\rightarrow$ Probability $\rightarrow$ Causality &rarr;](#so-whats-the-problem) |
+| | 4:00pm | 4:30pm | [Fundamental Problem of Causal Inference &rarr;](#the-fundamental-problem-of-causal-inference) |
+| | 4:30pm | 5:00pm | [Do-Calculus &rarr;](#do-calculus) |
+| **Break!** | 5:00pm | 5:10pm | |
+| | 5:10pm | 6:00pm | [Chalkboard Lab: DAGs for Colliders &rarr;](#the-problem-of-colliders) |
+
+: {tbl-colwidths="[12,12,12,64]"}
+
+# Quick Clarifications / Recaps! {data-stack-name="Recap"}
+
+## Clarification: Ecological Inference
+
+* I gave the worst example for this: generalizing from population to single person (white people $\rightarrow$ Jeff)!
+* As Trey helpfully pointed out, this is the "obvious" fallacy of stereotyping a person based on group membership
+* In reality, the "ecological fallacy" is more subtly (but just as fallacious-ly) committed from aggregate to slightly-less-aggregate populations!
+* Example: [DC Public Schools](https://projects.propublica.org/private-school-demographics/districts/district-of-columbia-public-schools-1100030) vs. [Jackson-Reed](https://www.myschooldc.org/schools/profile/125)
+
+## Eureka Moment (for Midterm Prep Purposes) {.not-title-slide .title-09 .crunch-title .crunch-ul}
 
 {{< include ../dsan-globals/_globals-gg.qmd >}}
 
@@ -344,13 +369,15 @@ $X$ causes $Y$ if and only if:
 * $\Pr(Y = 1) = \; ?$
 * $\Pr(Y = 1 \mid E = 1) = \; ?$
 
+![](images/pgm_schools.svg){fig-align="center" width="500"}
+
 ## Top Secret Answers Slide (Don't Peek) {.title-09}
 
 * $\Pr(Y = 1) = \frac{1}{6}$
 * $\Pr(Y = 1 \mid E = 1) = \frac{1}{3}$
 * $\overset{✅}{\implies}$ One out of every three private-school graduates is successful, vs. one out of every six graduates overall
-* $\overset{❓}{\implies}$ Private school education **doubles** likelihood of success!
-* The latter is only true if *intervening*/*changing*/**do***ing* $E = 0 \leadsto E = 1$ is what moves $\Pr(Y = 1)$ from $\frac{1}{6}$ to $\frac{1}{3}$!
+* $\overset{❓}{\implies}$ Private school **doubles** likelihood of success!
+* Latter is only true if *intervening*/*changing*/**do***ing* $E = 0 \leadsto E = 1$ is what moves $\Pr(Y = 1)$ from $\frac{1}{6}$ to $\frac{1}{3}$!
 
 ## Chalkboard Time 2: Electric Boogaloo {.crunch-title .crunch-ul .crunch-callout .title-09}
 
@@ -373,10 +400,45 @@ $X$ causes $Y$ if and only if:
 * $\Pr(Y = 1) = \frac{1}{6}$
 * $\Pr(Y = 1 \mid E = 1) = \frac{1}{3}$
 * $\Pr(Y = 1 \mid \textsf{do}(E = 1)) = \frac{1}{6}$
+* The takeaway:
+  * $\Pr(Y = 1 \mid E = 1) < \Pr(Y = 1)$, but
+  * $\Pr(Y = 1 \mid \textsf{do}(E = 1)) = \Pr(Y = 1)$
 
-## The Problem of Colliders
+## The Problem of Colliders {.crunch-title .crunch-p}
 
-* [Berkson's Paradox](https://en.wikipedia.org/wiki/Berkson%27s_paradox) example: $X \rightarrow Z \leftarrow Y$
+[Berkson's Paradox](https://en.wikipedia.org/wiki/Berkson%27s_paradox):
+
+* $X$ and $Y$ are diseases which occur **independently**, no interrelationship, with probability $1/3$
+* **Either** $X$ **or** $Y$ sufficient for admission to hospital, $Z$
+* We have: $X \rightarrow Z \leftarrow Y$ [🚨 Collider alert!]
+
+![](images/pgm_berkson.svg){fig-align="center"}
+
+## What's the Issue?
+
+* If we only have data on patients ($Z = 1$), observing $X = 1$ lowers $\Pr(Y = 1)$, despite the fact that $X \perp Y$!
+* $X \perp Y$, but $(X \not\perp Y) \mid Z$
+
+* The moral: controlling for stuff does **not** necessarily solve problem of causal inference, and can actually make it **worse** (inducing correlations where they don't actually exist) 😭
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![](images/pgm_berkson_unobs.svg){fig-align="center" width="260"}
+
+:::
+::: {.column width="50%"}
+
+![](images/pgm_berkson_obs.svg){fig-align="center" width="260"}
+
+:::
+::::
+
+## The Causal Trinity: When Controlling for Stuff Helps
+
+* Fork: Controlling helps!
+* Confounder: Controlling helps!
+* Collider: Controlling makes things worse 😞
 
 ## The Final Diagrammatic Boss: SWIGs {.title-09 .crunch-title}
 

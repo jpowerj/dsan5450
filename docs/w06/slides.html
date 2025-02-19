@@ -232,8 +232,81 @@ Jeff Jacobs
 
   <p class="date">Wednesday, February 19, 2025</p>
 </section>
-<section id="recap-eureka-moment-for-midterm-prep-purposes" class="title-slide slide level1 not-title-slide title-10 center" data-name="Quick Midterm Thing">
-<h1>Recap / Eureka Moment (for Midterm Prep Purposes)</h1>
+<section id="schedule" class="title-slide slide level1 smaller small-title crunch-title crunch-callout center" data-name="Schedule">
+<h1>Schedule</h1>
+<p>Today’s Planned Schedule:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 64%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Start</th>
+<th style="text-align: left;">End</th>
+<th style="text-align: left;">Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Lecture</strong></td>
+<td style="text-align: left;">3:30pm</td>
+<td style="text-align: left;">3:45pm</td>
+<td style="text-align: left;"><a href="#/quick-clarifications--recaps">Recaps / Clarifications →</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">3:45pm</td>
+<td style="text-align: left;">4:00pm</td>
+<td style="text-align: left;"><a href="#/so-whats-the-problem">Determinism <span class="math inline">\(\rightarrow\)</span> Probability <span class="math inline">\(\rightarrow\)</span> Causality →</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">4:00pm</td>
+<td style="text-align: left;">4:30pm</td>
+<td style="text-align: left;"><a href="#/the-fundamental-problem-of-causal-inference">Fundamental Problem of Causal Inference →</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">4:30pm</td>
+<td style="text-align: left;">5:00pm</td>
+<td style="text-align: left;"><a href="#/do-calculus">Do-Calculus →</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Break!</strong></td>
+<td style="text-align: left;">5:00pm</td>
+<td style="text-align: left;">5:10pm</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">5:10pm</td>
+<td style="text-align: left;">6:00pm</td>
+<td style="text-align: left;"><a href="#/the-problem-of-colliders">Chalkboard Lab: DAGs for Colliders →</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<section id="quick-clarifications-recaps" class="title-slide slide level1 center" data-stack-name="Recap">
+<h1>Quick Clarifications / Recaps!</h1>
+
+</section>
+<section id="clarification-ecological-inference" class="slide level2">
+<h2>Clarification: Ecological Inference</h2>
+<ul>
+<li>I gave the worst example for this: generalizing from population to single person (white people <span class="math inline">\(\rightarrow\)</span> Jeff)!</li>
+<li>As Trey helpfully pointed out, this is the “obvious” fallacy of stereotyping a person based on group membership</li>
+<li>In reality, the “ecological fallacy” is more subtly (but just as fallacious-ly) committed from aggregate to slightly-less-aggregate populations!</li>
+<li>Example: <a href="https://projects.propublica.org/private-school-demographics/districts/district-of-columbia-public-schools-1100030">DC Public Schools</a> vs.&nbsp;<a href="https://www.myschooldc.org/schools/profile/125">Jackson-Reed</a></li>
+</ul>
+</section>
+<section id="eureka-moment-for-midterm-prep-purposes" class="slide level2 not-title-slide title-09 crunch-title crunch-ul">
+<h2>Eureka Moment (for Midterm Prep Purposes)</h2>
 <div class="hidden">
 
 </div>
@@ -241,8 +314,7 @@ Jeff Jacobs
 <li>I totally forgot to mention: John Stuart Mill, the progenitor of what we today identify as <strong>utilitarianism</strong>, was himself tortured mercilessly, by his father John Mill (bffs with Jeremy Bentham) for the “greater good of society”!</li>
 </ul>
 
-<img data-src="images/js-mill-eureka.jpg" class="quarto-figure quarto-figure-center r-stretch"></section>
-
+<img data-src="images/js-mill-eureka.jpg" class="quarto-figure quarto-figure-center r-stretch"></section></section>
 <section>
 <section id="blasting-off-into-causality" class="title-slide slide level1 title-10 not-title-slide center" data-stack-name="Data-Generating Processes">
 <h1>Blasting Off Into Causality!</h1>
@@ -446,15 +518,16 @@ Jeff Jacobs
 <li><span class="math inline">\(\Pr(Y = 1) = \; ?\)</span></li>
 <li><span class="math inline">\(\Pr(Y = 1 \mid E = 1) = \; ?\)</span></li>
 </ul>
-</section>
+
+<img data-src="images/pgm_schools.svg" class="quarto-figure quarto-figure-center r-stretch" width="500"></section>
 <section id="top-secret-answers-slide-dont-peek" class="slide level2 title-09">
 <h2>Top Secret Answers Slide (Don’t Peek)</h2>
 <ul>
 <li><span class="math inline">\(\Pr(Y = 1) = \frac{1}{6}\)</span></li>
 <li><span class="math inline">\(\Pr(Y = 1 \mid E = 1) = \frac{1}{3}\)</span></li>
 <li><span class="math inline">\(\overset{✅}{\implies}\)</span> One out of every three private-school graduates is successful, vs.&nbsp;one out of every six graduates overall</li>
-<li><span class="math inline">\(\overset{❓}{\implies}\)</span> Private school education <strong>doubles</strong> likelihood of success!</li>
-<li>The latter is only true if <em>intervening</em>/<em>changing</em>/<strong>do</strong><em>ing</em> <span class="math inline">\(E = 0 \leadsto E = 1\)</span> is what moves <span class="math inline">\(\Pr(Y = 1)\)</span> from <span class="math inline">\(\frac{1}{6}\)</span> to <span class="math inline">\(\frac{1}{3}\)</span>!</li>
+<li><span class="math inline">\(\overset{❓}{\implies}\)</span> Private school <strong>doubles</strong> likelihood of success!</li>
+<li>Latter is only true if <em>intervening</em>/<em>changing</em>/<strong>do</strong><em>ing</em> <span class="math inline">\(E = 0 \leadsto E = 1\)</span> is what moves <span class="math inline">\(\Pr(Y = 1)\)</span> from <span class="math inline">\(\frac{1}{6}\)</span> to <span class="math inline">\(\frac{1}{3}\)</span>!</li>
 </ul>
 </section>
 <section id="chalkboard-time-2-electric-boogaloo" class="slide level2 crunch-title crunch-ul crunch-callout title-09 scrollable">
@@ -492,12 +565,51 @@ Jeff Jacobs
 <li><span class="math inline">\(\Pr(Y = 1) = \frac{1}{6}\)</span></li>
 <li><span class="math inline">\(\Pr(Y = 1 \mid E = 1) = \frac{1}{3}\)</span></li>
 <li><span class="math inline">\(\Pr(Y = 1 \mid \textsf{do}(E = 1)) = \frac{1}{6}\)</span></li>
+<li>The takeaway:
+<ul>
+<li><span class="math inline">\(\Pr(Y = 1 \mid E = 1) &lt; \Pr(Y = 1)\)</span>, but</li>
+<li><span class="math inline">\(\Pr(Y = 1 \mid \textsf{do}(E = 1)) = \Pr(Y = 1)\)</span></li>
+</ul></li>
 </ul>
 </section>
-<section id="the-problem-of-colliders" class="slide level2">
+<section id="the-problem-of-colliders" class="slide level2 crunch-title crunch-p">
 <h2>The Problem of Colliders</h2>
+<p><a href="https://en.wikipedia.org/wiki/Berkson%27s_paradox">Berkson’s Paradox</a>:</p>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Berkson%27s_paradox">Berkson’s Paradox</a> example: <span class="math inline">\(X \rightarrow Z \leftarrow Y\)</span></li>
+<li><span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are diseases which occur <strong>independently</strong>, no interrelationship, with probability <span class="math inline">\(1/3\)</span></li>
+<li><strong>Either</strong> <span class="math inline">\(X\)</span> <strong>or</strong> <span class="math inline">\(Y\)</span> sufficient for admission to hospital, <span class="math inline">\(Z\)</span></li>
+<li>We have: <span class="math inline">\(X \rightarrow Z \leftarrow Y\)</span> [🚨 Collider alert!]</li>
+</ul>
+
+<img data-src="images/pgm_berkson.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="whats-the-issue" class="slide level2">
+<h2>What’s the Issue?</h2>
+<ul>
+<li><p>If we only have data on patients (<span class="math inline">\(Z = 1\)</span>), observing <span class="math inline">\(X = 1\)</span> lowers <span class="math inline">\(\Pr(Y = 1)\)</span>, despite the fact that <span class="math inline">\(X \perp Y\)</span>!</p></li>
+<li><p><span class="math inline">\(X \perp Y\)</span>, but <span class="math inline">\((X \not\perp Y) \mid Z\)</span></p></li>
+<li><p>The moral: controlling for stuff does <strong>not</strong> necessarily solve problem of causal inference, and can actually make it <strong>worse</strong> (inducing correlations where they don’t actually exist) 😭</p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pgm_berkson_unobs.svg" class="quarto-figure quarto-figure-center" width="260"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pgm_berkson_obs.svg" class="quarto-figure quarto-figure-center" width="260"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="the-causal-trinity-when-controlling-for-stuff-helps" class="slide level2">
+<h2>The Causal Trinity: When Controlling for Stuff Helps</h2>
+<ul>
+<li>Fork: Controlling helps!</li>
+<li>Confounder: Controlling helps!</li>
+<li>Collider: Controlling makes things worse 😞</li>
 </ul>
 </section>
 <section id="the-final-diagrammatic-boss-swigs" class="slide level2 title-09 crunch-title">

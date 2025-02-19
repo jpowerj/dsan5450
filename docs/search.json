@@ -573,6 +573,20 @@
     ]
   },
   {
+    "objectID": "w06/slides.html#clarification-ecological-inference",
+    "href": "w06/slides.html#clarification-ecological-inference",
+    "title": "Week 6: Causality in Ethics and Policy",
+    "section": "Clarification: Ecological Inference",
+    "text": "Clarification: Ecological Inference\n\nI gave the worst example for this: generalizing from population to single person (white people \\(\\rightarrow\\) Jeff)!\nAs Trey helpfully pointed out, this is the “obvious” fallacy of stereotyping a person based on group membership\nIn reality, the “ecological fallacy” is more subtly (but just as fallacious-ly) committed from aggregate to slightly-less-aggregate populations!\nExample: DC Public Schools vs. Jackson-Reed"
+  },
+  {
+    "objectID": "w06/slides.html#eureka-moment-for-midterm-prep-purposes",
+    "href": "w06/slides.html#eureka-moment-for-midterm-prep-purposes",
+    "title": "Week 6: Causality in Ethics and Policy",
+    "section": "Eureka Moment (for Midterm Prep Purposes)",
+    "text": "Eureka Moment (for Midterm Prep Purposes)\n\n\n\n\nI totally forgot to mention: John Stuart Mill, the progenitor of what we today identify as utilitarianism, was himself tortured mercilessly, by his father John Mill (bffs with Jeremy Bentham) for the “greater good of society”!"
+  },
+  {
     "objectID": "w06/slides.html#dgps-and-the-emergence-of-order",
     "href": "w06/slides.html#dgps-and-the-emergence-of-order",
     "title": "Week 6: Causality in Ethics and Policy",
@@ -675,7 +689,7 @@
     "href": "w06/slides.html#top-secret-answers-slide-dont-peek",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "Top Secret Answers Slide (Don’t Peek)",
-    "text": "Top Secret Answers Slide (Don’t Peek)\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\overset{✅}{\\implies}\\) One out of every three private-school graduates is successful, vs. one out of every six graduates overall\n\\(\\overset{❓}{\\implies}\\) Private school education doubles likelihood of success!\nThe latter is only true if intervening/changing/doing \\(E = 0 \\leadsto E = 1\\) is what moves \\(\\Pr(Y = 1)\\) from \\(\\frac{1}{6}\\) to \\(\\frac{1}{3}\\)!"
+    "text": "Top Secret Answers Slide (Don’t Peek)\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\overset{✅}{\\implies}\\) One out of every three private-school graduates is successful, vs. one out of every six graduates overall\n\\(\\overset{❓}{\\implies}\\) Private school doubles likelihood of success!\nLatter is only true if intervening/changing/doing \\(E = 0 \\leadsto E = 1\\) is what moves \\(\\Pr(Y = 1)\\) from \\(\\frac{1}{6}\\) to \\(\\frac{1}{3}\\)!"
   },
   {
     "objectID": "w06/slides.html#chalkboard-time-2-electric-boogaloo",
@@ -689,14 +703,28 @@
     "href": "w06/slides.html#double-quadruple-secret-answer-slide",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "Double Quadruple Secret Answer Slide",
-    "text": "Double Quadruple Secret Answer Slide\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\Pr(Y = 1 \\mid \\textsf{do}(E = 1)) = \\frac{1}{6}\\)"
+    "text": "Double Quadruple Secret Answer Slide\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\Pr(Y = 1 \\mid \\textsf{do}(E = 1)) = \\frac{1}{6}\\)\nThe takeaway:\n\n\\(\\Pr(Y = 1 \\mid E = 1) &lt; \\Pr(Y = 1)\\), but\n\\(\\Pr(Y = 1 \\mid \\textsf{do}(E = 1)) = \\Pr(Y = 1)\\)"
   },
   {
     "objectID": "w06/slides.html#the-problem-of-colliders",
     "href": "w06/slides.html#the-problem-of-colliders",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "The Problem of Colliders",
-    "text": "The Problem of Colliders\n\nBerkson’s Paradox example: \\(X \\rightarrow Z \\leftarrow Y\\)"
+    "text": "The Problem of Colliders\nBerkson’s Paradox:\n\n\\(X\\) and \\(Y\\) are diseases which occur independently, no interrelationship, with probability \\(1/3\\)\nEither \\(X\\) or \\(Y\\) sufficient for admission to hospital, \\(Z\\)\nWe have: \\(X \\rightarrow Z \\leftarrow Y\\) [🚨 Collider alert!]"
+  },
+  {
+    "objectID": "w06/slides.html#whats-the-issue",
+    "href": "w06/slides.html#whats-the-issue",
+    "title": "Week 6: Causality in Ethics and Policy",
+    "section": "What’s the Issue?",
+    "text": "What’s the Issue?\n\nIf we only have data on patients (\\(Z = 1\\)), observing \\(X = 1\\) lowers \\(\\Pr(Y = 1)\\), despite the fact that \\(X \\perp Y\\)!\n\\(X \\perp Y\\), but \\((X \\not\\perp Y) \\mid Z\\)\nThe moral: controlling for stuff does not necessarily solve problem of causal inference, and can actually make it worse (inducing correlations where they don’t actually exist) 😭"
+  },
+  {
+    "objectID": "w06/slides.html#the-causal-trinity-when-controlling-for-stuff-helps",
+    "href": "w06/slides.html#the-causal-trinity-when-controlling-for-stuff-helps",
+    "title": "Week 6: Causality in Ethics and Policy",
+    "section": "The Causal Trinity: When Controlling for Stuff Helps",
+    "text": "The Causal Trinity: When Controlling for Stuff Helps\n\nFork: Controlling helps!\nConfounder: Controlling helps!\nCollider: Controlling makes things worse 😞"
   },
   {
     "objectID": "w06/slides.html#the-final-diagrammatic-boss-swigs",
@@ -718,6 +746,26 @@
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "",
     "text": "Open slides in new window →",
+    "crumbs": [
+      "Week 6: {{< var w06.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w06/index.html#clarification-ecological-inference",
+    "href": "w06/index.html#clarification-ecological-inference",
+    "title": "Week 6: Causality in Ethics and Policy",
+    "section": "Clarification: Ecological Inference",
+    "text": "Clarification: Ecological Inference\n\nI gave the worst example for this: generalizing from population to single person (white people \\(\\rightarrow\\) Jeff)!\nAs Trey helpfully pointed out, this is the “obvious” fallacy of stereotyping a person based on group membership\nIn reality, the “ecological fallacy” is more subtly (but just as fallacious-ly) committed from aggregate to slightly-less-aggregate populations!\nExample: DC Public Schools vs. Jackson-Reed",
+    "crumbs": [
+      "Week 6: {{< var w06.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w06/index.html#eureka-moment-for-midterm-prep-purposes",
+    "href": "w06/index.html#eureka-moment-for-midterm-prep-purposes",
+    "title": "Week 6: Causality in Ethics and Policy",
+    "section": "Eureka Moment (for Midterm Prep Purposes)",
+    "text": "Eureka Moment (for Midterm Prep Purposes)\n\n\n# For slides\nlibrary(ggplot2)\ncbPalette &lt;- c(\"#E69F00\", \"#56B4E9\", \"#009E73\", \"#F0E442\", \"#0072B2\", \"#D55E00\", \"#CC79A7\")\noptions(ggplot2.discrete.colour = cbPalette)\n# Theme generator, for given sizes\ntheme_dsan &lt;- function(plot_type = \"full\") {\n    if (plot_type == \"full\") {\n        custom_base_size &lt;- 16\n    } else if (plot_type == \"half\") {\n        custom_base_size &lt;- 22\n    } else if (plot_type == \"quarter\") {\n        custom_base_size &lt;- 28\n    } else {\n        # plot_type == \"col\"\n        custom_base_size &lt;- 22\n    }\n    theme &lt;- theme_classic(base_size = custom_base_size) +\n        theme(\n            plot.title = element_text(hjust = 0.5),\n            plot.subtitle = element_text(hjust = 0.5),\n            legend.title = element_text(hjust = 0.5),\n            legend.box.background = element_rect(colour = \"black\")\n        )\n    return(theme)\n}\n\nknitr::opts_chunk$set(fig.align = \"center\")\ng_pointsize &lt;- 5\ng_linesize &lt;- 1\n# Technically it should always be linewidth\ng_linewidth &lt;- 1\ng_textsize &lt;- 14\n\nremove_legend_title &lt;- function() {\n    return(theme(\n        legend.title = element_blank(),\n        legend.spacing.y = unit(0, \"mm\")\n    ))\n}\n\n\n\nI totally forgot to mention: John Stuart Mill, the progenitor of what we today identify as utilitarianism, was himself tortured mercilessly, by his father John Mill (bffs with Jeremy Bentham) for the “greater good of society”!",
     "crumbs": [
       "Week 6: {{< var w06.date-md >}}"
     ]
@@ -867,7 +915,7 @@
     "href": "w06/index.html#top-secret-answers-slide-dont-peek",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "Top Secret Answers Slide (Don’t Peek)",
-    "text": "Top Secret Answers Slide (Don’t Peek)\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\overset{✅}{\\implies}\\) One out of every three private-school graduates is successful, vs. one out of every six graduates overall\n\\(\\overset{❓}{\\implies}\\) Private school education doubles likelihood of success!\nThe latter is only true if intervening/changing/doing \\(E = 0 \\leadsto E = 1\\) is what moves \\(\\Pr(Y = 1)\\) from \\(\\frac{1}{6}\\) to \\(\\frac{1}{3}\\)!",
+    "text": "Top Secret Answers Slide (Don’t Peek)\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\overset{✅}{\\implies}\\) One out of every three private-school graduates is successful, vs. one out of every six graduates overall\n\\(\\overset{❓}{\\implies}\\) Private school doubles likelihood of success!\nLatter is only true if intervening/changing/doing \\(E = 0 \\leadsto E = 1\\) is what moves \\(\\Pr(Y = 1)\\) from \\(\\frac{1}{6}\\) to \\(\\frac{1}{3}\\)!",
     "crumbs": [
       "Week 6: {{< var w06.date-md >}}"
     ]
@@ -887,7 +935,7 @@
     "href": "w06/index.html#double-quadruple-secret-answer-slide",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "Double Quadruple Secret Answer Slide",
-    "text": "Double Quadruple Secret Answer Slide\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\Pr(Y = 1 \\mid \\textsf{do}(E = 1)) = \\frac{1}{6}\\)",
+    "text": "Double Quadruple Secret Answer Slide\n\n\\(\\Pr(Y = 1) = \\frac{1}{6}\\)\n\\(\\Pr(Y = 1 \\mid E = 1) = \\frac{1}{3}\\)\n\\(\\Pr(Y = 1 \\mid \\textsf{do}(E = 1)) = \\frac{1}{6}\\)\nThe takeaway:\n\n\\(\\Pr(Y = 1 \\mid E = 1) &lt; \\Pr(Y = 1)\\), but\n\\(\\Pr(Y = 1 \\mid \\textsf{do}(E = 1)) = \\Pr(Y = 1)\\)",
     "crumbs": [
       "Week 6: {{< var w06.date-md >}}"
     ]
@@ -897,7 +945,27 @@
     "href": "w06/index.html#the-problem-of-colliders",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "The Problem of Colliders",
-    "text": "The Problem of Colliders\n\nBerkson’s Paradox example: \\(X \\rightarrow Z \\leftarrow Y\\)",
+    "text": "The Problem of Colliders\nBerkson’s Paradox:\n\n\\(X\\) and \\(Y\\) are diseases which occur independently, no interrelationship, with probability \\(1/3\\)\nEither \\(X\\) or \\(Y\\) sufficient for admission to hospital, \\(Z\\)\nWe have: \\(X \\rightarrow Z \\leftarrow Y\\) [🚨 Collider alert!]",
+    "crumbs": [
+      "Week 6: {{< var w06.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w06/index.html#whats-the-issue",
+    "href": "w06/index.html#whats-the-issue",
+    "title": "Week 6: Causality in Ethics and Policy",
+    "section": "What’s the Issue?",
+    "text": "What’s the Issue?\n\nIf we only have data on patients (\\(Z = 1\\)), observing \\(X = 1\\) lowers \\(\\Pr(Y = 1)\\), despite the fact that \\(X \\perp Y\\)!\n\\(X \\perp Y\\), but \\((X \\not\\perp Y) \\mid Z\\)\nThe moral: controlling for stuff does not necessarily solve problem of causal inference, and can actually make it worse (inducing correlations where they don’t actually exist) 😭",
+    "crumbs": [
+      "Week 6: {{< var w06.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w06/index.html#the-causal-trinity-when-controlling-for-stuff-helps",
+    "href": "w06/index.html#the-causal-trinity-when-controlling-for-stuff-helps",
+    "title": "Week 6: Causality in Ethics and Policy",
+    "section": "The Causal Trinity: When Controlling for Stuff Helps",
+    "text": "The Causal Trinity: When Controlling for Stuff Helps\n\nFork: Controlling helps!\nConfounder: Controlling helps!\nCollider: Controlling makes things worse 😞",
     "crumbs": [
       "Week 6: {{< var w06.date-md >}}"
     ]
