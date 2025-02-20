@@ -9,7 +9,7 @@ categories:
   - "Extra Writeups"
 format:
   html:
-    cache: true
+    cache: false
     df-print: kable
     html-math-method: mathjax
     toc: true
@@ -255,7 +255,6 @@ And now we can simulate a population as before, re-computing the probabilities i
 ```{r}
 #| label: dgp-post-population
 set.seed(5450)
-N <- 1000
 e1_df <- tibble(name=character(), v=numeric(), e=numeric(), y=numeric())
 # Run DGP N times, to generate size-N population
 for (i in 1:N) {
