@@ -21,6 +21,7 @@
   {
     "listing": "/writeups/index.html",
     "items": [
+      "/writeups/do-calculus/index.html",
       "/writeups/fusing-horizons/index.html",
       "/writeups/categorical-imperative/index.html",
       "/writeups/ai_fairness.html",
