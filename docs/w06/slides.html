@@ -308,7 +308,47 @@ Jeff Jacobs
 <section id="eureka-moment-for-midterm-prep-purposes" class="slide level2 not-title-slide title-09 crunch-title crunch-ul">
 <h2>Eureka Moment (for Midterm Prep Purposes)</h2>
 <div class="hidden">
-
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># For slides</span></span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a></a>cbPalette <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"#E69F00"</span>, <span class="st">"#56B4E9"</span>, <span class="st">"#009E73"</span>, <span class="st">"#F0E442"</span>, <span class="st">"#0072B2"</span>, <span class="st">"#D55E00"</span>, <span class="st">"#CC79A7"</span>)</span>
+<span id="cb1-4"><a></a><span class="fu">options</span>(<span class="at">ggplot2.discrete.colour =</span> cbPalette)</span>
+<span id="cb1-5"><a></a><span class="co"># Theme generator, for given sizes</span></span>
+<span id="cb1-6"><a></a>theme_dsan <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">plot_type =</span> <span class="st">"full"</span>) {</span>
+<span id="cb1-7"><a></a>    <span class="cf">if</span> (plot_type <span class="sc">==</span> <span class="st">"full"</span>) {</span>
+<span id="cb1-8"><a></a>        custom_base_size <span class="ot">&lt;-</span> <span class="dv">16</span></span>
+<span id="cb1-9"><a></a>    } <span class="cf">else</span> <span class="cf">if</span> (plot_type <span class="sc">==</span> <span class="st">"half"</span>) {</span>
+<span id="cb1-10"><a></a>        custom_base_size <span class="ot">&lt;-</span> <span class="dv">22</span></span>
+<span id="cb1-11"><a></a>    } <span class="cf">else</span> <span class="cf">if</span> (plot_type <span class="sc">==</span> <span class="st">"quarter"</span>) {</span>
+<span id="cb1-12"><a></a>        custom_base_size <span class="ot">&lt;-</span> <span class="dv">28</span></span>
+<span id="cb1-13"><a></a>    } <span class="cf">else</span> {</span>
+<span id="cb1-14"><a></a>        <span class="co"># plot_type == "col"</span></span>
+<span id="cb1-15"><a></a>        custom_base_size <span class="ot">&lt;-</span> <span class="dv">22</span></span>
+<span id="cb1-16"><a></a>    }</span>
+<span id="cb1-17"><a></a>    theme <span class="ot">&lt;-</span> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> custom_base_size) <span class="sc">+</span></span>
+<span id="cb1-18"><a></a>        <span class="fu">theme</span>(</span>
+<span id="cb1-19"><a></a>            <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb1-20"><a></a>            <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb1-21"><a></a>            <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb1-22"><a></a>            <span class="at">legend.box.background =</span> <span class="fu">element_rect</span>(<span class="at">colour =</span> <span class="st">"black"</span>)</span>
+<span id="cb1-23"><a></a>        )</span>
+<span id="cb1-24"><a></a>    <span class="fu">return</span>(theme)</span>
+<span id="cb1-25"><a></a>}</span>
+<span id="cb1-26"><a></a></span>
+<span id="cb1-27"><a></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">fig.align =</span> <span class="st">"center"</span>)</span>
+<span id="cb1-28"><a></a>g_pointsize <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb1-29"><a></a>g_linesize <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb1-30"><a></a><span class="co"># Technically it should always be linewidth</span></span>
+<span id="cb1-31"><a></a>g_linewidth <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb1-32"><a></a>g_textsize <span class="ot">&lt;-</span> <span class="dv">14</span></span>
+<span id="cb1-33"><a></a></span>
+<span id="cb1-34"><a></a>remove_legend_title <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
+<span id="cb1-35"><a></a>    <span class="fu">return</span>(<span class="fu">theme</span>(</span>
+<span id="cb1-36"><a></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-37"><a></a>        <span class="at">legend.spacing.y =</span> <span class="fu">unit</span>(<span class="dv">0</span>, <span class="st">"mm"</span>)</span>
+<span id="cb1-38"><a></a>    ))</span>
+<span id="cb1-39"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <ul>
 <li>I totally forgot to mention: John Stuart Mill, the progenitor of what we today identify as <strong>utilitarianism</strong>, was himself tortured mercilessly, by his father John Mill (bffs with Jeremy Bentham) for the “greater good of society”!</li>
@@ -346,11 +386,100 @@ Jeff Jacobs
 </section>
 <section id="the-result-16-steps" class="slide level2">
 <h2>The Result: 16 Steps</h2>
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(tibble)</span>
+<span id="cb2-2"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-3"><a></a><span class="fu">library</span>(ggExtra)</span>
+<span id="cb2-4"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb2-5"><a></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb2-6"><a></a><span class="co"># From McElreath!</span></span>
+<span id="cb2-7"><a></a>gen_histo <span class="ot">&lt;-</span> <span class="cf">function</span>(reps, num_steps) {</span>
+<span id="cb2-8"><a></a>  support <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb2-9"><a></a>  pos <span class="ot">&lt;-</span><span class="fu">replicate</span>(reps, <span class="fu">sum</span>(<span class="fu">sample</span>(support,num_steps,<span class="at">replace=</span><span class="cn">TRUE</span>,<span class="at">prob=</span><span class="fu">c</span>(<span class="fl">0.5</span>,<span class="fl">0.5</span>))))</span>
+<span id="cb2-10"><a></a>  <span class="co">#print(mean(pos))</span></span>
+<span id="cb2-11"><a></a>  <span class="co">#print(var(pos))</span></span>
+<span id="cb2-12"><a></a>  pos_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x=</span>pos)</span>
+<span id="cb2-13"><a></a>  clt_distr <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">dnorm</span>(x, <span class="dv">0</span>, <span class="fu">sqrt</span>(num_steps))</span>
+<span id="cb2-14"><a></a>  plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(pos_df, <span class="fu">aes</span>(<span class="at">x=</span>x)) <span class="sc">+</span></span>
+<span id="cb2-15"><a></a>    <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">after_stat</span>(density)), <span class="at">fill=</span>cbPalette[<span class="dv">1</span>], <span class="at">binwidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb2-16"><a></a>    <span class="fu">stat_function</span>(<span class="at">fun =</span> clt_distr) <span class="sc">+</span></span>
+<span id="cb2-17"><a></a>    <span class="fu">theme_dsan</span>(<span class="st">"quarter"</span>) <span class="sc">+</span></span>
+<span id="cb2-18"><a></a>    <span class="fu">theme</span>(<span class="at">title=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">16</span>)) <span class="sc">+</span></span>
+<span id="cb2-19"><a></a>    <span class="fu">labs</span>(</span>
+<span id="cb2-20"><a></a>      <span class="at">title=</span><span class="fu">paste0</span>(reps,<span class="st">" Random Walks, "</span>,num_steps,<span class="st">" Steps"</span>)</span>
+<span id="cb2-21"><a></a>    )</span>
+<span id="cb2-22"><a></a>  <span class="fu">return</span>(plot)</span>
+<span id="cb2-23"><a></a>}</span>
+<span id="cb2-24"><a></a>gen_walkplot <span class="ot">&lt;-</span> <span class="cf">function</span>(num_people, num_steps, <span class="at">opacity=</span><span class="fl">0.15</span>) {</span>
+<span id="cb2-25"><a></a>  support <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb2-26"><a></a>  <span class="co"># Unique id for each person</span></span>
+<span id="cb2-27"><a></a>  pid <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>, num_people)</span>
+<span id="cb2-28"><a></a>  pid_tib <span class="ot">&lt;-</span> <span class="fu">tibble</span>(pid)</span>
+<span id="cb2-29"><a></a>  pos_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>()</span>
+<span id="cb2-30"><a></a>  end_df <span class="ot">&lt;-</span> <span class="fu">tibble</span>()</span>
+<span id="cb2-31"><a></a>  all_steps <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">replicate</span>(num_people, <span class="fu">sample</span>(support, num_steps, <span class="at">replace =</span> <span class="cn">TRUE</span>, <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>))))</span>
+<span id="cb2-32"><a></a>  csums <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">apply</span>(all_steps, <span class="dv">1</span>, cumsum))</span>
+<span id="cb2-33"><a></a>  csums <span class="ot">&lt;-</span> <span class="fu">cbind</span>(<span class="dv">0</span>, csums)</span>
+<span id="cb2-34"><a></a>  <span class="co"># Last col is the ending positions</span></span>
+<span id="cb2-35"><a></a>  ending_pos <span class="ot">&lt;-</span> csums[, <span class="fu">dim</span>(csums)[<span class="dv">2</span>]]</span>
+<span id="cb2-36"><a></a>  end_tib <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">pid =</span> <span class="fu">seq</span>(<span class="dv">1</span>, num_people), <span class="at">endpos =</span> ending_pos, <span class="at">x =</span> num_steps)</span>
+<span id="cb2-37"><a></a>  <span class="co"># Now convert to tibble</span></span>
+<span id="cb2-38"><a></a>  ctib <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(csums, <span class="at">name_repair =</span> <span class="st">"none"</span>)</span>
+<span id="cb2-39"><a></a>  merged_tib <span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(pid_tib, ctib)</span>
+<span id="cb2-40"><a></a>  long_tib <span class="ot">&lt;-</span> merged_tib <span class="sc">%&gt;%</span> <span class="fu">pivot_longer</span>(<span class="sc">!</span>pid)</span>
+<span id="cb2-41"><a></a>  <span class="co"># Convert name -&gt; step_num</span></span>
+<span id="cb2-42"><a></a>  long_tib <span class="ot">&lt;-</span> long_tib <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">step_num =</span> <span class="fu">strtoi</span>(<span class="fu">gsub</span>(<span class="st">"V"</span>, <span class="st">""</span>, name)) <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb2-43"><a></a>  <span class="co"># print(end_df)</span></span>
+<span id="cb2-44"><a></a>  grid_color <span class="ot">&lt;-</span> <span class="fu">rgb</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.1</span>)</span>
+<span id="cb2-45"><a></a></span>
+<span id="cb2-46"><a></a>  <span class="co"># And plot!</span></span>
+<span id="cb2-47"><a></a>  walkplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(</span>
+<span id="cb2-48"><a></a>      long_tib,</span>
+<span id="cb2-49"><a></a>      <span class="fu">aes</span>(</span>
+<span id="cb2-50"><a></a>          <span class="at">x =</span> step_num,</span>
+<span id="cb2-51"><a></a>          <span class="at">y =</span> value,</span>
+<span id="cb2-52"><a></a>          <span class="at">group =</span> pid,</span>
+<span id="cb2-53"><a></a>          <span class="co"># color=factor(label)</span></span>
+<span id="cb2-54"><a></a>      )</span>
+<span id="cb2-55"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb2-56"><a></a>      <span class="fu">geom_line</span>(<span class="at">linewidth =</span> g_linesize, <span class="at">alpha =</span> opacity, <span class="at">color =</span> cbPalette[<span class="dv">1</span>]) <span class="sc">+</span></span>
+<span id="cb2-57"><a></a>      <span class="fu">geom_point</span>(<span class="at">data =</span> end_tib, <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> endpos), <span class="at">alpha =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb2-58"><a></a>      <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, num_steps, num_steps <span class="sc">/</span> <span class="dv">4</span>)) <span class="sc">+</span></span>
+<span id="cb2-59"><a></a>      <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="dv">20</span>, <span class="dv">10</span>)) <span class="sc">+</span></span>
+<span id="cb2-60"><a></a>      <span class="fu">theme_dsan</span>(<span class="st">"quarter"</span>) <span class="sc">+</span></span>
+<span id="cb2-61"><a></a>      <span class="fu">theme</span>(</span>
+<span id="cb2-62"><a></a>          <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb2-63"><a></a>          <span class="at">title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>)</span>
+<span id="cb2-64"><a></a>      ) <span class="sc">+</span></span>
+<span id="cb2-65"><a></a>      <span class="fu">theme</span>(</span>
+<span id="cb2-66"><a></a>          <span class="at">panel.grid.major.y =</span> <span class="fu">element_line</span>(<span class="at">color =</span> grid_color, <span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">linetype =</span> <span class="dv">1</span>)</span>
+<span id="cb2-67"><a></a>      ) <span class="sc">+</span></span>
+<span id="cb2-68"><a></a>      <span class="fu">labs</span>(</span>
+<span id="cb2-69"><a></a>          <span class="at">title =</span> <span class="fu">paste0</span>(num_people, <span class="st">" Random Walks, "</span>, num_steps, <span class="st">" Steps"</span>),</span>
+<span id="cb2-70"><a></a>          <span class="at">x =</span> <span class="st">"Number of Steps"</span>,</span>
+<span id="cb2-71"><a></a>          <span class="at">y =</span> <span class="st">"Position"</span></span>
+<span id="cb2-72"><a></a>      )</span>
+<span id="cb2-73"><a></a>}</span>
+<span id="cb2-74"><a></a>wp1 <span class="ot">&lt;-</span> <span class="fu">gen_walkplot</span>(<span class="dv">500</span>, <span class="dv">16</span>, <span class="fl">0.05</span>)</span>
+<span id="cb2-75"><a></a><span class="fu">ggMarginal</span>(wp1, <span class="at">margins =</span> <span class="st">"y"</span>, <span class="at">type =</span> <span class="st">"histogram"</span>, <span class="at">yparams =</span> <span class="fu">list</span>(<span class="at">binwidth =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 
+</div>
 <img data-src="index_files/figure-revealjs/random-walk-16-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="the-result-64-steps" class="slide level2">
 <h2>The Result: 64 Steps</h2>
+<div class="cell" data-layout-align="center">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(ggExtra)</span>
+<span id="cb3-2"><a></a>wp2 <span class="ot">&lt;-</span> <span class="fu">gen_walkplot</span>(<span class="dv">5000</span>,<span class="dv">64</span>,<span class="fl">0.008</span>) <span class="sc">+</span></span>
+<span id="cb3-3"><a></a>  <span class="fu">ylim</span>(<span class="sc">-</span><span class="dv">30</span>,<span class="dv">30</span>)</span>
+<span id="cb3-4"><a></a><span class="fu">ggMarginal</span>(wp2, <span class="at">margins =</span> <span class="st">"y"</span>, <span class="at">type =</span> <span class="st">"histogram"</span>, <span class="at">yparams =</span> <span class="fu">list</span>(<span class="at">binwidth =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 
+</div>
 <img data-src="index_files/figure-revealjs/random-walk-64-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="mathematicalscientific-modeling" class="slide level2 smaller">
 <h2>“Mathematical/Scientific Modeling”</h2>
@@ -386,6 +515,58 @@ Jeff Jacobs
 <div class="columns">
 <div class="column" style="width:65%;">
 <div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb4-2"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb4-3"><a></a>ga_lawyers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">21362</span>, <span class="dv">22254</span>, <span class="dv">23134</span>, <span class="dv">23698</span>, <span class="dv">24367</span>, <span class="dv">24930</span>, <span class="dv">25632</span>, <span class="dv">26459</span>, <span class="dv">27227</span>, <span class="dv">27457</span>)</span>
+<span id="cb4-4"><a></a>ski_df <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
+<span id="cb4-5"><a></a>  <span class="sc">~</span>year, <span class="sc">~</span>varname, <span class="sc">~</span>value,</span>
+<span id="cb4-6"><a></a>  <span class="dv">2000</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1551</span>,</span>
+<span id="cb4-7"><a></a>  <span class="dv">2001</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1635</span>,</span>
+<span id="cb4-8"><a></a>  <span class="dv">2002</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1801</span>,</span>
+<span id="cb4-9"><a></a>  <span class="dv">2003</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1827</span>,</span>
+<span id="cb4-10"><a></a>  <span class="dv">2004</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1956</span>,</span>
+<span id="cb4-11"><a></a>  <span class="dv">2005</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1989</span>,</span>
+<span id="cb4-12"><a></a>  <span class="dv">2006</span>, <span class="st">"ski_revenue"</span>, <span class="dv">2178</span>,</span>
+<span id="cb4-13"><a></a>  <span class="dv">2007</span>, <span class="st">"ski_revenue"</span>, <span class="dv">2257</span>,</span>
+<span id="cb4-14"><a></a>  <span class="dv">2008</span>, <span class="st">"ski_revenue"</span>, <span class="dv">2476</span>,</span>
+<span id="cb4-15"><a></a>  <span class="dv">2009</span>, <span class="st">"ski_revenue"</span>, <span class="dv">2438</span>,</span>
+<span id="cb4-16"><a></a>)</span>
+<span id="cb4-17"><a></a>ski_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(ski_df<span class="sc">$</span>value)</span>
+<span id="cb4-18"><a></a>ski_sd <span class="ot">&lt;-</span> <span class="fu">sd</span>(ski_df<span class="sc">$</span>value)</span>
+<span id="cb4-19"><a></a>ski_df <span class="ot">&lt;-</span> ski_df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">val_scaled =</span> <span class="dv">12</span><span class="sc">*</span>value, <span class="at">val_norm =</span> (value <span class="sc">-</span> ski_mean)<span class="sc">/</span>ski_sd)</span>
+<span id="cb4-20"><a></a>law_df <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">year=</span><span class="dv">2000</span><span class="sc">:</span><span class="dv">2009</span>, <span class="at">varname=</span><span class="st">"ga_lawyers"</span>, <span class="at">value=</span>ga_lawyers)</span>
+<span id="cb4-21"><a></a>law_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(law_df<span class="sc">$</span>value)</span>
+<span id="cb4-22"><a></a>law_sd <span class="ot">&lt;-</span> <span class="fu">sd</span>(law_df<span class="sc">$</span>value)</span>
+<span id="cb4-23"><a></a>law_df <span class="ot">&lt;-</span> law_df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">val_norm =</span> (value <span class="sc">-</span> law_mean)<span class="sc">/</span>law_sd)</span>
+<span id="cb4-24"><a></a>spur_df <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">bind_rows</span>(ski_df, law_df)</span>
+<span id="cb4-25"><a></a><span class="fu">ggplot</span>(spur_df, <span class="fu">aes</span>(<span class="at">x=</span>year, <span class="at">y=</span>val_norm, <span class="at">color=</span><span class="fu">factor</span>(varname, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Ski Revenue"</span>,<span class="st">"Lawyers in Georgia"</span>)))) <span class="sc">+</span></span>
+<span id="cb4-26"><a></a>  <span class="fu">stat_smooth</span>(<span class="at">method=</span><span class="st">"loess"</span>, <span class="at">se=</span><span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb4-27"><a></a>  <span class="fu">geom_point</span>(<span class="at">size=</span>g_pointsize<span class="sc">/</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb4-28"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-29"><a></a>    <span class="at">fill=</span><span class="st">""</span>,</span>
+<span id="cb4-30"><a></a>    <span class="at">title=</span><span class="st">"Ski Revenue vs. Georgia Lawyers"</span>,</span>
+<span id="cb4-31"><a></a>    <span class="at">x=</span><span class="st">"Year"</span>,</span>
+<span id="cb4-32"><a></a>    <span class="at">color=</span><span class="st">"Correlation: 99.2%"</span>,</span>
+<span id="cb4-33"><a></a>    <span class="at">linetype=</span><span class="cn">NULL</span></span>
+<span id="cb4-34"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb4-35"><a></a>  <span class="fu">theme_dsan</span>() <span class="sc">+</span></span>
+<span id="cb4-36"><a></a>  <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb4-37"><a></a>    <span class="at">breaks=</span><span class="fu">seq</span>(<span class="at">from=</span><span class="dv">2000</span>, <span class="at">to=</span><span class="dv">2014</span>, <span class="at">by=</span><span class="dv">2</span>)</span>
+<span id="cb4-38"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb4-39"><a></a>  <span class="co">#scale_y_continuous(</span></span>
+<span id="cb4-40"><a></a>  <span class="co">#  name="Total Revenue, Ski Facilities (Million USD)",</span></span>
+<span id="cb4-41"><a></a>  <span class="co">#  sec.axis = sec_axis(~ . * law_sd + law_mean, name = "Number of Lawyers in Georgia")</span></span>
+<span id="cb4-42"><a></a>  <span class="co">#) +</span></span>
+<span id="cb4-43"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="sc">-</span><span class="dv">1</span><span class="sc">:</span><span class="dv">1</span>,</span>
+<span id="cb4-44"><a></a>    <span class="at">labels =</span> <span class="sc">~</span> . <span class="sc">*</span> <span class="fu">round</span>(ski_sd,<span class="dv">1</span>) <span class="sc">+</span> <span class="fu">round</span>(ski_mean,<span class="dv">1</span>),</span>
+<span id="cb4-45"><a></a>    <span class="at">name=</span><span class="st">"Total Revenue, Ski Facilities (Million USD)"</span>,</span>
+<span id="cb4-46"><a></a>    <span class="at">sec.axis =</span> <span class="fu">sec_axis</span>(<span class="sc">~</span> . <span class="sc">*</span> law_sd <span class="sc">+</span> law_mean, <span class="at">name =</span> <span class="st">"Number of Lawyers in Georgia"</span>)) <span class="sc">+</span></span>
+<span id="cb4-47"><a></a>  <span class="fu">expand_limits</span>(<span class="at">x=</span><span class="dv">2010</span>) <span class="sc">+</span></span>
+<span id="cb4-48"><a></a>  <span class="co">#geom_hline(aes(yintercept=x, color="Mean Values"), as.data.frame(list(x=0)), linewidth=0.75, alpha=1.0, show.legend = TRUE) +</span></span>
+<span id="cb4-49"><a></a>  <span class="fu">scale_color_manual</span>(</span>
+<span id="cb4-50"><a></a>    <span class="at">breaks=</span><span class="fu">c</span>(<span class="st">'Ski Revenue'</span>, <span class="st">'Lawyers in Georgia'</span>),</span>
+<span id="cb4-51"><a></a>    <span class="at">values=</span><span class="fu">c</span>(<span class="st">'Ski Revenue'</span><span class="ot">=</span>cbPalette[<span class="dv">1</span>], <span class="st">'Lawyers in Georgia'</span><span class="ot">=</span>cbPalette[<span class="dv">2</span>])</span>
+<span id="cb4-52"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -396,7 +577,7 @@ Jeff Jacobs
 </div>
 </div><div class="column" style="width:35%;">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">cor</span>(ski_df<span class="sc">$</span>value, law_df<span class="sc">$</span>value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">cor</span>(ski_df<span class="sc">$</span>value, law_df<span class="sc">$</span>value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.9921178</code></pre>
 </div>
