@@ -9,6 +9,7 @@ categories:
   - "Extra Writeups"
 format:
   html:
+    cache: true
     df-print: kable
     html-math-method: mathjax
     toc: true
