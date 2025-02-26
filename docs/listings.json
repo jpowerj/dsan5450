@@ -21,6 +21,7 @@
   {
     "listing": "/writeups/index.html",
     "items": [
+      "/writeups/berkson/index.html",
       "/writeups/do-calculus/index.html",
       "/writeups/fusing-horizons/index.html",
       "/writeups/categorical-imperative/index.html",

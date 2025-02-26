@@ -125,5 +125,8 @@
   },
   "writeups/do-calculus/index.qmd": {
     "index.html": "e7f35306"
+  },
+  "writeups/berkson/index.qmd": {
+    "index.html": "cf54179c"
   }
 }
