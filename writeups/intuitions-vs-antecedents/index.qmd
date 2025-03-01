@@ -128,11 +128,11 @@ Rawls, however (importantly!) does **not** provide a framework for (a) **which**
 
 This "hedging" by Rawls is, ultimately, not specific to Rawls but just one example of the ["Paradox of Liberalism"](https://en.wikipedia.org/wiki/Liberalism:_A_Counter-History): if we want a full-on, *concrete* ethical framework---one which actually specifies the **content** of what a person/group/organization should do in a particular case... then we need to add on our own antecedents. For example, an antecedent that would make **(a) $W_1$ should be preferred** correct would be:
 
-* Rawls' theory plus *"The right to private property is more important than the right to medical care"*
+> Rawls' theory + *"The right to private property is more important than the right to medical care"*
 
 Whereas an antecedent that would make **(b) $W_2$ should be preferred** correct would be:
 
-* Rawls' theory plus *"The right to medical care is more important than the right to private property"*
+> Rawls' theory + *"The right to medical care is more important than the right to private property"*
 
 And thus, one of those two **additional** antecedents would need to be added, as a **third** clause to the constitution being debated, for the question to not be indeterminate!
 
