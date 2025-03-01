@@ -19,10 +19,6 @@ format:
     code-fold: show
 ---
 
-Hello 5450ers,
-
-Gossip girl here. Happy spring break!
-
 ## Spring Break Intermission: Pedagogical Principles
 
 If I've lived up to my teaching principles over the first seven weeks of the course, then my hope is that you've experienced it as more of a "choose your own adventure" course than, for example (to make a *fair comparison* with a different course I'm teaching this semester) DSAN 5300, where there is essentially a single "pathway" from the beginning to the end of the course^[In that case, that pathway is determined by the structure of the chapters in [ISLR](https://www.statlearning.com/)!]
