@@ -21,9 +21,9 @@
   {
     "listing": "/writeups/index.html",
     "items": [
+      "/writeups/intuitions-vs-antecedents/index.html",
       "/writeups/berkson/index.html",
       "/writeups/do-calculus/index.html",
-      "/writeups/fusing-horizons/index.html",
       "/writeups/categorical-imperative/index.html",
       "/writeups/ai_fairness.html",
       "/writeups/contested/index.html",

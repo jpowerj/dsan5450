@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jeff Jacobs">
-<meta name="dcterms.date" content="2025-02-17">
+<meta name="dcterms.date" content="2025-02-28">
 
-<title>Gadamer and the ‘Fusing of Horizons’ – DSAN 5450</title>
+<title>From Intuitions to Antecedents – DSAN 5450</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -73,6 +93,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css"><script src="../../sidebar.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../dsan-globals/jjstyles.css">
 </head>
@@ -277,19 +326,30 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 <div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
-<p><em>Updated 2025-02-26, 03:56:39 PM</em></p>
+<p><em>Updated 2025-03-01, 03:55:41 AM</em></p>
 </div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#spring-break-intermission-pedagogical-principles" id="toc-spring-break-intermission-pedagogical-principles" class="nav-link active" data-scroll-target="#spring-break-intermission-pedagogical-principles">Spring Break Intermission: Pedagogical Principles</a></li>
+  <li><a href="#the-hw1-question" id="toc-the-hw1-question" class="nav-link" data-scroll-target="#the-hw1-question">The HW1 Question</a></li>
+  <li><a href="#why-cant-we-just-use-our-intuition" id="toc-why-cant-we-just-use-our-intuition" class="nav-link" data-scroll-target="#why-cant-we-just-use-our-intuition">Why Can’t We Just Use Our Intuition?</a></li>
+  <li><a href="#how-does-the-specifying-antecedents-approach-resolve-this-issue" id="toc-how-does-the-specifying-antecedents-approach-resolve-this-issue" class="nav-link" data-scroll-target="#how-does-the-specifying-antecedents-approach-resolve-this-issue">How Does the Specifying-Antecedents Approach “Resolve” This Issue?</a></li>
+  <li><a href="#appendix-extremely-cool-modern-neuroscience-based-cultural-studies" id="toc-appendix-extremely-cool-modern-neuroscience-based-cultural-studies" class="nav-link" data-scroll-target="#appendix-extremely-cool-modern-neuroscience-based-cultural-studies">Appendix: Extremely Cool Modern Neuroscience-Based Cultural Studies</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/jpowerj/dsan5450/blob/main/writeups/intuitions-vs-antecedents/index.qmd" target="_blank" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Gadamer and the ‘Fusing of Horizons’</h1>
+<h1 class="title">From Intuitions to Antecedents</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Extra Writeups</div>
   </div>
@@ -309,7 +369,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 17, 2025</p>
+      <p class="date">February 28, 2025</p>
     </div>
   </div>
   
@@ -321,14 +381,185 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Oddly, despite its relevance for this class, the only DSAN class where I have talked about this topic was when I taught <strong>DSAN5200: Advanced Data Visualization</strong>. There, we were thinking through the question of <a href="https://jjacobs.me/dsan5200-03/w02/slides.html#/but-how-much-context-do-i-need-to-provide">“how much context do I need to provide for my audience?”</a>, and Gadamer’s notion of “fusing horizons” felt like the appropriate answer to that question.</p>
-<p>Here, in DSAN 5450, it’s all the more relevant since we’re discussing exactly how to <strong>bring context into</strong> our notions of fairness.</p>
-<p>So, let’s start with this video</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/CJ7MlTdC_aQ" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Hello 5450ers,</p>
+<p>Gossip girl here. Happy spring break!</p>
+<section id="spring-break-intermission-pedagogical-principles" class="level2">
+<h2 class="anchored" data-anchor-id="spring-break-intermission-pedagogical-principles">Spring Break Intermission: Pedagogical Principles</h2>
+<p>If I’ve lived up to my teaching principles over the first seven weeks of the course, then my hope is that you’ve experienced it as more of a “choose your own adventure” course than, for example (to make a <em>fair comparison</em> with a different course I’m teaching this semester) DSAN 5300, where there is essentially a single “pathway” from the beginning to the end of the course<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>As a part of that, I try my best to utilize assignments/grades/exams mainly as a “feedback mechanism” for learning, to foster a <a href="https://teachingcommons.stanford.edu/teaching-guides/foundations-course-design/learning-activities/growth-mindset-and-enhanced-learning">growth mindset</a> in all of you: to encourage you in your own adventure-choosing, rather than to shove a particular vision of “Data Ethics and Policy” on you and then punish you if you don’t internalize it.</p>
+<p>“Growth mindset” is a <a href="https://en.wikipedia.org/wiki/Carol_Dweck#Mindset_work">new-ish term</a>, but the idea itself goes back longer, and to me the core of it was really captured by an educational philosopher/reformer named Maria Montessori—to cut off this rant here and get to the main content, I will just include the “Pedagogical Principles” slide from when I taught PPOL 6805 (the GIS class), a slide that I also should have included in W01 of this class!</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Pedagogical Principles">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Pedagogical Principles
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>There’s literally no such thing as <a href="http://bactra.org/weblog/523.html">“intelligence”</a></li>
+<li>Anyone is capable of learning anything (neural plasticity)</li>
+<li>Growth mindset: “I can’t do this” <span class="math inline">\(\leadsto\)</span> “I can’t do this yet!”</li>
+<li>The point of a class is <em>learning</em>: understanding something about the world, either (a) For its own sake (an <strong>end</strong> in itself) or (b) Because it’s relevant to something you care about (a <strong>means</strong> to an end)</li>
+</ol>
+<blockquote class="blockquote">
+<p>Our teaching should be governed, not by a desire to <strong>make</strong> students learn things, but by the endeavor to keep burning within them that light which is called <strong>curiosity</strong>. <span class="citation" data-cites="montessori1916spontaneous">(<a href="#ref-montessori1916spontaneous" role="doc-biblioref">Montessori 1916</a>)</span></p>
+</blockquote>
+</div>
+</div>
+<p>So, given all that, here I want to take the most common deduction from HW1—the question about Rawls’ theory of <strong>rights</strong> as <strong>lexically prior to utility</strong>—and write out why it is so important for us going forward into the policy “half” of the course. Rather than bonking you all on the head with a big stick and saying <em>“No! Wrong! Option (c) was correct! Go memorize it!”</em>, I hope instead that this writeup can help in terms of explicitly laying out the steps of reasoning that would lead to option (c)!</p>
+</section>
+<section id="the-hw1-question" class="level2">
+<h2 class="anchored" data-anchor-id="the-hw1-question">The HW1 Question</h2>
+<p>The question I’m most concerned about was as follows:</p>
+<div class="callout callout-style-default callout-note callout-titled" title="HW1 Q3.2: Rights and Distributive Justice">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+HW1 Q3.2: Rights and Distributive Justice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A group of people is behind the veil of ignorance, debating what <strong>rights</strong> should be enshrined in a constitution:</p>
+<ul>
+<li>They have decided to enshrine a <strong>right to private property</strong> in their constitution, implying that all individuals in the society have a <em>duty</em> to avoid <strong>trespassing</strong> on an individual’s property without their permission. However…</li>
+<li>They also want to enshrine the <strong>right to urgent medical care</strong>, implying that the society has a <em>duty</em> to provide life-saving resuscitation if an individual has a heart attack, for example.</li>
+</ul>
+<p>The debate centers around what ought to happen, if both rights are indeed written into the constitution, in the following scenario:</p>
+<blockquote class="blockquote">
+<p><em>A person <span class="math inline">\(i\)</span> is walking down the (public) sidewalk and suddenly has a heart attack, falling over into person <span class="math inline">\(j\)</span>’s (private) front yard. Paramedics arrive quickly on the scene, but <span class="math inline">\(j\)</span> isn’t home to grant or deny permission for the paramedics to enter their front yard to provide medical care to <span class="math inline">\(i\)</span>.</em></p>
+</blockquote>
+<p>Thus the society is deliberating about a third constitutional provision to cover this case, which means choosing an ethical <strong>preference ordering</strong> over the following two possible worlds:</p>
+<ul>
+<li><span class="math inline">\(W_1\)</span>: <span class="math inline">\(j\)</span>’s right to private property is given higher priority, so that the paramedics must not violate this right to provide the medical care to <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(W_2\)</span>: <span class="math inline">\(i\)</span>’s right to urgent medical care is given higher priority, so that the paramedics must violate <span class="math inline">\(j\)</span>’s right to private property and enter the yard to provide the medical care</li>
+</ul>
+<p>Under a <strong>Rawlsian</strong> ethical framework, is this a prioritization that the society could determine <em>a priori</em> (behind the “veil of ignorance”)? Or is Rawls’ ethical framework <strong>indeterminate</strong> with regard to this ethical decision? If it is <em>not</em> indeterminate, which of the two possible worlds does the Rawlsian system imply should be preferred by a normatively “good” society?</p>
+<ol type="a">
+<li><span class="math inline">\(W_1\)</span> should be preferred</li>
+<li><span class="math inline">\(W_2\)</span> should be preferred</li>
+<li>Indeterminate</li>
+</ol>
+</div>
+</div>
+<p>The correct answer here (in an important way!) was <strong>(c) Indeterminate</strong>. However, a good number of folks put <strong>(b) <span class="math inline">\(W_2\)</span> should be preferred</strong>. I spent a while trying to dig into this outlier, and I think even the most basic explanation—that many of yall are extremely busy and just chose the one that sounded intuitively best—gives us a nice and super-relevant “learning moment”!</p>
+<p>The reason I hyper-fixate on this one commonly-missed question here is because, starting with <a href="https://jjacobs.me/dsan5450/w01/slides.html#/what-happens-when-we-confuse-the-two">this slide</a> from Week 1, a key thread running throughout the entire course is the importance of looking at/figuring out <strong>antecedents</strong>, as the only way to “cross the boundary” between your own beliefs and those of others.</p>
+</section>
+<section id="why-cant-we-just-use-our-intuition" class="level2">
+<h2 class="anchored" data-anchor-id="why-cant-we-just-use-our-intuition">Why Can’t We Just Use Our Intuition?</h2>
+<p>Answering this question is… somewhat difficult in terms of how “meta” it is, so, I genuinely apologize (like I did for the Kant writeup) since I don’t know any way to explain it without using some philosophical jargony things 😭</p>
+<p>The meta-ness comes from the fact that, if a person <span class="math inline">\(i\)</span> says <em>“I believe <span class="math inline">\(p\)</span> because <span class="math inline">\(p\)</span> is obviously true”</em>, and if that predicate <span class="math inline">\(p\)</span> itself is <em>“I can use my intuitions to derive (moral) truths”</em>, then… essentially an infinite-loop of self-reinforcing certainty is created. At best, an interlocutor <span class="math inline">\(j\)</span> can only “chip away at” <span class="math inline">\(i\)</span>’s’ belief-loop, perhaps by e.g.&nbsp;pointing out cases to <span class="math inline">\(i\)</span> where their intuition has failed.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>But, with enough “chipping”, <span class="math inline">\(i\)</span> may be convinced to shift their belief towards something more like a predicate <span class="math inline">\(q\)</span>, <em>“I can use my intuitions, <strong>along with my understanding of other people’s antecedents</strong>, to derive moral truths”</em>, which may then reverberate back to <em>“I believe <span class="math inline">\(q\)</span> because <span class="math inline">\(q\)</span> ‘fits with’ the synthesis I’ve formed between my own intuition and the intuitions of others”</em><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>Nonetheless, <em>my</em> implicit antecedent in writing this is that this shift is possible… To inject myself into it one last time, for example, one reason why I included that <a href="https://jjacobs.me/dsan5450/w01/slides.html#/my-biases">“My Biases” slide</a> in W01 is because <em>childhood Jeff</em> absolutely would say things like <em>“I believe <span class="math inline">\(p\)</span> because <span class="math inline">\(p\)</span> is obviously true”</em>, where <span class="math inline">\(p\)</span> would be things like <em>“Israel has a right to <a href="https://asre-nou.net/php/news/Chomsky-Statement.pdf">‘defend itself’</a>”</em>.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+<p>So, with all that said, the reason why I emphasize “antecedent-tracing” so much (and why (c) being the correct answer is important) is precisely because we need somewhere to “go”, data-ethics-and-policy-wise, when the types of conflicts outlined in that question arise in our lives as data scientists!</p>
+<p>On the one hand, the scenarios in “new employee <a href="https://research.columbia.edu/responsible-and-ethical-conduct-research">ethics training</a>” slides, that I called silly in class (bc they are), usually look something like:</p>
+<ul>
+<li><strong>BillyBob (Boss)</strong>: <em>Hey, Alice, you should <a href="https://www.science.org/content/article/honesty-researcher-s-lawsuit-against-data-sleuths-dismissed">falsify some data</a> so we can get published and make millions of dollars!!! I will give you a big ‘Employee of the Month’ trophy if you do!!!</em></li>
+<li><strong>Alice (You)</strong>: <em>Select a proper response in this scenario</em></li>
+</ul>
+<p>And then you’re supposed to click something like <em>“Report BillyBob to [institutional ethics board]”</em>, producing the green check and unlocking the “certified ethics master” achievement.</p>
+<p>On the other hand, the data-science-career scenarios that I’ve tried to center in class—which can be more pernicious <em>because</em> they are absent from new-employee ethics seminars and thus <em>don’t</em> necessarily have obvious answers—look more like:</p>
+<ul>
+<li><strong>BillyBob (Boss)</strong>: Hey, Alice, we need to include “““crime”“” as a variable in our model, can you go collect data for that?</li>
+<li><strong>Alice (You)</strong>: <em>Decide (a) how to operationalize “““crime”““, or (b) push back on BillyBob’s command on grounds that perhaps we might not want to reify”““crime”“” in statistical models given ethical issues with how it is measured in available datasets in our current society</em></li>
+</ul>
+<p>And in <em>these</em> kinds of cases, whether you choose (a), (b), or some other option, the data-ethical choice you make (the purpose of this class, hence the name) will be rooted in some notion of <strong>why</strong> it’s a “good” choice to make under those circumstances. And the answer to that <strong>why</strong> question is precisely the antecedent:</p>
+<ul>
+<li>If you choose (a), for example, perhaps the option is…
+<ul>
+<li>“Good” implicitly in terms of reducing your own <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7686841/">cognitive dissonance</a> (antecedent = reduction of cognitive dissonance should play a role in ethical decisionmaking), or</li>
+<li>“Good” explicitly because your boss asks you why you chose some particular operationalization and you are able to respond with your reasoning (antecedent = justifiability and/or satisfying your boss should play a role in ethical decisionmaking)</li>
+</ul></li>
+<li>If you choose (b), for example, your boss may ask you to elaborate/explain why you’re not carrying out the command, which would bring in the same justifiability/boss-satisfaction antecedent as in the previous bullet point.</li>
+</ul>
+<p>Then, under the antecedent that the resolution of conflicts like this in a given workplace is a function of the involved agents’ <strong>relative power</strong><a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, your ability to <strong>frame your answer to the “why” question in terms of antecedents that will “click” with those of your boss</strong> will be directly proportional to your “success” in making the “right” decision here!</p>
+</section>
+<section id="how-does-the-specifying-antecedents-approach-resolve-this-issue" class="level2">
+<h2 class="anchored" data-anchor-id="how-does-the-specifying-antecedents-approach-resolve-this-issue">How Does the Specifying-Antecedents Approach “Resolve” This Issue?</h2>
+<p>The increase in likelihood of “success” isn’t exactly the end of the story here, though. A more holistic way to summarize the answer to the previous section’s question (the question in the title) is:</p>
+<p>Although the approach of “we should operationalize crime as <span class="math inline">\(\underline{\hspace{60px}}\)</span> because my intuition says that’s best” or “because it’s obvious” <em>is</em> pretty much exactly how we carry out our day-to-day data-scientific work <em>subconsciously</em> (e.g., during long R/Python sessions!), the goal of the <span class="citation" data-cites="geertz_interpretation_1973">(<a href="#ref-geertz_interpretation_1973" role="doc-biblioref">Geertz 1973</a>)</span> slide from W01 was to point out how:</p>
+<ul>
+<li>Being conscious of our antecedents will be helpful <strong>descriptively</strong> when we’re working with <em>others</em> who may ask for justification or may not be convinced by “because it’s obvious”, and</li>
+<li>Being conscious of our antecedents will be helpful <strong>normatively</strong> in terms of helping us evaluate the alignment between our day-to-day subconscious choices and our conscious ethical <em>values</em></li>
+</ul>
+<p>So, to finally get to the takeaway in terms of Q3.2: it’s important to know that Rawls’ framework, on its own, does <strong>not</strong> serve as an antecedent for deciding <strong>between</strong> different rights that a society has decided to establish!</p>
+<p>Rawls’ contribution to ethics, in the broadly-construed way we’ve talked about ethics in the first half of the course, was primarily to give a “middle-ground solution” to the Problem of Utilitarianism that we discussed (torturing one person to make everyone else happy):</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Rawls as Solution to Utilitarian Torture-One-Person Problem">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Rawls as Solution to Utilitarian Torture-One-Person Problem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Society adopts Utilitarianism, <strong>except for</strong> a set of Kant-style (deontological) <strong>rules</strong> regarding the <strong>rights of individuals</strong>, which thus serve as <strong>“vetos”</strong> that individuals can use to override Utilitarian decisions.</p>
+</div>
+</div>
+<p>Rawls, however (importantly!) does <strong>not</strong> provide a framework for (a) <strong>which</strong> specific rules should be adopted as <strong>rights</strong>, or (b) the <strong>prioritization</strong> of certain rights <span class="math inline">\(x\)</span> as “more important than” other rights <span class="math inline">\(y\)</span>.</p>
+<p>This “hedging” by Rawls is, ultimately, not specific to Rawls but just one example of the <a href="https://en.wikipedia.org/wiki/Liberalism:_A_Counter-History">“Paradox of Liberalism”</a>: if we want a full-on, <em>concrete</em> ethical framework—one which actually specifies the <strong>content</strong> of what a person/group/organization should do in a particular case… then we need to add on our own antecedents. For example, an antecedent that would make <strong>(a) <span class="math inline">\(W_1\)</span> should be preferred</strong> correct would be:</p>
+<ul>
+<li>Rawls’ theory plus <em>“The right to private property is more important than the right to medical care”</em></li>
+</ul>
+<p>Whereas an antecedent that would make <strong>(b) <span class="math inline">\(W_2\)</span> should be preferred</strong> correct would be:</p>
+<ul>
+<li>Rawls’ theory plus <em>“The right to medical care is more important than the right to private property”</em></li>
+</ul>
+<p>And thus, one of those two <strong>additional</strong> antecedents would need to be added, as a <strong>third</strong> clause to the constitution being debated, for the question to not be indeterminate!</p>
+<p>That’s… the best I can do in terms of explaining why Q3.2 is so important, and why we <strong>shouldn’t</strong> answer it based on our intuitions, but <strong>should</strong> think about the antecedents that would lead to each of the three answer choices! For anyone still reading, who wants the full-on deeper philosophical/cultural reasons that I can’t really do justice to (the more general “crossing the boundary between your own and others’ beliefs” from the W01 slide), check out:</p>
+<ul>
+<li><span class="citation" data-cites="geertz_interpretation_1973">Geertz (<a href="#ref-geertz_interpretation_1973" role="doc-biblioref">1973</a>)</span>, <em>The Interpretation of Cultures</em> (the book pictured in that W01 slide),</li>
+<li><span class="citation" data-cites="skorupski1978meaning">Skorupski (<a href="#ref-skorupski1978meaning" role="doc-biblioref">1978</a>)</span>, “The Meaning of Another Culture’s Beliefs” [Pages 83-106 in <a href="https://www.dropbox.com/scl/fi/5vg7wd9c1whaurot29yql/Action-and-Interpretation.pdf?rlkey=m1q8o6lsfaul6gbqyfoabd4pu&amp;dl=1">this PDF</a>], and</li>
+<li><span class="citation" data-cites="skinner_visions_2012">Skinner (<a href="#ref-skinner_visions_2012" role="doc-biblioref">2012</a>)</span>, “Interpretation, Rationality, and Truth” [Pages 27-56 in <a href="https://www.dropbox.com/scl/fi/us4jkczmqkjufexh9jies/Quentin_Skinner-_Visions_of_Politics_Vol_1.pdf?rlkey=cwzwffidtfajpi3n20pzmx095&amp;dl=1">this PDF</a>]</li>
+</ul>
+</section>
+<section id="appendix-extremely-cool-modern-neuroscience-based-cultural-studies" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-extremely-cool-modern-neuroscience-based-cultural-studies">Appendix: Extremely Cool Modern Neuroscience-Based Cultural Studies</h2>
+<p>If you’ve read to this point (<em>beyond</em> even the point at the end of the last section where I tossed a bunch of books at you?!?): You’ll notice that the readings in the last section are kind of old and dry and philosophical. <em>But</em>, there is (imo) also really exciting research being done in cognitive science/neuroscience labs to <strong>test</strong> the kinds of theories talked about in those philosophy papers:</p>
+<p>Basically, they use behavioral experiments and EEG/EKG/MRI data to probe into <em>what exactly is going on in people’s heads when they make [logical or ethical] decisions?</em> Those studies usually cite <span class="citation" data-cites="sperber1996explaining">Sperber (<a href="#ref-sperber1996explaining" role="doc-biblioref">1996</a>)</span> as a key “spark” that gave rise to this research program, and it is definitely a mind-blowingly cool book and fun place to start. Then, for an example of a more recent study on this front, see <span class="citation" data-cites="miton2022cultural">Miton and DeDeo (<a href="#ref-miton2022cultural" role="doc-biblioref">2022</a>)</span> (and then check out both of those authors’ Google Scholar pages for more!)</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-geertz_interpretation_1973" class="csl-entry" role="listitem">
+Geertz, Clifford. 1973. <em>The <span>Interpretation Of Cultures</span></em>. Basic Books.
+</div>
+<div id="ref-miton2022cultural" class="csl-entry" role="listitem">
+Miton, Helena, and Simon DeDeo. 2022. <span>“The Cultural Transmission of Tacit Knowledge.”</span> <em>Journal of The Royal Society Interface</em> 19 (195): 20220238. <a href="https://doi.org/10.1098/rsif.2022.0238">https://doi.org/10.1098/rsif.2022.0238</a>.
+</div>
+<div id="ref-montessori1916spontaneous" class="csl-entry" role="listitem">
+Montessori, Maria. 1916. <em>Spontaneous <span>Activity</span> in <span>Education</span>: <span>A Basic Guide</span> to the <span>Montessori Methods</span> of <span>Learning</span> in the <span>Classroom</span></em>. Lulu Press.
+</div>
+<div id="ref-skinner_visions_2012" class="csl-entry" role="listitem">
+Skinner, Quentin. 2012. <em>Visions of <span>Politics</span>, <span>Volume</span> 1: <span>Regarding Method</span></em>. Cambridge: Cambridge University Press.
+</div>
+<div id="ref-skorupski1978meaning" class="csl-entry" role="listitem">
+Skorupski, John. 1978. <span>“The <span>Meaning</span> of <span>Another Culture</span>’s <span>Beliefs</span>.”</span> In <em>Action and <span>Interpretation</span>: <span>Studies</span> in the <span>Philosophy</span> of the <span>Social Sciences</span></em>, edited by Christopher Hookway and Philip Pettit, 83–106. CUP Archive.
+</div>
+<div id="ref-sperber1996explaining" class="csl-entry" role="listitem">
+Sperber, Dan. 1996. <em>Explaining <span>Culture</span>: <span>A Naturalistic Approach</span></em>. Cambridge: Blackwell.
+</div>
+</div>
 
 
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>In that case, that pathway is determined by the structure of the chapters in <a href="https://www.statlearning.com/">ISLR</a>!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>As a tldr: this “meta-difficulty” is also behind my rant in class about why you should adopt <span class="math inline">\(0.99999\)</span> rather than <span class="math inline">\(1\)</span> as the probability you ascribe to things you think are “certain”! It turns out that this shift-to-<span class="math inline">\(0.99999\)</span> can simultaneously resolve both technical-<em>mathematical</em> issues (like trying to use Bayes’ Rule to derive posterior distributions from evidence if your prior is <span class="math inline">\(\Pr(E) = 0\)</span>) <strong>and</strong> philosophical-<em>epistemological</em> issues like the one just described 😎<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>(I wouldn’t mention this except for the fact that I got to mention it in a recently-peer-reviewed and soon-to-be-released book chapter, woohoo) Since I come from a Computer Science background, I think of this “chipping away” approach as directly analogous to the <a href="https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm">EM Algorithm</a> for deriving Maximum Likelihood estimates: we can obtain better estimates of model parameters through a series of “chipping” steps, shuffling back-and-forth from the <strong>E</strong>xpectation-computation step to the likelihood-<strong>M</strong>aximization step. If that makes no sense, please don’t worry, and just ignore all that until the chapter comes out :P<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><em>“The IDF is <a href="https://www.cambridge.org/core/books/abs/ethics-as-a-weapon-of-war/introduction-the-most-moral-army-in-the-world/08316C12F2E1758B5A8CC0E308EB7AAB">the most moral army in the world</a>”</em> was another favorite of 13-year-old Jeff—I absolutely would have characterized this as “common sense” at that time.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>If this seems like a fuzzy concept right now, we will be going over a formal legal-theory-based definition of “relative power in a workplace” <a href="https://jjacobs.me/dsan5450/w08/">next week</a>!<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -902,4 +1133,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/jpowerj/dsan5450/blob/main/writeups/fusing-horizons/index.qmd" target="_blank" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/jpowerj/dsan5450/blob/main/writeups/intuitions-vs-antecedents/index.qmd" target="_blank" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div></div></div></footer></body></html>
