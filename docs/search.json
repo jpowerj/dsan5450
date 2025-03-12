@@ -991,39 +991,25 @@
     ]
   },
   {
-    "objectID": "w08/slides.html#prelim-conflict-of-interest-disclosure",
-    "href": "w08/slides.html#prelim-conflict-of-interest-disclosure",
+    "objectID": "w08/slides.html#discourse-around-data-policy-in-the-us",
+    "href": "w08/slides.html#discourse-around-data-policy-in-the-us",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Prelim: Conflict-of-Interest Disclosure",
-    "text": "Prelim: Conflict-of-Interest Disclosure\n\nJust as I laid out my biases at the beginning of the “high-level” ethics unit…\nNow I lay out my biases at the beginning of the policy unit!\ntldr: in US context, when I encounter “policy debates”, this is what they look like to me:"
-  },
-  {
-    "objectID": "w08/slides.html#discourse-around-data-policy-in-the-us-senate",
-    "href": "w08/slides.html#discourse-around-data-policy-in-the-us-senate",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Discourse Around “Data Policy” in the US Senate",
-    "text": "Discourse Around “Data Policy” in the US Senate\n\n(This is ~the level at which “national conversations” are conducted around big data)"
-  },
-  {
-    "objectID": "w08/slides.html#prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have",
-    "href": "w08/slides.html#prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Prelim: Conclusion (Again, Solely My Opinion, Which I Wish I Didn’t Have)",
-    "text": "Prelim: Conclusion (Again, Solely My Opinion, Which I Wish I Didn’t Have)\n\nThe US is, imo, entirely hopeless on this front… short of a massive socio-political realignment on a scale that has never before occurred, sensible and just policies (data-focused or otherwise) are for all intents and purposes impossible\nUS approach to social problems: fight “wars” against them, deport people, throw millions into prisons, blame CCP and their Singaporean CEO running dogs, blame Russian election-interferers, give billions of $ to Israeli election-interferers, and so on\n\n(Previous examples) War on Drugs, War on Poverty, War on “Welfare Queens”\n(Future examples, you owe me a lunch when they are announced) War on School Shootings, War on Climate Change, War on Lack of Healthcare, War on Long Lines\n\nBut also: my opinion truly doesn’t matter for purposes of learning about data policy\nImportant takeaway #1: I would be very very happy to be proven wrong!\n\n\nPessimism of the intellect, optimism of the will.\n—Antonio Gramsci, Founder of the PCI, 1920 (Imprisoned by Mussolini in 1926, died in prison in 1937)"
+    "section": "Discourse Around “Data Policy” in the US",
+    "text": "Discourse Around “Data Policy” in the US\n\n(This is the level at which “national conversations” are conducted around big data)"
   },
   {
     "objectID": "w08/slides.html#actually-relevant-takeaway",
     "href": "w08/slides.html#actually-relevant-takeaway",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Actually-Relevant Takeaway",
-    "text": "Actually-Relevant Takeaway\n\nUnlike the US, there are countries and national/international institutions where policies are formed, in varying degrees, by processes in which data comes into play\nWe’ll discuss more examples; two I can speak to directly given work as data consultant:\nEU: Consulted on project around implementation of GDPR\nUNESCO: Received grant for data-analysis of international translation policies\n\n194 UN member states who participate in formation of these policies\n2 UN member states who refuse to participate on basis of “anti-Israel bias” (you’ll never guess which ones! Hint: Apartheid South Africa, Rhodesia used to provide 3rd and 4th vote in this bloc, but no longer exist)\n\nNY MTA: Consulted on project studying NYC subway data, until passage of NYS Executive Order 157 banning state funding for any person or organization supporting boycott of Israel ¯\\_(ツ)_/¯"
+    "text": "Actually-Relevant Takeaway\n\nUnlike the US, there are countries and national/international institutions where policies are formed, in varying degrees, by processes in which data comes into play\nWe’ll discuss more examples; two I can speak to directly from work as data consultant:\nEU: Consulted on project around implementation of GDPR\nUNESCO: Received grant for data-analysis of international translation policies\n\n194 UN member states who participate in formation of these policies\n2 UN member states who refuse to participate on basis of “anti-Israel bias” (you’ll never guess which ones! Hint: Apartheid South Africa, Rhodesia used to provide 3rd and 4th vote in this bloc, but no longer exist)\n\nNY MTA: Consulted on project studying NYC subway data, until passage of NYS Executive Order 157 banning state funding for any person or organization supporting boycott of Israel ¯\\_(ツ)_/¯"
   },
   {
     "objectID": "w08/slides.html#implies-comparative-perspective",
     "href": "w08/slides.html#implies-comparative-perspective",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "\\(\\implies\\) Comparative Perspective",
-    "text": "\\(\\implies\\) Comparative Perspective\n\nWe’ll study various countries / international orgs and their attempts to tackle data policy issues (with hope that takeaways can be applied to the US someday as well)\nImportant to retain descriptive/normative distinction!\nThey’ll become harder to distinguish, as we discuss:\n\nWhat are the policies currently in existence?\nWhat are their drawbacks?\nAnd, among the latter, which ones could be addressed via policy? (requires understanding processes of policy formation) Which ones could not? (impossibility results…)"
+    "text": "\\(\\implies\\) Comparative Perspective\n\nWe’ll study various countries / international orgs and their attempts to tackle data policy issues (with hope that takeaways can be applied to the US someday as well)\nImportant to retain descriptive/normative distinction!\nThey’ll become harder to distinguish, as we discuss:\n\nWhat are the policies currently in existence?\nWhat are their drawbacks?\nAnd, among the latter, which ones could be addressed via policy? (requires understanding processes of policy formation) Which ones could not? (prisoner’s dilemma)"
   },
   {
     "objectID": "w08/slides.html#oecd-guidelines-1980",
@@ -1037,7 +1023,7 @@
     "href": "w08/slides.html#eu-data-protection-directive-1995",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "EU Data Protection Directive, 1995",
-    "text": "EU Data Protection Directive, 1995\n\nArt. 7: Processing allowed when “the data subject has unambiguously given his [sic] consent.”\nArt. 8: Use of sensitive data is restricted, except where “the data subject has given his [sic] explicit consent to the processing of those data.”\nArt. 26: Prohibits export of personal data to non-European countries lacking “adequate data protection”, except when “the data subject has given his [sic] consent unambiguously to the proposed transfer” (European Union 1995)\nSuperceded by GDPR in 2018"
+    "text": "EU Data Protection Directive, 1995\n\nArt. 7: Processing allowed when “the data subject has unambiguously given his [sic] consent.”\nArt. 8: Use of sensitive data is restricted, except where “the data subject has given his [sic] explicit consent to the processing of those data.”\nArt. 26: Prohibits export of personal data to non-Euro countries lacking “adequate data protection”, except when “the data subject has given his [s] consent unambiguously to the proposed transfer” (European Union 1995)\nSuperceded by GDPR in 2018"
   },
   {
     "objectID": "w08/slides.html#eu-general-data-protection-regulation-gdpr-2018",
@@ -1075,6 +1061,13 @@
     "text": "Does Reading = Understanding?\n\nDoes reading \\(\\implies\\) understanding implications / contingencies / ambiguities?\nNLP could (and should!) be helpful (“making privacy policies machine readable […] would help users match privacy preferences against policies offered by web services”), but mostly just reveals how bad the problem is:\n\n\nFigure 15 from Wagner (2023). “Obfuscatory words” are words like acceptable, significant, mainly, or predominantly, interpretated at the discretion of companies rather than users (see next slide!)"
   },
   {
+    "objectID": "w08/slides.html#the-intuitive-problem-of-contracts",
+    "href": "w08/slides.html#the-intuitive-problem-of-contracts",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "The Intuitive Problem of Contracts",
+    "text": "The Intuitive Problem of Contracts\n\n\n\n\n\n\n\nHard to read, harder to understand, possibly rly bad stuff in them, won’t know until you read + understand\nSolution (in theory… in modern liberal market-based democracies): Collective action!\nOption 1 (Exit): Find better platform, use it instead \\(\\Rightarrow\\) company dies (competitive market)\nOption 2 (Voice): Raise a fuss, hoot and holler, make a big stink about it, etc.\n\n\\(\\Rightarrow\\) (2a) Company will change/remove it to avoid embarrassment and/or prevent Option 1 becoming an option\n\\(\\Rightarrow\\) (2b) Government intervention (hypothetical functional government)"
+  },
+  {
     "objectID": "w08/slides.html#the-fundamental-problem-of-contracts",
     "href": "w08/slides.html#the-fundamental-problem-of-contracts",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
@@ -1093,14 +1086,35 @@
     "href": "w08/slides.html#descriptive-and-normative-implications",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Descriptive and Normative Implications",
-    "text": "Descriptive and Normative Implications\n\nWho has power w.r.t. incompleteness of contracts?\nWho ought to have power w.r.t. incompleteness of contracts?\nAnd now I can talk about the EU thing…\n\n(It wasn’t implemented)\n(But idk statute of limitations)\n(Oh well)\n\n\n\n🔥I think it’s more useful to, like, make things happen now, and then, like, apologize later🔥 —Mark Zuckerberg the 🐐"
+    "text": "Descriptive and Normative Implications\n\nWho has power w.r.t. incompleteness of contracts?\nWho ought to have power w.r.t. incompleteness of contracts?\nResidual rights of control…"
+  },
+  {
+    "objectID": "w08/slides.html#harts-nobel-prize-speech",
+    "href": "w08/slides.html#harts-nobel-prize-speech",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Hart’s Nobel Prize Speech",
+    "text": "Hart’s Nobel Prize Speech\n\nComplete contracts are contracts where everything that can ever happen is written into the contract. Actual contracts aren’t like this, as lawyers know. They’re poorly worded, ambiguous, leave out important things. They’re incomplete.\nA critical question that arises with an incomplete contract is, who has the right to decide about the missing things? We called this right the residual control or decision right. The question is, who has it?\nFurther thought led us to the idea that this is what ownership is. The owner of an asset has the right to decide how the asset is used where the use is not contractually specified (Hart 2017)"
+  },
+  {
+    "objectID": "w08/slides.html#understanding-rights-leftrightarrow-fighting-for-rights",
+    "href": "w08/slides.html#understanding-rights-leftrightarrow-fighting-for-rights",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights",
+    "text": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights\n\n“Hohfeldian” framework (Hohfeld 1913)\nA right \\(r_i\\) granted to person \\(i\\) \\(\\implies\\) A duty/obligation imposed on everyone in the world besides \\(i\\) (to respect \\(r_i\\))\nA duty or obligation \\(d_i\\) imposed on a person \\(i\\) \\(\\implies\\) A right granted to everyone in the world besides \\(i\\) (to… be a potential beneficiary of \\(d_i\\))\n\\(\\implies\\) rough measures of relative power in a contract:\n\n\\[\n\\frac{\\text{rights}_i}{\\text{rights}_j} = \\frac{\\text{obligations}_j}{\\text{rights}_j} = \\frac{\\text{rights}_i}{\\text{obligations}_j} = \\frac{\\text{obligations}_j}{\\text{obligations}_i}\n\\]"
+  },
+  {
+    "objectID": "w08/slides.html#the-adversarial-sisyphusian-problem-of-contracts",
+    "href": "w08/slides.html#the-adversarial-sisyphusian-problem-of-contracts",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "The Adversarial-Sisyphusian Problem of Contracts",
+    "text": "The Adversarial-Sisyphusian Problem of Contracts\n\nRecall Intuitive Problem of Causal Inference: Correlation \\(\\nimplies\\) Causation, but can do a bunch of work to overcome\nAdversarial-Sisyphusian Problem is one level worse 😱\n\nIPCI: You vs. discovered correlation (inanimate)\nASPC: You vs. companies investing resources 💰 into making the problem harder and harder for you\n\ntldr: The moment you (\\(N=1\\), $) finally find and “fix” bad thing, company (\\(N \\gg 1\\), $$$) adds more ambiguity to re-enable / sends your data to \"new\", \"different\" 3rd-party processor 🥸"
   },
   {
     "objectID": "w08/slides.html#references",
     "href": "w08/slides.html#references",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "References",
-    "text": "References\n\n\nEuropean Union. 1995. “Directive 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data.” http://data.europa.eu/eli/dir/1995/46/oj/eng.\n\n\nOECD. 1980. OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data. Paris: Organisation for Economic Co-operation and Development. https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.\n\n\nSugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. Big Data Is Not a Monolith. MIT Press.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152."
+    "text": "References\n\n\nEuropean Union. 1995. “Directive 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data.” http://data.europa.eu/eli/dir/1995/46/oj/eng.\n\n\nHart, Oliver. 2017. “Incomplete Contracts and Control.” American Economic Review 107 (7): 1731–52. https://doi.org/10.1257/aer.107.7.1731.\n\n\nHohfeld, Wesley Newcomb. 1913. “Some Fundamental Legal Conceptions as Applied in Judicial Reasoning.” Yale Law Journal 23. https://heinonline.org/HOL/Page?handle=hein.journals/ylr23&id=24&div=&collection=.\n\n\nOECD. 1980. OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data. Paris: Organisation for Economic Co-operation and Development. https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.\n\n\nSugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. Big Data Is Not a Monolith. MIT Press.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152."
   },
   {
     "objectID": "w08/index.html",
@@ -1113,31 +1127,11 @@
     ]
   },
   {
-    "objectID": "w08/index.html#prelim-conflict-of-interest-disclosure",
-    "href": "w08/index.html#prelim-conflict-of-interest-disclosure",
+    "objectID": "w08/index.html#discourse-around-data-policy-in-the-us",
+    "href": "w08/index.html#discourse-around-data-policy-in-the-us",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Prelim: Conflict-of-Interest Disclosure",
-    "text": "Prelim: Conflict-of-Interest Disclosure\n\nJust as I laid out my biases at the beginning of the “high-level” ethics unit…\nNow I lay out my biases at the beginning of the policy unit!\ntldr: in US context, when I encounter “policy debates”, this is what they look like to me:",
-    "crumbs": [
-      "Week 8: {{< var w08.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w08/index.html#discourse-around-data-policy-in-the-us-senate",
-    "href": "w08/index.html#discourse-around-data-policy-in-the-us-senate",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Discourse Around “Data Policy” in the US Senate",
-    "text": "Discourse Around “Data Policy” in the US Senate\n\n(This is ~the level at which “national conversations” are conducted around big data)",
-    "crumbs": [
-      "Week 8: {{< var w08.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w08/index.html#prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have",
-    "href": "w08/index.html#prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Prelim: Conclusion (Again, Solely My Opinion, Which I Wish I Didn’t Have)",
-    "text": "Prelim: Conclusion (Again, Solely My Opinion, Which I Wish I Didn’t Have)\n\nThe US is, imo, entirely hopeless on this front… short of a massive socio-political realignment on a scale that has never before occurred, sensible and just policies (data-focused or otherwise) are for all intents and purposes impossible\nUS approach to social problems: fight “wars” against them, deport people, throw millions into prisons, blame CCP and their Singaporean CEO running dogs, blame Russian election-interferers, give billions of $ to Israeli election-interferers, and so on\n\n(Previous examples) War on Drugs, War on Poverty, War on “Welfare Queens”\n(Future examples, you owe me a lunch when they are announced) War on School Shootings, War on Climate Change, War on Lack of Healthcare, War on Long Lines\n\nBut also: my opinion truly doesn’t matter for purposes of learning about data policy\nImportant takeaway #1: I would be very very happy to be proven wrong!\n\n\nPessimism of the intellect, optimism of the will.\n—Antonio Gramsci, Founder of the PCI, 1920 (Imprisoned by Mussolini in 1926, died in prison in 1937)",
+    "section": "Discourse Around “Data Policy” in the US",
+    "text": "Discourse Around “Data Policy” in the US\n\n(This is the level at which “national conversations” are conducted around big data)",
     "crumbs": [
       "Week 8: {{< var w08.date-md >}}"
     ]
@@ -1147,7 +1141,7 @@
     "href": "w08/index.html#actually-relevant-takeaway",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Actually-Relevant Takeaway",
-    "text": "Actually-Relevant Takeaway\n\nUnlike the US, there are countries and national/international institutions where policies are formed, in varying degrees, by processes in which data comes into play\nWe’ll discuss more examples; two I can speak to directly given work as data consultant:\nEU: Consulted on project around implementation of GDPR\nUNESCO: Received grant for data-analysis of international translation policies\n\n194 UN member states who participate in formation of these policies\n2 UN member states who refuse to participate on basis of “anti-Israel bias” (you’ll never guess which ones! Hint: Apartheid South Africa, Rhodesia used to provide 3rd and 4th vote in this bloc, but no longer exist)\n\nNY MTA: Consulted on project studying NYC subway data, until passage of NYS Executive Order 157 banning state funding for any person or organization supporting boycott of Israel ¯\\_(ツ)_/¯",
+    "text": "Actually-Relevant Takeaway\n\nUnlike the US, there are countries and national/international institutions where policies are formed, in varying degrees, by processes in which data comes into play\nWe’ll discuss more examples; two I can speak to directly from work as data consultant:\nEU: Consulted on project around implementation of GDPR\nUNESCO: Received grant for data-analysis of international translation policies\n\n194 UN member states who participate in formation of these policies\n2 UN member states who refuse to participate on basis of “anti-Israel bias” (you’ll never guess which ones! Hint: Apartheid South Africa, Rhodesia used to provide 3rd and 4th vote in this bloc, but no longer exist)\n\nNY MTA: Consulted on project studying NYC subway data, until passage of NYS Executive Order 157 banning state funding for any person or organization supporting boycott of Israel ¯\\_(ツ)_/¯",
     "crumbs": [
       "Week 8: {{< var w08.date-md >}}"
     ]
@@ -1157,7 +1151,7 @@
     "href": "w08/index.html#implies-comparative-perspective",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "\\(\\implies\\) Comparative Perspective",
-    "text": "\\(\\implies\\) Comparative Perspective\n\nWe’ll study various countries / international orgs and their attempts to tackle data policy issues (with hope that takeaways can be applied to the US someday as well)\nImportant to retain descriptive/normative distinction!\nThey’ll become harder to distinguish, as we discuss:\n\nWhat are the policies currently in existence?\nWhat are their drawbacks?\nAnd, among the latter, which ones could be addressed via policy? (requires understanding processes of policy formation) Which ones could not? (impossibility results…)",
+    "text": "\\(\\implies\\) Comparative Perspective\n\nWe’ll study various countries / international orgs and their attempts to tackle data policy issues (with hope that takeaways can be applied to the US someday as well)\nImportant to retain descriptive/normative distinction!\nThey’ll become harder to distinguish, as we discuss:\n\nWhat are the policies currently in existence?\nWhat are their drawbacks?\nAnd, among the latter, which ones could be addressed via policy? (requires understanding processes of policy formation) Which ones could not? (prisoner’s dilemma)",
     "crumbs": [
       "Week 8: {{< var w08.date-md >}}"
     ]
@@ -1177,7 +1171,7 @@
     "href": "w08/index.html#eu-data-protection-directive-1995",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "EU Data Protection Directive, 1995",
-    "text": "EU Data Protection Directive, 1995\n\nArt. 7: Processing allowed when “the data subject has unambiguously given his [sic] consent.”\nArt. 8: Use of sensitive data is restricted, except where “the data subject has given his [sic] explicit consent to the processing of those data.”\nArt. 26: Prohibits export of personal data to non-European countries lacking “adequate data protection”, except when “the data subject has given his [sic] consent unambiguously to the proposed transfer” (European Union 1995)\nSuperceded by GDPR in 2018",
+    "text": "EU Data Protection Directive, 1995\n\nArt. 7: Processing allowed when “the data subject has unambiguously given his [sic] consent.”\nArt. 8: Use of sensitive data is restricted, except where “the data subject has given his [sic] explicit consent to the processing of those data.”\nArt. 26: Prohibits export of personal data to non-Euro countries lacking “adequate data protection”, except when “the data subject has given his [s] consent unambiguously to the proposed transfer” (European Union 1995)\nSuperceded by GDPR in 2018",
     "crumbs": [
       "Week 8: {{< var w08.date-md >}}"
     ]
@@ -1233,6 +1227,16 @@
     ]
   },
   {
+    "objectID": "w08/index.html#the-intuitive-problem-of-contracts",
+    "href": "w08/index.html#the-intuitive-problem-of-contracts",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "The Intuitive Problem of Contracts",
+    "text": "The Intuitive Problem of Contracts\n\n\n\n\n\n\n\nHard to read, harder to understand, possibly rly bad stuff in them, won’t know until you read + understand\nSolution (in theory… in modern liberal market-based democracies): Collective action!\nOption 1 (Exit): Find better platform, use it instead \\(\\Rightarrow\\) company dies (competitive market)\nOption 2 (Voice): Raise a fuss, hoot and holler, make a big stink about it, etc.\n\n\\(\\Rightarrow\\) (2a) Company will change/remove it to avoid embarrassment and/or prevent Option 1 becoming an option\n\\(\\Rightarrow\\) (2b) Government intervention (hypothetical functional government)",
+    "crumbs": [
+      "Week 8: {{< var w08.date-md >}}"
+    ]
+  },
+  {
     "objectID": "w08/index.html#the-fundamental-problem-of-contracts",
     "href": "w08/index.html#the-fundamental-problem-of-contracts",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
@@ -1257,7 +1261,37 @@
     "href": "w08/index.html#descriptive-and-normative-implications",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Descriptive and Normative Implications",
-    "text": "Descriptive and Normative Implications\n\nWho has power w.r.t. incompleteness of contracts?\nWho ought to have power w.r.t. incompleteness of contracts?\nAnd now I can talk about the EU thing…\n\n(It wasn’t implemented)\n(But idk statute of limitations)\n(Oh well)\n\n\n\n🔥I think it’s more useful to, like, make things happen now, and then, like, apologize later🔥 —Mark Zuckerberg the 🐐",
+    "text": "Descriptive and Normative Implications\n\nWho has power w.r.t. incompleteness of contracts?\nWho ought to have power w.r.t. incompleteness of contracts?\nResidual rights of control…",
+    "crumbs": [
+      "Week 8: {{< var w08.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w08/index.html#harts-nobel-prize-speech",
+    "href": "w08/index.html#harts-nobel-prize-speech",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Hart’s Nobel Prize Speech",
+    "text": "Hart’s Nobel Prize Speech\n\nComplete contracts are contracts where everything that can ever happen is written into the contract. Actual contracts aren’t like this, as lawyers know. They’re poorly worded, ambiguous, leave out important things. They’re incomplete.\nA critical question that arises with an incomplete contract is, who has the right to decide about the missing things? We called this right the residual control or decision right. The question is, who has it?\nFurther thought led us to the idea that this is what ownership is. The owner of an asset has the right to decide how the asset is used where the use is not contractually specified (Hart 2017)",
+    "crumbs": [
+      "Week 8: {{< var w08.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w08/index.html#understanding-rights-leftrightarrow-fighting-for-rights",
+    "href": "w08/index.html#understanding-rights-leftrightarrow-fighting-for-rights",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights",
+    "text": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights\n\n“Hohfeldian” framework (Hohfeld 1913)\nA right \\(r_i\\) granted to person \\(i\\) \\(\\implies\\) A duty/obligation imposed on everyone in the world besides \\(i\\) (to respect \\(r_i\\))\nA duty or obligation \\(d_i\\) imposed on a person \\(i\\) \\(\\implies\\) A right granted to everyone in the world besides \\(i\\) (to… be a potential beneficiary of \\(d_i\\))\n\\(\\implies\\) rough measures of relative power in a contract:\n\n\\[\n\\frac{\\text{rights}_i}{\\text{rights}_j} = \\frac{\\text{obligations}_j}{\\text{rights}_j} = \\frac{\\text{rights}_i}{\\text{obligations}_j} = \\frac{\\text{obligations}_j}{\\text{obligations}_i}\n\\]",
+    "crumbs": [
+      "Week 8: {{< var w08.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w08/index.html#the-adversarial-sisyphusian-problem-of-contracts",
+    "href": "w08/index.html#the-adversarial-sisyphusian-problem-of-contracts",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "The Adversarial-Sisyphusian Problem of Contracts",
+    "text": "The Adversarial-Sisyphusian Problem of Contracts\n\nRecall Intuitive Problem of Causal Inference: Correlation \\(\\nimplies\\) Causation, but can do a bunch of work to overcome\nAdversarial-Sisyphusian Problem is one level worse 😱\n\nIPCI: You vs. discovered correlation (inanimate)\nASPC: You vs. companies investing resources 💰 into making the problem harder and harder for you\n\ntldr: The moment you (\\(N=1\\), $) finally find and “fix” bad thing, company (\\(N \\gg 1\\), $$$) adds more ambiguity to re-enable / sends your data to \"new\", \"different\" 3rd-party processor 🥸",
     "crumbs": [
       "Week 8: {{< var w08.date-md >}}"
     ]
@@ -1267,7 +1301,7 @@
     "href": "w08/index.html#references",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "References",
-    "text": "References\n\n\nEuropean Union. 1995. “Directive 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data.” http://data.europa.eu/eli/dir/1995/46/oj/eng.\n\n\nOECD. 1980. OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data. Paris: Organisation for Economic Co-operation and Development. https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.\n\n\nSugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. Big Data Is Not a Monolith. MIT Press.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.",
+    "text": "References\n\n\nEuropean Union. 1995. “Directive 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data.” http://data.europa.eu/eli/dir/1995/46/oj/eng.\n\n\nHart, Oliver. 2017. “Incomplete Contracts and Control.” American Economic Review 107 (7): 1731–52. https://doi.org/10.1257/aer.107.7.1731.\n\n\nHohfeld, Wesley Newcomb. 1913. “Some Fundamental Legal Conceptions as Applied in Judicial Reasoning.” Yale Law Journal 23. https://heinonline.org/HOL/Page?handle=hein.journals/ylr23&id=24&div=&collection=.\n\n\nOECD. 1980. OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data. Paris: Organisation for Economic Co-operation and Development. https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.\n\n\nSugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. Big Data Is Not a Monolith. MIT Press.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.",
     "crumbs": [
       "Week 8: {{< var w08.date-md >}}"
     ]

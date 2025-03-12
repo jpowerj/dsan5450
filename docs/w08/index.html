@@ -123,7 +123,6 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../dsan-globals/jjstyles.css">
-<link rel="stylesheet" href="../dsan-globals/jjstyles.css">
 </head>
 
 <body class="nav-sidebar floating">
@@ -324,7 +323,7 @@ window.Quarto = {
     </ul>
     </div>
 <div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
-<p><em>Updated 2025-03-01, 04:22:03 AM</em></p>
+<p><em>Updated 2025-03-12, 03:21:35 PM</em></p>
 </div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -335,9 +334,7 @@ window.Quarto = {
   <ul>
   <li><a href="#what-is-policy-and-what-is-data-policy" id="toc-what-is-policy-and-what-is-data-policy" class="nav-link active" data-scroll-target="#what-is-policy-and-what-is-data-policy">What is Policy? And What is <em>Data</em> Policy?</a>
   <ul class="collapse">
-  <li><a href="#prelim-conflict-of-interest-disclosure" id="toc-prelim-conflict-of-interest-disclosure" class="nav-link" data-scroll-target="#prelim-conflict-of-interest-disclosure">Prelim: Conflict-of-Interest Disclosure</a></li>
-  <li><a href="#discourse-around-data-policy-in-the-us-senate" id="toc-discourse-around-data-policy-in-the-us-senate" class="nav-link" data-scroll-target="#discourse-around-data-policy-in-the-us-senate">Discourse Around “Data Policy” in the US Senate</a></li>
-  <li><a href="#prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have" id="toc-prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have" class="nav-link" data-scroll-target="#prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have">Prelim: Conclusion (Again, Solely My Opinion, Which I Wish I Didn’t Have)</a></li>
+  <li><a href="#discourse-around-data-policy-in-the-us" id="toc-discourse-around-data-policy-in-the-us" class="nav-link" data-scroll-target="#discourse-around-data-policy-in-the-us">Discourse Around “Data Policy” in the US</a></li>
   <li><a href="#actually-relevant-takeaway" id="toc-actually-relevant-takeaway" class="nav-link" data-scroll-target="#actually-relevant-takeaway">Actually-Relevant Takeaway</a></li>
   <li><a href="#implies-comparative-perspective" id="toc-implies-comparative-perspective" class="nav-link" data-scroll-target="#implies-comparative-perspective"><span class="math inline">\(\implies\)</span> <em>Comparative</em> Perspective</a></li>
   </ul></li>
@@ -353,9 +350,13 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#the-crux-of-the-normative-issues" id="toc-the-crux-of-the-normative-issues" class="nav-link" data-scroll-target="#the-crux-of-the-normative-issues">The Crux of the Normative Issues</a></li>
   <li><a href="#does-reading-understanding" id="toc-does-reading-understanding" class="nav-link" data-scroll-target="#does-reading-understanding">Does Reading = Understanding?</a></li>
+  <li><a href="#the-intuitive-problem-of-contracts" id="toc-the-intuitive-problem-of-contracts" class="nav-link" data-scroll-target="#the-intuitive-problem-of-contracts">The Intuitive Problem of Contracts</a></li>
   <li><a href="#the-fundamental-problem-of-contracts" id="toc-the-fundamental-problem-of-contracts" class="nav-link" data-scroll-target="#the-fundamental-problem-of-contracts">The Fundamental Problem of Contracts</a></li>
   <li><a href="#power" id="toc-power" class="nav-link" data-scroll-target="#power">…POWER!</a></li>
   <li><a href="#descriptive-and-normative-implications" id="toc-descriptive-and-normative-implications" class="nav-link" data-scroll-target="#descriptive-and-normative-implications">Descriptive and Normative Implications</a></li>
+  <li><a href="#harts-nobel-prize-speech" id="toc-harts-nobel-prize-speech" class="nav-link" data-scroll-target="#harts-nobel-prize-speech">Hart’s Nobel Prize Speech</a></li>
+  <li><a href="#understanding-rights-leftrightarrow-fighting-for-rights" id="toc-understanding-rights-leftrightarrow-fighting-for-rights" class="nav-link" data-scroll-target="#understanding-rights-leftrightarrow-fighting-for-rights">Understanding Rights <span class="math inline">\(\leftrightarrow\)</span> Fighting for Rights</a></li>
+  <li><a href="#the-adversarial-sisyphusian-problem-of-contracts" id="toc-the-adversarial-sisyphusian-problem-of-contracts" class="nav-link" data-scroll-target="#the-adversarial-sisyphusian-problem-of-contracts">The Adversarial-Sisyphusian Problem of Contracts</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></li>
   </ul>
@@ -411,50 +412,59 @@ window.Quarto = {
 </center>
 <section id="what-is-policy-and-what-is-data-policy" class="level1" data-stack-name="Policy Overview">
 <h1 data-stack-name="Policy Overview">What is Policy? And What is <em>Data</em> Policy?</h1>
-<section id="prelim-conflict-of-interest-disclosure" class="level2 smaller crunch-ul crunch-title">
-<h2 class="smaller crunch-ul crunch-title anchored" data-anchor-id="prelim-conflict-of-interest-disclosure">Prelim: Conflict-of-Interest Disclosure</h2>
-<ul>
-<li>Just as I laid out my biases at the beginning of the “high-level” ethics unit…</li>
-<li>Now I lay out my biases at the beginning of the policy unit!</li>
-<li>tldr: in US context, when I encounter “policy debates”, this is what they look like to me:</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/republicans-democrats-women.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
-</figure>
+<div class="hidden">
+<div class="hidden">
+<p><span class="math display">\[
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\newcommand{\bigexp}[1]{\exp\mkern-4mu\left[ #1 \right]}
+\newcommand{\bigexpect}[1]{\mathbb{E}\mkern-4mu \left[ #1 \right]}
+\newcommand{\definedas}{\overset{\small\text{def}}{=}}
+\newcommand{\definedalign}{\overset{\phantom{\text{defn}}}{=}}
+\newcommand{\eqeventual}{\overset{\text{eventually}}{=}}
+\newcommand{\Err}{\text{Err}}
+\newcommand{\expect}[1]{\mathbb{E}[#1]}
+\newcommand{\expectsq}[1]{\mathbb{E}^2[#1]}
+\newcommand{\fw}[1]{\texttt{#1}}
+\newcommand{\given}{\mid}
+\newcommand{\green}[1]{\color{green}{#1}}
+\newcommand{\heads}{\outcome{heads}}
+\newcommand{\iid}{\overset{\text{\small{iid}}}{\sim}}
+\newcommand{\lik}{\mathcal{L}}
+\newcommand{\loglik}{\ell}
+\DeclareMathOperator*{\maximize}{maximize}
+\DeclareMathOperator*{\minimize}{minimize}
+\newcommand{\mle}{\textsf{ML}}
+\newcommand{\nimplies}{\;\not\!\!\!\!\implies}
+\newcommand{\orange}[1]{\color{orange}{#1}}
+\newcommand{\outcome}[1]{\textsf{#1}}
+\newcommand{\param}[1]{{\color{purple} #1}}
+\newcommand{\pgsamplespace}{\{\green{1},\green{2},\green{3},\purp{4},\purp{5},\purp{6}\}}
+\newcommand{\prob}[1]{P\left( #1 \right)}
+\newcommand{\purp}[1]{\color{purple}{#1}}
+\newcommand{\sign}{\text{Sign}}
+\newcommand{\spacecap}{\; \cap \;}
+\newcommand{\spacewedge}{\; \wedge \;}
+\newcommand{\tails}{\outcome{tails}}
+\newcommand{\Var}[1]{\text{Var}[#1]}
+\newcommand{\bigVar}[1]{\text{Var}\mkern-4mu \left[ #1 \right]}
+\]</span></p>
 </div>
-</section>
-<section id="discourse-around-data-policy-in-the-us-senate" class="level2 smaller title-11 crunch-title">
-<h2 class="smaller title-11 crunch-title anchored" data-anchor-id="discourse-around-data-policy-in-the-us-senate">Discourse Around “Data Policy” in the US Senate</h2>
+</div>
+<section id="discourse-around-data-policy-in-the-us" class="level2 smaller title-11 crunch-title">
+<h2 class="smaller title-11 crunch-title anchored" data-anchor-id="discourse-around-data-policy-in-the-us">Discourse Around “Data Policy” in the US</h2>
 <ul>
-<li>(This is ~the level at which “national conversations” are conducted around big data)</li>
+<li>(This is the level at which “national conversations” are conducted around big data)</li>
 </ul>
 <center>
 <a href="https://www.youtube.com/watch?v=5W-ufw5Z7ac" target="_blank"><img src="images/mr_cotton.jpeg" class="img-fluid quarto-figure quarto-figure-center" width="800"></a>
 </center>
 </section>
-<section id="prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have" class="level2 smaller title-07 crunch-ul crunch-blockquote crunch-title">
-<h2 class="smaller title-07 crunch-ul crunch-blockquote crunch-title anchored" data-anchor-id="prelim-conclusion-again-solely-my-opinion-which-i-wish-i-didnt-have">Prelim: Conclusion (Again, Solely My Opinion, Which I Wish I Didn’t Have)</h2>
-<ul>
-<li>The US is, imo, entirely hopeless on this front… short of a massive socio-political realignment on a scale that has never before occurred, sensible and just policies (data-focused or otherwise) are for all intents and purposes impossible</li>
-<li>US approach to social problems: fight “wars” against them, deport people, throw millions into prisons, blame CCP and their Singaporean CEO running dogs, blame Russian election-interferers, give billions of $ to Israeli election-interferers, and so on
-<ul>
-<li>(Previous examples) War on Drugs, War on Poverty, War on “Welfare Queens”</li>
-<li>(Future examples, you owe me a lunch when they are announced) War on School Shootings, War on Climate Change, War on Lack of Healthcare, War on Long Lines</li>
-</ul></li>
-<li>But also: my opinion truly doesn’t matter for purposes of learning about data policy</li>
-<li><strong>Important takeaway #1</strong>: I would be very very happy to be proven wrong!</li>
-</ul>
-<blockquote class="blockquote">
-<p><strong><em>Pessimism of the intellect, optimism of the will</em></strong>.</p>
-<p>—Antonio Gramsci, Founder of the PCI, 1920 (Imprisoned by Mussolini in 1926, died in prison in 1937)</p>
-</blockquote>
-</section>
 <section id="actually-relevant-takeaway" class="level2 smaller">
 <h2 class="smaller anchored" data-anchor-id="actually-relevant-takeaway">Actually-Relevant Takeaway</h2>
 <ul>
 <li>Unlike the US, there <strong>are</strong> countries and national/international institutions where policies are formed, in varying degrees, by processes in which <strong>data</strong> comes into play</li>
-<li>We’ll discuss more examples; two I can speak to directly given work as data consultant:</li>
+<li>We’ll discuss more examples; two I can speak to directly from work as data consultant:</li>
 <li><strong>EU</strong>: Consulted on project around implementation of <strong>GDPR</strong></li>
 <li><strong>UNESCO</strong>: Received grant for data-analysis of international <strong>translation policies</strong>
 <ul>
@@ -464,8 +474,8 @@ window.Quarto = {
 <li><strong>NY MTA</strong>: Consulted on project studying NYC subway data, until passage of <a href="https://ogs.ny.gov/executive-order-157" target="_blank">NYS Executive Order 157</a> banning state funding for any person or organization supporting boycott of Israel <code>¯\_(ツ)_/¯</code></li>
 </ul>
 </section>
-<section id="implies-comparative-perspective" class="level2 crunch-title crunch-ul">
-<h2 class="crunch-title crunch-ul anchored" data-anchor-id="implies-comparative-perspective"><span class="math inline">\(\implies\)</span> <em>Comparative</em> Perspective</h2>
+<section id="implies-comparative-perspective" class="level2 crunch-title crunch-ul crunch-li-8">
+<h2 class="crunch-title crunch-ul crunch-li-8 anchored" data-anchor-id="implies-comparative-perspective"><span class="math inline">\(\implies\)</span> <em>Comparative</em> Perspective</h2>
 <ul>
 <li>We’ll study various countries / international orgs and their attempts to tackle data policy issues (with hope that takeaways can be applied to the US someday as well)</li>
 <li>Important to retain <strong>descriptive/normative distinction</strong>!</li>
@@ -473,7 +483,7 @@ window.Quarto = {
 <ul>
 <li>What <strong>are</strong> the policies currently in existence?</li>
 <li>What are their <strong>drawbacks</strong>?</li>
-<li>And, among the latter, which ones <strong>could</strong> be addressed via policy? (requires understanding <strong>processes of policy formation</strong>) Which ones <strong>could not?</strong> (<em>impossibility results…</em>)</li>
+<li>And, among the latter, which ones <strong>could</strong> be addressed via policy? (requires understanding <strong>processes of policy formation</strong>) Which ones <strong>could not?</strong> (<em>prisoner’s dilemma</em>)</li>
 </ul></li>
 </ul>
 </section>
@@ -488,17 +498,17 @@ window.Quarto = {
 <li><strong>Use Limitation Principle</strong>: “Personal data should not be disclosed, made available or otherwise used for purposes other than those specified [at time of collection] except with the <strong>consent</strong> of the data subject” <span class="citation" data-cites="oecd_oecd_1980">(<a href="#ref-oecd_oecd_1980" role="doc-biblioref">OECD 1980, 15</a>)</span></li>
 </ul>
 </section>
-<section id="eu-data-protection-directive-1995" class="level2">
-<h2 class="anchored" data-anchor-id="eu-data-protection-directive-1995">EU Data Protection Directive, 1995</h2>
+<section id="eu-data-protection-directive-1995" class="level2 title-08 crunch-title">
+<h2 class="title-08 crunch-title anchored" data-anchor-id="eu-data-protection-directive-1995">EU Data Protection Directive, 1995</h2>
 <ul>
 <li>Art. 7: Processing allowed when “the data subject <strong>has unambiguously given his [sic] consent</strong>.”</li>
 <li>Art. 8: Use of sensitive data is restricted, except where “the data subject <strong>has given his [sic] explicit consent</strong> to the processing of those data.”</li>
-<li>Art. 26: Prohibits export of personal data to non-European countries lacking “adequate data protection”, except when “the data subject <strong>has given his [sic] consent</strong> unambiguously to the proposed transfer” <span class="citation" data-cites="europeanunion_directive_1995">(<a href="#ref-europeanunion_directive_1995" role="doc-biblioref">European Union 1995</a>)</span></li>
+<li>Art. 26: Prohibits export of personal data to non-Euro countries lacking “adequate data protection”, except when “the data subject <strong>has given his [s] consent</strong> unambiguously to the proposed transfer” <span class="citation" data-cites="europeanunion_directive_1995">(<a href="#ref-europeanunion_directive_1995" role="doc-biblioref">European Union 1995</a>)</span></li>
 <li>Superceded by <strong>GDPR</strong> in <strong>2018</strong></li>
 </ul>
 </section>
-<section id="eu-general-data-protection-regulation-gdpr-2018" class="level2 smaller crunch-title title-10">
-<h2 class="smaller crunch-title title-10 anchored" data-anchor-id="eu-general-data-protection-regulation-gdpr-2018">EU General Data Protection Regulation (GDPR), 2018</h2>
+<section id="eu-general-data-protection-regulation-gdpr-2018" class="level2 smaller crunch-title title-09">
+<h2 class="smaller crunch-title title-09 anchored" data-anchor-id="eu-general-data-protection-regulation-gdpr-2018">EU General Data Protection Regulation (GDPR), 2018</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/gdpr.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
@@ -549,8 +559,42 @@ window.Quarto = {
 </figure>
 </div>
 </section>
-<section id="the-fundamental-problem-of-contracts" class="level2 crunch-title crunch-ul title-09">
-<h2 class="crunch-title crunch-ul title-09 anchored" data-anchor-id="the-fundamental-problem-of-contracts">The Fundamental Problem of Contracts</h2>
+<section id="the-intuitive-problem-of-contracts" class="level2 smaller crunch-ul crunch-title crunch-quarto-figure crunch-images">
+<h2 class="smaller crunch-ul crunch-title crunch-quarto-figure crunch-images anchored" data-anchor-id="the-intuitive-problem-of-contracts">The Intuitive Problem of Contracts</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[60,40]">
+<div class="quarto-layout-row">
+<div id="intuitive-problem-left" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<ul>
+<li>Hard to read, harder to understand, possibly rly bad stuff in them, won’t know until you read + understand</li>
+<li>Solution (in theory… in modern liberal market-based democracies): Collective action!</li>
+<li>Option 1 (Exit): Find better platform, use it instead <span class="math inline">\(\Rightarrow\)</span> company dies (competitive market)</li>
+<li>Option 2 (Voice): Raise a fuss, hoot and holler, make a big stink about it, etc.
+<ul>
+<li><span class="math inline">\(\Rightarrow\)</span> (2a) Company will change/remove it to avoid embarrassment and/or prevent Option 1 becoming an option</li>
+<li><span class="math inline">\(\Rightarrow\)</span> (2b) Government intervention (hypothetical functional government)</li>
+</ul></li>
+</ul>
+</div>
+<div id="intuitive-problem-right" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/exit-voice-page.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="240"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/corbyn_down.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="240"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="the-fundamental-problem-of-contracts" class="level2 crunch-title crunch-ul title-08">
+<h2 class="crunch-title crunch-ul title-08 anchored" data-anchor-id="the-fundamental-problem-of-contracts">The Fundamental Problem of Contracts</h2>
 <ul>
 <li>Just as we can’t observe <strong>two simultaneous worlds</strong> <span class="math inline">\(W_{X = 0}\)</span> and <span class="math inline">\(W_{X = 1}\)</span> which differ only in the value of <span class="math inline">\(X\)</span>,</li>
 <li>We can’t <strong>foresee all possible contingencies</strong> that need to be included in a <strong>contract</strong>
@@ -582,22 +626,52 @@ window.Quarto = {
 <ul>
 <li>Who has power w.r.t. incompleteness of contracts?</li>
 <li>Who <strong>ought</strong> to have power w.r.t. incompleteness of contracts?</li>
-<li>And now I can talk about the EU thing…
-<ul>
-<li>(It wasn’t implemented)</li>
-<li>(But idk statute of limitations)</li>
-<li>(Oh well)</li>
-</ul></li>
+<li>Residual rights of control…</li>
 </ul>
+</section>
+<section id="harts-nobel-prize-speech" class="level2 crunch-title text-90 title-09">
+<h2 class="crunch-title text-90 title-09 anchored" data-anchor-id="harts-nobel-prize-speech">Hart’s Nobel Prize Speech</h2>
 <blockquote class="blockquote">
-<p>🔥<em>I think it’s more useful to, like, make things happen now, and then, like, apologize later</em>🔥 —<a href="https://www.snopes.com/fact-check/move-fast-break-things-facebook-motto/" target="_blank">Mark Zuckerberg the 🐐</a></p>
+<p><strong>Complete contracts</strong> are contracts where everything that can ever happen is written into the contract. Actual contracts aren’t like this, as lawyers know. They’re poorly worded, ambiguous, leave out important things. They’re <strong>incomplete</strong>.</p>
+<p>A critical question that arises with an incomplete contract is, <strong>who has the right to decide about the missing things?</strong> We called this right the residual control or decision right. The question is, who has it?</p>
+<p>Further thought led us to the idea that <strong>this is <em>what ownership is</em></strong>. The owner of an asset has the right to decide how the asset is used where the use is not contractually specified <span class="citation" data-cites="hart2017incomplete">(<a href="#ref-hart2017incomplete" role="doc-biblioref">Hart 2017</a>)</span></p>
 </blockquote>
+</section>
+<section id="understanding-rights-leftrightarrow-fighting-for-rights" class="level2 title-08 crunch-ul math-90">
+<h2 class="title-08 crunch-ul math-90 anchored" data-anchor-id="understanding-rights-leftrightarrow-fighting-for-rights">Understanding Rights <span class="math inline">\(\leftrightarrow\)</span> Fighting for Rights</h2>
+<ul>
+<li>“Hohfeldian” framework <span class="citation" data-cites="hohfeld_fundamental_1913">(<a href="#ref-hohfeld_fundamental_1913" role="doc-biblioref">Hohfeld 1913</a>)</span></li>
+<li>A right <span class="math inline">\(r_i\)</span> granted to person <span class="math inline">\(i\)</span> <span class="math inline">\(\implies\)</span> A duty/obligation imposed on everyone in the world besides <span class="math inline">\(i\)</span> (to respect <span class="math inline">\(r_i\)</span>)</li>
+<li>A duty or obligation <span class="math inline">\(d_i\)</span> imposed on a person <span class="math inline">\(i\)</span> <span class="math inline">\(\implies\)</span> A right granted to everyone in the world besides <span class="math inline">\(i\)</span> (to… be a potential beneficiary of <span class="math inline">\(d_i\)</span>)</li>
+<li><span class="math inline">\(\implies\)</span> rough measures of <strong>relative power</strong> in a contract:</li>
+</ul>
+<p><span class="math display">\[
+\frac{\text{rights}_i}{\text{rights}_j} = \frac{\text{obligations}_j}{\text{rights}_j} = \frac{\text{rights}_i}{\text{obligations}_j} = \frac{\text{obligations}_j}{\text{obligations}_i}
+\]</span></p>
+</section>
+<section id="the-adversarial-sisyphusian-problem-of-contracts" class="level2 crunch-title title-07">
+<h2 class="crunch-title title-07 anchored" data-anchor-id="the-adversarial-sisyphusian-problem-of-contracts">The Adversarial-Sisyphusian Problem of Contracts</h2>
+<ul>
+<li>Recall Intuitive Problem of Causal Inference: Correlation <span class="math inline">\(\nimplies\)</span> Causation, <strong>but</strong> can do a bunch of work to overcome</li>
+<li>Adversarial-Sisyphusian Problem is <strong>one level worse</strong> 😱
+<ul>
+<li>IPCI: You vs.&nbsp;discovered correlation (inanimate)</li>
+<li>ASPC: You vs.&nbsp;companies investing <strong>resources</strong> 💰 into making the problem <strong>harder and harder for you</strong></li>
+</ul></li>
+<li>tldr: The moment you (<span class="math inline">\(N=1\)</span>, $) finally find and “fix” bad thing, company (<span class="math inline">\(N \gg 1\)</span>, $$$) adds more ambiguity to re-enable / sends your data to "new", "different" 3rd-party processor 🥸</li>
+</ul>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-europeanunion_directive_1995" class="csl-entry" role="listitem">
 European Union. 1995. <span>“Directive 95/46/<span>EC</span> of the <span>European Parliament</span> and of the <span>Council</span> of 24 <span>October</span> 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data.”</span> <a href="http://data.europa.eu/eli/dir/1995/46/oj/eng">http://data.europa.eu/eli/dir/1995/46/oj/eng</a>.
+</div>
+<div id="ref-hart2017incomplete" class="csl-entry" role="listitem">
+Hart, Oliver. 2017. <span>“Incomplete <span>Contracts</span> and <span>Control</span>.”</span> <em>American Economic Review</em> 107 (7): 1731–52. <a href="https://doi.org/10.1257/aer.107.7.1731">https://doi.org/10.1257/aer.107.7.1731</a>.
+</div>
+<div id="ref-hohfeld_fundamental_1913" class="csl-entry" role="listitem">
+Hohfeld, Wesley Newcomb. 1913. <span>“Some <span>Fundamental Legal Conceptions</span> as <span>Applied</span> in <span>Judicial Reasoning</span>.”</span> <em>Yale Law Journal</em> 23. <a href="https://heinonline.org/HOL/Page?handle=hein.journals/ylr23&amp;id=24&amp;div=&amp;collection=">https://heinonline.org/HOL/Page?handle=hein.journals/ylr23&amp;id=24&amp;div=&amp;collection=</a>.
 </div>
 <div id="ref-oecd_oecd_1980" class="csl-entry" role="listitem">
 OECD. 1980. <em><span>OECD Guidelines</span> on the <span>Protection</span> of <span>Privacy</span> and <span>Transborder Flows</span> of <span>Personal Data</span></em>. Paris: <span>Organisation for Economic Co-operation and Development</span>. <a href="https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en">https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en</a>.
