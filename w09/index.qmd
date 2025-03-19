@@ -15,11 +15,13 @@ format:
     footer: "DSAN 5450 Week 9: {{< var w09.footer >}}"
     output-file: "slides.html"
     html-math-method: mathjax
-    css: "../dsan-globals/jjstyles.css"
-    include-in-header:
-      text: "<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'>"
+    theme: [default, "../dsan-globals/jjquarto.scss"]
     scrollable: true
     slide-number: true
+    link-external-icon: true
+    link-external-newwindow: true
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css'>"
     simplemenu:
       flat: true
       barhtml:
@@ -42,7 +44,19 @@ format:
 
 :::
 
-# Week 8 Recap {data-stack-name="Week 8 Recap"}
+# Schedule {.smaller data-stack-name="Schedule / Recap"}
+
+Today's Planned Schedule:
+
+| | Start | End | Topic |
+|:- |:- |:- |:- |
+| **Lecture** | 3:30pm | 3:45pm | [Final Projects &rarr;]() |
+| | 3:45pm | 4:15pm | [Extended Recap &rarr;](#recap-1-privacy-policies-take-a-long-time-to-read) | 
+| | 4:15pm | 4:50pm | [Contractual Power &rarr;](#contracts-through-a-game-theoretic-lens-mechanism-design) |
+| **Break!** | 4:50pm | 5:10pm | |
+| | 5:10pm | 6:00pm | [The Power of Mechanism Design &rarr;]() |
+
+: {tbl-colwidths="[12,12,12,64]"}
 
 ::: {.hidden}
 
@@ -50,83 +64,58 @@ format:
 
 :::
 
-![Ronnie The Bear, <a href='https://www.reaganfoundation.org/ronald-reagan/reagan-quotes-speeches/inaugural-address-2/' target='_blank'>Presidential Acceptance Speech</a>, 20 January 1981](images/ronnie_the_bear.png){fig-align="center"}
+## Final Project Tings {.smaller}
 
-## 1. Privacy Policies Take a Long Time to Read! {.crunch-title .title-11 .smaller .nostretch}
+{{< video https://www.youtube.com/watch?v=mBgMVh4ub-E width="100%" height="500" >}}
+
+## Project Management Tings {.smaller}
+
+| Ting | Pros | Cons | Verdict |
+| - | - | - | - |
+| [TasksBoard](https://tasksboard.com/app) | Integrated with Google Workspace (`@georgetown.edu` emails) | Free version useless (no share) | ❌ |
+| [Jira](https://dsan.atlassian.net/jira/) | Maybe most popular? | 30-day free trial | ❌ |
+| [Trello](https://trello.com/) | Simpler than Jira (both owned by Atlassian) | 14-day free trial | ❌ |
+| [Airtable](https://airtable.com/) | Jeff uses this every day | .edu plan doesn't include free users | ❌ |
+| [Notion](https://www.notion.so/) | Jeff uses this v often, .edu plan has hackish way to include users for free | Force yall to sign up for new ting | ✅ |
+
+<center>
+
+👉 [**Notion: Example 5450 Project**](https://jjacobs.notion.site/5450-template) 👈
+
+</center>
+
+## Recap 0: Descriptive vs. Normative {.crunch-title .crunch-ul .smaller .crunch-blockquote}
+
+* Much of **Part 1** has been adjusting to weirdness of **normative** reasoning
+* Descriptive reasoning looks like [Rules of math $\implies \theta^* = 2.5$], but [rules of math] part isn't mentioned bc extraneous
+  * (Even if it was mentioned, intersubjective agreement not so hard, very few people fighting wars over *"we should denote repeated addition with $\otimes$ not $\times$!"*)
+* Normative reasoning looks like [Antecedent A $\implies$ Answer 1 but Antecedent B $\implies$ Answer 2], and people **do** fight wars over A vs. B (implicitly or explicitly)
+* **Part 2**: **Rapid cycling back and forth between normative and descriptive!**
+* One new aspect: "**Descriptive** Ethics" (How *do* people act, not how *should* people act) $\leadsto$ Study of Power
+  
+  > [What is] right, as the world goes, is only in question between **equals in power**; otherwise, the strong do as they please and the weak suffer what they must. [@thucydides2013war c. 411 BC]
+
+## Recap 1: Privacy Policies Take a Long Time to Read! {.crunch-title .title-09 .smaller .nostretch}
 
 ![](images/terms_of_service_info.jpg){fig-align="center"}
 
-## 2. *Reading* Privacy Policies $\neq$ *Understanding* Privacy Policies! {.smaller .crunch-title .crunch-ul}
+## Recap 2: *Reading* Privacy Policies $\neq$ *Understanding* Privacy Policies! {.smaller .crunch-title .crunch-ul .title-11}
 
 * Reading vs. understanding **implications** / **contingencies** / **ambiguities**...
 * NLP *could* (and *should!*) be helpful (*"making privacy policies **machine readable** [...] would help users match **privacy preferences** against **policies** offered by web services"*), but mostly just reveals how bad the problem is:
 
 ![Figure 15 from @wagner_privacy_2023. "Obfuscatory words" are words like *acceptable*, *significant*, *mainly*, or *predominantly*, interpretated at the discretion of companies rather than users (see next slide!)](images/wagner_fig.svg){fig-align="center"}
 
-## The Intuitive Problem of Contracts {.smaller .crunch-ul .crunch-title .crunch-quarto-figure .crunch-images}
-
-::: {layout="[60,40]"}
-::: {#intuitive-problem-left}
-
-* Hard to read, harder to understand, possibly rly bad stuff in them, won't know until you read + understand
-* Solution (in theory... in modern liberal market-based democracies): Collective action!
-* Option 1 (Exit): Find better platform, use it instead $\Rightarrow$ company dies (competitive market)
-* Option 2 (Voice): Raise a fuss, hoot and holler, make a big stink about it, etc.
-  * $\Rightarrow$ (2a) Company will change/remove it to avoid embarrassment and/or prevent Option 1 becoming an option
-  * $\Rightarrow$ (2b) Government intervention (hypothetical functional government)
-
-:::
-::: {#intuitive-problem-right}
-
-![](images/exit-voice-page.jpeg){fig-align="center" width="240"}
-
-![](images/corbyn_down.jpeg){fig-align="center" width="240"}
-
-:::
-:::
-
-## Understanding Rights $\leftrightarrow$ Fighting for Rights {.title-08 .crunch-ul}
-
-* "Hohfeldian" framework [@hohfeld_fundamental_1913]
-* A right $r_i$ granted to person $i$ $\implies$ A duty/obligation imposed on everyone in the world besides $i$ (to respect $r_i$)
-* A duty or obligation $d_i$ imposed on a person $i$ $\implies$ A right granted to everyone in the world besides $i$ (to... be a potential beneficiary of $d_i$)
-* $\implies$ rough measures of **relative power** in a contract:
-
-$$
-\frac{\text{rights}_i}{\text{rights}_j} = \frac{\text{obligations}_j}{\text{rights}_j} = \frac{\text{rights}_i}{\text{obligations}_j} = \frac{\text{obligations}_j}{\text{obligations}_i}
-$$
-
-## The Adversarial-Sisyphusian Problem of Contracts {.crunch-title .title-07}
+## The Adversarial-Sisyphusian Problem of Contracts {.crunch-title .title-07 .crunch-ul .crunch-li-8 .text-90}
 
 * Recall Intuitive Problem of Causal Inference: Correlation $\nimplies$ Causation, **but** can do a bunch of work to overcome
 * Adversarial-Sisyphusian Problem is **one level worse** 😱
   * IPCI: You vs. discovered correlation (inanimate)
   * ASPC: You vs. companies investing **resources** 💰 into making the problem **harder and harder for you**
-* tldr: The moment you ($N=1$, \$) finally find and "fix" bad thing, company ($N \gg 1$, \$\$\$) adds more ambiguity to re-enable / sends your data to \"\"\"new\"\"\", \"\"\"different\"\"\" 3rd-party processor 🥸
+* The moment you ($N=1$, \$) finally find and "fix" bad thing, company ($N \gg 1$, \$\$\$) adds more ambiguity to re-enable / sends your data to "new" 3rd-party processor 🥸
+* Analogy would be: someone making causal chains longer and longer as you're checking causality (map of dancing landscape)
 
-## The Devastating Consequences of Corporate Scandals {.crunch-title .crunch-ul .title-07}
-
-* <a href='https://en.wikipedia.org/wiki/Nisour_Square_massacre' target='_blank'>Nisour Square Massacre</a> (16 Sept 2007): Four Blackwater private military contractors mow down unarmed Iraqi civilians, killing 17, injuring 20
-* Devastating for innocent Iraqis, but... perhaps even more devastating for Blackwater?
-* (TW for next slide: Horrific consequences for murdering 17 civilians in a country 6915 miles away)
-
-## Consequences for the Contractors {.crunch-title}
-
-* All pardoned (#GodsPlan)
-
-![From <a href='https://www.youtube.com/watch?v=DUvO0yO7N5I' target='_blank'>The Shawn Ryan Show</a>, Episode 11](images/pardoned.jpeg){fig-align="center"}
-
-* Can make <a href='https://pipehitterfoundation.org/blackwater4/' target='_blank'>tax-deductible donation</a> to charity supporting them (I couldn't find the tax-deductible donation page for the Iraqi families, lmk if you find)
-
-## Consequences for Blackwater {.crunch-images .crunch-title .crunch-ul .crunch-quarto-figure}
-
-* They had to, like, design a whole new logo and stuff
-
-![](images/academi.png){fig-align="center"}
-
-![](images/Constellis_logo.svg){fig-align="center" width="70%"}
-
-## *No Logo* / Why Johnny Can't Dissent {.crunch-title .crunch-ul .crunch-blockquote}
+## *No Logo* / Why Johnny Can't Dissent {.crunch-title .crunch-ul .crunch-blockquote .title-08}
 
 * Naomi Klein's *No Logo* (1999) sparked a nationwide boycott of companies employing sweatshop labor
 * Great success; all companies responded and (out of the kindness of their hearts) cut ties with all of the sweatshops
@@ -134,13 +123,50 @@ $$
 
 > "You can't outrun them, or even stay ahead of them for very long: it's their racetrack, and that's them waiting at the finish line to congratulate you" [@frank_dark_1994]
 
-## Conclusion
+## Conclusion {.smaller .crunch-title .crunch-quarto-figure .cols-va}
+
+:::: {.columns}
+::: {.column width="50%"}
 
 ![](images/my_life_dont_mean_shit.jpg){fig-align="center"}
 
-# Incomplete Contracts {data-stack-name="Incomplete Contracts"}
+:::
+::: {.column width="50%"}
 
-## The Fundamental Problem of Contracts {.crunch-title .crunch-ul .title-09}
+![](images/free_iphone7.jpg){fig-align="center"}
+
+:::
+::::
+
+## Real Conclusion(?)
+
+![](images/jensen.jpg){fig-align="center"}
+
+
+## Wars with One Side {.smaller .crunch-title .crunch-blockquote .cols-va}
+
+:::: {.columns}
+::: {.column width="65%"}
+
+> It would be ideal except for the Porto Ricans [sic]. They are beyond doubt the dirtiest, laziest, most degenerate and thievish race of men ever inhabiting this sphere. It makes you sick to inhabit the same island with them. They are even lower than Italians. What the island needs is not public health work but a tidal wave or something to totally exterminate the population. It might then be livable. I have done my best to further the process of extermination by killing off 8 and transplanting cancer into several more. ([Cornelius Rhoads](https://en.wikipedia.org/wiki/Cornelius_P._Rhoads))
+
+> By 1930, the police had files on at least 135,000 individuals (about 3 percent of the island) suspected of favoring independence. ([Source](https://aperture.org/editorial/what-christopher-gregory-rivera-discovered-in-puerto-ricos-state-secrets/))
+
+:::
+::: {.column width="35%"}
+
+![](images/rhoads.jpg){fig-align="center"}
+
+:::
+::::
+
+## Wars with One Side? {.crunch-title .crunch-quarto-figure}
+
+![Georgetown Law School Center on Privacy and Technology, [*American Dragnet: Data-Driven Deportation in the 21st Century*](https://americandragnet.org/)](images/ice_dragnet.png){fig-align="center"}
+
+# Contracts Through a Game-Theoretic Lens: Mechanism Design {data-stack-name="Mechanism Design"}
+
+## The Fundamental Problem of Contracts {.crunch-title .crunch-ul .title-08}
 
 * Just as we can't observe **two simultaneous worlds** $W_{X = 0}$ and $W_{X = 1}$ which differ only in the value of $X$,
 * We can't **foresee all possible contingencies** that need to be included in a **contract**
@@ -156,21 +182,14 @@ $$
 * Otherwise, in a non-unionized private firm (94% of total), the outcome is determined by *organizational hierarchy*
   * This is the case for $\frac{125000000}{127509000} \approx 98.03\%$ of <a href='https://fred.stlouisfed.org/series/USPRIV' target='_blank'>US workforce</a>
 
-## Descriptive and Normative Considerations {.crunch-title .title-09 .crunch-ul .crunch-blockquote}
+## Descriptive and Normative Considerations {.crunch-title .title-08 .crunch-ul .crunch-blockquote .text-90}
 
 > The combined effect of **incomplete contracts** and **conflicts of interest** is that the determination of outcomes depends on who exercises **power** in the transaction.
 > 
-> Power is generally exercised by those who hold the residual rights of control, meaning **the right to determine what is not specified contractually**
+> Power is generally exercised by those who hold the residual rights of control, meaning **the right to determine what is not specified contractually** [@bowles2009microeconomics]
 
-* [Step 1: Measurable, empirically verifiable, etc.] **Who has power** w.r.t. a given incomplete contract?
-* [Step 2: Up to you and your ethical axioms] **Who ought to have power** w.r.t. incomplete contracts?
-
-<!-- * And now I can talk about the EU thing...
-  * (It wasn't implemented)
-  * (But idk statute of limitations)
-  * (Oh well)
-
-> 🔥*I think it's more useful to, like, make things happen now, and then, like, apologize later*🔥 ---<a href='https://www.snopes.com/fact-check/move-fast-break-things-facebook-motto/' target='_blank'>Mark Zuckerberg the 🐐</a> -->
+* [Step 1: Empirically measurable given antecedents] **Who has power** w.r.t. a given incomplete contract?
+* [Step 2: Up to you and your ethical axioms; e.g., efficiency] **Who ought to have power** w.r.t. incomplete contracts?
 
 ## Working Definition of Power
 
@@ -182,136 +201,122 @@ For agent $A$ to have power over agent $B$ it is sufficient that, by imposing or
 :::
 :::
 
-# Measuring Contractual Power {data-stack-name="Measuring Contractual Power"}
+# Mechanism Design
 
-## (Gist of) Wealth-Power Correspondence Theorem {.crunch-title .crunch-ul .title-08 .inline-09 .smallish}
+* Prisoner's Dilemma
+* Assurance Game
+* Invisible Hand Game
+* Mechanism Design = **Creating** incentives to **push** existing game from one form to another!
+* *Second Price Auctions...*
 
-*[Axiom] Standard (Walrasian) perfectly-competitive equilibrium, no entry/exit barriers, **minus** complete-contracts assumption*
-
-1. "Individual wealth levels $\omega_{i,t}$ determine how individuals come to hold differing structural positions": $i$'s structural position $P_{i,t}$ determined by set of feasible contracts available at $t$
-2. Individual optimization of contractual arrangements between $i$ and $j$ (effort level $e_i^*$, monitoring $m_j^*$) gives rise to **authority structure** $\Rightarrow$ well-defined, **measurable degree of power** $\rho_{i \rightarrow j}(w_i, z_j)$ ($j$ has outside option $z_j$, $i$ offers wage $w_i > z_j$)
-3. [Given two agents $i, j$] $\rho_{i \rightarrow j} > \rho_{j \rightarrow i}$ if and only if $\omega_i > \omega_j$ 👀🧐
-
-## Possible Steady-State Equilibria (Skipping Lots of Math) {.crunch-title .smaller .title-09}
+## Prisoners' Dilemma
 
 ```{=html}
-<table class='small-table'>
+<table class='game-table'>
 <thead>
-<tr>
-  <!-- <th><span data-qmd="Equilibrium<br>$s_i^* = (x_i,y_i,z_i)$"></span></th> -->
-  <th>Produces for Self?</th>
-  <th>Hires Labor?</th>
-  <th>Sells Labor?</th>
-  <th>Agricultural</th>
-  <th>Industrial</th>
-  <th>Post-Industrial</th>
-  <th><span data-qmd="Wealth $\omega_i^*$"></span></th>
-</tr>
 </thead>
 <tbody>
-<tr class='td-section-head'>
-  <td colspan="7" align="center"><span data-qmd="**Bourgeoisie** (Bosses)"></span></td>
-</tr>
-<tr class='td-no-bottom'>
-  <!-- <td><span data-qmd="$(0,+,0)$"></span></td> -->
-  <td>❌</td>
-  <td>✅</td>
-  <td>❌</td>
-  <td>Landlord</td>
-  <td>Capitalist</td>
-  <td>CEO</td>
-  <td><span data-qmd="$\omega_i^* \geq \frac{b}{\pi}$"></span></td>
+<tr>
+  <td class='game-label'></td>
+  <td class='game-label'></td>
+  <td colspan="2" align="center" class='game-label'><span data-qmd="$B$"></span></td>
 </tr>
 <tr>
-  <td colspan="7" align="center">Doesn't need to work at all (provides capital to their workers)</td>
-</tr>
-<tr class='td-no-bottom'>
-  <!-- <td><span data-qmd="$(+,+,0)$"></span></td> -->
-  <td>✅</td>
-  <td>✅</td>
-  <td>❌</td>
-  <td>Rich peasant (Kulak)</td>
-  <td>Capitalist</td>
-  <td>Small business owner</td>
-  <td><span data-qmd="$\frac{ba}{1-a} < \omega_i^* < \frac{b}{\pi}$"></span></td>
+  <td class='game-label'></td>
+  <td class='game-label'></td>
+  <td class='game-label'>Silent</td>
+  <td class='game-label'>Snitch</td>
 </tr>
 <tr>
-  <td colspan="7">Not enough capital to hire workers to produce full consumption bundle</td>
-</tr>
-<tr class='td-section-head'>
-  <td colspan="7" align="center"><span data-qmd="**Petit Bourgeoisie** (Independent / 'Yeoman' Workers)"></span></td>
-</tr>
-<tr class='td-no-bottom'>
-  <!-- <td><span data-qmd="$(+,0,0)$"></span></td> -->
-  <td>✅</td>
-  <td>❌</td>
-  <td>❌</td>
-  <td>Peasant</td>
-  <td>Artisan</td>
-  <td>Full-time Etsy</td>
-  <td><span data-qmd="$\omega_i^* = \frac{ba}{1-a}$"></span></td>
+  <td rowspan="2" style="vertical-align: middle;" class='game-label no-bottom-border'><span data-qmd="$A$"></span></td>
+  <td class='game-label'>Silent</td>
+  <td class='game-cell'><span data-qmd="$-1,-1$"></span></td>
+  <td class='game-cell'><span data-qmd="$-3,\phantom{-}0$"></span></td>
 </tr>
 <tr>
-  <td colspan="7">Has no boss; doesn't boss others</td>
-</tr>
-<tr class='td-section-head'>
-  <td colspan="7" align="center"><span data-qmd="**Proletariat** (Working Class)"></span></td>
-</tr>
-<tr class='td-no-bottom'>
-  <!-- <td><span data-qmd="$(+,0,+)$"></span></td> -->
-  <td>✅</td>
-  <td>❌</td>
-  <td>✅</td>
-  <td>Poor Peasant</td>
-  <td>Semi-Proletarian</td>
-  <td>Uber driver after work</td>
-  <td><span data-qmd="$0 < \omega_i^* < \frac{ba}{1-a}$"></span></td>
-</tr>
-<tr>
-  <td colspan="7">Small plot of land, insufficient for producing consumption bundle; "Proletarianizing"</td>
-</tr>
-<tr class='td-no-bottom'>
-  <!-- <td><span data-qmd="$(0,0,+)$"></span></td> -->
-  <td>❌</td>
-  <td>❌</td>
-  <td>✅</td>
-  <td>Landless peasant</td>
-  <td>Proletarian</td>
-  <td>Service worker</td>
-  <td><span data-qmd="$\omega_i^* = 0$"></span></td>
-</tr>
-<tr>
-  <td colspan="7">Nothing but labor power to sell ("Nothing but chains to lose")</td>
+  <td class='game-label'>Snitch</td>
+  <td class='game-cell'><span data-qmd="$\phantom{-}0, -3$"></span></td>
+  <td class='game-cell'><span data-qmd="$-10,-10$"></span></td>
 </tr>
 </tbody>
 </table>
 ```
 
-## The Crucial Input: Initial Conditions
+## Assurance Game {.crunch-title .crunch-ul .crunch-blockquote}
 
-* Steady states on previous slide are **absorbing states** of stochastic process! $w_{i,0} \rightarrow w_{i,1} \rightarrow \cdots$
-* For every agent $i$, some time $T_i$ such that $\omega_{i,t}$ will be in one of those five states for $t \geq T_i$
-* But how do we know **which** of the five states a given person will end up in?
-  * It's a **stochastic system**, so can't say with certainty, but **can** derive results about which initial conditions maximize $\Pr(\omega_i^* = S \mid \omega_{i,0})$...
+[Palanpur](https://en.wikipedia.org/wiki/Palanpur), Gujarat, India
 
-## tldr
+> *The farmers do not doubt that earlier planting would give them larger harvests, but no one, the farmer explained, is willing to be the **first to plant**, as the seeds on any lone plot would be quickly **eaten by birds**...*
+> 
+> *[What if you all organized to plant on the same day, to reap rewards of earlier planting while minimizing bird losses (dividing by $N$ instead of $1$)?]*
+> 
+> *"If we knew how to do that", he said, looking up from his hoe at me, "we would not be poor."* [@bowles2009microeconomics]
 
-::: {layout="[1,1]"}
-::: {#enclosure-left}
+## Assurance Game in Normal Form
 
-* The full story: Late-feudal Enclosure Movement / Samir Amin, *Accumulation on a World Scale* (1970)
-* The overly-flippant gist &rarr;
-* The less-flippant gist: Locke's *Second Treatise of Government* (1689)
+```{=html}
+<table class='game-table'>
+<thead>
+</thead>
+<tbody>
+<tr>
+  <td class='game-label' align='center'></td>
+  <td class='game-label' align='center'></td>
+  <td colspan="2" align="center" class='game-label'><span data-qmd="$B$"></span></td>
+</tr>
+<tr>
+  <td class='game-label'></td>
+  <td class='game-label'></td>
+  <td class='game-label'>Early</td>
+  <td class='game-label'>Late</td>
+</tr>
+<tr>
+  <td rowspan="2" style="vertical-align: middle;" class='game-label td-no-bottom'><span data-qmd="$A$"></span></td>
+  <td class='game-label'>Early</td>
+  <td class='game-cell'><span data-qmd="$4, 4$"></span></td>
+  <td class='game-cell'><span data-qmd="$0, 3$"></span></td>
+</tr>
+<tr>
+  <td class='game-label'>Late</td>
+  <td class='game-cell'><span data-qmd="$3, 0$"></span></td>
+  <td class='game-cell'><span data-qmd="$2, 2$"></span></td>
+</tr>
+</tbody>
+</table>
+```
 
-:::
+## Invisible Hand Game (Normal Form)
 
-![](images/fight_you.webp){fig-align="center" width="400"}
-
-:::
-
-# Contracts in the Wild {data-stack-name="Empirical Studies"}
-
-## 
+```{=html}
+<table class='game-table'>
+<thead>
+</thead>
+<tbody>
+<tr>
+  <td class='game-label'></td>
+  <td class='game-label'></td>
+  <td colspan="2" align="center" class='game-label'><span data-qmd="$B$"></span></td>
+</tr>
+<tr>
+  <td class='game-label'></td>
+  <td class='game-label'></td>
+  <td class='game-label' align='center'>Corn</td>
+  <td class='game-label' align='center'>Tomatoes</td>
+</tr>
+<tr>
+  <td rowspan="2" style="vertical-align: middle;" class='game-label no-bottom-border'><span data-qmd="$A$"></span></td>
+  <td class='game-label'>Corn</td>
+  <td class='game-cell'><span data-qmd="$2, 4$"></span></td>
+  <td class='game-cell'><span data-qmd="$4, 3$"></span></td>
+</tr>
+<tr>
+  <td class='game-label'>Tomatoes</td>
+  <td class='game-cell'><span data-qmd="$5, 5$"></span></td>
+  <td class='game-cell'><span data-qmd="$3, 2$"></span></td>
+</tr>
+</tbody>
+</table>
+```
 
 ## References
 

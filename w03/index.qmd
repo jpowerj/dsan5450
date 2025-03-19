@@ -534,7 +534,7 @@ $$
   <td class='game-label'>Drive</td>
 </tr>
 <tr>
-  <td rowspan="2" style="vertical-align: middle;" class='game-label no-bottom-border'><span data-qmd="$A$"></span></td>
+  <td rowspan="2" style="vertical-align: middle;" class='game-label td-no-bottom'><span data-qmd="$A$"></span></td>
   <td class='game-label'>Stop</td>
   <td class='game-cell'><span data-qmd="$-1,-1$"></span></td>
   <td class='game-cell'><span data-qmd="$-3,\phantom{-}0$"></span></td>
