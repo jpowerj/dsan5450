@@ -48,13 +48,13 @@ w09:
   date-md: "Mar 19"
 w10:
   weeknum: 10
-  title: "Econometric Policy Evaluation and Inverse Fairness"
-  footer: "Econometric Policy Evaluation, Inverse Fairness"
+  title: "Welfare Economics and Policy Evaluation"
+  footer: "Welfare Economics and Policy Evaluation"
   date-md: "Mar 26"
 w11:
   weeknum: 11
-  title: "Fairness vs. Social Welfare"
-  footer: "Fairness vs. Social Welfare"
+  title: "Inverse Fairness: From Descriptive to Normative"
+  footer: "Inverse Fairness"
   date-md: "Apr 2"
 w12:
   weeknum: 12

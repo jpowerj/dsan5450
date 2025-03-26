@@ -118,7 +118,7 @@ and gentlest man in the world, as well as he who serves the worst**. [@sidney_di
 * These quotes, emerging out of different struggles over hundreds and hundreds of years, still tend to involve **people** dominating other **people**
 * But... What would it mean for an **algorithm** to dominate people?
 * I (and many others!) argue that this provides the **most promising** language within which one could frame the core, fundamental injustices induced by algorithms
-* But, requires integrating **interpersonal** (well-covered) with **structural domination** [@jacobs_operationalizing_2024]
+* But, requires integrating **interpersonal** (well-covered) with **structural domination** [@jacobs2025operationalizing]
 
 ## Structural Domination: The Grapes of Wrath {.smaller .crunch-title .title-12}
 

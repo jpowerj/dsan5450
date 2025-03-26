@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.6.40">
 
   <meta name="author" content="Jeff Jacobs">
-  <title>DSAN 5450 – Week 10: Econometric Policy Evaluation and Inverse Fairness</title>
+  <title>DSAN 5450 – Week 10: Welfare Economics and Policy Evaluation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -50,8 +50,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-bbe7401fe57d4b791b917637bb662036.css">
-  <link rel="stylesheet" href="../dsan-globals/jjstyles.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-310074395a1c930ec49aa9eeb2ecd7b8.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -145,14 +144,14 @@
       margin-right: 0; 
     }
   </style>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link href="https://fonts.googleapis.com/css2?family=Honk&amp;display=swap" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 10: Econometric Policy Evaluation and Inverse Fairness</h1>
+  <h1 class="title">Week 10: Welfare Economics and Policy Evaluation</h1>
   <p class="subtitle"><em>DSAN 5450: Data Ethics and Policy</em><br><span class="subsubtitle">Spring 2025, Georgetown University</span></p>
 
 <div class="quarto-title-authors">
@@ -168,98 +167,397 @@ Jeff Jacobs
 
   <p class="date">Wednesday, March 26, 2025</p>
 </section>
+<section id="foreshadowing-next-week-hw4" class="title-slide slide level1 smaller center">
+<h1>Foreshadowing Next Week / HW4</h1>
+
+<img data-src="images/counterfactual.jpg" class="r-stretch quarto-figure-center"><p class="caption">In the stu (RStudio), cooken up some 🔥 for yall. Bringing <strong>data</strong> (.csv files) back into all this econ game theory nonsense</p></section>
+
 <section>
-<section id="policy-evaluation-in-general" class="title-slide slide level1 center" data-stack-name="The Master's Tools">
-<h1>Policy Evaluation in General</h1>
-
-</section>
-<section id="why-call-it-econometric-policy-evaluation" class="slide level2 crunch-title title-08 crunch-ul">
-<h2>Why Call It “Econometric” Policy Evaluation?</h2>
-<ul>
-<li>In the same way that data science can be used for good or for not-so-good…</li>
-<li>Economics provides methods that allow us to <strong>evaluate</strong> a policy with respect to an <strong>ethical framework</strong></li>
-<li>Typically <strong>efficiency</strong> and/or <strong>profit maximization</strong>, but just as easily <strong>Rawlsian</strong> or <strong>Roemerian</strong></li>
-<li>“The master’s tools will never dismantle the master’s house”❓❓❓</li>
-<li>(“It’s certainly true that the master uses the tool of [data science], but that doesn’t mean he owns it.”)</li>
-</ul>
-</section>
-<section id="the-tools-of-economics-as-wielded-by-economists" class="slide level2 smaller crunch-title title-11">
-<h2>The Tools of Economics as Wielded by Economists</h2>
-<ul>
-<li>Fun in-class pop quiz!</li>
-</ul>
-
-<img data-src="images/economist1.jpeg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="the-tools-of-economics-as-wielded-by-economists-1" class="slide level2 smaller crunch-title title-11">
-<h2>The Tools of Economics as Wielded by Economists</h2>
-<ul>
-<li>Did you answer correctly???</li>
-</ul>
-
-<img data-src="images/economist2.jpeg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="the-tools-of-economics-as-wielded-by-economists-2" class="slide level2 smaller crunch-title title-11">
-<h2>The Tools of Economics as Wielded by Economists</h2>
-<ul>
-<li>Addendum / reminder (<a href="https://psmag.com/magazine/cellphone-revolutionary-objects" target="_blank">see also</a>)</li>
-</ul>
-
-<img data-src="images/no_iphone.png" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="eaamo-2023-accepted-papers" class="slide level2 smaller crunch-title crunch-ul">
-<h2>EAAMO 2023 Accepted Papers</h2>
-<ul>
-<li><p><a href="https://conference2023.eaamo.org/papers/" target="_blank">Equity and Access in Algorithms, Mechanisms, and Optimization</a></p></li>
-<li><p><a href="https://arxiv.org/abs/2305.14537" target="_blank">“Disincentivizing Polarization in Social Networks”</a></p></li>
-<li><p><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4603146" target="_blank">“30 Million Canvas Grading Records Reveal Widespread Sequential Bias and System-Induced Surname Initial Disparity”</a></p>
-<blockquote>
-<p>Assignments graded later in the sequence tend to (1) receive lower grades, (2) receive comments that are notably more negative and less polite, and (3) exhibit lower grading quality measured by post-grade complaints.</p>
-</blockquote></li>
-<li><p><a href="https://guaguakai.github.io/aasg2022/assets/AASG2022_paper_8.pdf" target="_blank">“Potty Parity: Process Flexibility via Unisex Restroom”</a></p>
-<blockquote>
-<p>Having a one-unit unisex restroom, either by converting a unit of the men’s restroom or building an additional one, goes a long way toward improving wait time or user utility, and reducing their disparities</p>
-</blockquote></li>
-<li><p><a href="https://www.youtube.com/watch?v=FpaRGZkdnWo" target="_blank">“Overbooking with Priority-Respecting Reassignment”</a></p></li>
-</ul>
-</section>
-<section id="co-founder-of-md4sg-rightarrow-eaamo-rediet-abebe" class="slide level2">
-<h2>Co-Founder of MD4SG <span class="math inline">\(\rightarrow\)</span> EAAMO: Rediet Abebe</h2>
-
-<img data-src="images/abebe.jpeg" class="r-stretch quarto-figure-center"><p class="caption">From <a href="https://aclanthology.org/2023.emnlp-main.415/">“When the Majority is Wrong: Modeling Annotator Disagreement for Subjective Tasks”</a>, <em>EMNLP</em> 2023</p></section>
-<section id="lily-hu" class="slide level2 smaller crunch-title crunch-ul crunch-quarto-layout-panel">
-<h2>Lily Hu</h2>
-<div>
-
+<section id="descriptive-ethics-foreshadowing-w14" class="title-slide slide level1 center" data-stack-name="Descriptive Ethics">
+<h1>Descriptive Ethics: Foreshadowing W14</h1>
+<div class="hidden">
+<div class="hidden">
+<p><span class="math display">\[
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\newcommand{\bigexp}[1]{\exp\mkern-4mu\left[ #1 \right]}
+\newcommand{\bigexpect}[1]{\mathbb{E}\mkern-4mu \left[ #1 \right]}
+\newcommand{\definedas}{\overset{\small\text{def}}{=}}
+\newcommand{\definedalign}{\overset{\phantom{\text{defn}}}{=}}
+\newcommand{\eqeventual}{\overset{\text{eventually}}{=}}
+\newcommand{\Err}{\text{Err}}
+\newcommand{\expect}[1]{\mathbb{E}[#1]}
+\newcommand{\expectsq}[1]{\mathbb{E}^2[#1]}
+\newcommand{\fw}[1]{\texttt{#1}}
+\newcommand{\given}{\mid}
+\newcommand{\green}[1]{\color{green}{#1}}
+\newcommand{\heads}{\outcome{heads}}
+\newcommand{\iid}{\overset{\text{\small{iid}}}{\sim}}
+\newcommand{\lik}{\mathcal{L}}
+\newcommand{\loglik}{\ell}
+\DeclareMathOperator*{\maximize}{maximize}
+\DeclareMathOperator*{\minimize}{minimize}
+\newcommand{\mle}{\textsf{ML}}
+\newcommand{\nimplies}{\;\not\!\!\!\!\implies}
+\newcommand{\orange}[1]{\color{orange}{#1}}
+\newcommand{\outcome}[1]{\textsf{#1}}
+\newcommand{\param}[1]{{\color{purple} #1}}
+\newcommand{\pgsamplespace}{\{\green{1},\green{2},\green{3},\purp{4},\purp{5},\purp{6}\}}
+\newcommand{\prob}[1]{P\left( #1 \right)}
+\newcommand{\purp}[1]{\color{purple}{#1}}
+\newcommand{\sign}{\text{Sign}}
+\newcommand{\spacecap}{\; \cap \;}
+\newcommand{\spacewedge}{\; \wedge \;}
+\newcommand{\tails}{\outcome{tails}}
+\newcommand{\Var}[1]{\text{Var}[#1]}
+\newcommand{\bigVar}[1]{\text{Var}\mkern-4mu \left[ #1 \right]}
+\]</span></p>
 </div>
-<div class="quarto-layout-panel" data-layout="[4,3]">
-<div class="quarto-layout-row">
-<div id="hu-left" class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: flex-start;">
-<ul>
-<li>CS excludes ethical considerations “by design”, via focus on how computers <strong>do</strong> work, not how they <strong>ought to work</strong>.</li>
-<li>The latter “falls within the purview of the normative disciplines, most notably ethics, a subfield of philosophy. For students to succeed at learning not only how to build innovative computing systems, but also how to determine whether they should build those systems or how ethical considerations should constrain their design, it is imperative that these two disciplines work together. To this end, Harvard CS and Philosophy faculty have been partnering to develop the Embedded EthiCS curriculum.”</li>
-</ul>
 </div>
-<div id="hu-right" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: flex-start;">
+</section>
+<section id="thucydides-and-the-kindly-slavemaster" class="slide level2 smaller title-11 crunch-title crunch-blockquote crunch-p text-60">
+<h2>Thucydides and the Kindly Slavemaster</h2>
+<style>
+.honk-honk {
+  font-size: 180% !important;
+  font-family: "Honk", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
+<blockquote>
+<p>[What is] right, as the world goes, is only in question between <strong>equals in power</strong>; otherwise, the strong do as they please and the weak suffer what they must. <span class="citation" data-cites="thucydides2013war">(<a href="#/references" role="doc-biblioref" onclick="">Thucydides 2013</a> c.&nbsp;411 BC)</span> <em>(Think of <strong>necessary</strong> vs.&nbsp;<strong>sufficient</strong> conditions!)</em></p>
+</blockquote>
+<table class="caption-top" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th style="text-align: center;" data-quarto-table-cell-role="th"><span class="honk-honk">liberalism</span></th>
+<th style="text-align: center;" data-quarto-table-cell-role="th"><span class="honk-honk">republicanism</span></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Definition of Injustice</strong></td>
+<td>Strong <strong>do</strong> bad things <span class="citation" data-cites="berlin_two_1959">(<a href="#/references" role="doc-biblioref" onclick="">Berlin 1959</a>)</span></td>
+<td>Strong <strong>can</strong> do bad things <span class="citation" data-cites="skinner1998liberty pettit1997republicanism lovett2022wellordered">(<a href="#/references" role="doc-biblioref" onclick="">Skinner 1998</a>; <a href="#/references" role="doc-biblioref" onclick="">Pettit 1997</a>; <a href="#/references" role="doc-biblioref" onclick="">Lovett 2022</a>)</span></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Thucydides Question</strong></td>
+<td>Strong do as they please<br> <span class="math inline">\(\overset{?}{\Rightarrow}\)</span> Strong <strong>do</strong> bad things</td>
+<td>Strong do as they please<br> <span class="math inline">\(\overset{?}{\Rightarrow}\)</span> Strong <strong>can</strong> do bad things</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Answer</strong></td>
+<td>No, not necessarily!</td>
+<td>Yes, necessarily!</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Frederick Douglass</strong></td>
+<td><em>My feelings [towards slave masters] were not the result of any marked cruelty in the treatment I received…</em></td>
+<td><em>…they sprung from the consideration of my <strong>being a slave in the first place</strong>. It was <strong>slavery</strong>—not its mere <strong>incidents</strong>—that I despised.</em> <span class="citation" data-cites="douglass_my_1855">(<a href="#/references" role="doc-biblioref" onclick="">Douglass 1855</a>)</span></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong><em>A Doll’s House</em></strong></td>
+<td colspan="2"><em>Our home is nothing but a playroom. I have been <strong>your doll-wife</strong>, just as at home I was <strong>papa’s doll-child</strong>; and here the <strong>children</strong> have been <strong>my dolls</strong>.</em> <span class="citation" data-cites="ibsen_dolls_1879">(<a href="#/references" role="doc-biblioref" onclick="">Ibsen 1879</a>)</span></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<aside class="notes">
+<p><em>(Plz notice the lowercase “l”, lowercase “r”!)</em></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="relevance-for-this-week-where-we-left-off" class="slide level2 smaller crunch-title title-10">
+<h2>Relevance for This Week (Where We Left Off)</h2>
+<ul>
+<li>Can we develop <strong>policy interventions</strong> that <strong>equalize power</strong>, so that world looks like normative ethics from W03-W08 (“what is right”)?</li>
+<li>(Hidden antecedent: non-Nietzschean ethical framework e.g.&nbsp;Utilitarianism/Kant)</li>
+<li>Point of prev slide: From now til W14, keep in mind how <strong>definition of power</strong> (and hence “effectiveness” of policy intervention) depends on <strong>antecedent</strong>
+<ul>
+<li><span class="honk-honk">liberal</span> definition <span class="math inline">\(\Rightarrow\)</span> focus on equilibria (no injustice if bad thing doesn’t happen in equilibrium)</li>
+<li><span class="honk-honk">republican</span> definition <span class="math inline">\(\Rightarrow\)</span> also take <strong>off-equilibrium</strong> possibilities into account (no injustice if bad thing doesn’t happen in equilibrium <strong>and</strong> doesn’t happen if one player deviates “on a whim”) <span class="citation" data-cites="jacobs2025operationalizing">(<a href="#/references" role="doc-biblioref" onclick="">Jacobs and Naidu 2025</a> 😉)</span></li>
+</ul></li>
+<li>Prisoners’ Dilemma 😫 <span class="math inline">\(\prec\)</span> Assurance Game 🤨 <span class="math inline">\(\prec\)</span> Invisible Hand Game 🥳</li>
+</ul>
+</section>
+<section id="prisoners-dilemma-fishers-dilemma" class="slide level2 smaller title-10 crunch-title crunch-ul crunch-p crunch-quarto-figure">
+<h2>Prisoners’ Dilemma (Fishers’ Dilemma)</h2>
+<ul>
+<li>Single, <strong>unique</strong> Nash equilibrium, and it’s <strong>Pareto inferior</strong></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:45%;">
+<center>
+<p>The Game</p>
+</center>
+<table class="game-table caption-top" data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td class="game-label" style="border-bottom: 0px"></td>
+<td class="game-label" style="border-bottom: 0px"></td>
+<td colspan="2" class="game-label" style="text-align: center;"><span class="math inline">\(j\)</span></td>
+</tr>
+<tr class="even" style="border-bottom: 0px;">
+<td class="game-label" style="border-bottom: 0px"></td>
+<td class="game-label"></td>
+<td class="game-label" style="text-align: center; border-left: 1px solid black; border-right: 1px solid black;">Fish 6 Hours</td>
+<td class="game-label" style="text-align: center; border-right: 1px solid black;">Fish 8 Hours</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" class="game-label" style="vertical-align: middle; border-bottom: 0px"><span class="math inline">\(i\)</span></td>
+<td class="game-label" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">Fish 6 Hours</td>
+<td class="game-cell" style="text-align: center; border-right: 1px solid black;"><span class="math inline">\(1.0,1.0\)</span></td>
+<td class="game-cell" style="text-align: center; border-right: 1px solid black;"><span class="math inline">\(0.0,\boxed{1.2}\)</span></td>
+</tr>
+<tr class="even">
+<td class="game-label" style="text-align: center; border-bottom: 1px solid black; border-right: 1px solid black; border-left: 1px solid black;">Fish 8 Hours</td>
+<td class="game-cell" style="text-align: center; border-bottom: 1px solid black; border-right: 1px solid black;"><span class="math inline">\(\boxed{1.2}, 0.0\)</span></td>
+<td class="game-cell" style="text-align: center; border-bottom: 1px solid black; border-right: 1px solid black;"><span class="math inline">\(\boxed{0.4},\boxed{0.4}\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Boxes = <strong>B</strong>est <strong>R</strong>esponses:</li>
+<li><span class="math inline">\(\text{BR}_i(6\textrm{ hr}) = 8\textrm{ hr}\)</span>, <span class="math inline">\(\text{BR}_i(8\textrm{ hr}) = 8\textrm{ hr}\)</span></li>
+<li><span class="math inline">\(\text{BR}_j(6\textrm{ hr}) = 8\textrm{ hr}\)</span>, <span class="math inline">\(\text{BR}_j(8\textrm{ hr}) = 8\textrm{ hr}\)</span></li>
+</ul>
+</div><div class="column" style="width:55%;">
+<center>
+<p>Pareto Dominance</p>
+</center>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/hu.jpeg" width="380"></p>
-<figcaption><a href="https://dl.acm.org/doi/pdf/10.1145/3330794" target="_blank">Embedded EthiCS</a></figcaption>
+<p><img data-src="images/pd_pareto.svg" class="quarto-figure quarto-figure-center" style="width:95.0%"></p>
 </figure>
 </div>
-</div>
-</div>
-</div>
+</div></div>
 </section>
-<section id="ninja-coder-hackerz-think-it-dream-it-do-it" class="slide level2">
-<h2>Ninja Coder Hackerz / Think It! Dream It! Do It!</h2>
+<section id="operationalizing-power" class="slide level2 smaller crunch-title title-12 crunch-ul crunch-quarto-figure crunch-li-8">
+<h2>Operationalizing Power</h2>
 <ul>
-<li>CS: Learn The Coolest, Newest Stuff, Move Fast And Break Things!!!</li>
-<li>Ethics: Listen to a man in a tweed jacket with elbow pads pontificate about Kant for 3 hours</li>
-<li>The <a href="https://www.youtube.com/watch?v=KTJn_DBTnrY" target="_blank">TED Talk Circuit</a></li>
+<li>Equally good <strong>outside options</strong> <span class="math inline">\(\implies\)</span> can <strong>contract</strong> to Pareto-optimal point <span class="math inline">\(o^P\)</span></li>
+<li><span class="math inline">\(i\)</span> has <strong>better outside options</strong> <span class="math inline">\(\implies\)</span> can make <strong>take it or leave it</strong> offer to <span class="math inline">\(j\)</span>:
+<ul>
+<li>“You (<span class="math inline">\(j\)</span>) fish 6 hrs all the time. I (<span class="math inline">\(i\)</span>) fish 6 hrs 41% of time, 8 hrs otherwise”</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:45%;">
+<ul>
+<li>Ever so slightly better for <span class="math inline">\(j\)</span> <span class="math inline">\(\implies\)</span> <span class="math inline">\(j\)</span> accepts <em>(Behavioral econ: <span class="math inline">\(j\)</span> accepts if 41% meets subjective <strong>fairness</strong> threshold; observed across many many cultures!)</em></li>
+<li>Later / next week: <strong>observe</strong> policy with outcome <span class="math inline">\(o^{C}_{i \rightarrow j} \iff\)</span> policy <strong>values <span class="math inline">\(i\)</span>’s welfare more than <span class="math inline">\(j\)</span>’s welfare</strong> (inferred social welfare weights <span class="math inline">\(\omega_i &gt; \omega_j\)</span>)</li>
+</ul>
+</div><div class="column" style="width:55%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pd_contracts.svg" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="policy-interventions-fish-dilemmas-mapsto-assurance-games" class="slide level2 title-065 crunch-title inline-90 crunch-li-5 text-90">
+<h2>Policy Interventions: Fish Dilemmas <span class="math inline">\(\mapsto\)</span> Assurance Games</h2>
+<ul>
+<li>Notice: To “escape” prisoners’ dilemma, we had to literally <strong>change the rules of the game</strong> (permanent intervention)</li>
+<li>Fishers’ Dilemma:
+<ul>
+<li>No <a href="https://www.youtube.com/watch?v=LoF_a0-7xVQ">institutions</a>: <span class="math inline">\(a_i, a_j \in \{6\text{ hr}, 8\text{ hr}\}\)</span></li>
+<li>Institutions (courts <strong>or</strong> social norms): <span class="math inline">\(\{\text{Accept}, \text{Reject}\}\)</span></li>
+</ul></li>
+<li>Driving “game”:
+<ul>
+<li>No institutions: <span class="math inline">\(a_i, a_j \in \{\text{Stop}, \text{Drive}\}\)</span></li>
+<li>Institutions (stoplights installed by govt <strong>or</strong> community agreement): <span class="math inline">\(a_i, a_j \in \{\text{Obey Light}, \text{Run Light}\}\)</span></li>
+</ul></li>
+<li><strong>Within</strong> assurance games, only need to <strong>nudge</strong> (one-time intervention) <span class="math inline">\(\leadsto\)</span> new equilibrium (self-enforcing by definition)</li>
+</ul>
+</section>
+<section id="assurance-game" class="slide level2 crunch-title title-12 crunch-ul inline-90 text-90 crunch-li-8">
+<h2>Assurance Game</h2>
+<ul>
+<li><strong>Multiple</strong> equilibria; the particular outcome we observe is a function of <strong>history</strong> (path dependency)</li>
+<li>Drive-on-left vs.&nbsp;drive-on-right: Assurance game where <strong>neither</strong> equilibrium Pareto-dominates other option
+<ul>
+<li>Swedish <a href="https://en.wikipedia.org/wiki/Dagen_H"><em>Dagen H</em></a>: Nudge from <span class="math inline">\(a^*_{\textsf{L}} = (\textsf{L},\textsf{L})\)</span> to <span class="math inline">\(a^*_{\textsf{R}} = (\textsf{R},\textsf{R})\)</span></li>
+<li>Either eq is self-reinforcing! (Unless you want to crash out)</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:48%;">
+<ul>
+<li>QWERTY vs.&nbsp;DVORAK / Palanpur farmers: Assurance game where observed equilibrium <strong>Pareto inferior</strong></li>
+</ul>
+</div><div class="column" style="width:52%;">
+<center>
+<table class="game-table caption-top" data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td class="game-label" style="border-bottom: 0px"></td>
+<td class="game-label" style="border-bottom: 0px"></td>
+<td colspan="2" class="game-label" style="text-align: center;"><span class="math inline">\(j\)</span></td>
+</tr>
+<tr class="even" style="border-bottom: 0px;">
+<td class="game-label" style="border-bottom: 0px"></td>
+<td class="game-label"></td>
+<td class="game-label" style="text-align: center; border-left: 1px solid black; border-right: 1px solid black;">Early</td>
+<td class="game-label" style="text-align: center; border-right: 1px solid black;">Late</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" class="game-label" style="vertical-align: middle; border-bottom: 0px"><span class="math inline">\(i\)</span></td>
+<td class="game-label" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">Early</td>
+<td class="game-cell" style="text-align: center; border-right: 1px solid black;"><span class="math inline">\(\boxed{4},\boxed{4}\)</span></td>
+<td class="game-cell" style="text-align: center; border-right: 1px solid black;"><span class="math inline">\(0, \, 3\)</span></td>
+</tr>
+<tr class="even">
+<td class="game-label" style="text-align: center; border-bottom: 1px solid black; border-right: 1px solid black; border-left: 1px solid black;">Late</td>
+<td class="game-cell" style="text-align: center; border-bottom: 1px solid black; border-right: 1px solid black;"><span class="math inline">\(3, \, 0\)</span></td>
+<td class="game-cell" style="text-align: center; border-bottom: 1px solid black; border-right: 1px solid black;"><span class="math inline">\(\boxed{2},\boxed{2}\)</span></td>
+</tr>
+</tbody>
+</table>
+</center>
+</div></div>
+</section>
+<section id="invisible-hand-game" class="slide level2 crunch-title title-09 text-80 crunch-blockquote crunch-ul crunch-li-8">
+<h2>Invisible Hand Game</h2>
+<ul>
+<li>Single, <strong>unique</strong> Nash equilibrium, and it’s <strong>Pareto efficient</strong></li>
+<li><span class="math inline">\(\Rightarrow\)</span> Acting in self interest <span class="math inline">\(\leadsto\)</span> best possible outcome</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:52%;">
+<blockquote>
+<p>It is not from the benevolence of the butcher, the brewer, or the baker that we expect our meal, but from their regard to their own interest <span class="citation" data-cites="smith1776wealth">(<a href="#/references" role="doc-biblioref" onclick="">Smith 1776</a>)</span></p>
+</blockquote>
+</div><div class="column" style="width:48%;">
+<table class="game-table caption-top" data-quarto-postprocess="true">
+<tbody>
+<tr class="odd">
+<td class="game-label" style="border-bottom: 0px"></td>
+<td class="game-label" style="border-bottom: 0px"></td>
+<td colspan="2" class="game-label" style="text-align: center;"><span class="math inline">\(j\)</span></td>
+</tr>
+<tr class="even" style="border-bottom: 0px;">
+<td class="game-label" style="border-bottom: 0px"></td>
+<td class="game-label"></td>
+<td class="game-label" style="text-align: center; border-left: 1px solid black; border-right: 1px solid black;">Corn</td>
+<td class="game-label" style="text-align: center; border-right: 1px solid black;">Tomato</td>
+</tr>
+<tr class="odd">
+<td rowspan="2" class="game-label" style="vertical-align: middle; border-bottom: 0px"><span class="math inline">\(i\)</span></td>
+<td class="game-label" style="text-align: center; border-right: 1px solid black; border-left: 1px solid black;">Corn</td>
+<td class="game-cell" style="text-align: center; border-right: 1px solid black;"><span class="math inline">\(2, \, 4\)</span></td>
+<td class="game-cell" style="text-align: center; border-right: 1px solid black;"><span class="math inline">\(4, \, 3\)</span></td>
+</tr>
+<tr class="even">
+<td class="game-label" style="text-align: center; border-bottom: 1px solid black; border-right: 1px solid black; border-left: 1px solid black;">Tomato</td>
+<td class="game-cell" style="text-align: center; border-bottom: 1px solid black; border-right: 1px solid black;"><span class="math inline">\(\boxed{5}, \boxed{5}\)</span></td>
+<td class="game-cell" style="text-align: center; border-bottom: 1px solid black; border-right: 1px solid black;"><span class="math inline">\(3, \, 2\)</span></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<ul>
+<li><em>Wealth of Nations</em> <strong>SPOILER</strong>: The wealth comes from <strong>division of labor</strong><br><span style="font-size: 50%; line-height: 0.5;">and also dumbleydore dies. semperus snake too. and even poor ron the weasel, who never deserved such a fate</span></li>
+</ul>
+<blockquote>
+<p>An economic transaction is a <strong>solved political problem</strong>. Economics has gained the title “Queen of the Social Sciences” by choosing solved political problems as its domain. <span class="citation" data-cites="lerner1972economics">(<a href="#/references" role="doc-biblioref" onclick="">Lerner 1972</a>)</span></p>
+</blockquote>
+</section>
+<section id="first-fundamental-theorem-of-welfare-economics" class="slide level2 smaller crunch-title title-10">
+<h2>First Fundamental Theorem of Welfare Economics</h2>
+<p><strong>Thm:</strong> [Antecedents (Coase Conditions)] <span class="math inline">\(\Rightarrow\)</span> markets produce Pareto-optimal outcomes</p>
+<ul>
+<li>Even Jeff finds proof (and corollaries) compelling / convincing / empirically-supported
+<ul>
+<li>(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on <strong>policy</strong>!)</li>
+<li>Ex: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], <span class="math inline">\(\uparrow\)</span> Competition <span class="math inline">\(\leadsto\)</span> More efficient allocations</li>
+</ul></li>
+<li>Like how <strong>Gauss-Markov Assumptions</strong> <span class="math inline">\(\Rightarrow\)</span> OLS is BLUE, yet our whole field (at least, a whole class, DSAN 5300) built on what to do when GM Assumptions <strong>don’t hold</strong></li>
+<li>For policy development, helpful to think through
+<ul>
+<li><i class="bi bi-1-circle"></i> which cases “break” FFT (<a href="https://en.wiktionary.org/wiki/more_honored_in_the_breach">more honored in the breach</a>)</li>
+<li><i class="bi bi-2-circle"></i> How each violation might be “fixed” through policy</li>
+</ul></li>
+<li>Our violation: <strong>No externalities</strong> assumption
+<ul>
+<li>Possible policy “fixes”: property rights, market-socialist nationalization</li>
+</ul></li>
+</ul>
+</section>
+<section id="part-2-suddenly-collides-with-part-1-property-rights" class="slide level2 smaller crunch-title title-09 crunch-ul crunch-quarto-figure crunch-p crunch-li-8">
+<h2>Part 2 Suddenly Collides with Part 1: <em>Property</em> Rights</h2>
+<ul>
+<li>Rawlsian <strong>Rights</strong>: Vetos on societal decisions; Constitution can make some <strong>inalienable</strong> (can’t sell self into slavery), some <strong>alienable</strong></li>
+<li>Property rights: <strong>alienable</strong>. You can <strong>gift</strong> or <strong>sell</strong> the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Case <i class="bi bi-1-circle"></i>: Society decides <strong>Right to Clean Air <span class="math inline">\(\prec\)</span> Right to Smoke</strong> <span class="math inline">\(\Rightarrow\)</span> Start at <span class="math inline">\(E\)</span></p>
+<ul>
+<li><span class="math inline">\(A\)</span> can <strong>pay <span class="math inline">\(B\)</span></strong> to <strong>alienate</strong> right (Pay $50/month, can smoke 5 ciggies) <span class="math inline">\(\leadsto\)</span> <span class="math inline">\(X\)</span></li>
+<li>Movement along light blue curve: giving up <span class="math inline">\(x\)</span> <strong>money</strong> for <span class="math inline">\(y\)</span> <strong>smoke</strong>, <strong>equally happy</strong>. <span class="math inline">\(u_A(p)\)</span> identical for <span class="math inline">\(p\)</span> on curve</li>
+<li>Movement to higher light blue curve (<i class="bi bi-arrow-up-right"></i>) <span class="math inline">\(\Rightarrow\)</span> greater utility <span class="math inline">\(u_A' &gt; u_A\)</span></li>
+</ul>
+<p>Case <i class="bi bi-2-circle"></i> Society decides <strong>Smoke <span class="math inline">\(\prec\)</span> Clean Air</strong> <span class="math inline">\(\Rightarrow\)</span> Repeat for <span class="math inline">\(E' \leadsto X'\)</span></p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/varian_35_1_crop.svg"></p>
+<figcaption>“Edgeworth Box” for <strong>Right to Smoke</strong> vs.&nbsp;<strong>Right to Clean Air</strong>: <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> are roommates; <span class="math inline">\(A\)</span> loves smokin, <span class="math inline">\(B\)</span> loves clean air</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="externalities-leftrightarrow-costs-of-actions-paid-by-someone-else" class="slide level2 smaller crunch-title crunch-ul crunch-math">
+<h2>Externalities <span class="math inline">\(\Leftrightarrow\)</span> Costs of Actions Paid by Someone Else!</h2>
+<ul>
+<li>Firm <span class="math inline">\(S\)</span> produces amount of steel <span class="math inline">\(s\)</span>, pollution <span class="math inline">\(x\)</span></li>
+<li>Firm <span class="math inline">\(F\)</span> “produces” amount of fish <span class="math inline">\(f\)</span></li>
+<li><span class="math inline">\(S\)</span> optimizes</li>
+</ul>
+<p><span class="math display">\[
+s^*_{\text{Priv}}, x^*_{\text{Priv}} = \argmax_{s,x}\left[ p_s s - c_s(s, x) \right]
+\]</span></p>
+<ul>
+<li>While <span class="math inline">\(F\)</span> optimizes</li>
+</ul>
+<p><span class="math display">\[
+f^*_{\text{Priv}} = \argmax_{f}\left[ p_f f - c_f(f, x) \right]
+\]</span></p>
+<ul>
+<li>If [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is</li>
+</ul>
+<p><span class="math display">\[
+s^*_{\text{Yugo}}, f^*_{\text{Yugo}}, x^*_{\text{Yugo}} = \argmax_{s, f, x}\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \right]
+\]</span></p>
+<ul>
+<li>Can prove/“prove” that <span class="math inline">\(o(s^*_{\text{Yugo}}, f^*_{\text{Yugo}}, x^*_{\text{Yugo}})\)</span> Pareto-dominates <span class="math inline">\(o(s^*_{\text{Priv}}, x^*_{\text{Priv}}, f^*_{\text{Priv}})\)</span></li>
 </ul>
 </section></section>
 <section>
 <section id="social-welfare-functionals" class="title-slide slide level1 center" data-stack-name="Social Welfare Functionals">
 <h1>Social Welfare Functionals</h1>
-
+<ul>
+<li><em>(Next week… let’s do this in-depth next week!)</em></li>
+</ul>
 </section>
 <section id="functionals" class="slide level2">
 <h2>Functionals?</h2>
@@ -337,8 +635,38 @@ W(u_1, \ldots, u_n)(x) = \frac{1}{n}u_1(x) + \cdots + \frac{1}{n}u_n(x)
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-berlin_two_1959" class="csl-entry" role="listitem">
+Berlin, Isaiah. 1959. <em>Two <span>Concepts</span> of <span>Liberty</span>: <span>An Inaugural Lecture Delivered Before</span> the <span>University</span> of <span>Oxford</span> on 31 <span>October</span> 1958</em>. Clarendon Press.
+</div>
+<div id="ref-douglass_my_1855" class="csl-entry" role="listitem">
+Douglass, Frederick. 1855. <em>My <span>Bondage</span> and <span>My Freedom</span></em>. Yale University Press.
+</div>
+<div id="ref-ibsen_dolls_1879" class="csl-entry" role="listitem">
+Ibsen, Henrik. 1879. <em>The <span>Doll</span>’s <span>House</span>: <span>A Play</span></em>. D. Appleton &amp; Company.
+</div>
+<div id="ref-jacobs2025operationalizing" class="csl-entry" role="listitem">
+Jacobs, Jeff, and Suresh Naidu. 2025. <span>“Operationalizing <span>Freedom</span> as <span>Non-Domination</span> in the <span>Labor Market</span>.”</span> In <em>Perspectives on <span>Labor Republicanism</span></em>, edited by Philip Pettit. Cambridge: Cambridge University Press.
+</div>
+<div id="ref-lerner1972economics" class="csl-entry" role="listitem">
+Lerner, Abba P. 1972. <span>“The <span>Economics</span> and <span>Politics</span> of <span>Consumer Sovereignty</span>.”</span> <em>The American Economic Review</em> 62 (1/2): 258–66. <a href="https://www.jstor.org/stable/1821551">https://www.jstor.org/stable/1821551</a>.
+</div>
+<div id="ref-lovett2022wellordered" class="csl-entry" role="listitem">
+Lovett, Frank. 2022. <em>The <span>Well-Ordered Republic</span></em>. Oxford University Press.
+</div>
+<div id="ref-pettit1997republicanism" class="csl-entry" role="listitem">
+Pettit, Philip. 1997. <em>Republicanism: <span>A Theory</span> of <span>Freedom</span> and <span>Government</span></em>. Oxford University Press.
+</div>
 <div id="ref-sen_inequality_1992" class="csl-entry" role="listitem">
 Sen, Amartya. 1992. <em>Inequality <span>Reexamined</span></em>. Clarendon Press.
+</div>
+<div id="ref-skinner1998liberty" class="csl-entry" role="listitem">
+Skinner, Quentin. 1998. <em>Liberty <span>Before Liberalism</span></em>. Cambridge University Press.
+</div>
+<div id="ref-smith1776wealth" class="csl-entry" role="listitem">
+Smith, Adam. 1776. <em>The <span>Wealth</span> of <span>Nations</span></em>. Random House Publishing Group.
+</div>
+<div id="ref-thucydides2013war" class="csl-entry" role="listitem">
+Thucydides. 2013. <em>The <span>War</span> of the <span>Peloponnesians</span> and the <span>Athenians</span></em>. Cambridge University Press.
 </div>
 </div>
 
@@ -347,7 +675,7 @@ Sen, Amartya. 1992. <em>Inequality <span>Reexamined</span></em>. Clarendon Press
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>DSAN 5450 Week 10: Econometric Policy Evaluation, Inverse Fairness</p>
+<p>DSAN 5450 Week 10: Welfare Economics and Policy Evaluation</p>
 </div>
 </div></div>
 
@@ -662,6 +990,13 @@ Sen, Amartya. 1992. <em>Inequality <span>Reexamined</span></em>. Clarendon Press
             if (link.dataset.originalHref !== undefined) {
               link.href = link.dataset.originalHref;
             }
+              // target, if specified
+              link.setAttribute("target", "_blank");
+              if (link.getAttribute("rel") === null) {
+                link.setAttribute("rel", "noopener");
+              }
+              // default icon
+              link.classList.add("external");
           }
         }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
