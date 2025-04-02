@@ -557,7 +557,7 @@
     "href": "syllabus.html#schedule",
     "title": "Syllabus",
     "section": "Schedule",
-    "text": "Schedule\nThe following is a rough map of what we will work through together throughout the semester; given that everyone learns at a different pace, my aim is to leave us with a good amount of flexibility in terms of how much time we spend on each topic: if I find that it takes me longer than a week to convey a certain topic in sufficient depth, for example, then I view it as a strength rather than a weakness of the course that we can then rearrange the calendar below by adding an extra week on that particular topic! Similarly, if it seems like I am spending too much time on a topic, to the point that students seem bored or impatient to move onto the next topic, we can move a topic intended for the next week to the current week!\n\n\n\nUnit\nWeek\nDate\nTopic\n\n\n\n\nUnit 1: Ethical Frameworks\n1\nJan 15\nIntroduction to the Course\n\n\n\n2\nJan 22\nMachine Learning, Training Data, and Bias\n\n\nUnit 2: Fairness in AI\n3\nJan 29\nEthical Frameworks: Rights, Discrimination, and Fairness\n\n\n\n\nJan 31 (Friday), 5:59pm EST\n[Deliverable] HW1: Nuts and Bolts for Fairness in AI\n\n\n\n4\nFeb 5\n(Descriptive) Fairness in AI\n\n\n\n5\nFeb 12\nContext-Sensitive Fairness\n\n\n\n6\nFeb 19\nCausality in Ethics and Policy\n\n\n\n\nFeb 21 (Friday), 5:59pm EST\n[Deliverable] HW2: Context-Sensitive Fairness\n\n\nMidterm\n7\nFeb 26\nIn-Class Midterm: Data Ethics, Fairness, Privacy, Causality\n\n\n\n\nMar 6\nNo Class (Spring Break)\n\n\nUnit 3: Policy Frameworks\n8\nMar 12\nPrivacy Policies, Incomplete Contracts, and Power\n\n\n\n9\nMar 19\nFrom Data Ethics to Data Policy\n\n\n\n10\nMar 26\nWelfare Economics and Policy Evaluation\n\n\n\n11\nApr 2\nInverse Fairness: From Descriptive to Normative\n\n\nUnit 4: Applications\n12\nApr 9\nProject Talk, Causality and Identity Formation\n\n\n\n13\nApr 16\nApplications: Race, Class, Gender, Sexuality, and Disability (Data Feminism)\n\n\n\n14\nApr 23\nRepublican Liberty and the Kindly Slavemaster\n\n\n\n\nMay 10 (Friday)\n[Deliverable] Policy Whitepaper",
+    "text": "Schedule\nThe following is a rough map of what we will work through together throughout the semester; given that everyone learns at a different pace, my aim is to leave us with a good amount of flexibility in terms of how much time we spend on each topic: if I find that it takes me longer than a week to convey a certain topic in sufficient depth, for example, then I view it as a strength rather than a weakness of the course that we can then rearrange the calendar below by adding an extra week on that particular topic! Similarly, if it seems like I am spending too much time on a topic, to the point that students seem bored or impatient to move onto the next topic, we can move a topic intended for the next week to the current week!\n\n\n\nUnit\nWeek\nDate\nTopic\n\n\n\n\nUnit 1: Ethical Frameworks\n1\nJan 15\nIntroduction to the Course\n\n\n\n2\nJan 22\nMachine Learning, Training Data, and Bias\n\n\nUnit 2: Fairness in AI\n3\nJan 29\nEthical Frameworks: Rights, Discrimination, and Fairness\n\n\n\n\nJan 31 (Friday), 5:59pm EST\n[Deliverable] HW1: Nuts and Bolts for Fairness in AI\n\n\n\n4\nFeb 5\n(Descriptive) Fairness in AI\n\n\n\n5\nFeb 12\nContext-Sensitive Fairness\n\n\n\n6\nFeb 19\nCausality in Ethics and Policy\n\n\n\n\nFeb 21 (Friday), 5:59pm EST\n[Deliverable] HW2: Context-Sensitive Fairness\n\n\nMidterm\n7\nFeb 26\nIn-Class Midterm: Data Ethics, Fairness, Privacy, Causality\n\n\n\n\nMar 6\nNo Class (Spring Break)\n\n\nUnit 3: Policy Frameworks\n8\nMar 12\nPrivacy Policies, Incomplete Contracts, and Power\n\n\n\n9\nMar 19\nFrom Data Ethics to Data Policy\n\n\n\n10\nMar 26\nWelfare Economics and Policy Evaluation\n\n\n\n11\nApr 2\nFear and Loathing on the Pareto Frontier\n\n\nUnit 4: Applications\n12\nApr 9\nProject Talk, Causality and Identity Formation\n\n\n\n13\nApr 16\nApplications: Race, Class, Gender, Sexuality, and Disability (Data Feminism)\n\n\n\n14\nApr 23\nRepublican Liberty and the Kindly Slavemaster\n\n\n\n\nMay 10 (Friday)\n[Deliverable] Policy Whitepaper",
     "crumbs": [
       "Syllabus"
     ]
@@ -795,7 +795,7 @@
     "href": "w06/index.html#the-result-64-steps",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "The Result: 64 Steps",
-    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))",
+    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))\n\n\nWarning: Removed 6 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 6 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).",
     "crumbs": [
       "Week 6: {{< var w06.date-md >}}"
     ]
@@ -1311,50 +1311,162 @@
     "href": "index.html",
     "title": "DSAN 5450: Data Ethics and Policy",
     "section": "",
-    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2025 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 15\n\n\n\n\nWeek 2: Machine Learning, Training Data, and Biases\n\n\nJanuary 22\n\n\n\n\nWeek 3: Ethical Frameworks, Rights, and Discrimination\n\n\nJanuary 29\n\n\n\n\nWeek 4: (Descriptive) Fairness in AI\n\n\nFebruary 5\n\n\n\n\nWeek 5: Context-Sensitive Fairness\n\n\nFebruary 12\n\n\n\n\nWeek 6: Causality in Ethics and Policy\n\n\nFebruary 19\n\n\n\n\nWeek 7: In-Class Midterm\n\n\nFebruary 26\n\n\n\n\nWeek 8: Privacy Policies, Incomplete Contracts, and Power\n\n\nMarch 12\n\n\n\n\nWeek 9: From Data Ethics to Data Policy\n\n\nMarch 19\n\n\n\n\nWeek 10: Welfare Economics and Policy Evaluation\n\n\nMarch 26\n\n\n\n\nWeek 11: Fairness vs. Social Welfare\n\n\nApril 2\n\n\n\n\nWeek 12: Final Projects, Causality and Racecraft\n\n\nApril 9\n\n\n\n\nWeek 13: Standpoint Epistemology, Data Feminism\n\n\nApril 16\n\n\n\n\nWeek 14: Republican Liberty and the Kindly Slavemaster\n\n\nApril 23\n\n\n\n\n\nNo matching items\n\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits.",
+    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2025 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\nTitle\n\n\nDate\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 15\n\n\n\n\nWeek 2: Machine Learning, Training Data, and Biases\n\n\nJanuary 22\n\n\n\n\nWeek 3: Ethical Frameworks, Rights, and Discrimination\n\n\nJanuary 29\n\n\n\n\nWeek 4: (Descriptive) Fairness in AI\n\n\nFebruary 5\n\n\n\n\nWeek 5: Context-Sensitive Fairness\n\n\nFebruary 12\n\n\n\n\nWeek 6: Causality in Ethics and Policy\n\n\nFebruary 19\n\n\n\n\nWeek 7: In-Class Midterm\n\n\nFebruary 26\n\n\n\n\nWeek 8: Privacy Policies, Incomplete Contracts, and Power\n\n\nMarch 12\n\n\n\n\nWeek 9: From Data Ethics to Data Policy\n\n\nMarch 19\n\n\n\n\nWeek 10: Welfare Economics and Policy Evaluation\n\n\nMarch 26\n\n\n\n\nWeek 11: Fear and Loathing on the Pareto Frontier\n\n\nApril 2\n\n\n\n\nWeek 12: Final Projects, Causality and Racecraft\n\n\nApril 9\n\n\n\n\nWeek 13: Standpoint Epistemology, Data Feminism\n\n\nApril 16\n\n\n\n\nWeek 14: Republican Liberty and the Kindly Slavemaster\n\n\nApril 23\n\n\n\n\n\nNo matching items\n\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits.",
     "crumbs": [
       "<i class='bi bi-house pe-1'></i> Home"
     ]
   },
   {
+    "objectID": "w11/slides.html#operationalizing-power",
+    "href": "w11/slides.html#operationalizing-power",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Operationalizing Power",
+    "text": "Operationalizing Power\n\nEqually good outside options \\(\\implies\\) can contract to Pareto-optimal point \\(o^P\\)\n\\(i\\) has better outside options \\(\\implies\\) can make take it or leave it offer to \\(j\\):\n\n“You (\\(j\\)) fish 6 hrs all the time. I (\\(i\\)) fish 6 hrs 41% of time, 8 hrs otherwise”\n\n\n\n\n\nEver so slightly better for \\(j\\) \\(\\implies\\) \\(j\\) accepts (Behavioral econ: \\(j\\) accepts if 41% meets subjective fairness threshold; observed across many many cultures!)\nLater / next week: observe policy with outcome \\(o^{C}_{i \\rightarrow j} \\iff\\) policy values \\(i\\)’s welfare more than \\(j\\)’s welfare (inferred social welfare weights \\(\\omega_i &gt; \\omega_j\\))"
+  },
+  {
+    "objectID": "w11/slides.html#since-weve-already-opened-the-pandoras-box-of-utility",
+    "href": "w11/slides.html#since-weve-already-opened-the-pandoras-box-of-utility",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Since We’ve Already Opened the Pandora’s Box of Utility…",
+    "text": "Since We’ve Already Opened the Pandora’s Box of Utility…\n\nFrom Ryan Safner’s History of Economic Thought: Welfare Economics\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)"
+  },
+  {
+    "objectID": "w11/slides.html#two-can-play-this-game",
+    "href": "w11/slides.html#two-can-play-this-game",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Two Can Play This Game…",
+    "text": "Two Can Play This Game…\n\n\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)\nGreenie obtains greater utility within the same budget by moving from \\(E^2\\) to \\(O^2\\)"
+  },
+  {
+    "objectID": "w11/slides.html#the-edgeworth-box",
+    "href": "w11/slides.html#the-edgeworth-box",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "The Edgeworth Box",
+    "text": "The Edgeworth Box\n\nRotate Greenie’s box 180° and superimpose onto Bluey’s"
+  },
+  {
+    "objectID": "w11/slides.html#the-contract-curve",
+    "href": "w11/slides.html#the-contract-curve",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "The Contract(!) Curve",
+    "text": "The Contract(!) Curve\n\n\nFrom initial endowment \\(E\\), if allowed to trade, “rational” players can reach any allocation along dashed contract curve from \\(G\\) to \\(B\\)… (Why not \\(A\\) or \\(H\\)?)\nSo, what determines which of these points they end up at? (Middle name hint)"
+  },
+  {
+    "objectID": "w11/slides.html#first-fundamental-theorem-of-welfare-economics",
+    "href": "w11/slides.html#first-fundamental-theorem-of-welfare-economics",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "First Fundamental Theorem of Welfare Economics",
+    "text": "First Fundamental Theorem of Welfare Economics\n\nTheorem: [Antecedents (Coase Conditions)] \\(\\Rightarrow\\) markets produce Pareto-optimal outcomes\n\n\nEven commie Jeff finds proof+corollaries compelling / convincing / empirically-supported\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations"
+  },
+  {
+    "objectID": "w11/slides.html#payoff-from-jeff-pointing-at-things-saying-antecedents-500x",
+    "href": "w11/slides.html#payoff-from-jeff-pointing-at-things-saying-antecedents-500x",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x",
+    "text": "Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x\n Consequent only true if antecedents hold! Otherwise, proper answer becomes “It depends! Let’s see if data can help us find out!” (Will minimum wage hurt/help blah blah blah… “It depends! Tell me the details!”) (Will new condos blah blah blah yimby nimby…) (Will re-allocating welfare budget from \\(X\\) to \\(Y\\) blah blah blah… 👀 HW4)\n\n\n\n\n\n\n\n[Economic inequality] is a social law, something in the nature of man. (Pareto 1896)\n\n\n\n\nWe’ve got a [thing] made by men, isn’t that something we should be able to change? (Steinbeck 1939)\n\n\n\n\n Coase Antecedents \\(\\approx\\) equalized power!\n\nEx 1: Perfect Competition \\(\\Rightarrow\\) (\\(\\neg\\) monopoly) \\(\\wedge\\) (\\(\\neg\\) monopsony) \\(\\Rightarrow\\) everyone’s outside option equally good \\(\\Rightarrow\\) no take-it-or-leave-it coercion possible (try to coerce, I’ll say no and go to one of the other \\(\\infty\\) people offering equally good options)\nEx 2: No Informational Asymmetries \\(\\Rightarrow\\) Can’t “trick me” into buying defective product (Akerlof (1970), “Market for Lemons”)"
+  },
+  {
+    "objectID": "w11/slides.html#part-2-suddenly-collides-with-part-1-property-rights",
+    "href": "w11/slides.html#part-2-suddenly-collides-with-part-1-property-rights",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Part 2 Suddenly Collides with Part 1: Property Rights",
+    "text": "Part 2 Suddenly Collides with Part 1: Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air"
+  },
+  {
+    "objectID": "w11/slides.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
+    "href": "w11/slides.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?",
+    "text": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?\n\nThe key: Forces agent \\(i\\) to pay a cost for inflicting disutility on agent \\(j\\)!\n(Here plz note: “\\(X\\) sometimes enables \\(Y\\)” does not mean \\(X\\) is a necessary or sufficient condition for \\(Y\\)! Think of walking into a dark room, trying different light switches until one turns on the overhead light)\nDear reader, I know what you’re thinking… But Jeff!! This is all so abstract and theoretical!! We’re sick of your ivory-tower musings, get your head out of the clouds and make it relevant to our day-to-day lives, by relating it back to Yugoslavia’s 1965 economic reforms!!\nDon’t worry, I’ve listened to your concerns, and the next slide is here for you 😌"
+  },
+  {
+    "objectID": "w11/slides.html#externalities-i-get-reward-others-pay-cost",
+    "href": "w11/slides.html#externalities-i-get-reward-others-pay-cost",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Externalities: I Get Reward, Others Pay Cost 🥳",
+    "text": "Externalities: I Get Reward, Others Pay Cost 🥳\n\nFirm \\(S\\) produces amount of steel \\(s\\), pollution \\(x\\)\nFirm \\(F\\) “produces” amount of fish \\(f\\)\n\\(S\\) optimizes\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,x}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)\nSo… what determines which agents get to ignore externalities? (Dead horse)"
+  },
+  {
+    "objectID": "w11/slides.html#functionals",
+    "href": "w11/slides.html#functionals",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Functionals?",
+    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)"
+  },
+  {
+    "objectID": "w11/slides.html#we-live-in-a-society-part-2",
+    "href": "w11/slides.html#we-live-in-a-society-part-2",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "We Live In A Society, Part 2",
+    "text": "We Live In A Society, Part 2\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯"
+  },
+  {
+    "objectID": "w11/slides.html#alternative-swf-specifications",
+    "href": "w11/slides.html#alternative-swf-specifications",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Alternative SWF Specifications",
+    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)"
+  },
+  {
+    "objectID": "w11/slides.html#the-conveniently-left-out-detail",
+    "href": "w11/slides.html#the-conveniently-left-out-detail",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "The Conveniently-Left-Out Detail",
+    "text": "The Conveniently-Left-Out Detail\n\nRecall, e.g., predictive parity:\n\n\\[\n\\mathbb{E}[Y \\mid D = 1, A = 1] = \\mathbb{E}[Y \\mid D = 1, A = 0]\n\\]\n\nWho decides which \\(Y\\) to pick? (Kasy and Abebe 2021)\nAnswer: Whoever picks the objective function!\nProfit-maximizing firm: \\(\\max\\left\\{ \\mathbb{E}[D (Y - c)]\\right\\} \\Rightarrow\\) (Discrimination if and only if bad at profit-maximizing)\nWelfare-maximizing policymaker: \\(\\max\\{ W(u_1(D), \\ldots, u_n(D)) \\}\\)\nDo these align? Sometimes yes, sometimes no (See: Welfare Theorems and their antecedents, and/or Becker (1957))"
+  },
+  {
+    "objectID": "w11/slides.html#remaining-challenging-details",
+    "href": "w11/slides.html#remaining-challenging-details",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Remaining (Challenging) Details",
+    "text": "Remaining (Challenging) Details\n\n\n\n\n\n\n\nWho gets included in the SWF?\nPeople in one household? One community? One state? One country?\nPeople in the future?\nAnimals?\n…OUR BEAUTIFUL ENVIRONMENT??? (Figure 1)\n\n\n\n\n\n\n\n\n\nFigure 1: Our beautiful environment"
+  },
+  {
+    "objectID": "w11/slides.html#back-to-utilitarian-swf",
+    "href": "w11/slides.html#back-to-utilitarian-swf",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Back to Utilitarian SWF",
+    "text": "Back to Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -999999999\\)?"
+  },
+  {
+    "objectID": "w11/slides.html#the-hard-problem-of-utilitarian-swf",
+    "href": "w11/slides.html#the-hard-problem-of-utilitarian-swf",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "The Hard Problem of Utilitarian SWF",
+    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom from [\\(X\\)]? Freedom to [\\(Y\\)]?"
+  },
+  {
     "objectID": "w11/slides.html#externalities",
     "href": "w11/slides.html#externalities",
-    "title": "Week 11: Fairness vs. Social Welfare",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "Externalities",
     "text": "Externalities\n\nJeef and Keef are roommates: Jeef loves listening to Tony Danza Tapdance Extravaganza, but Keef is normal and slowly dies inside with each additional song\n\n\n\n\n\n\n\n\n\nSongs\nJeef\nKeef\nTotal\n\n\n\n\n0\n0\n0\n0\n\n\n1\n13\n-2\n11\n\n\n2\n18\n-6\n12\n\n\n3\n24\n-13\n11\n\n\n4\n28\n-20\n8\n\n\n5\n30\n-42\n-12"
   },
   {
     "objectID": "w11/slides.html#so-whats-the-issue",
     "href": "w11/slides.html#so-whats-the-issue",
-    "title": "Week 11: Fairness vs. Social Welfare",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "So What’s the Issue?",
     "text": "So What’s the Issue?\n\nThese utility values are not observed\nIf we try to elicit them, both Jeef and Keef have strategic incentives to lie (over-exaggerate)\nJeef maximizes own utility by reporting \\(u_j(s) = \\infty\\)\nKeef maximizes own utility by reporting \\(u_k(s) = -\\infty\\)\n(…Second price auctions tho)"
   },
   {
     "objectID": "w11/slides.html#now-with-scarce-resources",
     "href": "w11/slides.html#now-with-scarce-resources",
-    "title": "Week 11: Fairness vs. Social Welfare",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "Now with Scarce Resources",
     "text": "Now with Scarce Resources\n\nIn a given week, Jeef and Keef have 14 meals and 7 aux hours to divide amongst them\n\n\\[\n\\begin{align*}\n\\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\\\\n\\text{s.t. }& m_1 + m_2 \\leq 14 \\\\\n\\phantom{\\text{s.t. }} & ~ \\, a_1 + a_2 \\; \\leq 7\n\\end{align*}\n\\]\n\nLet’s assume \\(u_i(m_i, a_i) = m_i + a_i\\) for both\n\\(\\Rightarrow\\) One solution: \\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\\)…\n\\(\\Rightarrow\\) Another: \\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\\)…\nWho decides? Any decision implies \\(\\omega_1, \\omega_2\\) (\\(\\omega_1 + \\omega_2 = 1\\))"
   },
   {
-    "objectID": "w11/slides.html#the-conveniently-left-out-detail",
-    "href": "w11/slides.html#the-conveniently-left-out-detail",
-    "title": "Week 11: Fairness vs. Social Welfare",
-    "section": "The Conveniently-Left-Out Detail",
-    "text": "The Conveniently-Left-Out Detail\n\nRecall predictive parity:\n\n\\[\n\\mathbb{E}[Y \\mid D = 1, A = 1] = \\mathbb{E}[Y \\mid D = 1, A = 0]\n\\]\n\nWho decides which \\(Y\\) to pick?\nAnswer: Whoever picks the objective function!\nFor profit-maximizing firm: \\(\\mathbb{E}[D (Y - c)]\\)\nFor welfare-maximizing society: \\(W(u_1(D), \\ldots, u_n(D))\\)\nDo these align? Sometimes yes, often no (affirmative action!)"
-  },
-  {
-    "objectID": "w11/slides.html#remaining-challenging-details",
-    "href": "w11/slides.html#remaining-challenging-details",
-    "title": "Week 11: Fairness vs. Social Welfare",
-    "section": "Remaining (Challenging) Details",
-    "text": "Remaining (Challenging) Details\n\nWho gets included in the SWF?\nPeople in one community? One state? One country?\nPeople in the future?\nAnimals?"
+    "objectID": "w11/slides.html#references",
+    "href": "w11/slides.html#references",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "References",
+    "text": "References\n\n\nAkerlof, George A. 1970. “The Market for \"Lemons\": Quality Uncertainty and the Market Mechanism.” The Quarterly Journal of Economics 84 (3): 488–500. https://doi.org/10.2307/1879431.\n\n\nBecker, Gary S. 1957. The Economics of Discrimination. University of Chicago Press.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nMalm, Andreas. 2021. How to Blow Up a Pipeline. Verso Books.\n\n\nPareto, Vilfredo. 1896. Cours d’Économie politique. Librairie Droz.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin."
   },
   {
     "objectID": "w11/index.html",
     "href": "w11/index.html",
-    "title": "Week 11: Fairness vs. Social Welfare",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "",
     "text": "Open slides in new window →",
     "crumbs": [
@@ -1362,9 +1474,179 @@
     ]
   },
   {
+    "objectID": "w11/index.html#operationalizing-power",
+    "href": "w11/index.html#operationalizing-power",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Operationalizing Power",
+    "text": "Operationalizing Power\n\nEqually good outside options \\(\\implies\\) can contract to Pareto-optimal point \\(o^P\\)\n\\(i\\) has better outside options \\(\\implies\\) can make take it or leave it offer to \\(j\\):\n\n“You (\\(j\\)) fish 6 hrs all the time. I (\\(i\\)) fish 6 hrs 41% of time, 8 hrs otherwise”\n\n\n\n\n\nEver so slightly better for \\(j\\) \\(\\implies\\) \\(j\\) accepts (Behavioral econ: \\(j\\) accepts if 41% meets subjective fairness threshold; observed across many many cultures!)\nLater / next week: observe policy with outcome \\(o^{C}_{i \\rightarrow j} \\iff\\) policy values \\(i\\)’s welfare more than \\(j\\)’s welfare (inferred social welfare weights \\(\\omega_i &gt; \\omega_j\\))",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#since-weve-already-opened-the-pandoras-box-of-utility",
+    "href": "w11/index.html#since-weve-already-opened-the-pandoras-box-of-utility",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Since We’ve Already Opened the Pandora’s Box of Utility…",
+    "text": "Since We’ve Already Opened the Pandora’s Box of Utility…\n\n\n\nFrom Ryan Safner’s History of Economic Thought: Welfare Economics\n\n\n\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#two-can-play-this-game",
+    "href": "w11/index.html#two-can-play-this-game",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Two Can Play This Game…",
+    "text": "Two Can Play This Game…\n\n\n\n\n\n\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)\nGreenie obtains greater utility within the same budget by moving from \\(E^2\\) to \\(O^2\\)",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#the-edgeworth-box",
+    "href": "w11/index.html#the-edgeworth-box",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "The Edgeworth Box",
+    "text": "The Edgeworth Box\n\n\n\nRotate Greenie’s box 180° and superimpose onto Bluey’s",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#the-contract-curve",
+    "href": "w11/index.html#the-contract-curve",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "The Contract(!) Curve",
+    "text": "The Contract(!) Curve\n\n\n\n\n\n\nFrom initial endowment \\(E\\), if allowed to trade, “rational” players can reach any allocation along dashed contract curve from \\(G\\) to \\(B\\)… (Why not \\(A\\) or \\(H\\)?)\nSo, what determines which of these points they end up at? (Middle name hint)",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#first-fundamental-theorem-of-welfare-economics",
+    "href": "w11/index.html#first-fundamental-theorem-of-welfare-economics",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "First Fundamental Theorem of Welfare Economics",
+    "text": "First Fundamental Theorem of Welfare Economics\n\nTheorem: [Antecedents (Coase Conditions)] \\(\\Rightarrow\\) markets produce Pareto-optimal outcomes\n\n\nEven commie Jeff finds proof+corollaries compelling / convincing / empirically-supported\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#payoff-from-jeff-pointing-at-things-saying-antecedents-500x",
+    "href": "w11/index.html#payoff-from-jeff-pointing-at-things-saying-antecedents-500x",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x",
+    "text": "Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x\n Consequent only true if antecedents hold! Otherwise, proper answer becomes “It depends! Let’s see if data can help us find out!” (Will minimum wage hurt/help blah blah blah… “It depends! Tell me the details!”) (Will new condos blah blah blah yimby nimby…) (Will re-allocating welfare budget from \\(X\\) to \\(Y\\) blah blah blah… 👀 HW4)\n\n\n\n\n\n\n\n[Economic inequality] is a social law, something in the nature of man. (Pareto 1896)\n\n\n\n\nWe’ve got a [thing] made by men, isn’t that something we should be able to change? (Steinbeck 1939)\n\n\n\n\n Coase Antecedents \\(\\approx\\) equalized power!\n\nEx 1: Perfect Competition \\(\\Rightarrow\\) (\\(\\neg\\) monopoly) \\(\\wedge\\) (\\(\\neg\\) monopsony) \\(\\Rightarrow\\) everyone’s outside option equally good \\(\\Rightarrow\\) no take-it-or-leave-it coercion possible (try to coerce, I’ll say no and go to one of the other \\(\\infty\\) people offering equally good options)\nEx 2: No Informational Asymmetries \\(\\Rightarrow\\) Can’t “trick me” into buying defective product (Akerlof (1970), “Market for Lemons”)",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#part-2-suddenly-collides-with-part-1-property-rights",
+    "href": "w11/index.html#part-2-suddenly-collides-with-part-1-property-rights",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Part 2 Suddenly Collides with Part 1: Property Rights",
+    "text": "Part 2 Suddenly Collides with Part 1: Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
+    "href": "w11/index.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?",
+    "text": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?\n\nThe key: Forces agent \\(i\\) to pay a cost for inflicting disutility on agent \\(j\\)!\n(Here plz note: “\\(X\\) sometimes enables \\(Y\\)” does not mean \\(X\\) is a necessary or sufficient condition for \\(Y\\)! Think of walking into a dark room, trying different light switches until one turns on the overhead light)\nDear reader, I know what you’re thinking… But Jeff!! This is all so abstract and theoretical!! We’re sick of your ivory-tower musings, get your head out of the clouds and make it relevant to our day-to-day lives, by relating it back to Yugoslavia’s 1965 economic reforms!!\nDon’t worry, I’ve listened to your concerns, and the next slide is here for you 😌",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#externalities-i-get-reward-others-pay-cost",
+    "href": "w11/index.html#externalities-i-get-reward-others-pay-cost",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Externalities: I Get Reward, Others Pay Cost 🥳",
+    "text": "Externalities: I Get Reward, Others Pay Cost 🥳\n\nFirm \\(S\\) produces amount of steel \\(s\\), pollution \\(x\\)\nFirm \\(F\\) “produces” amount of fish \\(f\\)\n\\(S\\) optimizes\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,x}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)\nSo… what determines which agents get to ignore externalities? (Dead horse)",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#functionals",
+    "href": "w11/index.html#functionals",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Functionals?",
+    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#we-live-in-a-society-part-2",
+    "href": "w11/index.html#we-live-in-a-society-part-2",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "We Live In A Society, Part 2",
+    "text": "We Live In A Society, Part 2\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#alternative-swf-specifications",
+    "href": "w11/index.html#alternative-swf-specifications",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Alternative SWF Specifications",
+    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#the-conveniently-left-out-detail",
+    "href": "w11/index.html#the-conveniently-left-out-detail",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "The Conveniently-Left-Out Detail",
+    "text": "The Conveniently-Left-Out Detail\n\nRecall, e.g., predictive parity:\n\n\\[\n\\mathbb{E}[Y \\mid D = 1, A = 1] = \\mathbb{E}[Y \\mid D = 1, A = 0]\n\\]\n\nWho decides which \\(Y\\) to pick? (Kasy and Abebe 2021)\nAnswer: Whoever picks the objective function!\nProfit-maximizing firm: \\(\\max\\left\\{ \\mathbb{E}[D (Y - c)]\\right\\} \\Rightarrow\\) (Discrimination if and only if bad at profit-maximizing)\nWelfare-maximizing policymaker: \\(\\max\\{ W(u_1(D), \\ldots, u_n(D)) \\}\\)\nDo these align? Sometimes yes, sometimes no (See: Welfare Theorems and their antecedents, and/or Becker (1957))",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#remaining-challenging-details",
+    "href": "w11/index.html#remaining-challenging-details",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Remaining (Challenging) Details",
+    "text": "Remaining (Challenging) Details\n\n\n\n\n\n\n\nWho gets included in the SWF?\nPeople in one household? One community? One state? One country?\nPeople in the future?\nAnimals?\n…OUR BEAUTIFUL ENVIRONMENT??? (Figure 1)\n\n\n\n\n\n\n\n\n\nFigure 1: Our beautiful environment",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#back-to-utilitarian-swf",
+    "href": "w11/index.html#back-to-utilitarian-swf",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Back to Utilitarian SWF",
+    "text": "Back to Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -999999999\\)?",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#the-hard-problem-of-utilitarian-swf",
+    "href": "w11/index.html#the-hard-problem-of-utilitarian-swf",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "The Hard Problem of Utilitarian SWF",
+    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom from [\\(X\\)]? Freedom to [\\(Y\\)]?",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
     "objectID": "w11/index.html#externalities",
     "href": "w11/index.html#externalities",
-    "title": "Week 11: Fairness vs. Social Welfare",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "Externalities",
     "text": "Externalities\n\nJeef and Keef are roommates: Jeef loves listening to Tony Danza Tapdance Extravaganza, but Keef is normal and slowly dies inside with each additional song\n\n\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.3     ✔ tibble    3.2.1\n✔ purrr     1.0.2     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nmusic_df &lt;- tribble(\n  ~Songs, ~Jeef, ~Keef,\n  0, 0, 0,\n  1, 13, -2,\n  2, 18, -6,\n  3, 24, -13,\n  4, 28, -20,\n  5, 30, -42\n)\nmusic_df &lt;- music_df |&gt;\n  mutate(Total = Jeef + Keef)\nmusic_df\n\n\n\n\n\nSongs\nJeef\nKeef\nTotal\n\n\n\n\n0\n0\n0\n0\n\n\n1\n13\n-2\n11\n\n\n2\n18\n-6\n12\n\n\n3\n24\n-13\n11\n\n\n4\n28\n-20\n8\n\n\n5\n30\n-42\n-12\n\n\n\n\n\n\n\n\nlong_df &lt;- music_df |&gt;\n  pivot_longer(!Songs, names_to=\"Roommate\", values_to=\"Utility\")\nutil_df &lt;- long_df |&gt;\n  filter(Roommate != \"Total\")\nggplot(util_df, aes(x=Songs, y=Utility, color=Roommate)) +\n  geom_line(linewidth=g_linewidth) +\n  geom_point(size=g_pointsize) +\n  labs(\n    title=\"Individual Utility: Jeef vs. Keef\",\n    x=\"Number of Songs Played\",\n    y=\"Utility\"\n  ) +\n  theme_dsan(\"quarter\")\n\n\n\n\n\n\n\n\n\nwelfare_df &lt;- long_df |&gt;\n  filter(Roommate == \"Total\")\nggplot(welfare_df, aes(x=Songs, y=Utility, color=Roommate)) +\n  geom_line(linewidth=g_linewidth) +\n  geom_point(size=g_pointsize) +\n  labs(\n    title=\"Social Welfare: Jeef and Keef\",\n    x=\"Number of Songs Played\",\n    y=\"Social Welfare\"\n  ) +\n  scale_color_manual(values=c(cbPalette[3]), labels=c(\"Total      \")) +\n  theme_dsan(\"quarter\") +\n  remove_legend_title()",
     "crumbs": [
@@ -1374,7 +1656,7 @@
   {
     "objectID": "w11/index.html#so-whats-the-issue",
     "href": "w11/index.html#so-whats-the-issue",
-    "title": "Week 11: Fairness vs. Social Welfare",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "So What’s the Issue?",
     "text": "So What’s the Issue?\n\nThese utility values are not observed\nIf we try to elicit them, both Jeef and Keef have strategic incentives to lie (over-exaggerate)\nJeef maximizes own utility by reporting \\(u_j(s) = \\infty\\)\nKeef maximizes own utility by reporting \\(u_k(s) = -\\infty\\)\n(…Second price auctions tho)",
     "crumbs": [
@@ -1384,7 +1666,7 @@
   {
     "objectID": "w11/index.html#now-with-scarce-resources",
     "href": "w11/index.html#now-with-scarce-resources",
-    "title": "Week 11: Fairness vs. Social Welfare",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "Now with Scarce Resources",
     "text": "Now with Scarce Resources\n\nIn a given week, Jeef and Keef have 14 meals and 7 aux hours to divide amongst them\n\n\\[\n\\begin{align*}\n\\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\\\\n\\text{s.t. }& m_1 + m_2 \\leq 14 \\\\\n\\phantom{\\text{s.t. }} & ~ \\, a_1 + a_2 \\; \\leq 7\n\\end{align*}\n\\]\n\nLet’s assume \\(u_i(m_i, a_i) = m_i + a_i\\) for both\n\\(\\Rightarrow\\) One solution: \\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\\)…\n\\(\\Rightarrow\\) Another: \\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\\)…\nWho decides? Any decision implies \\(\\omega_1, \\omega_2\\) (\\(\\omega_1 + \\omega_2 = 1\\))",
     "crumbs": [
@@ -1392,21 +1674,21 @@
     ]
   },
   {
-    "objectID": "w11/index.html#the-conveniently-left-out-detail",
-    "href": "w11/index.html#the-conveniently-left-out-detail",
-    "title": "Week 11: Fairness vs. Social Welfare",
-    "section": "The Conveniently-Left-Out Detail",
-    "text": "The Conveniently-Left-Out Detail\n\nRecall predictive parity:\n\n\\[\n\\mathbb{E}[Y \\mid D = 1, A = 1] = \\mathbb{E}[Y \\mid D = 1, A = 0]\n\\]\n\nWho decides which \\(Y\\) to pick?\nAnswer: Whoever picks the objective function!\nFor profit-maximizing firm: \\(\\mathbb{E}[D (Y - c)]\\)\nFor welfare-maximizing society: \\(W(u_1(D), \\ldots, u_n(D))\\)\nDo these align? Sometimes yes, often no (affirmative action!)",
+    "objectID": "w11/index.html#references",
+    "href": "w11/index.html#references",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "References",
+    "text": "References\n\n\nAkerlof, George A. 1970. “The Market for \"Lemons\": Quality Uncertainty and the Market Mechanism.” The Quarterly Journal of Economics 84 (3): 488–500. https://doi.org/10.2307/1879431.\n\n\nBecker, Gary S. 1957. The Economics of Discrimination. University of Chicago Press.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nMalm, Andreas. 2021. How to Blow Up a Pipeline. Verso Books.\n\n\nPareto, Vilfredo. 1896. Cours d’Économie politique. Librairie Droz.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
   },
   {
-    "objectID": "w11/index.html#remaining-challenging-details",
-    "href": "w11/index.html#remaining-challenging-details",
-    "title": "Week 11: Fairness vs. Social Welfare",
-    "section": "Remaining (Challenging) Details",
-    "text": "Remaining (Challenging) Details\n\nWho gets included in the SWF?\nPeople in one community? One state? One country?\nPeople in the future?\nAnimals?",
+    "objectID": "w11/index.html#footnotes",
+    "href": "w11/index.html#footnotes",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nRecall W01: Earned Income Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation \\(\\in \\text{Policy Set}\\); Black Panther Community Police Patrols, Blowing Up Oil Pipelines (Malm 2021), Bolshevik Revolution also \\(\\in \\text{Policy Set}\\)↩︎",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
@@ -1734,7 +2016,7 @@
     "href": "w02/slides.html#enables-inverse-fairness",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
     "section": "…Enables INVERSE Fairness 🤯",
-    "text": "…Enables INVERSE Fairness 🤯\n\n\n\n\n\n\n\n\nFigure 5: From Kasy and Abebe (2021), “Fairness, Equality, and Power in Algorithmic Decision-Making”\n\n\n\n\n\n\n\n\n\n\nFigure 6: From Björkegren, Blumenstock, and Knight (2022), “(Machine) Learning What Policymakers Value”"
+    "text": "…Enables INVERSE Fairness 🤯\n\n\n\n\n\n\n\n\nFigure 5: From Kasy and Abebe (2021), “Fairness, Equality, and Power in Algorithmic Decision-Making”\n\n\n\n\n\n\n\n\n\n\nFigure 6: From (bjorkegren_machine_2022?), “(Machine) Learning What Policymakers Value”"
   },
   {
     "objectID": "w02/slides.html#unraveling-history",
@@ -1755,7 +2037,7 @@
     "href": "w02/slides.html#references",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
     "section": "References",
-    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nBishop, Marlon, and Tatiana Fernandez. 2017. “80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre.” NPR, October. https://www.npr.org/sections/parallels/2017/10/07/555871670/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. “Man Is to Computer Programmer as Woman Is to Homemaker? Debiasing Word Embeddings.” In Advances in Neural Information Processing Systems. Vol. 29. Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nCheng, Eugenia. 2018. The Art of Logic in an Illogical World. Basic Books.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFisk, Robert. 1990. Pity the Nation: Lebanon at War. OUP Oxford.\n\n\n———. 2005. The Great War for Civilisation: The Conquest of the Middle East. Knopf Doubleday Publishing Group.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nKalyvas, Stathis N. 2006. The Logic of Violence in Civil War. Cambridge University Press.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nKozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class Through Word Embeddings.” American Sociological Review 84 (5): 905–49. https://doi.org/10.1177/0003122419877135.\n\n\nLabov, William. 2013. The Language of Life and Death: The Transformation of Experience in Oral Narrative. Cambridge University Press.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1852. The Eighteenth Brumaire of Louis Bonaparte. Die Revolution.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSandburg, Carl. 1926. Selected Poems. Houghton Mifflin Harcourt.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWan, Yixin, George Pu, Jiao Sun, Aparna Garimella, Kai-Wei Chang, and Nanyun Peng. 2023. “‘Kelly Is a Warm Person, Joseph Is a Role Model’: Gender Biases in LLM-Generated Reference Letters.” In EMNLP 2023, 3730–48. Singapore: ACL. https://doi.org/10.18653/v1/2023.findings-emnlp.243.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw."
+    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nBishop, Marlon, and Tatiana Fernandez. 2017. “80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre.” NPR, October. https://www.npr.org/sections/parallels/2017/10/07/555871670/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre.\n\n\nBolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. “Man Is to Computer Programmer as Woman Is to Homemaker? Debiasing Word Embeddings.” In Advances in Neural Information Processing Systems. Vol. 29. Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nCheng, Eugenia. 2018. The Art of Logic in an Illogical World. Basic Books.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFisk, Robert. 1990. Pity the Nation: Lebanon at War. OUP Oxford.\n\n\n———. 2005. The Great War for Civilisation: The Conquest of the Middle East. Knopf Doubleday Publishing Group.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nKalyvas, Stathis N. 2006. The Logic of Violence in Civil War. Cambridge University Press.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nKozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class Through Word Embeddings.” American Sociological Review 84 (5): 905–49. https://doi.org/10.1177/0003122419877135.\n\n\nLabov, William. 2013. The Language of Life and Death: The Transformation of Experience in Oral Narrative. Cambridge University Press.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1852. The Eighteenth Brumaire of Louis Bonaparte. Die Revolution.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSandburg, Carl. 1926. Selected Poems. Houghton Mifflin Harcourt.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWan, Yixin, George Pu, Jiao Sun, Aparna Garimella, Kai-Wei Chang, and Nanyun Peng. 2023. “‘Kelly Is a Warm Person, Joseph Is a Role Model’: Gender Biases in LLM-Generated Reference Letters.” In EMNLP 2023, 3730–48. Singapore: ACL. https://doi.org/10.18653/v1/2023.findings-emnlp.243.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw."
   },
   {
     "objectID": "w02/slides.html#appendix-bonus-showing-up-early-material",
@@ -2049,7 +2331,7 @@
     "href": "w02/index.html#enables-inverse-fairness",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
     "section": "…Enables INVERSE Fairness 🤯",
-    "text": "…Enables INVERSE Fairness 🤯\n\n\n\n\n\n\n\n\nFigure 5: From Kasy and Abebe (2021), “Fairness, Equality, and Power in Algorithmic Decision-Making”\n\n\n\n\n\n\n\n\n\n\nFigure 6: From Björkegren, Blumenstock, and Knight (2022), “(Machine) Learning What Policymakers Value”",
+    "text": "…Enables INVERSE Fairness 🤯\n\n\n\n\n\n\n\n\nFigure 5: From Kasy and Abebe (2021), “Fairness, Equality, and Power in Algorithmic Decision-Making”\n\n\n\n\n\n\n\n\n\n\nFigure 6: From (bjorkegren_machine_2022?), “(Machine) Learning What Policymakers Value”",
     "crumbs": [
       "Week 2: {{< var w02.date-md >}}"
     ]
@@ -2079,7 +2361,7 @@
     "href": "w02/index.html#references",
     "title": "Week 2: Machine Learning, Training Data, and Biases",
     "section": "References",
-    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nBishop, Marlon, and Tatiana Fernandez. 2017. “80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre.” NPR, October. https://www.npr.org/sections/parallels/2017/10/07/555871670/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. “Man Is to Computer Programmer as Woman Is to Homemaker? Debiasing Word Embeddings.” In Advances in Neural Information Processing Systems. Vol. 29. Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nCheng, Eugenia. 2018. The Art of Logic in an Illogical World. Basic Books.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFisk, Robert. 1990. Pity the Nation: Lebanon at War. OUP Oxford.\n\n\n———. 2005. The Great War for Civilisation: The Conquest of the Middle East. Knopf Doubleday Publishing Group.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nKalyvas, Stathis N. 2006. The Logic of Violence in Civil War. Cambridge University Press.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nKozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class Through Word Embeddings.” American Sociological Review 84 (5): 905–49. https://doi.org/10.1177/0003122419877135.\n\n\nLabov, William. 2013. The Language of Life and Death: The Transformation of Experience in Oral Narrative. Cambridge University Press.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1852. The Eighteenth Brumaire of Louis Bonaparte. Die Revolution.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSandburg, Carl. 1926. Selected Poems. Houghton Mifflin Harcourt.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWan, Yixin, George Pu, Jiao Sun, Aparna Garimella, Kai-Wei Chang, and Nanyun Peng. 2023. “‘Kelly Is a Warm Person, Joseph Is a Role Model’: Gender Biases in LLM-Generated Reference Letters.” In EMNLP 2023, 3730–48. Singapore: ACL. https://doi.org/10.18653/v1/2023.findings-emnlp.243.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.",
+    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nBishop, Marlon, and Tatiana Fernandez. 2017. “80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre.” NPR, October. https://www.npr.org/sections/parallels/2017/10/07/555871670/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre.\n\n\nBolukbasi, Tolga, Kai-Wei Chang, James Y Zou, Venkatesh Saligrama, and Adam T Kalai. 2016. “Man Is to Computer Programmer as Woman Is to Homemaker? Debiasing Word Embeddings.” In Advances in Neural Information Processing Systems. Vol. 29. Curran Associates, Inc. https://proceedings.neurips.cc/paper_files/paper/2016/hash/a486cd07e4ac3d270571622f4f316ec5-Abstract.html.\n\n\nBourdieu, Pierre. 2010. Sociology Is a Martial Art: Political Writings by Pierre Bourdieu. New Press.\n\n\nCheng, Eugenia. 2018. The Art of Logic in an Illogical World. Basic Books.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nDube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. “Monopsony in Online Labor Markets.” American Economic Review: Insights 2 (1): 33–46. https://doi.org/10.1257/aeri.20180150.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFisk, Robert. 1990. Pity the Nation: Lebanon at War. OUP Oxford.\n\n\n———. 2005. The Great War for Civilisation: The Conquest of the Middle East. Knopf Doubleday Publishing Group.\n\n\nFrance, Anatole. 1894. Le Lys Rouge (The Red Lily). G. Wells.\n\n\nIngold, David, and Spencer Soper. 2016. “Amazon Doesn’t Consider the Race of Its Customers. Should It?” Bloomberg, April. http://www.bloomberg.com/graphics/2016-amazon-same-day/.\n\n\nKalyvas, Stathis N. 2006. The Logic of Violence in Civil War. Cambridge University Press.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nKozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. “The Geometry of Culture: Analyzing the Meanings of Class Through Word Embeddings.” American Sociological Review 84 (5): 905–49. https://doi.org/10.1177/0003122419877135.\n\n\nLabov, William. 2013. The Language of Life and Death: The Transformation of Experience in Oral Narrative. Cambridge University Press.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1852. The Eighteenth Brumaire of Louis Bonaparte. Die Revolution.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. “Algorithmic Fairness: Choices, Assumptions, and Definitions.” Annual Review of Statistics and Its Application 8 (1): 141–63. https://doi.org/10.1146/annurev-statistics-042720-125902.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nSandburg, Carl. 1926. Selected Poems. Houghton Mifflin Harcourt.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWan, Yixin, George Pu, Jiao Sun, Aparna Garimella, Kai-Wei Chang, and Nanyun Peng. 2023. “‘Kelly Is a Warm Person, Joseph Is a Role Model’: Gender Biases in LLM-Generated Reference Letters.” In EMNLP 2023, 3730–48. Singapore: ACL. https://doi.org/10.18653/v1/2023.findings-emnlp.243.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.",
     "crumbs": [
       "Week 2: {{< var w02.date-md >}}"
     ]
@@ -5464,7 +5746,7 @@
     "href": "w01/index.html#and-inverse-fairness",
     "title": "Week 1: Introduction to the Course",
     "section": "…And INVERSE Fairness 🤯",
-    "text": "…And INVERSE Fairness 🤯\n\n\n\nFrom Machine Learning What Policymakers Value (Björkegren, Blumenstock, and Knight 2022)",
+    "text": "…And INVERSE Fairness 🤯\n\n\n\nFrom Machine Learning What Policymakers Value (bjorkegren_machine_2022?)",
     "crumbs": [
       "Week 1: {{< var w01.date-md >}}"
     ]
@@ -5514,7 +5796,7 @@
     "href": "w01/index.html#references",
     "title": "Week 1: Introduction to the Course",
     "section": "References",
-    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBowles, Samuel. 2016. The Moral Economy: Why Good Incentives Are No Substitute for Good Citizens. Yale University Press.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFodor, Jerry A. 1983. The Modularity of Mind. MIT Press.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nGiddens, Anthony. 1979. Central Problems in Social Theory: Action, Structure, and Contradiction in Social Analysis. University of California Press.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1845. Thesen über Feuerbach. Stuttgart: J. H. W. Dietz. https://de.wikisource.org/wiki/Thesen_%C3%BCber_Feuerbach.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press.",
+    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nBowles, Samuel. 2016. The Moral Economy: Why Good Incentives Are No Substitute for Good Citizens. Yale University Press.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFodor, Jerry A. 1983. The Modularity of Mind. MIT Press.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nGiddens, Anthony. 1979. Central Problems in Social Theory: Action, Structure, and Contradiction in Social Analysis. University of California Press.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1845. Thesen über Feuerbach. Stuttgart: J. H. W. Dietz. https://de.wikisource.org/wiki/Thesen_%C3%BCber_Feuerbach.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press.",
     "crumbs": [
       "Week 1: {{< var w01.date-md >}}"
     ]
@@ -5769,7 +6051,7 @@
     "href": "w01/slides.html#and-inverse-fairness",
     "title": "Week 1: Introduction to the Course",
     "section": "…And INVERSE Fairness 🤯",
-    "text": "…And INVERSE Fairness 🤯\n\nFrom Machine Learning What Policymakers Value (Björkegren, Blumenstock, and Knight 2022)"
+    "text": "…And INVERSE Fairness 🤯\n\nFrom Machine Learning What Policymakers Value (bjorkegren_machine_2022?)"
   },
   {
     "objectID": "w01/slides.html#facial-recognition-algorithms",
@@ -5804,7 +6086,7 @@
     "href": "w01/slides.html#references",
     "title": "Week 1: Introduction to the Course",
     "section": "References",
-    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nBjörkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. “(Machine) Learning What Policies Value.” arXiv. https://doi.org/10.48550/arXiv.2206.00727.\n\n\nBowles, Samuel. 2016. The Moral Economy: Why Good Incentives Are No Substitute for Good Citizens. Yale University Press.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFodor, Jerry A. 1983. The Modularity of Mind. MIT Press.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nGiddens, Anthony. 1979. Central Problems in Social Theory: Action, Structure, and Contradiction in Social Analysis. University of California Press.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1845. Thesen über Feuerbach. Stuttgart: J. H. W. Dietz. https://de.wikisource.org/wiki/Thesen_%C3%BCber_Feuerbach.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press."
+    "text": "References\n\n\nAmes, Mark. 2014. “The Techtopus: How Silicon Valley’s Most Celebrated CEOs Conspired to Drive down 100,000 Tech Engineers’ Wages,” January. http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/.\n\n\nAyyub, Rami. 2019. “App Aims to Help Palestinian Drivers Find Their Way Around Checkpoints.” The Times of Israel, August. https://www.timesofisrael.com/app-aims-to-help-palestinian-drivers-find-their-way-around-checkpoints/.\n\n\nbin Laden, Osama. 2005. Messages to the World: The Statements of Osama Bin Laden. Verso Books.\n\n\nBowles, Samuel. 2016. The Moral Economy: Why Good Incentives Are No Substitute for Good Citizens. Yale University Press.\n\n\nChurchill, Ward. 2003. On the Justice of Roosting Chickens: Reflections on the Consequences of U.S. Imperial Arrogance and Criminality. AK Press.\n\n\nD’Ignazio, Catherine, and Lauren F. Klein. 2020. Data Feminism. MIT Press.\n\n\nDrèze, Jean, and Amartya Sen. 1991. “China and India.” In Hunger and Public Action, 0. Oxford University Press. https://doi.org/10.1093/0198283652.003.0011.\n\n\nFacia.ai. 2023. “Facial Recognition Helps Vendors in Healthcare.” Facia.ai. https://facia.ai/blog/facial-recognition-healthcare/.\n\n\nFodor, Jerry A. 1983. The Modularity of Mind. MIT Press.\n\n\nGeertz, Clifford. 1973. The Interpretation Of Cultures. Basic Books.\n\n\nGiddens, Anthony. 1979. Central Problems in Social Theory: Action, Structure, and Contradiction in Social Analysis. University of California Press.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency, 576–86. FAccT ’21. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/3442188.3445919.\n\n\nLerman, Amy E., and Vesla M. Weaver. 2014. Arresting Citizenship: The Democratic Consequences of American Crime Control. University of Chicago Press.\n\n\nLyall, Jason. 2020. Divided Armies: Inequality and Battlefield Performance in Modern War. Princeton University Press.\n\n\nMarx, Karl. 1845. Thesen über Feuerbach. Stuttgart: J. H. W. Dietz. https://de.wikisource.org/wiki/Thesen_%C3%BCber_Feuerbach.\n\n\nMcNeil, Sam. 2022. “Israel Deploys Remote-Controlled Robotic Guns in West Bank.” AP News, November. https://apnews.com/article/technology-business-israel-robotics-west-bank-cfc889a120cbf59356f5044eb43d5b88.\n\n\nMorozov, Evgeny. 2015. “Socialize the Data Centres!” New Left Review, no. 91 (February): 45–66.\n\n\nOlson, Mancur. 1965. The Logic of Collective Action. Harvard University Press.\n\n\nOuz. 2023. “Google Pixel 8 Face Unlock Vulnerability Discovered, Allowing Others to Unlock Devices.” Gizmochina. https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/.\n\n\nRousseau, Jean-Jacques. 1762. The Social Contract. Geneva: J. M. Dent.\n\n\nSchelling, Thomas C. 1978. Micromotives and Macrobehavior. Norton.\n\n\nSchiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. “Machine Translation: Gendered Innovations.” http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin.\n\n\nSteingart, Alma. 2023. Axiomatics: Mathematical Thought and High Modernism. University of Chicago Press.\n\n\nStiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. Mismeasuring Our Lives: Why GDP Doesn’t Add Up. The New Press.\n\n\nWang, Yilun, and Michal Kosinski. 2018. “Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.” Journal of Personality and Social Psychology 114 (2): 246–57. https://doi.org/10.1037/pspa0000098.\n\n\nWellcome Collection. 1890. “Composite Photographs: \"The Jewish Type\".” https://wellcomecollection.org/works/ngq29vyw.\n\n\nWhitehead, Alfred North, and Bertrand Russell. 1910. Principia Mathematica. Cambridge University Press."
   },
   {
     "objectID": "midterm.html",
@@ -5931,7 +6213,7 @@
     "href": "resources.html#econometric-policy-evaluation",
     "title": "Resources",
     "section": "Econometric Policy Evaluation",
-    "text": "Econometric Policy Evaluation\n\nBjörkegren, Blumenstock, and Knight (2022), “(Machine) Learning what Policymakers Value”, EAAMO (Equity and Access in Algorithms, Mechanisms, and Optimization) [PDF]",
+    "text": "Econometric Policy Evaluation\n\n(bjorkegren_machine_2022?), “(Machine) Learning what Policymakers Value”, EAAMO (Equity and Access in Algorithms, Mechanisms, and Optimization) [PDF]",
     "crumbs": [
       "Resources"
     ]
