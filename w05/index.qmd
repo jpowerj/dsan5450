@@ -1,0 +1,604 @@
+---
+title: "Week 5: Context-Sensitive Fairness"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2025, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
+bibliography: "../_DSAN5450.bib"
+date: 2025-02-12
+date-format: full
+lecnum: 5
+categories:
+  - "Class Sessions"
+format:
+  revealjs:
+    df-print: kable
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css'>"
+    footer: "DSAN 5450 Week 5: Context-Sensitive Fairness"
+    output-file: "slides.html"
+    html-math-method: mathjax
+    theme: [default, "../dsan-globals/jjquarto.scss"]
+    scrollable: true
+    slide-number: true
+    simplemenu:
+      flat: true
+      barhtml:
+        header: "<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>"
+      scale: 0.5
+    revealjs-plugins:
+      - simplemenu
+  html:
+    df-print: kable
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
+
+# Schedule {.smaller .small-title .crunch-title .crunch-callout data-name="Schedule"}
+
+Today's Planned Schedule:
+
+| | Start | End | Topic |
+|:- |:- |:- |:- |
+| **Lecture** | 6:30pm | 7:00pm | [Setting the Table: HW1 $\leadsto$ HW2 &rarr;](#setting-the-table-hw1-leadsto-hw2) |
+| | 7:00pm | 7:15pm | [Issues with Context-Free Fairness &rarr;](#context-free-rightarrow-context-sensitive) |
+| | 7:15pm | 7:30pm | [Bringing in Context &rarr;](#bringing-in-context) |
+| | 7:30pm | 8:00pm | [Similarity-Based Fairness &rarr;](#similarity-based-fairness) |
+| **Break!** | 8:00pm | 8:10pm | |
+| | 8:10pm | 9:00pm | [Causal Fairness Building Blocks &rarr;](#causal-fairness) |
+
+: {tbl-colwidths="[12,12,12,64]"}
+
+{{< include ../dsan-globals/_globals-tex.qmd >}}
+
+{{< include ../dsan-globals/_globals-gg.qmd >}}
+
+# Setting the Table: HW1 $\leadsto$ HW2 {data-stack-name="Table-Setting"}
+
+## Table-Setting I Should Have Done *Before* HW1: Truth Tables! {.smaller .crunch-title .crunch-ul .crunch-p}
+
+**Just one (❗️) "primary" axiom required for first-order predicate logic!**
+
+::: {#text-top style="margin-bottom: 10px;"}
+
+But, to make it more digestible, we can define some "helper axioms":
+
+:::
+
+:::: {.columns}
+::: {.column width="50%"}
+
+<center>
+**[Helper Axiom <i class='bi bi-dash-circle'></i>]**
+</center>
+
+* A **unary** operator "$\neg$"
+* Intersubjective agreement: call it "not"
+
+<center>
+
+| $p$ | $\neg p$ |
+|:-:|:-:|
+| 0 | 1 |
+| 1 | 0 |
+
+: {tbl-colwidths="[50,50]"}
+
+</center>
+
+:::
+::: {.column width="50%"}
+
+<center>
+**[Helper Axiom <i class='bi bi-x-circle'></i>]**
+</center>
+
+* A **binary** operator "$\wedge$"
+* Intersubjective agreement: call it "and"
+
+<center>
+
+| $p$ | $q$ | $p \wedge q$ |
+|:-:|:-:|:-:|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+</center>
+
+:::
+::::
+
+## The Single Axiom
+
+**[Axiom <i class='bi bi-1-circle'></i>]** A **binary** operator "$\barwedge$", defined (for human consumption) s.t. $a \barwedge b \triangleq \neg(a \wedge b)$, but defined precisely as the binary operator which maps the [blue]{.cb2a-bg} cols into [orange]{.cb1a-bg} col:
+
+```{=html}
+<table>
+<thead>
+<tr>
+  <th class='cb2a-bg' align="center"><span data-qmd="$p$"></span></th>
+  <th class='cb2a-bg'><span data-qmd="$q$"></span></th>
+  <th><span data-qmd="$p \underset{\small\text{or}}{\vee} q$"></span></th>
+  <th><span data-qmd="$p \underset{\small\text{xor}}{\otimes} q$"></span></th>
+  <th align="center"><span data-qmd="$p \underset{\small\text{and}}{\wedge} q$"></span></th>
+  <th class='cb1a-bg' align="center"><span data-qmd="$p \underset{\small\text{nand}}{\barwedge} q$"></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td class='cb2a-bg'>0</td>
+  <td class='cb2a-bg'>0</td>
+  <td align="center">0</td>
+  <td align="center">0</td>
+  <td align="center">0</td>
+  <td class='cb1a-bg' align="center">1</td>
+</tr>
+<tr>
+  <td class='cb2a-bg'>0</td>
+  <td class='cb2a-bg'>1</td>
+  <td>1</td>
+  <td>1</td>
+  <td>0</td>
+  <td class='cb1a-bg'>1</td>
+</tr>
+<tr>
+  <td class='cb2a-bg'>1</td>
+  <td class='cb2a-bg'>0</td>
+  <td>1</td>
+  <td>1</td>
+  <td>0</td>
+  <td class='cb1a-bg'>1</td>
+</tr>
+<tr>
+  <td class='cb2a-bg'>1</td>
+  <td class='cb2a-bg'>1</td>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td class='cb1a-bg'>0</td>
+</tr>
+</table>
+```
+
+## Deriving "Not" {.crunch-title .math-90 .inline-90}
+
+* Given Axiom <i class='bi bi-1-circle'></i>, we can **derive** Axiom <i class='bi bi-dash-circle'></i> as a **theorem** (meaning, it does **not** need to be included as an axiom!):
+  
+  $$
+  [\text{Theorem 1}] \; ~ p \barwedge p \text{ satisfies all properties of }\neg p
+  $$
+
+  Therefore, define $\neg p \triangleq p \barwedge p$
+
+* Given Axiom <i class='bi bi-1-circle'></i> and Theorem 1, we can **derive** Axiom <i class='bi bi-dash-circle'></i> as a **theorem**:
+
+  $$
+  [\text{Theorem 2}] ~ \neg(p \barwedge q) \text{ satisfies all properties of }p \wedge q
+  $$
+
+  Therefore, define $p \wedge q \triangleq \neg(p \barwedge q)$
+
+## HW1 Clarification: Necessary vs. Sufficient {.smaller .crunch-title .crunch-p .crunch-ul .title-11}
+
+::: {#necc-top style="margin-bottom: 24px;"}
+
+These are, at root, **logical connectors**: given **"atomic"** (non-implicational) logical predicates $p$ and $q$, we can form **implicational** predicates (here "$\equiv$" means "will always have the same logical value (T or F) as"):
+
+| English | Logical Form | $\equiv$ | Contrapositive Form | If True Then... 
+| - | - | - | - | - |
+| "If $p$ then $q$" | $p \Rightarrow q$ or $q \Leftarrow p$ | $\equiv$ | $\neg q \Rightarrow \neg p$ | $p$ **sufficient** for $q$ |
+| "If $q$ then $p$" | $q \Rightarrow p$ or $p \Leftarrow q$ | $\equiv$ | $\neg p \Rightarrow \neg q$ | $p$ **necessary** for $q$ |
+
+: {tbl-colwidths="[18,22,5,30,25]"}
+
+:::
+
+:::: {.columns}
+::: {.column width="40%"}
+
+The truth table for $\Rightarrow$ looks like:
+
+<center>
+
+| $p$ | $q$ | $p \Rightarrow q$ | $\neg p \vee q$ |
+|:-:|:-:|:-:|:-:|
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 1 |
+
+</center>
+
+:::
+::: {.column width="60%"}
+
+Which means, finally, we can **"plug in"** English statements for $p$ and $q$:
+
+* $p$ = «A law mandating segregation is in force in a polity»
+* $q$ = «Segregation emerges in the polity»
+
+And **evaluate** based on $p$ and $q$ (board time!)
+
+:::
+::::
+
+## HW2 Metadata
+
+* On **"Context-Sensitive Fairness"**
+* Releasing tonight!
+* Due **Friday, February 21, 5:59pm EST**
+* Autograder $\rightarrow$ Autohinter!
+
+# Context-Free $\rightarrow$ Context-Sensitive {data-stack-name="Context-Sensitive Fairness"}
+
+## ProPublica vs. Northpointe {.smaller .crunch-title}
+
+* This is... an example with 1000s of books and papers and discussions around it! (A red flag 🚩, since, obsession with one example may conceal much wider range of issues!)
+* But, tldr, Northpointe created a ML algorithm called COMPAS, used by court systems all over the US to predict "risk" of arrestees
+* In 2016, ProPublica published results from an investigative report documenting COMPAS's racial discrimination, in the form of violating **equal error rates** between black and white arrestees
+* Northpointe responded that COMPAS does **not** discriminate, as it satisfies **calibration**
+* People have argued about who is "right" for 8 years, with some progress, but... not a lot
+
+## COMPAS Overview {.smaller}
+
+> When defendants are booked into jail in Broward County, Florida, they are asked to respond to a COMPAS questionnaire with 137 questions, including "Was one of your parents ever sent to jail or prison?," "How many of your friends/acquaintances are taking drugs illegally?," and "How often did you get into fights at school?" Arrestees are also asked to agree or disagree with the statements "A hungry person has the right to steal" and "If people make me angry or I lose my temper, I can be dangerous." Answers are fed into the COMPAS model, which generates an individual risk score that is reported in three buckets: "low risk" (1 to 4), "medium risk"
+(5 to 7), and "high risk" (8 to 10).
+
+## COMPAS Overview {.smaller}
+
+> ProPublica accused COMPAS of racism: "There's
+software used across the country to predict future
+criminals. And it's biased against blacks," read the
+subheading on the article. ProPublica found that COMPAS's error rates---the rate at which the model got it wrong---were unequal across racial groups. COMPAS's predictions were more likely to incorrectly label African Americans as high risk and more likely to incorrectly label white Americans as low risk. "In the criminal justice context," said Julia Angwin, coauthor of the ProPublica article, "false findings can have far-reaching effects on the lives of the people charged with crimes.
+
+## So... What Do We Do? {.smaller .crunch-title .crunch-ul .crunch-blockquote}
+
+* One option: argue about which of the two definitions is "better" for the next 100 years (what is the best way to give food to the poor?)
+
+  > It appears to reveal an unfortunate but inexorable fact about our world: we must choose between two intuitively appealing ways to understand fairness in ML. Many scholars have done just that, defending either ProPublica's or Northpointe’s definitions against what they see as the misguided alternative. [@simons_algorithms_2023]
+
+* Another option: study and then work to ameliorate the social conditions which **force us into** this realm of mathematical impossibility (why do the poor have no food?)
+
+  > The impossibility result is about much more than math. [It occurs because] the underlying outcome is distributed unevenly in society. This is a fact about society, not mathematics, and requires engaging with a complex, checkered history of systemic racism in the US. Predicting an outcome whose distribution is shaped by this history requires tradeoffs because the inequalities and injustices are encoded in data---in this case, because America has criminalized Blackness for as long as America has existed.
+
+## Why Not Both?? {.smaller .crunch-title .crunch-ul .title-12 .crunch-li-10}
+
+* On the one hand: yes, both! On the other hand: <a hrf='https://en.wikipedia.org/wiki/Argument_to_moderation' target='_blank'>fallacy of the "middle ground"</a>
+* We're back at **descriptive vs. normative**:
+  * **Descriptively**, given 100 values $v_1, \ldots, v_{100}$, their **mean** may be a good way to summarize, if we have to choose a single number
+  * But, **normatively**, imagine that these are **opinions** that people hold about fairness.
+  * Now, if it's the US South in 1860 and $v_i$ represents person $i$'s approval of slavery, from a sample of 100 people, then approx. 97 of the $v_i$'s are "does not disapprove" [@rousey_friends_2001] --- in this case, normatively, is the mean $0.97$ the "correct" answer?
+* We have another case where, like the "grass is green" vs. "grass ought to be green" example, we cannot just "import" our logical/mathematical tools from the former to solve the latter! (However: this does **not** mean they are **useless**! This is the fallacy of the **excluded middle**, sort of the opposite of the fallacy of the middle ground)
+* This is why we have **ethical frameworks** in the first place! Going back to **Rawls**: "97% of Americans think black people shouldn't have rights" &nbsp;$\nimplies$"black people shouldn't have rights", since rights are a **primary good**
+
+# Bringing in *Context*
+
+## Motivation: Linguistic Meaning
+
+::: {.callout-note icon="false" title="<i class='bi bi-info-circle pe-1'></i> The Distributional Hypothesis [@firth_selected_1968, 179]"}
+
+**You shall know a word by the company it keeps!**
+
+:::
+
+* Related to Chomsky's **context-free** vs. **context-sensitive** distinction!
+* But why is it relevant to DSAN 5450?...
+
+## The "Meaning" of Fairness
+
+::: {.callout-note icon="false" title="<i class='bi bi-info-circle pe-1'></i> The Distributional [Fairness] Hypothesis"}
+
+**You shall know "fairness" by the company it keeps [i.e., the context it incorporates].**
+
+:::
+
+* Context-free (confusion-matrix-based) fairness: "plug the confusion matrix values into a formula and see if the formula is satisfied"
+* Context-sensitive fairness: analyze fairness **relative to** a set of **antecedents** regarding how **normative concerns** should enter into our measurements of fairness
+
+# Similarity-Based Fairness {data-stack-name="Similarity-Based Fairness"}
+
+## Group Fairness $\rightarrow$ Individual Fairness {.title-09}
+
+* The crucial insight of Dwork: **group-level** fairness does not ensure that **individuals** are treated fairly **as individuals**
+* Exactly the issue we've seen with **utilitarianism**: optimizing **society-level** "happiness" may lead to **individuals** being brutally mistreated (e.g., having their rights violated)
+* So, at a high level, Dwork's proposal could provide a Rawls-style **ordering**: individual fairness **lexically prior** to group-level fairness (optimize group-level fairness once individual-level is satisfied)
+
+## The (Normative!) Antecedent {.crunch-title .crunch-ul .crunch-callout .crunch-blockquote .crunch-quarto-layout-panel}
+
+::: {.callout-note icon="false" title="Fairness Through Awareness [@dwork_fairness_2011]"}
+
+**Individuals who are similar with respect to a task should be classified similarly.**
+
+:::
+
+::: {layout="[1,1]"}
+::: {#awareness-left}
+
+* Not well-liked in industry / policy because you can't just "plug in" results of your classifier and get True/False "we satisfied fairness!" ...But this is **exactly the point!**
+
+:::
+::: {#awareness-right}
+
+![From @kiat_machines_2018](images/manymetrics.png){fig-align="center" width="340"}
+
+:::
+:::
+
+## Bringing In Context
+
+* *In itself, the principle of equal treatment is abstract, a formal relationship that **lacks
+substantive content**"*
+* *The principle must be given content by defining which cases are similar and which are different, and by considering what kinds of differences **justify differential treatment***
+* *Deciding what differences are relevant, and what kinds of differential treatment are justified by particular differences, requires **wrestling with moral and political debates** about the responsibilities of different institutions to address persistent injustice* [@simons_algorithms_2023, 51]
+
+## Remember Distance Metrics?(!) {.crunch-title .crunch-quarto-layout-panel .crunch-ul .text-90 .crunch-li-8 .crunch-quarto-figure}
+
+::: {layout="[1,1]"}
+::: {#distance-left}
+
+* A core element in **both** similarity-based and causal fairness!
+* Already difficult to choose a metric on **pragmatic** grounds (ambulance needs to get to hospital)
+* Now people will also have **fundamental normative disagreements** about what should and should not **determine difference**
+
+:::
+::: {#distance-right}
+
+![From @shahid_comparison_2009](images/medical_distances.jpg){fig-align="center" width="380"}
+
+:::
+:::
+
+## Satisfying Individual vs. Group Fairness {.smaller .crunch-title .title-09}
+
+* An algorithm is **individually fair** if, for
+all individuals $x$ and $y$, we have
+
+  $$
+  \textsf{dist}(r(x), r(y)) \leq \textsf{dist}(x, y)
+  $$
+
+  $\implies$ an advertising system must show similar sets of ads to similar users.
+
+* It achieves **group fairness-through-parity** for two groups of users $S$ and $T$ when:
+
+  $$
+  \textsf{dist}(\mathbb{E}_{s \in S}[r(s)], \mathbb{E}_{t \in T}[r(t)]) \leq \varepsilon
+  $$
+
+  where $\mathbb{E}_{s \in S}$ and $\mathbb{E}_{t \in T}$ denote the expectation of ads seen by an individual chosen uniformly among $S$ and $T$. This definition implies that the difference in probability between two groups of seeing a particular ad will be bounded by $\varepsilon$.
+
+* Given these definitions: Individual fairness&nbsp; $\nimplies$ group fairness, and vice versa! [@riederer_price_2017]
+
+## The Importance of *Not* Excluding Race! {.crunch-title .title-08}
+
+* On HW2 you will see how, on the one hand: **excluding** race from the similarity metric ensures **race-blind fairness**
+* But, on the other hand: race-blind fairness can not only **maintain** but also **amplify** preexisting inequalities
+* By **including race** in our similarity metric, we can explicitly take this into account!
+* Ex: someone with a (morally irrelevant) disadvantage due to **birth lottery** who achieves an SAT score of 1400 is **similar to** someone with a (morally irrelevant) advantage due to birth lottery who achieves an SAT score of 1500
+
+## Equality of Opportunity {.crunch-title .crunch-ul .crunch-quarto-layout-panel .smaller}
+
+::: {layout="[1,1]"}
+::: {#roemer-left}
+
+* This notion (last bullet of the previous slide) is **contentious**, to say the least
+* But also, crucially: our job is not to **decide the similarity metric unilaterally**!
+* The **equality of opportunity** approach is **not itself a similarity metric!**
+* It is a **"meta-algorithm"** for **translating** normative positions (consequents of an ethical framework) into **concrete fairness constraints** that you can then impose on ML algorithms
+
+:::
+::: {#roemer-right}
+
+![@roemer_equality_1998](images/roemer-equality.jpg){fig-align="center" width="340"}
+
+:::
+:::
+
+## Roemer's Algorithm {.smaller .crunch-title .crunch-li-10}
+
+* Equality of Opportunity algorithm boils down to (Input 0 = data on individuals $X_i$):
+* *Input 1 (!)*: Attributes $J_{\text{advantage}} \subseteq X_i$ that a society (real or hypothetical) considers **normatively relevant** for an outcome, but that people are not **individually responsible** for (e.g., race or nationality via birth lottery)
+* *Input 2*: Attributes $J_{\text{merit}} \subseteq X_i$ that a society considers people **individually responsible** for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)
+* <i class='bi bi-1-circle'></i>: Set of individuals in society $S$ is **partitioned** into subsets $S_i$, where $i$ is some combination of particular **values** for the attributes in $X_{\text{advantage}}$
+* <i class='bi bi-2-circle'></i>: Individuals' **context-sensitive scores** are computed **relative to their group** $S_i$, as **percentile** of their $X_{\text{merit}}$ value relative to **distribution** of $X_{\text{merit}}$ values across $S_i$
+* *Outcome*: Now that we have **incorporated social context**, by converting the original **context-free units** (e.g., numeric SAT score) into **context-sensitive units** (percentile of numeric SAT score within distribution of comparable individuals), we can compare people **across groups** on the basis of **context-sensitive** scores!
+
+## An Overly-Simplistic Example (More on HW2!) {.crunch-title .inline-90}
+
+* $\mathbf{x}_i = (x_{i,1}, x_{i,2}, x_{i,3}) = (\texttt{wealth}_i, \texttt{study\_hrs}_i, \texttt{SAT}_i)$
+* $J_{\text{advantage}} = (1) = (\texttt{wealth})$, $J_{\text{merit}} = (2) = (\texttt{study\_hrs})$
+* $\Rightarrow \texttt{study\_hrs} \rightarrow \texttt{SAT}$ a "fair" pathway
+* $\Rightarrow \texttt{wealth} \rightarrow \texttt{SAT}$ an "unfair" pathway
+* $\Rightarrow$ School admission decisions "fair" to the extent that they capture the **direct effect** $\texttt{study\_hrs} \rightarrow \texttt{SAT} \rightarrow \texttt{admit}$, but aren't affected by **indirect effect** $\texttt{wealth} \rightarrow \texttt{SAT} \rightarrow \texttt{admit}$
+
+## At a Macro Level! {.smaller}
+
+![](images/roemer.svg){fig-align="center"}
+
+# Causal Fairness {data-stack-name="Causal Fairness"}
+
+## The State of the Art! {.crunch-title}
+
+* Current state of fairness in AI: measures which explicitly model **causal connections** between variables of interest are most promising for **robust** notions of fairness
+* Robust in the sense of:
+  * Being **normatively desirable** (as in, matching the key tenets of our ethical frameworks) while also being
+  * **Descriptively tractable** (as in, concretely implementable in math/code, and transparent enough to allow us to *evaluate* and *update* these implementations, using a process like *reflective equilibrium*).
+
+## The Antecedent
+
+* Since it's impossible to **eliminate** information about sensitive attributes like race/gender/etc. from our ML algorithms...
+* Fairness should instead be defined on the basis of **how this sensitive information "flows" through the causal chain of decisions** which lead to an given (observed) outcome
+
+## The New Object of Analysis: *Causal Pathways* {.crunch-title .crunch-ul .title-09}
+
+* Once we have a **model** of the **causal connections** among:
+  * Variables that we care about socially/normatively, and
+  * Variables used by a Machine Learning algorithm,
+* We can then use techniques developed by statisticians who study **causal inference** to
+* **Block** certain "causal pathways" that we deem normatively unjustifiable while **allowing** other pathways that we deem to be normatively justifiable.
+
+## Causal Fairness in HW2 {.crunch-title .inline-80}
+
+* Intuition required to make the jump from **correlational** approach (from statistics and probability generally, and DSAN 5100 specifically!) to **causal** approach!
+* Causal approach **builds on** correlational, but...
+* **Stricter, directional standard** for $X \rightarrow Y$
+* Easy cases: find high **correlation** $|\text{corr}(X,Y)|$, embed in a **causal diagram**, evaluate $\Pr(Y \mid \text{do}(X)) \overset{?}{>} \Pr(Y \mid \neg\text{do}(X))$
+* Hard cases: can have $\Pr(Y \mid \text{do}(X)) \overset{?}{>} \Pr(Y \mid \neg\text{do}(X))$ even when $\text{corr}(X,Y) = 0$ 😰 (dw, we'll get there!)
+
+## Causal Building Blocks {.crunch-ul .crunch-ul .text-90}
+
+* DSAN 5100 precedent: nodes in the network $X$, $Y$ are **Random Variables**, connections $X \leftrightarrow Y$ are **joint distributions** $\Pr(X, Y)$
+* **Directional** edges $X \rightarrow Y$, then, just represent **conditional** distributions: $X \rightarrow Y$ is $\Pr(Y \mid X)$
+* Where we're going: connections $X \leftrightarrow Y$ represent **unknown but extant causal connections** between $X$ and $Y$, while $X \rightarrow Y$ represents a **causal relationship** between $X$ and $Y$
+* Specifically, $X \rightarrow Y$ now means: **an intervention that changes the value of $X$** by $\varepsilon$ **causes a change in the value of $Y$** by $f(\varepsilon)$
+
+## The Intuitive Problem of Causal Inference {.title-08 .crunch-title .cols-va}
+
+::: columns
+::: {.column width="60%"}
+
+```{r}
+#| label: ski-revenue-lawyers
+#| fig-align: center
+#| fig-height: 8
+library(dplyr)
+library(ggplot2)
+ga_lawyers <- c(21362, 22254, 23134, 23698, 24367, 24930, 25632, 26459, 27227, 27457)
+ski_df <- tibble::tribble(
+  ~year, ~varname, ~value,
+  2000, "ski_revenue", 1551,
+  2001, "ski_revenue", 1635,
+  2002, "ski_revenue", 1801,
+  2003, "ski_revenue", 1827,
+  2004, "ski_revenue", 1956,
+  2005, "ski_revenue", 1989,
+  2006, "ski_revenue", 2178,
+  2007, "ski_revenue", 2257,
+  2008, "ski_revenue", 2476,
+  2009, "ski_revenue", 2438,
+)
+ski_mean <- mean(ski_df$value)
+ski_sd <- sd(ski_df$value)
+ski_df <- ski_df %>% mutate(val_scaled = 12*value, val_norm = (value - ski_mean)/ski_sd)
+law_df <- tibble::tibble(year=2000:2009, varname="ga_lawyers", value=ga_lawyers)
+law_mean <- mean(law_df$value)
+law_sd <- sd(law_df$value)
+law_df <- law_df %>% mutate(val_norm = (value - law_mean)/law_sd)
+spur_df <- dplyr::bind_rows(ski_df, law_df)
+ggplot(spur_df, aes(x=year, y=val_norm, color=factor(varname, labels = c("Ski Revenue","Lawyers in Georgia")))) +
+  stat_smooth(method="loess", se=FALSE) +
+  geom_point(size=g_pointsize/1.5) +
+  labs(
+    fill="",
+    title="Ski Revenue vs. Georgia Lawyers",
+    x="Year",
+    color="Correlation: 99.2%",
+    linetype=NULL
+  ) +
+  theme_dsan() +
+  scale_x_continuous(
+    breaks=seq(from=2000, to=2014, by=2)
+  ) +
+  #scale_y_continuous(
+  #  name="Total Revenue, Ski Facilities (Million USD)",
+  #  sec.axis = sec_axis(~ . * law_sd + law_mean, name = "Number of Lawyers in Georgia")
+  #) +
+  scale_y_continuous(breaks = -1:1,
+    labels = ~ . * round(ski_sd,1) + round(ski_mean,1),
+    name="Total Revenue, Ski Facilities (Million USD)",
+    sec.axis = sec_axis(~ . * law_sd + law_mean, name = "Number of Lawyers in Georgia")) +
+  expand_limits(x=2010) +
+  #geom_hline(aes(yintercept=x, color="Mean Values"), as.data.frame(list(x=0)), linewidth=0.75, alpha=1.0, show.legend = TRUE) +
+  scale_color_manual(
+    breaks=c('Ski Revenue', 'Lawyers in Georgia'),
+    values=c('Ski Revenue'=cbPalette[1], 'Lawyers in Georgia'=cbPalette[2])
+  )
+```
+
+:::
+::: {.column width="40%"}
+
+```{r,echo=TRUE}
+cor(ski_df$value, law_df$value)
+```
+
+::: {style="font-size: 50% !important;"}
+(Data from <a href='http://web.archive.org/web/20191006000802/http://tylervigen.com/view_correlation?id=29272' target='_blank'>Spurious Correlations</a>, Tyler Vigen)
+:::
+
+:::
+:::
+
+## The *Fundamental* Problem of Causal Inference {.crunch-title .crunch-ul .crunch-callout .title-07}
+
+The only workable definition of "$X$ causes $Y$":
+
+::: {.callout-note icon="false" title="<i class='bi bi-info-circle pe-1'></i> Defining Causality"}
+
+$X$ causes $Y$ if and only if:
+
+1. *X* temporally precedes $Y$ and
+2. *In two worlds $W_0$ and $W_1$ where everything is exactly the same **except that** $X = 0$ in $W_0$ and $X = 1$ in $W_1$, $Y = 0$ in $W_0$ and $Y = 1$ in $W_1$* [@hume_treatise_1739]
+
+:::
+
+* The problem? We live in **one** world, not two simultaneous worlds 😭
+
+## What Is To Be Done?
+
+![](images/face_everything_and_rise.jpg){fig-align="center"}
+
+## Face Everything And Rise: Controlled, Randomized Experiment Paradigm
+
+* Find good comparison cases: **Treatment** and **Control**
+* Without a control group, you cannot make inferences!
+* *Selecting on the dependent variable...*
+
+## Selecting on the Dependent Variable {.smaller}
+
+![<a href='https://www.pbs.org/newshour/show/what-research-says-about-identifying-people-who-might-commit-mass-shootings' target='_blank'>What """research""" """says""" about identifying people who might commit mass shootings</a>](images/school-shootings.jpeg){fig-align="center"}
+
+* Jeff's rant: If you care about actually solving social issues, this should **infuriate you**
+
+## Complications: Selection
+
+* Tldr: Why did this person (unit) end up in the treatment group? Why did this other person (unit) end up in the control group?
+* Are there systematic differences?
+* Vietnam/Indochina Draft: Why can't we just study [men who join the military] versus [men who don't], and take the difference as a causal estimate?
+
+## Complications: Compliance {.crunch-title}
+
+* We want people assigned to treatment to take the treatment, and people assigned to control to take the control
+* "Compliance": degree to which this is true in experiment
+  * High compliance = most people actually took what they were assigned
+  * Low compliance = lots of people who were assigned to treatment actually took control, and vice-versa
+* What problems might exist w.r.t compliance in the Draft?
+
+## Next Week and HW2: Experimental $\rightarrow$ Observational Data {.crunch-title .title-09}
+
+* In observational studies, researchers have no control over assignment to treatment/control 😨
+* On the one hand... Forget Everything And Run [to randomized, controlled experiments], if you can.
+* On the other hand... statisticians over the last 4 centuries have developed fancy causal inference tools/techniques to help us Face Everything And Rise 🧐
+
+## For Now: *Matching* {.crunch-title}
+
+* In a **randomized, controlled experiment**, we can **ensure** (since we have control over the **assignment mechanism**) that the **only systematic difference** between $C$ and $T$ is that $T$ received the treatment and $C$ did not
+* In an **observational study**, we "show up too late"!
+* Thus, we no longer refer to **assignment** but to **selection**
+* And, our job is to **figure out** (reverse engineer!) the **selection mechanism**, then **correct for its non-randomness**: basically, we "transform" from observational to experimental setting through **weighting** (👀 W02)
+
+## References
+
+::: {#refs}
+:::
+
+

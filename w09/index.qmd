@@ -1,0 +1,324 @@
+---
+title: "Week 9: From Data Ethics to Data Policy"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2025, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
+bibliography: "../_DSAN5450.bib"
+date: 2025-03-19
+date-format: full
+lecnum: 9
+categories:
+  - "Class Sessions"
+format:
+  revealjs:
+    df-print: kable
+    footer: "DSAN 5450 Week 9: {{< var w09.footer >}}"
+    output-file: "slides.html"
+    html-math-method: mathjax
+    theme: [default, "../dsan-globals/jjquarto.scss"]
+    scrollable: true
+    slide-number: true
+    link-external-icon: true
+    link-external-newwindow: true
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css'>"
+    simplemenu:
+      flat: true
+      barhtml:
+        header: "<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>"
+      scale: 0.5
+    revealjs-plugins:
+      - simplemenu
+  html:
+    df-print: kable
+    css: "../dsan-globals/jjstyles.css"
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
+
+# Schedule {.smaller data-stack-name="Schedule / Recap"}
+
+Today's Planned Schedule:
+
+| | Start | End | Topic |
+|:- |:- |:- |:- |
+| **Lecture** | 3:30pm | 3:45pm | [Final Projects &rarr;]() |
+| | 3:45pm | 4:15pm | [Extended Recap &rarr;](#recap-1-privacy-policies-take-a-long-time-to-read) | 
+| | 4:15pm | 4:50pm | [Contractual Power &rarr;](#contracts-through-a-game-theoretic-lens-mechanism-design) |
+| **Break!** | 4:50pm | 5:10pm | |
+| | 5:10pm | 6:00pm | [The Power of Mechanism Design &rarr;]() |
+
+: {tbl-colwidths="[12,12,12,64]"}
+
+::: {.hidden}
+
+{{< include ../dsan-globals/_globals-tex.qmd >}}
+
+:::
+
+## Final Project Tings {.smaller}
+
+{{< video https://www.youtube.com/watch?v=mBgMVh4ub-E width="100%" height="500" >}}
+
+## Project Management Tings {.smaller}
+
+| Ting | Pros | Cons | Verdict |
+| - | - | - | - |
+| [TasksBoard](https://tasksboard.com/app) | Integrated with Google Workspace (`@georgetown.edu` emails) | Free version useless (no share) | ❌ |
+| [Jira](https://dsan.atlassian.net/jira/) | Maybe most popular? | 30-day free trial | ❌ |
+| [Trello](https://trello.com/) | Simpler than Jira (both owned by Atlassian) | 14-day free trial | ❌ |
+| [Airtable](https://airtable.com/) | Jeff uses this every day | .edu plan doesn't include free users | ❌ |
+| [Notion](https://www.notion.so/) | Jeff uses this v often, .edu plan has hackish way to include users for free | Force yall to sign up for new ting | ✅ |
+
+<center>
+
+👉 [**Notion: Example 5450 Project**](https://jjacobs.notion.site/5450-template) 👈
+
+</center>
+
+## Recap 0: Descriptive vs. Normative {.crunch-title .crunch-ul .smaller .crunch-blockquote}
+
+* Much of **Part 1** has been adjusting to weirdness of **normative** reasoning
+* Descriptive reasoning looks like [Rules of math $\implies \theta^* = 2.5$], but [rules of math] part isn't mentioned bc extraneous
+  * (Even if it was mentioned, intersubjective agreement not so hard, very few people fighting wars over *"we should denote repeated addition with $\otimes$ not $\times$!"*)
+* Normative reasoning looks like [Antecedent A $\implies$ Answer 1 but Antecedent B $\implies$ Answer 2], and people **do** fight wars over A vs. B (implicitly or explicitly)
+* **Part 2**: **Rapid cycling back and forth between normative and descriptive!**
+* One new aspect: "**Descriptive** Ethics" (How *do* people act, not how *should* people act) $\leadsto$ Study of Power
+  
+  > [What is] right, as the world goes, is only in question between **equals in power**; otherwise, the strong do as they please and the weak suffer what they must. [@thucydides2013war c. 411 BC]
+
+## Recap 1: Privacy Policies Take a Long Time to Read! {.crunch-title .title-09 .smaller .nostretch}
+
+![](images/terms_of_service_info.jpg){fig-align="center"}
+
+## Recap 2: *Reading* Privacy Policies $\neq$ *Understanding* Privacy Policies! {.smaller .crunch-title .crunch-ul .title-11}
+
+* Reading vs. understanding **implications** / **contingencies** / **ambiguities**...
+* NLP *could* (and *should!*) be helpful (*"making privacy policies **machine readable** [...] would help users match **privacy preferences** against **policies** offered by web services"*), but mostly just reveals how bad the problem is:
+
+![Figure 15 from @wagner_privacy_2023. "Obfuscatory words" are words like *acceptable*, *significant*, *mainly*, or *predominantly*, interpretated at the discretion of companies rather than users (see next slide!)](images/wagner_fig.svg){fig-align="center"}
+
+## The Adversarial-Sisyphusian Problem of Contracts {.crunch-title .title-07 .crunch-ul .crunch-li-8 .text-90}
+
+* Recall Intuitive Problem of Causal Inference: Correlation $\nimplies$ Causation, **but** can do a bunch of work to overcome
+* Adversarial-Sisyphusian Problem is **one level worse** 😱
+  * IPCI: You vs. discovered correlation (inanimate)
+  * ASPC: You vs. companies investing **resources** 💰 into making the problem **harder and harder for you**
+* The moment you ($N=1$, \$) finally find and "fix" bad thing, company ($N \gg 1$, \$\$\$) adds more ambiguity to re-enable / sends your data to "new" 3rd-party processor 🥸
+* Analogy would be: someone making causal chains longer and longer as you're checking causality (map of dancing landscape)
+
+## *No Logo* / Why Johnny Can't Dissent {.crunch-title .crunch-ul .crunch-blockquote .title-08}
+
+* Naomi Klein's *No Logo* (1999) sparked a nationwide boycott of companies employing sweatshop labor
+* Great success; all companies responded and (out of the kindness of their hearts) cut ties with all of the sweatshops
+* Instead, they established ties with supply chain management companies, who made the profit-maximizing decision to re-establish ties with all of the sweatshops
+
+> "You can't outrun them, or even stay ahead of them for very long: it's their racetrack, and that's them waiting at the finish line to congratulate you" [@frank_dark_1994]
+
+## Conclusion {.smaller .crunch-title .crunch-quarto-figure .cols-va}
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![](images/my_life_dont_mean_shit.jpg){fig-align="center"}
+
+:::
+::: {.column width="50%"}
+
+![](images/free_iphone7.jpg){fig-align="center"}
+
+:::
+::::
+
+## Real Conclusion(?)
+
+![](images/jensen.jpg){fig-align="center"}
+
+
+## Wars with One Side {.smaller .crunch-title .crunch-blockquote .cols-va}
+
+:::: {.columns}
+::: {.column width="65%"}
+
+> It would be ideal except for the Porto Ricans [sic]. They are beyond doubt the dirtiest, laziest, most degenerate and thievish race of men ever inhabiting this sphere. It makes you sick to inhabit the same island with them. They are even lower than Italians. What the island needs is not public health work but a tidal wave or something to totally exterminate the population. It might then be livable. I have done my best to further the process of extermination by killing off 8 and transplanting cancer into several more. ([Cornelius Rhoads](https://en.wikipedia.org/wiki/Cornelius_P._Rhoads))
+
+> By 1930, the police had files on at least 135,000 individuals (about 3 percent of the island) suspected of favoring independence. ([Source](https://aperture.org/editorial/what-christopher-gregory-rivera-discovered-in-puerto-ricos-state-secrets/))
+
+:::
+::: {.column width="35%"}
+
+![](images/rhoads.jpg){fig-align="center"}
+
+:::
+::::
+
+## Wars with One Side? {.crunch-title .crunch-quarto-figure}
+
+![Georgetown Law School Center on Privacy and Technology, [*American Dragnet: Data-Driven Deportation in the 21st Century*](https://americandragnet.org/)](images/ice_dragnet.png){fig-align="center"}
+
+# Contracts Through a Game-Theoretic Lens: Mechanism Design {data-stack-name="Mechanism Design"}
+
+## The Fundamental Problem of Contracts {.crunch-title .crunch-ul .title-08}
+
+* Just as we can't observe **two simultaneous worlds** $W_{X = 0}$ and $W_{X = 1}$ which differ only in the value of $X$,
+* We can't **foresee all possible contingencies** that need to be included in a **contract**
+  * (We can try, though! Hence use of obfuscatory words to **minimize liability**)
+* So, when a situation arises which is not covered by a clause in the contract, what happens? What principle determines **whose interpretation wins out**?
+  * (*Hint*: It is actually literally my legal middle name...)
+
+## ...POWER! {.crunch-title}
+
+* Examples from employment contracts (tooting own horn):
+* In a private, cooperatively-owned, democratic firm, outcome determined by *conversation*, *majority vote*, *unanimity*, etc.
+  * These technically exist in the US! Employing <a href='https://resources.uwcc.wisc.edu/Research/REIC_FINAL.pdf' target='_blank'>2,380 workers</a>, $\frac{2380}{127509000} \approx 0.0019\%$ of US workforce
+* Otherwise, in a non-unionized private firm (94% of total), the outcome is determined by *organizational hierarchy*
+  * This is the case for $\frac{125000000}{127509000} \approx 98.03\%$ of <a href='https://fred.stlouisfed.org/series/USPRIV' target='_blank'>US workforce</a>
+
+## Descriptive and Normative Considerations {.crunch-title .title-08 .crunch-ul .crunch-blockquote .text-90}
+
+> The combined effect of **incomplete contracts** and **conflicts of interest** is that the determination of outcomes depends on who exercises **power** in the transaction.
+> 
+> Power is generally exercised by those who hold the residual rights of control, meaning **the right to determine what is not specified contractually** [@bowles2009microeconomics]
+
+* [Step 1: Empirically measurable given antecedents] **Who has power** w.r.t. a given incomplete contract?
+* [Step 2: Up to you and your ethical axioms; e.g., efficiency] **Who ought to have power** w.r.t. incomplete contracts?
+
+## Working Definition of Power
+
+::: {style="display: flex; justify-content: center; align-items: center; height: 80%;"}
+::: {.callout-note icon="false" title="<i class='bi bi-info-circle pe-1'></i> Defining (Dyadic) Power [@bowles_power_1992, 326-327]"}
+
+For agent $A$ to have power over agent $B$ it is sufficient that, by imposing or threatening to impose sanctions on $B$, $A$ is capable of affecting $B$'s actions in ways that further $A$'s interests, while $B$ lacks this capacity with respect to $A$.
+
+:::
+:::
+
+# Mechanism Design
+
+* Prisoner's Dilemma
+* Assurance Game
+* Invisible Hand Game
+* Mechanism Design = **Creating** incentives to **push** existing game from one form to another!
+* *Second Price Auctions...*
+
+## Prisoners' Dilemma
+
+```{=html}
+<table class='game-table'>
+<thead>
+</thead>
+<tbody>
+<tr>
+  <td class='game-label'></td>
+  <td class='game-label'></td>
+  <td colspan="2" align="center" class='game-label'><span data-qmd="$B$"></span></td>
+</tr>
+<tr>
+  <td class='game-label'></td>
+  <td class='game-label'></td>
+  <td class='game-label'>Silent</td>
+  <td class='game-label'>Snitch</td>
+</tr>
+<tr>
+  <td rowspan="2" style="vertical-align: middle;" class='game-label no-bottom-border'><span data-qmd="$A$"></span></td>
+  <td class='game-label'>Silent</td>
+  <td class='game-cell'><span data-qmd="$-1,-1$"></span></td>
+  <td class='game-cell'><span data-qmd="$-3,\phantom{-}0$"></span></td>
+</tr>
+<tr>
+  <td class='game-label'>Snitch</td>
+  <td class='game-cell'><span data-qmd="$\phantom{-}0, -3$"></span></td>
+  <td class='game-cell'><span data-qmd="$-10,-10$"></span></td>
+</tr>
+</tbody>
+</table>
+```
+
+## Assurance Game {.crunch-title .crunch-ul .crunch-blockquote}
+
+[Palanpur](https://en.wikipedia.org/wiki/Palanpur), Gujarat, India
+
+> *The farmers do not doubt that earlier planting would give them larger harvests, but no one, the farmer explained, is willing to be the **first to plant**, as the seeds on any lone plot would be quickly **eaten by birds**...*
+> 
+> *[What if you all organized to plant on the same day, to reap rewards of earlier planting while minimizing bird losses (dividing by $N$ instead of $1$)?]*
+> 
+> *"If we knew how to do that", he said, looking up from his hoe at me, "we would not be poor."* [@bowles2009microeconomics]
+
+## Assurance Game in Normal Form
+
+```{=html}
+<table class='game-table'>
+<thead>
+</thead>
+<tbody>
+<tr>
+  <td class='game-label' align='center'></td>
+  <td class='game-label' align='center'></td>
+  <td colspan="2" align="center" class='game-label'><span data-qmd="$B$"></span></td>
+</tr>
+<tr>
+  <td class='game-label'></td>
+  <td class='game-label'></td>
+  <td class='game-label'>Early</td>
+  <td class='game-label'>Late</td>
+</tr>
+<tr>
+  <td rowspan="2" style="vertical-align: middle;" class='game-label td-no-bottom'><span data-qmd="$A$"></span></td>
+  <td class='game-label'>Early</td>
+  <td class='game-cell'><span data-qmd="$4, 4$"></span></td>
+  <td class='game-cell'><span data-qmd="$0, 3$"></span></td>
+</tr>
+<tr>
+  <td class='game-label'>Late</td>
+  <td class='game-cell'><span data-qmd="$3, 0$"></span></td>
+  <td class='game-cell'><span data-qmd="$2, 2$"></span></td>
+</tr>
+</tbody>
+</table>
+```
+
+## Invisible Hand Game (Normal Form)
+
+```{=html}
+<table class='game-table'>
+<thead>
+</thead>
+<tbody>
+<tr>
+  <td class='game-label'></td>
+  <td class='game-label'></td>
+  <td colspan="2" align="center" class='game-label'><span data-qmd="$B$"></span></td>
+</tr>
+<tr>
+  <td class='game-label'></td>
+  <td class='game-label'></td>
+  <td class='game-label' align='center'>Corn</td>
+  <td class='game-label' align='center'>Tomatoes</td>
+</tr>
+<tr>
+  <td rowspan="2" style="vertical-align: middle;" class='game-label no-bottom-border'><span data-qmd="$A$"></span></td>
+  <td class='game-label'>Corn</td>
+  <td class='game-cell'><span data-qmd="$2, 4$"></span></td>
+  <td class='game-cell'><span data-qmd="$4, 3$"></span></td>
+</tr>
+<tr>
+  <td class='game-label'>Tomatoes</td>
+  <td class='game-cell'><span data-qmd="$5, 5$"></span></td>
+  <td class='game-cell'><span data-qmd="$3, 2$"></span></td>
+</tr>
+</tbody>
+</table>
+```
+
+## References
+
+::: {#refs}
+:::

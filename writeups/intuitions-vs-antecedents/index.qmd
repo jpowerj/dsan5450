@@ -1,0 +1,156 @@
+---
+title: "From Intuitions to Antecedents"
+author: "Jeff Jacobs"
+sidebar: mainnav
+date: 2025-02-28
+bibliography: "../../_DSAN5450.bib"
+relevance: "HW1"
+categories:
+  - "Extra Writeups"
+format:
+  html:
+    cache: true
+    df-print: kable
+    html-math-method: mathjax
+    toc: true
+    link-external-newwindow: true
+    link-external-icon: true
+    echo: true
+    code-fold: show
+---
+
+## Spring Break Intermission: Pedagogical Principles
+
+If I've lived up to my teaching principles over the first seven weeks of the course, then my hope is that you've experienced it as more of a "choose your own adventure" course than, for example (to make a *fair comparison* with a different course I'm teaching this semester) DSAN 5300, where there is essentially a single "pathway" from the beginning to the end of the course^[In that case, that pathway is determined by the structure of the chapters in [ISLR](https://www.statlearning.com/)!]
+
+As a part of that, I try my best to utilize assignments/grades/exams mainly as a "feedback mechanism" for learning, to foster a [growth mindset](https://teachingcommons.stanford.edu/teaching-guides/foundations-course-design/learning-activities/growth-mindset-and-enhanced-learning) in all of you: to encourage you in your own adventure-choosing, rather than to shove a particular vision of "Data Ethics and Policy" on you and then punish you if you don't internalize it.
+
+"Growth mindset" is a [new-ish term](https://en.wikipedia.org/wiki/Carol_Dweck#Mindset_work), but the idea itself goes back longer, and to me the core of it was really captured by an educational philosopher/reformer named Maria Montessori---to cut off this rant here and get to the main content, I will just include the "Pedagogical Principles" slide from when I taught PPOL 6805 (the GIS class), a slide that I also should have included in W01 of this class!
+
+::: {.callout-note title="Pedagogical Principles"}
+
+1.  There's literally no such thing as ["intelligence"](http://bactra.org/weblog/523.html)
+2.  Anyone is capable of learning anything (neural plasticity)
+3.  Growth mindset: "I can't do this" $\leadsto$ "I can't do this yet!"
+4.  The point of a class is *learning*: understanding something about the world, either (a) For its own sake (an **end** in itself) or (b) Because it's relevant to something you care about (a **means** to an end)
+    
+> Our teaching should be governed, not by a desire to **make** students learn things, but by the endeavor to keep burning within them that light which is called **curiosity**. [@montessori1916spontaneous]
+
+:::
+
+So, given all that, here I want to take the most common deduction from HW1---the question about Rawls' theory of **rights** as **lexically prior to utility**---and write out why it is so important for us going forward into the policy "half" of the course. Rather than bonking you all on the head with a big stick and saying *"No! Wrong! Option (c) was correct! Go memorize it!"*, I hope instead that this writeup can help in terms of explicitly laying out the steps of reasoning that would lead to option (c)!
+
+## The HW1 Question
+
+The question I'm most concerned about was as follows:
+
+::: {.callout-note title="HW1 Q3.2: Rights and Distributive Justice"}
+
+A group of people is behind the veil of ignorance, debating what **rights** should be enshrined in a constitution:
+
+* They have decided to enshrine a **right to private property** in their constitution, implying that all individuals in the society have a *duty* to avoid **trespassing** on an individual's property without their permission. However...
+* They also want to enshrine the **right to urgent medical care**, implying that the society has a *duty* to provide life-saving resuscitation if an individual has a heart attack, for example.
+
+The debate centers around what ought to happen, if both rights are indeed written into the constitution, in the following scenario:
+
+> *A person $i$ is walking down the (public) sidewalk and suddenly has a heart attack, falling over into person $j$'s (private) front yard. Paramedics arrive quickly on the scene, but $j$ isn't home to grant or deny permission for the paramedics to enter their front yard to provide medical care to $i$.*
+
+Thus the society is deliberating about a third constitutional provision to cover this case, which means choosing an ethical **preference ordering** over the following two possible worlds:
+
+* $W_1$: $j$'s right to private property is given higher priority, so that the paramedics must not violate this right to provide the medical care to $i$
+* $W_2$: $i$'s right to urgent medical care is given higher priority, so that the paramedics must violate $j$'s right to private property and enter the yard to provide the medical care
+
+Under a **Rawlsian** ethical framework, is this a prioritization that the society could determine *a priori* (behind the "veil of ignorance")? Or is Rawls' ethical framework **indeterminate** with regard to this ethical decision? If it is *not* indeterminate, which of the two possible worlds does the Rawlsian system imply should be preferred by a normatively "good" society?
+
+(a) $W_1$ should be preferred
+(b) $W_2$ should be preferred
+(c) Indeterminate
+
+:::
+
+The correct answer here (in an important way!) was **(c) Indeterminate**. However, a good number of folks put **(b) $W_2$ should be preferred**. I spent a while trying to dig into this outlier, and I think even the most basic explanation---that many of yall are extremely busy and just chose the one that sounded intuitively best---gives us a nice and super-relevant "learning moment"!
+
+The reason I hyper-fixate on this one commonly-missed question here is because, starting with [this slide](https://jjacobs.me/dsan5450/w01/slides.html#/what-happens-when-we-confuse-the-two) from Week 1, a key thread running throughout the entire course is the importance of looking at/figuring out **antecedents**, as the only way to "cross the boundary" between your own beliefs and those of others.
+
+## Why Can't We Just Use Our Intuition?
+
+Answering this question is... somewhat difficult in terms of how "meta" it is, so, I genuinely apologize (like I did for the Kant writeup) since I don't know any way to explain it without using some philosophical jargony things 😭
+
+The meta-ness comes from the fact that, if a person $i$ says *"I believe $p$ because $p$ is obviously true"*, and if that predicate $p$ itself is *"I can use my intuitions to derive (moral) truths"*, then... essentially an infinite-loop of self-reinforcing certainty is created. At best, an interlocutor $j$ can only "chip away at" $i$'s' belief-loop, perhaps by e.g. pointing out cases to $i$ where their intuition has failed.^[As a tldr: this "meta-difficulty" is also behind my rant in class about why you should adopt $0.99999$ rather than $1$ as the probability you ascribe to things you think are "certain"! It turns out that this shift-to-$0.99999$ can simultaneously resolve both technical-*mathematical* issues (like trying to use Bayes' Rule to derive posterior distributions from evidence if your prior is $\Pr(E) = 0$) **and** philosophical-*epistemological* issues like the one just described 😎]
+
+But, with enough "chipping", $i$ may be convinced to shift their belief towards something more like a predicate $q$, *"I can use my intuitions, **along with my understanding of other people's antecedents**, to derive moral truths"*, which may then reverberate back to *"I believe $q$ because $q$ 'fits with' the synthesis I've formed between my own intuition and the intuitions of others"*^[(I wouldn't mention this except for the fact that I got to mention it in a recently-peer-reviewed and soon-to-be-released book chapter, woohoo) Since I come from a Computer Science background, I think of this "chipping away" approach as directly analogous to the [EM Algorithm](https://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm) for deriving Maximum Likelihood estimates: we can obtain better estimates of model parameters through a series of "chipping" steps, shuffling back-and-forth from the **E**xpectation-computation step to the likelihood-**M**aximization step. If that makes no sense, please don't worry, and just ignore all that until the chapter comes out :P]
+
+Nonetheless, *my* implicit antecedent in writing this is that this shift is possible... To inject myself into it one last time, for example, one reason why I included that ["My Biases" slide](https://jjacobs.me/dsan5450/w01/slides.html#/my-biases) in W01 is because *childhood Jeff* absolutely would say things like *"I believe $p$ because $p$ is obviously true"*, where $p$ would be things like *"Israel has a right to ['defend itself'](https://asre-nou.net/php/news/Chomsky-Statement.pdf)"*.^[*"The IDF is [the most moral army in the world](https://www.cambridge.org/core/books/abs/ethics-as-a-weapon-of-war/introduction-the-most-moral-army-in-the-world/08316C12F2E1758B5A8CC0E308EB7AAB)"* was another favorite of 13-year-old Jeff---I absolutely would have characterized this as obviously-true "common sense" at that time.]
+
+So, with all that said, the reason why I emphasize "antecedent-tracing" so much (and why (c) being the correct answer is important) is precisely because we need somewhere to "go", data-ethics-and-policy-wise, when the types of conflicts outlined in that question arise in our lives as data scientists!
+
+On the one hand, the scenarios in "new employee [ethics training](https://research.columbia.edu/responsible-and-ethical-conduct-research)" slides, that I called silly in class (bc they are), usually look something like:
+
+* **BillyBob (Boss)**: *Hey, Alice, you should [falsify some data](https://www.science.org/content/article/honesty-researcher-s-lawsuit-against-data-sleuths-dismissed) so we can get published and make millions of dollars!!! I will give you a big 'Employee of the Month' trophy if you do!!!*
+* **Alice (You)**: *Select a proper response in this scenario*
+
+And then you're supposed to click something like *"Report BillyBob to [institutional ethics board]"*, producing the green check and unlocking the "certified ethics master" achievement.
+
+On the other hand, the data-science-career scenarios that I've tried to center in class---which can be more pernicious *because* they are absent from new-employee ethics seminars and thus *don't* necessarily have obvious answers---look more like:
+
+* **BillyBob (Boss)**: Hey, Alice, we need to include """crime""" as a variable in our model, can you go collect data for that?
+* **Alice (You)**: *Decide (a) how to operationalize """crime""", or (b) push back on BillyBob's command on grounds that perhaps we might not want to reify """crime""" in statistical models given ethical issues with how it is measured in available datasets in our current society*
+
+And in *these* kinds of cases, whether you choose (a), (b), or some other option, the data-ethical choice you make (the purpose of this class, hence the name) will be rooted in some notion of **why** it's a "good" choice to make under those circumstances. And the answer to that **why** question is precisely the antecedent:
+
+* If you choose (a), for example, perhaps the option is...
+    * "Good" implicitly in terms of reducing your own [cognitive dissonance](https://pmc.ncbi.nlm.nih.gov/articles/PMC7686841/) (antecedent = reduction of cognitive dissonance should play a role in ethical decisionmaking), or
+    * "Good" explicitly because your boss asks you why you chose some particular operationalization and you are able to respond with your reasoning (antecedent = justifiability and/or satisfying your boss should play a role in ethical decisionmaking)
+* If you choose (b), for example, your boss may ask you to elaborate/explain why you're not carrying out the command, which would bring in the same justifiability/boss-satisfaction antecedent as in the previous bullet point.
+
+Then, under the antecedent that the resolution of conflicts like this in a given workplace is a function of the involved agents' **relative power**^[If this seems like a fuzzy concept right now, we will be going over a formal legal-theory-based definition of "relative power in a workplace" [next week](https://jjacobs.me/dsan5450/w08/)!], your ability to **frame your answer to the "why" question in terms of antecedents that will "click" with those of your boss** will be directly proportional to your "success" in making the "right" decision here!
+
+## How Does the Specifying-Antecedents Approach "Resolve" This Issue?
+
+The increase in likelihood of "success" isn't exactly the end of the story here, though. A more holistic way to summarize the answer to the previous section's question (the question in the title) is:
+
+Although the approach of "we should operationalize crime as $\underline{\hspace{60px}}$ because my intuition says that's best" or "because it's obvious" *is* pretty much exactly how we carry out our day-to-day data-scientific work *subconsciously* (e.g., during long R/Python sessions!), the goal of the [@geertz_interpretation_1973] slide from W01 was to point out how:
+
+* Being conscious of our antecedents will be helpful **descriptively** when we're working with *others* who may ask for justification or may not be convinced by "because it's obvious", and
+* Being conscious of our antecedents will be helpful **normatively** in terms of helping us evaluate the alignment between our day-to-day subconscious choices and our conscious ethical *values*
+
+So, to finally get to the takeaway in terms of Q3.2: it's important to know that Rawls' framework, on its own, does **not** serve as an antecedent for deciding **between** different rights that a society has decided to establish!
+
+Rawls' contribution to ethics, in the broadly-construed way we've talked about ethics in the first half of the course, was primarily to give a "middle-ground solution" to the Problem of Utilitarianism that we discussed (torturing one person to make everyone else happy):
+
+::: {.callout-note title="Rawls as Solution to Utilitarian Torture-One-Person Problem"}
+
+Society adopts Utilitarianism, **except for** a set of Kant-style (deontological) **rules** regarding the **rights of individuals**, which thus serve as **"vetos"** that individuals can use to override Utilitarian decisions.
+
+:::
+
+Rawls, however (importantly!) does **not** provide a framework for (a) **which** specific rules should be adopted as **rights**, or (b) the **prioritization** of certain rights $x$ as "more important than" other rights $y$.
+
+This "hedging" by Rawls is, ultimately, not specific to Rawls but just one example of the ["Paradox of Liberalism"](https://en.wikipedia.org/wiki/Liberalism:_A_Counter-History): if we want a full-on, *concrete* ethical framework---one which actually specifies the **content** of what a person/group/organization should do in a particular case... then we need to add on our own antecedents. For example, an antecedent that would make **(a) $W_1$ should be preferred** correct would be:
+
+> Rawls' theory + *"The right to private property is more important than the right to medical care"*
+
+Whereas an antecedent that would make **(b) $W_2$ should be preferred** correct would be:
+
+> Rawls' theory + *"The right to medical care is more important than the right to private property"*
+
+And thus, one of those two **additional** antecedents would need to be added, as a **third** clause to the constitution being debated, for the question to not be indeterminate!
+
+That's... the best I can do in terms of explaining why Q3.2 is so important, and why we **shouldn't** answer it based on our intuitions, but **should** think about the antecedents that would lead to each of the three answer choices! For anyone still reading, who wants the full-on deeper philosophical/cultural reasons that I can't really do justice to (the more general "crossing the boundary between your own and others' beliefs" from the W01 slide), check out:
+
+* @geertz_interpretation_1973, *The Interpretation of Cultures* (the book pictured in that W01 slide),
+* @skorupski1978meaning, "The Meaning of Another Culture's Beliefs" [Pages 83-106 in [this PDF](https://www.dropbox.com/scl/fi/5vg7wd9c1whaurot29yql/Action-and-Interpretation.pdf?rlkey=m1q8o6lsfaul6gbqyfoabd4pu&dl=1)], and
+* @skinner_visions_2012, "Interpretation, Rationality, and Truth" [Pages 27-56 in [this PDF](https://www.dropbox.com/scl/fi/us4jkczmqkjufexh9jies/Quentin_Skinner-_Visions_of_Politics_Vol_1.pdf?rlkey=cwzwffidtfajpi3n20pzmx095&dl=1)]
+
+
+## Appendix: Extremely Cool Modern Neuroscience-Based Cultural Studies
+
+If you've read to this point (*beyond* even the point at the end of the last section where I tossed a bunch of books at you?!?): You'll notice that the readings in the last section are kind of old and dry and philosophical. *But*, there is (imo) also really exciting research being done in cognitive science/neuroscience labs to **test** the kinds of theories talked about in those philosophy papers:
+
+Basically, they use behavioral experiments and EEG/EKG/MRI data to probe into *what exactly is going on in people's heads when they make [logical or ethical] decisions?* Those studies usually cite @sperber1996explaining as a key "spark" that gave rise to this research program, and it is definitely a mind-blowingly cool book and fun place to start. Then, for an example of a more recent study on this front, see @miton2022cultural (and then check out both of those authors' Google Scholar pages for more!)
+
+## References
+
+::: {#refs}
+:::
+

@@ -1,0 +1,20 @@
+---
+title: "Week 7: In-Class Midterm"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2025, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "<a href='mailto:jj1088@georgetown.edu' target='_blank'>`jj1088@georgetown.edu`</a>"
+bibliography: "../_DSAN5450.bib"
+date: 2025-02-26
+date-format: full
+lecnum: 7
+categories:
+  - "Class Sessions"
+format:
+  html:
+    df-print: kable
+    css: "../dsan-globals/jjstyles.css"
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+The midterm will be posted on <a href='https://classroom.google.com/c/NjU0OTA4OTk2MTQ3?cjc=rbxeuhj' target='_blank'>Google Classroom</a>

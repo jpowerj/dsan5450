@@ -1,0 +1,198 @@
+---
+title: "Week 8: Privacy Policies, Incomplete Contracts, and Power"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2025, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
+bibliography: "../_DSAN5450.bib"
+date: 2025-03-12
+date-format: full
+lecnum: 8
+categories:
+  - "Class Sessions"
+format:
+  revealjs:
+    df-print: kable
+    footer: "DSAN 5450 Week 8: {{< var w08.footer >}}"
+    output-file: "slides.html"
+    html-math-method: mathjax
+    theme: [default, "../dsan-globals/jjquarto.scss"]
+    scrollable: true
+    slide-number: true
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css'>"
+    simplemenu:
+      flat: true
+      barhtml:
+        header: "<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>"
+      scale: 0.5
+    revealjs-plugins:
+      - simplemenu
+  html:
+    df-print: kable
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
+
+# What is Policy? And What is *Data* Policy? {data-stack-name="Policy Overview"}
+
+::: {.hidden}
+
+{{< include ../dsan-globals/_globals-tex.qmd >}}
+
+:::
+
+## Discourse Around "Data Policy" in the US {.smaller .title-11 .crunch-title}
+
+* (This is the level at which "national conversations" are conducted around big data)
+
+<center>
+<a href='https://www.youtube.com/watch?v=5W-ufw5Z7ac' target='_blank'>![](images/mr_cotton.jpeg){fig-align="center" width="800"}</a>
+</center>
+
+## Actually-Relevant Takeaway {.smaller}
+
+* Unlike the US, there **are** countries and national/international institutions where policies are formed, in varying degrees, by processes in which **data** comes into play
+* We'll discuss more examples; two I can speak to directly from work as data consultant:
+* **EU**: Consulted on project around implementation of **GDPR**
+* **UNESCO**: Received grant for data-analysis of international **translation policies**
+  * 194 UN member states who participate in formation of these policies
+  * 2 UN member states who refuse to participate on basis of "anti-Israel bias" (you'll never guess which ones! Hint: Apartheid South Africa, Rhodesia used to provide 3rd and 4th vote in this bloc, but no longer exist)
+* **NY MTA**: Consulted on project studying NYC subway data, until passage of <a href='https://ogs.ny.gov/executive-order-157' target='_blank'>NYS Executive Order 157</a> banning state funding for any person or organization supporting boycott of Israel `¯\_(ツ)_/¯`
+
+## $\implies$ *Comparative* Perspective {.crunch-title .crunch-ul .crunch-li-8}
+
+* We'll study various countries / international orgs and their attempts to tackle data policy issues (with hope that takeaways can be applied to the US someday as well)
+* Important to retain **descriptive/normative distinction**!
+* They'll become harder to distinguish, as we discuss:
+  * What **are** the policies currently in existence?
+  * What are their **drawbacks**?
+  * And, among the latter, which ones **could** be addressed via policy? (requires understanding **processes of policy formation**) Which ones **could not?** (*prisoner's dilemma*)
+
+# The Present-Day Policy Framework (Descriptive): *Notice* and *Consent* {data-stack-name="Notice and Consent"}
+
+## OECD *Guidelines*, 1980
+
+* "The basis for most modern privacy laws" [@sugimoto_big_2016]
+* **Collection Limitation Principle**: data may be collected "where appropriate, with the knowledge or **consent** of the data subject." [@oecd_oecd_1980, 14]
+* **Use Limitation Principle**: "Personal data should not be disclosed, made available or otherwise used for purposes other than those specified [at time of collection] except with the **consent** of the data subject" [@oecd_oecd_1980, 15]
+
+## EU Data Protection Directive, 1995 {.title-08 .crunch-title}
+
+* Art. 7: Processing allowed when "the data subject **has unambiguously given his [sic] consent**."
+* Art. 8: Use of sensitive data is restricted, except where "the data subject **has given his [sic] explicit consent** to the processing of those data."
+* Art. 26: Prohibits export of personal data to non-Euro countries lacking "adequate data protection", except when "the data subject **has given his [s] consent** unambiguously to the proposed transfer" [@europeanunion_directive_1995]
+* Superceded by **GDPR** in **2018**
+
+## EU General Data Protection Regulation (GDPR), 2018 {.smaller .crunch-title .title-09}
+
+![](images/gdpr.jpeg){fig-align="center"}
+
+> «Consent is one of the easiest to satisfy because it allows you to do just about anything with the data» (---the text right below this screenshot)
+
+## Reading / Implementing the GDPR
+
+* Main document: 261 pages
+* For SaaS companies: a nice, 34-page <a href='https://www.enterpriseready.io/gdpr/how-to-read-gdpr/' target='_blank'>abridgement</a>
+
+## Why We Have To Stop the Individual-Policy-Level Descriptive Part Here {.smaller .crunch-title .title-11}
+
+*(And await your final policy papers!)*
+
+![From Piwik.pro, <a href='https://piwik.pro/privacy-laws-around-globe/' target='_blank'>"17 Privacy Laws Around the Globe"</a>](images/piwik.jpeg){fig-align="center"}
+
+# (Normative) Issues with Notice and Consent {data-stack-name="Normative Issues"}
+
+## The Crux of the Normative Issues {.crunch-title .smaller .nostretch}
+
+![](images/terms_of_service_info.jpg){fig-align="center"}
+
+## Does Reading = Understanding? {.smaller .crunch-title .crunch-ul}
+
+* Does reading $\implies$ understanding **implications** / **contingencies** / **ambiguities**?
+* NLP *could* (and *should!*) be helpful (*"making privacy policies **machine readable** [...] would help users match **privacy preferences** against **policies** offered by web services"*), but mostly just reveals how bad the problem is:
+
+![Figure 15 from @wagner_privacy_2023. "Obfuscatory words" are words like *acceptable*, *significant*, *mainly*, or *predominantly*, interpretated at the discretion of companies rather than users (see next slide!)](images/wagner_fig.svg){fig-align="center"}
+
+## The Intuitive Problem of Contracts {.smaller .crunch-ul .crunch-title .crunch-quarto-figure .crunch-images}
+
+::: {layout="[60,40]"}
+::: {#intuitive-problem-left}
+
+* Hard to read, harder to understand, possibly rly bad stuff in them, won't know until you read + understand
+* Solution (in theory... in modern liberal market-based democracies): Collective action!
+* Option 1 (Exit): Find better platform, use it instead $\Rightarrow$ company dies (competitive market)
+* Option 2 (Voice): Raise a fuss, hoot and holler, make a big stink about it, etc.
+  * $\Rightarrow$ (2a) Company will change/remove it to avoid embarrassment and/or prevent Option 1 becoming an option
+  * $\Rightarrow$ (2b) Government intervention (hypothetical functional government)
+
+:::
+::: {#intuitive-problem-right}
+
+![](images/exit-voice-page.jpeg){fig-align="center" width="240"}
+
+![](images/corbyn_down.jpeg){fig-align="center" width="240"}
+
+:::
+:::
+
+## The Fundamental Problem of Contracts {.crunch-title .crunch-ul .title-08}
+
+* Just as we can't observe **two simultaneous worlds** $W_{X = 0}$ and $W_{X = 1}$ which differ only in the value of $X$,
+* We can't **foresee all possible contingencies** that need to be included in a **contract**
+  * (We can try, though! Hence use of obfuscatory words to **minimize liability**)
+* So, when a situation arises which is not covered by a clause in the contract, what happens? What principle determines **whose interpretation wins out**?
+  * (*Hint*: It is actually literally my legal middle name...)
+
+## ...POWER!
+
+* Examples from employment contracts (tooting own horn):
+* In a private, cooperatively-owned, democratic firm, outcome determined by *conversation*, *majority vote*, *unanimity*, etc.
+  * These technically exist in the US! Employing <a href='https://resources.uwcc.wisc.edu/Research/REIC_FINAL.pdf' target='_blank'>2,380 workers</a>, $\frac{2380}{127509000} \approx 0.0019\%$ of US workforce
+* Otherwise, in a non-unionized private firm (94% of total), the outcome is determined by *organizational hierarchy*
+  * This is the case for $\frac{125000000}{127509000} \approx 98.03\%$ of <a href='https://fred.stlouisfed.org/series/USPRIV' target='_blank'>US workforce</a>
+
+## Descriptive and Normative Implications {.crunch-title .title-09 .crunch-ul .crunch-blockquote}
+
+* Who has power w.r.t. incompleteness of contracts?
+* Who **ought** to have power w.r.t. incompleteness of contracts?
+* Residual rights of control...
+
+## Hart's Nobel Prize Speech {.crunch-title .text-90 .title-09}
+
+> **Complete contracts** are contracts where everything that can ever happen is written into the contract. Actual contracts aren't like this, as lawyers know. They're poorly worded, ambiguous, leave out important things. They're **incomplete**.
+> 
+> A critical question that arises with an incomplete contract is, **who has the right to decide about the missing things?** We called this right the residual control or decision right. The question is, who has it?
+> 
+> Further thought led us to the idea that **this is *what ownership is***. The owner of an asset has the right to decide how the asset is used where the use is not contractually specified [@hart2017incomplete]
+
+## Understanding Rights $\leftrightarrow$ Fighting for Rights {.title-08 .crunch-ul .math-90}
+
+* "Hohfeldian" framework [@hohfeld_fundamental_1913]
+* A right $r_i$ granted to person $i$ $\implies$ A duty/obligation imposed on everyone in the world besides $i$ (to respect $r_i$)
+* A duty or obligation $d_i$ imposed on a person $i$ $\implies$ A right granted to everyone in the world besides $i$ (to... be a potential beneficiary of $d_i$)
+* $\implies$ rough measures of **relative power** in a contract:
+
+$$
+\frac{\text{rights}_i}{\text{rights}_j} = \frac{\text{obligations}_j}{\text{rights}_j} = \frac{\text{rights}_i}{\text{obligations}_j} = \frac{\text{obligations}_j}{\text{obligations}_i}
+$$
+
+## The Adversarial-Sisyphusian Problem of Contracts {.crunch-title .title-07}
+
+* Recall Intuitive Problem of Causal Inference: Correlation $\nimplies$ Causation, **but** can do a bunch of work to overcome
+* Adversarial-Sisyphusian Problem is **one level worse** 😱
+  * IPCI: You vs. discovered correlation (inanimate)
+  * ASPC: You vs. companies investing **resources** 💰 into making the problem **harder and harder for you**
+* tldr: The moment you ($N=1$, \$) finally find and "fix" bad thing, company ($N \gg 1$, \$\$\$) adds more ambiguity to re-enable / sends your data to \"new\", \"different\" 3rd-party processor 🥸
+
+## References
+
+::: {#refs}
+:::

@@ -1,0 +1,20 @@
+---
+title: "Week 14: In-Class Office Hours"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2025, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
+bibliography: "../_DSAN5450.bib"
+date: 2025-04-23
+date-format: full
+lecnum: 14
+categories:
+  - "Class Sessions"
+format:
+  html:
+    df-print: kable
+    css: "../dsan-globals/jjstyles.css"
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+Week 14 is an **in-class office hours** session, where the instructors will be on hand to help with any final questions or issues you have in moving from the draft stage to the submission stage for the final project!

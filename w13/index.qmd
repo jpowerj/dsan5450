@@ -1,0 +1,353 @@
+---
+title: "Week 13: Standpoint Epistemology, Data Feminism"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2025, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
+bibliography: "../_DSAN5450.bib"
+date: 2025-04-16
+date-format: full
+lecnum: 13
+categories:
+  - "Class Sessions"
+format:
+  revealjs:
+    df-print: kable
+    footer: "DSAN 5450 Week 13: {{< var w13.footer >}}"
+    output-file: "slides.html"
+    html-math-method: mathjax
+    link-external-icon: true
+    link-external-newwindow: true
+    theme: [default, "../dsan-globals/jjquarto.scss"]
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css'><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Honk&display=swap' rel='stylesheet'>"
+    scrollable: true
+    slide-number: true
+    simplemenu:
+      flat: true
+      barhtml:
+        header: "<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>"
+      scale: 0.4
+    revealjs-plugins:
+      - simplemenu
+  html:
+    df-print: kable
+    css: "../dsan-globals/jjstyles.css"
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
+
+# Picking Up From Last Week...
+
+
+## "Controlling for" Everything Besides Race {.smaller .crunch-title .title-11 .crunch-quarto-figure}
+
+::: {layout="[1,1]" layout-valign="center"}
+
+![](images/resume_greg_baker.jpeg){fig-align="center"}
+
+![](images/resume_jamal_jones.jpeg){fig-align="center"}
+
+:::
+
+* Economist assertion: everything is "same" except for [**name** $\leadsto$ **race**]
+* Weird part of assertion: only true if the "everything" is **stripped of context**... But, stripped of context, how would we get [name $\leadsto$ race] in the first place?
+
+## Age Discrimination? {.smaller .crunch-title .crunch-ul .crunch-li-8 .crunch-img}
+
+::: {#fig-age}
+::: {layout="[1,1]" layout-valign="center"}
+
+![](images/resume_age_12.jpeg){fig-align="center"}
+
+![](images/resume_age_22.jpeg){fig-align="center"}
+
+:::
+
+Based on Lily Hu, <a href='https://www.youtube.com/watch?v=8qMC1fZJMi4' target='_blank'>*What is 'Race' in Algorithmic Discrimination on the Basis of Race? - UCLA IPAM*</a> (YouTube)
+:::
+
+<center>
+
+Fair $\iff$ [$\Pr(\text{Admit Presley}_{12}) = \Pr(\text{Admit Presley}_{22})$]?
+
+</center>
+
+* Root of issue: [BA Stats, UCLA, 3.7] has no "free-floating" meaning---it's **attached to a person** $\Rightarrow$ affected by/interpreted w.r.t. their "protected" characteristics
+
+## General Fairness Definition? {.smaller .crunch-title .crunch-quarto-figure .crunch-ul .crunch-img .inline-90 .text-68}
+
+:::: {.columns}
+::: {.column width="50%"}
+
+* Pessimistic conjecture: like bias-variance tradeoff (no free lunch), may be a "generality-[loophole-avoidance] tradeoff"...
+* May need to "descend" from **👆Platonic** ideal fairness to **👇Aristotelian** topic-specific fairness 🤔 *Hence W12-13!*
+* We saw this issue before, in different form! Rawls on "correct" ranking of **rights**
+* [**Rawls**: No "correct" ordering; Different societies $\leadsto$ different social value systems, power struggles $\leadsto$ different orderings]
+
+:::
+::: {.column width="50%"}
+
+![Raphael, [*The School of Athens* (1511)](https://en.wikipedia.org/wiki/The_School_of_Athens) [v rare 16th-century use of Georgia!]{style='font-size: 60%'}](images/raphael_anno.jpg){fig-align="center" width="80%"}
+
+:::
+::::
+
+* [**Me, I guess? 🙈**: No "correct" fairness defn for racial discrimination; Different societies $\leadsto$ different racial/caste/identity formations, power struggles $\leadsto$ different fairness defns]
+
+## "Cool Theory, I Guess..." {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-ul .crunch-li-8 .crunch-quarto-figure}
+
+* Less pessimistic result of pessimistic conjecture: Some hope from Fodor-Sperber model (disclaimer: also terrifying, Philip K. Dick *Minority Report*-style dystopian possibilities)
+* "Good luck measuring ideas inside of people's heads... I'll be over here measuring *real* things and doing *real* data science!" -My innumerable Wile E. Coyote-style opps
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![](images/representations.jpeg){fig-align="center" width="90%"}
+
+:::
+::: {.column width="50%"}
+
+![](images/sperber.jpg){fig-align="center" width="50%"}
+
+:::
+::::
+
+## "Cool Theory, I Guess..." {.smaller .crunch-title}
+
+*(Brace yourself: Jeff's Trying-My-Best Fodor-Sperber model of socially-constructed "race" on next few slides... I'm sorry in advance 🙈🙈🙈 Did you know you can italicize emojis)*
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![](images/representations_bilingual.jpeg){fig-align="center"}
+
+:::
+::: {.column width="50%"}
+
+![](images/sunny.webp){fig-align="center"}
+
+:::
+::::
+
+## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell .crunch-ul .text-65}
+
+::: {layout="[1,1]"}
+
+::: {#worms1-left}
+
+* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+
+:::
+::: {#worms-right}
+
+![](images/race_graph_step1.svg){fig-align="center" width="500"}
+
+:::
+:::
+
+## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell .crunch-ul .text-65}
+
+::: {layout="[1,1]"}
+::: {#worms2-left}
+
+* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
+
+:::
+::: {#worms2-right}
+
+![](images/race_graph_step2.svg){fig-align="center" width="500"}
+
+:::
+:::
+
+## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell .crunch-ul .text-65}
+
+::: {layout="[1,1]"}
+::: {#worms3-left}
+
+* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
+* Each person $x$ forming their own **internal representations** $\widetilde{t^x_0}$, $\widetilde{t^x_1}$, $\widetilde{t^x_2}$ of one another based on **patterns of interaction**, then
+* Generalizing to an internal representation of a **"type of person" $\widetilde{t^x_9}$**...
+
+:::
+::: {#worms3-right}
+
+![](images/race_graph_step3.svg){fig-align="center" width="600"}
+
+:::
+:::
+
+## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell .crunch-ul .text-65}
+
+::: {layout="[1,1]"}
+::: {#worms4-left}
+
+* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
+* Each person $x$ forming their own **internal representations** $\widetilde{t^x_0}$, $\widetilde{t^x_1}$, $\widetilde{t^x_2}$ of one another based on **patterns of interaction**, then
+* Generalizing to an internal representation of a **"type of person" $\widetilde{t^x_9}$**...
+* Which they then **externalize** as $t^x_9$.
+* $t^0_9$, $t^1_9$, $t^2_9$ "congeal" into a **shared external representation** $t_9^e$ via social mechanism (discussion, media, culture, propaganda, parenting, religion, education, ...) $\Rightarrow t^e_9$ **"reified"** (causal effects on $t_0$, $t_1$, $t_2$)
+
+:::
+::: {#worms4-right}
+
+![](images/race_graph_step4.svg){fig-align="center" width="600"}
+
+:::
+:::
+
+# *Ordering* of Topics is Important Here! {data-stack-name="Standpoint Epistemology"}
+
+* Last week: Unfortunate-ness of white male teaching about race
+* This week: Unfortunate-ness of white male teaching about gender
+* But, also this week, a counterpoint: "Diversity in tech" $\overset{?}{\longleftrightarrow}$ The burden of "speaking for" one's identity group
+
+## The Standpoint Problem Revisited {.crunch-title .crunch-ul}
+
+* Problem statement: Jeff can't possibly "teach" data-ethical issues, w.r.t. how they affect women, in the same manner he can teach e.g. how to take a derivative
+* Solution 1: Have a woman teach a guest lecture $\rightarrow$ (Possibility) Problem solved; (Possibility) Forcing additional labor onto women (see: 3 slides from now)
+* Solution 2: Utilize the immense labor women have already put into trying to explain these issues to men with power, and amplify these already-existing products of this already-expended labor
+
+## Specifically-Chosen Examples {.crunch-title .crunch-quarto-figure .title-11}
+
+::: {layout="[1,1,1]"}
+::: {#labor-left}
+
+![](images/lebron.jpg){fig-align="center" width="340"}
+
+:::
+::: {#labor-center}
+
+![](images/racist.jpg){fig-align="center" width="340"}
+
+:::
+::: {#labor-right}
+
+![](images/invisible_women.jpg){fig-align="center" width="340"}
+
+:::
+:::
+
+## With Great Privilege Comes Great Responsibility {.crunch-title .crunch-blockquote .title-07}
+
+> What is **the most damage I can do**, given my biography, abilities, and commitments, to the racial order and rule of capital? (<a href='https://en.wikipedia.org/wiki/Joel_Olson' target='_blank'>Joel Olson</a>)
+
+![](images/race_traitor_jacket.jpg){fig-align="center" width="300"}
+
+## The "Diversity in Tech"-Industrial Complex {.crunch-title .title-08 .crunch-li-6}
+
+* Problem: Not enough diversity in tech
+* Solution 1: Intervene on the causal pathways leading to this outcome (incl. studying/tracing causal pathways)
+    * Costs borne by tech companies; benefits accrue to marginalized ppl ❌🙅‍♂️⏹️
+* Solution 2: Make marginalized ppl in tech jobs do tech jobs plus also extra job of explaining their marginalization to non-marginalized ppl (Third Shift?), who go home feeling good that they went to the diversity in tech panel (Brecht)
+    * Costs borne by marginalized ppl; benefits accrue to tech companies ✅🎰🤑
+
+## (See Also) {.crunch-title}
+
+![](images/mlk_dream.jpg){fig-align="center"}
+
+## "Diversity" vs. Fairness / Justice {.crunch-title .title-09 .crunch-ul .text-90 .crunch-img .crunch-quarto-figure}
+
+* In this class (e.g., HW1), we essentially reduced "race" down to "black" vs. "white"
+* Diversity has (at least) **two** aspects: (1) **Inclusion** of different groups, and (2) **Balance** of representation between those groups
+
+::: {layout="[1,1]" layout-valign="center"}
+::: {#diversity-left}
+
+![What city is this? Hint: *Yaddadamean*](images/oakland_small.jpeg)
+
+:::
+::: {#diversity-right}
+
+![What city is this? Hint: *Bammas*](images/dc.jpeg)
+
+:::
+:::
+
+## Diversity vs. Fairness / Justice
+
+::: {layout="[1,1]" layout-valign="center"}
+
+![](images/oakland_map2.jpeg)
+
+![](images/dc_map.jpeg)
+
+:::
+
+# Data Feminism {data-stack-name="Data Feminism"}
+
+## Epistemological One-Way Mirror 2: Electric Boogaloo
+
+> Representation of the world, like the world itself, is the work of men; they describe it from their own point of view, which they confuse with the absolute truth.<br><div style='float: right;'>[@beauvoir_second_1949]</div>
+
+## "It Goes Without Saying" {.crunch-title .crunch-blockquote .crunch-p .text-90}
+
+>  Whiteness and maleness are implicit. They are unquestioned. They are the default. And this reality is inescapable for anyone whose identity does not go without saying [...] For anyone who is used to jarring up against a world that has not been designed around them and their needs.
+
+> Belief in the objectivity, the rationality, the, as Catherine Mackinnon has it, "point-of-viewlessness" of the white, male perspective. Because this perspective is not articulated as white and male (because it doesn’t need to be), because it is the norm, it is presumed not to be subjective. [@perez_invisible_2019]
+
+## People = Male, Animal = Male {.crunch-title .crunch-ul .title-11}
+
+* *"When I say 'he' I really mean 'he or she', obviously"*
+* Except... irrespective of what you really mean, or whether it's 'obvious', it goes out into the world and has effects (reification),
+* From <a href='https://www.sciencedirect.com/science/article/abs/pii/S0001879113000304' target='_blank'>childhood</a> [@vervecken_changing_2013]
+* To <a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1559-1816.1973.tb01290.x' target='_blank'>job-hunting</a> [@bem_does_1973]
+* <a href='https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2016.00025/full#B111' target='_blank'>And beyond</a> [@sczesny_can_2016]
+* A stuffed animal must be "super-feminine" before "even close to half of participants will refer to it as she rather than he". [@lambdin_animal_2003]
+
+
+## The Cowan Paradox {.crunch-title .smaller .title-11 .crunch-quarto-figure}
+
+::: {layout="[55,45]"}
+::: {#cowan-left}
+
+> For many ages to come the old Adam will be so strong in us that everybody will need to do some work if he [sic] is to be contented [...] But beyond this, we shall endeavour to spread the bread thin on the butter---to make what work there is still to be done to be as widely
+shared as possible. Three-hour shifts or a fifteen-hour week may put off the
+problem for a great while. For three hours a day is quite enough to satisfy the old Adam in most of us!
+
+(John Maynard Keynes, <a href='http://www.econ.yale.edu/smith/econ116a/keynes1.pdf' target='_blank'>"Economic Possibilities for our Grandchildren"</a>, 1930)
+
+:::
+::: {#cowan-right}
+
+![@cowan_more_1983](images/more_work.jpg){fig-align="center" width="350"}
+
+:::
+:::
+
+# Solving All the Problems {data-stack-name="Solving All the Problems"}
+
+## Solutions via Causal Historical Analysis
+
+* The data: historical cases of attempts to end oppression
+* Dependent variable: Did they succeed or were they successfully repressed?
+* (You're not gonna like this one either...)
+
+## Instances of Oppression and their Termination
+
+* US Chattel Slavery (1865)?
+* Colonialism (e.g., Algeria, 1962)?
+* Apartheid in Rhodesia (1980) / Namibia (1990) / South Africa (1994)?
+* The Ethnic Cleansing of Palestine?
+* Thankfully, all of these were ended peacefully, and in ways that were agreeable to everyone involved, especially those who benefitted from them!!! 🥳🕺
+
+## Great Moments in Peaceful Protest History {.crunch-title .title-11 .smaller}
+
+![From The Nib (<a href='https://thenib.com/great-moments-in-peaceful-protest-history-44bdadb44cf/' target='_blank'>*The Revolution WILL Be Given Permission*</a>)](images/great-moments-in-peaceful-protest-history.jpg){fig-align="center"}
+
+## References
+
+::: {#refs}
+:::
+

@@ -1,0 +1,663 @@
+---
+title: "Week 2: Machine Learning, Training Data, and Biases"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2025, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
+bibliography: "../_DSAN5450.bib"
+date: 2025-01-22
+date-format: full
+lecnum: 2
+categories:
+  - "Class Sessions"
+format:
+  revealjs:
+    df-print: kable
+    footer: "DSAN 5450 Week 2: {{< var w02.footer >}}"
+    link-external-icon: true
+    link-external-newwindow: true
+    output-file: "slides.html"
+    html-math-method: mathjax
+    css: "../dsan-globals/jjstyles.css"
+    scrollable: true
+    slide-number: true
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css'>"
+    simplemenu:
+      flat: true
+      barhtml:
+        header: "<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>"
+      scale: 0.5
+    revealjs-plugins:
+      - simplemenu
+  html:
+    df-print: kable
+    css: "../dsan-globals/jjstyles.css"
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
+
+# Weeks 2-4: Slouching Towards Fairness {.smaller .not-title-slide .title-09 data-stack-name="Recap"}
+
+* First half: Remaining high-level issues!
+* Second half: you'll start to understand why I kept maniacally pointing to $p \implies q$ on the board last lecture!
+* "Rules" for fairness are not "rules" at all! They're statements of the form **"If we accept ethical framework $x$, then our algorithms ought to satisfy condition $y$"**
+
+$$
+\underbrace{p(x)}_{\substack{\text{Accept ethical} \\ \text{framework }x}} \implies \underbrace{q(y)}_{\substack{\text{Algorithms should} \\ \text{satisfy condition }y}}
+$$
+
+* Last week: very broad intro to **possible ethical frameworks** (values for $x$)
+* Today: very broad intro to **possible fairness criteria** (values for $y$)
+* End of today: **HW1: Nuts and Bolts for Evaluating Fairness**
+
+## Where We Left Off: Ethical Issues in Data Science {.title-09 .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-title}
+
+* Data Science for Who? ✅
+* Individuals $\leftrightarrow$ Structures 👀
+* Operationalization
+* Fair Comparisons
+* Implementation
+
+## Structural Domination: The Grapes of Wrath {.smaller .crunch-title .title-12 .crunch-blockquote .blockquote-90 .crunch-p-8}
+
+> But... **I built it with my hands!** Straightened old nails to put the sheathing on!
+> 
+> **It's not me. There's nothing I can do. I'll lose my job if I don't do it.** And look---suppose you kill me? They'll hang you, and long before you're hung there'll be another guy here, he'll bump the house down. You're not killing the right guy.
+> 
+> That's so... **Who gave you orders? I'll go after him. He's the one to kill.**
+> 
+> You're wrong. **He got his orders from the bank.** 'Clear those people out or it's your job.'
+>
+> Well, there's a president of the bank. A board of directors. I'll fill up my rifle, head to the bank.
+>
+> The bank gets orders from the East. 'Make the land show profit or we'll close you up.' We're sorry. **It's not us. It's the monster.** The bank isn't like a man.
+> 
+> Yes, but the bank is only made of men!
+>
+> No, you're wrong there---quite wrong. The bank is something else than men. It happens nowadays that every man in a bank hates what the bank does, and yet the bank does it. The bank is something more than men, I tell you.
+> 
+> I got to figure... We all got to figure. **There's some way to stop this. There's got to be some way to stop this. It's not like lightning or earthquakes. We've got a bad thing made by men, and by God, isn't that something we should be able to change?** [@steinbeck_grapes_1939]
+
+## Ontology: Individuals *and* Structures {.smaller .crunch-title .crunch-blockquote .title-12}
+
+:::: {.columns}
+
+::: {.column width="61%"}
+
+> No longer preoccupied with crude 'conspiracy theories', [progressives] attribute all things negative to handy abstractions: 'capitalism', 'the state', 'structural oppression', 'hierarchy'. Hence they have been able to conjure what might be termed the 'miracle of immaculate genocide', a form of genocide, that is, in which there are **no actual perpetrators**, no one who might 'really' be **deemed culpable** [@churchill_justice_2003]
+> 
+> We make our own history, but we do not make it as we please; we do not make it under self-selected **circumstances**, but under circumstances existing already, given and **transmitted from the past**. The tradition of all dead generations weighs like a nightmare on the brains of the living. [@marx_eighteenth_1852]
+
+:::
+::: {.column width="39%"}
+
+<!-- ![@giddens_central_1979](images/giddens.jpg){fig-align="center"} -->
+
+![@sandburg_selected_1926](images/fight_you_for_it.webp)
+
+:::
+::::
+
+# Ethical Issues Part 2 {data-stack-name="Ethical Issues"}
+
+* Data Science for Who? ✅
+* Individuals $\leftrightarrow$ Structures ✅
+* Operationalization 👀
+* Fair Comparisons 👀
+* Implementation 👀
+
+## Operationalization 👀 {.smaller .crunch-title .crunch-li}
+
+:::: {.columns}
+::: {.column width="68%"}
+
+* Think of claims commonly made based on "data":
+  * Markets create economic prosperity
+  * A glass of wine in the evening prevents cancer
+  * Policing makes communities safer
+* How exactly are "prosperity", "preventing cancer", "policing", "community safety" being **measured**? **Who** is measuring? Mechanisms for **feedback** $\leadsto$ **change**?
+
+<center>
+{{< video https://jpj.georgetown.domains/dsan5450-scratch/huey_trim.mp4 height="300" >}}
+</center>
+
+:::
+::: {.column width="32%"}
+
+![@stiglitz_mismeasuring_2010](images/mismeasuring.jpg){fig-align="center"}
+
+:::
+::::
+
+## What Is Being Compared? 👀 {.smaller .crunch-title .crunch-ul .table-87}
+
+| Apples | Oranges | Pears |
+| - | - | - |
+| Polities w/250-500M people (US ~335M, UP ~250M, EU ~450M) | Polities w/11M people in the Caribbean (Cuba, Haiti, Dominican Republic) | Polities w/over 1 billion people (China ~1.4B, India ~1.4B, Africa ~1.4B, ⬆️+⬇️ America ~1B) |
+| Democracies (US) | Democracies til they democratically elected someone US didn't like (Iran, Guatemala, Chile) | Non-democracies which brutally repress democratic movements w/US arms (Saudi Arabia) |
+| Colonizing polities (US) | Polities colonized by them (Philippines) | Non-colonized polities (Ethiopia, Thailand) |
+| Polities w/infrastructure built up over [250+ yrs](https://www.nps.gov/articles/000/arrival-of-the-first-africans-in-1619.htm) via slave labor (US 🇺🇸) | Polities populated by former slaves (Liberia 🇱🇷) | Polities that [paid reparations](https://en.wikipedia.org/wiki/Reparations_Agreement_between_Israel_and_the_Federal_Republic_of_Germany) to descendants of [certain] enslaved groups (Germany) |
+| Polities independent since 1776 (US) | Polities independent since 1990 (Namibia) | [Non-self-governing](https://www.un.org/dppa/decolonization/en/nsgt) polities (Puerto Rico, Palestine, New Caledonia) |
+| Polities enforcing a 60 yr embargo on Cuba (US) | Polities with a 60 yr embargo imposed on them by US (Cuba) | Polities without a 60 yr embargo imposed on them by US (...) |
+
+: {tbl-colwidths="[26,37,37]"}
+
+## How Are They Being Compared?
+
+* What metric? Over what timespan?
+* What unit of obs $\leadsto$ agg function $\leadsto$ level of aggregation?
+
+![@dreze_china_1991](images/china_india.png){fig-align="center"}
+
+## ...There is Still Hope! I Promise! {.smaller .crunch-title .crunch-ul .crunch-blockquote .crunch-li-8}
+
+* Fair Comparison through **Statistical Matching**:
+* @lyall_divided_2020: "Treating certain ethnic groups as second-class citizens [...] leads victimized soldiers to subvert military authorities once war begins. The higher an army's inequality, the greater its rates of desertion, side-switching, and casualties"
+
+> Matching constructs **pairs of belligerents** that are **similar** across a wide range of traits thought to dictate battlefield performance but that **vary** in levels of prewar inequality. The more similar the belligerents, the better our estimate of inequality's effects, as all other traits are shared and thus cannot explain observed differences in performance, helping assess how battlefield performance **would have** improved (declined) if the belligerent had a lower (higher) level of prewar inequality.
+> 
+> Since [non-matched] cases are **dropped** [...] selected cases are more representative of average belligerents/wars than outliers with few or no matches, [providing] surer ground for testing generalizability of the book's claims than focusing solely on canonical but unrepresentative usual suspects (Germany, the United States, Israel)
+
+## Does Inequality Cause Poor Military Performance? {.smaller .crunch-title .title-10 .table-80}
+
+| <br>Covariates | Sultanate of Morocco<br> *Spanish-Moroccan War, 1859-60* | Khanate of Kokand<br> *War with Russia, 1864-65* |
+| - | - | - |
+| **$X$: Military Inequality** | Low (0.01) | Extreme (0.70) |
+| **$\mathbf{Z}$: Matched Covariates:** | | |
+| Initial relative power | 66% | 66% |
+| Total fielded force | 55,000 | 50,000 |
+| Regime type | Absolutist Monarchy (−6) | Absolute Monarchy (−7) |
+| Distance from capital | 208km | 265km |
+| Standing army | Yes | Yes |
+| Composite military | Yes | Yes |
+| Initiator | No | No |
+| Joiner | No | No |
+| Democratic opponent | No | No |
+| Great Power | No | No |
+| Civil war | No | No |
+| Combined arms | Yes | Yes |
+| Doctrine | Offensive | Offensive |
+| Superior weapons | No | No |
+| Fortifications | Yes | Yes |
+| Foreign advisors | Yes | Yes |
+| Terrain | Semiarid coastal plain | Semiarid grassland plain |
+| Topography | Rugged | Rugged |
+| War duration | 126 days | 378 days |
+| Recent war history w/opp | Yes | Yes |
+| Facing colonizer | Yes | Yes |
+| Identity dimension | Sunni Islam/Christian | Sunni Islam/Christian |
+| New leader | Yes | Yes |
+| Population | 8–8.5 million | 5–6 million |
+| Ethnoling fractionalization (ELF) | High | High |
+| Civ-mil relations | Ruler as commander | Ruler as commander |
+| **$Y$: Battlefield Performance:** | | |
+| Loss-exchange ratio | 0.43 | 0.02 |
+| Mass desertion | No | Yes |
+| Mass defection | No | No |
+| Fratricidal violence | No | Yes |
+
+## No Crumbs {.smaller .p-80 .cols-va}
+
+*(I have no dog in this fight, I'm not trying to improve military performance of an army, but got damn)*
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![](images/lakers.gif){fig-align="center" width="500"}
+
+:::
+::: {.column width="50%"}
+
+![](images/tuck_em_in.jpg){fig-align="center" width="400"}
+
+:::
+::::
+
+## Implementation 👀 {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-figcaption .crunch-images}
+
+::: {layout="[1,1]"}
+
+![From @dignazio_data_2020, Ch. 6 ([see also](https://www.insidehighered.com/news/2014/07/17/colleges-often-win-reduction-fines-federal-campus-safety-violations))](images/clery.jpg){fig-align="center"}
+
+::: {#implementation-right}
+
+![](images/arresting_citizenship.jpeg){fig-align="center" width="410"}
+
+![From @lerman_arresting_2014 ([see also](https://www.aeaweb.org/articles?id=10.1257/aer.101.7.3221))](images/weaver_fig62.jpeg){fig-align="center" width="410"}
+
+:::
+:::
+
+
+## Ethics of Eliciting Sensitive Linguistic Data {.smaller .crunch-title .title-12}
+
+::: {layout="[1,1]" layout-valign="center"}
+::: {#labov-left}
+
+![From @labov_language_2013, pg. 4](images/labov_interview.jpeg){fig-align="center"}
+
+:::
+::: {#labov-right}
+
+![From "80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre", *NPR Parallels*, 7 Oct 2017 [@bishop_80_2017]](images/parsley.jpeg){fig-align="center"}
+
+:::
+:::
+
+## Privacy {.smaller .crunch-title .crunch-img .crop-quarto-figure}
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![Fig 1.3: "The Accuracy-Privacy Loss Tradeoff", from US Census Bureau (2021), *[Disclosure Avoidance for the 2020 Census](https://www2.census.gov/library/publications/decennial/2020/2020-census-disclosure-avoidance-handbook.pdf)*](images/accuracy-privacy-tradeoff.svg){fig-align="center" width="420"}
+
+:::
+::: {.column width="50%"}
+
+!["Privacy-Loss Budget ($\varepsilon$) Acts as a Dial on Level of Noise", *ibid.*](images/census_epsilon_crop.svg){fig-align="center" width="420"}
+
+:::
+::::
+
+![Seurat, *A Sunday Afternoon on the Island of La Grande Jatte*, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg)](images/seurat.jpg){fig-align="center" width="390" style="margin-top: 20px;"}
+
+# Ethical Issues in *Applying* Data Science/ML to *Particular* Problems {.title-09 .not-title-slide .crunch-quarto-layout-panel .crunch-quarto-figure data-stack-name="Applications"}
+
+<center>
+![](images/airobot.jpeg){fig-align="center" width="800"}
+</center>
+
+## Facial Recognition Algorithms {.crunch-title .smaller .crunch-quarto-layout-panel .crunch-img .crunch-quarto-figure .crunch-figcaption .crunch-quarto-layout-cell .crunch-p .p-75}
+
+*(aka AI eugenics... but I didn't say that out loud)*
+
+::: {layout="[[1,1],[1,1]]" layout-valign="center"}
+
+![@facia.ai_facial_2023](images/facial-recognition.webp){fig-align="center" width="400"}
+
+![@wellcomecollection_composite_1890](images/wellcome_jewish_type_crop.jpeg){fig-align="center" width="340"}
+
+![@ouz_google_2023](images/pixel-face-unlock.webp){fig-align="center" width="380"}
+
+![@wang_deep_2018](images/deep_learning_gay_detection_crop.jpeg){fig-align="center" width="350"}
+
+:::
+
+## LLMs Encode Existing Biases {.smaller .crunch-title .crunch-img .cols-va .crunch-quarto-figure}
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![From @schiebinger_machine_2020](images/pronouns.jpg){fig-align="center" width="75%"}
+
+:::
+::: {.column width="50%"}
+
+![From [Google Translate](https://translate.google.com/?sl=en&tl=de&text=A%20nurse%0AA%20defendant&op=translate) (22 Jan 2025)](images/gtranslate_2025.jpg){fig-align="center"}
+
+:::
+::::
+
+::: {#fig-chatgpt-gender .text-90}
+
+| Prompt | Result |
+| - | - |
+| "Generate a reference letter for **Kelly**, a 22 year old **female** student at UCLA" | "She is an engaged **participant** in group projects, demonstrating exceptional teamwork and collaboration skills [...] a **well-liked member** of our community." |
+| "Generate a reference letter for **Joseph**, a 22 year old **male** student at UCLA" | His enthusiasm and dedication have had a positive impact on those around him, making him a natural **leader** and **role model** for his peers." |
+
+: {tbl-colwidths="[35,65]"}
+
+@wan_kelly_2023, "Gender Biases in LLM-Generated Reference Letters"
+:::
+
+## What Is To Be Done? {.crunch-title .smaller .cols-va}
+
+&nbsp;<br>
+
+:::: {.columns}
+::: {.column width="40%"}
+
+<center>
+When to **retain** biases...
+</center>
+
+:::
+::: {.column width="60%"}
+
+<center>
+...and when to **debias**
+</center>
+
+:::
+::::
+
+:::: {.columns}
+::: {.column width="40%"}
+
+![From @schiebinger_machine_2020](images/pronouns.jpg){#fig-pronouns fig-align="center"}
+
+:::
+::: {.column width="60%"}
+
+::: {#fig-embedding-bias-right}
+
+![](images/neutralizing.png){fig-align="center"}
+![](images/embeddings-equalizing.png){fig-align="center"}
+
+From DeepLearning.AI's <a href='https://www.coursera.org/lecture/nlp-sequence-models/debiasing-word-embeddings-zHASj' target='_blank'>Deep Learning course</a>
+:::
+
+:::
+::::
+
+## Military and Police Applications of AI {.crunch-title .smaller}
+
+::: {layout="[1,1]"}
+
+![@ayyub_app_2019](images/doroob.jpeg){fig-align="center" width="410"}
+
+![@mcneil_israel_2022](images/israel-ai.jpeg){fig-align="center" width="300"}
+
+:::
+
+## Your Job: Policy Whitepaper {.crunch-title .crunch-ul}
+
+* So is technology/data science/machine learning...
+  * "Bad" in and of itself?
+  * "Good" in and of itself? or
+  * A tool that can be used to both "good" and "bad" ends?
+* *"The master's tools will never dismantle the master's house"*... Who decided that the master owns the tools?
+* How can we **curtail** some uses and/or **encourage** others?
+* If only we had some sort of... institution... for **governing** its use in society... some sort of... **govern**... ment?
+
+## From Week 7 Onwards, You Work At A Think Tank {.smaller .crunch-title .title-11 .crunch-images .crunch-quarto-figure}
+
+::: {layout="[3,4]" layout-valign="center"}
+
+::: {#think-tank-left}
+
+![](images/aei_crop.jpeg){fig-align="center" width="360"}
+
+![](images/aei2_crop.jpeg){fig-align="center" width="360"}
+
+![@morozov_socialize_2015](images/morozov2.jpeg){fig-align="center" width="360"}
+
+:::
+::: {#think-tank-right}
+
+![From @ames_techtopus_2014](images/techtopus.jpeg){fig-align="center"}
+
+:::
+:::
+
+## "Whatever You Do... Don't Be Bored" {.smaller .crunch-title}
+
+![Clip from Richard Linklater's *[Waking Life](https://www.youtube.com/watch?v=J8jQuOjtPSQ)*](images/waking_life_dreamers.jpg){fig-align="center"}
+
+# Machine Learning at 30,000 Feet {data-stack-name="ML"}
+
+## Three Component Parts of Machine Learning
+
+1. A cool algorithm 😎😍
+2. [Possibly benign but possibly biased] Training data ❓🧐
+3. Exploitation of below-minimum-wage human labor 😞🤐 [@dube_monopsony_2020, like and subscribe yall, get those ❤️s goin]
+
+## A Cool Algorithm 😎😍 {.smaller .crunch-title}
+
+![](images/neural_network.svg){fig-align="center"}
+
+## Training Data With *Acknowledged* Bias {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure}
+
+* One potentially fruitful approach to fairness: since we can't *eliminate* it, bring it out into the open and study it! 
+  * This can, at very least, help us brainstorm how we might "correct" for it (next slides!)
+
+::: {layout="[1,1]" layout-valign="center"}
+
+![](images/pronouns.jpg){fig-align="center"}
+
+![](images/translate.jpg){fig-align="center"}
+
+:::
+
+From <a href='http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2' target='_blank'>*Gendered Innovations in Science, Health & Medicine, Engineering, and Environment*</a>
+
+## Word Embeddings {.smaller .crunch-title}
+
+![@bolukbasi_man_2016](images/bolukbasi2016.png){fig-align="center"}
+
+* Notice how the $x$-axis has been **selected** by the researcher **specifically** to draw out (one) **gendered dimension** of language!
+  * $\overrightarrow{\texttt{she}}$ mapped to $\langle -1,0\rangle$, $\overrightarrow{\texttt{he}}$ mapped to $\langle 1,0 \rangle$, others **projected** onto this dimension
+
+## Removing vs. Studying Biases {.smaller .crunch-title}
+
+::: {layout="[1,2]" layout-valign="center"}
+
+![From @kozlowski_geometry_2019](images/kozlowski_full.jpeg){fig-align="center"}
+
+![<a href='https://www3.cs.stonybrook.edu/~mueller/research/pages/wordbias/' target='_blank'>WordBias: An Interactive Tool for Discovering Intersectional Biases Encoded in Word Embeddings</a>](images/wordbias_custom.jpeg){fig-align="center"}
+
+:::
+
+# Context-Free Fairness {.smaller .title-12 .crunch-title data-stack-name="Fair ML"}
+
+* Who Remembers **🎉*Confusion Matrices!!!*🎉**
+* Terrifyingly higher stakes than in DSAN 5000! Now $D = 1$ could literally mean *"shoot this person"* or *"throw this person in jail for life"*
+
+![From @mitchell_algorithmic_2021](images/mitchell_et_al.svg){fig-align="center"}
+
+
+## Categories of Fairness Criteria {.smaller .crunch-title}
+
+```{=html}
+<style>
+#fairness-box .columns {
+  display: flex !important;
+  height: 100% !important;
+}
+
+#fairness-box .column {
+  /* border: 2px solid black !important; */
+  padding: 14px !important;
+  box-sizing: border-box !important;
+  /* height: 100% !important; */
+}
+</style>
+```
+
+Roughly, approaches to fairness/bias in AI can be categorized as follows:
+
+<div id="fairness-box" style="border: 2px solid black !important; box-sizing: border-box !important;">
+
+<center>
+**Fairness**
+</center>
+
+<!-- start columns -->
+::: {.columns}
+::: {.column width="46%"}
+
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center>
+**Context-Free**
+</center>
+
+* Single-Threshold Fairness
+* Equal Prediction
+* Equal Decision
+
+</div>
+
+:::
+::: {.column width="8%"}
+
+<center>
+<span style="font-size: 180% !important;"><i class='bi bi-repeat'></i>
+</center>
+
+:::
+::: {.column width="46%"}
+
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center style="margin: 0px !important;">
+**Context-Sensitive**
+</center>
+
+* Fairness via Similarity Metric(s)
+* Causal Definitions
+
+</div>
+
+:::
+:::
+
+</div>
+<!-- end quarto box -->
+
+* [Week 3] **Context-Free** Fairness: Easier to grasp from CS/data science perspective; rooted in "language" of ML (you already know much of it, given DSAN 5000!)
+* But **easy-to-grasp notion** $\neq$ **"good" notion**!
+* Your job: push yourself to (a) consider what is getting **left out of** the context-free definitions, and (b) the **loopholes** that are thus introduced into them, whereby people/computers can discriminate while remaining "technically fair"
+
+## Laws: Often Perfectly "Technically Fair" (Context-Free Fairness) {.title-09}
+
+> *Ah, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!*
+> 
+> (Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)
+
+Anatole France, *Le Lys Rouge* [@france_lys_1894]
+
+## Context-Sensitive Fairness... 🧐 {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-images .crunch-quarto-figure .crunch-figcaption .cols-va}
+
+::: {#fig-amazon}
+
+:::: {.columns}
+::: {.column width="48%"}
+
+*Decisions at Individual Level (Micro)*
+
+![](images/dc-big-inset.png){fig-align="center"}
+
+:::
+::: {.column width="4%"}
+
+$\leadsto$
+
+:::
+::: {.column width="48%"}
+
+*Emergent Properties (Macro)*
+
+![](images/dc-big-chart.png){fig-align="center"}
+
+:::
+::::
+
+Figures from @ingold_amazon_2016, ["Amazon Doesn't Consider the Race of its Customers. Should It?"](https://www.bloomberg.com/graphics/2016-amazon-same-day/)
+:::
+
+## ...Enables INVERSE Fairness 🤯 {.smaller .crunch-title .cols-va}
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![From @kasy_fairness_2021, "Fairness, Equality, and Power in Algorithmic Decision-Making"](images/kasy_abebe.jpeg){#fig-kasy fig-align="center"}
+
+:::
+::: {.column width="50%"}
+
+![From @bjorkegren_machine_2022, "(Machine) Learning What Policymakers Value"](images/inverse_fairness.jpeg){#fig-bjorkegren fig-align="center"}
+
+:::
+::::
+
+# Context-Sensitive Fairness $\Leftrightarrow$ Unraveling History {.smaller .crunch-title .title-11 .crunch-ul .crunch-quarto-figure .crunch-p .crunch-blockquote .cols-va .crunch-li-8 data-stack-name="Context-Sensitive Fair ML"}
+
+:::: {.columns}
+::: {.column width="55%"}
+
+* News: *"A litany of events with no beginning or end, thrown together because they occurred at the same time, cut off from **antecedents** and **consequences**"* [@bourdieu_sociology_2010]
+* Do media outlets optimize for **explaining**/**understanding**?
+* Even in the eyes of the most responsible journalist I know, all media can do is point to things and say *"please, you need to study, understand, and [possibly] intervene here"*:
+
+  > If we [journalists] have any reason for our existence, the least must be our ability to report history as it happens, so that no one will be able to say, "We're sorry, we didn't know---no one told us." [@fisk_great_2005]
+
+:::
+::: {.column width="45%"}
+
+![](images/al_durrah.jpg){fig-align="center"}
+
+![](images/time_1982.jpg){fig-align="center" width="300"}
+
+:::
+::::
+
+## Unraveling History {.smaller .crunch-title .title-12 .crunch-blockquote .cols-va}
+
+[*(Someday I will do something with [this](https://unravelhistory.com/))*]{style="margin-bottom: 50px;"}
+
+:::: {.columns}
+::: {.column width="60%"}
+
+> In the long evenings in West Beirut, there was time enough to consider where the core of the tragedy lay. In the age of Assyrians, the Empire of Rome, in the 1860s perhaps? In the French Mandate? In Auschwitz? In Palestine? In the rusting front-door keys now buried deep in the rubble of Shatila? In the 1978 Israeli invasion? In the 1982 invasion? Was there a point where one could have said: Stop, beyond this point there is no future? Did I witness the point of no return in 1976? That 12-year-old on the broken office chair in the ruins of the Beirut front line? Now he was, in his mid-twenties (if he was still alive), a gunboy no more. A gunman, no doubt... [@fisk_pity_1990]
+
+:::
+::: {.column width="40%"}
+
+![[Image Source](https://www.akg-images.co.uk/CS.aspx?VP3=SearchResult&ITEMID=2UMEBM5U4433K&POPUPPN=1&POPUPIID=2UMEBM5U4433K)](images/pflp_child.jpg)
+
+:::
+::::
+
+## Context-Sensitive Fairness $\Leftrightarrow$ Unraveling History {.smaller .crunch-title .title-10 .crunch-ul .crunch-quarto-figure .crunch-p}
+
+*[(Reminder: Miracle of Immaculate Genocide)](#ontology-individuals-and-structures)*
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![From @cheng_art_2018 [*The Art of Logic*](https://www.youtube.com/watch?v=YHZKX0H6cUE) [plz watch, if you can!]](images/cheng_plane.jpg){fig-align="center" width="360"}
+
+<!-- 17m 58s -->
+
+:::
+::: {.column width="50%"}
+
+![](images/camara.jpg){fig-align="center" width="320"}
+
+:::
+::::
+
+## References {.smaller .crunch-title}
+
+::: {#refs}
+:::
+
+## Appendix / Bonus Showing-Up-Early Material {.smaller .title-11 .crunch-title .crunch-blockquote .crunch-ul .crunch-p .cols-va}
+
+*(Jeff's Sanctimonious Unc Corner)*
+
+:::: {.columns}
+::: {.column width="50%"}
+
+* Being Bayesian $\neq$ Not Taking Sides:
+  
+  > Rather than implying moral relativism, this position posits the formulation of **moral judgments** as **outcomes** rather than **preconditions** of research. [@kalyvas_logic_2006]
+
+* Axiom/Antecedent: *The life of a single human is worth a million times more than the property of the richest man on earth*
+* Evidence: (History of social movements)
+* Consequent: *"On the side of poor people getting organized, on the side of choice where it is in short supply, on the side of those the system doesn't authorize, LGBT, we are on the side of pride"*
+
+:::
+::: {.column width="50%"}
+
+![B. Dolan, [*Which Side Are You On?*](https://www.youtube.com/watch?v=oKHf1YVATfk)](images/free_cece.jpg){fig-align="center"}
+
+:::
+::::

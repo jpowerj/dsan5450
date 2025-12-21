@@ -1,0 +1,107 @@
+---
+title: "Kantian Ethics: The Hypothetical and Categorical Imperative"
+author: "Jeff Jacobs"
+sidebar: mainnav
+date: 2025-02-08
+bibliography: "../../_DSAN5450.bib"
+relevance: "HW1"
+categories:
+  - "Extra Writeups"
+  - "Deep(er) Dives"
+format:
+  html:
+    df-print: kable
+    html-math-method: mathjax
+    toc: true
+---
+
+Homework 1 had a series of questions where you were asked to distinguish whether a given statement was more "directly" implied by Consequentialism or Kantian Ethics: in this writeup, my goals are:
+
+(a) To clarify exactly what it means for certain statements to be **"directly"** vs. **"indirectly"** implied by some ethical system^[Here, for source/inspiration-citing purposes, hats off to Trey for pushing on this point in class!], and
+(b) To clarify how, even though it may seem at first glance like **both** of these systems require thinking about consequences:
+    * **Consequentialism** focuses on the consequences that you think **really will** follow from your actions, whereas
+    * **Kantian Ethics** focuses instead on the consequences that would result **hypothetically** if **everyone in the world** adopted your decision-making as a rule.
+
+Those two goals, however, are written in chronological order based on when they came up in the class or in office hours! So, for ease-of-explanation pursposes, I will address them in reverse order in the following two sections.
+
+## Kantian Ethics and the Push-Button Brain Zapper^[A huge thanks to Ofure for asking helpful questions that led me to this explanation!]
+
+To understand the difference between Consequentialism and Kantian Ethics, at least in the way we employed these terms for HW1, imagine you have a small handheld device called a Brain Zapper^[The Brain Zapper works kind of like the [Neuralyzer](https://meninblack.fandom.com/wiki/Neuralyzer) from the movie Men in Black. (I've never seen this movie, but, from what I understand it zaps people's brains to basically overwrite their memories of something!) The Brain Zapper is like a Neuralyzer but with two screens on it, as described below.] that works as follows:
+
+The Brain Zapper is really two devices in one, sharing a brain-wave-reader but separated into two CPUs and two screens:
+
+* The device on the left side is labeled "Consequentialism"
+* The device on the right side is labeled "Kantian Ethics"
+
+![[Image Credit](https://www.wired.com/review/lg-g8x-thinq-dual-screen/)](images/brain_zapper_2.jpg){fig-align="center"}
+
+Here we'll model how these two screens would "process" the decision of whether or not to do some action $a$:
+
+* We'll assume your name is [**Doug**](https://www.tiktok.com/@only1jdugg/video/6898153811450383621), since we need a way to distinguish you from everyone else, but you can replace "Doug" with your real name!
+* We'll denote "Doing $a$" with just the symbol $a$, whereas
+* We'll denote "**Not** doing $a$" with $\neg a$, so that
+* Doug's **choice set** is $C = \{a, \neg a\}$
+
+Under these terms, the Brain Zapper activates when Doug start thinking a thought like "Should I choose $a$ or $\neg a$?" The two sides of the Brain Zapper then both run a series of ultra-advanced societal simulations, but of *different kinds*:
+
+| Utilitarian CPU | Kantian CPU |
+| - | - |
+| <i class='bi bi-1-circle'></i> Simulate two worlds: | <i class='bi bi-1-circle'></i> Simulate two worlds: |
+| $\mathcal{W}_{a}$: The world from moment of action onwards if Doug chooses $a$ | $\mathcal{W}_{a}$: The world from moment of action onwards if **everyone in the world adoped rule:** [*when in this scenario, choose $a$*] |
+| $\mathcal{W}_{\neg a}$: The world from moment of action onwards if Doug chooses $\neg a$ | $\mathcal{W}_{\neg a}$: The world from moment of action onwards if **everyone in the world adoped rule:** [*when in this scenario, choose $\neg a$*] |
+| <i class='bi bi-2-circle'></i> Decide which is **better** on the basis of some criteria. Since we chose **utilitarianism**, decide based on **utility** summed over society:<br>$\displaystyle \max\left\{ \mathbb{E}[u_i(\mathcal{W}_{a})], \mathbb{E}[u_i(\mathcal{W}_{\neg a})] \right\}$ | <i class='bi bi-2-circle'></i> $a$ is **admissible** under **categorical imperative** if $\mathcal{W}_{a}$ is a world you would feel ok living in.<br>$\neg a$ is **admissible** under **categorical imperative** if $\mathcal{W}_{\neg a}$ is a world you would feel ok living in. |
+
+## "Best" vs. "Admissible"
+
+So, note that for example, under Utilitarianism it is in some sense "unlikely" that the two actions would be equally good (they would have to both result in the exact same level of expected overall utility forever into the future), whereas under Kantian ethics we might regularly encounter scenarios which give rise to multiple admissible choices:
+
+* Choosing between Ranch Dressing and Balsalmic Vinaigrette Dressing on your Greek Salad **will** usually have a Utilitarian **"best"** option: if choosing Ranch provides even 0.0000001 more utility for you, and if choosing it doesn't decrease anyone else's utility, then Ranch is the "correct" choice
+* **Both** choices will likely be admissible under Kantian ethics, which makes more sense if we look at them one by one:
+  * Would you feel ok living in a world where everyone put Ranch Dressing on their Greek Salads?^[Notice my sleight-of-hand here: Why wouldn't the rule be "Put Ranch Dressing on *any* salad", or "Put Ranch Dressing on *all food*", for example? This is called the "Problem of Relevant Descriptions", and you can find a summary in @timmons1997decision or (even better imo) the chapter on Kant in @russell1946history]
+  * Would you feel ok living in a world where everyone put Balsalmic Vinaigrette Dressing on their Greek Salads?
+
+## A Harder Case
+
+### "Getting Away With" Choosing Ranch Dressing vs. "Getting Away With" Speeding
+
+The Kantian approach comes more into play when we think about, e.g., "getting away with" some action. This was Kant's original motivation for proposing an alternative to utilitarianism: he believed Utilitarianism could never **compel** individual people to **act ethically**, since they would say, "Ok but, if *I'm* better off... why do *I* care if the rest of society is worse off?"
+
+The next step in Kant's thought process (as in, how he ended up at this conclusion) is way tough to follow, but boils down in Jeff's trying-to-simplify-everything-despite-rushing-to-finish-this-writeup brain to something like:
+
+* <i class='bi bi-1-circle'></i> Morality is intertwined with freedom, in the sense that if we want to be truly moral we have to arrive at our decisions through our **own thought processes**, driven by **internally-generated motivations**, rather than on the basis of some externally-given criterion/source of motivation like that of Utilitarianism^[Existentialism, a not-that-different ethical theory that draws on Kant, would make it a point to add [Religion](https://www.marxists.org/reference/archive/sartre/works/exist/sartre.htm) to the list of inadmissible-because-externally-given criteria/sources of motivation. We'll come back to Existentialism at the very end of the semester!]. So then [rushing through 40ish years of him changing, updating, augmenting this theory],
+* <i class='bi bi-2-circle'></i> Freely-made decisions grounded in internally-generated motivations must be arrived at via some **law(s)** that are **not** "inputted" into our minds from the external world (otherwise, we could just hit people with the Utilitarianism stick for years and years until they internalized Utilitarianism, which is what Britain tried through e.g. their education system in the 19th century, and yet people raised in this system still acted "immorally" in the Utilitarian sense all the time!), but are instead ["immanent"](https://www.dictionary.com/browse/immanent)---i.e., derived from within the mind itself without reference to external circumstances (height, weight, ability, class, race, gender, etc.)^[This is basically where Rawls got the "Veil of Ignorance" idea from---a point he himself readily admits in @rawls1980kantian!]
+* <i class='bi bi-3-circle'></i> After even more years of thinking about this, Kant's final set of works argued that the sole coherent / consistent-in-and-of-itself law that could possibly satisfy this ultra-stringent set of conditions is the **Categorical Imperative** described above, which is usually translated into English as:
+
+  > *"Act only according to that maxim^[For our purposes, you can just read "maxim" as "rule". In non-oversimplified-Kant-world they're technically not the same!] by which you can at the same time will that it should become a universal law."* @kant1785groundwork
+
+For any clarity beyond this painfully-badly-oversimplified 3-step summary, I refer yall to @korsgaard1996creating, or the series of lectures which aimed to summarize that more-intense book, @korsgaard_sources_1996, a PDF of which is linked to from the [Resources](../../resources.qmd) page!
+
+### The Case of Speeding
+
+So, now let's re-run the Brain Zapper, but with **speeding because we're late to an appointment** (the HW1 example) as our test case.
+
+| Utilitarian CPU | Kantian CPU |
+| - | - |
+| <i class='bi bi-1-circle'></i> Simulate two worlds: | <i class='bi bi-1-circle'></i> Simulate two worlds: |
+| $\mathcal{W}_{a}$: The world from moment of action onwards if Doug chooses to speed | $\mathcal{W}_{a}$: The world from moment of action onwards if **everyone in the world adoped rule:** [*if late to appointment, speed*] |
+| $\mathcal{W}_{\neg a}$: The world from moment of action onwards if Doug chooses not to speed | $\mathcal{W}_{\neg a}$: The world from moment of action onwards if **everyone in the world adoped rule:** [*if late to appointment, don't speed*] |
+| <i class='bi bi-2-circle'></i> Decide which is **better** on the basis of some criteria. Since we chose **utilitarianism**, decide based on **utility** summed over society:<br>$\displaystyle \max\left\{ \mathbb{E}[u_i(\mathcal{W}_{a})], \mathbb{E}[u_i(\mathcal{W}_{\neg a})] \right\}$ | <i class='bi bi-2-circle'></i> Speeding is **admissible** under **categorical imperative** if $\mathcal{W}_{a}$ is a world you would feel ok living in.<br>Not-speeding is **admissible** under **categorical imperative** if $\mathcal{W}_{\neg a}$ is a world you would feel ok living in. |
+
+In this case, we are likely to have a pretty significant disagreement between the two approaches:
+
+* For the Utilitarian approach, let's grant that there really is a low probability of crashing in this scenario (though, the argument could still be made without this assumption, using ideas like ["bounded rationality"](https://en.wikipedia.org/wiki/Bounded_rationality)), and that it is indeed really bad for Doug to be late, so that the **expected utility to Doug** from making it to the appointment on time outweighs the **expected disutility to the rest of society** from the low probability of crashing. Then: $\mathbb{E}[u_i(\mathcal{W}_a)] > \mathbb{E}[u_i(\mathcal{W}_{\neg a})]$, and $a$ is the ethically "correct" choice under this form of the Utilitarian antecedent
+* For the Kantian approach, speeding would **not** be admissible, since, e.g., [there are huge huge leaps of inference here, that you would usually have to sto and justify one-by-one... I'm simplifying for the sake of finishing this writeup, sryy] everyone speeding whenever they're late would give rise to a world filled with a way higher likelihood of car crashes than we already have now, in turn raising the likelihood of crashes which would severely negatively affect **Doug specifically** (which is the crucial consideration, since we're just back at utilitarianism if we judge based on overall likelihood of crashes). In Kant's way of arguing, he would then proceed like: since humans cannot rationally will a rule deleterious to themselves^[Final footnote here: Kant often has to hedge at this point and say things like, humans *can* rationally will a rule which *seems* deleterious to themselves, but is not actually deleterious to themselves, due to their intrinsic valuation of e.g. *fairness*, which cancels out the "vulgar" idea that $9.01 for me and $0 for you is better than $9 for me and $9 for you. But, for this specific example, we don't need to bring in fairness/inequality, since we are directly "drilling down to" Doug's aversion to being hit by a car, rather than aversion to unfairness or inequality between car-hitting chances.], speeding is **inadmissible** due to it failing the categorical imperative.
+
+## Why It's Called the Brain Zapper
+
+Lastly, if you've gotten this far, I have yet to explain the name of the device! It's called the Brain Zapper because, to "act ethically" in the Kantian sense, you must be ready to accept a world where the decisions you make are suddenly "zapped" into the brains of everyone on earth (now and into the future) as a rule!
+
+So, to truly act ethically, you have to be willing to **put your money where your mouth is** (we'll return to this phrase, like, a lot as we get towards the end of the semester!): willing to allow the Brain Zapper to send out a Neuralizer-style wave, suddenly binding everyone in the world to follow the implied rule. Does this sound relevant to something we are also concerned with in this class? That's right: Laws! Policies! More on this connection coming soon (around week... 10ish).
+
+<!-- 
+
+|  | $\mathcal{W}_{a}$: The world from moment of action onwards if Doug chooses $a$<br>$\mathcal{W}_{\neg a}$: The world from moment of action onwards if Doug chooses $\neg a$ | <i class='bi bi-1-circle'></i> Simulate two worlds:<br><br>$\mathcal{W}_{\neg a}$: The world from moment of action onwards if Doug chooses $\neg a$<br><br><i class='bi bi-2-circle'></i> Decide which is **better** in terms of **utility** summed over society:<br>$\displaystyle \max\left\{ \mathbb{E}_i[u_i(\mathcal{W}_{a})], \mathbb{E}_i[u_i(\mathcal{W}_{\neg a})] \right\}$ |
+| <br><br><i class='bi bi-2-circle'></i> Decide which is **better** in terms of **utility** summed over society:<br>$\displaystyle \max\left\{ \mathbb{E}_i[u_i(\mathcal{W}_{a})], \mathbb{E}_i[u_i(\mathcal{W}_{\neg a})] \right\}$ | <br><br><i class='bi bi-2-circle'></i> Decide which is **better** in terms of **utility** summed over society:<br>$\displaystyle \max\left\{ \mathbb{E}_i[u_i(\mathcal{W}_{a})], \mathbb{E}_i[u_i(\mathcal{W}_{\neg a})] \right\}$ |
+
+-->
+
