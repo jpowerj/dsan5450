@@ -15,8 +15,9 @@ The course meets on **Wednesdays from 3:30-6pm in the [Walsh Building](https://m
 
 * Prof. Jeff Jacobs, [`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)
   * Office hours (Click to schedule): [Tuesdays, 3:30-6:30pm](https://jjacobs.me/meet)
-* TA Christy Hsu, [`mev71@georgetown.edu`](mailto:mev71@georgetown.edu)
-* TA Sam Sofman, [`sbs106@georgetown.edu`](mailto:sbs106@georgetown.edu)
+* TA Ellie Byrd, [`eb1481@georgetown.edu`](mailto:eb1481@georgetown.edu)
+* TA Christy Hsu, [`th1010@georgetown.edu`](mailto:th1010@georgetown.edu)
+* TA Wendy Hu, [`lh1078@georgetown.edu`](mailto:lh1078@georgetown.edu)
 
 ## Course Description
 
@@ -35,7 +36,7 @@ The course revolves around three "pillars", which we'll examine individually bef
 A portion of the course will focus on introductions to cutting-edge technologies like self-driving cars, ChatGPT, facial detection algorithms, and various applications of AI to police and military technologies. For this portion, we'll draw fairly often from the contents of the following books:
 
 * @perez_invisible_2019: *Invisible Women: Data Bias in a World Designed for Men*.
-* Catherine D'Ignazio and Lauren F. Klein (2020). <i><a href='https://data-feminism.mitpress.mit.edu/' target='_blank'>Data Feminism</a></i>. Cambridge, MA: MIT Press. [Free, open-source!]
+* Catherine D'Ignazio and Lauren F. Klein (2020). [*Data Feminism*](https://data-feminism.mitpress.mit.edu/). Cambridge, MA: MIT Press. [Free, open-source!]
 * Cathy O'Neil (2016). *[Weapons of Math Destruction](https://en.wikipedia.org/wiki/Weapons_of_Math_Destruction)*. New York, NY: Crown Books.
 
 Since there are plenty of in-depth resources available to you (e.g., other Georgetown courses!) for learning the *technical details* of these technologies, our goal in this course will be to learn just the particular *aspects* of each technology which are most relevant to the ethical and policy issues they present.
@@ -56,7 +57,7 @@ For the final piece of the course we will take the **technological developments*
 
 For this portion of the class we'll have to draw on a wide range of different readings, depending on what particular subdomains of public policy are most interesting to you all, but as a general textbook on ethics in data science which does focus a good amount on **policy** specifically, we will look at:
 
-* Anne L. Washington (2023). <i><a href=' https://annewashington.com/book-ethical-data-science-prediction-in-the-public-interest/' target='_blank'>Ethical Data Science: Prediction in the Public Interest</a></i>. New York, NY: Oxford University Press.
+* Anne L. Washington (2023). [*Ethical Data Science: Prediction in the Public Interest*](https://annewashington.com/book-ethical-data-science-prediction-in-the-public-interest/). New York, NY: Oxford University Press.
 
 Now that you have an overview of the trajectory of the course, the following section contains the particulars of what we'll be reading and working on each week!
 
@@ -95,12 +96,6 @@ The following is a rough map of what we will work through together throughout th
 </tr>
 <tr>
     <td></td>
-    <td></td>
-    <td><span data-qmd="*Jan 31 (Friday), 5:59pm EST*"></span></td>
-    <td><span data-qmd="*[Deliverable] <a href='{{< var hw1.url >}}' target='_blank'>HW1: {{< var hw1.title >}}</a>*"></span></td>
-</tr>
-<tr>
-    <td></td>
     <td>4</td>
     <td><span data-qmd="{{< var w04.date-md >}}"></span></td>
     <td><span data-qmd="[{{< var w04.title >}}](./w04/)"></span></td>
@@ -116,12 +111,6 @@ The following is a rough map of what we will work through together throughout th
     <td>6</td>
     <td><span data-qmd="{{< var w06.date-md >}}"></span></td>
     <td><span data-qmd="[{{<var w06.title >}}](./w06/)"></span></td>
-</tr>
-<tr>
-    <td></td>
-    <td></td>
-    <td><span data-qmd="*Feb 21 (Friday), 5:59pm EST*"></span></td>
-    <td><span data-qmd="*[Deliverable] <a href='{{< var hw2.url >}}' target='_blank'>HW2: {{< var hw2.title >}}</a>*"></span></td>
 </tr>
 <tr class='new-unit'>
     <td><span data-qmd="**Midterm**"></span></td>
@@ -193,22 +182,29 @@ The main assignment in the course will be your **policy whitepaper**, submitted 
 
 | Assignment | Due Date | % of Grade |
 | - | - | - |
-| <a href='{{< var hw1.url >}}' target='_blank'>HW1: {{< var hw1.title >}} <i class='bi bi-box-arrow-up-right ps-1'></i></a> | {{< var hw1.date-full >}} | 10% |
-| <a href='{{< var hw2.url >}}' target='_blank'>HW2: {{< var hw2.title >}} <i class='bi bi-box-arrow-up-right ps-1'></i></a> | {{< var hw2.date-full >}} | 10% |
-| Midterm | Wednesday, **February 28** | 30% |
-| <a href='{{< var hw3.url >}}' target='_blank'>HW3: {{< var hw3.title >}} <i class='bi bi-box-arrow-up-right ps-1'></i></a> | {{< var hw3.date-full >}} | 10% |
-| HW4: {{< var hw4.title >}} | {{< var hw4.date-full >}} | 10% |
-| [Policy Whitepaper](./final.qmd) | Friday, **May 10** | 30% |
+| [HW1: {{< var hw1.title >}}]({{< var hw1.url >}}) | {{< var hw1.date-full >}} | 9% |
+| <a href='{{< var hw2.url >}}' target='_blank'>HW2: {{< var hw2.title >}} <i class='bi bi-box-arrow-up-right ps-1'></i></a> | {{< var hw2.date-full >}} | 9% |
+| In-Class Midterm | Wednesday, **February 25** | 25% |
+| <a href='{{< var hw3.url >}}' target='_blank'>HW3: {{< var hw3.title >}} <i class='bi bi-box-arrow-up-right ps-1'></i></a> | {{< var hw3.date-full >}} | 9% |
+| HW4: {{< var hw4.title >}} | {{< var hw4.date-full >}} | 9% |
+| HW5: {{< var hw5.title >}} | {{< var hw5.date-full >}} | 9% |
+| [Policy Whitepaper](./final.qmd) | Friday, **May 8** | 30% |
 
 : {tbl-colwidths="[55,25,20]"}
 
 ### Homework Lateness Policy
 
-After the due date, for each **homework** assignment, you will have a grace period of 24 hours to submit the assignment without a lateness penalty. After this 24-hour grace period, late penalties will be applied based on the following scale (unless you obtain an excused lateness from one of the instructional staff!):
+After the due date, for each **homework** assignment, you will have a grace period of 24 hours to submit the assignment without a lateness penalty. After this 24 hour grace period, late penalties will be applied up until 66 hours after the due date. Specifically, late penalties will be applied based on the following scale (unless you obtain an excused lateness from one of the instructional staff!):
 
-* 0 to 24 hours late: no penalty
-* 24 to 30 hours late: 2.5% penalty
-* 30 to 42 hours late: 5% penalty
-* 42 to 54 hours late: 10% penalty
-* 54 to 66 hours late: 20% penalty
-* More than 66 hours late: Assignment submissions no longer accepted (without instructor approval)
+* **0 to 24 hours** after due date: no penalty
+* **24 to 30 hours** after due date: 2.5% penalty
+* **30 to 42 hours** after due date: 5% penalty
+* **42 to 54 hours** after due date: 10% penalty
+* **54 to 66 hours** after due date: 20% penalty
+* **More than 66 hours** after due date: Assignment submissions no longer accepted (without instructor approval)
+
+Excused lateness exceptions will be grounded in a policy where you can "pause" the class (due-date-wise, but also just, expectation-of-progress-wise more generally) to take the time you need to handle things happening in your life. Then, you can "resume" work once you feel more centered/once you find yourself back on stable ground. The ["Maslow's hierarchy"](https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs) model from psychology (@fig-maslow) provides a straightforward way to think about this approach.
+
+![Maslow's Hierarchy of Needs, from [Wikimedia](https://commons.wikimedia.org/wiki/File:Maslow%27s_Hierarchy_of_Needs_Pyramid_(original_five-level_model).png)](images/maslow.png){#fig-maslow fig-align="center" width="70%"}
+
+Learning data ethics is way up there in the blue triangle, so, it's important that you feel like the first four levels are solidified before you turn your focus back to classwork. And, it's a win-win, because it means that once you're back in action you can be more engaged and receptive to new topics, rather than being forced to "simulate" being in the blue triangle while in reality struggling in other spots!
