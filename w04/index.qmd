@@ -1,10 +1,10 @@
 ---
 title: "Week 4: (Descriptive) Fairness in AI"
-subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2025, Georgetown University</span>"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2026, Georgetown University</span>"
 author: "Jeff Jacobs"
 institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
 bibliography: "../_DSAN5450.bib"
-date: 2025-02-05
+date: 2026-02-04
 date-format: full
 lecnum: 4
 categories:

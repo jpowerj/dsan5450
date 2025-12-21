@@ -1,10 +1,10 @@
 ---
 title: "Week 2: Machine Learning, Training Data, and Biases"
-subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2025, Georgetown University</span>"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2026, Georgetown University</span>"
 author: "Jeff Jacobs"
 institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
 bibliography: "../_DSAN5450.bib"
-date: 2025-01-22
+date: 2026-01-21
 date-format: full
 lecnum: 2
 categories:
@@ -17,7 +17,7 @@ format:
     link-external-newwindow: true
     output-file: "slides.html"
     html-math-method: mathjax
-    css: "../dsan-globals/jjstyles.css"
+    theme: [default, "../dsan-globals/jjquarto.scss"]
     scrollable: true
     slide-number: true
     include-in-header:
