@@ -9,7 +9,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="Jeff Jacobs">
@@ -52,7 +55,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c59f08653608056fecc96b8077358242.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d640f0bc8d393e73f97071aa07314283.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -170,40 +173,386 @@ Jeff Jacobs
   <p class="date">Wednesday, January 21, 2026</p>
 </section>
 <section>
-<section id="weeks-2-4-slouching-towards-fairness" class="title-slide slide level1 smaller not-title-slide title-09 center" data-stack-name="Recap">
+<section id="weeks-2-4-slouching-towards-fairness" class="title-slide slide level1 smaller not-title-slide title-09 center" data-stack-name="Ethical Arguments">
 <h1>Weeks 2-4: Slouching Towards Fairness</h1>
 <ul>
-<li>First half: Remaining high-level issues!</li>
-<li>Second half: you’ll start to understand why I kept maniacally pointing to <span class="math inline">\(p \implies q\)</span> on the board last lecture!</li>
+<li>Soon you’ll understand why I kept maniacally pointing to <span class="math inline">\(p \Rightarrow q\)</span> on board last week!</li>
 <li>“Rules” for fairness are not “rules” at all! They’re statements of the form <strong>“If we accept ethical framework <span class="math inline">\(x\)</span>, then our algorithms ought to satisfy condition <span class="math inline">\(y\)</span>”</strong></li>
 </ul>
 <p><span class="math display">\[
 \underbrace{p(x)}_{\substack{\text{Accept ethical} \\ \text{framework }x}} \implies \underbrace{q(y)}_{\substack{\text{Algorithms should} \\ \text{satisfy condition }y}}
 \]</span></p>
 <ul>
-<li>Last week: very broad intro to <strong>possible ethical frameworks</strong> (values for <span class="math inline">\(x\)</span>)</li>
-<li>Today: very broad intro to <strong>possible fairness criteria</strong> (values for <span class="math inline">\(y\)</span>)</li>
-<li>End of today: <strong>HW1: Nuts and Bolts for Evaluating Fairness</strong></li>
+<li><i class="bi bi-1-circle"></i> Very broad intro to <strong>possible ethical frameworks</strong> (values for <span class="math inline">\(x\)</span>)</li>
+<li><i class="bi bi-2-circle"></i> Very broad intro to <strong>possible fairness criteria</strong> (values for <span class="math inline">\(y\)</span>)</li>
+<li><span class="math inline">\(\leadsto\)</span> <strong>HW1: Nuts and Bolts for Evaluating Fairness</strong></li>
 </ul>
 </section>
-<section id="where-we-left-off-ethical-issues-in-data-science" class="slide level2 title-09 crunch-quarto-layout-panel crunch-quarto-figure crunch-title">
-<h2>Where We Left Off: Ethical Issues in Data Science</h2>
+<section id="recap-ethical-systems-and-promise-keeping" class="slide level2 text-65 callout-fix crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-ul title-11 crunch-li-8 crunch-img crunch-callout-12">
+<h2>Recap: Ethical Systems and Promise-Keeping</h2>
+<div title="Our First Ethical Dilemma 🥳">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Our First Ethical Dilemma 🥳</strong></p>
+</div>
+<div class="callout-content">
+<div class="quarto-layout-panel" data-layout="[85,15]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="pie-left" class="quarto-layout-cell" style="flex-basis: 85.0%;justify-content: flex-start;">
 <ul>
-<li>Data Science for Who? ✅</li>
-<li>Individuals <span class="math inline">\(\leftrightarrow\)</span> Structures 👀</li>
+<li>Scenario: You just baked a pie, and you <strong>promised</strong> your friend you’d give them the pie. You walk to friend’s house to give them the pie.</li>
+<li>Suddenly, you encounter a <strong>hostage-taker</strong> who will <strong>kill their hostage</strong> unless someone <strong>gives them a pie</strong> within 1min. Do you give your pie?</li>
+</ul>
+</div>
+<div id="pie-right" class="quarto-layout-cell" style="flex-basis: 15.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pie_window.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="quarto-layout-panel" data-layout="[43,57]">
+<div class="quarto-layout-row">
+<div id="conseqentialism" class="quarto-layout-cell" style="flex-basis: 43.0%;justify-content: flex-start;">
+<center>
+<strong>Consequentialist Ethics <span class="math inline">\(\implies\)</span> Yes</strong>
+</center>
+<ul>
+<li>To be ethical is to weigh <strong>expected consequences</strong> of your actions</li>
+<li><strong>Positive consequences</strong> of giving pie (saving a life) outweigh <strong>negative consequences</strong> (breaking promise)</li>
+<li>Ex: <strong>Utilitarianism</strong> (Jeremy Bentham)</li>
+<li><span style="font-size: 80%;"><em>(Complication: <a href="https://en.wikipedia.org/wiki/Rule_utilitarianism">Rule Utilitarianism</a> = choose rule that produces greatest good 😵‍💫)</em></span></li>
+</ul>
+</div>
+<div id="deontology" class="quarto-layout-cell" style="flex-basis: 57.0%;justify-content: flex-start;">
+<center>
+<strong>Deontological Ethics <span class="math inline">\(\implies\)</span> No</strong>
+</center>
+<ul>
+<li>To be ethical is to live by <strong>rules</strong> which you would <strong>want everyone to follow</strong>, even if you following them <strong>doesn’t lead to others following them</strong> (<strong>non</strong>-consequentialist!)</li>
+<li>As a <strong>rule</strong> (a “categorical imperative”), you <strong>must not break promises</strong>. (Breaking <span class="math inline">\(\Rightarrow\)</span> others can also “pick and choose” when to honor promises to you)</li>
+<li>Ex: <strong>Kantian Ethics</strong> (Immanuel Kant)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="making-and-evaluating-ethical-arguments" class="slide level2">
+<h2>Making and Evaluating Ethical Arguments</h2>
+<ul>
+<li>The gist: A doctor who <strong>diagnoses</strong> cancer in a patient does not thereby <strong>morally endorse</strong> the presence of the cancer in the patient…</li>
+</ul>
+</section>
+<section id="descriptive-vs.-normative" class="slide level2 text-65 crunch-title crunch-quarto-layout-panel">
+<h2>Descriptive vs.&nbsp;Normative</h2>
+<div class="quarto-layout-panel" data-layout-align="center" data-layout="[1,1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="norm-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<center>
+ <video width="70%" controls="">
+  <source src="https://jpj.georgetown.domains/dsan5450-scratch/rudy.mp4" type="video/mp4">
+</video> 
+</center>
+</div>
+<div id="norm-img" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/bin_laden.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="@binladen_messages_2005"><img data-src="images/bin_laden.jpeg" alt="bin Laden (2005)"></a></p>
+<figcaption><span class="citation" data-cites="binladen_messages_2005">bin Laden (<a href="#/references" role="doc-biblioref" onclick="">2005</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<colspec>
+</colspec><table>
+<colgroup><col style="width: 10%;">
+
+<col style="width: 40%;">
+
+<col style="width: 50%;">
+
+</colgroup>
+<thead>
+<tr>
+<th>
+</th>
+<th align="center">
+Descriptive Mode
+</th>
+<th align="center">
+Normative Mode
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>Statement</strong>
+</td>
+<td>
+“He attacked us <span class="boxed-cb">because*</span> we’d been bombing Iraq for 10 years”<br><span style="font-size: 70%">* <em>(“Standard” prior: agent’s stated reason)</em></span>
+</td>
+<td>
+“He attacked us because we had been bombing Iraq for 10 years, <strong>and that is a good justification</strong>”
+</td>
+</tr>
+<tr>
+<td>
+<strong>True or False?</strong>
+</td>
+<td>
+<strong>Descriptively True</strong> (empirically and/or intersubjectively verifiable)<br>
+<div style="font-size: 75%; line-height: 1.2; margin-top: 8px;">
+<em>(Descriptively false if (a) we hadn’t been bombing Iraq for 10 years or (b) bin Laden didn’t state this as his reason)</em>
+</div>
+</td>
+<td>
+<strong>Normatively True</strong> (entailed by axioms + descriptive facts) in some ethical systems,<br><strong>Normatively False</strong> (not entailed by axioms + descriptive facts) in others
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="the-is-ought-distinction" class="slide level2 crunch-title aside-65">
+<h2>The <em>Is-Ought Distinction</em></h2>
+<div title="Hume on *Is* vs. *Ought* [@hume_treatise_1739]">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Hume on <em>Is</em> vs.&nbsp;<em>Ought</em> <span class="citation" data-cites="hume_treatise_1739">(<a href="#/references" role="doc-biblioref" onclick="">Hume 1739</a>)</span></strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><em>The author proceeds for some time in the ordinary way of reasoning…</em></li>
+<li><em>suddenly, instead of the usual propositions <strong>is</strong> and <strong>is not</strong>,</em></li>
+<li><em>we encounter an <strong>ought</strong>, or an <strong>ought not</strong>.</em></li>
+<li><em>This change is imperceptible; but is, however, of the last consequence.</em></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Descriptive (Is)</th>
+<th>Normative (Ought)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Grass is green (true)</td>
+<td>Grass ought to be green (?)</td>
+</tr>
+<tr class="even">
+<td>Grass is blue (false)</td>
+<td>Grass ought to be blue (?)</td>
+</tr>
+</tbody>
+</table>
+
+<aside><div>
+<p>For those (rightfully!) questioning the assertion of “true”/“false” without justification here: (a) prepend “intersubjectively”, (b) read <span class="citation" data-cites="hare_language_1952">Hare (<a href="#/references" role="doc-biblioref" onclick="">1952</a>)</span> 🤓</p>
+</div></aside></section>
+<section id="what-happens-when-we-confuse-the-two" class="slide level2 crunch-title text-90 title-07 crunch-quarto-layout-panel crunch-quarto-figure">
+<h2>What Happens When We Confuse The Two?</h2>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="interpretation" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>Makes it impossible to “cross the boundary” between your own and others’ beliefs</li>
+<li><em>Collective welfare</em>: Bad on its own terms (see: wars, racism, etc.)</li>
+<li><em>Self-interest</em>: Prevents us from <strong>convincing</strong> other people of our arguments</li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/geertz.jpg" width="360"></p>
+<figcaption><span class="citation" data-cites="geertz_interpretation_1973">Geertz (<a href="#/references" role="doc-biblioref" onclick="">1973</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="collective-vs.-self-interest" class="slide level2 smaller crunch-quarto-layout-panel crunch-title crunch-quarto-figure">
+<h2>Collective vs.&nbsp;Self-Interest</h2>
+<div class="quarto-layout-panel" data-layout="[60,40]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="collective-action" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
+<ul>
+<li><strong>Good for group of people <span class="math inline">\(\; \;\not\!\!\!\!\implies\)</span> good for each individual person in group! (😰)</strong></li>
+<li><span class="math inline">\(p\)</span> = <em>Unions improve everyone’s workplace conditions, whether or not they pay dues</em></li>
+<li><span class="math inline">\(q\)</span> = <em>Union dues are voluntary</em></li>
+<li><span class="math inline">\(p \wedge q \Rightarrow\)</span> Can obtain union benefits without paying</li>
+<li><span class="math inline">\(\Rightarrow\)</span> <strong>Individually rational</strong> to <strong>not</strong> pay</li>
+<li><span class="math inline">\(\Rightarrow\)</span> (“Right to work” laws <span class="math inline">\(\Rightarrow\)</span> no unions)</li>
+<li><strong>Data privacy</strong> implications (data <strong>externalities</strong>)</li>
+<li><strong>Climate change policy</strong> implications 🤔</li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/olson.jpg" width="340"></p>
+<figcaption><span class="citation" data-cites="olson_logic_1965">Olson (<a href="#/references" role="doc-biblioref" onclick="">1965</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="modeling-individual-vs.-societal-outcomes" class="slide level2 smaller title-09 crunch-title crunch-quarto-figure">
+<h2>Modeling Individual vs.&nbsp;Societal Outcomes</h2>
+<ul>
+<li><em>Individual Perspective</em>: <strong>Individual <span class="math inline">\(i\)</span></strong> chooses whether or not to pay union dues</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/schelling_open_shop.svg" class="quarto-figure quarto-figure-center" width="520"></p>
+</figure>
+</div>
+<center>
+<p><span class="math inline">\(\implies\)</span> <em>Social Outcome</em>: No Union</p>
+</center>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/schelling_closed_shop.svg" class="quarto-figure quarto-figure-center" width="520"></p>
+</figure>
+</div>
+<center>
+<p><span class="math inline">\(\implies\)</span> <em>Social Outcome</em>: Union Possible</p>
+</center>
+</div></div>
+
+<aside><div>
+<p>Key reading: <span class="citation" data-cites="schelling_micromotives_1978">Schelling (<a href="#/references" role="doc-biblioref" onclick="">1978</a>)</span>, <em>Micromotives and Macrobehavior</em></p>
+</div></aside></section>
+<section id="is-this-just-jeff-yapping-about-unions" class="slide level2 title-08 crunch-title text-90">
+<h2>Is This Just Jeff Yapping About Unions?</h2>
+<ul>
+<li>Invert union model for model of <strong>Data Externalities</strong>:</li>
+<li><strong>Health insurance company</strong> <span class="math inline">\(C\)</span> uses ML to predict rare disease <span class="math inline">\(Y \in \{0, 1\}\)</span> from [public] individual characteristics <span class="math inline">\(X\)</span></li>
+<li>You have rare disease (<span class="math inline">\(Y_i = 1\)</span>), but <span class="math inline">\(C\)</span> doesn’t know bc of data privacy laws (person must consent to share their data)</li>
+<li>Company offers small reward to others <span class="math inline">\(j\)</span> for sharing <span class="math inline">\(Y_j\)</span></li>
+<li><span class="math inline">\(\leadsto\)</span> even if <strong>you</strong> withhold <span class="math inline">\(Y_i\)</span>, others sharing <span class="math inline">\(Y_j\)</span> <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(C\)</span> gets better and better at predicting <span class="math inline">\(\widehat{Y}_i = f(X_i)\)</span></li>
+<li><span class="math inline">\(\leadsto\)</span> <span class="math inline">\(C\)</span> predicts <span class="math inline">\(\widehat{Y}_i = 1\)</span>, refuses to insure you</li>
+</ul>
+<!-- * [Axiom] *Differential Privacy* (HW2) ensures no data leaks -->
+</section>
+<section id="takeaway-for-policy-whitepapers" class="slide level2 crunch-title crunch-ul crunch-quarto-layout-panel crunch-quarto-figure crunch-img">
+<h2>Takeaway for Policy Whitepapers</h2>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="takeaway-text" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>You <em>cannot</em> (just) say, “doing <span class="math inline">\(x\)</span> will be better for society”</li>
+<li>You must <em>also</em> justify benefits to individuals, or at minimum, the individual organization and its stakeholders!</li>
+<li><em>(Is this a normative or descriptive claim?)</em></li>
+</ul>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/commie.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="our-conceptual-toolkit" class="title-slide slide level1 title-11 not-title-slide crunch-quarto-layout-panel crunch-quarto-figure crunch-title center" data-stack-name="Conceptual Toolkit">
+<h1>Our Conceptual Toolkit</h1>
+<style>
+@font-face {
+    font-family: Monsters;
+    src: url('./assets/ScaryHorror-Regular.ttf');
+}
+.monsters-jj {
+    font-family: "Monsters", serif;
+}
+</style>
+<ul>
+<li>Data Science for Who?</li>
+<li><span class="monsters-jj" style="font-size: 120%; color: red;">Humans vs.&nbsp;Computers</span> <span class="math inline">\(\leadsto\)</span> Humans vs.&nbsp;Humans</li>
 <li>Operationalization</li>
-<li>Fair Comparisons</li>
+<li>Apples-to-Apples Comparisons</li>
 <li>Implementation</li>
 </ul>
 </section>
-<section id="structural-domination-the-grapes-of-wrath" class="slide level2 smaller crunch-title title-12 crunch-blockquote blockquote-90 crunch-p-8">
-<h2>Structural Domination: The Grapes of Wrath</h2>
+<section id="data-science-for-who" class="slide level2 crunch-title crunch-ul">
+<h2>Data Science for Who?</h2>
+<ul>
+<li>What are the processes by which data is (or is not) <strong>measured</strong>, <strong>recorded</strong>, and <strong>distributed</strong>?</li>
+<li>Who are the <strong>agents</strong> doing or not-doing these things?</li>
+</ul>
+
+<img data-src="images/missing-datasets.jpg" class="r-stretch quarto-figure-center"><p class="caption">The <a href="https://github.com/MimiOnuoha/missing-datasets" target="_blank">Library of Missing Datasets</a>. From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></p></section>
+<section id="example-measuring-freedom-and-human-rights" class="slide level2 smaller crunch-title">
+<h2>Example: Measuring “Freedom” and “Human Rights”</h2>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-freedom" class="lightbox quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-freedom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/freedom_house_funding.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: The “NGO” whose “freedom index” measure is used by every western political economist"><img data-src="images/freedom_house_funding.jpeg" class="quarto-figure quarto-figure-center"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-freedom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The “NGO” whose “freedom index” measure is used by every western political economist
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-human-rights" class="lightbox quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-human-rights-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/state_dept_human_rights.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: The… [not even masked as an NGO in this case?] government agency whose “human rights score” is used by every western political economist"><img data-src="images/state_dept_human_rights.jpeg" class="quarto-figure quarto-figure-center"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-human-rights-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The… [not even masked as an NGO in this case?] government agency whose “human rights score” is used by every western political economist
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="methodological-individualism" class="slide level2 crunch-title crunch-li-8 footnotes-0">
+<h2>Methodological Individualism</h2>
+<ul>
+<li><strong>Atoms</strong> exhibit properties which are fruitful for understanding the physical world: we can study these properties as “building blocks” <span class="math inline">\(\leadsto\)</span> interactions among atoms with various properties give rise to higher-level physical “things” (molecules, chemicals, cells, organisms)</li>
+<li><strong>Individuals</strong> exhibit properties which are fruitful for understanding the social world: we can study these properties as “building blocks” <span class="math inline">\(\leadsto\)</span> interactions among individuals with various properties give rise to higher-level social processes (dyads, groups, institutions)</li>
+</ul>
+
+<aside><div>
+<p>For overthinkers: <strong>quarks</strong> <span class="math inline">\(\leadsto\)</span> atoms as <strong>mental modules</strong> <span class="math inline">\(\leadsto\)</span> individuals 😉 <span class="citation" data-cites="fodor_modularity_1983">(<a href="#/references" role="doc-biblioref" onclick="">Fodor 1983</a>)</span></p>
+</div></aside></section>
+<section id="humans-vs.-computers-the-grapes-of-wrath" class="slide level2 smaller crunch-title title-11 crunch-blockquote blockquote-90 crunch-p-8">
+<h2>Humans vs.&nbsp;Computers: The Grapes of Wrath</h2>
 <blockquote>
 <p>But… <strong>I built it with my hands!</strong> Straightened old nails to put the sheathing on!</p>
-<p><strong>It’s not me. There’s nothing I can do. I’ll lose my job if I don’t do it.</strong> And look—suppose you kill me? They’ll hang you, and long before you’re hung there’ll be another guy here, he’ll bump the house down. You’re not killing the right guy.</p>
+<p><strong>It’s not me. There’s nothing I can do. I’ll lose my job if I don’t do it.</strong> And look, suppose you kill me? They’ll hang you, and long before you’re hung there’ll be another guy here, he’ll bump the house down. You’re not killing the right guy.</p>
 <p>That’s so… <strong>Who gave you orders? I’ll go after him. He’s the one to kill.</strong></p>
 <p>You’re wrong. <strong>He got his orders from the bank.</strong> ‘Clear those people out or it’s your job.’</p>
-<p>Well, there’s a president of the bank. A board of directors. I’ll fill up my rifle, head to the bank.</p>
+<p>Well there’s a president of the bank, a board of directors. I’ll fill my rifle, head to the bank.</p>
 <p>The bank gets orders from the East. ‘Make the land show profit or we’ll close you up.’ We’re sorry. <strong>It’s not us. It’s the monster.</strong> The bank isn’t like a man.</p>
 <p>Yes, but the bank is only made of men!</p>
 <p>No, you’re wrong there—quite wrong. The bank is something else than men. It happens nowadays that every man in a bank hates what the bank does, and yet the bank does it. The bank is something more than men, I tell you.</p>
@@ -215,32 +564,15 @@ Jeff Jacobs
 <div class="columns">
 <div class="column" style="width:61%;">
 <blockquote>
-<p>No longer preoccupied with crude ‘conspiracy theories’, [progressives] attribute all things negative to handy abstractions: ‘capitalism’, ‘the state’, ‘structural oppression’, ‘hierarchy’. Hence they have been able to conjure what might be termed the ‘miracle of immaculate genocide’, a form of genocide, that is, in which there are <strong>no actual perpetrators</strong>, no one who might ‘really’ be <strong>deemed culpable</strong> <span class="citation" data-cites="churchill_justice_2003">(<a href="#/references" role="doc-biblioref" onclick="">Churchill 2003</a>)</span></p>
+<p>No longer preoccupied with crude ‘conspiracy theories’, [progressives] attribute all things negative to handy <strong>abstractions</strong>: ‘capitalism’, ‘the state’, ‘structural oppression’, ‘hierarchy’. Hence they’ve been able to conjure what might be termed the ‘miracle of immaculate genocide’, a form of genocide, that is, in which there are <strong>no actual perpetrators</strong>, no one who might ‘really’ be <strong>deemed culpable</strong> <span class="citation" data-cites="churchill_justice_2003">(<a href="#/references" role="doc-biblioref" onclick="">Churchill 2003</a>)</span></p>
 <p>We make our own history, but we do not make it as we please; we do not make it under self-selected <strong>circumstances</strong>, but under circumstances existing already, given and <strong>transmitted from the past</strong>. The tradition of all dead generations weighs like a nightmare on the brains of the living. <span class="citation" data-cites="marx_eighteenth_1852">(<a href="#/references" role="doc-biblioref" onclick="">Marx 1852</a>)</span></p>
 </blockquote>
 </div><div class="column" style="width:39%;">
-<!-- ![@giddens_central_1979](images/giddens.jpg){fig-align="center"} -->
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/fight_you_for_it.webp"></p>
-<figcaption><span class="citation" data-cites="sandburg_selected_1926">Sandburg (<a href="#/references" role="doc-biblioref" onclick="">1926</a>)</span></figcaption>
-</figure>
-</div>
+
 </div></div>
-</section></section>
-<section>
-<section id="ethical-issues-part-2" class="title-slide slide level1 center" data-stack-name="Ethical Issues">
-<h1>Ethical Issues Part 2</h1>
-<ul>
-<li>Data Science for Who? ✅</li>
-<li>Individuals <span class="math inline">\(\leftrightarrow\)</span> Structures ✅</li>
-<li>Operationalization 👀</li>
-<li>Fair Comparisons 👀</li>
-<li>Implementation 👀</li>
-</ul>
 </section>
 <section id="operationalization" class="slide level2 smaller crunch-title crunch-li">
-<h2>Operationalization 👀</h2>
+<h2>Operationalization</h2>
 <div class="columns">
 <div class="column" style="width:68%;">
 <ul>
@@ -264,13 +596,13 @@ Jeff Jacobs
 </div>
 </div></div>
 </section>
-<section id="what-is-being-compared" class="slide level2 smaller crunch-title crunch-ul table-87">
-<h2>What Is Being Compared? 👀</h2>
+<section id="what-is-being-compared" class="slide level2 smaller crunch-title title-11 crunch-ul table-85">
+<h2>What Is Being Compared?</h2>
 <table class="caption-top">
 <colgroup>
-<col style="width: 26%">
-<col style="width: 37%">
-<col style="width: 37%">
+<col style="width: 28%">
+<col style="width: 36%">
+<col style="width: 36%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -281,14 +613,14 @@ Jeff Jacobs
 </thead>
 <tbody>
 <tr class="odd">
-<td>Polities w/250-500M people (US ~335M, UP ~250M, EU ~450M)</td>
-<td>Polities w/11M people in the Caribbean (Cuba, Haiti, Dominican Republic)</td>
-<td>Polities w/over 1 billion people (China ~1.4B, India ~1.4B, Africa ~1.4B, ⬆️+⬇️ America ~1B)</td>
+<td>Polities w/250-500M people (US 335M, UP 250M, EU 450M)</td>
+<td>Polities w/10-30M people in LatAm (Venezuela, Cuba, Haiti)</td>
+<td>Polities w/over 1 billion people (China 1.4B, India 1.4B, Africa 1.4B, N+S America 1B)</td>
 </tr>
 <tr class="even">
 <td>Democracies (US)</td>
 <td>Democracies til they democratically elected someone US didn’t like (Iran, Guatemala, Chile)</td>
-<td>Non-democracies which brutally repress democratic movements w/US arms (Saudi Arabia)</td>
+<td>Non-democracies which violently repress democratic movements w/US arms (Saudi Arabia)</td>
 </tr>
 <tr class="odd">
 <td>Colonizing polities (US)</td>
@@ -296,7 +628,7 @@ Jeff Jacobs
 <td>Non-colonized polities (Ethiopia, Thailand)</td>
 </tr>
 <tr class="even">
-<td>Polities w/infrastructure built up over <a href="https://www.nps.gov/articles/000/arrival-of-the-first-africans-in-1619.htm">250+ yrs</a> via slave labor (US 🇺🇸)</td>
+<td>Polities w/infrastructure built up over <a href="https://www.nps.gov/articles/000/arrival-of-the-first-africans-in-1619.htm">250 yrs</a> via slave labor (US 🇺🇸)</td>
 <td>Polities populated by former slaves (Liberia 🇱🇷)</td>
 <td>Polities that <a href="https://en.wikipedia.org/wiki/Reparations_Agreement_between_Israel_and_the_Federal_Republic_of_Germany">paid reparations</a> to descendants of [certain] enslaved groups (Germany)</td>
 </tr>
@@ -313,18 +645,18 @@ Jeff Jacobs
 </tbody>
 </table>
 </section>
-<section id="how-are-they-being-compared" class="slide level2">
+<section id="how-are-they-being-compared" class="slide level2 crunch-title">
 <h2>How Are They Being Compared?</h2>
 <ul>
 <li>What metric? Over what timespan?</li>
-<li>What unit of obs <span class="math inline">\(\leadsto\)</span> agg function <span class="math inline">\(\leadsto\)</span> level of aggregation?</li>
+<li>What unit of obs? Agg function? Level of aggregation?</li>
 </ul>
 
 <img data-src="images/china_india.png" class="r-stretch quarto-figure-center"><p class="caption"><span class="citation" data-cites="dreze_china_1991">Drèze and Sen (<a href="#/references" role="doc-biblioref" onclick="">1991</a>)</span></p></section>
 <section id="there-is-still-hope-i-promise" class="slide level2 smaller crunch-title crunch-ul crunch-blockquote crunch-li-8">
 <h2>…There is Still Hope! I Promise!</h2>
 <ul>
-<li>Fair Comparison through <strong>Statistical Matching</strong>:</li>
+<li>Apples-to-applies comparison via <strong>Statistical Matching</strong>:</li>
 <li><span class="citation" data-cites="lyall_divided_2020">Lyall (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span>: “Treating certain ethnic groups as second-class citizens […] leads victimized soldiers to subvert military authorities once war begins. The higher an army’s inequality, the greater its rates of desertion, side-switching, and casualties”</li>
 </ul>
 <blockquote>
@@ -334,11 +666,11 @@ Jeff Jacobs
 </section>
 <section id="does-inequality-cause-poor-military-performance" class="slide level2 smaller crunch-title title-10 table-80">
 <h2>Does Inequality Cause Poor Military Performance?</h2>
-<table class="caption-top">
+<table class="caption-top" style="width:100%;">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 30%">
+<col style="width: 35%">
+<col style="width: 35%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -516,8 +848,8 @@ Jeff Jacobs
 </tbody>
 </table>
 </section>
-<section id="no-crumbs" class="slide level2 smaller p-80 cols-va">
-<h2>No Crumbs</h2>
+<section id="bro-snapped" class="slide level2 smaller p-80 cols-va">
+<h2>Bro Snapped</h2>
 <p><em>(I have no dog in this fight, I’m not trying to improve military performance of an army, but got damn)</em></p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -534,8 +866,8 @@ Jeff Jacobs
 </div>
 </div></div>
 </section>
-<section id="implementation" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption crunch-images">
-<h2>Implementation 👀</h2>
+<section id="implementation" class="slide level2 smaller crunch-title title-11 crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption crunch-images">
+<h2>Implementation</h2>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -562,7 +894,7 @@ Jeff Jacobs
 </div>
 </div>
 </section>
-<section id="ethics-of-eliciting-sensitive-linguistic-data" class="slide level2 smaller crunch-title title-12">
+<section id="ethics-of-eliciting-sensitive-linguistic-data" class="slide level2 smaller crunch-title title-11">
 <h2>Ethics of Eliciting Sensitive Linguistic Data</h2>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
@@ -611,8 +943,8 @@ Jeff Jacobs
 </div>
 </section></section>
 <section>
-<section id="ethical-issues-in-applying-data-scienceml-to-particular-problems" class="title-slide slide level1 title-09 not-title-slide crunch-quarto-layout-panel crunch-quarto-figure center" data-stack-name="Applications">
-<h1>Ethical Issues in <em>Applying</em> Data Science/ML to <em>Particular</em> Problems</h1>
+<section id="ethical-issues-in-applying-ml-to-particular-problems" class="title-slide slide level1 title-09 not-title-slide crunch-quarto-layout-panel crunch-quarto-figure center" data-stack-name="Applications">
+<h1>Ethical Issues in <em>Applying</em> ML to <em>Particular</em> Problems</h1>
 <center>
 <img data-src="images/airobot.jpeg" class="quarto-figure quarto-figure-center" width="800">
 </center>
@@ -704,7 +1036,7 @@ Jeff Jacobs
 </table>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chatgpt-gender-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: <span class="citation" data-cites="wan_kelly_2023">Wan et al. (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span>, “Gender Biases in LLM-Generated Reference Letters”
+Figure&nbsp;3: <span class="citation" data-cites="wan_kelly_2023">Wan et al. (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span>, “Gender Biases in LLM-Generated Reference Letters”
 </figcaption>
 </figure>
 </div>
@@ -713,41 +1045,41 @@ Figure&nbsp;1: <span class="citation" data-cites="wan_kelly_2023">Wan et al. (<a
 <h2>What Is To Be Done?</h2>
 <p>&nbsp;<br></p>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:35%;">
 <center>
 When to <strong>retain</strong> biases…
 </center>
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:65%;">
 <center>
 …and when to <strong>debias</strong>
 </center>
 </div></div>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:35%;">
 <div id="fig-pronouns" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-pronouns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img data-src="images/pronouns.jpg" class="quarto-figure quarto-figure-center">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pronouns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: From <span class="citation" data-cites="schiebinger_machine_2020">Schiebinger et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span>
+Figure&nbsp;4: From <span class="citation" data-cites="schiebinger_machine_2020">Schiebinger et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span>
 </figcaption>
 </figure>
 </div>
-</div><div class="column" style="width:60%;">
+</div><div class="column" style="width:65%;">
 <div id="fig-embedding-bias-right" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-embedding-bias-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img data-src="images/neutralizing.png" class="quarto-figure quarto-figure-center">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-embedding-bias-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: From DeepLearning.AI’s <a href="https://www.coursera.org/lecture/nlp-sequence-models/debiasing-word-embeddings-zHASj" target="_blank">Deep Learning course</a>
+Figure&nbsp;5: From DeepLearning.AI’s <a href="https://www.coursera.org/lecture/nlp-sequence-models/debiasing-word-embeddings-zHASj" target="_blank">Deep Learning course</a>
 </figcaption>
 </figure>
 </div>
 </div></div>
 </section>
-<section id="military-and-police-applications-of-ai" class="slide level2 crunch-title smaller">
+<section id="military-and-police-applications-of-ai" class="slide level2 crunch-title smaller title-12">
 <h2>Military and Police Applications of AI</h2>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row">
@@ -779,13 +1111,13 @@ Figure&nbsp;3: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 <li>“Good” in and of itself? or</li>
 <li>A tool that can be used to both “good” and “bad” ends?</li>
 </ul></li>
-<li><em>“The master’s tools will never dismantle the master’s house”</em>… Who decided that the master owns the tools?</li>
+<li><em>“The master’s tools will never dismantle the master’s house”</em>… Who decided that the master “owns” the tools?</li>
 <li>How can we <strong>curtail</strong> some uses and/or <strong>encourage</strong> others?</li>
 <li>If only we had some sort of… institution… for <strong>governing</strong> its use in society… some sort of… <strong>govern</strong>… ment?</li>
 </ul>
 </section>
-<section id="from-week-7-onwards-you-work-at-a-think-tank" class="slide level2 smaller crunch-title title-11 crunch-images crunch-quarto-figure">
-<h2>From Week 7 Onwards, You Work At A Think Tank</h2>
+<section id="from-week-7-on-you-work-at-a-think-tank" class="slide level2 smaller crunch-title title-10 crunch-images crunch-quarto-figure">
+<h2>From Week 7 On, You Work At A Think Tank</h2>
 <div class="quarto-layout-panel" data-layout="[3,4]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div id="think-tank-left" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: center;">
@@ -817,12 +1149,12 @@ Figure&nbsp;3: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 </div>
 </div>
 </section>
-<section id="whatever-you-do-dont-be-bored" class="slide level2 smaller crunch-title">
+<section id="whatever-you-do-dont-be-bored" class="slide level2 smaller crunch-title title-12">
 <h2>“Whatever You Do… Don’t Be Bored”</h2>
 
 <img data-src="images/waking_life_dreamers.jpg" class="r-stretch quarto-figure-center"><p class="caption">Clip from Richard Linklater’s <em><a href="https://www.youtube.com/watch?v=J8jQuOjtPSQ">Waking Life</a></em></p></section></section>
 <section>
-<section id="machine-learning-at-30000-feet" class="title-slide slide level1 center" data-stack-name="ML">
+<section id="machine-learning-at-30000-feet" class="title-slide slide level1 center" data-stack-name="Fair ML">
 <h1>Machine Learning at 30,000 Feet</h1>
 
 </section>
@@ -831,20 +1163,18 @@ Figure&nbsp;3: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 <ol type="1">
 <li>A cool algorithm 😎😍</li>
 <li>[Possibly benign but possibly biased] Training data ❓🧐</li>
-<li>Exploitation of below-minimum-wage human labor 😞🤐 <span class="citation" data-cites="dube_monopsony_2020">(<a href="#/references" role="doc-biblioref" onclick="">Dube et al. 2020</a>, like and subscribe yall, get those ❤️s goin)</span></li>
+<li>Exploitation of below-minimum-wage human labor 😞🤐 <span class="citation" data-cites="dube_monopsony_2020">(<a href="#/references" role="doc-biblioref" onclick="">Dube et al. 2020</a>, like and subscribe yall ❤️)</span></li>
 </ol>
 </section>
 <section id="a-cool-algorithm" class="slide level2 smaller crunch-title">
 <h2>A Cool Algorithm 😎😍</h2>
 
 <img data-src="images/neural_network.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="training-data-with-acknowledged-bias" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure">
+<section id="training-data-with-acknowledged-bias" class="slide level2 smaller crunch-title title-11 crunch-quarto-layout-panel crunch-quarto-figure">
 <h2>Training Data With <em>Acknowledged</em> Bias</h2>
 <ul>
-<li>One potentially fruitful approach to fairness: since we can’t <em>eliminate</em> it, bring it out into the open and study it!
-<ul>
+<li>One potentially fruitful approach to fairness: since we can’t <em>eliminate</em> it, bring it out into the open and study it!</li>
 <li>This can, at very least, help us brainstorm how we might “correct” for it (next slides!)</li>
-</ul></li>
 </ul>
 <div class="quarto-layout-panel" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
@@ -898,10 +1228,9 @@ Figure&nbsp;3: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 </div>
 </div>
 </div>
-</section></section>
-<section>
-<section id="context-free-fairness" class="title-slide slide level1 smaller title-12 crunch-title center" data-stack-name="Fair ML">
-<h1>Context-Free Fairness</h1>
+</section>
+<section id="context-free-fairness" class="slide level2 smaller title-12 crunch-title">
+<h2>Context-Free Fairness</h2>
 <ul>
 <li>Who Remembers <strong>🎉<em>Confusion Matrices!!!</em>🎉</strong></li>
 <li>Terrifyingly higher stakes than in DSAN 5000! Now <span class="math inline">\(D = 1\)</span> could literally mean <em>“shoot this person”</em> or <em>“throw this person in jail for life”</em></li>
@@ -997,7 +1326,7 @@ Figure&nbsp;3: From DeepLearning.AI’s <a href="https://www.coursera.org/lectur
 </div></div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-amazon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Figures from <span class="citation" data-cites="ingold_amazon_2016">Ingold and Soper (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, <a href="https://www.bloomberg.com/graphics/2016-amazon-same-day/">“Amazon Doesn’t Consider the Race of its Customers. Should It?”</a>
+Figure&nbsp;6: Figures from <span class="citation" data-cites="ingold_amazon_2016">Ingold and Soper (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, <a href="https://www.bloomberg.com/graphics/2016-amazon-same-day/">“Amazon Doesn’t Consider the Race of its Customers. Should It?”</a>
 </figcaption>
 </figure>
 </div>
@@ -1012,7 +1341,7 @@ Figure&nbsp;4: Figures from <span class="citation" data-cites="ingold_amazon_201
 <img data-src="images/kasy_abebe.jpeg" class="quarto-figure quarto-figure-center">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kasy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: From <span class="citation" data-cites="kasy_fairness_2021">Kasy and Abebe (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>, “Fairness, Equality, and Power in Algorithmic Decision-Making”
+Figure&nbsp;7: From <span class="citation" data-cites="kasy_fairness_2021">Kasy and Abebe (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>, “Fairness, Equality, and Power in Algorithmic Decision-Making”
 </figcaption>
 </figure>
 </div>
@@ -1023,23 +1352,23 @@ Figure&nbsp;5: From <span class="citation" data-cites="kasy_fairness_2021">Kasy 
 <img data-src="images/inverse_fairness.jpeg" class="quarto-figure quarto-figure-center">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bjorkegren-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: From <span class="citation" data-cites="bjorkegren_machine_2022">Björkegren, Blumenstock, and Knight (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>, “(Machine) Learning What Policymakers Value”
+Figure&nbsp;8: From <span class="citation" data-cites="bjorkegren_machine_2022">Björkegren, Blumenstock, and Knight (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>, “(Machine) Learning What Policymakers Value”
 </figcaption>
 </figure>
 </div>
 </div></div>
 </section></section>
 <section>
-<section id="context-sensitive-fairness-leftrightarrow-unraveling-history" class="title-slide slide level1 smaller crunch-title title-11 crunch-ul crunch-quarto-figure crunch-p crunch-blockquote cols-va crunch-li-8 center" data-stack-name="Context-Sensitive Fair ML">
+<section id="context-sensitive-fairness-leftrightarrow-unraveling-history" class="title-slide slide level1 smaller crunch-title title-10 crunch-ul crunch-quarto-figure crunch-p crunch-blockquote cols-va crunch-li-8 center" data-stack-name="Context-Sensitive Fair ML">
 <h1>Context-Sensitive Fairness <span class="math inline">\(\Leftrightarrow\)</span> Unraveling History</h1>
 <div class="columns">
 <div class="column" style="width:55%;">
 <ul>
 <li><p>News: <em>“A litany of events with no beginning or end, thrown together because they occurred at the same time, cut off from <strong>antecedents</strong> and <strong>consequences</strong>”</em> <span class="citation" data-cites="bourdieu_sociology_2010">(<a href="#/references" role="doc-biblioref" onclick="">Bourdieu 2010</a>)</span></p></li>
-<li><p>Do media outlets optimize for <strong>explaining</strong>/<strong>understanding</strong>?</p></li>
+<li><p>Do media outlets optimize for <strong>explaining</strong>? <strong>Understanding</strong>?</p></li>
 <li><p>Even in the eyes of the most responsible journalist I know, all media can do is point to things and say <em>“please, you need to study, understand, and [possibly] intervene here”</em>:</p>
 <blockquote>
-<p>If we [journalists] have any reason for our existence, the least must be our ability to report history as it happens, so that no one will be able to say, “We’re sorry, we didn’t know—no one told us.” <span class="citation" data-cites="fisk_great_2005">(<a href="#/references" role="doc-biblioref" onclick="">Fisk 2005</a>)</span></p>
+<p>If we [journalists] have any reason for our existence, it must be our ability to report history as it happens, so that no one will be able to say, “We’re sorry, we didn’t know—no one told us.” <span class="citation" data-cites="fisk_great_2005">(<a href="#/references" role="doc-biblioref" onclick="">Fisk 2005</a>)</span></p>
 </blockquote></li>
 </ul>
 </div><div class="column" style="width:45%;">
@@ -1055,7 +1384,7 @@ Figure&nbsp;6: From <span class="citation" data-cites="bjorkegren_machine_2022">
 </div>
 </div></div>
 </section>
-<section id="unraveling-history" class="slide level2 smaller crunch-title title-12 crunch-blockquote cols-va">
+<section id="unraveling-history" class="slide level2 smaller crunch-title title-12 crunch-blockquote cols-va crunch-p">
 <h2>Unraveling History</h2>
 <p><span style="margin-bottom: 50px;"><em>(Someday I will do something with <a href="https://unravelhistory.com/">this</a>)</em></span></p>
 <div class="columns">
@@ -1080,14 +1409,16 @@ Figure&nbsp;6: From <span class="citation" data-cites="bjorkegren_machine_2022">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/cheng_plane.jpg" width="360"></p>
-<figcaption>From <span class="citation" data-cites="cheng_art_2018">Cheng (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span> <a href="https://www.youtube.com/watch?v=YHZKX0H6cUE"><em>The Art of Logic</em></a> [plz watch, if you can!]</figcaption>
+<figcaption>From <span class="citation" data-cites="cheng_art_2018">Cheng (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span> <a href="https://www.youtube.com/watch?v=YHZKX0H6cUE"><em>The Art of Logic</em></a> [plz watch if you can!]</figcaption>
 </figure>
 </div>
 <!-- 17m 58s -->
 </div><div class="column" style="width:50%;">
+<!-- ![@giddens_central_1979](images/giddens.jpg){fig-align="center"} -->
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/camara.jpg" class="quarto-figure quarto-figure-center" width="320"></p>
+<p><img data-src="images/fight_you_for_it.webp" width="380"></p>
+<figcaption><span class="citation" data-cites="sandburg_selected_1926">Sandburg (<a href="#/references" role="doc-biblioref" onclick="">1926</a>)</span></figcaption>
 </figure>
 </div>
 </div></div>
@@ -1137,14 +1468,23 @@ Fisk, Robert. 1990. <em>Pity the <span>Nation</span>: <span>Lebanon</span> at <s
 <div id="ref-fisk_great_2005" class="csl-entry" role="listitem">
 ———. 2005. <em>The <span>Great War</span> for <span>Civilisation</span>: <span>The Conquest</span> of the <span>Middle East</span></em>. Knopf Doubleday Publishing Group. <a href="https://books.google.com?id=jp2mZr7BoGsC">https://books.google.com?id=jp2mZr7BoGsC</a>.
 </div>
+<div id="ref-fodor_modularity_1983" class="csl-entry" role="listitem">
+Fodor, Jerry A. 1983. <em>The <span>Modularity</span> of <span>Mind</span></em>. MIT Press. <a href="https://books.google.com?id=e7nrSeibJZYC">https://books.google.com?id=e7nrSeibJZYC</a>.
+</div>
 <div id="ref-france_lys_1894" class="csl-entry" role="listitem">
 France, Anatole. 1894. <em>Le <span>Lys Rouge</span> (<span>The Red Lily</span>)</em>. G. Wells. <a href="https://books.google.com?id=sLLFz0rSakgC">https://books.google.com?id=sLLFz0rSakgC</a>.
 </div>
+<div id="ref-geertz_interpretation_1973" class="csl-entry" role="listitem">
+Geertz, Clifford. 1973. <em>The <span>Interpretation Of Cultures</span></em>. Basic Books. <a href="https://books.google.com?id=BZ1BmKEHti0C">https://books.google.com?id=BZ1BmKEHti0C</a>.
+</div>
+<div id="ref-hare_language_1952" class="csl-entry" role="listitem">
+Hare, R. M. 1952. <em>The <span>Language</span> of <span>Morals</span></em>. OUP Oxford. <a href="https://books.google.com?id=q4oSDAAAQBAJ">https://books.google.com?id=q4oSDAAAQBAJ</a>.
+</div>
+<div id="ref-hume_treatise_1739" class="csl-entry" role="listitem">
+Hume, David. 1739. <em>A <span>Treatise</span> of <span>Human Nature</span>: <span>Being</span> an <span>Attempt</span> to <span>Introduce</span> the <span>Experimental Method</span> of <span>Reasoning Into Moral Subjects</span>; and <span>Dialogues Concerning Natural Religion</span></em>. Longmans, Green.
+</div>
 <div id="ref-ingold_amazon_2016" class="csl-entry" role="listitem">
 Ingold, David, and Spencer Soper. 2016. <span>“Amazon <span>Doesn</span>’t <span>Consider</span> the <span>Race</span> of <span>Its Customers</span>. <span>Should It</span>?”</span> <em>Bloomberg</em>, April 21, 2016. <a href="http://www.bloomberg.com/graphics/2016-amazon-same-day/">http://www.bloomberg.com/graphics/2016-amazon-same-day/</a>.
-</div>
-<div id="ref-kalyvas_logic_2006" class="csl-entry" role="listitem">
-Kalyvas, Stathis N. 2006. <em>The <span>Logic</span> of <span>Violence</span> in <span>Civil War</span></em>. Cambridge University Press. <a href="https://www.dropbox.com/scl/fi/4es1r44ldnqtcroonr5g7/The-Logic-of-Violence-in-Civil-War.pdf?rlkey=uonfmw5zkx1ja5l8emv2bzfmg&amp;dl=1">https://www.dropbox.com/scl/fi/4es1r44ldnqtcroonr5g7/The-Logic-of-Violence-in-Civil-War.pdf?rlkey=uonfmw5zkx1ja5l8emv2bzfmg&amp;dl=1</a>.
 </div>
 <div id="ref-kasy_fairness_2021" class="csl-entry" role="listitem">
 Kasy, Maximilian, and Rediet Abebe. 2021. <span>“Fairness, <span>Equality</span>, and <span>Power</span> in <span>Algorithmic Decision-Making</span>.”</span> In <em>Proceedings of the 2021 <span>ACM Conference</span> on <span>Fairness</span>, <span>Accountability</span>, and <span>Transparency</span></em>, 576–86. <span>FAccT</span> ’21. New York, NY, USA: Association for Computing Machinery. <a href="https://doi.org/10.1145/3442188.3445919">https://doi.org/10.1145/3442188.3445919</a>.
@@ -1154,6 +1494,9 @@ Kozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. <span>“The <span>G
 </div>
 <div id="ref-labov_language_2013" class="csl-entry" role="listitem">
 Labov, William. 2013. <em>The <span>Language</span> of <span>Life</span> and <span>Death</span>: <span>The Transformation</span> of <span>Experience</span> in <span>Oral Narrative</span></em>. Cambridge University Press. <a href="https://books.google.com?id=1u6W7JoO2uIC">https://books.google.com?id=1u6W7JoO2uIC</a>.
+</div>
+<div id="ref-binladen_messages_2005" class="csl-entry" role="listitem">
+Laden, Osama bin. 2005. <em>Messages to the <span>World</span>: <span>The Statements</span> of <span>Osama Bin Laden</span></em>. Verso Books. <a href="https://books.google.com?id=x1ucEAAAQBAJ">https://books.google.com?id=x1ucEAAAQBAJ</a>.
 </div>
 <div id="ref-lerman_arresting_2014" class="csl-entry" role="listitem">
 Lerman, Amy E., and Vesla M. Weaver. 2014. <em>Arresting <span>Citizenship</span>: <span>The Democratic Consequences</span> of <span>American Crime Control</span></em>. University of Chicago Press. <a href="https://books.google.com?id=CWyXAwAAQBAJ">https://books.google.com?id=CWyXAwAAQBAJ</a>.
@@ -1173,11 +1516,17 @@ Mitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian L
 <div id="ref-morozov_socialize_2015" class="csl-entry" role="listitem">
 Morozov, Evgeny. 2015. <span>“Socialize the <span>Data Centres</span>!”</span> <em>New Left Review</em>, no. 91 (February): 45–66.
 </div>
+<div id="ref-olson_logic_1965" class="csl-entry" role="listitem">
+Olson, Mancur. 1965. <em>The <span>Logic</span> of <span>Collective Action</span></em>. Harvard University Press. <a href="https://books.google.com?id=jv8wTarzmsQC">https://books.google.com?id=jv8wTarzmsQC</a>.
+</div>
 <div id="ref-ouz_google_2023" class="csl-entry" role="listitem">
 Ouz. 2023. <span>“Google <span>Pixel</span> 8 <span>Face Unlock Vulnerability Discovered</span>, <span>Allowing Others</span> to <span>Unlock Devices</span>.”</span> Gizmochina. October 16, 2023. <a href="https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/">https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/</a>.
 </div>
 <div id="ref-sandburg_selected_1926" class="csl-entry" role="listitem">
 Sandburg, Carl. 1926. <em>Selected <span>Poems</span></em>. Houghton Mifflin Harcourt. <a href="https://books.google.com?id=NmUWLxwhsWMC">https://books.google.com?id=NmUWLxwhsWMC</a>.
+</div>
+<div id="ref-schelling_micromotives_1978" class="csl-entry" role="listitem">
+Schelling, Thomas C. 1978. <em>Micromotives and <span>Macrobehavior</span></em>. Norton. <a href="https://books.google.com?id=ouJzQgAACAAJ">https://books.google.com?id=ouJzQgAACAAJ</a>.
 </div>
 <div id="ref-schiebinger_machine_2020" class="csl-entry" role="listitem">
 Schiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. <span>“Machine <span>Translation</span>: <span>Gendered Innovations</span>.”</span> <a href="http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2">http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2</a>.
@@ -1198,29 +1547,6 @@ Wang, Yilun, and Michal Kosinski. 2018. <span>“Deep Neural Networks Are More A
 Wellcome Collection. 1890. <span>“Composite <span>Photographs</span>: "<span>The Jewish Type</span>".”</span> <a href="https://wellcomecollection.org/works/ngq29vyw">https://wellcomecollection.org/works/ngq29vyw</a>.
 </div>
 </div>
-</section>
-<section id="appendix-bonus-showing-up-early-material" class="slide level2 smaller title-11 crunch-title crunch-blockquote crunch-ul crunch-p cols-va">
-<h2>Appendix / Bonus Showing-Up-Early Material</h2>
-<p><em>(Jeff’s Sanctimonious Unc Corner)</em></p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><p>Being Bayesian <span class="math inline">\(\neq\)</span> Not Taking Sides:</p>
-<blockquote>
-<p>Rather than implying moral relativism, this position posits the formulation of <strong>moral judgments</strong> as <strong>outcomes</strong> rather than <strong>preconditions</strong> of research. <span class="citation" data-cites="kalyvas_logic_2006">(<a href="#/references" role="doc-biblioref" onclick="">Kalyvas 2006</a>)</span></p>
-</blockquote></li>
-<li><p>Axiom/Antecedent: <em>The life of a single human is worth a million times more than the property of the richest man on earth</em></p></li>
-<li><p>Evidence: (History of social movements)</p></li>
-<li><p>Consequent: <em>“On the side of poor people getting organized, on the side of choice where it is in short supply, on the side of those the system doesn’t authorize, LGBT, we are on the side of pride”</em></p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/free_cece.jpg"></p>
-<figcaption>B. Dolan, <a href="https://www.youtube.com/watch?v=oKHf1YVATfk"><em>Which Side Are You On?</em></a></figcaption>
-</figure>
-</div>
-</div></div>
 
 
 </section></section>
@@ -1617,6 +1943,38 @@ Wellcome Collection. 1890. <span>“Composite <span>Photographs</span>: "<span>T
       });
       </script>
     <script>videojs(video_shortcode_videojs_video1);</script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>

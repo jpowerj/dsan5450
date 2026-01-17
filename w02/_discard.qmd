@@ -1,0 +1,64 @@
+| | Descriptive World | Normative World |
+| - | - | - |
+| **Statement** | "Bin Laden attacked us [because*]{.boxed-cb} we had been bombing Iraq for 10 years"<br><span style='font-size: 70%'>*("Standard" usage: prior = agent's stated reason)</span> | "Bin Laden attacked us because we had been bombing Iraq for 10 years, **and that is a good justification**" |
+| **True or False?** | **Descriptively True** (empirically verifiable) | **Normatively True** (entailed by axioms + descriptive facts) in some ethical systems, **Normatively False** (not entailed by axioms + descriptive facts) in others |
+
+: {tbl-colwidths="[18,41,41]"}
+
+---
+
+
+## Appendix / Bonus Showing-Up-Early Material {.smaller .title-11 .crunch-title .crunch-blockquote .crunch-ul .crunch-p .cols-va}
+
+*(Jeff's Sanctimonious Unc Corner)*
+
+:::: {.columns}
+::: {.column width="50%"}
+
+* Being Bayesian $\neq$ Not Taking Sides:
+  
+  > Rather than implying moral relativism, this position posits the formulation of **moral judgments** as **outcomes** rather than **preconditions** of research. [@kalyvas_logic_2006]
+
+* Axiom/Antecedent: *The life of a single human is worth a million times more than the property of the richest man on earth*
+* Evidence: (History of social movements)
+* Consequent: *"On the side of poor people getting organized, on the side of choice where it is in short supply, on the side of those the system doesn't authorize, LGBT, we are on the side of pride"*
+
+:::
+::: {.column width="50%"}
+
+![B. Dolan, [*Which Side Are You On?*](https://www.youtube.com/watch?v=oKHf1YVATfk)](images/free_cece.jpg){fig-align="center"}
+
+:::
+::::
+
+---
+
+# Your Job: Policy Whitepaper {.title-11 .not-title-slide data-stack-name="Policy"}
+
+* So... is technology/data science/machine learning "bad" in and of itself, or a tool to be wielded for both "good" and "bad" uses?
+* How can we **curtail** uses of some kinds and/or **encourage** other uses?
+* If only we had some sort of... institution... for **governing** its use in society... some sort of... **govern**... ment?
+
+---
+
+## Fairness... 🧐 {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-images .crunch-quarto-figure .crunch-figcaption}
+
+::: {layout="[4,3]" layout-valign="center"}
+::: {#fig-fairness-left}
+
+![](images/lily_hu_1.svg){fig-align="center" width="340"}
+
+![](images/lily_hu_2.svg){fig-align="center" width="340"}
+
+From Lily Hu, <a href='https://www.phenomenalworld.org/analysis/direct-effects/' target='_blank'>*Direct Effects: How Should We Measure Racial Discrimination?*</a>, *Phenomenal World*, 25 September 2020
+:::
+::: {#fairness-right}
+
+![From @kasy_fairness_2021](images/kasy_abebe.jpeg){#fig-kasy fig-align="center"}
+
+:::
+:::
+
+## ...And INVERSE Fairness 🤯 {.smaller .crunch-title}
+
+![From *Machine Learning What Policymakers Value* [@bjorkegren_machine_2022]](images/inverse_fairness.jpeg){fig-align="center"}
