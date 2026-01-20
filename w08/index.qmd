@@ -171,7 +171,7 @@ format:
 > 
 > A critical question that arises with an incomplete contract is, **who has the right to decide about the missing things?** We called this right the residual control or decision right. The question is, who has it?
 > 
-> Further thought led us to the idea that **this is *what ownership is***. The owner of an asset has the right to decide how the asset is used where the use is not contractually specified [@hart2017incomplete]
+> Further thought led us to the idea that **this is *what ownership is***. The owner of an asset has the right to decide how the asset is used where the use is not contractually specified [@hart_incomplete_2017]
 
 ## Understanding Rights $\leftrightarrow$ Fighting for Rights {.title-08 .crunch-ul .math-90}
 

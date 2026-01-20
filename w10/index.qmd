@@ -85,7 +85,7 @@ format:
 <tr>
   <td><span data-qmd="**Definition of Injustice**"></span></td>
   <td><span data-qmd="Strong **do** bad things [@berlin_two_1959]"></span></td>
-  <td><span data-qmd="Strong **can** do bad things [@skinner1998liberty; @pettit1997republicanism; @lovett2022wellordered]"></span></td>
+  <td><span data-qmd="Strong **can** do bad things [@skinner_liberty_1998; @pettit_republicanism_1997; @lovett_wellordered_2022]"></span></td>
 </tr>
 <tr>
   <td><span data-qmd="**Thucydides Question**"></span></td>
@@ -123,7 +123,7 @@ format:
 * (Hidden antecedent: non-Nietzschean ethical framework e.g. Utilitarianism/Kant)
 * Point of prev slide: From now til W14, keep in mind how **definition of power** (and hence "effectiveness" of policy intervention) depends on **antecedent**
   * [liberal]{.honk-honk} definition $\Rightarrow$ focus on equilibria (no injustice if bad thing doesn't happen in equilibrium)
-  * [republican]{.honk-honk} definition $\Rightarrow$ also take **off-equilibrium** possibilities into account (no injustice if bad thing doesn't happen in equilibrium **and** doesn't happen if one player deviates "on a whim") [@jacobs2025operationalizing 😉]
+  * [republican]{.honk-honk} definition $\Rightarrow$ also take **off-equilibrium** possibilities into account (no injustice if bad thing doesn't happen in equilibrium **and** doesn't happen if one player deviates "on a whim") [@jacobs_operationalizing_2026 😉]
 * Prisoners' Dilemma 😫 $\prec$ Assurance Game 🤨 $\prec$ Invisible Hand Game 🥳
 
 ## Prisoners' Dilemma (Fishers' Dilemma) {.smaller .title-10 .crunch-title .crunch-ul .crunch-p .crunch-quarto-figure}
@@ -321,7 +321,7 @@ Pareto Dominance
 
 * *Wealth of Nations* **SPOILER**: The wealth comes from **division of labor**<br>[and also dumbleydore dies. semperus snake too. and even poor ron the weasel, who never deserved such a fate]{style="font-size: 50%; line-height: 0.5;"}
 
-> An economic transaction is a **solved political problem**. Economics has gained the title "Queen of the Social Sciences" by choosing solved political problems as its domain. [@lerner1972economics]
+> An economic transaction is a **solved political problem**. Economics has gained the title "Queen of the Social Sciences" by choosing solved political problems as its domain. [@lerner_1972_economics]
 
 ## First Fundamental Theorem of Welfare Economics {.smaller .crunch-title .title-10}
 

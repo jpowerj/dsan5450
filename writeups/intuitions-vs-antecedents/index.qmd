@@ -34,7 +34,7 @@ As a part of that, I try my best to utilize assignments/grades/exams mainly as a
 3.  Growth mindset: "I can't do this" $\leadsto$ "I can't do this yet!"
 4.  The point of a class is *learning*: understanding something about the world, either (a) For its own sake (an **end** in itself) or (b) Because it's relevant to something you care about (a **means** to an end)
     
-> Our teaching should be governed, not by a desire to **make** students learn things, but by the endeavor to keep burning within them that light which is called **curiosity**. [@montessori1916spontaneous]
+> Our teaching should be governed, not by a desire to **make** students learn things, but by the endeavor to keep burning within them that light which is called **curiosity**. [@montessori_spontaneous_1916]
 
 :::
 
@@ -139,7 +139,7 @@ And thus, one of those two **additional** antecedents would need to be added, as
 That's... the best I can do in terms of explaining why Q3.2 is so important, and why we **shouldn't** answer it based on our intuitions, but **should** think about the antecedents that would lead to each of the three answer choices! For anyone still reading, who wants the full-on deeper philosophical/cultural reasons that I can't really do justice to (the more general "crossing the boundary between your own and others' beliefs" from the W01 slide), check out:
 
 * @geertz_interpretation_1973, *The Interpretation of Cultures* (the book pictured in that W01 slide),
-* @skorupski1978meaning, "The Meaning of Another Culture's Beliefs" [Pages 83-106 in [this PDF](https://www.dropbox.com/scl/fi/5vg7wd9c1whaurot29yql/Action-and-Interpretation.pdf?rlkey=m1q8o6lsfaul6gbqyfoabd4pu&dl=1)], and
+* @skorupski_meaning_1978, "The Meaning of Another Culture's Beliefs" [Pages 83-106 in [this PDF](https://www.dropbox.com/scl/fi/5vg7wd9c1whaurot29yql/Action-and-Interpretation.pdf?rlkey=m1q8o6lsfaul6gbqyfoabd4pu&dl=1)], and
 * @skinner_visions_2012, "Interpretation, Rationality, and Truth" [Pages 27-56 in [this PDF](https://www.dropbox.com/scl/fi/us4jkczmqkjufexh9jies/Quentin_Skinner-_Visions_of_Politics_Vol_1.pdf?rlkey=cwzwffidtfajpi3n20pzmx095&dl=1)]
 
 
@@ -147,7 +147,7 @@ That's... the best I can do in terms of explaining why Q3.2 is so important, and
 
 If you've read to this point (*beyond* even the point at the end of the last section where I tossed a bunch of books at you?!?): You'll notice that the readings in the last section are kind of old and dry and philosophical. *But*, there is (imo) also really exciting research being done in cognitive science/neuroscience labs to **test** the kinds of theories talked about in those philosophy papers:
 
-Basically, they use behavioral experiments and EEG/EKG/MRI data to probe into *what exactly is going on in people's heads when they make [logical or ethical] decisions?* Those studies usually cite @sperber1996explaining as a key "spark" that gave rise to this research program, and it is definitely a mind-blowingly cool book and fun place to start. Then, for an example of a more recent study on this front, see @miton2022cultural (and then check out both of those authors' Google Scholar pages for more!)
+Basically, they use behavioral experiments and EEG/EKG/MRI data to probe into *what exactly is going on in people's heads when they make [logical or ethical] decisions?* Those studies usually cite @sperber_explaining_1996 as a key "spark" that gave rise to this research program, and it is definitely a mind-blowingly cool book and fun place to start. Then, for an example of a more recent study on this front, see @miton_cultural_2022 (and then check out both of those authors' Google Scholar pages for more!)
 
 ## References
 

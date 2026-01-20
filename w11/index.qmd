@@ -135,7 +135,7 @@ source("../dsan-globals/_globals.r")
 <i class='bi bi-2-circle'></i> **Coase Antecedents $\approx$ equalized power!**
 
 * Ex 1: **Perfect Competition** $\Rightarrow$ ($\neg$ monopoly) $\wedge$ ($\neg$ monopsony) $\Rightarrow$ everyone's outside option equally good $\Rightarrow$ no take-it-or-leave-it coercion possible (try to coerce, I'll say no and go to one of the other $\infty$ people offering equally good options)
-* Ex 2: **No Informational Asymmetries** $\Rightarrow$ Can't "trick me" into buying defective product (@akerlof1970market, *"Market for Lemons"*)
+* Ex 2: **No Informational Asymmetries** $\Rightarrow$ Can't "trick me" into buying defective product (@akerlof_market_1970, *"Market for Lemons"*)
 
 # So... What Happens When Antecedents Don't Hold? {.smaller .crunch-title .title-09 data-stack-name="Externalities and Rights"}
 

@@ -87,7 +87,7 @@ $$
 * To be ethical is to weigh **expected consequences** of your actions
 * **Positive consequences** of giving pie (saving a life) outweigh **negative consequences** (breaking promise)
 * Ex: **Utilitarianism** (Jeremy Bentham)
-* [*(Complication: [Rule Utilitarianism](https://en.wikipedia.org/wiki/Rule_utilitarianism) = choose rule that produces greatest good 😵‍💫)*]{style="font-size: 80%;"}
+* [(*Complication: [Rule Utilitarianism](https://en.wikipedia.org/wiki/Rule_utilitarianism) = choose rule that produces greatest good* 😵‍💫)]{style="font-size: 80%;"}
 
 :::
 ::: {#deontology}
@@ -104,9 +104,13 @@ $$
 
 :::
 
-## Making and Evaluating Ethical Arguments
+## Making and Evaluating Ethical Arguments {.crunch-title .title-12}
 
-* The gist: A doctor who **diagnoses** cancer in a patient does not thereby **morally endorse** the presence of the cancer in the patient...
+::: {#doctor-diagnose style="line-height: 1.5;"}
+
+* The gist: A doctor who <span data-bracket="descriptive act">**diagnoses**</span> cancer in a patient does not thereby <span data-bracket="normative act">**morally endorse**</span> the presence of the cancer in the patient...
+
+:::
 
 ## Descriptive vs. Normative {.text-65 .crunch-title .crunch-quarto-layout-panel}
 
@@ -147,7 +151,7 @@ $$
 <tbody>
 <tr>
   <td>**Statement**</td>
-  <td>"He attacked us [because*]{.boxed-cb} we'd been bombing Iraq for 10 years"<br><span style='font-size: 70%'>\* *("Standard" prior: agent's stated reason)*</span></td>
+  <td>"He attacked us [because*]{.boxed-cb1} we'd been bombing Iraq for 10 years"<br><span style='font-size: 70%'>\* *("Standard" prior: agent's stated reason)*</span></td>
   <td>"He attacked us because we had been bombing Iraq for 10 years, **and that is a good justification**"</td>
 </tr>
 <tr>
@@ -180,21 +184,123 @@ For those (rightfully!) questioning the assertion of "true"/"false" without just
 
 :::
 
-## What Happens When We Confuse The Two? {.crunch-title .text-90 .title-07 .crunch-quarto-layout-panel .crunch-quarto-figure}
+## What Happens When We Confuse The Two? {.crunch-title .title-07 .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-ul .crunch-img}
 
-::: {layout="[1,1]" layout-valign="center"}
+::::: {layout="[56,44]" layout-valign="center"}
 
-::: {#interpretation}
+:::: {#horizons-left}
 
-* Makes it impossible to "cross the boundary" between your own and others' beliefs
-* *Collective welfare*: Bad on its own terms (see: wars, racism, etc.)
-* *Self-interest*: Prevents us from **convincing** other people of our arguments
+* Makes it impossible to "cross the boundary" between your own and others' beliefs: **fusion of horizons**
+* *Collective welfare* angle: Bad on its own terms (wars, racism, ...)
+* *Self-interest* angle: Prevents us from **convincing** other people of our arguments
 
+::::
+:::: {#horizons-right}
+
+::: {#fig-horizons-video style="font-size: 70%;"}
+
+{{< video src="images/fusion_of_horizons.mp4" >}}
+
+Visualizing the "fusion of horizons" concept from @gadamer_truth_1960 (Animation: [Steve Thomason](https://www.youtube.com/watch?v=CJ7MlTdC_aQ))
 :::
 
-![@geertz_interpretation_1973](images/geertz.jpg){fig-align="center" width="360"}
+![@geertz_interpretation_1973](images/geertz.jpg){fig-align="center" width="400"}
+
+::::
+:::::
+
+## Describing vs. Evaluating {.smaller .crunch-title .title-11 .crunch-blockquote .crunch-p .table-80 .blockquote-90 .crunch-ul .crunch-li .crunch-quarto-figure .crunch-img .crunch-quarto-layout-panel}
+
+[(*In which jeff is mean to data scientists (including himself), but for a good purpose* 😉)]{style="font-size: 80%"}
+
+* @ryle_thinking_1968: What differentiates a [**wink**]{.boxed-cb1} from an [**eye twitch**]{.boxed-cb2}? Both have the same **"empirical"** description! *(Videos of wink and eye twitch may be indistinguishable)*
+
+:::: {layout="[40,60]"}
+::: {#wink-social-science}
+
+<center style="margin-bottom: 8px;">
+
+**The social scientist's answer:**
+
+</center>
+
+> The action of moving your arm up and down while holding a handle may be intentional under the description "pumping water" but not under others such as "poisoning the household" [@anscombe_intention_1957]
 
 :::
+::: {#wink-data-science}
+
+<center style="margin-bottom: 8px;">
+
+**The data scientist's answer:**
+
+</center>
+
+[*...downloads `eye_actions.csv` from Kaggle*]{style="font-size: 80%;"}
+
+<table>
+<colspec>
+<col style="width: 5%;"></col>
+<col style="width: 15%;"></col>
+<col style="width: 10%;"></col>
+<col style="width: 70%;"></col>
+</colspec>
+<thead>
+<tr>
+  <th>id</th>
+  <th>name</th>
+  <th align="center" class='cbg-bg'>wink</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>Jeff</td>
+  <td align="center" class='cb1a-bg'>1</td>
+  <td>*Uh... this one was a wink I guess?*</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>Biko</td>
+  <td align="center" class='cb2a-bg'>0</td>
+  <td>*But like, this one wasn't for some reason*</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Hugo</td>
+  <td align="center" class='cb1a-bg'>1</td>
+  <td>*Idk it says 1 so... are we done?*</td>
+</tr>
+</tbody>
+</table>
+
+:::
+::::
+
+:::: {layout="[1,1]" layout-align="center"}
+::: {#perception-interpersonal}
+
+<center>
+
+[Interpersonal scale]{style="font-size: 80%"}
+
+</center>
+
+![@duranti_anthropology_2015](images/duranti_crop.jpg){fig-align="center" width="70%"}
+
+:::
+::: {#perception-political}
+
+<center>
+
+[Global-political scale]{style="font-size: 80%;"}
+
+</center>
+
+![@jervis_perception_1976](images/perception.jpeg){fig-align="center"}
+
+:::
+::::
 
 ## Collective vs. Self-Interest {.smaller .crunch-quarto-layout-panel .crunch-title .crunch-quarto-figure}
 
@@ -265,12 +371,12 @@ Key reading: @schelling_micromotives_1978, *Micromotives and Macrobehavior*
 
 ## Takeaway for Policy Whitepapers {.crunch-title .crunch-ul .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-img}
 
-::: {layout="[1,1]" layout-valign="center"}
+::: {layout="[60,40]" layout-valign="center"}
 
 ::: {#takeaway-text}
 
-* You *cannot* (just) say, "doing $x$ will be better for society"
-* You must *also* justify benefits to individuals, or at minimum, the individual organization and its stakeholders!
+* You *cannot* (just) say, "doing $x$ will be **better for society**"
+* You must *also* justify benefits to **individuals**, or at minimum, an individual organization and its **stakeholders**!
 * *(Is this a normative or descriptive claim?)*
 
 :::
@@ -292,7 +398,7 @@ Key reading: @schelling_micromotives_1978, *Micromotives and Macrobehavior*
 </style>
 
 * Data Science for Who?
-* [Humans vs. Computers]{.monsters-jj style="font-size: 120%; color: red;"} $\leadsto$ Humans vs. Humans
+* No more [Humans vs. Computers]{.monsters-jj style="font-size: 120%; color: red;"} ($\leadsto$ Humans vs. Humans)
 * Operationalization
 * Apples-to-Apples Comparisons
 * Implementation
@@ -310,7 +416,7 @@ Key reading: @schelling_micromotives_1978, *Micromotives and Macrobehavior*
 
 ![The "NGO" whose "freedom index" measure is used by every western political economist](images/freedom_house_funding.jpeg){#fig-freedom fig-align="center" .lightbox}
 
-![The... [not even masked as an NGO in this case?] government agency whose "human rights score" is used by every western political economist](images/state_dept_human_rights.jpeg){#fig-human-rights fig-align="center" .lightbox}
+![The [not even masked as an NGO?] government agency whose "human rights score" is used by every western political economist](images/state_dept_human_rights.jpeg){#fig-human-rights fig-align="center" .lightbox}
 
 :::
 
@@ -387,25 +493,58 @@ For overthinkers: **quarks** $\leadsto$ atoms as **mental modules** $\leadsto$ i
 :::
 ::::
 
-## What Is Being Compared? {.smaller .crunch-title .title-11 .crunch-ul .table-85}
+## What Is Being Compared? 🍎 🍊 🍐 {.smaller .crunch-title .title-11 .crunch-ul .table-80}
 
-| Apples | Oranges | Pears |
-| - | - | - |
-| Polities w/250-500M people (US 335M, UP 250M, EU 450M) | Polities w/10-30M people in LatAm (Venezuela, Cuba, Haiti) | Polities w/over 1 billion people (China 1.4B, India 1.4B, Africa 1.4B, N+S America 1B) |
-| Democracies (US) | Democracies til they democratically elected someone US didn't like (Iran, Guatemala, Chile) | Non-democracies which violently repress democratic movements w/US arms (Saudi Arabia) |
-| Colonizing polities (US) | Polities colonized by them (Philippines) | Non-colonized polities (Ethiopia, Thailand) |
-| Polities w/infrastructure built up over [250 yrs](https://www.nps.gov/articles/000/arrival-of-the-first-africans-in-1619.htm) via slave labor (US 🇺🇸) | Polities populated by former slaves (Liberia 🇱🇷) | Polities that [paid reparations](https://en.wikipedia.org/wiki/Reparations_Agreement_between_Israel_and_the_Federal_Republic_of_Germany) to descendants of [certain] enslaved groups (Germany) |
-| Polities independent since 1776 (US) | Polities independent since 1990 (Namibia) | [Non-self-governing](https://www.un.org/dppa/decolonization/en/nsgt) polities (Puerto Rico, Palestine, New Caledonia) |
-| Polities enforcing a 60 yr embargo on Cuba (US) | Polities with a 60 yr embargo imposed on them by US (Cuba) | Polities without a 60 yr embargo imposed on them by US (...) |
+| | 🍎 Apples 🍎 | 🍊 Oranges 🍊 | 🍐 Pears 🍐 |
+| - | - | - | - |
+| **"Countries" in General** | Polities w/250-500M people (US 335M, UP 250M, EU 450M) | LatAm Polities w/10-30M people (Venezuela, Cuba, Haiti) | Polities w/over 1 billion people (China 1.4B, India 1.4B, Africa 1.4B, N+S America 1B) |
+| | Polities independent since 1776 (US) | Polities independent since 1990 (Namibia) | [Non-self-governing](https://www.un.org/dppa/decolonization/en/nsgt) polities (Puerto Rico, Palestine, New Caledonia) |
+| **"Self-Sufficiency"** | Colonizing polities (US) | Polities colonized by them (Philippines) | Non-colonized polities (Ethiopia, Thailand) |
+| | Polities w/infrastructure built up over [250 yrs](https://www.nps.gov/articles/000/arrival-of-the-first-africans-in-1619.htm) via slave labor (US 🇺🇸) | Polities populated by former slaves (Liberia 🇱🇷) | Polities that [paid reparations](https://en.wikipedia.org/wiki/Reparations_Agreement_between_Israel_and_the_Federal_Republic_of_Germany) to descendants of [certain] enslaved groups (Germany) |
+| **Political Systems** | Democracies (US) | Democracies til they democratically elected someone US didn't like (Iran 1953, Guatemala 1954, Chile 1973) | Non-democracies that violently repress democratic movements w/US arms (Saudi Arabia) |
+| | Polities enforcing 66 yr embargo on Cuba (US) | Polities with 66 yr embargo imposed on them by US (Cuba) | Polities without 66 yr embargo imposed on them by US (...) |
 
-: {tbl-colwidths="[28,36,36]"}
+: {tbl-colwidths="[10,26,32,32]"}
 
-## How Are They Being Compared? {.crunch-title}
+## How Are They Being Compared? {.crunch-title .title-09 .text-75 .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-img .crunch-blockquote}
+
+:::: {layout="[32,68]"}
+::: {#india-china-left}
 
 * What metric? Over what timespan?
 * What unit of obs? Agg function? Level of aggregation?
 
-![@dreze_china_1991](images/china_india.png){fig-align="center"}
+:::
+::: {#india-china-right}
+::: {#sen-quote style="font-size: 64%;"}
+
+> Comparing India's death rate of 12 per thousand with China's of 7 per thousand, and applying that difference to the Indian population of 781 million in 1986, we get an estimate of **excess normal mortality** in India of 3.9 million per year. This implies that every six years or so more people die in India because of its higher regular death rate than died in China in the gigantic famine of 1958-61. **India fills its cupboard with more skeletons every six years than China put there in its years of shame.** [@dreze_china_1991]
+
+:::
+:::
+::::
+
+:::: {#fig-life-expectancy}
+::: {layout="[1,1]"}
+
+![](images/china_india.svg){.lightbox fig-align="center"}
+
+![](images/china_india_adjusted.svg){.lightbox fig-align="center"}
+
+:::
+
+Data from [UN World Population Prospects (WPP) 2024](https://population.un.org/wpp/)
+::::
+
+## Apple/Orange Criteria
+
+:::: {layout="[1,1]" layout-valign="center"}
+
+![](images/china_india_us.svg)
+
+![](images/china_india_us_japan.svg)
+
+::::
 
 ## ...There is Still Hope! I Promise! {.smaller .crunch-title .crunch-ul .crunch-blockquote .crunch-li-8}
 
@@ -874,7 +1013,7 @@ Figures from @ingold_amazon_2016, ["Amazon Doesn't Consider the Race of its Cust
 :::: {.columns}
 ::: {.column width="50%"}
 
-![From @cheng_art_2018 [*The Art of Logic*](https://www.youtube.com/watch?v=YHZKX0H6cUE) [plz watch if you can!]](images/cheng_plane.jpg){fig-align="center" width="360"}
+![From @cheng_art_2018 [*The Art of Logic*](https://www.youtube.com/watch?v=YHZKX0H6cUE) [plz watch if you can!]](images/cheng_plane.jpg){.lightbox fig-align="center" width="360"}
 
 <!-- 17m 58s -->
 

@@ -186,7 +186,7 @@ Today's Planned Schedule:
 
 > The combined effect of **incomplete contracts** and **conflicts of interest** is that the determination of outcomes depends on who exercises **power** in the transaction.
 > 
-> Power is generally exercised by those who hold the residual rights of control, meaning **the right to determine what is not specified contractually** [@bowles2009microeconomics]
+> Power is generally exercised by those who hold the residual rights of control, meaning **the right to determine what is not specified contractually** [@bowles_microeconomics_2009]
 
 * [Step 1: Empirically measurable given antecedents] **Who has power** w.r.t. a given incomplete contract?
 * [Step 2: Up to you and your ethical axioms; e.g., efficiency] **Who ought to have power** w.r.t. incomplete contracts?
@@ -250,7 +250,7 @@ For agent $A$ to have power over agent $B$ it is sufficient that, by imposing or
 > 
 > *[What if you all organized to plant on the same day, to reap rewards of earlier planting while minimizing bird losses (dividing by $N$ instead of $1$)?]*
 > 
-> *"If we knew how to do that", he said, looking up from his hoe at me, "we would not be poor."* [@bowles2009microeconomics]
+> *"If we knew how to do that", he said, looking up from his hoe at me, "we would not be poor."* [@bowles_microeconomics_2009]
 
 ## Assurance Game in Normal Form
 
