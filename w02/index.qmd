@@ -44,6 +44,21 @@ format:
 
 :::
 
+# Schedule {.smaller .small-title .crunch-title .crunch-callout data-name="Schedule"}
+
+Today's Planned Schedule:
+
+| | Start | End | Topic |
+|:- |:- |:- |:- |
+| **Lecture** | 3:30pm | 4:00pm | [Making and Evaluating Ethical Arguments &rarr;](#making-and-evaluating-ethical-arguments) |
+| | 4:00pm | 4:10pm | [Key Takeaways for Policy Whitepapers &rarr;](#takeaway-for-policy-whitepapers) |
+| | 4:10pm | 4:50pm | [Data Ethics + Policy Conceptual Toolkit &rarr;](#our-conceptual-toolkit) |
+| **Break!** | 4:50pm | 5:00pm | |
+| | 5:00pm | 5:30pm | [Context-Free (Naïve) Fairness (HW1) &rarr;](#categories-of-fairness-criteria) |
+| | 5:30pm | 6:00pm | [🚫 "Fairness Through Unawareness" 🙅 (HW1) &rarr;](#categories-of-fairness-criteria) |
+
+: {tbl-colwidths="[12,12,12,64]"}
+
 # Weeks 2-4: Slouching Towards Fairness {.smaller .not-title-slide .title-09 data-stack-name="Ethical Arguments"}
 
 * Soon you'll understand why I kept maniacally pointing to $p \Rightarrow q$ on board last week!
@@ -394,14 +409,22 @@ Key reading: @schelling_micromotives_1978, *Micromotives and Macrobehavior*
 }
 .monsters-jj {
     font-family: "Monsters", serif;
+    font-size: 120%;
+    color: red;
 }
 </style>
 
-* Data Science for Who?
-* No more [Humans vs. Computers]{.monsters-jj style="font-size: 120%; color: red;"} ($\leadsto$ Humans vs. Humans)
-* Operationalization
-* Apples-to-Apples Comparisons
-* Implementation
+<i class='bi bi-1-circle'></i> Data Science for Who?
+
+<i class='bi bi-2-circle'></i> No more [Humans vs. Computers]{.monsters-jj} ($\leadsto$ Humans vs. Humans)
+
+<i class='bi bi-3-circle'></i> Operationalization
+
+<i class='bi bi-4-circle'></i> Apples-to-Apples Comparisons
+
+<i class='bi bi-5-circle'></i> Implementation
+
+<i class='bi bi-6-circle'></i> "Someone else's problem"?
 
 ## Data Science for Who? {.crunch-title .crunch-ul}
 
@@ -420,18 +443,15 @@ Key reading: @schelling_micromotives_1978, *Micromotives and Macrobehavior*
 
 :::
 
-## Methodological Individualism {.crunch-title .crunch-li-8 .footnotes-0}
+## [Humans vs. Computers]{.monsters-jj} $\leadsto$ Humans vs. Humans: The Grapes of Wrath {.text-60 .crunch-title .title-08 .crunch-blockquote .blockquote-90 .crunch-p-8}
 
-* **Atoms** exhibit properties which are fruitful for understanding the physical world: we can study these properties as "building blocks" $\leadsto$ interactions among atoms with various properties give rise to higher-level physical "things" (molecules, chemicals, cells, organisms)
-* **Individuals** exhibit properties which are fruitful for understanding the social world: we can study these properties as "building blocks" $\leadsto$ interactions among individuals with various properties give rise to higher-level social processes (dyads, groups, institutions)
 
-::: {.aside}
 
-For overthinkers: **quarks** $\leadsto$ atoms as **mental modules** $\leadsto$ individuals 😉 [@fodor_modularity_1983]
+::: {#grapes-video style="float: right; margin: 8px;"}
+
+{{< video src="images/grapes.mp4"  width="400px">}}
 
 :::
-
-## Humans vs. Computers: The Grapes of Wrath {.smaller .crunch-title .title-11 .crunch-blockquote .blockquote-90 .crunch-p-8}
 
 > But... **I built it with my hands!** Straightened old nails to put the sheathing on!
 > 
@@ -447,9 +467,9 @@ For overthinkers: **quarks** $\leadsto$ atoms as **mental modules** $\leadsto$ i
 > 
 > Yes, but the bank is only made of men!
 >
-> No, you're wrong there---quite wrong. The bank is something else than men. It happens nowadays that every man in a bank hates what the bank does, and yet the bank does it. The bank is something more than men, I tell you.
+> No, you're wrong there---quite wrong. The bank is something else than men. It happens nowadays that every man in a bank hates what the bank does, and yet the bank does it. **The bank is something more than men**, I tell you.
 > 
-> I got to figure... We all got to figure. **There's some way to stop this. There's got to be some way to stop this. It's not like lightning or earthquakes. We've got a bad thing made by men, and by God, isn't that something we should be able to change?** [@steinbeck_grapes_1939]
+> I got to figure... We all got to figure. **There's some way to stop this. There's got to be some way to stop this. It's not like lightning or earthquakes. We've got a bad thing made by men, and by god, isn't that something we should be able to change?** [@steinbeck_grapes_1939] \[[Video Link <i class='bi bi-box-arrow-up-right'></i>](images/grapes.mp4)\]
 
 
 ## Ontology: Individuals *and* Structures {.smaller .crunch-title .crunch-blockquote .title-12}
@@ -465,7 +485,7 @@ For overthinkers: **quarks** $\leadsto$ atoms as **mental modules** $\leadsto$ i
 :::
 ::: {.column width="39%"}
 
-
+{{< video https://jpj.georgetown.domains/dsan5650-data/fence_dog.mp4 height="600px" >}}
 
 :::
 ::::
@@ -968,7 +988,7 @@ Figures from @ingold_amazon_2016, ["Amazon Doesn't Consider the Race of its Cust
 :::
 ::::
 
-# Context-Sensitive Fairness $\Leftrightarrow$ Unraveling History {.smaller .crunch-title .title-10 .crunch-ul .crunch-quarto-figure .crunch-p .crunch-blockquote .cols-va .crunch-li-8 data-stack-name="Context-Sensitive Fair ML"}
+# Context-Sensitive Fairness $\Leftrightarrow$ Unraveling History {.smaller .crunch-title .title-10 .crunch-ul .crunch-quarto-figure .crunch-p .crunch-blockquote .cols-va .crunch-li-8}
 
 :::: {.columns}
 ::: {.column width="55%"}

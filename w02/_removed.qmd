@@ -1,0 +1,10 @@
+## Methodological Individualism {.crunch-title .crunch-li-8 .footnotes-0}
+
+* **Atoms** exhibit properties which are fruitful for understanding the physical world: we can study these properties as "building blocks" $\leadsto$ interactions among atoms with various properties give rise to higher-level physical "things" (molecules, chemicals, cells, organisms)
+* **Individuals** exhibit properties which are fruitful for understanding the social world: we can study these properties as "building blocks" $\leadsto$ interactions among individuals with various properties give rise to higher-level social processes (dyads, groups, institutions)
+
+::: {.aside}
+
+For overthinkers: **quarks** $\leadsto$ atoms as **mental modules** $\leadsto$ individuals 😉 [@fodor_modularity_1983]
+
+:::
