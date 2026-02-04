@@ -226,7 +226,7 @@ in contrast to
 :::
 :::
 
-## Contemporary Example: Palestine {.text-65 .crunch-quarto-layout-panel .crunch-title .crunch-ul .crunch-blockquote .crunch-li .crunch-p}
+## Contemporary Example: Palestine {.text-68 .crunch-quarto-layout-panel .crunch-title .crunch-ul .crunch-blockquote .crunch-li .crunch-p}
 
 * Very few of the relevant **empirical** facts are in dispute, since opening of crucial archives to three so-called "New Historians" in the 1980s. So why do people still argue?
 
@@ -239,6 +239,8 @@ in contrast to
 
 > The immunity Israel has received over the last fifty years encourages others, regimes and oppositions alike, to believe that human and civil rights are irrelevant in the Middle East. The dismantling of the mega-prison in Palestine will send a different, and more hopeful, message.
 
+* Utilitarian "wrapped" around Kantian
+
 :::
 ::: {#morris-text}
 
@@ -247,6 +249,8 @@ in contrast to
   * Is morally justifiable [@morris_birth_1987]
 
 > A Jewish state would not have come into being without the uprooting of 700,000 Palestinians. Therefore it was necessary to uproot them. There was no choice but to expel that population. It was necessary to cleanse the hinterland and cleanse the border areas and cleanse the main roads.
+
+* Straightforwardly utilitarian!
 
 <!-- [...] The term "cleanse" doesn't sound nice but that's the term they used at the time. I adopted it from the 1948 documents. -->
 
@@ -313,44 +317,30 @@ $$
 :::
 :::
 
-## Better Metaphor Than Letters {.smaller .crunch-title .crunch-ul .crunch-math .crunch-quarto-figure}
+## Better Metaphor Than Letters {.smaller .crunch-title .title-11 .crunch-ul .crunch-math .crunch-quarto-figure}
 
 * Letters are where Rawls gets "lexically prior" from, but letters are **total orderings** (we know where *every* letter "stands" in relation to *every* other letter)
-* Better metaphor: a **high school** with a hierarchy such that
+* Better metaphor: **UDC** (2yr school) rule for **allocating** [**basketball tickets**](https://www.udcfirebirds.com/sports/mbkb/index):
 
 $$
-\text{Seniors} \prec \text{Juniors} \prec \text{Sophomores}  \prec \text{Freshmen} 
+\text{Seniors} \prec \text{Juniors}
 $$
 
-* $\implies$ If you're a Freshman, whether at the "top" or "bottom" of a ranking of Freshmen, you're still **prior to** all Sophomores...
-* Why is this more helpful? Because **we don't need to define** the **rankings *within* classes** to know the **rankings *between* classes** in this case
+* $\Rightarrow$ If you're a Senior, whether at "top" or "bottom" of a <span data-bracket="(Judges)">ranking of Seniors</span>, you still (by Constitution) have **priority** over all Juniors...
+* Why is this more helpful? Because **we don't need to define** the rankings ***within* classes** to know the rankings ***between* classes** in this case
 
 ![](images/ordinal_numbers.svg){fig-align="center" width="300"}
 
-## Counterargument(s) to Deontology {.smaller .crunch-title .crunch-ul .crunch-figcaption .shift-ul .crunch-li-3 .crunch-images}
+## Implications for "Fair" AI? {.crunch-title .title-09 .crunch-ul}
 
-::: {layout="[7,3]"}
-::: {#deontology-counter-left}
+* This system of (Constitutionally-established) **rights**, as **vetos** over **utilitarian** decisions of legislator (Congress, Parliament, etc.), came about* to protect **individuals** against **opaque structures with authority to make decisions** that **affect these individuals' lives**
+* ...AI is an **opaque structure** with **authority to make decisions** that **affect individuals' lives** 🤔
 
-* Deontological **rule**: *"Don't lie"*
-  * But then: Nazis come to your house, ask you if you're harboring any Jews
-* k, new deontological **rule**: *"Don't lie unless necessary"*
-  * Who decides when it's necessary?
-* Deontological commitment: *Pacifism / Nonviolence*
-  * But then: someone swingin on you
-* k, new deontological **commitment**: *Pacifism / Nonviolence Except In Self-Defense*
-  * Who decides what counts as self-defense?
-* (Trolley problems, etc.)
+$$
+\underbrace{\texttt{A} \prec \texttt{B} \prec \cdots \prec \texttt{Z}}_{\mathclap{\substack{\text{Individual Rights} \\ \text{Constraints on objective functions}}}} \phantom{\prec} \phantom{\prec} \prec \phantom{\prec} \phantom{\prec} \underbrace{\texttt{a} \prec \texttt{b} \prec \cdots \prec \texttt{z}}_{\mathclap{\substack{\text{Distributive Principles} \\ \text{Maximized objective functions}}}}
+$$
 
-:::
-::: {#deontology-counter-right}
-
-![@churchill_pacifism_1998 *(Derrick Jensen intro removed from later editions so I [put it on dang GitHub](https://github.com/jpowerj/mdb/blob/main/1998_Churchill_PacifismAsPathology.md)*](images/pacifism.jpg){fig-align="center" width="340"}
-
-:::
-:::
-
-## A Synthesis: Two-Level Utilitarianism {.title-09 .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-images .crunch-figcaption}
+## Psychological Synthesis: Two-Level Utilitarianism {.text-90 .title-09 .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-images .crunch-figcaption}
 
 ::: {layout="[1,1]"}
 
