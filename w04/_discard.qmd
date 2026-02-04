@@ -1,0 +1,33 @@
+## Quick Aside: Top 10 Linguist Beefs {.smaller .crunch-title .crunch-figcaption .crunch-quarto-layout-panel .crunch-ul .crunch-images}
+
+* Statement on previous slide (*"Life would not be very different if we shuffled words"*), might seem weird/closed-minded/dismissive if you have a certain popular prior belief...
+
+::: {layout="[1,1]"}
+
+![@deutscher_language_2010](images/language_glass.jpg){fig-align="center" width="300"}
+
+![@mcwhorter_language_2014](images/language_hoax.jpg){fig-align="center" width="325"}
+
+:::
+
+## The Last Time I Use This, I Promise
+
+![](images/yells_at_sapir.jpeg)
+
+---
+
+## Aggressively Tossing Books at Your Head {.smaller .crunch-title .title-12}
+
+:::: {.columns}
+::: {.column width="50%"}
+
+* (Reminder that there are no **required** readings, but that this means you should pick a few which seem mildly interesting to you and try them out, as first step towards final paper **lit review!** 😉)
+* Also, we'll be bringing this Hirschman guy back into the mix when we get to **policy**:  specifically, his earlier book, *Exit, Voice, and Loyalty* [@hirschman_exit_1970]
+
+:::
+::: {.column width="50%"}
+
+![@hirschman_passions_1977](images/hirschman.jpg){fig-align="center" width="350"}
+
+:::
+::::

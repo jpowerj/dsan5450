@@ -15,13 +15,13 @@ w02:
   date-md: "Jan 21"
 w03:
   weeknum: 3
-  title: "Ethical Frameworks: Rights, Discrimination, and Fairness"
+  title: "Ethical Frameworks"
   footer: "Ethical Frameworks"
   date-md: "Jan 28"
 w04:
   weeknum: 4
-  title: "(Descriptive) Fairness in AI"
-  footer: "(Descriptive) Fairness in AI"
+  title: "Rights, Policies, and Fairness in AI"
+  footer: "Rights, Policies, Fairness"
   date-md: "Feb 4"
 w05:
   weeknum: 5
