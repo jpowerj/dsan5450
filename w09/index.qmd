@@ -93,7 +93,7 @@ Today's Planned Schedule:
 * **Part 2**: **Rapid cycling back and forth between normative and descriptive!**
 * One new aspect: "**Descriptive** Ethics" (How *do* people act, not how *should* people act) $\leadsto$ Study of Power
   
-  > [What is] right, as the world goes, is only in question between **equals in power**; otherwise, the strong do as they please and the weak suffer what they must. [@thucydides2013war c. 411 BC]
+  > [What is] right, as the world goes, is only in question between **equals in power**; otherwise, the strong do as they please and the weak suffer what they must. [@thucydides_war_2013 c. 411 BC]
 
 ## Recap 1: Privacy Policies Take a Long Time to Read! {.crunch-title .title-09 .smaller .nostretch}
 

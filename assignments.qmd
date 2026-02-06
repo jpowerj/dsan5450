@@ -15,9 +15,11 @@ The distributions are imported from Google Sheets mainly for transparency: so th
 #| label: points-table-fn
 #| warning: false
 #| echo: false
-library(tidyverse)
+library(tidyverse) |> suppressPackageStartupMessages()
 gen_points_table <- function(hw_url) {
   hw_df <- read_csv(hw_url)
+  # print(colnames(hw_df))
+  hw_df <- hw_df |> select(part, qid, points, part_total)
   hw_df <- hw_df |> drop_na(points)
   hw_df$points <- as.character(hw_df$points)
   hw_df$part_total <- as.character(hw_df$part_total)
@@ -25,7 +27,7 @@ gen_points_table <- function(hw_url) {
     part = replace_na(part, ""),
     part_total = replace_na(part_total, ""),
     qid = replace_na(qid, ""),
-    test_type = replace_na(test_type, "")
+    # test_type = replace_na(test_type, "")
   )
   return(hw_df)
 }
@@ -42,7 +44,8 @@ gen_points_table <- function(hw_url) {
 #| warning: false
 #| echo: false
 # hw1_url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vStpSHtuJy38apEKdY7akAsUTo1ovM2AR5VQ7AuVUpK4kbbxOSaaWeChP-zg2VKfGcvdctPTIxVy4NG/pub?output=csv"
-# gen_points_table(hw1_url)
+hw1_url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vRgzXNVDP9K_vqLy5uAVKQVY_gLbrG7nVpB99wPfSV8I8r_p_M2jGF3I_XWSRd3Q66ywIggcxTHPe0m/pub?output=csv"
+gen_points_table(hw1_url)
 ```
 
 </div>
