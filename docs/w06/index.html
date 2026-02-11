@@ -530,7 +530,7 @@ window.Quarto = {
     </ul>
     </div>
 <div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
-<p><em>Updated 2026-02-05, 11:15:42 PM</em></p>
+<p><em>Updated 2026-02-11, 05:14:24 AM</em></p>
 </div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -912,6 +912,22 @@ Adding another scale for y, which will replace the existing scale.</code></pre>
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggMarginal</span>(wp2, <span class="at">margins =</span> <span class="st">"y"</span>, <span class="at">type =</span> <span class="st">"histogram"</span>, <span class="at">yparams =</span> <span class="fu">list</span>(<span class="at">binwidth =</span> <span class="dv">1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_line()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 1 row containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
+(`geom_line()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 1 row containing missing values or values outside the scale range
+(`geom_point()`).</code></pre>
+</div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -957,58 +973,58 @@ Adding another scale for y, which will replace the existing scale.</code></pre>
 <div class="columns">
 <div class="column" style="width:65%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>ga_lawyers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">21362</span>, <span class="dv">22254</span>, <span class="dv">23134</span>, <span class="dv">23698</span>, <span class="dv">24367</span>, <span class="dv">24930</span>, <span class="dv">25632</span>, <span class="dv">26459</span>, <span class="dv">27227</span>, <span class="dv">27457</span>)</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>ski_df <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>year, <span class="sc">~</span>varname, <span class="sc">~</span>value,</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2000</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1551</span>,</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2001</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1635</span>,</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2002</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1801</span>,</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2003</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1827</span>,</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2004</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1956</span>,</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2005</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1989</span>,</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2006</span>, <span class="st">"ski_revenue"</span>, <span class="dv">2178</span>,</span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2007</span>, <span class="st">"ski_revenue"</span>, <span class="dv">2257</span>,</span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2008</span>, <span class="st">"ski_revenue"</span>, <span class="dv">2476</span>,</span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2009</span>, <span class="st">"ski_revenue"</span>, <span class="dv">2438</span>,</span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>ski_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(ski_df<span class="sc">$</span>value)</span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>ski_sd <span class="ot">&lt;-</span> <span class="fu">sd</span>(ski_df<span class="sc">$</span>value)</span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>ski_df <span class="ot">&lt;-</span> ski_df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">val_scaled =</span> <span class="dv">12</span><span class="sc">*</span>value, <span class="at">val_norm =</span> (value <span class="sc">-</span> ski_mean)<span class="sc">/</span>ski_sd)</span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>law_df <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">year=</span><span class="dv">2000</span><span class="sc">:</span><span class="dv">2009</span>, <span class="at">varname=</span><span class="st">"ga_lawyers"</span>, <span class="at">value=</span>ga_lawyers)</span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>law_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(law_df<span class="sc">$</span>value)</span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>law_sd <span class="ot">&lt;-</span> <span class="fu">sd</span>(law_df<span class="sc">$</span>value)</span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>law_df <span class="ot">&lt;-</span> law_df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">val_norm =</span> (value <span class="sc">-</span> law_mean)<span class="sc">/</span>law_sd)</span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>spur_df <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">bind_rows</span>(ski_df, law_df)</span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(spur_df, <span class="fu">aes</span>(<span class="at">x=</span>year, <span class="at">y=</span>val_norm, <span class="at">color=</span><span class="fu">factor</span>(varname, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Ski Revenue"</span>,<span class="st">"Lawyers in Georgia"</span>)))) <span class="sc">+</span></span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_smooth</span>(<span class="at">method=</span><span class="st">"loess"</span>, <span class="at">se=</span><span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span>g_pointsize<span class="sc">/</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
-<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill=</span><span class="st">""</span>,</span>
-<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Ski Revenue vs. Georgia Lawyers"</span>,</span>
-<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Year"</span>,</span>
-<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">color=</span><span class="st">"Correlation: 99.2%"</span>,</span>
-<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">linetype=</span><span class="cn">NULL</span></span>
-<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_dsan</span>() <span class="sc">+</span></span>
-<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(</span>
-<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks=</span><span class="fu">seq</span>(<span class="at">from=</span><span class="dv">2000</span>, <span class="at">to=</span><span class="dv">2014</span>, <span class="at">by=</span><span class="dv">2</span>)</span>
-<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_y_continuous(</span></span>
-<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>  <span class="co">#  name="Total Revenue, Ski Facilities (Million USD)",</span></span>
-<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>  <span class="co">#  sec.axis = sec_axis(~ . * law_sd + law_mean, name = "Number of Lawyers in Georgia")</span></span>
-<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>  <span class="co">#) +</span></span>
-<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="sc">-</span><span class="dv">1</span><span class="sc">:</span><span class="dv">1</span>,</span>
-<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="sc">~</span> . <span class="sc">*</span> <span class="fu">round</span>(ski_sd,<span class="dv">1</span>) <span class="sc">+</span> <span class="fu">round</span>(ski_mean,<span class="dv">1</span>),</span>
-<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">name=</span><span class="st">"Total Revenue, Ski Facilities (Million USD)"</span>,</span>
-<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">sec.axis =</span> <span class="fu">sec_axis</span>(<span class="sc">~</span> . <span class="sc">*</span> law_sd <span class="sc">+</span> law_mean, <span class="at">name =</span> <span class="st">"Number of Lawyers in Georgia"</span>)) <span class="sc">+</span></span>
-<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand_limits</span>(<span class="at">x=</span><span class="dv">2010</span>) <span class="sc">+</span></span>
-<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_hline(aes(yintercept=x, color="Mean Values"), as.data.frame(list(x=0)), linewidth=0.75, alpha=1.0, show.legend = TRUE) +</span></span>
-<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(</span>
-<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks=</span><span class="fu">c</span>(<span class="st">'Ski Revenue'</span>, <span class="st">'Lawyers in Georgia'</span>),</span>
-<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">values=</span><span class="fu">c</span>(<span class="st">'Ski Revenue'</span><span class="ot">=</span>cbPalette[<span class="dv">1</span>], <span class="st">'Lawyers in Georgia'</span><span class="ot">=</span>cbPalette[<span class="dv">2</span>])</span>
-<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>ga_lawyers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">21362</span>, <span class="dv">22254</span>, <span class="dv">23134</span>, <span class="dv">23698</span>, <span class="dv">24367</span>, <span class="dv">24930</span>, <span class="dv">25632</span>, <span class="dv">26459</span>, <span class="dv">27227</span>, <span class="dv">27457</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>ski_df <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tribble</span>(</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="sc">~</span>year, <span class="sc">~</span>varname, <span class="sc">~</span>value,</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2000</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1551</span>,</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2001</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1635</span>,</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2002</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1801</span>,</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2003</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1827</span>,</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2004</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1956</span>,</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2005</span>, <span class="st">"ski_revenue"</span>, <span class="dv">1989</span>,</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2006</span>, <span class="st">"ski_revenue"</span>, <span class="dv">2178</span>,</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2007</span>, <span class="st">"ski_revenue"</span>, <span class="dv">2257</span>,</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2008</span>, <span class="st">"ski_revenue"</span>, <span class="dv">2476</span>,</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2009</span>, <span class="st">"ski_revenue"</span>, <span class="dv">2438</span>,</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>ski_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(ski_df<span class="sc">$</span>value)</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>ski_sd <span class="ot">&lt;-</span> <span class="fu">sd</span>(ski_df<span class="sc">$</span>value)</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>ski_df <span class="ot">&lt;-</span> ski_df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">val_scaled =</span> <span class="dv">12</span><span class="sc">*</span>value, <span class="at">val_norm =</span> (value <span class="sc">-</span> ski_mean)<span class="sc">/</span>ski_sd)</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>law_df <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(<span class="at">year=</span><span class="dv">2000</span><span class="sc">:</span><span class="dv">2009</span>, <span class="at">varname=</span><span class="st">"ga_lawyers"</span>, <span class="at">value=</span>ga_lawyers)</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>law_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(law_df<span class="sc">$</span>value)</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>law_sd <span class="ot">&lt;-</span> <span class="fu">sd</span>(law_df<span class="sc">$</span>value)</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>law_df <span class="ot">&lt;-</span> law_df <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">val_norm =</span> (value <span class="sc">-</span> law_mean)<span class="sc">/</span>law_sd)</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>spur_df <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">bind_rows</span>(ski_df, law_df)</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(spur_df, <span class="fu">aes</span>(<span class="at">x=</span>year, <span class="at">y=</span>val_norm, <span class="at">color=</span><span class="fu">factor</span>(varname, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Ski Revenue"</span>,<span class="st">"Lawyers in Georgia"</span>)))) <span class="sc">+</span></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_smooth</span>(<span class="at">method=</span><span class="st">"loess"</span>, <span class="at">se=</span><span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size=</span>g_pointsize<span class="sc">/</span><span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill=</span><span class="st">""</span>,</span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Ski Revenue vs. Georgia Lawyers"</span>,</span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Year"</span>,</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">color=</span><span class="st">"Correlation: 99.2%"</span>,</span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">linetype=</span><span class="cn">NULL</span></span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_dsan</span>() <span class="sc">+</span></span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks=</span><span class="fu">seq</span>(<span class="at">from=</span><span class="dv">2000</span>, <span class="at">to=</span><span class="dv">2014</span>, <span class="at">by=</span><span class="dv">2</span>)</span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>  <span class="co">#scale_y_continuous(</span></span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a>  <span class="co">#  name="Total Revenue, Ski Facilities (Million USD)",</span></span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>  <span class="co">#  sec.axis = sec_axis(~ . * law_sd + law_mean, name = "Number of Lawyers in Georgia")</span></span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>  <span class="co">#) +</span></span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="sc">-</span><span class="dv">1</span><span class="sc">:</span><span class="dv">1</span>,</span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="sc">~</span> . <span class="sc">*</span> <span class="fu">round</span>(ski_sd,<span class="dv">1</span>) <span class="sc">+</span> <span class="fu">round</span>(ski_mean,<span class="dv">1</span>),</span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">name=</span><span class="st">"Total Revenue, Ski Facilities (Million USD)"</span>,</span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">sec.axis =</span> <span class="fu">sec_axis</span>(<span class="sc">~</span> . <span class="sc">*</span> law_sd <span class="sc">+</span> law_mean, <span class="at">name =</span> <span class="st">"Number of Lawyers in Georgia"</span>)) <span class="sc">+</span></span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expand_limits</span>(<span class="at">x=</span><span class="dv">2010</span>) <span class="sc">+</span></span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>  <span class="co">#geom_hline(aes(yintercept=x, color="Mean Values"), as.data.frame(list(x=0)), linewidth=0.75, alpha=1.0, show.legend = TRUE) +</span></span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(</span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks=</span><span class="fu">c</span>(<span class="st">'Ski Revenue'</span>, <span class="st">'Lawyers in Georgia'</span>),</span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">values=</span><span class="fu">c</span>(<span class="st">'Ski Revenue'</span><span class="ot">=</span>cbPalette[<span class="dv">1</span>], <span class="st">'Lawyers in Georgia'</span><span class="ot">=</span>cbPalette[<span class="dv">2</span>])</span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
@@ -1022,7 +1038,7 @@ Adding another scale for y, which will replace the existing scale.</code></pre>
 </div>
 </div><div class="column" style="width:35%;">
 <div class="cell" data-layout-align="center">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(ski_df<span class="sc">$</span>value, law_df<span class="sc">$</span>value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(ski_df<span class="sc">$</span>value, law_df<span class="sc">$</span>value)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.9921178</code></pre>
 </div>

@@ -642,7 +642,7 @@
     "href": "w06/index.html#the-result-64-steps",
     "title": "Week 6: Causality in Ethics and Policy",
     "section": "The Result: 64 Steps",
-    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))",
+    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).",
     "crumbs": [
       "Week 6: {{< var w06.date-md >}}"
     ]
@@ -4313,6 +4313,26 @@
     ]
   },
   {
+    "objectID": "w05/index.html#first-immanent-critique",
+    "href": "w05/index.html#first-immanent-critique",
+    "title": "Week 5: Context-Sensitive Fairness",
+    "section": "First: Immanent Critique",
+    "text": "First: Immanent Critique\n\n“Trancendental” Critique: Your assumptions are stupid! You should use these ones instead, then we get the result I want\nImmanent (\\(\\neq\\) Imminent) Critique: Let’s work within your set of assumptions, and derive something undesirable\n\\(\\neq\\) Proof by Contradiction! More “Proof by Pragmatism”: Think of geometry: for modeling 2D table, “effective” derivation of results from Euclid’s 5th; for modeling 4D space-time, “effective” derivation of results from Riemannian geometry",
+    "crumbs": [
+      "Week 5: {{< var w05.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w05/index.html#our-case-for-reflective-equilibrium",
+    "href": "w05/index.html#our-case-for-reflective-equilibrium",
+    "title": "Week 5: Context-Sensitive Fairness",
+    "section": "Our Case: For Reflective Equilibrium!",
+    "text": "Our Case: For Reflective Equilibrium!\n\n\n\nSteamboat William (1803), Colorized\n\n\n\n Assume brogrammer Fairness™ Definitions\n See what results we get\n Do they seem 👍/👎 on some feasibly-intersubjective criteria?\n(Secretly you already did this with fairness through unawareness / anti-classification: dropping race \\(\\overset{?}{=}\\) no racism?)",
+    "crumbs": [
+      "Week 5: {{< var w05.date-md >}}"
+    ]
+  },
+  {
     "objectID": "w05/index.html#propublica-vs.-northpointe",
     "href": "w05/index.html#propublica-vs.-northpointe",
     "title": "Week 5: Context-Sensitive Fairness",
@@ -4367,7 +4387,17 @@
     "href": "w05/index.html#motivation-linguistic-meaning",
     "title": "Week 5: Context-Sensitive Fairness",
     "section": "Motivation: Linguistic Meaning",
-    "text": "Motivation: Linguistic Meaning\n\n\n\n\n\n\nNote The Distributional Hypothesis (Firth 1968, 179)\n\n\n\nYou shall know a word by the company it keeps!\n\n\n\nRelated to Chomsky’s context-free vs. context-sensitive distinction!\nBut why is it relevant to DSAN 5450?…",
+    "text": "Motivation: Linguistic Meaning\n\n\n\n\n\n\nNote The Distributional Hypothesis (Firth 1968, 179)\n\n\n\nYou shall know a word by the company it keeps!\n\n\n\nRelated to context-free vs. context-sensitive distinction in Computer Science (old-school NLP)!\nBut why is it relevant to DSAN 5450?…",
+    "crumbs": [
+      "Week 5: {{< var w05.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w05/index.html#impossibility-results",
+    "href": "w05/index.html#impossibility-results",
+    "title": "Week 5: Context-Sensitive Fairness",
+    "section": "Impossibility Results!",
+    "text": "Impossibility Results!\n\nLet’s see what happens if we try to reason about definitions/meaning in language without the ability to incorporate “context” (here defined in a silly way… point holds as we go up the “language complexity hierarchy”)\nTry to write a finite-state automata to detect “valid” strings in the language \\(\\{a^nb^n \\mid n \\in \\mathbb{Z}^{\\geq 0}\\}\\): aabb ✅, aba ❌",
     "crumbs": [
       "Week 5: {{< var w05.date-md >}}"
     ]
@@ -4403,8 +4433,8 @@
     ]
   },
   {
-    "objectID": "w05/index.html#bringing-in-context-1",
-    "href": "w05/index.html#bringing-in-context-1",
+    "objectID": "w05/index.html#bringing-in-context",
+    "href": "w05/index.html#bringing-in-context",
     "title": "Week 5: Context-Sensitive Fairness",
     "section": "Bringing In Context",
     "text": "Bringing In Context\n\nIn itself, the principle of equal treatment is abstract, a formal relationship that lacks substantive content”\nThe principle must be given content by defining which cases are similar and which are different, and by considering what kinds of differences justify differential treatment\nDeciding what differences are relevant, and what kinds of differential treatment are justified by particular differences, requires wrestling with moral and political debates about the responsibilities of different institutions to address persistent injustice (Simons 2023, 51)",
@@ -4668,6 +4698,20 @@
     "text": "HW2 Metadata\n\nOn “Context-Sensitive Fairness”\nReleasing tonight!\nDue Friday, February 21, 5:59pm EST\nAutograder \\(\\rightarrow\\) Autohinter!"
   },
   {
+    "objectID": "w05/slides.html#first-immanent-critique",
+    "href": "w05/slides.html#first-immanent-critique",
+    "title": "Week 5: Context-Sensitive Fairness",
+    "section": "First: Immanent Critique",
+    "text": "First: Immanent Critique\n\n“Trancendental” Critique: Your assumptions are stupid! You should use these ones instead, then we get the result I want\nImmanent (\\(\\neq\\) Imminent) Critique: Let’s work within your set of assumptions, and derive something undesirable\n\\(\\neq\\) Proof by Contradiction! More “Proof by Pragmatism”: Think of geometry: for modeling 2D table, “effective” derivation of results from Euclid’s 5th; for modeling 4D space-time, “effective” derivation of results from Riemannian geometry"
+  },
+  {
+    "objectID": "w05/slides.html#our-case-for-reflective-equilibrium",
+    "href": "w05/slides.html#our-case-for-reflective-equilibrium",
+    "title": "Week 5: Context-Sensitive Fairness",
+    "section": "Our Case: For Reflective Equilibrium!",
+    "text": "Our Case: For Reflective Equilibrium!\n\nSteamboat William (1803), Colorized\n Assume brogrammer Fairness™ Definitions\n See what results we get\n Do they seem 👍/👎 on some feasibly-intersubjective criteria?\n(Secretly you already did this with fairness through unawareness / anti-classification: dropping race \\(\\overset{?}{=}\\) no racism?)"
+  },
+  {
     "objectID": "w05/slides.html#propublica-vs.-northpointe",
     "href": "w05/slides.html#propublica-vs.-northpointe",
     "title": "Week 5: Context-Sensitive Fairness",
@@ -4707,7 +4751,14 @@
     "href": "w05/slides.html#motivation-linguistic-meaning",
     "title": "Week 5: Context-Sensitive Fairness",
     "section": "Motivation: Linguistic Meaning",
-    "text": "Motivation: Linguistic Meaning\n\n\n\n\n The Distributional Hypothesis (Firth 1968, 179)\n\n\nYou shall know a word by the company it keeps!\n\n\n\n\n\nRelated to Chomsky’s context-free vs. context-sensitive distinction!\nBut why is it relevant to DSAN 5450?…"
+    "text": "Motivation: Linguistic Meaning\n\n\n\n\n The Distributional Hypothesis (Firth 1968, 179)\n\n\nYou shall know a word by the company it keeps!\n\n\n\n\n\nRelated to context-free vs. context-sensitive distinction in Computer Science (old-school NLP)!\nBut why is it relevant to DSAN 5450?…"
+  },
+  {
+    "objectID": "w05/slides.html#impossibility-results",
+    "href": "w05/slides.html#impossibility-results",
+    "title": "Week 5: Context-Sensitive Fairness",
+    "section": "Impossibility Results!",
+    "text": "Impossibility Results!\n\nLet’s see what happens if we try to reason about definitions/meaning in language without the ability to incorporate “context” (here defined in a silly way… point holds as we go up the “language complexity hierarchy”)\nTry to write a finite-state automata to detect “valid” strings in the language \\(\\{a^nb^n \\mid n \\in \\mathbb{Z}^{\\geq 0}\\}\\): aabb ✅, aba ❌"
   },
   {
     "objectID": "w05/slides.html#the-meaning-of-fairness",
@@ -4731,8 +4782,8 @@
     "text": "The (Normative!) Antecedent\n\n\n\n\nFairness Through Awareness (Dwork et al. 2011)\n\n\nIndividuals who are similar with respect to a task should be classified similarly.\n\n\n\n\n\n\n\n\nNot well-liked in industry / policy because you can’t just “plug in” results of your classifier and get True/False “we satisfied fairness!” …But this is exactly the point!\n\n\n\n\n\n\nFrom Kiat (2018)"
   },
   {
-    "objectID": "w05/slides.html#bringing-in-context-1",
-    "href": "w05/slides.html#bringing-in-context-1",
+    "objectID": "w05/slides.html#bringing-in-context",
+    "href": "w05/slides.html#bringing-in-context",
     "title": "Week 5: Context-Sensitive Fairness",
     "section": "Bringing In Context",
     "text": "Bringing In Context\n\nIn itself, the principle of equal treatment is abstract, a formal relationship that lacks substantive content”\nThe principle must be given content by defining which cases are similar and which are different, and by considering what kinds of differences justify differential treatment\nDeciding what differences are relevant, and what kinds of differential treatment are justified by particular differences, requires wrestling with moral and political debates about the responsibilities of different institutions to address persistent injustice (Simons 2023, 51)"
@@ -5542,7 +5593,7 @@
     "href": "w09/index.html#recap-0-descriptive-vs.-normative",
     "title": "Week 9: From Data Ethics to Data Policy",
     "section": "Recap 0: Descriptive vs. Normative",
-    "text": "Recap 0: Descriptive vs. Normative\n\nMuch of Part 1 has been adjusting to weirdness of normative reasoning\nDescriptive reasoning looks like [Rules of math \\(\\implies \\theta^* = 2.5\\)], but [rules of math] part isn’t mentioned bc extraneous\n\n(Even if it was mentioned, intersubjective agreement not so hard, very few people fighting wars over “we should denote repeated addition with \\(\\otimes\\) not \\(\\times\\)!”)\n\nNormative reasoning looks like [Antecedent A \\(\\implies\\) Answer 1 but Antecedent B \\(\\implies\\) Answer 2], and people do fight wars over A vs. B (implicitly or explicitly)\nPart 2: Rapid cycling back and forth between normative and descriptive!\nOne new aspect: “Descriptive Ethics” (How do people act, not how should people act) \\(\\leadsto\\) Study of Power\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (thucydides2013war? c. 411 BC)",
+    "text": "Recap 0: Descriptive vs. Normative\n\nMuch of Part 1 has been adjusting to weirdness of normative reasoning\nDescriptive reasoning looks like [Rules of math \\(\\implies \\theta^* = 2.5\\)], but [rules of math] part isn’t mentioned bc extraneous\n\n(Even if it was mentioned, intersubjective agreement not so hard, very few people fighting wars over “we should denote repeated addition with \\(\\otimes\\) not \\(\\times\\)!”)\n\nNormative reasoning looks like [Antecedent A \\(\\implies\\) Answer 1 but Antecedent B \\(\\implies\\) Answer 2], and people do fight wars over A vs. B (implicitly or explicitly)\nPart 2: Rapid cycling back and forth between normative and descriptive!\nOne new aspect: “Descriptive Ethics” (How do people act, not how should people act) \\(\\leadsto\\) Study of Power\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (Thucydides 2013 c. 411 BC)",
     "crumbs": [
       "Week 9: {{< var w09.date-md >}}"
     ]
@@ -5712,7 +5763,7 @@
     "href": "w09/index.html#references",
     "title": "Week 9: From Data Ethics to Data Policy",
     "section": "References",
-    "text": "References\n\n\nBowles, Samuel. 2009. Microeconomics: Behavior, Institutions, and Evolution. Princeton University Press. https://books.google.com?id=HAiMDU4qv0IC.\n\n\nBowles, Samuel, and Herbert Gintis. 1992. “Power and Wealth in a Competitive Capitalist Economy.” Philosophy & Public Affairs 21 (4): 324–53. https://www.jstor.org/stable/2265369.\n\n\nFrank, Tom. 1994. “DARK AGE: Why Johnny Can’t Dissent.” The Baffler, no. 6: 5–192. https://www.jstor.org/stable/43555671.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.",
+    "text": "References\n\n\nBowles, Samuel. 2009. Microeconomics: Behavior, Institutions, and Evolution. Princeton University Press. https://books.google.com?id=HAiMDU4qv0IC.\n\n\nBowles, Samuel, and Herbert Gintis. 1992. “Power and Wealth in a Competitive Capitalist Economy.” Philosophy & Public Affairs 21 (4): 324–53. https://www.jstor.org/stable/2265369.\n\n\nFrank, Tom. 1994. “DARK AGE: Why Johnny Can’t Dissent.” The Baffler, no. 6: 5–192. https://www.jstor.org/stable/43555671.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.",
     "crumbs": [
       "Week 9: {{< var w09.date-md >}}"
     ]
@@ -5736,7 +5787,7 @@
     "href": "w09/slides.html#recap-0-descriptive-vs.-normative",
     "title": "Week 9: From Data Ethics to Data Policy",
     "section": "Recap 0: Descriptive vs. Normative",
-    "text": "Recap 0: Descriptive vs. Normative\n\nMuch of Part 1 has been adjusting to weirdness of normative reasoning\nDescriptive reasoning looks like [Rules of math \\(\\implies \\theta^* = 2.5\\)], but [rules of math] part isn’t mentioned bc extraneous\n\n(Even if it was mentioned, intersubjective agreement not so hard, very few people fighting wars over “we should denote repeated addition with \\(\\otimes\\) not \\(\\times\\)!”)\n\nNormative reasoning looks like [Antecedent A \\(\\implies\\) Answer 1 but Antecedent B \\(\\implies\\) Answer 2], and people do fight wars over A vs. B (implicitly or explicitly)\nPart 2: Rapid cycling back and forth between normative and descriptive!\nOne new aspect: “Descriptive Ethics” (How do people act, not how should people act) \\(\\leadsto\\) Study of Power\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (thucydides2013war? c. 411 BC)"
+    "text": "Recap 0: Descriptive vs. Normative\n\nMuch of Part 1 has been adjusting to weirdness of normative reasoning\nDescriptive reasoning looks like [Rules of math \\(\\implies \\theta^* = 2.5\\)], but [rules of math] part isn’t mentioned bc extraneous\n\n(Even if it was mentioned, intersubjective agreement not so hard, very few people fighting wars over “we should denote repeated addition with \\(\\otimes\\) not \\(\\times\\)!”)\n\nNormative reasoning looks like [Antecedent A \\(\\implies\\) Answer 1 but Antecedent B \\(\\implies\\) Answer 2], and people do fight wars over A vs. B (implicitly or explicitly)\nPart 2: Rapid cycling back and forth between normative and descriptive!\nOne new aspect: “Descriptive Ethics” (How do people act, not how should people act) \\(\\leadsto\\) Study of Power\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (Thucydides 2013 c. 411 BC)"
   },
   {
     "objectID": "w09/slides.html#recap-1-privacy-policies-take-a-long-time-to-read",
@@ -5855,7 +5906,7 @@
     "href": "w09/slides.html#references",
     "title": "Week 9: From Data Ethics to Data Policy",
     "section": "References",
-    "text": "References\n\n\nBowles, Samuel. 2009. Microeconomics: Behavior, Institutions, and Evolution. Princeton University Press. https://books.google.com?id=HAiMDU4qv0IC.\n\n\nBowles, Samuel, and Herbert Gintis. 1992. “Power and Wealth in a Competitive Capitalist Economy.” Philosophy & Public Affairs 21 (4): 324–53. https://www.jstor.org/stable/2265369.\n\n\nFrank, Tom. 1994. “DARK AGE: Why Johnny Can’t Dissent.” The Baffler, no. 6: 5–192. https://www.jstor.org/stable/43555671.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152."
+    "text": "References\n\n\nBowles, Samuel. 2009. Microeconomics: Behavior, Institutions, and Evolution. Princeton University Press. https://books.google.com?id=HAiMDU4qv0IC.\n\n\nBowles, Samuel, and Herbert Gintis. 1992. “Power and Wealth in a Competitive Capitalist Economy.” Philosophy & Public Affairs 21 (4): 324–53. https://www.jstor.org/stable/2265369.\n\n\nFrank, Tom. 1994. “DARK AGE: Why Johnny Can’t Dissent.” The Baffler, no. 6: 5–192. https://www.jstor.org/stable/43555671.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152."
   },
   {
     "objectID": "w01/index.html",

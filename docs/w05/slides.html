@@ -116,7 +116,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-e9547f797af0416502346efcc89ebf21.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d78fd8536d23427ab5bba6acc0cea2e9.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -586,9 +586,27 @@ Jeff Jacobs
 </ul>
 </section></section>
 <section>
-<section id="context-free-rightarrow-context-sensitive" class="title-slide slide level1 center" data-stack-name="Context-Sensitive Fairness">
-<h1>Context-Free <span class="math inline">\(\rightarrow\)</span> Context-Sensitive</h1>
+<section id="context-free-rightarrow-context-sensitive" class="title-slide slide level1 title-12 center" data-stack-name="Context-Free Fairness">
+<h1><i class="bi bi-1-circle"></i> Context-Free <br><span class="cbg-darker"><span class="math inline">\(\rightarrow\)</span> <i class="bi bi-2-circle"></i> Context-Sensitive</span></h1>
 
+</section>
+<section id="first-immanent-critique" class="slide level2 crunch-title crunch-ul">
+<h2>First: Imm<span class="boxed-crunch">a</span>nent Critique</h2>
+<ul>
+<li>“Trancendental” Critique: Your assumptions are stupid! You should use these ones instead, then we get the result I want</li>
+<li>Immanent (<span class="math inline">\(\neq\)</span> Imm<span class="boxed-crunch">i</span>nent) Critique: Let’s work <strong>within</strong> your set of assumptions, and <strong>derive</strong> something undesirable</li>
+<li><em><span class="math inline">\(\neq\)</span> Proof by Contradiction! More “Proof by Pragmatism”: Think of <strong>geometry</strong>: for modeling 2D table, “effective” derivation of results from Euclid’s 5th; for modeling 4D space-time, “effective” derivation of results from Riemannian geometry</em></li>
+</ul>
+</section>
+<section id="our-case-for-reflective-equilibrium" class="slide level2 crunch-title crunch-ul text-80 inline-80">
+<h2>Our Case: For Reflective Equilibrium!</h2>
+
+<img data-src="images/surprise_tool_crop.jpg" class="r-stretch quarto-figure-center"><p class="caption">Steamboat William (1803), Colorized</p><ul>
+<li><i class="bi bi-1-circle"></i> Assume brogrammer Fairness™ Definitions</li>
+<li><i class="bi bi-2-circle"></i> See what results we get</li>
+<li><i class="bi bi-3-circle"></i> Do they seem 👍/👎 on some feasibly-intersubjective criteria?</li>
+<li><em>(Secretly you already did this with <strong>fairness through unawareness</strong> / <strong>anti-classification</strong>: dropping race <span class="math inline">\(\overset{?}{=}\)</span> no racism?)</em></li>
+</ul>
 </section>
 <section id="propublica-vs.-northpointe" class="slide level2 smaller crunch-title">
 <h2>ProPublica vs.&nbsp;Northpointe</h2>
@@ -640,8 +658,8 @@ Jeff Jacobs
 </ul>
 </section></section>
 <section>
-<section id="bringing-in-context" class="title-slide slide level1 center">
-<h1>Bringing in <em>Context</em></h1>
+<section id="context-free-rightarrow-context-sensitive-1" class="title-slide slide level1 title-12 center" data-stack-name="Context-Sensitive Fairness">
+<h1><span class="cbg-darker"><i class="bi bi-1-circle"></i> Context-Free</span><br> <span class="math inline">\(\rightarrow\)</span> <i class="bi bi-2-circle"></i> Context-Sensitive</h1>
 
 </section>
 <section id="motivation-linguistic-meaning" class="slide level2">
@@ -659,9 +677,26 @@ Jeff Jacobs
 </div>
 </div>
 <ul>
-<li>Related to Chomsky’s <strong>context-free</strong> vs.&nbsp;<strong>context-sensitive</strong> distinction!</li>
+<li>Related to <strong>context-free</strong> vs.&nbsp;<strong>context-sensitive</strong> distinction in Computer Science (old-school NLP)!</li>
 <li>But why is it relevant to DSAN 5450?…</li>
 </ul>
+</section>
+<section id="impossibility-results" class="slide level2 crunch-title crunch-ul code-black">
+<h2>Impossibility Results!</h2>
+<ul>
+<li>Let’s see what happens if we try to <strong>reason about definitions/meaning in language</strong> without the ability to incorporate <strong>“context”</strong> (here defined in a silly way… point holds as we go up the “language complexity hierarchy”)</li>
+<li>Try to write a finite-state automata to detect “valid” strings in the language <span class="math inline">\(\{a^nb^n \mid n \in \mathbb{Z}^{\geq 0}\}\)</span>: <code>aabb</code> ✅, <code>aba</code> ❌</li>
+</ul>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="automata-fail" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+
+</div>
+<div id="automata-win" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+
+</div>
+</div>
+</div>
 </section>
 <section id="the-meaning-of-fairness" class="slide level2">
 <h2>The “Meaning” of Fairness</h2>
@@ -727,7 +762,7 @@ Jeff Jacobs
 </div>
 </div>
 </section>
-<section id="bringing-in-context-1" class="slide level2">
+<section id="bringing-in-context" class="slide level2">
 <h2>Bringing In Context</h2>
 <ul>
 <li><em>In itself, the principle of equal treatment is abstract, a formal relationship that <strong>lacks substantive content</strong>”</em></li>

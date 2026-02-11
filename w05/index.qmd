@@ -238,7 +238,22 @@ And **evaluate** based on $p$ and $q$ (board time!)
 * Due **Friday, February 21, 5:59pm EST**
 * Autograder $\rightarrow$ Autohinter!
 
-# Context-Free $\rightarrow$ Context-Sensitive {data-stack-name="Context-Sensitive Fairness"}
+# <i class='bi bi-1-circle'></i> Context-Free <br>[$\rightarrow$ <i class='bi bi-2-circle'></i> Context-Sensitive]{.cbg-darker} {.title-12 data-stack-name="Context-Free Fairness"}
+
+## First: Imm[a]{.boxed-crunch}nent Critique {.crunch-title .crunch-ul}
+
+* "Trancendental" Critique: Your assumptions are stupid! You should use these ones instead, then we get the result I want
+* Immanent ($\neq$ Imm[i]{.boxed-crunch}nent) Critique: Let's work **within** your set of assumptions, and **derive** something undesirable
+* *$\neq$ Proof by Contradiction! More "Proof by Pragmatism": Think of **geometry**: for modeling 2D table, "effective" derivation of results from Euclid's 5th; for modeling 4D space-time, "effective" derivation of results from Riemannian geometry*
+
+## Our Case: For Reflective Equilibrium! {.crunch-title .crunch-ul .text-80 .inline-80}
+
+![Steamboat William (1803), Colorized](images/surprise_tool_crop.jpg){fig-align="center"}
+
+* <i class='bi bi-1-circle'></i> Assume brogrammer Fairness&trade; Definitions
+* <i class='bi bi-2-circle'></i> See what results we get
+* <i class='bi bi-3-circle'></i> Do they seem 👍/👎 on some feasibly-intersubjective criteria?
+* *(Secretly you already did this with **fairness through unawareness** / **anti-classification**: dropping race $\overset{?}{=}$ no racism?)*
 
 ## ProPublica vs. Northpointe {.smaller .crunch-title}
 
@@ -280,7 +295,7 @@ subheading on the article. ProPublica found that COMPAS's error rates---the rate
 * We have another case where, like the "grass is green" vs. "grass ought to be green" example, we cannot just "import" our logical/mathematical tools from the former to solve the latter! (However: this does **not** mean they are **useless**! This is the fallacy of the **excluded middle**, sort of the opposite of the fallacy of the middle ground)
 * This is why we have **ethical frameworks** in the first place! Going back to **Rawls**: "97% of Americans think black people shouldn't have rights" &nbsp;$\nimplies$"black people shouldn't have rights", since rights are a **primary good**
 
-# Bringing in *Context*
+# [<i class='bi bi-1-circle'></i> Context-Free]{.cbg-darker}<br> $\rightarrow$ <i class='bi bi-2-circle'></i> Context-Sensitive {.title-12 data-stack-name="Context-Sensitive Fairness"}
 
 ## Motivation: Linguistic Meaning
 
@@ -290,8 +305,22 @@ subheading on the article. ProPublica found that COMPAS's error rates---the rate
 
 :::
 
-* Related to Chomsky's **context-free** vs. **context-sensitive** distinction!
+* Related to **context-free** vs. **context-sensitive** distinction in Computer Science (old-school NLP)!
 * But why is it relevant to DSAN 5450?...
+
+## Impossibility Results! {.crunch-title .crunch-ul .code-black}
+
+* Let's see what happens if we try to **reason about definitions/meaning in language** without the ability to incorporate **"context"** (here defined in a silly way... point holds as we go up the "language complexity hierarchy")
+* Try to write a finite-state automata to detect "valid" strings in the language $\{a^nb^n \mid n \in \mathbb{Z}^{\geq 0}\}$: `aabb` ✅, `aba` ❌
+
+:::: {layout="[1,1]"}
+::: {#automata-fail}
+
+:::
+::: {#automata-win}
+
+:::
+::::
 
 ## The "Meaning" of Fairness
 
