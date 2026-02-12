@@ -3,6 +3,11 @@ title: "Resources"
 bibliography: "_DSAN5450.bib"
 ---
 
+## Previous Term Recordings
+
+* Recordings of all lectures from the *Spring 2025* semester can be found [here](https://georgetown.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=d240de45-5abb-4eea-8b13-b2590063001d)
+* Recordings of all lectures from the *Spring 2024* semester can be found [here](https://georgetown.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=833d0042-cb49-4ebf-bdfb-b0fb0007c186)
+
 ## Normative vs. Descriptive / Ethical Frameworks
 
 ### General / High-Level Overviews
