@@ -1,0 +1,189 @@
+---
+title: "Necessary vs. Sufficient Conditions In Detail"
+author: "Jeff Jacobs"
+sidebar: mainnav
+date: 2026-02-13
+bibliography: "../../_DSAN5450.bib"
+relevance: "HW1"
+categories:
+  - "Extra Writeups"
+format:
+  html:
+    cache: true
+    df-print: kable
+    html-math-method: mathjax
+    toc: true
+    link-external-newwindow: true
+    link-external-icon: true
+    echo: true
+    code-fold: show
+---
+
+## Table-Setting I Should Have Done *Before* HW1: Truth Tables! {.smaller .crunch-title .crunch-ul .crunch-p}
+
+**Just one (❗️) "primary" axiom required for first-order predicate logic!**
+
+::: {#text-top style="margin-bottom: 10px;"}
+
+But, to make it more digestible, we can define some "helper axioms":
+
+:::
+
+:::: {.columns}
+::: {.column width="50%"}
+
+<center>
+**[Helper Axiom <i class='bi bi-dash-circle'></i>]**
+</center>
+
+* A **unary** operator "$\neg$"
+* Intersubjective agreement: call it "not"
+
+<center>
+
+| $p$ | $\neg p$ |
+|:-:|:-:|
+| 0 | 1 |
+| 1 | 0 |
+
+: {tbl-colwidths="[50,50]"}
+
+</center>
+
+:::
+::: {.column width="50%"}
+
+<center>
+**[Helper Axiom <i class='bi bi-x-circle'></i>]**
+</center>
+
+* A **binary** operator "$\wedge$"
+* Intersubjective agreement: call it "and"
+
+<center>
+
+| $p$ | $q$ | $p \wedge q$ |
+|:-:|:-:|:-:|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
+</center>
+
+:::
+::::
+
+## The Single Axiom
+
+**[Axiom <i class='bi bi-1-circle'></i>]** A **binary** operator "$\barwedge$", defined (for human consumption) s.t. $a \barwedge b \triangleq \neg(a \wedge b)$, but defined precisely as the binary operator which maps the [blue]{.cb2a-bg} cols into [orange]{.cb1a-bg} col:
+
+```{=html}
+<table>
+<thead>
+<tr>
+  <th class='cb2a-bg' align="center"><span data-qmd="$p$"></span></th>
+  <th class='cb2a-bg'><span data-qmd="$q$"></span></th>
+  <th><span data-qmd="$p \underset{\small\text{or}}{\vee} q$"></span></th>
+  <th><span data-qmd="$p \underset{\small\text{xor}}{\otimes} q$"></span></th>
+  <th align="center"><span data-qmd="$p \underset{\small\text{and}}{\wedge} q$"></span></th>
+  <th class='cb1a-bg' align="center"><span data-qmd="$p \underset{\small\text{nand}}{\barwedge} q$"></span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td class='cb2a-bg'>0</td>
+  <td class='cb2a-bg'>0</td>
+  <td align="center">0</td>
+  <td align="center">0</td>
+  <td align="center">0</td>
+  <td class='cb1a-bg' align="center">1</td>
+</tr>
+<tr>
+  <td class='cb2a-bg'>0</td>
+  <td class='cb2a-bg'>1</td>
+  <td>1</td>
+  <td>1</td>
+  <td>0</td>
+  <td class='cb1a-bg'>1</td>
+</tr>
+<tr>
+  <td class='cb2a-bg'>1</td>
+  <td class='cb2a-bg'>0</td>
+  <td>1</td>
+  <td>1</td>
+  <td>0</td>
+  <td class='cb1a-bg'>1</td>
+</tr>
+<tr>
+  <td class='cb2a-bg'>1</td>
+  <td class='cb2a-bg'>1</td>
+  <td>1</td>
+  <td>0</td>
+  <td>1</td>
+  <td class='cb1a-bg'>0</td>
+</tr>
+</table>
+```
+
+## Deriving "Not" {.crunch-title .math-90 .inline-90}
+
+* Given Axiom <i class='bi bi-1-circle'></i>, we can **derive** Axiom <i class='bi bi-dash-circle'></i> as a **theorem** (meaning, it does **not** need to be included as an axiom!):
+  
+  $$
+  [\text{Theorem 1}] \; ~ p \barwedge p \text{ satisfies all properties of }\neg p
+  $$
+
+  Therefore, define $\neg p \triangleq p \barwedge p$
+
+* Given Axiom <i class='bi bi-1-circle'></i> and Theorem 1, we can **derive** Axiom <i class='bi bi-dash-circle'></i> as a **theorem**:
+
+  $$
+  [\text{Theorem 2}] ~ \neg(p \barwedge q) \text{ satisfies all properties of }p \wedge q
+  $$
+
+  Therefore, define $p \wedge q \triangleq \neg(p \barwedge q)$
+
+## HW1 Clarification: Necessary vs. Sufficient {.smaller .crunch-title .crunch-p .crunch-ul .title-11}
+
+::: {#necc-top style="margin-bottom: 24px;"}
+
+These are, at root, **logical connectors**: given **"atomic"** (non-implicational) logical predicates $p$ and $q$, we can form **implicational** predicates (here "$\equiv$" means "will always have the same logical value (T or F) as"):
+
+| English | Logical Form | $\equiv$ | Contrapositive Form | If True Then... 
+| - | - | - | - | - |
+| "If $p$ then $q$" | $p \Rightarrow q$ or $q \Leftarrow p$ | $\equiv$ | $\neg q \Rightarrow \neg p$ | $p$ **sufficient** for $q$ |
+| "If $q$ then $p$" | $q \Rightarrow p$ or $p \Leftarrow q$ | $\equiv$ | $\neg p \Rightarrow \neg q$ | $p$ **necessary** for $q$ |
+
+: {tbl-colwidths="[18,22,5,30,25]"}
+
+:::
+
+:::: {.columns}
+::: {.column width="40%"}
+
+The truth table for $\Rightarrow$ looks like:
+
+<center>
+
+| $p$ | $q$ | $p \Rightarrow q$ | $\neg p \vee q$ |
+|:-:|:-:|:-:|:-:|
+| 0 | 0 | 1 | 1 |
+| 0 | 1 | 1 | 1 |
+| 1 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 1 |
+
+</center>
+
+:::
+::: {.column width="60%"}
+
+Which means, finally, we can **"plug in"** English statements for $p$ and $q$:
+
+* $p$ = «A law mandating segregation is in force in a polity»
+* $q$ = «Segregation emerges in the polity»
+
+And **evaluate** based on $p$ and $q$ (board time!)
+
+:::
+::::

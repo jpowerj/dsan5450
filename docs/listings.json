@@ -21,6 +21,7 @@
   {
     "listing": "/writeups/index.html",
     "items": [
+      "/writeups/necessary-sufficient/index.html",
       "/writeups/intuitions-vs-antecedents/index.html",
       "/writeups/berkson/index.html",
       "/writeups/do-calculus/index.html",

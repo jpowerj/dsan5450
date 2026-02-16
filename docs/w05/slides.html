@@ -336,299 +336,62 @@ Jeff Jacobs
 </section>
 
 <section>
-<section id="setting-the-table-hw1-leadsto-hw2" class="title-slide slide level1 center" data-stack-name="Table-Setting">
-<h1>Setting the Table: HW1 <span class="math inline">\(\leadsto\)</span> HW2</h1>
-
-</section>
-<section id="table-setting-i-should-have-done-before-hw1-truth-tables" class="slide level2 smaller crunch-title crunch-ul crunch-p">
-<h2>Table-Setting I Should Have Done <em>Before</em> HW1: Truth Tables!</h2>
-<p><strong>Just one (❗️) “primary” axiom required for first-order predicate logic!</strong></p>
-<div id="text-top" style="margin-bottom: 10px;">
-<p>But, to make it more digestible, we can define some “helper axioms”:</p>
-</div>
-<div class="columns">
-<div class="column" style="width:50%;">
-<center>
-<strong>[Helper Axiom <i class="bi bi-dash-circle"></i>]</strong>
-</center>
-<ul>
-<li>A <strong>unary</strong> operator “<span class="math inline">\(\neg\)</span>”</li>
-<li>Intersubjective agreement: call it “not”</li>
-</ul>
-<center>
-<table class="caption-top">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(\neg p\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-</tr>
-</tbody>
-</table>
-</center>
-</div><div class="column" style="width:50%;">
-<center>
-<strong>[Helper Axiom <i class="bi bi-x-circle"></i>]</strong>
-</center>
-<ul>
-<li>A <strong>binary</strong> operator “<span class="math inline">\(\wedge\)</span>”</li>
-<li>Intersubjective agreement: call it “and”</li>
-</ul>
-<center>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(p \wedge q\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-</tbody>
-</table>
-</center>
-</div></div>
-</section>
-<section id="the-single-axiom" class="slide level2">
-<h2>The Single Axiom</h2>
-<p><strong>[Axiom <i class="bi bi-1-circle"></i>]</strong> A <strong>binary</strong> operator “<span class="math inline">\(\barwedge\)</span>”, defined (for human consumption) s.t. <span class="math inline">\(a \barwedge b \triangleq \neg(a \wedge b)\)</span>, but defined precisely as the binary operator which maps the <span class="cb2a-bg">blue</span> cols into <span class="cb1a-bg">orange</span> col:</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th class="cb2a-bg" style="text-align: center;" data-quarto-table-cell-role="th"><span class="math inline">\(p\)</span></th>
-<th class="cb2a-bg" data-quarto-table-cell-role="th"><span class="math inline">\(q\)</span></th>
-<th style="text-align: center;" data-quarto-table-cell-role="th"><span class="math inline">\(p \underset{\small\text{or}}{\vee} q\)</span></th>
-<th style="text-align: center;" data-quarto-table-cell-role="th"><span class="math inline">\(p \underset{\small\text{xor}}{\otimes} q\)</span></th>
-<th style="text-align: center;" data-quarto-table-cell-role="th"><span class="math inline">\(p \underset{\small\text{and}}{\wedge} q\)</span></th>
-<th class="cb1a-bg" style="text-align: center;" data-quarto-table-cell-role="th"><span class="math inline">\(p \underset{\small\text{nand}}{\barwedge} q\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td class="cb2a-bg">0</td>
-<td class="cb2a-bg">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td class="cb1a-bg" style="text-align: center;">1</td>
-</tr>
-<tr class="even">
-<td class="cb2a-bg">0</td>
-<td class="cb2a-bg">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td class="cb1a-bg" style="text-align: center;">1</td>
-</tr>
-<tr class="odd">
-<td class="cb2a-bg">1</td>
-<td class="cb2a-bg">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td class="cb1a-bg" style="text-align: center;">1</td>
-</tr>
-<tr class="even">
-<td class="cb2a-bg">1</td>
-<td class="cb2a-bg">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td class="cb1a-bg" style="text-align: center;">0</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="deriving-not" class="slide level2 crunch-title math-90 inline-90">
-<h2>Deriving “Not”</h2>
-<ul>
-<li><p>Given Axiom <i class="bi bi-1-circle"></i>, we can <strong>derive</strong> Axiom <i class="bi bi-dash-circle"></i> as a <strong>theorem</strong> (meaning, it does <strong>not</strong> need to be included as an axiom!):</p>
-<p><span class="math display">\[
-[\text{Theorem 1}] \; ~ p \barwedge p \text{ satisfies all properties of }\neg p
-\]</span></p>
-<p>Therefore, define <span class="math inline">\(\neg p \triangleq p \barwedge p\)</span></p></li>
-<li><p>Given Axiom <i class="bi bi-1-circle"></i> and Theorem 1, we can <strong>derive</strong> Axiom <i class="bi bi-dash-circle"></i> as a <strong>theorem</strong>:</p>
-<p><span class="math display">\[
-[\text{Theorem 2}] ~ \neg(p \barwedge q) \text{ satisfies all properties of }p \wedge q
-\]</span></p>
-<p>Therefore, define <span class="math inline">\(p \wedge q \triangleq \neg(p \barwedge q)\)</span></p></li>
-</ul>
-</section>
-<section id="hw1-clarification-necessary-vs.-sufficient" class="slide level2 smaller crunch-title crunch-p crunch-ul title-11">
-<h2>HW1 Clarification: Necessary vs.&nbsp;Sufficient</h2>
-<div id="necc-top" style="margin-bottom: 24px;">
-<p>These are, at root, <strong>logical connectors</strong>: given <strong>“atomic”</strong> (non-implicational) logical predicates <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span>, we can form <strong>implicational</strong> predicates (here “<span class="math inline">\(\equiv\)</span>” means “will always have the same logical value (T or F) as”):</p>
-<table class="caption-top">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 22%">
-<col style="width: 5%">
-<col style="width: 30%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>English</th>
-<th>Logical Form</th>
-<th><span class="math inline">\(\equiv\)</span></th>
-<th>Contrapositive Form</th>
-<th>If True Then…</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>“If <span class="math inline">\(p\)</span> then <span class="math inline">\(q\)</span>”</td>
-<td><span class="math inline">\(p \Rightarrow q\)</span> or <span class="math inline">\(q \Leftarrow p\)</span></td>
-<td><span class="math inline">\(\equiv\)</span></td>
-<td><span class="math inline">\(\neg q \Rightarrow \neg p\)</span></td>
-<td><span class="math inline">\(p\)</span> <strong>sufficient</strong> for <span class="math inline">\(q\)</span></td>
-</tr>
-<tr class="even">
-<td>“If <span class="math inline">\(q\)</span> then <span class="math inline">\(p\)</span>”</td>
-<td><span class="math inline">\(q \Rightarrow p\)</span> or <span class="math inline">\(p \Leftarrow q\)</span></td>
-<td><span class="math inline">\(\equiv\)</span></td>
-<td><span class="math inline">\(\neg p \Rightarrow \neg q\)</span></td>
-<td><span class="math inline">\(p\)</span> <strong>necessary</strong> for <span class="math inline">\(q\)</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p>The truth table for <span class="math inline">\(\Rightarrow\)</span> looks like:</p>
-<center>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(p\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(q\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(p \Rightarrow q\)</span></th>
-<th style="text-align: center;"><span class="math inline">\(\neg p \vee q\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-</tbody>
-</table>
-</center>
-</div><div class="column" style="width:60%;">
-<p>Which means, finally, we can <strong>“plug in”</strong> English statements for <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span>:</p>
-<ul>
-<li><span class="math inline">\(p\)</span> = «A law mandating segregation is in force in a polity»</li>
-<li><span class="math inline">\(q\)</span> = «Segregation emerges in the polity»</li>
-</ul>
-<p>And <strong>evaluate</strong> based on <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> (board time!)</p>
-</div></div>
-</section>
-<section id="hw2-metadata" class="slide level2">
-<h2>HW2 Metadata</h2>
-<ul>
-<li>On <strong>“Context-Sensitive Fairness”</strong></li>
-<li>Releasing tonight!</li>
-<li>Due <strong>Friday, February 21, 5:59pm EST</strong></li>
-<li>Autograder <span class="math inline">\(\rightarrow\)</span> Autohinter!</li>
-</ul>
-</section></section>
-<section>
 <section id="context-free-rightarrow-context-sensitive" class="title-slide slide level1 title-12 center" data-stack-name="Context-Free Fairness">
 <h1><i class="bi bi-1-circle"></i> Context-Free <br><span class="cbg-darker"><span class="math inline">\(\rightarrow\)</span> <i class="bi bi-2-circle"></i> Context-Sensitive</span></h1>
 
 </section>
-<section id="first-immanent-critique" class="slide level2 crunch-title crunch-ul">
+<section id="first-immanent-critique" class="slide level2 crunch-title crunch-ul text-90">
 <h2>First: Imm<span class="boxed-crunch">a</span>nent Critique</h2>
 <ul>
-<li>“Trancendental” Critique: Your assumptions are stupid! You should use these ones instead, then we get the result I want</li>
+<li>“Trancendental” Critique: Your assumptions are stupid! You should use these ones instead (then we get the result I want 😈)</li>
 <li>Immanent (<span class="math inline">\(\neq\)</span> Imm<span class="boxed-crunch">i</span>nent) Critique: Let’s work <strong>within</strong> your set of assumptions, and <strong>derive</strong> something undesirable</li>
-<li><em><span class="math inline">\(\neq\)</span> Proof by Contradiction! More “Proof by Pragmatism”: Think of <strong>geometry</strong>: for modeling 2D table, “effective” derivation of results from Euclid’s 5th; for modeling 4D space-time, “effective” derivation of results from Riemannian geometry</em></li>
+<li><em><span class="math inline">\(\neq\)</span> Proof by Contradiction! More “Proof by Pragmatism”</em></li>
+<li><em>Think of <strong>geometry</strong>: for modeling 2D table, “effective” derivation of results from Euclid’s 5th; for modeling 4D space-time, “effective” derivation of results from Riemannian geometry</em></li>
 </ul>
 </section>
-<section id="our-case-for-reflective-equilibrium" class="slide level2 crunch-title crunch-ul text-80 inline-80">
+<section id="our-case-for-reflective-equilibrium" class="slide level2 crunch-title crunch-ul text-75 inline-80 crunch-quarto-figure">
 <h2>Our Case: For Reflective Equilibrium!</h2>
 
 <img data-src="images/surprise_tool_crop.jpg" class="r-stretch quarto-figure-center"><p class="caption">Steamboat William (1803), Colorized</p><ul>
 <li><i class="bi bi-1-circle"></i> Assume brogrammer Fairness™ Definitions</li>
 <li><i class="bi bi-2-circle"></i> See what results we get</li>
-<li><i class="bi bi-3-circle"></i> Do they seem 👍/👎 on some feasibly-intersubjective criteria?</li>
+<li><i class="bi bi-3-circle"></i> Do they seem 👍/👎 intuitively? And/or on feasibly-intersubjective criteria?</li>
 <li><em>(Secretly you already did this with <strong>fairness through unawareness</strong> / <strong>anti-classification</strong>: dropping race <span class="math inline">\(\overset{?}{=}\)</span> no racism?)</em></li>
 </ul>
 </section>
-<section id="propublica-vs.-northpointe" class="slide level2 smaller crunch-title">
+<section id="propublica-vs.-northpointe" class="slide level2 text-85 crunch-title">
 <h2>ProPublica vs.&nbsp;Northpointe</h2>
 <ul>
-<li>This is… an example with 1000s of books and papers and discussions around it! (A red flag 🚩, since, obsession with one example may conceal much wider range of issues!)</li>
-<li>But, tldr, Northpointe created a ML algorithm called COMPAS, used by court systems all over the US to predict “risk” of arrestees</li>
-<li>In 2016, ProPublica published results from an investigative report documenting COMPAS’s racial discrimination, in the form of violating <strong>equal error rates</strong> between black and white arrestees</li>
+<li>Example with 1000s of books, papers, discussions around it!
+<ul>
+<li><em>🚩: obsession with one example may conceal wider range of issues</em></li>
+</ul></li>
+<li>Northpointe created a ML algorithm called COMPAS, used by court systems all over the US to predict “risk” of arrestees</li>
+<li>In 2016, ProPublica published investigative report documenting COMPAS’s racial discrimination, in violating <strong>equal error rates</strong> between black and white arrestees</li>
 <li>Northpointe responded that COMPAS does <strong>not</strong> discriminate, as it satisfies <strong>calibration</strong></li>
 <li>People have argued about who is “right” for 8 years, with some progress, but… not a lot</li>
 </ul>
 </section>
-<section id="compas-overview" class="slide level2 smaller">
+<section id="compas-overview" class="slide level2 text-90 crunch-title">
 <h2>COMPAS Overview</h2>
 <blockquote>
-<p>When defendants are booked into jail in Broward County, Florida, they are asked to respond to a COMPAS questionnaire with 137 questions, including “Was one of your parents ever sent to jail or prison?,” “How many of your friends/acquaintances are taking drugs illegally?,” and “How often did you get into fights at school?” Arrestees are also asked to agree or disagree with the statements “A hungry person has the right to steal” and “If people make me angry or I lose my temper, I can be dangerous.” Answers are fed into the COMPAS model, which generates an individual risk score that is reported in three buckets: “low risk” (1 to 4), “medium risk” (5 to 7), and “high risk” (8 to 10).</p>
+<p>When defendants are booked into jail in Broward County, Florida, they are asked to respond to a <strong>COMPAS questionnaire</strong> with 137 questions, including “Was one of your <strong>parents</strong> ever sent to jail or prison?,” “How many of your friends/acquaintances are taking drugs illegally?,” and “How often did you get into fights at school?” Arrestees are also asked to agree or disagree with the statements <strong>“A hungry person has the right to steal”</strong> and “If people make me angry or I lose my temper, I can be dangerous.”</p>
+<p>Answers are fed into the COMPAS model, which generates an individual risk score <strong>reported in three buckets: “low risk” (1 to 4), “medium risk” (5 to 7), and “high risk” (8 to 10)</strong>.</p>
 </blockquote>
 </section>
-<section id="compas-overview-1" class="slide level2 smaller">
+<section id="compas-overview-1" class="slide level2 text-90 crunch-title">
 <h2>COMPAS Overview</h2>
 <blockquote>
-<p>ProPublica accused COMPAS of racism: “There’s software used across the country to predict future criminals. And it’s biased against blacks,” read the subheading on the article. ProPublica found that COMPAS’s error rates—the rate at which the model got it wrong—were unequal across racial groups. COMPAS’s predictions were more likely to incorrectly label African Americans as high risk and more likely to incorrectly label white Americans as low risk. “In the criminal justice context,” said Julia Angwin, coauthor of the ProPublica article, “false findings can have far-reaching effects on the lives of the people charged with crimes.</p>
+<p>ProPublica accused COMPAS of racism: <em>“There’s software used across the country to predict future criminals. And it’s biased against blacks,”</em> read the subheading on the article.</p>
+<p>ProPublica found that COMPAS’s error rates—the rate at which the model got it wrong—were unequal across racial groups. COMPAS’s predictions were more likely to incorrectly label African Americans as high risk and more likely to incorrectly label white Americans as low risk.</p>
+<p><em>“In the criminal justice context,”</em> said Julia Angwin, coauthor of the ProPublica article, <em>“false findings can have far-reaching effects on the lives of the people charged with crimes.”</em></p>
 </blockquote>
+</section>
+<section id="the-competing-fairness-definitions" class="slide level2">
+<h2>The “Competing” Fairness Definitions</h2>
+<ul>
+<li>Time for a (long) <a href="https://observablehq.com/@jpowerj/fairness-definitions"><strong>demo!</strong></a></li>
+</ul>
 </section>
 <section id="so-what-do-we-do" class="slide level2 smaller crunch-title crunch-ul crunch-blockquote">
 <h2>So… What Do We Do?</h2>
@@ -639,7 +402,7 @@ Jeff Jacobs
 </blockquote></li>
 <li><p>Another option: study and then work to ameliorate the social conditions which <strong>force us into</strong> this realm of mathematical impossibility (why do the poor have no food?)</p>
 <blockquote>
-<p>The impossibility result is about much more than math. [It occurs because] the underlying outcome is distributed unevenly in society. This is a fact about society, not mathematics, and requires engaging with a complex, checkered history of systemic racism in the US. Predicting an outcome whose distribution is shaped by this history requires tradeoffs because the inequalities and injustices are encoded in data—in this case, because America has criminalized Blackness for as long as America has existed.</p>
+<p>The impossibility result is about much more than math. [It occurs because] the <strong>underlying</strong> outcome is distributed unevenly in society. This is <strong>a fact about society, not mathematics</strong>, and requires engaging with a complex, checkered history of systemic racism in the US. Predicting an outcome whose distribution is shaped by this history requires tradeoffs because the inequalities and injustices are encoded in data—in this case, because America has criminalized Blackness for as long as America has existed.</p>
 </blockquote></li>
 </ul>
 </section>

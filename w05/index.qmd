@@ -60,220 +60,54 @@ Today's Planned Schedule:
 
 {{< include ../dsan-globals/_globals-gg.qmd >}}
 
-# Setting the Table: HW1 $\leadsto$ HW2 {data-stack-name="Table-Setting"}
-
-## Table-Setting I Should Have Done *Before* HW1: Truth Tables! {.smaller .crunch-title .crunch-ul .crunch-p}
-
-**Just one (❗️) "primary" axiom required for first-order predicate logic!**
-
-::: {#text-top style="margin-bottom: 10px;"}
-
-But, to make it more digestible, we can define some "helper axioms":
-
-:::
-
-:::: {.columns}
-::: {.column width="50%"}
-
-<center>
-**[Helper Axiom <i class='bi bi-dash-circle'></i>]**
-</center>
-
-* A **unary** operator "$\neg$"
-* Intersubjective agreement: call it "not"
-
-<center>
-
-| $p$ | $\neg p$ |
-|:-:|:-:|
-| 0 | 1 |
-| 1 | 0 |
-
-: {tbl-colwidths="[50,50]"}
-
-</center>
-
-:::
-::: {.column width="50%"}
-
-<center>
-**[Helper Axiom <i class='bi bi-x-circle'></i>]**
-</center>
-
-* A **binary** operator "$\wedge$"
-* Intersubjective agreement: call it "and"
-
-<center>
-
-| $p$ | $q$ | $p \wedge q$ |
-|:-:|:-:|:-:|
-| 0 | 0 | 0 |
-| 0 | 1 | 0 |
-| 1 | 0 | 0 |
-| 1 | 1 | 1 |
-
-</center>
-
-:::
-::::
-
-## The Single Axiom
-
-**[Axiom <i class='bi bi-1-circle'></i>]** A **binary** operator "$\barwedge$", defined (for human consumption) s.t. $a \barwedge b \triangleq \neg(a \wedge b)$, but defined precisely as the binary operator which maps the [blue]{.cb2a-bg} cols into [orange]{.cb1a-bg} col:
-
-```{=html}
-<table>
-<thead>
-<tr>
-  <th class='cb2a-bg' align="center"><span data-qmd="$p$"></span></th>
-  <th class='cb2a-bg'><span data-qmd="$q$"></span></th>
-  <th><span data-qmd="$p \underset{\small\text{or}}{\vee} q$"></span></th>
-  <th><span data-qmd="$p \underset{\small\text{xor}}{\otimes} q$"></span></th>
-  <th align="center"><span data-qmd="$p \underset{\small\text{and}}{\wedge} q$"></span></th>
-  <th class='cb1a-bg' align="center"><span data-qmd="$p \underset{\small\text{nand}}{\barwedge} q$"></span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td class='cb2a-bg'>0</td>
-  <td class='cb2a-bg'>0</td>
-  <td align="center">0</td>
-  <td align="center">0</td>
-  <td align="center">0</td>
-  <td class='cb1a-bg' align="center">1</td>
-</tr>
-<tr>
-  <td class='cb2a-bg'>0</td>
-  <td class='cb2a-bg'>1</td>
-  <td>1</td>
-  <td>1</td>
-  <td>0</td>
-  <td class='cb1a-bg'>1</td>
-</tr>
-<tr>
-  <td class='cb2a-bg'>1</td>
-  <td class='cb2a-bg'>0</td>
-  <td>1</td>
-  <td>1</td>
-  <td>0</td>
-  <td class='cb1a-bg'>1</td>
-</tr>
-<tr>
-  <td class='cb2a-bg'>1</td>
-  <td class='cb2a-bg'>1</td>
-  <td>1</td>
-  <td>0</td>
-  <td>1</td>
-  <td class='cb1a-bg'>0</td>
-</tr>
-</table>
-```
-
-## Deriving "Not" {.crunch-title .math-90 .inline-90}
-
-* Given Axiom <i class='bi bi-1-circle'></i>, we can **derive** Axiom <i class='bi bi-dash-circle'></i> as a **theorem** (meaning, it does **not** need to be included as an axiom!):
-  
-  $$
-  [\text{Theorem 1}] \; ~ p \barwedge p \text{ satisfies all properties of }\neg p
-  $$
-
-  Therefore, define $\neg p \triangleq p \barwedge p$
-
-* Given Axiom <i class='bi bi-1-circle'></i> and Theorem 1, we can **derive** Axiom <i class='bi bi-dash-circle'></i> as a **theorem**:
-
-  $$
-  [\text{Theorem 2}] ~ \neg(p \barwedge q) \text{ satisfies all properties of }p \wedge q
-  $$
-
-  Therefore, define $p \wedge q \triangleq \neg(p \barwedge q)$
-
-## HW1 Clarification: Necessary vs. Sufficient {.smaller .crunch-title .crunch-p .crunch-ul .title-11}
-
-::: {#necc-top style="margin-bottom: 24px;"}
-
-These are, at root, **logical connectors**: given **"atomic"** (non-implicational) logical predicates $p$ and $q$, we can form **implicational** predicates (here "$\equiv$" means "will always have the same logical value (T or F) as"):
-
-| English | Logical Form | $\equiv$ | Contrapositive Form | If True Then... 
-| - | - | - | - | - |
-| "If $p$ then $q$" | $p \Rightarrow q$ or $q \Leftarrow p$ | $\equiv$ | $\neg q \Rightarrow \neg p$ | $p$ **sufficient** for $q$ |
-| "If $q$ then $p$" | $q \Rightarrow p$ or $p \Leftarrow q$ | $\equiv$ | $\neg p \Rightarrow \neg q$ | $p$ **necessary** for $q$ |
-
-: {tbl-colwidths="[18,22,5,30,25]"}
-
-:::
-
-:::: {.columns}
-::: {.column width="40%"}
-
-The truth table for $\Rightarrow$ looks like:
-
-<center>
-
-| $p$ | $q$ | $p \Rightarrow q$ | $\neg p \vee q$ |
-|:-:|:-:|:-:|:-:|
-| 0 | 0 | 1 | 1 |
-| 0 | 1 | 1 | 1 |
-| 1 | 0 | 0 | 0 |
-| 1 | 1 | 1 | 1 |
-
-</center>
-
-:::
-::: {.column width="60%"}
-
-Which means, finally, we can **"plug in"** English statements for $p$ and $q$:
-
-* $p$ = «A law mandating segregation is in force in a polity»
-* $q$ = «Segregation emerges in the polity»
-
-And **evaluate** based on $p$ and $q$ (board time!)
-
-:::
-::::
-
-## HW2 Metadata
-
-* On **"Context-Sensitive Fairness"**
-* Releasing tonight!
-* Due **Friday, February 21, 5:59pm EST**
-* Autograder $\rightarrow$ Autohinter!
-
 # <i class='bi bi-1-circle'></i> Context-Free <br>[$\rightarrow$ <i class='bi bi-2-circle'></i> Context-Sensitive]{.cbg-darker} {.title-12 data-stack-name="Context-Free Fairness"}
 
-## First: Imm[a]{.boxed-crunch}nent Critique {.crunch-title .crunch-ul}
+## First: Imm[a]{.boxed-crunch}nent Critique {.crunch-title .crunch-ul .text-90}
 
-* "Trancendental" Critique: Your assumptions are stupid! You should use these ones instead, then we get the result I want
+* "Trancendental" Critique: Your assumptions are stupid! You should use these ones instead (then we get the result I want 😈)
 * Immanent ($\neq$ Imm[i]{.boxed-crunch}nent) Critique: Let's work **within** your set of assumptions, and **derive** something undesirable
-* *$\neq$ Proof by Contradiction! More "Proof by Pragmatism": Think of **geometry**: for modeling 2D table, "effective" derivation of results from Euclid's 5th; for modeling 4D space-time, "effective" derivation of results from Riemannian geometry*
+* *$\neq$ Proof by Contradiction! More "Proof by Pragmatism"*
+* *Think of **geometry**: for modeling 2D table, "effective" derivation of results from Euclid's 5th; for modeling 4D space-time, "effective" derivation of results from Riemannian geometry*
 
-## Our Case: For Reflective Equilibrium! {.crunch-title .crunch-ul .text-80 .inline-80}
+## Our Case: For Reflective Equilibrium! {.crunch-title .crunch-ul .text-75 .inline-80 .crunch-quarto-figure}
 
 ![Steamboat William (1803), Colorized](images/surprise_tool_crop.jpg){fig-align="center"}
 
 * <i class='bi bi-1-circle'></i> Assume brogrammer Fairness&trade; Definitions
 * <i class='bi bi-2-circle'></i> See what results we get
-* <i class='bi bi-3-circle'></i> Do they seem 👍/👎 on some feasibly-intersubjective criteria?
+* <i class='bi bi-3-circle'></i> Do they seem 👍/👎 intuitively? And/or on feasibly-intersubjective criteria?
 * *(Secretly you already did this with **fairness through unawareness** / **anti-classification**: dropping race $\overset{?}{=}$ no racism?)*
 
-## ProPublica vs. Northpointe {.smaller .crunch-title}
+## ProPublica vs. Northpointe {.text-85 .crunch-title}
 
-* This is... an example with 1000s of books and papers and discussions around it! (A red flag 🚩, since, obsession with one example may conceal much wider range of issues!)
-* But, tldr, Northpointe created a ML algorithm called COMPAS, used by court systems all over the US to predict "risk" of arrestees
-* In 2016, ProPublica published results from an investigative report documenting COMPAS's racial discrimination, in the form of violating **equal error rates** between black and white arrestees
+* Example with 1000s of books, papers, discussions around it! 
+  * *🚩: obsession with one example may conceal wider range of issues*
+* Northpointe created a ML algorithm called COMPAS, used by court systems all over the US to predict "risk" of arrestees
+* In 2016, ProPublica published investigative report documenting COMPAS's racial discrimination, in violating **equal error rates** between black and white arrestees
 * Northpointe responded that COMPAS does **not** discriminate, as it satisfies **calibration**
 * People have argued about who is "right" for 8 years, with some progress, but... not a lot
 
-## COMPAS Overview {.smaller}
+## COMPAS Overview {.text-90 .crunch-title}
 
-> When defendants are booked into jail in Broward County, Florida, they are asked to respond to a COMPAS questionnaire with 137 questions, including "Was one of your parents ever sent to jail or prison?," "How many of your friends/acquaintances are taking drugs illegally?," and "How often did you get into fights at school?" Arrestees are also asked to agree or disagree with the statements "A hungry person has the right to steal" and "If people make me angry or I lose my temper, I can be dangerous." Answers are fed into the COMPAS model, which generates an individual risk score that is reported in three buckets: "low risk" (1 to 4), "medium risk"
-(5 to 7), and "high risk" (8 to 10).
+> When defendants are booked into jail in Broward County, Florida, they are asked to respond to a **COMPAS questionnaire** with 137 questions, including "Was one of your **parents** ever sent to jail or prison?," "How many of your friends/acquaintances are taking drugs illegally?," and "How often did you get into fights at school?" Arrestees are also asked to agree or disagree with the statements **"A hungry person has the right to steal"** and "If people make me angry or I lose my temper, I can be dangerous."
+> 
+> Answers are fed into the COMPAS model, which generates an individual risk score **reported in three buckets: "low risk" (1 to 4), "medium risk" (5 to 7), and "high risk" (8 to 10)**.
 
-## COMPAS Overview {.smaller}
+## COMPAS Overview {.text-90 .crunch-title}
 
-> ProPublica accused COMPAS of racism: "There's
+> ProPublica accused COMPAS of racism: *"There's
 software used across the country to predict future
-criminals. And it's biased against blacks," read the
-subheading on the article. ProPublica found that COMPAS's error rates---the rate at which the model got it wrong---were unequal across racial groups. COMPAS's predictions were more likely to incorrectly label African Americans as high risk and more likely to incorrectly label white Americans as low risk. "In the criminal justice context," said Julia Angwin, coauthor of the ProPublica article, "false findings can have far-reaching effects on the lives of the people charged with crimes.
+criminals. And it's biased against blacks,"* read the
+subheading on the article.
+> 
+> ProPublica found that COMPAS's error rates---the rate at which the model got it wrong---were unequal across racial groups. COMPAS's predictions were more likely to incorrectly label African Americans as high risk and more likely to incorrectly label white Americans as low risk.
+> 
+> *"In the criminal justice context,"* said Julia Angwin, coauthor of the ProPublica article, *"false findings can have far-reaching effects on the lives of the people charged with crimes."*
+
+## The "Competing" Fairness Definitions
+
+* Time for a (long) [**demo!**](https://observablehq.com/@jpowerj/fairness-definitions)
+
 
 ## So... What Do We Do? {.smaller .crunch-title .crunch-ul .crunch-blockquote}
 
@@ -283,7 +117,7 @@ subheading on the article. ProPublica found that COMPAS's error rates---the rate
 
 * Another option: study and then work to ameliorate the social conditions which **force us into** this realm of mathematical impossibility (why do the poor have no food?)
 
-  > The impossibility result is about much more than math. [It occurs because] the underlying outcome is distributed unevenly in society. This is a fact about society, not mathematics, and requires engaging with a complex, checkered history of systemic racism in the US. Predicting an outcome whose distribution is shaped by this history requires tradeoffs because the inequalities and injustices are encoded in data---in this case, because America has criminalized Blackness for as long as America has existed.
+  > The impossibility result is about much more than math. [It occurs because] the **underlying** outcome is distributed unevenly in society. This is **a fact about society, not mathematics**, and requires engaging with a complex, checkered history of systemic racism in the US. Predicting an outcome whose distribution is shaped by this history requires tradeoffs because the inequalities and injustices are encoded in data---in this case, because America has criminalized Blackness for as long as America has existed.
 
 ## Why Not Both?? {.smaller .crunch-title .crunch-ul .title-12 .crunch-li-10}
 
