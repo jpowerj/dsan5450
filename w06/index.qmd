@@ -1,5 +1,5 @@
 ---
-title: "Week 6: Causality in Ethics and Policy"
+title: "Week 6: Context-Sensitive Fairness"
 subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2026, Georgetown University</span>"
 author: "Jeff Jacobs"
 institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
@@ -53,7 +53,7 @@ Today's Planned Schedule:
 
 | | Start | End | Topic |
 |:- |:- |:- |:- |
-| **Lecture** | 3:30pm | 3:45pm | [Recaps / Clarifications &rarr;](#quick-clarifications--recaps) |
+| **Lecture** | 3:30pm | 3:45pm | [Recap: Context-Free Fairness &rarr;](#quick-clarifications--recaps) |
 | | 3:45pm | 4:00pm | [Determinism $\rightarrow$ Probability $\rightarrow$ Causality &rarr;](#so-whats-the-problem) |
 | | 4:00pm | 4:30pm | [Fundamental Problem of Causal Inference &rarr;](#the-fundamental-problem-of-causal-inference) |
 | | 4:30pm | 5:00pm | [Do-Calculus &rarr;](#do-calculus) |
@@ -61,6 +61,289 @@ Today's Planned Schedule:
 | | 5:10pm | 6:00pm | [Chalkboard Lab: DAGs for Colliders &rarr;](#the-problem-of-colliders) |
 
 : {tbl-colwidths="[12,12,12,64]"}
+
+# Recap: Context-Free Fairness, Antecedents, and the Impossibility Result
+
+## Achieving "Fair Misclassification" {.smaller}
+
+![](images/misclassification.png){fig-align="center" width="50%"}
+
+* If you think **fairness = equal misclassification rates between racial groups**, 👍
+* If you think **fairness = equal correct prediction rates between racial groups**, 👎
+
+## Achieving "Fair Calibration" {.smaller}
+
+![](images/calibration.png){fig-align="center" width="50%"}
+
+* If you think **fairness = equal misclassification rates between racial groups**, 👍
+* If you think **fairness = equal correct prediction rates between racial groups**, 👎
+
+## So... What Do We Do? Option 1: Argue/Advocate {.smaller .crunch-title}
+
+*  **Whitepaper(!):** Berkman Klein Center for Internet \& Society at Harvard University (2021), [*Principled Artificial Intelligence: Mapping Consensus in Ethical and Rights-based Approaches to Principles for AI*](https://dash.harvard.edu/entities/publication/739ea327-7c95-43d9-9fdc-a702bf420e40)
+* Your first "template" for a final project!
+* Problem (left til post-midterm): How do we know **whose interests** are included/excluded in the arguments?
+* What conditions could we establish to **systematically**/structurally ensure inclusion of the interests of all? [Discourse ethics; coming soon!]
+
+## So... What Do We Do? Part 2: Incorporate Context {.smaller .crunch-title .crunch-ul .crunch-blockquote}
+
+* One option: argue about which of the two definitions is "better" for the next 100 years (what is the best way to give food to the poor?)
+
+  > It appears to reveal an unfortunate but inexorable fact about our world: we must choose between two intuitively appealing ways to understand fairness in ML. Many scholars have done just that, defending either ProPublica's or Northpointe’s definitions against what they see as the misguided alternative. [@simons_algorithms_2023]
+
+* Another option: study and then work to ameliorate the social conditions which **force us into** this realm of mathematical impossibility (why do the poor have no food?)
+
+  > The impossibility result is about much more than math. [It occurs because] the **underlying** outcome is distributed unevenly in society. This is **a fact about society, not mathematics**, and requires engaging with a complex, checkered history of systemic racism in the US. Predicting an outcome whose distribution is shaped by this history requires tradeoffs because the inequalities and injustices are encoded in data---in this case, because America has criminalized Blackness for as long as America has existed.
+
+## Why Not Both?? {.smaller .crunch-title .crunch-ul .title-12 .crunch-li-10}
+
+* On the one hand: yes, both! On the other hand: <a hrf='https://en.wikipedia.org/wiki/Argument_to_moderation' target='_blank'>fallacy of the "middle ground"</a>
+* We're back at **descriptive vs. normative**:
+  * **Descriptively**, given 100 values $v_1, \ldots, v_{100}$, their **mean** may be a good way to summarize, if we have to choose a single number
+  * But, **normatively**, imagine that these are **opinions** that people hold about fairness.
+  * Now, if it's the US South in 1860 and $v_i$ represents person $i$'s approval of slavery, from a sample of 100 people, then approx. 97 of the $v_i$'s are "does not disapprove" [@rousey_friends_2001] --- in this case, normatively, is the mean $0.97$ the "correct" answer?
+* We have another case where, like the "grass is green" vs. "grass ought to be green" example, we cannot just "import" our logical/mathematical tools from the former to solve the latter! (However: this does **not** mean they are **useless**! This is the fallacy of the **excluded middle**, sort of the opposite of the fallacy of the middle ground)
+* This is why we have **ethical frameworks** in the first place! Going back to **Rawls**: "97% of Americans think black people shouldn't have rights" &nbsp;$\nimplies$"black people shouldn't have rights", since rights are a **primary good**
+
+# [<i class='bi bi-1-circle'></i> Context-Free]{.cbg-darker}<br> $\rightarrow$ <i class='bi bi-2-circle'></i> Context-Sensitive {.title-12 data-stack-name="Context-Sensitive Fairness"}
+
+## Motivation: Linguistic Meaning
+
+::: {.callout-note icon="false" title="<i class='bi bi-info-circle pe-1'></i> The Distributional Hypothesis [@firth_selected_1968, 179]"}
+
+**You shall know a word by the company it keeps!**
+
+:::
+
+* Related to **context-free** vs. **context-sensitive** distinction in Computer Science (old-school NLP)!
+* But why is it relevant to DSAN 5450?...
+
+## Impossibility Results! {.crunch-title .crunch-ul .code-black}
+
+* Let's see what happens if we try to **reason about definitions/meaning in language** without the ability to incorporate **"context"** (here defined in a silly way... point holds as we go up the "language complexity hierarchy")
+* Try to write a finite-state automata to detect "valid" strings in the language $\{a^nb^n \mid n \in \mathbb{Z}^{\geq 0}\}$: `aabb` ✅, `aba` ❌
+
+:::: {layout="[1,1]"}
+::: {#automata-fail}
+
+![](images/automata_start_accept.svg){fig-align="center"}
+
+:::
+
+## (There *is* a Solution! Outside Scope of Class...)
+
+![[Source](https://www.geeksforgeeks.org/theory-of-computation/npda-for-accepting-the-language-l-an-bn-n1/)](images/PDA.webp){fig-align="center"}
+
+## The "Meaning" of Fairness
+
+::: {.callout-note icon="false" title="<i class='bi bi-info-circle pe-1'></i> The Distributional [Fairness] Hypothesis"}
+
+**You shall know "fairness" by the company it keeps [i.e., the context it incorporates].**
+
+:::
+
+* Context-free (confusion-matrix-based) fairness: "plug the confusion matrix values into a formula and see if the formula is satisfied"
+* Context-sensitive fairness: analyze fairness **relative to** a set of **antecedents** regarding how **normative concerns** should enter into our measurements of fairness
+
+# Similarity-Based Fairness {data-stack-name="Similarity-Based Fairness"}
+
+## Group Fairness $\rightarrow$ Individual Fairness {.title-09}
+
+* The crucial insight of Dwork: **group-level** fairness does not ensure that **individuals** are treated fairly **as individuals**
+* Exactly the issue we've seen with **utilitarianism**: optimizing **society-level** "happiness" may lead to **individuals** being brutally mistreated (e.g., having their rights violated)
+* So, at a high level, Dwork's proposal could provide a Rawls-style **ordering**: individual fairness **lexically prior** to group-level fairness (optimize group-level fairness once individual-level is satisfied)
+
+## The (Normative!) Antecedent {.crunch-title .crunch-ul .crunch-callout .crunch-blockquote .crunch-quarto-layout-panel}
+
+::: {.callout-note icon="false" title="Fairness Through Awareness [@dwork_fairness_2011]"}
+
+**Individuals who are similar with respect to a task should be classified similarly.**
+
+:::
+
+::: {layout="[1,1]"}
+::: {#awareness-left}
+
+* Not well-liked in industry / policy because you can't just "plug in" results of your classifier and get True/False "we satisfied fairness!" ...But this is **exactly the point!**
+
+:::
+::: {#awareness-right}
+
+![From @kiat_machines_2018](images/manymetrics.png){fig-align="center" width="340"}
+
+:::
+:::
+
+## Bringing In Context
+
+* *In itself, the principle of equal treatment is abstract, a formal relationship that **lacks
+substantive content**"*
+* *The principle must be given content by defining which cases are similar and which are different, and by considering what kinds of differences **justify differential treatment***
+* *Deciding what differences are relevant, and what kinds of differential treatment are justified by particular differences, requires **wrestling with moral and political debates** about the responsibilities of different institutions to address persistent injustice* [@simons_algorithms_2023, 51]
+
+## Remember Distance Metrics?(!) {.crunch-title .crunch-quarto-layout-panel .crunch-ul .text-90 .crunch-li-8 .crunch-quarto-figure}
+
+::: {layout="[1,1]"}
+::: {#distance-left}
+
+* A core element in **both** similarity-based and causal fairness!
+* Already difficult to choose a metric on **pragmatic** grounds (ambulance needs to get to hospital)
+* Now people will also have **fundamental normative disagreements** about what should and should not **determine difference**
+
+:::
+::: {#distance-right}
+
+![From @shahid_comparison_2009](images/medical_distances.jpg){fig-align="center" width="380"}
+
+:::
+:::
+
+## Satisfying Individual vs. Group Fairness {.smaller .crunch-title .title-09}
+
+* An algorithm is **individually fair** if, for
+all individuals $x$ and $y$, we have
+
+  $$
+  \textsf{dist}(r(x), r(y)) \leq \textsf{dist}(x, y)
+  $$
+
+  $\implies$ an advertising system must show similar sets of ads to similar users.
+
+* It achieves **group fairness-through-parity** for two groups of users $S$ and $T$ when:
+
+  $$
+  \textsf{dist}(\mathbb{E}_{s \in S}[r(s)], \mathbb{E}_{t \in T}[r(t)]) \leq \varepsilon
+  $$
+
+  where $\mathbb{E}_{s \in S}$ and $\mathbb{E}_{t \in T}$ denote the expectation of ads seen by an individual chosen uniformly among $S$ and $T$. This definition implies that the difference in probability between two groups of seeing a particular ad will be bounded by $\varepsilon$.
+
+* Given these definitions: Individual fairness&nbsp; $\nimplies$ group fairness, and vice versa! [@riederer_price_2017]
+
+## The Importance of *Not* Excluding Race! {.crunch-title .title-08}
+
+* On HW2 you will see how, on the one hand: **excluding** race from the similarity metric ensures **race-blind fairness**
+* But, on the other hand: race-blind fairness can not only **maintain** but also **amplify** preexisting inequalities
+* By **including race** in our similarity metric, we can explicitly take this into account!
+* Ex: someone with a (morally irrelevant) disadvantage due to **birth lottery** who achieves an SAT score of 1400 is **similar to** someone with a (morally irrelevant) advantage due to birth lottery who achieves an SAT score of 1500
+
+## Equality of Opportunity {.crunch-title .crunch-ul .crunch-quarto-layout-panel .smaller}
+
+::: {layout="[1,1]"}
+::: {#roemer-left}
+
+* This notion (last bullet of the previous slide) is **contentious**, to say the least
+* But also, crucially: our job is not to **decide the similarity metric unilaterally**!
+* The **equality of opportunity** approach is **not itself a similarity metric!**
+* It is a **"meta-algorithm"** for **translating** normative positions (consequents of an ethical framework) into **concrete fairness constraints** that you can then impose on ML algorithms
+
+:::
+::: {#roemer-right}
+
+![@roemer_equality_1998](images/roemer-equality.jpg){fig-align="center" width="340"}
+
+:::
+:::
+
+## Roemer's Algorithm {.smaller .crunch-title .crunch-li-10}
+
+* Equality of Opportunity algorithm boils down to (Input 0 = data on individuals $X_i$):
+* *Input 1 (!)*: Attributes $J_{\text{advantage}} \subseteq X_i$ that a society (real or hypothetical) considers **normatively relevant** for an outcome, but that people are not **individually responsible** for (e.g., race or nationality via birth lottery)
+* *Input 2*: Attributes $J_{\text{merit}} \subseteq X_i$ that a society considers people **individually responsible** for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)
+* <i class='bi bi-1-circle'></i>: Set of individuals in society $S$ is **partitioned** into subsets $S_i$, where $i$ is some combination of particular **values** for the attributes in $X_{\text{advantage}}$
+* <i class='bi bi-2-circle'></i>: Individuals' **context-sensitive scores** are computed **relative to their group** $S_i$, as **percentile** of their $X_{\text{merit}}$ value relative to **distribution** of $X_{\text{merit}}$ values across $S_i$
+* *Outcome*: Now that we have **incorporated social context**, by converting the original **context-free units** (e.g., numeric SAT score) into **context-sensitive units** (percentile of numeric SAT score within distribution of comparable individuals), we can compare people **across groups** on the basis of **context-sensitive** scores!
+
+## An Overly-Simplistic Example (More on HW2!) {.crunch-title .inline-90}
+
+* $\mathbf{x}_i = (x_{i,1}, x_{i,2}, x_{i,3}) = (\texttt{wealth}_i, \texttt{study\_hrs}_i, \texttt{SAT}_i)$
+* $J_{\text{advantage}} = (1) = (\texttt{wealth})$, $J_{\text{merit}} = (2) = (\texttt{study\_hrs})$
+* $\Rightarrow \texttt{study\_hrs} \rightarrow \texttt{SAT}$ a "fair" pathway
+* $\Rightarrow \texttt{wealth} \rightarrow \texttt{SAT}$ an "unfair" pathway
+* $\Rightarrow$ School admission decisions "fair" to the extent that they capture the **direct effect** $\texttt{study\_hrs} \rightarrow \texttt{SAT} \rightarrow \texttt{admit}$, but aren't affected by **indirect effect** $\texttt{wealth} \rightarrow \texttt{SAT} \rightarrow \texttt{admit}$
+
+## At a Macro Level! {.smaller}
+
+![](images/roemer.svg){fig-align="center"}
+
+# Causal Fairness {data-stack-name="Causal Fairness"}
+
+## The State of the Art! {.crunch-title}
+
+* Current state of fairness in AI: measures which explicitly model **causal connections** between variables of interest are most promising for **robust** notions of fairness
+* Robust in the sense of:
+  * Being **normatively desirable** (as in, matching the key tenets of our ethical frameworks) while also being
+  * **Descriptively tractable** (as in, concretely implementable in math/code, and transparent enough to allow us to *evaluate* and *update* these implementations, using a process like *reflective equilibrium*).
+
+## The Antecedent
+
+* Since it's impossible to **eliminate** information about sensitive attributes like race/gender/etc. from our ML algorithms...
+* Fairness should instead be defined on the basis of **how this sensitive information "flows" through the causal chain of decisions** which lead to an given (observed) outcome
+
+## The New Object of Analysis: *Causal Pathways* {.crunch-title .crunch-ul .title-09}
+
+* Once we have a **model** of the **causal connections** among:
+  * Variables that we care about socially/normatively, and
+  * Variables used by a Machine Learning algorithm,
+* We can then use techniques developed by statisticians who study **causal inference** to
+* **Block** certain "causal pathways" that we deem normatively unjustifiable while **allowing** other pathways that we deem to be normatively justifiable.
+
+## Causal Fairness in HW2 {.crunch-title .inline-80}
+
+* Intuition required to make the jump from **correlational** approach (from statistics and probability generally, and DSAN 5100 specifically!) to **causal** approach!
+* Causal approach **builds on** correlational, but...
+* **Stricter, directional standard** for $X \rightarrow Y$
+* Easy cases: find high **correlation** $|\text{corr}(X,Y)|$, embed in a **causal diagram**, evaluate $\Pr(Y \mid \text{do}(X)) \overset{?}{>} \Pr(Y \mid \neg\text{do}(X))$
+* Hard cases: can have $\Pr(Y \mid \text{do}(X)) \overset{?}{>} \Pr(Y \mid \neg\text{do}(X))$ even when $\text{corr}(X,Y) = 0$ 😰 (dw, we'll get there!)
+
+## Causal Building Blocks {.crunch-ul .crunch-ul .text-90}
+
+* DSAN 5100 precedent: nodes in the network $X$, $Y$ are **Random Variables**, connections $X \leftrightarrow Y$ are **joint distributions** $\Pr(X, Y)$
+* **Directional** edges $X \rightarrow Y$, then, just represent **conditional** distributions: $X \rightarrow Y$ is $\Pr(Y \mid X)$
+* Where we're going: connections $X \leftrightarrow Y$ represent **unknown but extant causal connections** between $X$ and $Y$, while $X \rightarrow Y$ represents a **causal relationship** between $X$ and $Y$
+* Specifically, $X \rightarrow Y$ now means: **an intervention that changes the value of $X$** by $\varepsilon$ **causes a change in the value of $Y$** by $f(\varepsilon)$
+
+## What Is To Be Done?
+
+![](images/face_everything_and_rise.jpg){fig-align="center"}
+
+## Face Everything And Rise: Controlled, Randomized Experiment Paradigm
+
+* Find good comparison cases: **Treatment** and **Control**
+* Without a control group, you cannot make inferences!
+* *Selecting on the dependent variable...*
+
+## Selecting on the Dependent Variable {.smaller}
+
+![<a href='https://www.pbs.org/newshour/show/what-research-says-about-identifying-people-who-might-commit-mass-shootings' target='_blank'>What """research""" """says""" about identifying people who might commit mass shootings</a>](images/school-shootings.jpeg){fig-align="center"}
+
+* Jeff's rant: If you care about actually solving social issues, this should **infuriate you**
+
+## Complications: Selection
+
+* Tldr: Why did this person (unit) end up in the treatment group? Why did this other person (unit) end up in the control group?
+* Are there systematic differences?
+* Vietnam/Indochina Draft: Why can't we just study [men who join the military] versus [men who don't], and take the difference as a causal estimate?
+
+## Complications: Compliance {.crunch-title}
+
+* We want people assigned to treatment to take the treatment, and people assigned to control to take the control
+* "Compliance": degree to which this is true in experiment
+  * High compliance = most people actually took what they were assigned
+  * Low compliance = lots of people who were assigned to treatment actually took control, and vice-versa
+* What problems might exist w.r.t compliance in the Draft?
+
+## Next Week and HW2: Experimental $\rightarrow$ Observational Data {.crunch-title .title-09}
+
+* In observational studies, researchers have no control over assignment to treatment/control 😨
+* On the one hand... Forget Everything And Run [to randomized, controlled experiments], if you can.
+* On the other hand... statisticians over the last 4 centuries have developed fancy causal inference tools/techniques to help us Face Everything And Rise 🧐
+
+## For Now: *Matching* {.crunch-title}
+
+* In a **randomized, controlled experiment**, we can **ensure** (since we have control over the **assignment mechanism**) that the **only systematic difference** between $C$ and $T$ is that $T$ received the treatment and $C$ did not
+* In an **observational study**, we "show up too late"!
+* Thus, we no longer refer to **assignment** but to **selection**
+* And, our job is to **figure out** (reverse engineer!) the **selection mechanism**, then **correct for its non-randomness**: basically, we "transform" from observational to experimental setting through **weighting** (👀 W02)
 
 # Quick Clarifications / Recaps! {data-stack-name="Recap"}
 

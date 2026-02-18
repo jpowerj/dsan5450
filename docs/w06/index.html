@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jeff Jacobs">
 
-<title>Week 6: Causality in Ethics and Policy – DSAN 5450</title>
+<title>Week 6: Context-Sensitive Fairness – DSAN 5450</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,9 +94,9 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-ff63373b1067ca6f91cf1456aa1f00a2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -530,7 +530,7 @@ window.Quarto = {
     </ul>
     </div>
 <div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
-<p><em>Updated 2026-02-16, 01:59:40 AM</em></p>
+<p><em>Updated 2026-02-18, 03:28:18 PM</em></p>
 </div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -540,41 +540,18 @@ window.Quarto = {
    
   <ul>
   <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a></li>
-  <li><a href="#quick-clarifications-recaps" id="toc-quick-clarifications-recaps" class="nav-link" data-scroll-target="#quick-clarifications-recaps">Quick Clarifications / Recaps!</a>
+  <li><a href="#recap-context-free-fairness-antecedents-and-the-impossibility-result" id="toc-recap-context-free-fairness-antecedents-and-the-impossibility-result" class="nav-link" data-scroll-target="#recap-context-free-fairness-antecedents-and-the-impossibility-result">Recap: Context-Free Fairness, Antecedents, and the Impossibility Result</a>
   <ul class="collapse">
-  <li><a href="#clarification-ecological-inference" id="toc-clarification-ecological-inference" class="nav-link" data-scroll-target="#clarification-ecological-inference">Clarification: Ecological Inference</a></li>
-  <li><a href="#eureka-moment-for-midterm-prep-purposes" id="toc-eureka-moment-for-midterm-prep-purposes" class="nav-link" data-scroll-target="#eureka-moment-for-midterm-prep-purposes">Eureka Moment (for Midterm Prep Purposes)</a></li>
+  <li><a href="#achieving-fair-misclassification" id="toc-achieving-fair-misclassification" class="nav-link" data-scroll-target="#achieving-fair-misclassification">Achieving “Fair Misclassification”</a></li>
+  <li><a href="#achieving-fair-calibration" id="toc-achieving-fair-calibration" class="nav-link" data-scroll-target="#achieving-fair-calibration">Achieving “Fair Calibration”</a></li>
+  <li><a href="#so-what-do-we-do-option-1-argueadvocate" id="toc-so-what-do-we-do-option-1-argueadvocate" class="nav-link" data-scroll-target="#so-what-do-we-do-option-1-argueadvocate">So… What Do We Do? Option 1: Argue/Advocate</a></li>
+  <li><a href="#so-what-do-we-do-part-2-incorporate-context" id="toc-so-what-do-we-do-part-2-incorporate-context" class="nav-link" data-scroll-target="#so-what-do-we-do-part-2-incorporate-context">So… What Do We Do? Part 2: Incorporate Context</a></li>
+  <li><a href="#why-not-both" id="toc-why-not-both" class="nav-link" data-scroll-target="#why-not-both">Why Not Both??</a></li>
   </ul></li>
-  <li><a href="#blasting-off-into-causality" id="toc-blasting-off-into-causality" class="nav-link" data-scroll-target="#blasting-off-into-causality">Blasting Off Into Causality!</a>
+  <li><a href="#context-free-rightarrow-context-sensitive" id="toc-context-free-rightarrow-context-sensitive" class="nav-link" data-scroll-target="#context-free-rightarrow-context-sensitive"><span class="cbg-darker"><i class="bi bi-1-circle"></i> Context-Free</span><br> <span class="math inline">\(\rightarrow\)</span> <i class="bi bi-2-circle"></i> Context-Sensitive</a>
   <ul class="collapse">
-  <li><a href="#dgps-and-the-emergence-of-order" id="toc-dgps-and-the-emergence-of-order" class="nav-link" data-scroll-target="#dgps-and-the-emergence-of-order">DGPs and the Emergence of Order</a></li>
-  <li><a href="#the-result-16-steps" id="toc-the-result-16-steps" class="nav-link" data-scroll-target="#the-result-16-steps">The Result: 16 Steps</a></li>
-  <li><a href="#the-result-64-steps" id="toc-the-result-64-steps" class="nav-link" data-scroll-target="#the-result-64-steps">The Result: 64 Steps</a></li>
-  <li><a href="#mathematicalscientific-modeling" id="toc-mathematicalscientific-modeling" class="nav-link" data-scroll-target="#mathematicalscientific-modeling">“Mathematical/Scientific Modeling”</a></li>
-  <li><a href="#so-whats-the-problem" id="toc-so-whats-the-problem" class="nav-link" data-scroll-target="#so-whats-the-problem">So What’s the Problem?</a></li>
-  </ul></li>
-  <li><a href="#causal-inference" id="toc-causal-inference" class="nav-link" data-scroll-target="#causal-inference">Causal Inference</a>
-  <ul class="collapse">
-  <li><a href="#the-intuitive-but-boring-problem-of-causal-inference" id="toc-the-intuitive-but-boring-problem-of-causal-inference" class="nav-link" data-scroll-target="#the-intuitive-but-boring-problem-of-causal-inference">The <em>Intuitive But Boring</em> Problem of Causal Inference</a></li>
-  <li><a href="#the-fundamental-problem-of-causal-inference" id="toc-the-fundamental-problem-of-causal-inference" class="nav-link" data-scroll-target="#the-fundamental-problem-of-causal-inference">The <em>Fundamental</em> Problem of Causal Inference</a></li>
-  <li><a href="#what-is-to-be-done" id="toc-what-is-to-be-done" class="nav-link" data-scroll-target="#what-is-to-be-done">What Is To Be Done?</a></li>
-  <li><a href="#face-everything-and-rise-controlled-randomized-experiment-paradigm" id="toc-face-everything-and-rise-controlled-randomized-experiment-paradigm" class="nav-link" data-scroll-target="#face-everything-and-rise-controlled-randomized-experiment-paradigm">Face Everything And Rise: Controlled, Randomized Experiment Paradigm</a></li>
-  <li><a href="#selecting-on-the-dependent-variable" id="toc-selecting-on-the-dependent-variable" class="nav-link" data-scroll-target="#selecting-on-the-dependent-variable">Selecting on the Dependent Variable</a></li>
-  <li><a href="#complications-selection" id="toc-complications-selection" class="nav-link" data-scroll-target="#complications-selection">Complications: Selection</a></li>
-  <li><a href="#the-solution-matching" id="toc-the-solution-matching" class="nav-link" data-scroll-target="#the-solution-matching">The Solution: <em>Matching</em></a></li>
-  </ul></li>
-  <li><a href="#do-calculus" id="toc-do-calculus" class="nav-link" data-scroll-target="#do-calculus">Do-Calculus</a>
-  <ul class="collapse">
-  <li><a href="#our-data-generating-process" id="toc-our-data-generating-process" class="nav-link" data-scroll-target="#our-data-generating-process">Our Data-Generating Process</a></li>
-  <li><a href="#chalkboard-time" id="toc-chalkboard-time" class="nav-link" data-scroll-target="#chalkboard-time">Chalkboard Time…</a></li>
-  <li><a href="#top-secret-answers-slide-dont-peek" id="toc-top-secret-answers-slide-dont-peek" class="nav-link" data-scroll-target="#top-secret-answers-slide-dont-peek">Top Secret Answers Slide (Don’t Peek)</a></li>
-  <li><a href="#chalkboard-time-2-electric-boogaloo" id="toc-chalkboard-time-2-electric-boogaloo" class="nav-link" data-scroll-target="#chalkboard-time-2-electric-boogaloo">Chalkboard Time 2: Electric Boogaloo</a></li>
-  <li><a href="#double-quadruple-secret-answer-slide" id="toc-double-quadruple-secret-answer-slide" class="nav-link" data-scroll-target="#double-quadruple-secret-answer-slide">Double Quadruple Secret Answer Slide</a></li>
-  <li><a href="#the-problem-of-colliders" id="toc-the-problem-of-colliders" class="nav-link" data-scroll-target="#the-problem-of-colliders">The Problem of Colliders</a></li>
-  <li><a href="#whats-the-issue" id="toc-whats-the-issue" class="nav-link" data-scroll-target="#whats-the-issue">What’s the Issue?</a></li>
-  <li><a href="#the-causal-trinity-when-controlling-for-stuff-helps" id="toc-the-causal-trinity-when-controlling-for-stuff-helps" class="nav-link" data-scroll-target="#the-causal-trinity-when-controlling-for-stuff-helps">The Causal Trinity: When Controlling for Stuff Helps</a></li>
-  <li><a href="#the-final-diagrammatic-boss-swigs" id="toc-the-final-diagrammatic-boss-swigs" class="nav-link" data-scroll-target="#the-final-diagrammatic-boss-swigs">The Final Diagrammatic Boss: SWIGs</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#motivation-linguistic-meaning" id="toc-motivation-linguistic-meaning" class="nav-link" data-scroll-target="#motivation-linguistic-meaning">Motivation: Linguistic Meaning</a></li>
+  <li><a href="#impossibility-results" id="toc-impossibility-results" class="nav-link" data-scroll-target="#impossibility-results">Impossibility Results!</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/jpowerj/dsan5450/blob/main/w06/index.qmd" target="_blank" class="toc-action"><i class="bi bi-github"></i>View source</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
@@ -585,7 +562,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 6: Causality in Ethics and Policy</h1>
+<h1 class="title">Week 6: Context-Sensitive Fairness</h1>
 <p class="subtitle lead"><em>DSAN 5450: Data Ethics and Policy</em><br><span class="subsubtitle">Spring 2026, Georgetown University</span></p>
   <div class="quarto-categories">
     <div class="quarto-category">Class Sessions</div>
@@ -651,7 +628,7 @@ window.Quarto = {
 <td style="text-align: left;"><strong>Lecture</strong></td>
 <td style="text-align: left;">3:30pm</td>
 <td style="text-align: left;">3:45pm</td>
-<td style="text-align: left;"><a href="#quick-clarifications--recaps">Recaps / Clarifications →</a></td>
+<td style="text-align: left;"><a href="#quick-clarifications--recaps">Recap: Context-Free Fairness →</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
@@ -685,6 +662,402 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="recap-context-free-fairness-antecedents-and-the-impossibility-result" class="level1">
+<h1>Recap: Context-Free Fairness, Antecedents, and the Impossibility Result</h1>
+<section id="achieving-fair-misclassification" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="achieving-fair-misclassification">Achieving “Fair Misclassification”</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/misclassification.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ul>
+<li>If you think <strong>fairness = equal misclassification rates between racial groups</strong>, 👍</li>
+<li>If you think <strong>fairness = equal correct prediction rates between racial groups</strong>, 👎</li>
+</ul>
+</section>
+<section id="achieving-fair-calibration" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="achieving-fair-calibration">Achieving “Fair Calibration”</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/calibration.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<ul>
+<li>If you think <strong>fairness = equal misclassification rates between racial groups</strong>, 👍</li>
+<li>If you think <strong>fairness = equal correct prediction rates between racial groups</strong>, 👎</li>
+</ul>
+</section>
+<section id="so-what-do-we-do-option-1-argueadvocate" class="level2 smaller crunch-title">
+<h2 class="smaller crunch-title anchored" data-anchor-id="so-what-do-we-do-option-1-argueadvocate">So… What Do We Do? Option 1: Argue/Advocate</h2>
+<ul>
+<li><strong>Whitepaper(!):</strong> Berkman Klein Center for Internet &amp; Society at Harvard University (2021), <a href="https://dash.harvard.edu/entities/publication/739ea327-7c95-43d9-9fdc-a702bf420e40"><em>Principled Artificial Intelligence: Mapping Consensus in Ethical and Rights-based Approaches to Principles for AI</em></a></li>
+<li>Your first “template” for a final project!</li>
+<li>Problem (left til post-midterm): How do we know <strong>whose interests</strong> are included/excluded in the arguments?</li>
+<li>What conditions could we establish to <strong>systematically</strong>/structurally ensure inclusion of the interests of all? [Discourse ethics; coming soon!]</li>
+</ul>
+</section>
+<section id="so-what-do-we-do-part-2-incorporate-context" class="level2 smaller crunch-title crunch-ul crunch-blockquote">
+<h2 class="smaller crunch-title crunch-ul crunch-blockquote anchored" data-anchor-id="so-what-do-we-do-part-2-incorporate-context">So… What Do We Do? Part 2: Incorporate Context</h2>
+<ul>
+<li><p>One option: argue about which of the two definitions is “better” for the next 100 years (what is the best way to give food to the poor?)</p>
+<blockquote class="blockquote">
+<p>It appears to reveal an unfortunate but inexorable fact about our world: we must choose between two intuitively appealing ways to understand fairness in ML. Many scholars have done just that, defending either ProPublica’s or Northpointe’s definitions against what they see as the misguided alternative. <span class="citation" data-cites="simons_algorithms_2023">(<a href="#ref-simons_algorithms_2023" role="doc-biblioref">Simons 2023</a>)</span></p>
+</blockquote></li>
+<li><p>Another option: study and then work to ameliorate the social conditions which <strong>force us into</strong> this realm of mathematical impossibility (why do the poor have no food?)</p>
+<blockquote class="blockquote">
+<p>The impossibility result is about much more than math. [It occurs because] the <strong>underlying</strong> outcome is distributed unevenly in society. This is <strong>a fact about society, not mathematics</strong>, and requires engaging with a complex, checkered history of systemic racism in the US. Predicting an outcome whose distribution is shaped by this history requires tradeoffs because the inequalities and injustices are encoded in data—in this case, because America has criminalized Blackness for as long as America has existed.</p>
+</blockquote></li>
+</ul>
+</section>
+<section id="why-not-both" class="level2 smaller crunch-title crunch-ul title-12 crunch-li-10">
+<h2 class="smaller crunch-title crunch-ul title-12 crunch-li-10 anchored" data-anchor-id="why-not-both">Why Not Both??</h2>
+<ul>
+<li>On the one hand: yes, both! On the other hand: <a hrf="https://en.wikipedia.org/wiki/Argument_to_moderation" target="_blank">fallacy of the “middle ground”</a></li>
+<li>We’re back at <strong>descriptive vs.&nbsp;normative</strong>:
+<ul>
+<li><strong>Descriptively</strong>, given 100 values <span class="math inline">\(v_1, \ldots, v_{100}\)</span>, their <strong>mean</strong> may be a good way to summarize, if we have to choose a single number</li>
+<li>But, <strong>normatively</strong>, imagine that these are <strong>opinions</strong> that people hold about fairness.</li>
+<li>Now, if it’s the US South in 1860 and <span class="math inline">\(v_i\)</span> represents person <span class="math inline">\(i\)</span>’s approval of slavery, from a sample of 100 people, then approx. 97 of the <span class="math inline">\(v_i\)</span>’s are “does not disapprove” <span class="citation" data-cites="rousey_friends_2001">(<a href="#ref-rousey_friends_2001" role="doc-biblioref">Rousey 2001</a>)</span> — in this case, normatively, is the mean <span class="math inline">\(0.97\)</span> the “correct” answer?</li>
+</ul></li>
+<li>We have another case where, like the “grass is green” vs.&nbsp;“grass ought to be green” example, we cannot just “import” our logical/mathematical tools from the former to solve the latter! (However: this does <strong>not</strong> mean they are <strong>useless</strong>! This is the fallacy of the <strong>excluded middle</strong>, sort of the opposite of the fallacy of the middle ground)</li>
+<li>This is why we have <strong>ethical frameworks</strong> in the first place! Going back to <strong>Rawls</strong>: “97% of Americans think black people shouldn’t have rights” &nbsp;<span class="math inline">\(\nimplies\)</span>“black people shouldn’t have rights”, since rights are a <strong>primary good</strong></li>
+</ul>
+</section>
+</section>
+<section id="context-free-rightarrow-context-sensitive" class="level1 title-12" data-stack-name="Context-Sensitive Fairness">
+<h1 class="title-12" data-stack-name="Context-Sensitive Fairness"><span class="cbg-darker"><i class="bi bi-1-circle"></i> Context-Free</span><br> <span class="math inline">\(\rightarrow\)</span> <i class="bi bi-2-circle"></i> Context-Sensitive</h1>
+<section id="motivation-linguistic-meaning" class="level2">
+<h2 class="anchored" data-anchor-id="motivation-linguistic-meaning">Motivation: Linguistic Meaning</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="<i class='bi bi-info-circle pe-1'></i> The Distributional Hypothesis [@firth_selected_1968, 179]">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="bi bi-info-circle pe-1"></i> The Distributional Hypothesis <span class="citation" data-cites="firth_selected_1968">(<a href="#ref-firth_selected_1968" role="doc-biblioref">Firth 1968, 179</a>)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>You shall know a word by the company it keeps!</strong></p>
+</div>
+</div>
+<ul>
+<li>Related to <strong>context-free</strong> vs.&nbsp;<strong>context-sensitive</strong> distinction in Computer Science (old-school NLP)!</li>
+<li>But why is it relevant to DSAN 5450?…</li>
+</ul>
+</section>
+<section id="impossibility-results" class="level2 crunch-title crunch-ul code-black">
+<h2 class="crunch-title crunch-ul code-black anchored" data-anchor-id="impossibility-results">Impossibility Results!</h2>
+<ul>
+<li>Let’s see what happens if we try to <strong>reason about definitions/meaning in language</strong> without the ability to incorporate <strong>“context”</strong> (here defined in a silly way… point holds as we go up the “language complexity hierarchy”)</li>
+<li>Try to write a finite-state automata to detect “valid” strings in the language <span class="math inline">\(\{a^nb^n \mid n \in \mathbb{Z}^{\geq 0}\}\)</span>: <code>aabb</code> ✅, <code>aba</code> ❌</li>
+</ul>
+<div data-layout="[1,1]">
+<div id="automata-fail">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/automata_start_accept.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+<section id="there-is-a-solution-outside-scope-of-class" class="level2">
+<h2 class="anchored" data-anchor-id="there-is-a-solution-outside-scope-of-class">(There <em>is</em> a Solution! Outside Scope of Class…)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/PDA.webp" class="img-fluid figure-img"></p>
+<figcaption><a href="https://www.geeksforgeeks.org/theory-of-computation/npda-for-accepting-the-language-l-an-bn-n1/">Source</a></figcaption>
+</figure>
+</div>
+</section>
+<section id="the-meaning-of-fairness" class="level2">
+<h2 class="anchored" data-anchor-id="the-meaning-of-fairness">The “Meaning” of Fairness</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="<i class='bi bi-info-circle pe-1'></i> The Distributional [Fairness] Hypothesis">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span><i class="bi bi-info-circle pe-1"></i> The Distributional [Fairness] Hypothesis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>You shall know “fairness” by the company it keeps [i.e., the context it incorporates].</strong></p>
+</div>
+</div>
+<ul>
+<li>Context-free (confusion-matrix-based) fairness: “plug the confusion matrix values into a formula and see if the formula is satisfied”</li>
+<li>Context-sensitive fairness: analyze fairness <strong>relative to</strong> a set of <strong>antecedents</strong> regarding how <strong>normative concerns</strong> should enter into our measurements of fairness</li>
+</ul>
+</section>
+<section id="similarity-based-fairness" class="level1" data-stack-name="Similarity-Based Fairness">
+<h1 data-stack-name="Similarity-Based Fairness">Similarity-Based Fairness</h1>
+<section id="group-fairness-rightarrow-individual-fairness" class="level2 title-09">
+<h2 class="title-09 anchored" data-anchor-id="group-fairness-rightarrow-individual-fairness">Group Fairness <span class="math inline">\(\rightarrow\)</span> Individual Fairness</h2>
+<ul>
+<li>The crucial insight of Dwork: <strong>group-level</strong> fairness does not ensure that <strong>individuals</strong> are treated fairly <strong>as individuals</strong></li>
+<li>Exactly the issue we’ve seen with <strong>utilitarianism</strong>: optimizing <strong>society-level</strong> “happiness” may lead to <strong>individuals</strong> being brutally mistreated (e.g., having their rights violated)</li>
+<li>So, at a high level, Dwork’s proposal could provide a Rawls-style <strong>ordering</strong>: individual fairness <strong>lexically prior</strong> to group-level fairness (optimize group-level fairness once individual-level is satisfied)</li>
+</ul>
+</section>
+<section id="the-normative-antecedent" class="level2 crunch-title crunch-ul crunch-callout crunch-blockquote crunch-quarto-layout-panel">
+<h2 class="crunch-title crunch-ul crunch-callout crunch-blockquote crunch-quarto-layout-panel anchored" data-anchor-id="the-normative-antecedent">The (Normative!) Antecedent</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Fairness Through Awareness [@dwork_fairness_2011]">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Fairness Through Awareness <span class="citation" data-cites="dwork_fairness_2011">(<a href="#ref-dwork_fairness_2011" role="doc-biblioref">Dwork et al. 2011</a>)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Individuals who are similar with respect to a task should be classified similarly.</strong></p>
+</div>
+</div>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="awareness-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>Not well-liked in industry / policy because you can’t just “plug in” results of your classifier and get True/False “we satisfied fairness!” …But this is <strong>exactly the point!</strong></li>
+</ul>
+</div>
+<div id="awareness-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/manymetrics.png" class="img-fluid figure-img" width="340"></p>
+<figcaption>From <span class="citation" data-cites="kiat_machines_2018">Kiat (<a href="#ref-kiat_machines_2018" role="doc-biblioref">2018</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="bringing-in-context" class="level2">
+<h2 class="anchored" data-anchor-id="bringing-in-context">Bringing In Context</h2>
+<ul>
+<li><em>In itself, the principle of equal treatment is abstract, a formal relationship that <strong>lacks substantive content</strong>”</em></li>
+<li><em>The principle must be given content by defining which cases are similar and which are different, and by considering what kinds of differences <strong>justify differential treatment</strong></em></li>
+<li><em>Deciding what differences are relevant, and what kinds of differential treatment are justified by particular differences, requires <strong>wrestling with moral and political debates</strong> about the responsibilities of different institutions to address persistent injustice</em> <span class="citation" data-cites="simons_algorithms_2023">(<a href="#ref-simons_algorithms_2023" role="doc-biblioref">Simons 2023, 51</a>)</span></li>
+</ul>
+</section>
+<section id="remember-distance-metrics" class="level2 crunch-title crunch-quarto-layout-panel crunch-ul text-90 crunch-li-8 crunch-quarto-figure">
+<h2 class="crunch-title crunch-quarto-layout-panel crunch-ul text-90 crunch-li-8 crunch-quarto-figure anchored" data-anchor-id="remember-distance-metrics">Remember Distance Metrics?(!)</h2>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="distance-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>A core element in <strong>both</strong> similarity-based and causal fairness!</li>
+<li>Already difficult to choose a metric on <strong>pragmatic</strong> grounds (ambulance needs to get to hospital)</li>
+<li>Now people will also have <strong>fundamental normative disagreements</strong> about what should and should not <strong>determine difference</strong></li>
+</ul>
+</div>
+<div id="distance-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/medical_distances.jpg" class="img-fluid figure-img" width="380"></p>
+<figcaption>From <span class="citation" data-cites="shahid_comparison_2009">Shahid et al. (<a href="#ref-shahid_comparison_2009" role="doc-biblioref">2009</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="satisfying-individual-vs.-group-fairness" class="level2 smaller crunch-title title-09">
+<h2 class="smaller crunch-title title-09 anchored" data-anchor-id="satisfying-individual-vs.-group-fairness">Satisfying Individual vs.&nbsp;Group Fairness</h2>
+<ul>
+<li><p>An algorithm is <strong>individually fair</strong> if, for all individuals <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, we have</p>
+<p><span class="math display">\[
+\textsf{dist}(r(x), r(y)) \leq \textsf{dist}(x, y)
+\]</span></p>
+<p><span class="math inline">\(\implies\)</span> an advertising system must show similar sets of ads to similar users.</p></li>
+<li><p>It achieves <strong>group fairness-through-parity</strong> for two groups of users <span class="math inline">\(S\)</span> and <span class="math inline">\(T\)</span> when:</p>
+<p><span class="math display">\[
+\textsf{dist}(\mathbb{E}_{s \in S}[r(s)], \mathbb{E}_{t \in T}[r(t)]) \leq \varepsilon
+\]</span></p>
+<p>where <span class="math inline">\(\mathbb{E}_{s \in S}\)</span> and <span class="math inline">\(\mathbb{E}_{t \in T}\)</span> denote the expectation of ads seen by an individual chosen uniformly among <span class="math inline">\(S\)</span> and <span class="math inline">\(T\)</span>. This definition implies that the difference in probability between two groups of seeing a particular ad will be bounded by <span class="math inline">\(\varepsilon\)</span>.</p></li>
+<li><p>Given these definitions: Individual fairness&nbsp; <span class="math inline">\(\nimplies\)</span> group fairness, and vice versa! <span class="citation" data-cites="riederer_price_2017">(<a href="#ref-riederer_price_2017" role="doc-biblioref">Riederer and Chaintreau 2017</a>)</span></p></li>
+</ul>
+</section>
+<section id="the-importance-of-not-excluding-race" class="level2 crunch-title title-08">
+<h2 class="crunch-title title-08 anchored" data-anchor-id="the-importance-of-not-excluding-race">The Importance of <em>Not</em> Excluding Race!</h2>
+<ul>
+<li>On HW2 you will see how, on the one hand: <strong>excluding</strong> race from the similarity metric ensures <strong>race-blind fairness</strong></li>
+<li>But, on the other hand: race-blind fairness can not only <strong>maintain</strong> but also <strong>amplify</strong> preexisting inequalities</li>
+<li>By <strong>including race</strong> in our similarity metric, we can explicitly take this into account!</li>
+<li>Ex: someone with a (morally irrelevant) disadvantage due to <strong>birth lottery</strong> who achieves an SAT score of 1400 is <strong>similar to</strong> someone with a (morally irrelevant) advantage due to birth lottery who achieves an SAT score of 1500</li>
+</ul>
+</section>
+<section id="equality-of-opportunity" class="level2 crunch-title crunch-ul crunch-quarto-layout-panel smaller">
+<h2 class="crunch-title crunch-ul crunch-quarto-layout-panel smaller anchored" data-anchor-id="equality-of-opportunity">Equality of Opportunity</h2>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="roemer-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<ul>
+<li>This notion (last bullet of the previous slide) is <strong>contentious</strong>, to say the least</li>
+<li>But also, crucially: our job is not to <strong>decide the similarity metric unilaterally</strong>!</li>
+<li>The <strong>equality of opportunity</strong> approach is <strong>not itself a similarity metric!</strong></li>
+<li>It is a <strong>“meta-algorithm”</strong> for <strong>translating</strong> normative positions (consequents of an ethical framework) into <strong>concrete fairness constraints</strong> that you can then impose on ML algorithms</li>
+</ul>
+</div>
+<div id="roemer-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/roemer-equality.jpg" class="img-fluid figure-img" width="340"></p>
+<figcaption><span class="citation" data-cites="roemer_equality_1998">Roemer (<a href="#ref-roemer_equality_1998" role="doc-biblioref">1998</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="roemers-algorithm" class="level2 smaller crunch-title crunch-li-10">
+<h2 class="smaller crunch-title crunch-li-10 anchored" data-anchor-id="roemers-algorithm">Roemer’s Algorithm</h2>
+<ul>
+<li>Equality of Opportunity algorithm boils down to (Input 0 = data on individuals <span class="math inline">\(X_i\)</span>):</li>
+<li><em>Input 1 (!)</em>: Attributes <span class="math inline">\(J_{\text{advantage}} \subseteq X_i\)</span> that a society (real or hypothetical) considers <strong>normatively relevant</strong> for an outcome, but that people are not <strong>individually responsible</strong> for (e.g., race or nationality via birth lottery)</li>
+<li><em>Input 2</em>: Attributes <span class="math inline">\(J_{\text{merit}} \subseteq X_i\)</span> that a society considers people <strong>individually responsible</strong> for (effort, sacrificing short-term pleasure for longer-term benefits, etc.)</li>
+<li><i class="bi bi-1-circle"></i>: Set of individuals in society <span class="math inline">\(S\)</span> is <strong>partitioned</strong> into subsets <span class="math inline">\(S_i\)</span>, where <span class="math inline">\(i\)</span> is some combination of particular <strong>values</strong> for the attributes in <span class="math inline">\(X_{\text{advantage}}\)</span></li>
+<li><i class="bi bi-2-circle"></i>: Individuals’ <strong>context-sensitive scores</strong> are computed <strong>relative to their group</strong> <span class="math inline">\(S_i\)</span>, as <strong>percentile</strong> of their <span class="math inline">\(X_{\text{merit}}\)</span> value relative to <strong>distribution</strong> of <span class="math inline">\(X_{\text{merit}}\)</span> values across <span class="math inline">\(S_i\)</span></li>
+<li><em>Outcome</em>: Now that we have <strong>incorporated social context</strong>, by converting the original <strong>context-free units</strong> (e.g., numeric SAT score) into <strong>context-sensitive units</strong> (percentile of numeric SAT score within distribution of comparable individuals), we can compare people <strong>across groups</strong> on the basis of <strong>context-sensitive</strong> scores!</li>
+</ul>
+</section>
+<section id="an-overly-simplistic-example-more-on-hw2" class="level2 crunch-title inline-90">
+<h2 class="crunch-title inline-90 anchored" data-anchor-id="an-overly-simplistic-example-more-on-hw2">An Overly-Simplistic Example (More on HW2!)</h2>
+<ul>
+<li><span class="math inline">\(\mathbf{x}_i = (x_{i,1}, x_{i,2}, x_{i,3}) = (\texttt{wealth}_i, \texttt{study\_hrs}_i, \texttt{SAT}_i)\)</span></li>
+<li><span class="math inline">\(J_{\text{advantage}} = (1) = (\texttt{wealth})\)</span>, <span class="math inline">\(J_{\text{merit}} = (2) = (\texttt{study\_hrs})\)</span></li>
+<li><span class="math inline">\(\Rightarrow \texttt{study\_hrs} \rightarrow \texttt{SAT}\)</span> a “fair” pathway</li>
+<li><span class="math inline">\(\Rightarrow \texttt{wealth} \rightarrow \texttt{SAT}\)</span> an “unfair” pathway</li>
+<li><span class="math inline">\(\Rightarrow\)</span> School admission decisions “fair” to the extent that they capture the <strong>direct effect</strong> <span class="math inline">\(\texttt{study\_hrs} \rightarrow \texttt{SAT} \rightarrow \texttt{admit}\)</span>, but aren’t affected by <strong>indirect effect</strong> <span class="math inline">\(\texttt{wealth} \rightarrow \texttt{SAT} \rightarrow \texttt{admit}\)</span></li>
+</ul>
+</section>
+<section id="at-a-macro-level" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="at-a-macro-level">At a Macro Level!</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/roemer.svg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="causal-fairness" class="level1" data-stack-name="Causal Fairness">
+<h1 data-stack-name="Causal Fairness">Causal Fairness</h1>
+<section id="the-state-of-the-art" class="level2 crunch-title">
+<h2 class="crunch-title anchored" data-anchor-id="the-state-of-the-art">The State of the Art!</h2>
+<ul>
+<li>Current state of fairness in AI: measures which explicitly model <strong>causal connections</strong> between variables of interest are most promising for <strong>robust</strong> notions of fairness</li>
+<li>Robust in the sense of:
+<ul>
+<li>Being <strong>normatively desirable</strong> (as in, matching the key tenets of our ethical frameworks) while also being</li>
+<li><strong>Descriptively tractable</strong> (as in, concretely implementable in math/code, and transparent enough to allow us to <em>evaluate</em> and <em>update</em> these implementations, using a process like <em>reflective equilibrium</em>).</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-antecedent" class="level2">
+<h2 class="anchored" data-anchor-id="the-antecedent">The Antecedent</h2>
+<ul>
+<li>Since it’s impossible to <strong>eliminate</strong> information about sensitive attributes like race/gender/etc. from our ML algorithms…</li>
+<li>Fairness should instead be defined on the basis of <strong>how this sensitive information “flows” through the causal chain of decisions</strong> which lead to an given (observed) outcome</li>
+</ul>
+</section>
+<section id="the-new-object-of-analysis-causal-pathways" class="level2 crunch-title crunch-ul title-09">
+<h2 class="crunch-title crunch-ul title-09 anchored" data-anchor-id="the-new-object-of-analysis-causal-pathways">The New Object of Analysis: <em>Causal Pathways</em></h2>
+<ul>
+<li>Once we have a <strong>model</strong> of the <strong>causal connections</strong> among:
+<ul>
+<li>Variables that we care about socially/normatively, and</li>
+<li>Variables used by a Machine Learning algorithm,</li>
+</ul></li>
+<li>We can then use techniques developed by statisticians who study <strong>causal inference</strong> to</li>
+<li><strong>Block</strong> certain “causal pathways” that we deem normatively unjustifiable while <strong>allowing</strong> other pathways that we deem to be normatively justifiable.</li>
+</ul>
+</section>
+<section id="causal-fairness-in-hw2" class="level2 crunch-title inline-80">
+<h2 class="crunch-title inline-80 anchored" data-anchor-id="causal-fairness-in-hw2">Causal Fairness in HW2</h2>
+<ul>
+<li>Intuition required to make the jump from <strong>correlational</strong> approach (from statistics and probability generally, and DSAN 5100 specifically!) to <strong>causal</strong> approach!</li>
+<li>Causal approach <strong>builds on</strong> correlational, but…</li>
+<li><strong>Stricter, directional standard</strong> for <span class="math inline">\(X \rightarrow Y\)</span></li>
+<li>Easy cases: find high <strong>correlation</strong> <span class="math inline">\(|\text{corr}(X,Y)|\)</span>, embed in a <strong>causal diagram</strong>, evaluate <span class="math inline">\(\Pr(Y \mid \text{do}(X)) \overset{?}{&gt;} \Pr(Y \mid \neg\text{do}(X))\)</span></li>
+<li>Hard cases: can have <span class="math inline">\(\Pr(Y \mid \text{do}(X)) \overset{?}{&gt;} \Pr(Y \mid \neg\text{do}(X))\)</span> even when <span class="math inline">\(\text{corr}(X,Y) = 0\)</span> 😰 (dw, we’ll get there!)</li>
+</ul>
+</section>
+<section id="causal-building-blocks" class="level2 crunch-ul text-90">
+<h2 class="crunch-ul text-90 anchored" data-anchor-id="causal-building-blocks">Causal Building Blocks</h2>
+<ul>
+<li>DSAN 5100 precedent: nodes in the network <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> are <strong>Random Variables</strong>, connections <span class="math inline">\(X \leftrightarrow Y\)</span> are <strong>joint distributions</strong> <span class="math inline">\(\Pr(X, Y)\)</span></li>
+<li><strong>Directional</strong> edges <span class="math inline">\(X \rightarrow Y\)</span>, then, just represent <strong>conditional</strong> distributions: <span class="math inline">\(X \rightarrow Y\)</span> is <span class="math inline">\(\Pr(Y \mid X)\)</span></li>
+<li>Where we’re going: connections <span class="math inline">\(X \leftrightarrow Y\)</span> represent <strong>unknown but extant causal connections</strong> between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, while <span class="math inline">\(X \rightarrow Y\)</span> represents a <strong>causal relationship</strong> between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span></li>
+<li>Specifically, <span class="math inline">\(X \rightarrow Y\)</span> now means: <strong>an intervention that changes the value of <span class="math inline">\(X\)</span></strong> by <span class="math inline">\(\varepsilon\)</span> <strong>causes a change in the value of <span class="math inline">\(Y\)</span></strong> by <span class="math inline">\(f(\varepsilon)\)</span></li>
+</ul>
+</section>
+<section id="what-is-to-be-done" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-to-be-done">What Is To Be Done?</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/face_everything_and_rise.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</section>
+<section id="face-everything-and-rise-controlled-randomized-experiment-paradigm" class="level2">
+<h2 class="anchored" data-anchor-id="face-everything-and-rise-controlled-randomized-experiment-paradigm">Face Everything And Rise: Controlled, Randomized Experiment Paradigm</h2>
+<ul>
+<li>Find good comparison cases: <strong>Treatment</strong> and <strong>Control</strong></li>
+<li>Without a control group, you cannot make inferences!</li>
+<li><em>Selecting on the dependent variable…</em></li>
+</ul>
+</section>
+<section id="selecting-on-the-dependent-variable" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="selecting-on-the-dependent-variable">Selecting on the Dependent Variable</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/school-shootings.jpeg" class="img-fluid figure-img"></p>
+<figcaption><a href="https://www.pbs.org/newshour/show/what-research-says-about-identifying-people-who-might-commit-mass-shootings" target="_blank">What “““research”“” “““says”“” about identifying people who might commit mass shootings</a></figcaption>
+</figure>
+</div>
+<ul>
+<li>Jeff’s rant: If you care about actually solving social issues, this should <strong>infuriate you</strong></li>
+</ul>
+</section>
+<section id="complications-selection" class="level2">
+<h2 class="anchored" data-anchor-id="complications-selection">Complications: Selection</h2>
+<ul>
+<li>Tldr: Why did this person (unit) end up in the treatment group? Why did this other person (unit) end up in the control group?</li>
+<li>Are there systematic differences?</li>
+<li>Vietnam/Indochina Draft: Why can’t we just study [men who join the military] versus [men who don’t], and take the difference as a causal estimate?</li>
+</ul>
+</section>
+<section id="complications-compliance" class="level2 crunch-title">
+<h2 class="crunch-title anchored" data-anchor-id="complications-compliance">Complications: Compliance</h2>
+<ul>
+<li>We want people assigned to treatment to take the treatment, and people assigned to control to take the control</li>
+<li>“Compliance”: degree to which this is true in experiment
+<ul>
+<li>High compliance = most people actually took what they were assigned</li>
+<li>Low compliance = lots of people who were assigned to treatment actually took control, and vice-versa</li>
+</ul></li>
+<li>What problems might exist w.r.t compliance in the Draft?</li>
+</ul>
+</section>
+<section id="next-week-and-hw2-experimental-rightarrow-observational-data" class="level2 crunch-title title-09">
+<h2 class="crunch-title title-09 anchored" data-anchor-id="next-week-and-hw2-experimental-rightarrow-observational-data">Next Week and HW2: Experimental <span class="math inline">\(\rightarrow\)</span> Observational Data</h2>
+<ul>
+<li>In observational studies, researchers have no control over assignment to treatment/control 😨</li>
+<li>On the one hand… Forget Everything And Run [to randomized, controlled experiments], if you can.</li>
+<li>On the other hand… statisticians over the last 4 centuries have developed fancy causal inference tools/techniques to help us Face Everything And Rise 🧐</li>
+</ul>
+</section>
+<section id="for-now-matching" class="level2 crunch-title">
+<h2 class="crunch-title anchored" data-anchor-id="for-now-matching">For Now: <em>Matching</em></h2>
+<ul>
+<li>In a <strong>randomized, controlled experiment</strong>, we can <strong>ensure</strong> (since we have control over the <strong>assignment mechanism</strong>) that the <strong>only systematic difference</strong> between <span class="math inline">\(C\)</span> and <span class="math inline">\(T\)</span> is that <span class="math inline">\(T\)</span> received the treatment and <span class="math inline">\(C\)</span> did not</li>
+<li>In an <strong>observational study</strong>, we “show up too late”!</li>
+<li>Thus, we no longer refer to <strong>assignment</strong> but to <strong>selection</strong></li>
+<li>And, our job is to <strong>figure out</strong> (reverse engineer!) the <strong>selection mechanism</strong>, then <strong>correct for its non-randomness</strong>: basically, we “transform” from observational to experimental setting through <strong>weighting</strong> (👀 W02)</li>
+</ul>
+</section>
 </section>
 <section id="quick-clarifications-recaps" class="level1" data-stack-name="Recap">
 <h1 data-stack-name="Recap">Quick Clarifications / Recaps!</h1>
@@ -1065,24 +1438,24 @@ Adding another scale for y, which will replace the existing scale.</code></pre>
 <li>The problem? We live in <strong>one</strong> world, not two identical worlds simultaneously 😭</li>
 </ul>
 </section>
-<section id="what-is-to-be-done" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-to-be-done">What Is To Be Done?</h2>
+<section id="what-is-to-be-done-1" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-to-be-done-1">What Is To Be Done?</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/face_everything_and_rise.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
 </section>
-<section id="face-everything-and-rise-controlled-randomized-experiment-paradigm" class="level2">
-<h2 class="anchored" data-anchor-id="face-everything-and-rise-controlled-randomized-experiment-paradigm">Face Everything And Rise: Controlled, Randomized Experiment Paradigm</h2>
+<section id="face-everything-and-rise-controlled-randomized-experiment-paradigm-1" class="level2">
+<h2 class="anchored" data-anchor-id="face-everything-and-rise-controlled-randomized-experiment-paradigm-1">Face Everything And Rise: Controlled, Randomized Experiment Paradigm</h2>
 <ul>
 <li>Find good comparison cases: <strong>Treatment</strong> and <strong>Control</strong></li>
 <li>Without a control group, you cannot make inferences!</li>
 <li><em>Selecting on the dependent variable…</em></li>
 </ul>
 </section>
-<section id="selecting-on-the-dependent-variable" class="level2 smaller title-12">
-<h2 class="smaller title-12 anchored" data-anchor-id="selecting-on-the-dependent-variable">Selecting on the Dependent Variable</h2>
+<section id="selecting-on-the-dependent-variable-1" class="level2 smaller title-12">
+<h2 class="smaller title-12 anchored" data-anchor-id="selecting-on-the-dependent-variable-1">Selecting on the Dependent Variable</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/school-shootings.jpeg" class="img-fluid figure-img"></p>
@@ -1096,8 +1469,8 @@ Adding another scale for y, which will replace the existing scale.</code></pre>
 <p><em>(<strong>A</strong>nnoying <strong>B</strong>ut <strong>H</strong>opefully <strong>Y</strong>ou’ll <strong>S</strong>ee the <strong>I</strong>mportance <strong>O</strong>nce <strong>W</strong>e <strong>D</strong>igest <strong>C</strong>ausal <strong>I</strong>nference… a standard term in The Sciences)</em></p>
 </div>
 </section>
-<section id="complications-selection" class="level2">
-<h2 class="anchored" data-anchor-id="complications-selection">Complications: Selection</h2>
+<section id="complications-selection-1" class="level2">
+<h2 class="anchored" data-anchor-id="complications-selection-1">Complications: Selection</h2>
 <ul>
 <li>Tldr: Why did this person (unit) end up in the treatment group? Why did this other person (unit) end up in the control group?</li>
 <li>Are there systematic differences?</li>
@@ -1281,15 +1654,42 @@ Adding another scale for y, which will replace the existing scale.</code></pre>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-dwork_fairness_2011" class="csl-entry" role="listitem">
+Dwork, Cynthia, Moritz Hardt, Toniann Pitassi, Omer Reingold, and Rich Zemel. 2011. <span>“Fairness <span>Through Awareness</span>.”</span> November 28, 2011. <a href="https://doi.org/10.48550/arXiv.1104.3913">https://doi.org/10.48550/arXiv.1104.3913</a>.
+</div>
 <div id="ref-finetti_probability_1972" class="csl-entry" role="listitem">
 Finetti, Bruno de. 1972. <em>Probability, <span>Induction</span> and <span>Statistics</span>: <span>The Art</span> of <span>Guessing</span></em>. J. Wiley. <a href="https://books.google.com?id=hENg7qRPOPYC">https://books.google.com?id=hENg7qRPOPYC</a>.
+</div>
+<div id="ref-firth_selected_1968" class="csl-entry" role="listitem">
+Firth, John Rupert. 1968. <em>Selected <span>Papers</span> of <span>J</span>.<span>R</span>. <span>Firth</span>, 1952-59</em>. Longmans. <a href="https://books.google.com?id=Uxu3AAAAIAAJ">https://books.google.com?id=Uxu3AAAAIAAJ</a>.
 </div>
 <div id="ref-hume_treatise_1739" class="csl-entry" role="listitem">
 Hume, David. 1739. <em>A <span>Treatise</span> of <span>Human Nature</span>: <span>Being</span> an <span>Attempt</span> to <span>Introduce</span> the <span>Experimental Method</span> of <span>Reasoning Into Moral Subjects</span>; and <span>Dialogues Concerning Natural Religion</span></em>. Longmans, Green.
 </div>
+<div id="ref-kiat_machines_2018" class="csl-entry" role="listitem">
+Kiat, Lim Swee. 2018. <span>“Machines <span>Gone Wrong</span>.”</span> <span>Singapore University of Technology and Design</span>. <a href="https://machinesgonewrong.com/about/">https://machinesgonewrong.com/about/</a>.
+</div>
+<div id="ref-riederer_price_2017" class="csl-entry" role="listitem">
+Riederer, Christopher, and Augustin Chaintreau. 2017. <span>“The <span>Price</span> of <span>Fairness</span> in <span>Location Based Advertising</span>.”</span> <em>Fairness, Accountability, and Transparency Workshop on Responsible Recommendation</em>. <a href="https://doi.org/10.18122/B2MD8C">https://doi.org/10.18122/B2MD8C</a>.
+</div>
+<div id="ref-roemer_equality_1998" class="csl-entry" role="listitem">
+Roemer, John E. 1998. <em>Equality of <span>Opportunity</span></em>. Harvard University Press. <a href="https://books.google.com?id=2LfA_KjvOAsC">https://books.google.com?id=2LfA_KjvOAsC</a>.
+</div>
+<div id="ref-rousey_friends_2001" class="csl-entry" role="listitem">
+Rousey, Dennis C. 2001. <span>“Friends and <span>Foes</span> of <span>Slavery</span>: <span>Foreigners</span> and <span>Northerners</span> in the <span>Old South</span>.”</span> <em>Journal of Social History</em> 35 (2): 373–96. <a href="https://www.jstor.org/stable/3790193">https://www.jstor.org/stable/3790193</a>.
+</div>
+<div id="ref-shahid_comparison_2009" class="csl-entry" role="listitem">
+Shahid, Rizwan, Stefania Bertazzon, Merril L. Knudtson, and William A. Ghali. 2009. <span>“Comparison of Distance Measures in Spatial Analytical Modeling for Health Service Planning.”</span> <em>BMC Health Services Research</em> 9 (1): 200. <a href="https://doi.org/10.1186/1472-6963-9-200">https://doi.org/10.1186/1472-6963-9-200</a>.
+</div>
+<div id="ref-simons_algorithms_2023" class="csl-entry" role="listitem">
+Simons, Josh. 2023. <em>Algorithms for the <span>People</span>: <span>Democracy</span> in the <span>Age</span> of <span>AI</span></em>. Princeton University Press. <a href="https://books.google.com?id=hIKIEAAAQBAJ">https://books.google.com?id=hIKIEAAAQBAJ</a>.
+</div>
 </div>
 
 
+</section>
+</section>
+</div>
 </section>
 </section>
 

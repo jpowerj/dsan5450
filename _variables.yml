@@ -25,17 +25,17 @@ w04:
   date-md: "Feb 4"
 w05:
   weeknum: 5
-  title: "Context-Sensitive Fairness"
-  footer: "Context-Sensitive Fairness"
+  title: "Context-Free Fairness"
+  footer: "Context-Free Fairness"
   date-md: "Feb 11"
 w06:
   weeknum: 6
-  title: "Causality in Ethics and Policy"
-  footer: "Causality in Ethics and Policy"
+  title: "Context-Sensitive Fairness"
+  footer: "Context-Sensitive Fairness"
   date-md: "Feb 18"
 w07:
   weeknum: 7
-  title: "In-Class Midterm: Data Ethics, Fairness, Privacy, Causality"
+  title: "In-Class Midterm: Data Ethics, Fairness, Privacy"
   footer: "In-Class Midterm"
   date-md: "Feb 25"
 w08:

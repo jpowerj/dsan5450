@@ -31,3 +31,28 @@
 
 :::
 ::::
+
+---
+
+## Counterargument(s) to Deontology {.smaller .crunch-title .crunch-ul .crunch-figcaption .shift-ul .crunch-li-3 .crunch-images}
+
+::: {layout="[7,3]"}
+::: {#deontology-counter-left}
+
+* Deontological **rule**: *"Don't lie"*
+  * But then: Nazis come to your house, ask you if you're harboring any Jews
+* k, new deontological **rule**: *"Don't lie unless necessary"*
+  * Who decides when it's necessary?
+* Deontological commitment: *Pacifism / Nonviolence*
+  * But then: someone swingin on you
+* k, new deontological **commitment**: *Pacifism / Nonviolence Except In Self-Defense*
+  * Who decides what counts as self-defense?
+* (Trolley problems, etc.)
+
+:::
+::: {#deontology-counter-right}
+
+![@churchill_pacifism_1998 *(Derrick Jensen intro removed from later editions so I [put it on dang GitHub](https://github.com/jpowerj/mdb/blob/main/1998_Churchill_PacifismAsPathology.md)*](images/pacifism.jpg){fig-align="center" width="340"}
+
+:::
+:::
