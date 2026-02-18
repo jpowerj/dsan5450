@@ -123,12 +123,7 @@ Today's Planned Schedule:
 * Let's see what happens if we try to **reason about definitions/meaning in language** without the ability to incorporate **"context"** (here defined in a silly way... point holds as we go up the "language complexity hierarchy")
 * Try to write a finite-state automata to detect "valid" strings in the language $\{a^nb^n \mid n \in \mathbb{Z}^{\geq 0}\}$: `aabb` ✅, `aba` ❌
 
-:::: {layout="[1,1]"}
-::: {#automata-fail}
-
 ![](images/automata_start_accept.svg){fig-align="center"}
-
-:::
 
 ## (There *is* a Solution! Outside Scope of Class...)
 
