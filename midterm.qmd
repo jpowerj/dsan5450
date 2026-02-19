@@ -150,66 +150,6 @@ for all pairs of individuals $(i, j)$. Or in other words, that the difference be
 
 This, to me, is already slightly more than you need to know for the midterm, but if you want to dive into this Context-Sensitive approach specifically, Section 5.1 of @mitchell_algorithmic_2021 has a really great discussion of **Metric Fairness** specifically.
 
-### (4.2) Causal Fairness
-
-This is the capital-B capital-D Big Deal approach to fairness, in my view, but you've already heard enough about that in class and on HW2!
-
-So, for the midterm, instead I will just say that the key thing I want you to be comfortable with for now is **drawing and interpreting Causal Diagrams** like the ones I've shown in the slides and drawn on the board in class.
-
-First and foremost, if you absorb the [Quick Intro to Probabilistic Graphical Models](./writeups/pgm-intro/index.qmd) writeup, you are most of the way there to understanding Causal Diagrams in general, since (sweeping some details under the rug) these Causal Diagrams are primarily just PGMs where we interpret the **edges** (the **arrows** in the PGMs) as hypothesized **causal effects**.
-
-Thus, for the midterm, my first goal is to test your ability to read these PGMs and understand what they're **positing** ("saying") about the world. For example, if I give you a hypothesis like
-
-* $H_1$: Individual $i$ was arrested because they are black
-
-You should be able to "translate" this into a causal diagram based on:
-
-* A random variable $Y_i$ representing whether or not an individual $i$ was arrested (where we use the letter $Y$ here speicifcally because we're representing an **outcome** that we're hoping to **explain**)
-* A random variable $A_i$ representing the race of individual $i$, and
-* An edge $A_i \rightarrow Y_i$, representing the **hypothesis** that individual $i$'s specific $A_i$ value ($A_i = a_i$) is what caused $Y_i$ to take on individual $i$'s specific $Y_i$ value ($Y_i = y_i = 1$, in this case).
-
-Then, once you're comfortable with this process of "implementing" hypotheses by constructing causal diagrams, the only other thing I think will be important for the midterm is your ability to **adjudicate between** two or more such diagrams on the basis of their plausibility.
-
-What I mean by that is... keep in mind the definition of causality that was given in a slide in class:
-
-::: {.callout-tip title="Defining Causality [@hume_treatise_1739]"}
-
-$X$ causes $Y$ if and only if:
-
-1. $X$ *temporally precedes* $Y$ and
-2. 
-    * In **two worlds** $W_0$ and $W_1$ where
-    * everything is exactly the same **except that** $X = 0$ in $W_0$ and $X = 1$ in $W_1$,
-    * $Y = 0$ in $W_0$ and $Y = 1$ in $W_1$.
-
-:::
-
-You should be able to use this definition to (for example) **eliminate implausible causal diagrams**, namely, causal diagrams which violate the basic predicates within this definition. So, for example, say I gave you the following causal diagram as a causal hypothesis regarding **how toasters toast a piece of bread $i$**:
-
-* $T_i$ is a Random Variable which is $0$ if the bread has not yet been placed in the toaster and $1$ if has been placed in the toaster,
-* $C_i$ is a Random Variable which is $0$ if the bread is not cooked, and $1$ if the bread is cooked, and
-* There is an arrow $C_i \rightarrow T_i$
-
-You should be able to identify this as an **implausible** causal diagram---meaning, a causal diagram representing an **implausible** hypothesis about how toasters work, relative to the Humean notion of causality---since in our observations of how toasters work, the bread being placed in the toaster ($\text{do}(T_i = 1)$) occurs **before** the bread being cooked $C_i = 1$, temporally.
-
-## Part 5: Doin Thangs (Causality Continued)
-
-Short story short, the example from the end of our most recent meeting, where we showed how it's possible to have:
-
-* $\Pr(Y = 1) = p_y$, and
-* $\Pr(Y = 1 \mid X = 1) \neq p_y$, and yet
-* $\Pr(Y = 1 \mid \text{do}(X = 1)) = p_y$,
-
-Thus revealing the fact that $\Pr(Y = 1 \mid X = 1)$ does **not** capture the causal effect of $X$ on $Y$ in this case, which is just one specific instance of the general maxim you already know, that **correlation does not imply causation**.
-
-And yet, with this $\text{do}(E)$ operator (where $E$ is some probabilistic event), we have something **concrete** that we can use to start figuring out **when** observing a correlation **does** allow us to infer a causal effect!
-
-The actual figuring-out will have to wait until after the midterm. But I want you to have that notion in your head when you see the $\text{do}(\cdot)$ operator and/or a causal diagram: that these are the tools that are going to allow us to **bridge this gap** between **correlation** and **causation**, something that **probability theory alone** (i.e., the stuff you may have learned in DSAN 5100) **cannot do!**
-
-As a preview, which I mentioned at the very very end of the "do-calculus" example I went through on the board: @pearl_causality_2000 is literally a gigantic book that meticulously works through **all possible causal diagrams**[^euclid] and proves a massively important theorem that we'll see after the midterm, which tells us **precisely what conditions need to be met (in a given causal system) for us to be able to infer causal effects from conditional probabilities**.
-
-[^euclid]: Not like, one-by-one, but by mathematically characterizing all of the possibilities, like how we can say that *«Assuming Euclid's 5th Postulate, the interior angles of a triangle sum to 180&deg;»*, despite not having gone one-by-one through every triangle.
-
 ## References
 
 ::: {#refs}
