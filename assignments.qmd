@@ -43,9 +43,23 @@ gen_points_table <- function(hw_url) {
 #| label: hw1-points-table
 #| warning: false
 #| echo: false
-# hw1_url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vStpSHtuJy38apEKdY7akAsUTo1ovM2AR5VQ7AuVUpK4kbbxOSaaWeChP-zg2VKfGcvdctPTIxVy4NG/pub?output=csv"
 hw1_url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vRgzXNVDP9K_vqLy5uAVKQVY_gLbrG7nVpB99wPfSV8I8r_p_M2jGF3I_XWSRd3Q66ywIggcxTHPe0m/pub?output=csv"
 gen_points_table(hw1_url)
+```
+
+</div>
+
+
+## HW2
+
+<div style="height: 400px !important; max-height: 400px !important; overflow-y: scroll !important;">
+
+```{r}
+#| label: hw2-points-table
+#| warning: false
+#| echo: false
+hw2_url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vSXfrHQ-97mYEytKsoQkU_yg2Z9Byj2Jlu_nNMHoUDfVLkpudJw4FD1TprWuT9A_walWOSHuDsY6uwV/pub?output=csv"
+gen_points_table(hw2_url)
 ```
 
 </div>
