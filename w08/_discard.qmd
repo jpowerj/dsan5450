@@ -1,0 +1,35 @@
+# What is Policy? And What is *Data* Policy? {data-stack-name="Policy Overview"}
+
+## Discourse Around "Data Policy" in the US {.smaller .title-11 .crunch-title}
+
+* (This is the level at which "national conversations" are conducted around big data)
+
+<center>
+<a href='https://www.youtube.com/watch?v=5W-ufw5Z7ac' target='_blank'>![](images/mr_cotton.jpeg){fig-align="center" width="800"}</a>
+</center>
+
+
+
+## Actually-Relevant Takeaway {.smaller}
+
+* Unlike the US, there **are** countries and national/international institutions where policies are formed, in varying degrees, by processes in which **data** comes into play
+* We'll discuss more examples; two I can speak to directly from work as data consultant:
+* **EU**: Consulted on project around implementation of **GDPR**
+* **UNESCO**: Received grant for data-analysis of international **translation policies**
+  * 194 UN member states who participate in formation of these policies
+  * 2 UN member states who refuse to participate on basis of "anti-Israel bias" (you'll never guess which ones! Hint: Apartheid South Africa, Rhodesia used to provide 3rd and 4th vote in this bloc, but no longer exist)
+* **NY MTA**: Consulted on project studying NYC subway data, until passage of <a href='https://ogs.ny.gov/executive-order-157' target='_blank'>NYS Executive Order 157</a> banning state funding for any person or organization supporting boycott of Israel `¯\_(ツ)_/¯`
+
+---
+
+> «Consent is one of the easiest to satisfy because it allows you to do just about anything with the data» (---the text right below this screenshot)
+
+---
+
+
+* Main document: 261 pages
+* For SaaS companies: a nice, 34-page [abridgement](https://www.enterpriseready.io/gdpr/how-to-read-gdpr/)
+
+---
+
+The average number of trackers increased by 6.155 (37.06%) in the treatment group and 10.104 (109.09%) in the control group The difference between those two numbers captures the effect of the GDPR. It equals −3.949 trackers, suggesting that t

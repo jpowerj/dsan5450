@@ -15,6 +15,8 @@ format:
     footer: "DSAN 5450 Week 8: {{< var w08.footer >}}"
     output-file: "slides.html"
     html-math-method: mathjax
+    link-external-icon: true
+    link-external-newwindow: true
     theme: [default, "../dsan-globals/jjquarto.scss"]
     scrollable: true
     slide-number: true
@@ -41,7 +43,7 @@ format:
 
 :::
 
-# What is Policy? And What is *Data* Policy? {data-stack-name="Policy Overview"}
+# Privacy Regulations, Privacy Policies, and You {.title-11 .smaller}
 
 ::: {.hidden}
 
@@ -49,34 +51,26 @@ format:
 
 :::
 
-## Discourse Around "Data Policy" in the US {.smaller .title-11 .crunch-title}
+![[Image credit](https://www.chosun.com/site/data/html_dir/2019/04/15/2019041503012.html)](images/shrimp_whales.jpg){fig-align="center"}
 
-* (This is the level at which "national conversations" are conducted around big data)
+## Regulations: *Comparative* Perspective {.crunch-title .crunch-ul .crunch-li-8 .text-80}
+
+* No single, "universal" data privacy law $\implies$ compare and contrast various country/state/org attempts to tackle data policy issues
+* Important to retain **descriptive/normative distinction**! They'll become harder to distinguish as we discuss:
+* What **are** the regulations currently in existence? (Descriptive)
+  * Do we see a *trend?* ([California Effect](https://en.wikipedia.org/wiki/California_effect) vs. [Delaware Effect](https://kluwerlawonline.com/journalarticle/European+Business+Law+Review/15.6/EULR2004058))
+* What are their **drawbacks**? (Normative)
+  * Fundamental problem of contracts
+* Which drawbacks **could** be addressed "easily" via policy? (requires understanding **processes of policy formation**)
+* Which ones **could not?** (*Prisoner's Dilemma!*)
+
+# Present-Day Policy Framework: *Notice* and *Consent* {data-stack-name="Notice and Consent"}
 
 <center>
-<a href='https://www.youtube.com/watch?v=5W-ufw5Z7ac' target='_blank'>![](images/mr_cotton.jpeg){fig-align="center" width="800"}</a>
+
+OECD 1980 $\rightarrow$ EU 1995 $\rightarrow$ GDPR 2018
+
 </center>
-
-## Actually-Relevant Takeaway {.smaller}
-
-* Unlike the US, there **are** countries and national/international institutions where policies are formed, in varying degrees, by processes in which **data** comes into play
-* We'll discuss more examples; two I can speak to directly from work as data consultant:
-* **EU**: Consulted on project around implementation of **GDPR**
-* **UNESCO**: Received grant for data-analysis of international **translation policies**
-  * 194 UN member states who participate in formation of these policies
-  * 2 UN member states who refuse to participate on basis of "anti-Israel bias" (you'll never guess which ones! Hint: Apartheid South Africa, Rhodesia used to provide 3rd and 4th vote in this bloc, but no longer exist)
-* **NY MTA**: Consulted on project studying NYC subway data, until passage of <a href='https://ogs.ny.gov/executive-order-157' target='_blank'>NYS Executive Order 157</a> banning state funding for any person or organization supporting boycott of Israel `¯\_(ツ)_/¯`
-
-## $\implies$ *Comparative* Perspective {.crunch-title .crunch-ul .crunch-li-8}
-
-* We'll study various countries / international orgs and their attempts to tackle data policy issues (with hope that takeaways can be applied to the US someday as well)
-* Important to retain **descriptive/normative distinction**!
-* They'll become harder to distinguish, as we discuss:
-  * What **are** the policies currently in existence?
-  * What are their **drawbacks**?
-  * And, among the latter, which ones **could** be addressed via policy? (requires understanding **processes of policy formation**) Which ones **could not?** (*prisoner's dilemma*)
-
-# The Present-Day Policy Framework (Descriptive): *Notice* and *Consent* {data-stack-name="Notice and Consent"}
 
 ## OECD *Guidelines*, 1980
 
@@ -84,29 +78,95 @@ format:
 * **Collection Limitation Principle**: data may be collected "where appropriate, with the knowledge or **consent** of the data subject." [@oecd_oecd_1980, 14]
 * **Use Limitation Principle**: "Personal data should not be disclosed, made available or otherwise used for purposes other than those specified [at time of collection] except with the **consent** of the data subject" [@oecd_oecd_1980, 15]
 
-## EU Data Protection Directive, 1995 {.title-08 .crunch-title}
+## EU Data Protection Directive, 1995 {.title-08 .crunch-title .text-95}
 
 * Art. 7: Processing allowed when "the data subject **has unambiguously given his [sic] consent**."
 * Art. 8: Use of sensitive data is restricted, except where "the data subject **has given his [sic] explicit consent** to the processing of those data."
-* Art. 26: Prohibits export of personal data to non-Euro countries lacking "adequate data protection", except when "the data subject **has given his [s] consent** unambiguously to the proposed transfer" [@europeanunion_directive_1995]
+* Art. 26: Prohibits export of personal data to non-Euro countries lacking "adequate data protection", except when "the data subject **has given his [sic] consent** unambiguously to the proposed transfer" [@europeanunion_directive_1995]
 * Superceded by **GDPR** in **2018**
 
 ## EU General Data Protection Regulation (GDPR), 2018 {.smaller .crunch-title .title-09}
 
-![](images/gdpr.jpeg){fig-align="center"}
+![](images/gdpr_2026.jpeg){fig-align="center"}
 
-> «Consent is one of the easiest to satisfy because it allows you to do just about anything with the data» (---the text right below this screenshot)
+## Effects of GDPR... {.smaller}
 
-## Reading / Implementing the GDPR
+![From @demirer_data_2024](images/demirer.svg){fig-align="center" width="80%"}
 
-* Main document: 261 pages
-* For SaaS companies: a nice, 34-page <a href='https://www.enterpriseready.io/gdpr/how-to-read-gdpr/' target='_blank'>abridgement</a>
+* Need to be careful about *interpretation!*
+* Could be due to *less tracking*, could also be due to *monopolization*
 
-## Why We Have To Stop the Individual-Policy-Level Descriptive Part Here {.smaller .crunch-title .title-11}
+## Effects of GDPR: Effect on *Who*? {.smaller .crunch-title .title-10 .crunch-p .crunch-quarto-layout-panel .crunch-quarto-layout-cell .crunch-quarto-figure .crunch-blockquote}
 
-*(And await your final policy papers!)*
+:::: {layout="[1,1]"}
+::: {#gdpr-tracking}
 
-![From Piwik.pro, <a href='https://piwik.pro/privacy-laws-around-globe/' target='_blank'>"17 Privacy Laws Around the Globe"</a>](images/piwik.jpeg){fig-align="center"}
+<i class='bi bi-1-circle'></i> Consumers: Reduced tracking
+
+> The GDPR lowered the average number of trackers by about four trackers per publisher
+
+![From @miller_impact_2025](images/miller_2025.svg){fig-align="center" width="100%"}
+
+:::
+::: {#gdpr-firms}
+
+<i class='bi bi-2-circle'></i> Firms: Harsher impact on small firms
+
+> Despite data minimization successes, GDPR had the unintended consequence of increasing relative concentration
+
+![From @frey_privacy_2024](images/frey_2024.jpeg){fig-align="center" width="100%"}
+
+:::
+::::
+
+## Distributional Effects
+
+![From @demirer_data_2024](images/demirer_fines.svg){fig-align="center"}
+
+## Going Beyond Just GDPR... {.smaller .crunch-title .title-11}
+
+![From Piwik.pro, ["17 Privacy Laws Around the Globe"](https://piwik.pro/privacy-laws-around-globe/)](images/piwik.jpeg){fig-align="center"}
+
+## Easy Mode: Policy Diffusion
+
+![From @romanosky_data_2011](images/breach_by_state.jpeg){fig-align="center"}
+
+## (Policy Diffusion Curve!) {.smaller .crunch-quarto-layout-cell}
+
+:::: {layout="[60,5,35]" layout-valign="center"}
+::: {#romanosky-diffusion}
+
+![From @romanosky_data_2011](images/romanosky.svg){fig-align="center" width="120%"}
+
+:::
+::: {#diffusion-eyes}
+
+[👀]{.img-flip style="display: inline-block;"}
+
+:::
+::: {#rogers-diffusion}
+
+![Original (theoretical) "adoption curve", from @rogers_diffusion_2003](images/Diffusion_of_ideas.svg){fig-align="center"}
+
+:::
+::::
+
+## Hard Mode: *Impact* of Policy Diffusion {.smaller .crunch-title .title-12 .crunch-p .table-80}
+
+Result *(Note the **explicitly-identified** independent $\rightarrow$ dependent vars!)*:
+
+| Dep Var: `log(idtheft)` | Basic | Basic + Controls |
+| -:|:-:|:-:|
+| `hasLaw` | –0.050*<br>(0.026) | –0.061***<br>(0.023) |
+| Income per capita | | 0.000<br>(0.000) |
+| Unemployment rate | | 0.003<br>(0.010) |
+| Log(population) | | –0.268<br>(0.343) |
+| State and time fixed effects | Y | Y |
+| Constant | 6.852***<br>(0.014) | 11.248**<br>(5.317) |
+| R-squared | 0.848 | 0.850 |
+| ***: $p < 0.01$ | **: $p < 0.05$ | *: $p < 0.1$ |
+
+: Table 5. Effect of law on identity theft
 
 # (Normative) Issues with Notice and Consent {data-stack-name="Normative Issues"}
 

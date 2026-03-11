@@ -1397,21 +1397,21 @@
     "href": "w08/slides.html#eu-data-protection-directive-1995",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "EU Data Protection Directive, 1995",
-    "text": "EU Data Protection Directive, 1995\n\nArt. 7: Processing allowed when “the data subject has unambiguously given his [sic] consent.”\nArt. 8: Use of sensitive data is restricted, except where “the data subject has given his [sic] explicit consent to the processing of those data.”\nArt. 26: Prohibits export of personal data to non-Euro countries lacking “adequate data protection”, except when “the data subject has given his [s] consent unambiguously to the proposed transfer” (Directive 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data 1995)\nSuperceded by GDPR in 2018"
+    "text": "EU Data Protection Directive, 1995\n\nArt. 7: Processing allowed when “the data subject has unambiguously given his [sic] consent.”\nArt. 8: Use of sensitive data is restricted, except where “the data subject has given his [sic] explicit consent to the processing of those data.”\nArt. 26: Prohibits export of personal data to non-Euro countries lacking “adequate data protection”, except when “the data subject has given his [sic] consent unambiguously to the proposed transfer” (European Union 1995)\nSuperceded by GDPR in 2018"
   },
   {
     "objectID": "w08/slides.html#eu-general-data-protection-regulation-gdpr-2018",
     "href": "w08/slides.html#eu-general-data-protection-regulation-gdpr-2018",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "EU General Data Protection Regulation (GDPR), 2018",
-    "text": "EU General Data Protection Regulation (GDPR), 2018\n\n\n«Consent is one of the easiest to satisfy because it allows you to do just about anything with the data» (—the text right below this screenshot)"
+    "text": "EU General Data Protection Regulation (GDPR), 2018"
   },
   {
     "objectID": "w08/slides.html#reading-implementing-the-gdpr",
     "href": "w08/slides.html#reading-implementing-the-gdpr",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "Reading / Implementing the GDPR",
-    "text": "Reading / Implementing the GDPR\n\nMain document: 261 pages\nFor SaaS companies: a nice, 34-page abridgement"
+    "text": "Reading / Implementing the GDPR\n\nMain document: 261 pages\nFor SaaS companies: a nice, 34-page abridgement\n\n\nFrom Demirer et al. (2024)"
   },
   {
     "objectID": "w08/slides.html#why-we-have-to-stop-the-individual-policy-level-descriptive-part-here",
@@ -1488,7 +1488,7 @@
     "href": "w08/slides.html#references",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "References",
-    "text": "References\n\n\nDirective 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data. 1995. OJ L. Vol. 281. http://data.europa.eu/eli/dir/1995/46/oj/eng.\n\n\nHart, Oliver. 2017. “Incomplete Contracts and Control.” American Economic Review 107 (7): 1731–52. https://doi.org/10.1257/aer.107.7.1731.\n\n\nHohfeld, Wesley Newcomb. 1913. “Some Fundamental Legal Conceptions as Applied in Judicial Reasoning.” Yale Law Journal 23. https://heinonline.org/HOL/Page?handle=hein.journals/ylr23&id=24&div=&collection=.\n\n\nOECD. 1980. OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data. Paris: Organisation for Economic Co-operation and Development. https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.\n\n\nSugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. Big Data Is Not a Monolith. MIT Press. https://books.google.com?id=yp9SDQAAQBAJ.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152."
+    "text": "References\n\n\nDemirer, Mert, Diego J. Jiménez Hernández, Dean Li, and Sida Peng. 2024. “Data, Privacy Laws and Firm Production: Evidence from the GDPR.” Working Paper. Working Paper Series. February 2024. https://doi.org/10.3386/w32146.\n\n\nEuropean Union. 1995. Directive 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data. OJ L. http://data.europa.eu/eli/dir/1995/46/oj/eng.\n\n\nFrey, Carl Benedikt, and Giorgio Presidente. 2024. “Privacy Regulation and Firm Performance: Estimating the GDPR Effect Globally.” Economic Inquiry 62 (3): 1074–89. https://doi.org/10.1111/ecin.13213.\n\n\nHart, Oliver. 2017. “Incomplete Contracts and Control.” American Economic Review 107 (7): 1731–52. https://doi.org/10.1257/aer.107.7.1731.\n\n\nHohfeld, Wesley Newcomb. 1913. “Some Fundamental Legal Conceptions as Applied in Judicial Reasoning.” Yale Law Journal 23. https://heinonline.org/HOL/Page?handle=hein.journals/ylr23&id=24&div=&collection=.\n\n\nMiller, Klaus M., Karlo Lukic, and Bernd Skiera. 2025. “The Impact of the General Data Protection Regulation (GDPR) on Online Tracking.” International Journal of Research in Marketing, March. https://doi.org/10.1016/j.ijresmar.2025.03.002.\n\n\nOECD. 1980. OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data. Paris: Organisation for Economic Co-operation and Development. https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.\n\n\nRogers, Everett M. 2003. Diffusion of Innovations, 5th Edition. Simon and Schuster. https://books.google.com?id=9U1K5LjUOwEC.\n\n\nRomanosky, Sasha, Rahul Telang, and Alessandro Acquisti. 2011. “Do Data Breach Disclosure Laws Reduce Identity Theft?” Journal of Policy Analysis and Management 30 (2): 256–86. https://doi.org/10.1002/pam.20567.\n\n\nSugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. Big Data Is Not a Monolith. MIT Press. https://books.google.com?id=yp9SDQAAQBAJ.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152."
   },
   {
     "objectID": "w08/index.html",
@@ -6748,5 +6748,96 @@
     "title": "Week 13: Standpoint Epistemology, Data Feminism",
     "section": "References",
     "text": "References\n\n\nBeauvoir, Simone de. 1949. The Second Sex. Knopf Doubleday Publishing Group. https://books.google.com?id=OgMbKqJMzxcC.\n\n\nBem, Sandra L, and Daryl J. Bem. 1973. “Does Sex-biased Job Advertising ‘Aid and Abet’ Sex Discrimination?1.” Journal of Applied Social Psychology 3 (1): 6–18. https://doi.org/10.1111/j.1559-1816.1973.tb01290.x.\n\n\nCowan, Ruth Schwartz. 1983. More Work For Mother. Basic Books. https://books.google.com?id=x8HuAAAAMAAJ.\n\n\nLambdin, Jennifer R., Kristen M. Greer, Kari Selby Jibotian, Kelly Rice Wood, and Mykol C. Hamilton. 2003. “The Animal = Male Hypothesis: Children’s and Adults’ Beliefs About the Sex of Non–Sex-Specific Stuffed Animals.” Sex Roles 48 (11): 471–82. https://doi.org/10.1023/A:1023567010708.\n\n\nPerez, Caroline Criado. 2019. Invisible Women: Data Bias in a World Designed for Men. Abrams. https://books.google.com?id=GdmEDwAAQBAJ.\n\n\nSczesny, Sabine, Magda Formanowicz, and Franziska Moser. 2016. “Can Gender-Fair Language Reduce Gender Stereotyping and Discrimination?” Frontiers in Psychology 7 (February). https://doi.org/10.3389/fpsyg.2016.00025.\n\n\nVervecken, Dries, Bettina Hannover, and Ilka Wolter. 2013. “Changing (S)expectations: How Gender Fair Job Descriptions Impact Children’s Perceptions and Interest Regarding Traditionally Male Occupations.” Journal of Vocational Behavior 82 (3): 208–20. https://doi.org/10.1016/j.jvb.2013.01.008."
+  },
+  {
+    "objectID": "w08/slides.html#comparative-perspective",
+    "href": "w08/slides.html#comparative-perspective",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Comparative Perspective",
+    "text": "Comparative Perspective\n\nStudy various states / countries / orgs and their attempts to tackle data policy issues\nImportant to retain descriptive/normative distinction! They’ll become harder to distinguish as we discuss:\nWhat are the regulations currently in existence? (Descriptive)\n\nDo we see a trend? (California Effect vs. Delaware Effect)\n\nWhat are their drawbacks? (Normative)\n\nFundamental problem of contracts\n\nAnd, among the latter, which ones could be addressed via policy? (requires understanding processes of policy formation) Which ones could not? (prisoner’s dilemma)"
+  },
+  {
+    "objectID": "w08/slides.html#regulations-comparative-perspective",
+    "href": "w08/slides.html#regulations-comparative-perspective",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Regulations: Comparative Perspective",
+    "text": "Regulations: Comparative Perspective\n\nNo single, “universal” data privacy law \\(\\implies\\) compare and contrast various country/state/org attempts to tackle data policy issues\nImportant to retain descriptive/normative distinction! They’ll become harder to distinguish as we discuss:\nWhat are the regulations currently in existence? (Descriptive)\n\nDo we see a trend? (California Effect vs. Delaware Effect)\n\nWhat are their drawbacks? (Normative)\n\nFundamental problem of contracts\n\nWhich drawbacks could be addressed “easily” via policy? (requires understanding processes of policy formation)\nWhich ones could not? (Prisoner’s Dilemma!)"
+  },
+  {
+    "objectID": "w08/slides.html#going-beyond-just-gdpr",
+    "href": "w08/slides.html#going-beyond-just-gdpr",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Going Beyond Just GDPR…",
+    "text": "Going Beyond Just GDPR…\n\nFrom Piwik.pro, “17 Privacy Laws Around the Globe”"
+  },
+  {
+    "objectID": "w08/slides.html#section",
+    "href": "w08/slides.html#section",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "",
+    "text": "Table 5. Effect of law on identity theft, Equation (1), Equation (2). (1) (2) (3) (4) (5) Dep. Var.: log(idtheft) Basic Basic \u0003 Controls Lagged Interstate Urban hasLaw \u00020.050* \u00020.061*** \u00020.047** \u00020.005 (0.026) (0.023) (0.019) (0.028) d1PerOld \u00020.020 (0.015) d2PerOld \u00020.037 (0.012) d3PerOld \u00020.023 (0.014) hasLawUrban \u00020.105 (0.027) Has FACTA 0.035 0.034* 0.006 0.036 (0.019) (0.018) (0.011) (0.019) Has credit freeze law 0.036 0.020 0.032 0.039 (0.022) (0.025) (0.018) (0.021) Income per capita \u00020.000 \u00020.000 \u00020.000 \u00020.000 (0.000) (0.000) (0.000) (0.000) Unemployment rate 0.003 0.002 0.006 0.008 (0.010) (0.010) (0.007) (0.010) Log(population) \u00020.268 \u00020.300 \u00020.532 \u00020.092 (0.343) (0.353) (0.278) (0.276) State and time fixed effects Y Y Y Y Y Constant 6.852*** 11.248** 11.718** 12.612*** 8.359 (0.014) (5.317) (5.490) (4.327) (4.327) Observations 800 800 800 800 800 R-squared 0.848 0.850 0.848 0.808 0.859 Number of states 50 50 50 50 50 Note: Robust standard errors in parentheses. ** p \u0004 0.01; ** p \u0004 0.05; * p \u0004 0.1."
+  },
+  {
+    "objectID": "w08/slides.html#difficult-but-not-impossible",
+    "href": "w08/slides.html#difficult-but-not-impossible",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Difficult But Not Impossible!",
+    "text": "Difficult But Not Impossible!\nResult from Romanosky, Telang, and Acquisti (2011):\nTable 5. Effect of law on identity theft, Equation (1), Equation (2). (1) (2) (3) (4) (5) Dep. Var.: log(idtheft) Basic Basic \u0003 Controls Lagged Interstate Urban hasLaw \u00020.050* \u00020.061*** \u00020.047** \u00020.005 (0.026) (0.023) (0.019) (0.028) d1PerOld \u00020.020 (0.015) d2PerOld \u00020.037 (0.012) d3PerOld \u00020.023 (0.014) hasLawUrban \u00020.105 (0.027) Has FACTA 0.035 0.034* 0.006 0.036 (0.019) (0.018) (0.011) (0.019) Has credit freeze law 0.036 0.020 0.032 0.039 (0.022) (0.025) (0.018) (0.021) Income per capita \u00020.000 \u00020.000 \u00020.000 \u00020.000 (0.000) (0.000) (0.000) (0.000) Unemployment rate 0.003 0.002 0.006 0.008 (0.010) (0.010) (0.007) (0.010) Log(population) \u00020.268 \u00020.300 \u00020.532 \u00020.092 (0.343) (0.353) (0.278) (0.276) State and time fixed effects Y Y Y Y Y Constant 6.852*** 11.248** 11.718** 12.612*** 8.359 (0.014) (5.317) (5.490) (4.327) (4.327) Observations 800 800 800 800 800 R-squared 0.848 0.850 0.848 0.808 0.859 Number of states 50 50 50 50 50 Note: Robust standard errors in parentheses. ** p \u0004 0.01; ** p \u0004 0.05; * p \u0004 0.1."
+  },
+  {
+    "objectID": "w08/slides.html#policy-diffusion",
+    "href": "w08/slides.html#policy-diffusion",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Policy Diffusion",
+    "text": "Policy Diffusion\n\nFrom Romanosky, Telang, and Acquisti (2011)"
+  },
+  {
+    "objectID": "w08/slides.html#impact-of-policy-diffusion",
+    "href": "w08/slides.html#impact-of-policy-diffusion",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Impact of Policy Diffusion",
+    "text": "Impact of Policy Diffusion\nResult from Romanosky, Telang, and Acquisti (2011) (Note the explicitly-identified independent \\(\\rightarrow\\) dependent vars!):\nTable 5. Effect of law on identity theft, Equation (1), Equation (2). (1) (2) (3) (4) (5) Dep. Var.: log(idtheft) Basic Basic \u0003 Controls Lagged Interstate Urban hasLaw \u00020.050* \u00020.061*** \u00020.047** \u00020.005 (0.026) (0.023) (0.019) (0.028) d1PerOld \u00020.020 (0.015) d2PerOld \u00020.037 (0.012) d3PerOld \u00020.023 (0.014) hasLawUrban \u00020.105 (0.027) Has FACTA 0.035 0.034* 0.006 0.036 (0.019) (0.018) (0.011) (0.019) Has credit freeze law 0.036 0.020 0.032 0.039 (0.022) (0.025) (0.018) (0.021) Income per capita \u00020.000 \u00020.000 \u00020.000 \u00020.000 (0.000) (0.000) (0.000) (0.000) Unemployment rate 0.003 0.002 0.006 0.008 (0.010) (0.010) (0.007) (0.010) Log(population) \u00020.268 \u00020.300 \u00020.532 \u00020.092 (0.343) (0.353) (0.278) (0.276) State and time fixed effects Y Y Y Y Y Constant 6.852*** 11.248** 11.718** 12.612*** 8.359 (0.014) (5.317) (5.490) (4.327) (4.327) Observations 800 800 800 800 800 R-squared 0.848 0.850 0.848 0.808 0.859 Number of states 50 50 50 50 50 Note: Robust standard errors in parentheses. ** p \u0004 0.01; ** p \u0004 0.05; * p \u0004 0.1."
+  },
+  {
+    "objectID": "w08/slides.html#easy-mode-policy-diffusion",
+    "href": "w08/slides.html#easy-mode-policy-diffusion",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Easy Mode: Policy Diffusion",
+    "text": "Easy Mode: Policy Diffusion\n\nFrom Romanosky, Telang, and Acquisti (2011)"
+  },
+  {
+    "objectID": "w08/slides.html#hard-mode-impact-of-policy-diffusion",
+    "href": "w08/slides.html#hard-mode-impact-of-policy-diffusion",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Hard Mode: Impact of Policy Diffusion",
+    "text": "Hard Mode: Impact of Policy Diffusion\nResult (Note the explicitly-identified independent \\(\\rightarrow\\) dependent vars!):\n\nTable 5. Effect of law on identity theft\n\n\nDep Var: log(idtheft)\nBasic\nBasic + Controls\n\n\n\n\nhasLaw\n–0.050*(0.026)\n–0.061***(0.023)\n\n\nIncome per capita\n\n0.000(0.000)\n\n\nUnemployment rate\n\n0.003(0.010)\n\n\nLog(population)\n\n–0.268(0.343)\n\n\nState and time fixed effects\nY\nY\n\n\nConstant\n6.852***(0.014)\n11.248**(5.317)\n\n\nR-squared\n0.848\n0.850\n\n\n***: \\(p &lt; 0.01\\)\n**: \\(p &lt; 0.05\\)\n*: \\(p &lt; 0.1\\)"
+  },
+  {
+    "objectID": "w08/slides.html#policy-diffusion-curve",
+    "href": "w08/slides.html#policy-diffusion-curve",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "(Policy Diffusion Curve!)",
+    "text": "(Policy Diffusion Curve!)\n\n\n\n\n\n\nFrom Romanosky, Telang, and Acquisti (2011)\n\n\n\n\n👀\n\n\n\n\n\nOriginal (theoretical) “adoption curve”, from Rogers (2003)"
+  },
+  {
+    "objectID": "w08/slides.html#effects-of-gdpr",
+    "href": "w08/slides.html#effects-of-gdpr",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Effects of GDPR…",
+    "text": "Effects of GDPR…\n\nFrom Demirer et al. (2024)\nNeed to be careful about interpretation!\nCould be due to less tracking, could also be due to monopolization"
+  },
+  {
+    "objectID": "w08/slides.html#effects-of-gdpr-effect-on-who",
+    "href": "w08/slides.html#effects-of-gdpr-effect-on-who",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Effects of GDPR: Effect on Who?",
+    "text": "Effects of GDPR: Effect on Who?\n\n\n\n Consumers: Reduced tracking\n\nThe GDPR lowered the average number of trackers by about four trackers per publisher\n\n\n\n\nFrom Miller, Lukic, and Skiera (2025)\n\n\n\n\n Firms: Harsher impact on small firms\n\nDespite data minimization successes, GDPR had the unintended consequence of increasing relative concentration\n\n\n\n\nFrom Frey and Presidente (2024)"
+  },
+  {
+    "objectID": "w08/slides.html#distributional-effects",
+    "href": "w08/slides.html#distributional-effects",
+    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
+    "section": "Distributional Effects",
+    "text": "Distributional Effects\n\nFrom Demirer et al. (2024)"
   }
 ]
