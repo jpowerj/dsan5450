@@ -1,6 +1,7 @@
 ---
 title: "Syllabus"
 bibliography: "_DSAN5450.bib"
+csl: "chicago-17-no-url.csl"
 format:
   html:
     link-external-icon: true
@@ -130,17 +131,36 @@ The following is a rough map of what we will work through together throughout th
     <td><span data-qmd="{{< var w08.date-md >}}"></span></td>
     <td><span data-qmd="[{{< var w08.title >}}](./w08/)"></span></td>
 </tr>
-<tr>
+<tr class='td-nb'>
     <td></td>
     <td>9</td>
     <td><span data-qmd="{{< var w09.date-md >}}"></span></td>
     <td><span data-qmd="[{{< var w09.title >}}](./w09/)"></span></td>
 </tr>
+<tr class='td-nb'>
+  <td class='td-nb'></td>
+  <td colspan="3" align="center" class='td-nb'>Recommended Readings</td>
+</tr>
 <tr>
+  <td></td>
+  <td colspan="3" class='text-85' style='padding-top: 0px;'><div data-qmd="1. On the three basic 'policy structures' we'll use to capture what kinds of policy interventions may be necessary: @bowles_microeconomics_2009, pgs. 23-55
+1. On the *legal* background for data externalities: @maccarthy_new_2015 (Especially pgs. 423-470)
+1. The specific *economic model* of data externalities we'll look at: @acemoglu_too_2022 (only Sections 1-3 and Appendix B-3)"></div></td>
+</tr>
+<tr class='td-nb'>
     <td></td>
     <td>10</td>
     <td><span data-qmd="{{< var w10.date-md >}}"></span></td>
     <td><span data-qmd="[{{< var w10.title >}}](./w10/)"></span></td>
+</tr>
+<tr class='td-nb'>
+  <td class='td-nb'></td>
+  <td colspan="3" align="center" class='td-nb'>Recommended Readings</td>
+</tr>
+<tr>
+  <td></td>
+  <td colspan="3" class='text-85' style='padding-top: 0px;'><div data-qmd="1. On the role of bargaining power in determining policy choice when the Pareto frontier has been reached: @bowles_microeconomics_2009, pgs. 167-183
+1. The paper utilizing ML (Causal Random Forests) to derive *welfare weights* from the algorithmically-determined choices made by Mexico's PROGRESA program: @bjorkegren_what_2025 (Though an earlier version, @bjorkegren_machine_2022, has more details on the ML-based estimation)"></div></td>
 </tr>
 <tr>
     <td></td>

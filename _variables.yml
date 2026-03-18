@@ -40,13 +40,13 @@ w07:
   date-md: "Feb 25"
 w08:
   weeknum: 8
-  title: "Privacy Policies, Incomplete Contracts, and Power"
-  footer: "Privacy Policies, Incomplete Contracts, and Power"
+  title: "Privacy Policies, Privacy Regulation, and You"
+  footer: "Privacy Policies, Privacy Regulation, and You"
   date-md: "Mar 11"
 w09:
   weeknum: 9
-  title: "From Data Ethics to Data Policy"
-  footer: "From Data Ethics to Data Policy"
+  title: "Modeling Data Policies: From Prisoners Dilemmas to Invisible Hand Games"
+  footer: "Modeling Data Policies"
   date-md: "Mar 18"
 w10:
   weeknum: 10
