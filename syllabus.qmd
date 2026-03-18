@@ -132,6 +132,14 @@ The following is a rough map of what we will work through together throughout th
     <td><span data-qmd="[{{< var w08.title >}}](./w08/)"></span></td>
 </tr>
 <tr class='td-nb'>
+  <td class='td-nb'></td>
+  <td colspan="3" align="center" class='td-nb'>Recommended Readings</td>
+</tr>
+<tr>
+  <td></td>
+  <td colspan="3" class='text-85' style='padding-top: 0px;'><div data-qmd="We start this unit by *framing* privacy policies as contracts, as a simplifying assumption. Across judicial systems, however, there are nuances in terms of how different courts might interpret different 'pieces' of a privacy policy as legally-binding. These nuances are covered in incredibly-helpful depth in @hartzog_privacy_2026!"></div></td>
+</tr>
+<tr class='td-nb'>
     <td></td>
     <td>9</td>
     <td><span data-qmd="{{< var w09.date-md >}}"></span></td>
@@ -173,6 +181,14 @@ The following is a rough map of what we will work through together throughout th
     <td>12</td>
     <td><span data-qmd="{{< var w12.date-md >}}"></span></td>
     <td><span data-qmd="{{< var w12.title >}}"></span></td>
+</tr>
+<tr class='td-nb'>
+  <td class='td-nb'></td>
+  <td colspan="3" align="center" class='td-nb'>Recommended Readings</td>
+</tr>
+<tr>
+  <td></td>
+  <td colspan="3" class='text-85' style='padding-top: 0px;'><div data-qmd="As we move into this unit on 'applications' of the frameworks we've learned throughout the course to various social issues, a crucial paper which we'll unpack first and foremost is @hu_what_2023"></div></td>
 </tr>
 <tr>
     <td></td>
