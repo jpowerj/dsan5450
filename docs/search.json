@@ -1442,74 +1442,11 @@
     "text": "Hard Mode: Impact of Policy Diffusion\nResult (Note the explicitly-identified independent \\(\\rightarrow\\) dependent vars!):\n\nTable 5. Effect of law on identity theft\n\n\nDep Var: log(idtheft)\nBasic\nBasic + Controls\n\n\n\n\nhasLaw\n–0.050*(0.026)\n–0.061***(0.023)\n\n\nIncome per capita\n\n0.000(0.000)\n\n\nUnemployment rate\n\n0.003(0.010)\n\n\nLog(population)\n\n–0.268(0.343)\n\n\nState and time fixed effects\nY\nY\n\n\nConstant\n6.852***(0.014)\n11.248**(5.317)\n\n\nR-squared\n0.848\n0.850\n\n\n***: \\(p &lt; 0.01\\)\n**: \\(p &lt; 0.05\\)\n*: \\(p &lt; 0.1\\)"
   },
   {
-    "objectID": "w08/slides.html#the-crux-of-the-normative-issues",
-    "href": "w08/slides.html#the-crux-of-the-normative-issues",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "The Crux of the Normative Issues",
-    "text": "The Crux of the Normative Issues"
-  },
-  {
-    "objectID": "w08/slides.html#does-reading-understanding",
-    "href": "w08/slides.html#does-reading-understanding",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Does Reading = Understanding?",
-    "text": "Does Reading = Understanding?\n\nDoes reading \\(\\implies\\) understanding implications / contingencies / ambiguities?\nNLP could (and should!) be helpful (“making privacy policies machine readable […] would help users match privacy preferences against policies offered by web services”), but mostly just reveals how bad the problem is:\n\n\nFigure 15 from Wagner (2023). “Obfuscatory words” are words like acceptable, significant, mainly, or predominantly, interpretated at the discretion of companies rather than users (see next slide!)"
-  },
-  {
-    "objectID": "w08/slides.html#the-intuitive-problem-of-contracts",
-    "href": "w08/slides.html#the-intuitive-problem-of-contracts",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "The Intuitive Problem of Contracts",
-    "text": "The Intuitive Problem of Contracts\n\n\n\n\nHard to read, harder to understand, possibly rly bad stuff in them, won’t know until you read + understand\nSolution (in theory… in modern liberal market-based democracies): Collective action!\nOption 1 (Exit): Find better platform, use it instead \\(\\Rightarrow\\) company dies (competitive market)\nOption 2 (Voice): Raise a fuss, hoot and holler, make a big stink about it, etc.\n\n\\(\\Rightarrow\\) (2a) Company will change/remove it to avoid embarrassment and/or prevent Option 1 becoming an option\n\\(\\Rightarrow\\) (2b) Government intervention (hypothetical functional government)"
-  },
-  {
-    "objectID": "w08/slides.html#the-fundamental-problem-of-contracts",
-    "href": "w08/slides.html#the-fundamental-problem-of-contracts",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "The Fundamental Problem of Contracts",
-    "text": "The Fundamental Problem of Contracts\n\nJust as we can’t observe two simultaneous worlds \\(W_{X = 0}\\) and \\(W_{X = 1}\\) which differ only in the value of \\(X\\),\nWe can’t foresee all possible contingencies that need to be included in a contract\n\n(We can try, though! Hence use of obfuscatory words to minimize liability)\n\nSo, when a situation arises which is not covered by a clause in the contract, what happens? What principle determines whose interpretation wins out?\n\n(Hint: It is actually literally my legal middle name…)"
-  },
-  {
-    "objectID": "w08/slides.html#power",
-    "href": "w08/slides.html#power",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "…POWER!",
-    "text": "…POWER!\n\nExamples from employment contracts (tooting own horn):\nIn a private, cooperatively-owned, democratic firm, outcome determined by conversation, majority vote, unanimity, etc.\n\nThese technically exist in the US! Employing 2,380 workers, \\(\\frac{2380}{127509000} \\approx 0.0019\\%\\) of US workforce\n\nOtherwise, in a non-unionized private firm (94% of total), the outcome is determined by organizational hierarchy\n\nThis is the case for \\(\\frac{125000000}{127509000} \\approx 98.03\\%\\) of US workforce"
-  },
-  {
-    "objectID": "w08/slides.html#descriptive-and-normative-implications",
-    "href": "w08/slides.html#descriptive-and-normative-implications",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Descriptive and Normative Implications",
-    "text": "Descriptive and Normative Implications\n\nWho has power w.r.t. incompleteness of contracts?\nWho ought to have power w.r.t. incompleteness of contracts?\nResidual rights of control…"
-  },
-  {
-    "objectID": "w08/slides.html#harts-nobel-prize-speech",
-    "href": "w08/slides.html#harts-nobel-prize-speech",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Hart’s Nobel Prize Speech",
-    "text": "Hart’s Nobel Prize Speech\n\nComplete contracts are contracts where everything that can ever happen is written into the contract. Actual contracts aren’t like this, as lawyers know. They’re poorly worded, ambiguous, leave out important things. They’re incomplete.\nA critical question that arises with an incomplete contract is, who has the right to decide about the missing things? We called this right the residual control or decision right. The question is, who has it?\nFurther thought led us to the idea that this is what ownership is. The owner of an asset has the right to decide how the asset is used where the use is not contractually specified (Hart 2017)"
-  },
-  {
-    "objectID": "w08/slides.html#understanding-rights-leftrightarrow-fighting-for-rights",
-    "href": "w08/slides.html#understanding-rights-leftrightarrow-fighting-for-rights",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights",
-    "text": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights\n\n“Hohfeldian” framework (Hohfeld 1913)\nA right \\(r_i\\) granted to person \\(i\\) \\(\\implies\\) A duty/obligation imposed on everyone in the world besides \\(i\\) (to respect \\(r_i\\))\nA duty or obligation \\(d_i\\) imposed on a person \\(i\\) \\(\\implies\\) A right granted to everyone in the world besides \\(i\\) (to… be a potential beneficiary of \\(d_i\\))\n\\(\\implies\\) rough measures of relative power in a contract:\n\n\\[\n\\frac{\\text{rights}_i}{\\text{rights}_j} = \\frac{\\text{obligations}_j}{\\text{rights}_j} = \\frac{\\text{rights}_i}{\\text{obligations}_j} = \\frac{\\text{obligations}_j}{\\text{obligations}_i}\n\\]"
-  },
-  {
-    "objectID": "w08/slides.html#the-adversarial-sisyphusian-problem-of-contracts",
-    "href": "w08/slides.html#the-adversarial-sisyphusian-problem-of-contracts",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "The Adversarial-Sisyphusian Problem of Contracts",
-    "text": "The Adversarial-Sisyphusian Problem of Contracts\n\nRecall Intuitive Problem of Causal Inference: Correlation \\(\\nimplies\\) Causation, but can do a bunch of work to overcome\nAdversarial-Sisyphusian Problem is one level worse 😱\n\nIPCI: You vs. discovered correlation (inanimate)\nASPC: You vs. companies investing resources 💰 into making the problem harder and harder for you\n\ntldr: The moment you (\\(N=1\\), $) finally find and “fix” bad thing, company (\\(N \\gg 1\\), $$$) adds more ambiguity to re-enable / sends your data to \"new\", \"different\" 3rd-party processor 🥸"
-  },
-  {
     "objectID": "w08/slides.html#references",
     "href": "w08/slides.html#references",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "References",
-    "text": "References\n\n\nDemirer, Mert, Diego J. Jiménez Hernández, Dean Li, and Sida Peng. 2024. “Data, Privacy Laws and Firm Production: Evidence from the GDPR.” Working Paper No. 32146. Pre-published February. https://doi.org/10.3386/w32146.\n\n\nDirective 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data, OJ L (1995). http://data.europa.eu/eli/dir/1995/46/oj/eng.\n\n\nFrey, Carl Benedikt, and Giorgio Presidente. 2024. “Privacy Regulation and Firm Performance: Estimating the GDPR Effect Globally.” Economic Inquiry 62 (3): 1074–89. https://doi.org/10.1111/ecin.13213.\n\n\nHart, Oliver. 2017. “Incomplete Contracts and Control.” American Economic Review 107 (7): 1731–52. https://doi.org/10.1257/aer.107.7.1731.\n\n\nHohfeld, Wesley Newcomb. 1913. “Some Fundamental Legal Conceptions as Applied in Judicial Reasoning.” Yale Law Journal 23. https://heinonline.org/HOL/Page?handle=hein.journals/ylr23&id=24&div=&collection=.\n\n\nMiller, Klaus M., Karlo Lukic, and Bernd Skiera. 2025. “The Impact of the General Data Protection Regulation (GDPR) on Online Tracking.” International Journal of Research in Marketing, ahead of print, March 11. https://doi.org/10.1016/j.ijresmar.2025.03.002.\n\n\nOECD. 1980. OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data. Organisation for Economic Co-operation and Development. https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.\n\n\nRogers, Everett M. 2003. Diffusion of Innovations, 5th Edition. Simon and Schuster. https://books.google.com?id=9U1K5LjUOwEC.\n\n\nRomanosky, Sasha, Rahul Telang, and Alessandro Acquisti. 2011. “Do Data Breach Disclosure Laws Reduce Identity Theft?” Journal of Policy Analysis and Management 30 (2): 256–86. https://doi.org/10.1002/pam.20567.\n\n\nSugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. Big Data Is Not a Monolith. MIT Press. https://books.google.com?id=yp9SDQAAQBAJ.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152."
+    "text": "References\n\n\nDemirer, Mert, Diego J. Jiménez Hernández, Dean Li, and Sida Peng. 2024. “Data, Privacy Laws and Firm Production: Evidence from the GDPR.” Working Paper No. 32146. Pre-published February. https://doi.org/10.3386/w32146.\n\n\nDirective 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data, OJ L (1995). http://data.europa.eu/eli/dir/1995/46/oj/eng.\n\n\nFrey, Carl Benedikt, and Giorgio Presidente. 2024. “Privacy Regulation and Firm Performance: Estimating the GDPR Effect Globally.” Economic Inquiry 62 (3): 1074–89. https://doi.org/10.1111/ecin.13213.\n\n\nMiller, Klaus M., Karlo Lukic, and Bernd Skiera. 2025. “The Impact of the General Data Protection Regulation (GDPR) on Online Tracking.” International Journal of Research in Marketing, ahead of print, March 11. https://doi.org/10.1016/j.ijresmar.2025.03.002.\n\n\nOECD. 1980. OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data. Organisation for Economic Co-operation and Development. https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.\n\n\nRogers, Everett M. 2003. Diffusion of Innovations, 5th Edition. Simon and Schuster. https://books.google.com?id=9U1K5LjUOwEC.\n\n\nRomanosky, Sasha, Rahul Telang, and Alessandro Acquisti. 2011. “Do Data Breach Disclosure Laws Reduce Identity Theft?” Journal of Policy Analysis and Management 30 (2): 256–86. https://doi.org/10.1002/pam.20567.\n\n\nSugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. Big Data Is Not a Monolith. MIT Press. https://books.google.com?id=yp9SDQAAQBAJ."
   },
   {
     "objectID": "w08/index.html",
@@ -1632,101 +1569,11 @@
     ]
   },
   {
-    "objectID": "w08/index.html#the-crux-of-the-normative-issues",
-    "href": "w08/index.html#the-crux-of-the-normative-issues",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "The Crux of the Normative Issues",
-    "text": "The Crux of the Normative Issues",
-    "crumbs": [
-      "Week 8: {{< var w08.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w08/index.html#does-reading-understanding",
-    "href": "w08/index.html#does-reading-understanding",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Does Reading = Understanding?",
-    "text": "Does Reading = Understanding?\n\nDoes reading \\(\\implies\\) understanding implications / contingencies / ambiguities?\nNLP could (and should!) be helpful (“making privacy policies machine readable […] would help users match privacy preferences against policies offered by web services”), but mostly just reveals how bad the problem is:\n\n\n\n\nFigure 15 from Wagner (2023). “Obfuscatory words” are words like acceptable, significant, mainly, or predominantly, interpretated at the discretion of companies rather than users (see next slide!)",
-    "crumbs": [
-      "Week 8: {{< var w08.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w08/index.html#the-intuitive-problem-of-contracts",
-    "href": "w08/index.html#the-intuitive-problem-of-contracts",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "The Intuitive Problem of Contracts",
-    "text": "The Intuitive Problem of Contracts\n\n\n\n\nHard to read, harder to understand, possibly rly bad stuff in them, won’t know until you read + understand\nSolution (in theory… in modern liberal market-based democracies): Collective action!\nOption 1 (Exit): Find better platform, use it instead \\(\\Rightarrow\\) company dies (competitive market)\nOption 2 (Voice): Raise a fuss, hoot and holler, make a big stink about it, etc.\n\n\\(\\Rightarrow\\) (2a) Company will change/remove it to avoid embarrassment and/or prevent Option 1 becoming an option\n\\(\\Rightarrow\\) (2b) Government intervention (hypothetical functional government)",
-    "crumbs": [
-      "Week 8: {{< var w08.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w08/index.html#the-fundamental-problem-of-contracts",
-    "href": "w08/index.html#the-fundamental-problem-of-contracts",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "The Fundamental Problem of Contracts",
-    "text": "The Fundamental Problem of Contracts\n\nJust as we can’t observe two simultaneous worlds \\(W_{X = 0}\\) and \\(W_{X = 1}\\) which differ only in the value of \\(X\\),\nWe can’t foresee all possible contingencies that need to be included in a contract\n\n(We can try, though! Hence use of obfuscatory words to minimize liability)\n\nSo, when a situation arises which is not covered by a clause in the contract, what happens? What principle determines whose interpretation wins out?\n\n(Hint: It is actually literally my legal middle name…)",
-    "crumbs": [
-      "Week 8: {{< var w08.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w08/index.html#power",
-    "href": "w08/index.html#power",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "…POWER!",
-    "text": "…POWER!\n\nExamples from employment contracts (tooting own horn):\nIn a private, cooperatively-owned, democratic firm, outcome determined by conversation, majority vote, unanimity, etc.\n\nThese technically exist in the US! Employing 2,380 workers, \\(\\frac{2380}{127509000} \\approx 0.0019\\%\\) of US workforce\n\nOtherwise, in a non-unionized private firm (94% of total), the outcome is determined by organizational hierarchy\n\nThis is the case for \\(\\frac{125000000}{127509000} \\approx 98.03\\%\\) of US workforce",
-    "crumbs": [
-      "Week 8: {{< var w08.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w08/index.html#descriptive-and-normative-implications",
-    "href": "w08/index.html#descriptive-and-normative-implications",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Descriptive and Normative Implications",
-    "text": "Descriptive and Normative Implications\n\nWho has power w.r.t. incompleteness of contracts?\nWho ought to have power w.r.t. incompleteness of contracts?\nResidual rights of control…",
-    "crumbs": [
-      "Week 8: {{< var w08.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w08/index.html#harts-nobel-prize-speech",
-    "href": "w08/index.html#harts-nobel-prize-speech",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Hart’s Nobel Prize Speech",
-    "text": "Hart’s Nobel Prize Speech\n\nComplete contracts are contracts where everything that can ever happen is written into the contract. Actual contracts aren’t like this, as lawyers know. They’re poorly worded, ambiguous, leave out important things. They’re incomplete.\nA critical question that arises with an incomplete contract is, who has the right to decide about the missing things? We called this right the residual control or decision right. The question is, who has it?\nFurther thought led us to the idea that this is what ownership is. The owner of an asset has the right to decide how the asset is used where the use is not contractually specified (Hart 2017)",
-    "crumbs": [
-      "Week 8: {{< var w08.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w08/index.html#understanding-rights-leftrightarrow-fighting-for-rights",
-    "href": "w08/index.html#understanding-rights-leftrightarrow-fighting-for-rights",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights",
-    "text": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights\n\n“Hohfeldian” framework (Hohfeld 1913)\nA right \\(r_i\\) granted to person \\(i\\) \\(\\implies\\) A duty/obligation imposed on everyone in the world besides \\(i\\) (to respect \\(r_i\\))\nA duty or obligation \\(d_i\\) imposed on a person \\(i\\) \\(\\implies\\) A right granted to everyone in the world besides \\(i\\) (to… be a potential beneficiary of \\(d_i\\))\n\\(\\implies\\) rough measures of relative power in a contract:\n\n\\[\n\\frac{\\text{rights}_i}{\\text{rights}_j} = \\frac{\\text{obligations}_j}{\\text{rights}_j} = \\frac{\\text{rights}_i}{\\text{obligations}_j} = \\frac{\\text{obligations}_j}{\\text{obligations}_i}\n\\]",
-    "crumbs": [
-      "Week 8: {{< var w08.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w08/index.html#the-adversarial-sisyphusian-problem-of-contracts",
-    "href": "w08/index.html#the-adversarial-sisyphusian-problem-of-contracts",
-    "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
-    "section": "The Adversarial-Sisyphusian Problem of Contracts",
-    "text": "The Adversarial-Sisyphusian Problem of Contracts\n\nRecall Intuitive Problem of Causal Inference: Correlation \\(\\nimplies\\) Causation, but can do a bunch of work to overcome\nAdversarial-Sisyphusian Problem is one level worse 😱\n\nIPCI: You vs. discovered correlation (inanimate)\nASPC: You vs. companies investing resources 💰 into making the problem harder and harder for you\n\ntldr: The moment you (\\(N=1\\), $) finally find and “fix” bad thing, company (\\(N \\gg 1\\), $$$) adds more ambiguity to re-enable / sends your data to \"new\", \"different\" 3rd-party processor 🥸",
-    "crumbs": [
-      "Week 8: {{< var w08.date-md >}}"
-    ]
-  },
-  {
     "objectID": "w08/index.html#references",
     "href": "w08/index.html#references",
     "title": "Week 8: Privacy Policies, Incomplete Contracts, and Power",
     "section": "References",
-    "text": "References\n\n\nDemirer, Mert, Diego J. Jiménez Hernández, Dean Li, and Sida Peng. 2024. “Data, Privacy Laws and Firm Production: Evidence from the GDPR.” Working Paper No. 32146. Pre-published February. https://doi.org/10.3386/w32146.\n\n\nDirective 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data, OJ L (1995). http://data.europa.eu/eli/dir/1995/46/oj/eng.\n\n\nFrey, Carl Benedikt, and Giorgio Presidente. 2024. “Privacy Regulation and Firm Performance: Estimating the GDPR Effect Globally.” Economic Inquiry 62 (3): 1074–89. https://doi.org/10.1111/ecin.13213.\n\n\nHart, Oliver. 2017. “Incomplete Contracts and Control.” American Economic Review 107 (7): 1731–52. https://doi.org/10.1257/aer.107.7.1731.\n\n\nHohfeld, Wesley Newcomb. 1913. “Some Fundamental Legal Conceptions as Applied in Judicial Reasoning.” Yale Law Journal 23. https://heinonline.org/HOL/Page?handle=hein.journals/ylr23&id=24&div=&collection=.\n\n\nMiller, Klaus M., Karlo Lukic, and Bernd Skiera. 2025. “The Impact of the General Data Protection Regulation (GDPR) on Online Tracking.” International Journal of Research in Marketing, ahead of print, March 11. https://doi.org/10.1016/j.ijresmar.2025.03.002.\n\n\nOECD. 1980. OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data. Organisation for Economic Co-operation and Development. https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.\n\n\nRogers, Everett M. 2003. Diffusion of Innovations, 5th Edition. Simon and Schuster. https://books.google.com?id=9U1K5LjUOwEC.\n\n\nRomanosky, Sasha, Rahul Telang, and Alessandro Acquisti. 2011. “Do Data Breach Disclosure Laws Reduce Identity Theft?” Journal of Policy Analysis and Management 30 (2): 256–86. https://doi.org/10.1002/pam.20567.\n\n\nSugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. Big Data Is Not a Monolith. MIT Press. https://books.google.com?id=yp9SDQAAQBAJ.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.",
+    "text": "References\n\n\nDemirer, Mert, Diego J. Jiménez Hernández, Dean Li, and Sida Peng. 2024. “Data, Privacy Laws and Firm Production: Evidence from the GDPR.” Working Paper No. 32146. Pre-published February. https://doi.org/10.3386/w32146.\n\n\nDirective 95/46/EC of the European Parliament and of the Council of 24 October 1995 on the Protection of Individuals with Regard to the Processing of Personal Data and on the Free Movement of Such Data, OJ L (1995). http://data.europa.eu/eli/dir/1995/46/oj/eng.\n\n\nFrey, Carl Benedikt, and Giorgio Presidente. 2024. “Privacy Regulation and Firm Performance: Estimating the GDPR Effect Globally.” Economic Inquiry 62 (3): 1074–89. https://doi.org/10.1111/ecin.13213.\n\n\nMiller, Klaus M., Karlo Lukic, and Bernd Skiera. 2025. “The Impact of the General Data Protection Regulation (GDPR) on Online Tracking.” International Journal of Research in Marketing, ahead of print, March 11. https://doi.org/10.1016/j.ijresmar.2025.03.002.\n\n\nOECD. 1980. OECD Guidelines on the Protection of Privacy and Transborder Flows of Personal Data. Organisation for Economic Co-operation and Development. https://www.oecd-ilibrary.org/science-and-technology/oecd-guidelines-on-the-protection-of-privacy-and-transborder-flows-of-personal-data_9789264196391-en.\n\n\nRogers, Everett M. 2003. Diffusion of Innovations, 5th Edition. Simon and Schuster. https://books.google.com?id=9U1K5LjUOwEC.\n\n\nRomanosky, Sasha, Rahul Telang, and Alessandro Acquisti. 2011. “Do Data Breach Disclosure Laws Reduce Identity Theft?” Journal of Policy Analysis and Management 30 (2): 256–86. https://doi.org/10.1002/pam.20567.\n\n\nSugimoto, Cassidy R., Hamid R. Ekbia, and Michael Mattioli. 2016. Big Data Is Not a Monolith. MIT Press. https://books.google.com?id=yp9SDQAAQBAJ.",
     "crumbs": [
       "Week 8: {{< var w08.date-md >}}"
     ]
@@ -1736,7 +1583,7 @@
     "href": "index.html",
     "title": "DSAN 5450: Data Ethics and Policy",
     "section": "",
-    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2026 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 14\n\n\n\n\n\n\nWeek 2: Machine Learning, Training Data, and Biases\n\n\nJanuary 21\n\n\n\n\n\n\nWeek 3: Ethical Frameworks, Rights, and Discrimination\n\n\nJanuary 28\n\n\n\n\n\n\nWeek 4: Rights, Policies, and Fairness in AI\n\n\nFebruary 4\n\n\n\n\n\n\nWeek 5: Context-Free Fairness\n\n\nFebruary 11\n\n\n\n\n\n\nWeek 6: Context-Sensitive Fairness\n\n\nFebruary 18\n\n\n\n\n\n\nWeek 7: In-Class Midterm\n\n\nFebruary 25\n\n\n\n\n\n\nWeek 8: Privacy Policies, Incomplete Contracts, and Power\n\n\nMarch 11\n\n\n\n\n\n\nWeek 9: From Data Ethics to Data Policy\n\n\nMarch 18\n\n\n\n\n\n\nWeek 10: Welfare Economics and Policy Evaluation\n\n\nMarch 25\n\n\n\n\n\n\nWeek 11: Fear and Loathing on the Pareto Frontier\n\n\nApril 1\n\n\n\n\n\n\nWeek 12: Final Projects, Causality and Racecraft\n\n\nApril 8\n\n\n\n\n\n\nWeek 13: Standpoint Epistemology, Data Feminism\n\n\nApril 15\n\n\n\n\n\n\nWeek 14: In-Class Office Hours\n\n\nApril 22\n\n\n\n\n\n\nNo matching items\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits.",
+    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2026 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 14\n\n\n\n\n\n\nWeek 2: Machine Learning, Training Data, and Biases\n\n\nJanuary 21\n\n\n\n\n\n\nWeek 3: Ethical Frameworks, Rights, and Discrimination\n\n\nJanuary 28\n\n\n\n\n\n\nWeek 4: Rights, Policies, and Fairness in AI\n\n\nFebruary 4\n\n\n\n\n\n\nWeek 5: Context-Free Fairness\n\n\nFebruary 11\n\n\n\n\n\n\nWeek 6: Context-Sensitive Fairness\n\n\nFebruary 18\n\n\n\n\n\n\nWeek 7: In-Class Midterm\n\n\nFebruary 25\n\n\n\n\n\n\nWeek 8: Privacy Policies, Incomplete Contracts, and Power\n\n\nMarch 11\n\n\n\n\n\n\nWeek 9: Modeling Data Policies\n\n\nMarch 18\n\n\n\n\n\n\nWeek 10: Welfare Economics and Policy Evaluation\n\n\nMarch 25\n\n\n\n\n\n\nWeek 11: Fear and Loathing on the Pareto Frontier\n\n\nApril 1\n\n\n\n\n\n\nWeek 12: Final Projects, Causality and Racecraft\n\n\nApril 8\n\n\n\n\n\n\nWeek 13: Standpoint Epistemology, Data Feminism\n\n\nApril 15\n\n\n\n\n\n\nWeek 14: In-Class Office Hours\n\n\nApril 22\n\n\n\n\n\n\nNo matching items\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits.",
     "crumbs": [
       "<i class='bi bi-house pe-1'></i> Home"
     ]
@@ -5332,16 +5179,6 @@
     ]
   },
   {
-    "objectID": "w10/index.html#thucydides-and-the-kindly-slavemaster",
-    "href": "w10/index.html#thucydides-and-the-kindly-slavemaster",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Thucydides and the Kindly Slavemaster",
-    "text": "Thucydides and the Kindly Slavemaster\n\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (thucydides2013war? BC) (Think of necessary vs. sufficient conditions!)\n\n\n\n\n\nliberalism\nrepublicanism\n\n\n\n\n\nDefinition of Injustice\nStrong do bad things (Berlin 1959)\nStrong can do bad things (Skinner 1998; Pettit 1997; Lovett 2022)\n\n\n\nThucydides Question\nStrong do as they please \\(\\overset{?}{\\Rightarrow}\\) Strong do bad things\nStrong do as they please \\(\\overset{?}{\\Rightarrow}\\) Strong can do bad things\n\n\n\nAnswer\nNo, not necessarily!\nYes, necessarily!\n\n\n\nFrederick Douglass\nMy feelings [towards slave masters] were not the result of any marked cruelty in the treatment I received…\n…they sprung from the consideration of my being a slave in the first place. It was slavery—not its mere incidents—that I despised. (Douglass 1855)\n\n\n\nA Doll’s House\nOur home is nothing but a playroom. I have been your doll-wife, just as at home I was papa’s doll-child; and here the children have been my dolls. (Ibsen 1879)\n\n\n\n\n\n(Plz notice the lowercase “l”, lowercase “r”!)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
     "objectID": "w10/index.html#relevance-for-this-week-where-we-left-off",
     "href": "w10/index.html#relevance-for-this-week-where-we-left-off",
     "title": "Week 10: Welfare Economics and Policy Evaluation",
@@ -5352,141 +5189,11 @@
     ]
   },
   {
-    "objectID": "w10/index.html#prisoners-dilemma-fishers-dilemma",
-    "href": "w10/index.html#prisoners-dilemma-fishers-dilemma",
+    "objectID": "w10/index.html#thucydides-and-the-kindly-slavemaster",
+    "href": "w10/index.html#thucydides-and-the-kindly-slavemaster",
     "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Prisoners’ Dilemma (Fishers’ Dilemma)",
-    "text": "Prisoners’ Dilemma (Fishers’ Dilemma)\n\nSingle, unique Nash equilibrium, and it’s Pareto inferior\n\n\n\n\nThe Game\n\n\n\n\n\n\n\\(j\\)\n\n\n\n\nFish 6 Hours\nFish 8 Hours\n\n\n\\(i\\)\nFish 6 Hours\n\\(1.0,1.0\\)\n\\(0.0,\\boxed{1.2}\\)\n\n\nFish 8 Hours\n\\(\\boxed{1.2}, 0.0\\)\n\\(\\boxed{0.4},\\boxed{0.4}\\)\n\n\n\n\nBoxes = Best Responses:\n\\(\\text{BR}_i(6\\textrm{ hr}) = 8\\textrm{ hr}\\), \\(\\text{BR}_i(8\\textrm{ hr}) = 8\\textrm{ hr}\\)\n\\(\\text{BR}_j(6\\textrm{ hr}) = 8\\textrm{ hr}\\), \\(\\text{BR}_j(8\\textrm{ hr}) = 8\\textrm{ hr}\\)\n\n\n\nPareto Dominance",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#operationalizing-power",
-    "href": "w10/index.html#operationalizing-power",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Operationalizing Power",
-    "text": "Operationalizing Power\n\nEqually good outside options \\(\\implies\\) can contract to Pareto-optimal point \\(o^P\\)\n\\(i\\) has better outside options \\(\\implies\\) can make take it or leave it offer to \\(j\\):\n\n“You (\\(j\\)) fish 6 hrs all the time. I (\\(i\\)) fish 6 hrs 41% of time, 8 hrs otherwise”\n\n\n\n\n\nEver so slightly better for \\(j\\) \\(\\implies\\) \\(j\\) accepts (Behavioral econ: \\(j\\) accepts if 41% meets subjective fairness threshold; observed across many many cultures!)\nLater / next week: observe policy with outcome \\(o^{C}_{i \\rightarrow j} \\iff\\) policy values \\(i\\)’s welfare more than \\(j\\)’s welfare (inferred social welfare weights \\(\\omega_i &gt; \\omega_j\\))",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#policy-interventions-fish-dilemmas-mapsto-assurance-games",
-    "href": "w10/index.html#policy-interventions-fish-dilemmas-mapsto-assurance-games",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Policy Interventions: Fish Dilemmas \\(\\mapsto\\) Assurance Games",
-    "text": "Policy Interventions: Fish Dilemmas \\(\\mapsto\\) Assurance Games\n\nNotice: To “escape” prisoners’ dilemma, we had to literally change the rules of the game (permanent intervention)\nFishers’ Dilemma:\n\nNo institutions: \\(a_i, a_j \\in \\{6\\text{ hr}, 8\\text{ hr}\\}\\)\nInstitutions (courts or social norms): \\(\\{\\text{Accept}, \\text{Reject}\\}\\)\n\nDriving “game”:\n\nNo institutions: \\(a_i, a_j \\in \\{\\text{Stop}, \\text{Drive}\\}\\)\nInstitutions (stoplights installed by govt or community agreement): \\(a_i, a_j \\in \\{\\text{Obey Light}, \\text{Run Light}\\}\\)\n\nWithin assurance games, only need to nudge (one-time intervention) \\(\\leadsto\\) new equilibrium (self-enforcing by definition)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#assurance-game",
-    "href": "w10/index.html#assurance-game",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Assurance Game",
-    "text": "Assurance Game\n\nMultiple equilibria; the particular outcome we observe is a function of history (path dependency)\nDrive-on-left vs. drive-on-right: Assurance game where neither equilibrium Pareto-dominates other option\n\nSwedish Dagen H: Nudge from \\(a^*_{\\textsf{L}} = (\\textsf{L},\\textsf{L})\\) to \\(a^*_{\\textsf{R}} = (\\textsf{R},\\textsf{R})\\)\nEither eq is self-reinforcing! (Unless you want to crash out)\n\n\n\n\n\nQWERTY vs. DVORAK / Palanpur farmers: Assurance game where observed equilibrium Pareto inferior\n\n\n\n\n\n\n\n\n\\(j\\)\n\n\n\n\nEarly\nLate\n\n\n\\(i\\)\nEarly\n\\(\\boxed{4},\\boxed{4}\\)\n\\(0, \\, 3\\)\n\n\nLate\n\\(3, \\, 0\\)\n\\(\\boxed{2},\\boxed{2}\\)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#invisible-hand-game",
-    "href": "w10/index.html#invisible-hand-game",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Invisible Hand Game",
-    "text": "Invisible Hand Game\n\nSingle, unique Nash equilibrium, and it’s Pareto efficient\n\\(\\Rightarrow\\) Acting in self interest \\(\\leadsto\\) best possible outcome\n\n\n\n\nIt is not from the benevolence of the butcher, the brewer, or the baker that we expect our meal, but from their regard to their own interest (smith1776wealth?)\n\n\n\n\n\n\n\n\\(j\\)\n\n\n\n\nCorn\nTomato\n\n\n\\(i\\)\nCorn\n\\(2, \\, 4\\)\n\\(4, \\, 3\\)\n\n\nTomato\n\\(\\boxed{5}, \\boxed{5}\\)\n\\(3, \\, 2\\)\n\n\n\n\n\n\nWealth of Nations SPOILER: The wealth comes from division of laborand also dumbleydore dies. semperus snake too. and even poor ron the weasel, who never deserved such a fate\n\n\nAn economic transaction is a solved political problem. Economics has gained the title “Queen of the Social Sciences” by choosing solved political problems as its domain. (lerner_1972_economics?)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#first-fundamental-theorem-of-welfare-economics",
-    "href": "w10/index.html#first-fundamental-theorem-of-welfare-economics",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "First Fundamental Theorem of Welfare Economics",
-    "text": "First Fundamental Theorem of Welfare Economics\nThm: [Antecedents (Coase Conditions)] \\(\\Rightarrow\\) markets produce Pareto-optimal outcomes\n\nEven Jeff finds proof (and corollaries) compelling / convincing / empirically-supported\n\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN 5300) built on what to do when GM Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, market-socialist nationalization",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#part-2-suddenly-collides-with-part-1-property-rights",
-    "href": "w10/index.html#part-2-suddenly-collides-with-part-1-property-rights",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Part 2 Suddenly Collides with Part 1: Property Rights",
-    "text": "Part 2 Suddenly Collides with Part 1: Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#externalities-leftrightarrow-costs-of-actions-paid-by-someone-else",
-    "href": "w10/index.html#externalities-leftrightarrow-costs-of-actions-paid-by-someone-else",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Externalities \\(\\Leftrightarrow\\) Costs of Actions Paid by Someone Else!",
-    "text": "Externalities \\(\\Leftrightarrow\\) Costs of Actions Paid by Someone Else!\n\nFirm \\(S\\) produces amount of steel \\(s\\), pollution \\(x\\)\nFirm \\(F\\) “produces” amount of fish \\(f\\)\n\\(S\\) optimizes\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,x}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#functionals",
-    "href": "w10/index.html#functionals",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Functionals?",
-    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#we-live-in-a-society-part-2",
-    "href": "w10/index.html#we-live-in-a-society-part-2",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "We Live In A Society, Part 2",
-    "text": "We Live In A Society, Part 2\n\nUtilitarianism, Kantian Ethics, and Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\n\\(W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\). \\(\\omega_i\\) is \\(i\\)’s welfare weight\n(Preview) Decomposition: evaluate policies by estimating marginal utility \\(u'_i(x)\\) compared to \\(\\omega_i\\))",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#alternative-swf-specifications",
-    "href": "w10/index.html#alternative-swf-specifications",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Alternative SWF Specifications",
-    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#utilitarian-swf",
-    "href": "w10/index.html#utilitarian-swf",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Utilitarian SWF",
-    "text": "Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -\\infty\\)?",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#the-hard-problem-of-utilitarian-swf",
-    "href": "w10/index.html#the-hard-problem-of-utilitarian-swf",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "The Hard Problem of Utilitarian SWF",
-    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom?",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#we-can-finally-understand-this-image-from-week-1",
-    "href": "w10/index.html#we-can-finally-understand-this-image-from-week-1",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "We Can Finally Understand This Image from Week 1!",
-    "text": "We Can Finally Understand This Image from Week 1!",
+    "section": "Thucydides and the Kindly Slavemaster",
+    "text": "Thucydides and the Kindly Slavemaster\n\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (thucydides2013war? BC) (Think of necessary vs. sufficient conditions!)\n\n\n\n\n\nliberalism\nrepublicanism\n\n\n\n\n\nDefinition of Injustice\nStrong do bad things (Berlin 1959)\nStrong can do bad things (Skinner 1998; Pettit 1997; Lovett 2022)\n\n\n\nThucydides Question\nStrong do as they please \\(\\overset{?}{\\Rightarrow}\\) Strong do bad things\nStrong do as they please \\(\\overset{?}{\\Rightarrow}\\) Strong can do bad things\n\n\n\nAnswer\nNo, not necessarily!\nYes, necessarily!\n\n\n\nFrederick Douglass\nMy feelings [towards slave masters] were not the result of any marked cruelty in the treatment I received…\n…they sprung from the consideration of my being a slave in the first place. It was slavery—not its mere incidents—that I despised. (Douglass 1855)\n\n\n\nA Doll’s House\nOur home is nothing but a playroom. I have been your doll-wife, just as at home I was papa’s doll-child; and here the children have been my dolls. (Ibsen 1879)\n\n\n\n\n\n(Plz notice the lowercase “l”, lowercase “r”!)",
     "crumbs": [
       "Week 10: {{< var w10.date-md >}}"
     ]
@@ -5496,17 +5203,10 @@
     "href": "w10/index.html#references",
     "title": "Week 10: Welfare Economics and Policy Evaluation",
     "section": "References",
-    "text": "References\n\n\nBerlin, Isaiah. 1959. Two Concepts of Liberty: An Inaugural Lecture Delivered Before the University of Oxford on 31 October 1958. Clarendon Press. https://books.google.com?id=cLaGAAAAMAAJ.\n\n\nDouglass, Frederick. 1855. My Bondage and My Freedom. Yale University Press. https://books.google.com?id=G8t0AgAAQBAJ.\n\n\nIbsen, Henrik. 1879. The Doll’s House: A Play. D. Appleton & Company. https://books.google.com?id=afgNAAAAYAAJ.\n\n\nJacobs, Jeff, and Suresh Naidu. 2026. “Operationalizing Freedom as Non-Domination in the Labor Market.” In Perspectives on Labor Republicanism, edited by Philip Pettit. Cambridge University Press.\n\n\nLovett, Frank. 2022. The Well-Ordered Republic. Oxford University Press. https://books.google.com?id=CdZ2EAAAQBAJ.\n\n\nPettit, Philip. 1997. Republicanism: A Theory of Freedom and Government. Oxford University Press.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSkinner, Quentin. 1998. Liberty Before Liberalism. Cambridge University Press. https://books.google.com?id=w1VyEwGpKGEC.",
+    "text": "References\n\n\nBerlin, Isaiah. 1959. Two Concepts of Liberty: An Inaugural Lecture Delivered Before the University of Oxford on 31 October 1958. Clarendon Press. https://books.google.com?id=cLaGAAAAMAAJ.\n\n\nDouglass, Frederick. 1855. My Bondage and My Freedom. Yale University Press. https://books.google.com?id=G8t0AgAAQBAJ.\n\n\nIbsen, Henrik. 1879. The Doll’s House: A Play. D. Appleton & Company. https://books.google.com?id=afgNAAAAYAAJ.\n\n\nJacobs, Jeff, and Suresh Naidu. 2026. “Operationalizing Freedom as Non-Domination in the Labor Market.” In Perspectives on Labor Republicanism, edited by Philip Pettit. Cambridge University Press.\n\n\nLovett, Frank. 2022. The Well-Ordered Republic. Oxford University Press. https://books.google.com?id=CdZ2EAAAQBAJ.\n\n\nPettit, Philip. 1997. Republicanism: A Theory of Freedom and Government. Oxford University Press.\n\n\nSkinner, Quentin. 1998. Liberty Before Liberalism. Cambridge University Press. https://books.google.com?id=w1VyEwGpKGEC.",
     "crumbs": [
       "Week 10: {{< var w10.date-md >}}"
     ]
-  },
-  {
-    "objectID": "w10/slides.html#thucydides-and-the-kindly-slavemaster",
-    "href": "w10/slides.html#thucydides-and-the-kindly-slavemaster",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Thucydides and the Kindly Slavemaster",
-    "text": "Thucydides and the Kindly Slavemaster\n\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (thucydides2013war? BC) (Think of necessary vs. sufficient conditions!)\n\n\n\n\n\nliberalism\nrepublicanism\n\n\n\n\n\nDefinition of Injustice\nStrong do bad things (Berlin 1959)\nStrong can do bad things (Skinner 1998; Pettit 1997; Lovett 2022)\n\n\n\nThucydides Question\nStrong do as they please \\(\\overset{?}{\\Rightarrow}\\) Strong do bad things\nStrong do as they please \\(\\overset{?}{\\Rightarrow}\\) Strong can do bad things\n\n\n\nAnswer\nNo, not necessarily!\nYes, necessarily!\n\n\n\nFrederick Douglass\nMy feelings [towards slave masters] were not the result of any marked cruelty in the treatment I received…\n…they sprung from the consideration of my being a slave in the first place. It was slavery—not its mere incidents—that I despised. (Douglass 1855)\n\n\n\nA Doll’s House\nOur home is nothing but a playroom. I have been your doll-wife, just as at home I was papa’s doll-child; and here the children have been my dolls. (Ibsen 1879)\n\n\n\n\n\n(Plz notice the lowercase “l”, lowercase “r”!)"
   },
   {
     "objectID": "w10/slides.html#relevance-for-this-week-where-we-left-off",
@@ -5516,109 +5216,18 @@
     "text": "Relevance for This Week (Where We Left Off)\n\nCan we develop policy interventions that equalize power, so that world looks like normative ethics from W03-W08 (“what is right”)?\n(Hidden antecedent: non-Nietzschean ethical framework e.g. Utilitarianism/Kant)\nPoint of prev slide: From now til W14, keep in mind how definition of power (and hence “effectiveness” of policy intervention) depends on antecedent\n\nliberal definition \\(\\Rightarrow\\) focus on equilibria (no injustice if bad thing doesn’t happen in equilibrium)\nrepublican definition \\(\\Rightarrow\\) also take off-equilibrium possibilities into account (no injustice if bad thing doesn’t happen in equilibrium and doesn’t happen if one player deviates “on a whim”) (Jacobs and Naidu 2026 😉)\n\nPrisoners’ Dilemma 😫 \\(\\prec\\) Assurance Game 🤨 \\(\\prec\\) Invisible Hand Game 🥳"
   },
   {
-    "objectID": "w10/slides.html#prisoners-dilemma-fishers-dilemma",
-    "href": "w10/slides.html#prisoners-dilemma-fishers-dilemma",
+    "objectID": "w10/slides.html#thucydides-and-the-kindly-slavemaster",
+    "href": "w10/slides.html#thucydides-and-the-kindly-slavemaster",
     "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Prisoners’ Dilemma (Fishers’ Dilemma)",
-    "text": "Prisoners’ Dilemma (Fishers’ Dilemma)\n\nSingle, unique Nash equilibrium, and it’s Pareto inferior\n\n\n\n\nThe Game\n\n\n\n\n\n\n\\(j\\)\n\n\n\n\nFish 6 Hours\nFish 8 Hours\n\n\n\\(i\\)\nFish 6 Hours\n\\(1.0,1.0\\)\n\\(0.0,\\boxed{1.2}\\)\n\n\nFish 8 Hours\n\\(\\boxed{1.2}, 0.0\\)\n\\(\\boxed{0.4},\\boxed{0.4}\\)\n\n\n\n\nBoxes = Best Responses:\n\\(\\text{BR}_i(6\\textrm{ hr}) = 8\\textrm{ hr}\\), \\(\\text{BR}_i(8\\textrm{ hr}) = 8\\textrm{ hr}\\)\n\\(\\text{BR}_j(6\\textrm{ hr}) = 8\\textrm{ hr}\\), \\(\\text{BR}_j(8\\textrm{ hr}) = 8\\textrm{ hr}\\)\n\n\n\nPareto Dominance"
-  },
-  {
-    "objectID": "w10/slides.html#operationalizing-power",
-    "href": "w10/slides.html#operationalizing-power",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Operationalizing Power",
-    "text": "Operationalizing Power\n\nEqually good outside options \\(\\implies\\) can contract to Pareto-optimal point \\(o^P\\)\n\\(i\\) has better outside options \\(\\implies\\) can make take it or leave it offer to \\(j\\):\n\n“You (\\(j\\)) fish 6 hrs all the time. I (\\(i\\)) fish 6 hrs 41% of time, 8 hrs otherwise”\n\n\n\n\n\nEver so slightly better for \\(j\\) \\(\\implies\\) \\(j\\) accepts (Behavioral econ: \\(j\\) accepts if 41% meets subjective fairness threshold; observed across many many cultures!)\nLater / next week: observe policy with outcome \\(o^{C}_{i \\rightarrow j} \\iff\\) policy values \\(i\\)’s welfare more than \\(j\\)’s welfare (inferred social welfare weights \\(\\omega_i &gt; \\omega_j\\))"
-  },
-  {
-    "objectID": "w10/slides.html#policy-interventions-fish-dilemmas-mapsto-assurance-games",
-    "href": "w10/slides.html#policy-interventions-fish-dilemmas-mapsto-assurance-games",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Policy Interventions: Fish Dilemmas \\(\\mapsto\\) Assurance Games",
-    "text": "Policy Interventions: Fish Dilemmas \\(\\mapsto\\) Assurance Games\n\nNotice: To “escape” prisoners’ dilemma, we had to literally change the rules of the game (permanent intervention)\nFishers’ Dilemma:\n\nNo institutions: \\(a_i, a_j \\in \\{6\\text{ hr}, 8\\text{ hr}\\}\\)\nInstitutions (courts or social norms): \\(\\{\\text{Accept}, \\text{Reject}\\}\\)\n\nDriving “game”:\n\nNo institutions: \\(a_i, a_j \\in \\{\\text{Stop}, \\text{Drive}\\}\\)\nInstitutions (stoplights installed by govt or community agreement): \\(a_i, a_j \\in \\{\\text{Obey Light}, \\text{Run Light}\\}\\)\n\nWithin assurance games, only need to nudge (one-time intervention) \\(\\leadsto\\) new equilibrium (self-enforcing by definition)"
-  },
-  {
-    "objectID": "w10/slides.html#assurance-game",
-    "href": "w10/slides.html#assurance-game",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Assurance Game",
-    "text": "Assurance Game\n\nMultiple equilibria; the particular outcome we observe is a function of history (path dependency)\nDrive-on-left vs. drive-on-right: Assurance game where neither equilibrium Pareto-dominates other option\n\nSwedish Dagen H: Nudge from \\(a^*_{\\textsf{L}} = (\\textsf{L},\\textsf{L})\\) to \\(a^*_{\\textsf{R}} = (\\textsf{R},\\textsf{R})\\)\nEither eq is self-reinforcing! (Unless you want to crash out)\n\n\n\n\n\nQWERTY vs. DVORAK / Palanpur farmers: Assurance game where observed equilibrium Pareto inferior\n\n\n\n\n\n\n\n\n\\(j\\)\n\n\n\n\nEarly\nLate\n\n\n\\(i\\)\nEarly\n\\(\\boxed{4},\\boxed{4}\\)\n\\(0, \\, 3\\)\n\n\nLate\n\\(3, \\, 0\\)\n\\(\\boxed{2},\\boxed{2}\\)"
-  },
-  {
-    "objectID": "w10/slides.html#invisible-hand-game",
-    "href": "w10/slides.html#invisible-hand-game",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Invisible Hand Game",
-    "text": "Invisible Hand Game\n\nSingle, unique Nash equilibrium, and it’s Pareto efficient\n\\(\\Rightarrow\\) Acting in self interest \\(\\leadsto\\) best possible outcome\n\n\n\n\nIt is not from the benevolence of the butcher, the brewer, or the baker that we expect our meal, but from their regard to their own interest (smith1776wealth?)\n\n\n\n\n\n\n\n\\(j\\)\n\n\n\n\nCorn\nTomato\n\n\n\\(i\\)\nCorn\n\\(2, \\, 4\\)\n\\(4, \\, 3\\)\n\n\nTomato\n\\(\\boxed{5}, \\boxed{5}\\)\n\\(3, \\, 2\\)\n\n\n\n\n\nWealth of Nations SPOILER: The wealth comes from division of laborand also dumbleydore dies. semperus snake too. and even poor ron the weasel, who never deserved such a fate\n\n\nAn economic transaction is a solved political problem. Economics has gained the title “Queen of the Social Sciences” by choosing solved political problems as its domain. (lerner_1972_economics?)"
-  },
-  {
-    "objectID": "w10/slides.html#first-fundamental-theorem-of-welfare-economics",
-    "href": "w10/slides.html#first-fundamental-theorem-of-welfare-economics",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "First Fundamental Theorem of Welfare Economics",
-    "text": "First Fundamental Theorem of Welfare Economics\nThm: [Antecedents (Coase Conditions)] \\(\\Rightarrow\\) markets produce Pareto-optimal outcomes\n\nEven Jeff finds proof (and corollaries) compelling / convincing / empirically-supported\n\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN 5300) built on what to do when GM Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, market-socialist nationalization"
-  },
-  {
-    "objectID": "w10/slides.html#part-2-suddenly-collides-with-part-1-property-rights",
-    "href": "w10/slides.html#part-2-suddenly-collides-with-part-1-property-rights",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Part 2 Suddenly Collides with Part 1: Property Rights",
-    "text": "Part 2 Suddenly Collides with Part 1: Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air"
-  },
-  {
-    "objectID": "w10/slides.html#externalities-leftrightarrow-costs-of-actions-paid-by-someone-else",
-    "href": "w10/slides.html#externalities-leftrightarrow-costs-of-actions-paid-by-someone-else",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Externalities \\(\\Leftrightarrow\\) Costs of Actions Paid by Someone Else!",
-    "text": "Externalities \\(\\Leftrightarrow\\) Costs of Actions Paid by Someone Else!\n\nFirm \\(S\\) produces amount of steel \\(s\\), pollution \\(x\\)\nFirm \\(F\\) “produces” amount of fish \\(f\\)\n\\(S\\) optimizes\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,x}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)"
-  },
-  {
-    "objectID": "w10/slides.html#functionals",
-    "href": "w10/slides.html#functionals",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Functionals?",
-    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)"
-  },
-  {
-    "objectID": "w10/slides.html#we-live-in-a-society-part-2",
-    "href": "w10/slides.html#we-live-in-a-society-part-2",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "We Live In A Society, Part 2",
-    "text": "We Live In A Society, Part 2\n\nUtilitarianism, Kantian Ethics, and Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\n\\(W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\). \\(\\omega_i\\) is \\(i\\)’s welfare weight\n(Preview) Decomposition: evaluate policies by estimating marginal utility \\(u'_i(x)\\) compared to \\(\\omega_i\\))"
-  },
-  {
-    "objectID": "w10/slides.html#alternative-swf-specifications",
-    "href": "w10/slides.html#alternative-swf-specifications",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Alternative SWF Specifications",
-    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)"
-  },
-  {
-    "objectID": "w10/slides.html#utilitarian-swf",
-    "href": "w10/slides.html#utilitarian-swf",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Utilitarian SWF",
-    "text": "Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -\\infty\\)?"
-  },
-  {
-    "objectID": "w10/slides.html#the-hard-problem-of-utilitarian-swf",
-    "href": "w10/slides.html#the-hard-problem-of-utilitarian-swf",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "The Hard Problem of Utilitarian SWF",
-    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom?"
-  },
-  {
-    "objectID": "w10/slides.html#we-can-finally-understand-this-image-from-week-1",
-    "href": "w10/slides.html#we-can-finally-understand-this-image-from-week-1",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "We Can Finally Understand This Image from Week 1!",
-    "text": "We Can Finally Understand This Image from Week 1!"
+    "section": "Thucydides and the Kindly Slavemaster",
+    "text": "Thucydides and the Kindly Slavemaster\n\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (thucydides2013war? BC) (Think of necessary vs. sufficient conditions!)\n\n\n\n\n\nliberalism\nrepublicanism\n\n\n\n\n\nDefinition of Injustice\nStrong do bad things (Berlin 1959)\nStrong can do bad things (Skinner 1998; Pettit 1997; Lovett 2022)\n\n\n\nThucydides Question\nStrong do as they please \\(\\overset{?}{\\Rightarrow}\\) Strong do bad things\nStrong do as they please \\(\\overset{?}{\\Rightarrow}\\) Strong can do bad things\n\n\n\nAnswer\nNo, not necessarily!\nYes, necessarily!\n\n\n\nFrederick Douglass\nMy feelings [towards slave masters] were not the result of any marked cruelty in the treatment I received…\n…they sprung from the consideration of my being a slave in the first place. It was slavery—not its mere incidents—that I despised. (Douglass 1855)\n\n\n\nA Doll’s House\nOur home is nothing but a playroom. I have been your doll-wife, just as at home I was papa’s doll-child; and here the children have been my dolls. (Ibsen 1879)\n\n\n\n\n\n(Plz notice the lowercase “l”, lowercase “r”!)"
   },
   {
     "objectID": "w10/slides.html#references",
     "href": "w10/slides.html#references",
     "title": "Week 10: Welfare Economics and Policy Evaluation",
     "section": "References",
-    "text": "References\n\n\nBerlin, Isaiah. 1959. Two Concepts of Liberty: An Inaugural Lecture Delivered Before the University of Oxford on 31 October 1958. Clarendon Press. https://books.google.com?id=cLaGAAAAMAAJ.\n\n\nDouglass, Frederick. 1855. My Bondage and My Freedom. Yale University Press. https://books.google.com?id=G8t0AgAAQBAJ.\n\n\nIbsen, Henrik. 1879. The Doll’s House: A Play. D. Appleton & Company. https://books.google.com?id=afgNAAAAYAAJ.\n\n\nJacobs, Jeff, and Suresh Naidu. 2026. “Operationalizing Freedom as Non-Domination in the Labor Market.” In Perspectives on Labor Republicanism, edited by Philip Pettit. Cambridge University Press.\n\n\nLovett, Frank. 2022. The Well-Ordered Republic. Oxford University Press. https://books.google.com?id=CdZ2EAAAQBAJ.\n\n\nPettit, Philip. 1997. Republicanism: A Theory of Freedom and Government. Oxford University Press.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSkinner, Quentin. 1998. Liberty Before Liberalism. Cambridge University Press. https://books.google.com?id=w1VyEwGpKGEC."
+    "text": "References\n\n\nBerlin, Isaiah. 1959. Two Concepts of Liberty: An Inaugural Lecture Delivered Before the University of Oxford on 31 October 1958. Clarendon Press. https://books.google.com?id=cLaGAAAAMAAJ.\n\n\nDouglass, Frederick. 1855. My Bondage and My Freedom. Yale University Press. https://books.google.com?id=G8t0AgAAQBAJ.\n\n\nIbsen, Henrik. 1879. The Doll’s House: A Play. D. Appleton & Company. https://books.google.com?id=afgNAAAAYAAJ.\n\n\nJacobs, Jeff, and Suresh Naidu. 2026. “Operationalizing Freedom as Non-Domination in the Labor Market.” In Perspectives on Labor Republicanism, edited by Philip Pettit. Cambridge University Press.\n\n\nLovett, Frank. 2022. The Well-Ordered Republic. Oxford University Press. https://books.google.com?id=CdZ2EAAAQBAJ.\n\n\nPettit, Philip. 1997. Republicanism: A Theory of Freedom and Government. Oxford University Press.\n\n\nSkinner, Quentin. 1998. Liberty Before Liberalism. Cambridge University Press. https://books.google.com?id=w1VyEwGpKGEC."
   },
   {
     "objectID": "w07/index.html",
@@ -5633,7 +5242,7 @@
   {
     "objectID": "w09/index.html",
     "href": "w09/index.html",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "",
     "text": "Open slides in new window →",
     "crumbs": [
@@ -5641,111 +5250,21 @@
     ]
   },
   {
-    "objectID": "w09/index.html#final-project-tings",
-    "href": "w09/index.html#final-project-tings",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Final Project Tings",
-    "text": "Final Project Tings",
+    "objectID": "w09/index.html#the-crux-of-the-normative-issues",
+    "href": "w09/index.html#the-crux-of-the-normative-issues",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "The Crux of the Normative Issues",
+    "text": "The Crux of the Normative Issues",
     "crumbs": [
       "Week 9: {{< var w09.date-md >}}"
     ]
   },
   {
-    "objectID": "w09/index.html#project-management-tings",
-    "href": "w09/index.html#project-management-tings",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Project Management Tings",
-    "text": "Project Management Tings\n\n\n\nTing\nPros\nCons\nVerdict\n\n\n\n\nTasksBoard\nIntegrated with Google Workspace (@georgetown.edu emails)\nFree version useless (no share)\n❌\n\n\nJira\nMaybe most popular?\n30-day free trial\n❌\n\n\nTrello\nSimpler than Jira (both owned by Atlassian)\n14-day free trial\n❌\n\n\nAirtable\nJeff uses this every day\n.edu plan doesn’t include free users\n❌\n\n\nNotion\nJeff uses this v often, .edu plan has hackish way to include users for free\nForce yall to sign up for new ting\n✅\n\n\n\n\n👉 Notion: Example 5450 Project 👈",
-    "crumbs": [
-      "Week 9: {{< var w09.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w09/index.html#recap-0-descriptive-vs.-normative",
-    "href": "w09/index.html#recap-0-descriptive-vs.-normative",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Recap 0: Descriptive vs. Normative",
-    "text": "Recap 0: Descriptive vs. Normative\n\nMuch of Part 1 has been adjusting to weirdness of normative reasoning\nDescriptive reasoning looks like [Rules of math \\(\\implies \\theta^* = 2.5\\)], but [rules of math] part isn’t mentioned bc extraneous\n\n(Even if it was mentioned, intersubjective agreement not so hard, very few people fighting wars over “we should denote repeated addition with \\(\\otimes\\) not \\(\\times\\)!”)\n\nNormative reasoning looks like [Antecedent A \\(\\implies\\) Answer 1 but Antecedent B \\(\\implies\\) Answer 2], and people do fight wars over A vs. B (implicitly or explicitly)\nPart 2: Rapid cycling back and forth between normative and descriptive!\nOne new aspect: “Descriptive Ethics” (How do people act, not how should people act) \\(\\leadsto\\) Study of Power\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (Thucydides 2013, chap. 411 BC)",
-    "crumbs": [
-      "Week 9: {{< var w09.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w09/index.html#recap-1-privacy-policies-take-a-long-time-to-read",
-    "href": "w09/index.html#recap-1-privacy-policies-take-a-long-time-to-read",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Recap 1: Privacy Policies Take a Long Time to Read!",
-    "text": "Recap 1: Privacy Policies Take a Long Time to Read!",
-    "crumbs": [
-      "Week 9: {{< var w09.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w09/index.html#recap-2-reading-privacy-policies-neq-understanding-privacy-policies",
-    "href": "w09/index.html#recap-2-reading-privacy-policies-neq-understanding-privacy-policies",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Recap 2: Reading Privacy Policies \\(\\neq\\) Understanding Privacy Policies!",
-    "text": "Recap 2: Reading Privacy Policies \\(\\neq\\) Understanding Privacy Policies!\n\nReading vs. understanding implications / contingencies / ambiguities…\nNLP could (and should!) be helpful (“making privacy policies machine readable […] would help users match privacy preferences against policies offered by web services”), but mostly just reveals how bad the problem is:\n\n\n\n\nFigure 15 from Wagner (2023). “Obfuscatory words” are words like acceptable, significant, mainly, or predominantly, interpretated at the discretion of companies rather than users (see next slide!)",
-    "crumbs": [
-      "Week 9: {{< var w09.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w09/index.html#the-adversarial-sisyphusian-problem-of-contracts",
-    "href": "w09/index.html#the-adversarial-sisyphusian-problem-of-contracts",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "The Adversarial-Sisyphusian Problem of Contracts",
-    "text": "The Adversarial-Sisyphusian Problem of Contracts\n\nRecall Intuitive Problem of Causal Inference: Correlation \\(\\nimplies\\) Causation, but can do a bunch of work to overcome\nAdversarial-Sisyphusian Problem is one level worse 😱\n\nIPCI: You vs. discovered correlation (inanimate)\nASPC: You vs. companies investing resources 💰 into making the problem harder and harder for you\n\nThe moment you (\\(N=1\\), $) finally find and “fix” bad thing, company (\\(N \\gg 1\\), $$$) adds more ambiguity to re-enable / sends your data to “new” 3rd-party processor 🥸\nAnalogy would be: someone making causal chains longer and longer as you’re checking causality (map of dancing landscape)",
-    "crumbs": [
-      "Week 9: {{< var w09.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w09/index.html#no-logo-why-johnny-cant-dissent",
-    "href": "w09/index.html#no-logo-why-johnny-cant-dissent",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "No Logo / Why Johnny Can’t Dissent",
-    "text": "No Logo / Why Johnny Can’t Dissent\n\nNaomi Klein’s No Logo (1999) sparked a nationwide boycott of companies employing sweatshop labor\nGreat success; all companies responded and (out of the kindness of their hearts) cut ties with all of the sweatshops\nInstead, they established ties with supply chain management companies, who made the profit-maximizing decision to re-establish ties with all of the sweatshops\n\n\n“You can’t outrun them, or even stay ahead of them for very long: it’s their racetrack, and that’s them waiting at the finish line to congratulate you” (Frank 1994)",
-    "crumbs": [
-      "Week 9: {{< var w09.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w09/index.html#conclusion",
-    "href": "w09/index.html#conclusion",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Conclusion",
-    "text": "Conclusion",
-    "crumbs": [
-      "Week 9: {{< var w09.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w09/index.html#real-conclusion",
-    "href": "w09/index.html#real-conclusion",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Real Conclusion(?)",
-    "text": "Real Conclusion(?)",
-    "crumbs": [
-      "Week 9: {{< var w09.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w09/index.html#wars-with-one-side",
-    "href": "w09/index.html#wars-with-one-side",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Wars with One Side",
-    "text": "Wars with One Side\n\n\n\nIt would be ideal except for the Porto Ricans [sic]. They are beyond doubt the dirtiest, laziest, most degenerate and thievish race of men ever inhabiting this sphere. It makes you sick to inhabit the same island with them. They are even lower than Italians. What the island needs is not public health work but a tidal wave or something to totally exterminate the population. It might then be livable. I have done my best to further the process of extermination by killing off 8 and transplanting cancer into several more. (Cornelius Rhoads)\n\n\nBy 1930, the police had files on at least 135,000 individuals (about 3 percent of the island) suspected of favoring independence. (Source)",
-    "crumbs": [
-      "Week 9: {{< var w09.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w09/index.html#wars-with-one-side-1",
-    "href": "w09/index.html#wars-with-one-side-1",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Wars with One Side?",
-    "text": "Wars with One Side?\n\n\n\nGeorgetown Law School Center on Privacy and Technology, American Dragnet: Data-Driven Deportation in the 21st Century",
+    "objectID": "w09/index.html#does-reading-understanding",
+    "href": "w09/index.html#does-reading-understanding",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Does Reading = Understanding?",
+    "text": "Does Reading = Understanding?\n\nDoes reading \\(\\implies\\) understanding implications / contingencies / ambiguities?\nNLP could (and should!) be helpful (“making privacy policies machine readable […] would help users match privacy preferences against policies offered by web services”), but mostly just reveals how bad the problem is:\n\n\n\n\nFigure 15 from Wagner (2023). “Obfuscatory words” are words like acceptable, significant, mainly, or predominantly, interpretated at the discretion of companies rather than users (see next slide!)",
     "crumbs": [
       "Week 9: {{< var w09.date-md >}}"
     ]
@@ -5753,7 +5272,7 @@
   {
     "objectID": "w09/index.html#the-fundamental-problem-of-contracts",
     "href": "w09/index.html#the-fundamental-problem-of-contracts",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "The Fundamental Problem of Contracts",
     "text": "The Fundamental Problem of Contracts\n\nJust as we can’t observe two simultaneous worlds \\(W_{X = 0}\\) and \\(W_{X = 1}\\) which differ only in the value of \\(X\\),\nWe can’t foresee all possible contingencies that need to be included in a contract\n\n(We can try, though! Hence use of obfuscatory words to minimize liability)\n\nSo, when a situation arises which is not covered by a clause in the contract, what happens? What principle determines whose interpretation wins out?\n\n(Hint: It is actually literally my legal middle name…)",
     "crumbs": [
@@ -5763,7 +5282,127 @@
   {
     "objectID": "w09/index.html#power",
     "href": "w09/index.html#power",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "…POWER!",
+    "text": "…POWER!\n\nExamples from employment contracts:\nIn a private, cooperatively-owned, democratic firm, outcome determined by conversation, majority vote, unanimity, etc.\n\nThese technically exist in the US! Employing 2,380 workers, \\(\\frac{2380}{127509000} \\approx 0.0019\\%\\) of US workforce\n\nOtherwise, in a non-unionized private firm (94% of total), the outcome is determined by organizational hierarchy\n\nThis is the case for \\(\\frac{125000000}{127509000} \\approx 98.03\\%\\) of US workforce",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#descriptive-and-normative-implications",
+    "href": "w09/index.html#descriptive-and-normative-implications",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Descriptive and Normative Implications",
+    "text": "Descriptive and Normative Implications\n\nWho has power w.r.t. incompleteness of contracts?\nWho ought to have power w.r.t. incompleteness of contracts?\nResidual rights of control…",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#harts-nobel-prize-speech",
+    "href": "w09/index.html#harts-nobel-prize-speech",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Hart’s Nobel Prize Speech",
+    "text": "Hart’s Nobel Prize Speech\n\nComplete contracts are contracts where everything that can ever happen is written into the contract. Actual contracts aren’t like this, as lawyers know. They’re poorly worded, ambiguous, leave out important things. They’re incomplete.\nA critical question that arises with an incomplete contract is, who has the right to decide about the missing things? We called this right the residual control or decision right. The question is, who has it?\nFurther thought led us to the idea that this is what ownership is. The owner of an asset has the right to decide how the asset is used where the use is not contractually specified (Hart 2017)",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#understanding-rights-leftrightarrow-fighting-for-rights",
+    "href": "w09/index.html#understanding-rights-leftrightarrow-fighting-for-rights",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights",
+    "text": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights\n\n“Hohfeldian” framework (Hohfeld 1913)\nA right \\(r_i\\) granted to person \\(i\\) \\(\\implies\\) A duty/obligation imposed on everyone in the world besides \\(i\\) (to respect \\(r_i\\))\nA duty or obligation \\(d_i\\) imposed on a person \\(i\\) \\(\\implies\\) A right granted to everyone in the world besides \\(i\\) (to… be a potential beneficiary of \\(d_i\\))\n\\(\\implies\\) rough measures of relative power in a contract:\n\n\\[\n\\frac{\\text{rights}_i}{\\text{rights}_j} = \\frac{\\text{obligations}_j}{\\text{rights}_j} = \\frac{\\text{rights}_i}{\\text{obligations}_j} = \\frac{\\text{obligations}_j}{\\text{obligations}_i}\n\\]",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#descriptive-vs.-normative",
+    "href": "w09/index.html#descriptive-vs.-normative",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Descriptive vs. Normative",
+    "text": "Descriptive vs. Normative\n\nMuch of Part 1 has been adjusting to weirdness of normative reasoning\nDescriptive reasoning looks like [Rules of math \\(\\implies \\theta^* = 2.5\\)], but [rules of math] part isn’t mentioned bc extraneous\n\n(Even if it was mentioned, intersubjective agreement not so hard, very few people fighting wars over “we should denote repeated addition with \\(\\otimes\\) not \\(\\times\\)!”)\n\nNormative reasoning looks like [Antecedent A \\(\\implies\\) Answer 1 but Antecedent B \\(\\implies\\) Answer 2], and people do fight wars over A vs. B (implicitly or explicitly)\nPart 2: Rapid cycling back and forth between normative and descriptive!\nOne new aspect: “Descriptive Ethics” (How do people act, not how should people act) \\(\\leadsto\\) Study of Power\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (Thucydides 2013, chap. 411 BC)",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#recap-1-privacy-policies-take-a-long-time-to-read",
+    "href": "w09/index.html#recap-1-privacy-policies-take-a-long-time-to-read",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Recap 1: Privacy Policies Take a Long Time to Read!",
+    "text": "Recap 1: Privacy Policies Take a Long Time to Read!",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#recap-2-reading-privacy-policies-neq-understanding-privacy-policies",
+    "href": "w09/index.html#recap-2-reading-privacy-policies-neq-understanding-privacy-policies",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Recap 2: Reading Privacy Policies \\(\\neq\\) Understanding Privacy Policies!",
+    "text": "Recap 2: Reading Privacy Policies \\(\\neq\\) Understanding Privacy Policies!\n\nReading vs. understanding implications / contingencies / ambiguities…\nNLP could (and should!) be helpful (“making privacy policies machine readable […] would help users match privacy preferences against policies offered by web services”), but mostly just reveals how bad the problem is:\n\n\n\n\nFigure 15 from Wagner (2023). “Obfuscatory words” are words like acceptable, significant, mainly, or predominantly, interpretated at the discretion of companies rather than users (see next slide!)",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#conclusion",
+    "href": "w09/index.html#conclusion",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Conclusion",
+    "text": "Conclusion",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#real-conclusion",
+    "href": "w09/index.html#real-conclusion",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Real Conclusion(?)",
+    "text": "Real Conclusion(?)",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#wars-with-one-side",
+    "href": "w09/index.html#wars-with-one-side",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Wars with One Side",
+    "text": "Wars with One Side\n\n\n\nIt would be ideal except for the Porto Ricans [sic]. They are beyond doubt the dirtiest, laziest, most degenerate and thievish race of men ever inhabiting this sphere. It makes you sick to inhabit the same island with them. They are even lower than Italians. What the island needs is not public health work but a tidal wave or something to totally exterminate the population. It might then be livable. I have done my best to further the process of extermination by killing off 8 and transplanting cancer into several more. (Cornelius Rhoads)\n\n\nBy 1930, the police had files on at least 135,000 individuals (about 3 percent of the island) suspected of favoring independence. (Source)",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#wars-with-one-side-1",
+    "href": "w09/index.html#wars-with-one-side-1",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Wars with One Side?",
+    "text": "Wars with One Side?\n\n\n\nGeorgetown Law School Center on Privacy and Technology, American Dragnet: Data-Driven Deportation in the 21st Century",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#the-fundamental-problem-of-contracts-1",
+    "href": "w09/index.html#the-fundamental-problem-of-contracts-1",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "The Fundamental Problem of Contracts",
+    "text": "The Fundamental Problem of Contracts\n\nJust as we can’t observe two simultaneous worlds \\(W_{X = 0}\\) and \\(W_{X = 1}\\) which differ only in the value of \\(X\\),\nWe can’t foresee all possible contingencies that need to be included in a contract\n\n(Hence use of obfuscatory words to minimize liability)\n\nSo, when a situation arises which is not covered by a clause in the contract, what happens? What principle determines whose interpretation wins out?\n\n(Hint: It is actually literally my legal middle name…)",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#power-1",
+    "href": "w09/index.html#power-1",
+    "title": "Week 9: Modeling Data Policies",
     "section": "…POWER!",
     "text": "…POWER!\n\nExamples from employment contracts (tooting own horn):\nIn a private, cooperatively-owned, democratic firm, outcome determined by conversation, majority vote, unanimity, etc.\n\nThese technically exist in the US! Employing 2,380 workers, \\(\\frac{2380}{127509000} \\approx 0.0019\\%\\) of US workforce\n\nOtherwise, in a non-unionized private firm (94% of total), the outcome is determined by organizational hierarchy\n\nThis is the case for \\(\\frac{125000000}{127509000} \\approx 98.03\\%\\) of US workforce",
     "crumbs": [
@@ -5773,7 +5412,7 @@
   {
     "objectID": "w09/index.html#descriptive-and-normative-considerations",
     "href": "w09/index.html#descriptive-and-normative-considerations",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "Descriptive and Normative Considerations",
     "text": "Descriptive and Normative Considerations\n\nThe combined effect of incomplete contracts and conflicts of interest is that the determination of outcomes depends on who exercises power in the transaction.\nPower is generally exercised by those who hold the residual rights of control, meaning the right to determine what is not specified contractually (Bowles 2009)\n\n\n[Step 1: Empirically measurable given antecedents] Who has power w.r.t. a given incomplete contract?\n[Step 2: Up to you and your ethical axioms; e.g., efficiency] Who ought to have power w.r.t. incomplete contracts?",
     "crumbs": [
@@ -5783,7 +5422,7 @@
   {
     "objectID": "w09/index.html#working-definition-of-power",
     "href": "w09/index.html#working-definition-of-power",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "Working Definition of Power",
     "text": "Working Definition of Power\n\n\n\n\n\n\n\nNote Defining (Dyadic) Power (Bowles and Gintis 1992, 326–27)\n\n\n\nFor agent \\(A\\) to have power over agent \\(B\\) it is sufficient that, by imposing or threatening to impose sanctions on \\(B\\), \\(A\\) is capable of affecting \\(B\\)’s actions in ways that further \\(A\\)’s interests, while \\(B\\) lacks this capacity with respect to \\(A\\).",
     "crumbs": [
@@ -5793,7 +5432,7 @@
   {
     "objectID": "w09/index.html#prisoners-dilemma",
     "href": "w09/index.html#prisoners-dilemma",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "Prisoners’ Dilemma",
     "text": "Prisoners’ Dilemma\n\n\n\n\n\n\\(B\\)\n\n\n\n\nSilent\nSnitch\n\n\n\\(A\\)\nSilent\n\\(-1,-1\\)\n\\(-3,\\phantom{-}0\\)\n\n\nSnitch\n\\(\\phantom{-}0, -3\\)\n\\(-10,-10\\)",
     "crumbs": [
@@ -5803,7 +5442,7 @@
   {
     "objectID": "w09/index.html#assurance-game",
     "href": "w09/index.html#assurance-game",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "Assurance Game",
     "text": "Assurance Game\nPalanpur, Gujarat, India\n\nThe farmers do not doubt that earlier planting would give them larger harvests, but no one, the farmer explained, is willing to be the first to plant, as the seeds on any lone plot would be quickly eaten by birds…\n[What if you all organized to plant on the same day, to reap rewards of earlier planting while minimizing bird losses (dividing by \\(N\\) instead of \\(1\\))?]\n“If we knew how to do that”, he said, looking up from his hoe at me, “we would not be poor.” (Bowles 2009)",
     "crumbs": [
@@ -5813,7 +5452,7 @@
   {
     "objectID": "w09/index.html#assurance-game-in-normal-form",
     "href": "w09/index.html#assurance-game-in-normal-form",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "Assurance Game in Normal Form",
     "text": "Assurance Game in Normal Form\n\n\n\n\n\n\\(B\\)\n\n\n\n\nEarly\nLate\n\n\n\\(A\\)\nEarly\n\\(4, 4\\)\n\\(0, 3\\)\n\n\nLate\n\\(3, 0\\)\n\\(2, 2\\)",
     "crumbs": [
@@ -5823,7 +5462,7 @@
   {
     "objectID": "w09/index.html#invisible-hand-game-normal-form",
     "href": "w09/index.html#invisible-hand-game-normal-form",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "Invisible Hand Game (Normal Form)",
     "text": "Invisible Hand Game (Normal Form)\n\n\n\n\n\n\\(B\\)\n\n\n\n\nCorn\nTomatoes\n\n\n\\(A\\)\nCorn\n\\(2, 4\\)\n\\(4, 3\\)\n\n\nTomatoes\n\\(5, 5\\)\n\\(3, 2\\)",
     "crumbs": [
@@ -5831,154 +5470,430 @@
     ]
   },
   {
-    "objectID": "w09/index.html#references",
-    "href": "w09/index.html#references",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "References",
-    "text": "References\n\n\nBowles, Samuel. 2009. Microeconomics: Behavior, Institutions, and Evolution. Princeton University Press. https://books.google.com?id=HAiMDU4qv0IC.\n\n\nBowles, Samuel, and Herbert Gintis. 1992. “Power and Wealth in a Competitive Capitalist Economy.” Philosophy & Public Affairs 21 (4): 324–53. https://www.jstor.org/stable/2265369.\n\n\nFrank, Tom. 1994. “DARK AGE: Why Johnny Can’t Dissent.” The Baffler, no. 6: 5–192. https://www.jstor.org/stable/43555671.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.",
+    "objectID": "w09/index.html#the-goal-of-policymaking",
+    "href": "w09/index.html#the-goal-of-policymaking",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "The “Goal” of Policymaking!",
+    "text": "The “Goal” of Policymaking!\n\n\n\n\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nSilent\nSnitch\n\n\n\\(A\\)\nSilent\n\\(-1,-1\\)\n\\(-3,\\phantom{-}0\\)\n\n\nSnitch\n\\(\\phantom{-}0, -3\\)\n\\(-10,-10\\)\n\n\n\n\n\n\nFigure 1: Prisoners’ Dilemma\n\n\n\n\n\n\\(\\leadsto\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nEarly\nLate\n\n\n\\(A\\)\nEarly\n\\(4, 4\\)\n\\(0, 3\\)\n\n\nLate\n\\(3, 0\\)\n\\(2, 2\\)\n\n\n\n\n\n\nFigure 2: Assurance Game\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nCorn\nTomatoes\n\n\n\\(A\\)\nCorn\n\\(2, 4\\)\n\\(4, 3\\)\n\n\nTomatoes\n\\(5, 5\\)\n\\(3, 2\\)\n\n\n\n\n\nFigure 3: Invisible Hand Game\n\n\n\n\n\n \n\n\n\n\nPrisoners’ Dilemma 😫 \\(\\prec\\) Assurance Game 🤨 \\(\\prec\\) Invisible Hand Game 🥳",
     "crumbs": [
       "Week 9: {{< var w09.date-md >}}"
     ]
   },
   {
-    "objectID": "w09/slides.html#final-project-tings",
-    "href": "w09/slides.html#final-project-tings",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Final Project Tings",
-    "text": "Final Project Tings"
+    "objectID": "w09/index.html#prisoners-dilemma-fishers-dilemma",
+    "href": "w09/index.html#prisoners-dilemma-fishers-dilemma",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Prisoners’ Dilemma (Fishers’ Dilemma)",
+    "text": "Prisoners’ Dilemma (Fishers’ Dilemma)\n\nSingle, unique Nash equilibrium, and it’s Pareto inferior\n\n\n\n\nThe Game\n\n\n\n\n\n\n\\(j\\)\n\n\n\n\nFish 6 Hours\nFish 8 Hours\n\n\n\\(i\\)\nFish 6 Hours\n\\(1.0,1.0\\)\n\\(0.0,\\boxed{1.2}\\)\n\n\nFish 8 Hours\n\\(\\boxed{1.2}, 0.0\\)\n\\(\\boxed{0.4},\\boxed{0.4}\\)\n\n\n\n\nBoxes = Best Responses:\n\\(\\text{BR}_i(6\\textrm{ hr}) = 8\\textrm{ hr}\\), \\(\\text{BR}_i(8\\textrm{ hr}) = 8\\textrm{ hr}\\)\n\\(\\text{BR}_j(6\\textrm{ hr}) = 8\\textrm{ hr}\\), \\(\\text{BR}_j(8\\textrm{ hr}) = 8\\textrm{ hr}\\)\n\n\n\nPareto Dominance",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
   },
   {
-    "objectID": "w09/slides.html#project-management-tings",
-    "href": "w09/slides.html#project-management-tings",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Project Management Tings",
-    "text": "Project Management Tings\n\n\n\nTing\nPros\nCons\nVerdict\n\n\n\n\nTasksBoard\nIntegrated with Google Workspace (@georgetown.edu emails)\nFree version useless (no share)\n❌\n\n\nJira\nMaybe most popular?\n30-day free trial\n❌\n\n\nTrello\nSimpler than Jira (both owned by Atlassian)\n14-day free trial\n❌\n\n\nAirtable\nJeff uses this every day\n.edu plan doesn’t include free users\n❌\n\n\nNotion\nJeff uses this v often, .edu plan has hackish way to include users for free\nForce yall to sign up for new ting\n✅\n\n\n\n\n👉 Notion: Example 5450 Project 👈"
+    "objectID": "w09/index.html#operationalizing-power",
+    "href": "w09/index.html#operationalizing-power",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Operationalizing Power",
+    "text": "Operationalizing Power\n\nEqually good outside options \\(\\implies\\) can contract to Pareto-optimal point \\(o^P\\)\n\\(i\\) has better outside options \\(\\implies\\) can make take it or leave it offer to \\(j\\):\n\n“You (\\(j\\)) fish 6 hrs all the time. I (\\(i\\)) fish 6 hrs 41% of time, 8 hrs otherwise”\n\n\n\n\n\nEver so slightly better for \\(j\\) \\(\\implies\\) \\(j\\) accepts (Behavioral econ: \\(j\\) accepts if 41% meets subjective fairness threshold; observed across many many cultures!)\nLater / next week: observe policy with outcome \\(o^{C}_{i \\rightarrow j} \\iff\\) policy values \\(i\\)’s welfare more than \\(j\\)’s welfare (inferred social welfare weights \\(\\omega_i &gt; \\omega_j\\))",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
   },
   {
-    "objectID": "w09/slides.html#recap-0-descriptive-vs.-normative",
-    "href": "w09/slides.html#recap-0-descriptive-vs.-normative",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Recap 0: Descriptive vs. Normative",
-    "text": "Recap 0: Descriptive vs. Normative\n\nMuch of Part 1 has been adjusting to weirdness of normative reasoning\nDescriptive reasoning looks like [Rules of math \\(\\implies \\theta^* = 2.5\\)], but [rules of math] part isn’t mentioned bc extraneous\n\n(Even if it was mentioned, intersubjective agreement not so hard, very few people fighting wars over “we should denote repeated addition with \\(\\otimes\\) not \\(\\times\\)!”)\n\nNormative reasoning looks like [Antecedent A \\(\\implies\\) Answer 1 but Antecedent B \\(\\implies\\) Answer 2], and people do fight wars over A vs. B (implicitly or explicitly)\nPart 2: Rapid cycling back and forth between normative and descriptive!\nOne new aspect: “Descriptive Ethics” (How do people act, not how should people act) \\(\\leadsto\\) Study of Power\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (Thucydides 2013, chap. 411 BC)"
+    "objectID": "w09/index.html#policy-interventions-fish-dilemmas-mapsto-assurance-games",
+    "href": "w09/index.html#policy-interventions-fish-dilemmas-mapsto-assurance-games",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Policy Interventions: Fish Dilemmas \\(\\mapsto\\) Assurance Games",
+    "text": "Policy Interventions: Fish Dilemmas \\(\\mapsto\\) Assurance Games\n\nNotice: To “escape” prisoners’ dilemma, we had to literally change the rules of the game (permanent intervention)\nFishers’ Dilemma:\n\nNo institutions: \\(a_i, a_j \\in \\{6\\text{ hr}, 8\\text{ hr}\\}\\)\nInstitutions (courts or social norms): \\(\\{\\text{Accept}, \\text{Reject}\\}\\)\n\nDriving “game”:\n\nNo institutions: \\(a_i, a_j \\in \\{\\text{Stop}, \\text{Drive}\\}\\)\nInstitutions (stoplights installed by govt or community agreement): \\(a_i, a_j \\in \\{\\text{Obey Light}, \\text{Run Light}\\}\\)\n\nWithin assurance games, only need to nudge (one-time intervention) \\(\\leadsto\\) new equilibrium (self-enforcing by definition)",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
   },
   {
-    "objectID": "w09/slides.html#recap-1-privacy-policies-take-a-long-time-to-read",
-    "href": "w09/slides.html#recap-1-privacy-policies-take-a-long-time-to-read",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Recap 1: Privacy Policies Take a Long Time to Read!",
-    "text": "Recap 1: Privacy Policies Take a Long Time to Read!"
+    "objectID": "w09/index.html#assurance-game-1",
+    "href": "w09/index.html#assurance-game-1",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Assurance Game",
+    "text": "Assurance Game\n\nMultiple equilibria; the particular outcome we observe is a function of history (path dependency)\nDrive-on-left vs. drive-on-right: Assurance game where neither equilibrium Pareto-dominates other option\n\nSwedish Dagen H: Nudge from \\(a^*_{\\textsf{L}} = (\\textsf{L},\\textsf{L})\\) to \\(a^*_{\\textsf{R}} = (\\textsf{R},\\textsf{R})\\)\nEither eq is self-reinforcing! (Unless you want to crash out)\n\n\n\n\n\nQWERTY vs. DVORAK / Palanpur farmers: Assurance game where observed equilibrium Pareto inferior\n\n\n\n\n\n\n\n\n\\(j\\)\n\n\n\n\nEarly\nLate\n\n\n\\(i\\)\nEarly\n\\(\\boxed{4},\\boxed{4}\\)\n\\(0, \\, 3\\)\n\n\nLate\n\\(3, \\, 0\\)\n\\(\\boxed{2},\\boxed{2}\\)",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
   },
   {
-    "objectID": "w09/slides.html#recap-2-reading-privacy-policies-neq-understanding-privacy-policies",
-    "href": "w09/slides.html#recap-2-reading-privacy-policies-neq-understanding-privacy-policies",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Recap 2: Reading Privacy Policies \\(\\neq\\) Understanding Privacy Policies!",
-    "text": "Recap 2: Reading Privacy Policies \\(\\neq\\) Understanding Privacy Policies!\n\nReading vs. understanding implications / contingencies / ambiguities…\nNLP could (and should!) be helpful (“making privacy policies machine readable […] would help users match privacy preferences against policies offered by web services”), but mostly just reveals how bad the problem is:\n\n\nFigure 15 from Wagner (2023). “Obfuscatory words” are words like acceptable, significant, mainly, or predominantly, interpretated at the discretion of companies rather than users (see next slide!)"
+    "objectID": "w09/index.html#invisible-hand-game",
+    "href": "w09/index.html#invisible-hand-game",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Invisible Hand Game",
+    "text": "Invisible Hand Game\n\nSingle, unique Nash equilibrium, and it’s Pareto efficient\n\\(\\Rightarrow\\) Acting in self interest \\(\\leadsto\\) best possible outcome\n\n\n\n\nIt is not from the benevolence of the butcher, the brewer, or the baker that we expect our meal, but from their regard to their own interest (Smith 1776)\n\n\n\n\n\n\n\n\\(j\\)\n\n\n\n\nCorn\nTomato\n\n\n\\(i\\)\nCorn\n\\(2, \\, 4\\)\n\\(4, \\, 3\\)\n\n\nTomato\n\\(\\boxed{5}, \\boxed{5}\\)\n\\(3, \\, 2\\)\n\n\n\n\n\n\nWealth of Nations SPOILER: The wealth comes from division of laborand also dumbleydore dies. semperus snake too. and even poor ron the weasel, who never deserved such a fate\n\n\nAn economic transaction is a solved political problem. Economics has gained the title “Queen of the Social Sciences” by choosing solved political problems as its domain. (Lerner 1972)",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
   },
   {
-    "objectID": "w09/slides.html#the-adversarial-sisyphusian-problem-of-contracts",
-    "href": "w09/slides.html#the-adversarial-sisyphusian-problem-of-contracts",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "The Adversarial-Sisyphusian Problem of Contracts",
-    "text": "The Adversarial-Sisyphusian Problem of Contracts\n\nRecall Intuitive Problem of Causal Inference: Correlation \\(\\nimplies\\) Causation, but can do a bunch of work to overcome\nAdversarial-Sisyphusian Problem is one level worse 😱\n\nIPCI: You vs. discovered correlation (inanimate)\nASPC: You vs. companies investing resources 💰 into making the problem harder and harder for you\n\nThe moment you (\\(N=1\\), $) finally find and “fix” bad thing, company (\\(N \\gg 1\\), $$$) adds more ambiguity to re-enable / sends your data to “new” 3rd-party processor 🥸\nAnalogy would be: someone making causal chains longer and longer as you’re checking causality (map of dancing landscape)"
+    "objectID": "w09/index.html#first-fundamental-theorem-of-welfare-economics",
+    "href": "w09/index.html#first-fundamental-theorem-of-welfare-economics",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "First Fundamental Theorem of Welfare Economics",
+    "text": "First Fundamental Theorem of Welfare Economics\nThm: [Antecedents (Coase Conditions)] \\(\\Rightarrow\\) markets produce Pareto-optimal outcomes\n\nEven Jeff finds proof (and corollaries) compelling / convincing / empirically-supported\n\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN 5300) built on what to do when GM Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, market-socialist nationalization",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
   },
   {
-    "objectID": "w09/slides.html#no-logo-why-johnny-cant-dissent",
-    "href": "w09/slides.html#no-logo-why-johnny-cant-dissent",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "No Logo / Why Johnny Can’t Dissent",
-    "text": "No Logo / Why Johnny Can’t Dissent\n\nNaomi Klein’s No Logo (1999) sparked a nationwide boycott of companies employing sweatshop labor\nGreat success; all companies responded and (out of the kindness of their hearts) cut ties with all of the sweatshops\nInstead, they established ties with supply chain management companies, who made the profit-maximizing decision to re-establish ties with all of the sweatshops\n\n\n“You can’t outrun them, or even stay ahead of them for very long: it’s their racetrack, and that’s them waiting at the finish line to congratulate you” (Frank 1994)"
+    "objectID": "w09/index.html#part-2-suddenly-collides-with-part-1-property-rights",
+    "href": "w09/index.html#part-2-suddenly-collides-with-part-1-property-rights",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Part 2 Suddenly Collides with Part 1: Property Rights",
+    "text": "Part 2 Suddenly Collides with Part 1: Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
   },
   {
-    "objectID": "w09/slides.html#conclusion",
-    "href": "w09/slides.html#conclusion",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Conclusion",
-    "text": "Conclusion"
+    "objectID": "w09/index.html#externalities-leftrightarrow-costs-of-actions-paid-by-someone-else",
+    "href": "w09/index.html#externalities-leftrightarrow-costs-of-actions-paid-by-someone-else",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Externalities \\(\\Leftrightarrow\\) Costs of Actions Paid by Someone Else!",
+    "text": "Externalities \\(\\Leftrightarrow\\) Costs of Actions Paid by Someone Else!\n\nFirm \\(S\\) produces amount of steel \\(s\\), pollution \\(x\\)\nFirm \\(F\\) “produces” amount of fish \\(f\\)\n\\(S\\) optimizes\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,x}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
   },
   {
-    "objectID": "w09/slides.html#real-conclusion",
-    "href": "w09/slides.html#real-conclusion",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Real Conclusion(?)",
-    "text": "Real Conclusion(?)"
+    "objectID": "w09/index.html#functionals",
+    "href": "w09/index.html#functionals",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Functionals?",
+    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
   },
   {
-    "objectID": "w09/slides.html#wars-with-one-side",
-    "href": "w09/slides.html#wars-with-one-side",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Wars with One Side",
-    "text": "Wars with One Side\n\n\n\nIt would be ideal except for the Porto Ricans [sic]. They are beyond doubt the dirtiest, laziest, most degenerate and thievish race of men ever inhabiting this sphere. It makes you sick to inhabit the same island with them. They are even lower than Italians. What the island needs is not public health work but a tidal wave or something to totally exterminate the population. It might then be livable. I have done my best to further the process of extermination by killing off 8 and transplanting cancer into several more. (Cornelius Rhoads)\n\n\nBy 1930, the police had files on at least 135,000 individuals (about 3 percent of the island) suspected of favoring independence. (Source)"
+    "objectID": "w09/index.html#we-live-in-a-society-part-2",
+    "href": "w09/index.html#we-live-in-a-society-part-2",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "We Live In A Society, Part 2",
+    "text": "We Live In A Society, Part 2\n\nUtilitarianism, Kantian Ethics, and Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\n\\(W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\). \\(\\omega_i\\) is \\(i\\)’s welfare weight\n(Preview) Decomposition: evaluate policies by estimating marginal utility \\(u'_i(x)\\) compared to \\(\\omega_i\\))",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
   },
   {
-    "objectID": "w09/slides.html#wars-with-one-side-1",
-    "href": "w09/slides.html#wars-with-one-side-1",
-    "title": "Week 9: From Data Ethics to Data Policy",
-    "section": "Wars with One Side?",
-    "text": "Wars with One Side?\n\nGeorgetown Law School Center on Privacy and Technology, American Dragnet: Data-Driven Deportation in the 21st Century"
+    "objectID": "w09/index.html#alternative-swf-specifications",
+    "href": "w09/index.html#alternative-swf-specifications",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Alternative SWF Specifications",
+    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#utilitarian-swf",
+    "href": "w09/index.html#utilitarian-swf",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Utilitarian SWF",
+    "text": "Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -\\infty\\)?",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#the-hard-problem-of-utilitarian-swf",
+    "href": "w09/index.html#the-hard-problem-of-utilitarian-swf",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "The Hard Problem of Utilitarian SWF",
+    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom?",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#we-can-finally-understand-this-image-from-week-1",
+    "href": "w09/index.html#we-can-finally-understand-this-image-from-week-1",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "We Can Finally Understand This Image from Week 1!",
+    "text": "We Can Finally Understand This Image from Week 1!",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/index.html#references",
+    "href": "w09/index.html#references",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "References",
+    "text": "References\n\n\nBowles, Samuel. 2009. Microeconomics: Behavior, Institutions, and Evolution. Princeton University Press. https://books.google.com?id=HAiMDU4qv0IC.\n\n\nBowles, Samuel, and Herbert Gintis. 1992. “Power and Wealth in a Competitive Capitalist Economy.” Philosophy & Public Affairs 21 (4): 324–53. https://www.jstor.org/stable/2265369.\n\n\nHart, Oliver. 2017. “Incomplete Contracts and Control.” American Economic Review 107 (7): 1731–52. https://doi.org/10.1257/aer.107.7.1731.\n\n\nHohfeld, Wesley Newcomb. 1913. “Some Fundamental Legal Conceptions as Applied in Judicial Reasoning.” Yale Law Journal 23. https://heinonline.org/HOL/Page?handle=hein.journals/ylr23&id=24&div=&collection=.\n\n\nLerner, Abba P. 1972. “The Economics and Politics of Consumer Sovereignty.” The American Economic Review 62 (1/2): 258–66. https://www.jstor.org/stable/1821551.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSmith, Adam. 1776. The Wealth of Nations. Random House Publishing Group. https://books.google.com?id=Anwp7vTR1usC.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152.",
+    "crumbs": [
+      "Week 9: {{< var w09.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w09/slides.html#the-crux-of-the-normative-issues",
+    "href": "w09/slides.html#the-crux-of-the-normative-issues",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "The Crux of the Normative Issues",
+    "text": "The Crux of the Normative Issues"
+  },
+  {
+    "objectID": "w09/slides.html#does-reading-understanding",
+    "href": "w09/slides.html#does-reading-understanding",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Does Reading = Understanding?",
+    "text": "Does Reading = Understanding?\n\nDoes reading \\(\\implies\\) understanding implications / contingencies / ambiguities?\nNLP could (and should!) be helpful (“making privacy policies machine readable […] would help users match privacy preferences against policies offered by web services”), but mostly just reveals how bad the problem is:\n\n\nFigure 15 from Wagner (2023). “Obfuscatory words” are words like acceptable, significant, mainly, or predominantly, interpretated at the discretion of companies rather than users (see next slide!)"
   },
   {
     "objectID": "w09/slides.html#the-fundamental-problem-of-contracts",
     "href": "w09/slides.html#the-fundamental-problem-of-contracts",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "The Fundamental Problem of Contracts",
     "text": "The Fundamental Problem of Contracts\n\nJust as we can’t observe two simultaneous worlds \\(W_{X = 0}\\) and \\(W_{X = 1}\\) which differ only in the value of \\(X\\),\nWe can’t foresee all possible contingencies that need to be included in a contract\n\n(We can try, though! Hence use of obfuscatory words to minimize liability)\n\nSo, when a situation arises which is not covered by a clause in the contract, what happens? What principle determines whose interpretation wins out?\n\n(Hint: It is actually literally my legal middle name…)"
   },
   {
     "objectID": "w09/slides.html#power",
     "href": "w09/slides.html#power",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "…POWER!",
+    "text": "…POWER!\n\nExamples from employment contracts:\nIn a private, cooperatively-owned, democratic firm, outcome determined by conversation, majority vote, unanimity, etc.\n\nThese technically exist in the US! Employing 2,380 workers, \\(\\frac{2380}{127509000} \\approx 0.0019\\%\\) of US workforce\n\nOtherwise, in a non-unionized private firm (94% of total), the outcome is determined by organizational hierarchy\n\nThis is the case for \\(\\frac{125000000}{127509000} \\approx 98.03\\%\\) of US workforce"
+  },
+  {
+    "objectID": "w09/slides.html#descriptive-and-normative-implications",
+    "href": "w09/slides.html#descriptive-and-normative-implications",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Descriptive and Normative Implications",
+    "text": "Descriptive and Normative Implications\n\nWho has power w.r.t. incompleteness of contracts?\nWho ought to have power w.r.t. incompleteness of contracts?\nResidual rights of control…"
+  },
+  {
+    "objectID": "w09/slides.html#harts-nobel-prize-speech",
+    "href": "w09/slides.html#harts-nobel-prize-speech",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Hart’s Nobel Prize Speech",
+    "text": "Hart’s Nobel Prize Speech\n\nComplete contracts are contracts where everything that can ever happen is written into the contract. Actual contracts aren’t like this, as lawyers know. They’re poorly worded, ambiguous, leave out important things. They’re incomplete.\nA critical question that arises with an incomplete contract is, who has the right to decide about the missing things? We called this right the residual control or decision right. The question is, who has it?\nFurther thought led us to the idea that this is what ownership is. The owner of an asset has the right to decide how the asset is used where the use is not contractually specified (Hart 2017)"
+  },
+  {
+    "objectID": "w09/slides.html#understanding-rights-leftrightarrow-fighting-for-rights",
+    "href": "w09/slides.html#understanding-rights-leftrightarrow-fighting-for-rights",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights",
+    "text": "Understanding Rights \\(\\leftrightarrow\\) Fighting for Rights\n\n“Hohfeldian” framework (Hohfeld 1913)\nA right \\(r_i\\) granted to person \\(i\\) \\(\\implies\\) A duty/obligation imposed on everyone in the world besides \\(i\\) (to respect \\(r_i\\))\nA duty or obligation \\(d_i\\) imposed on a person \\(i\\) \\(\\implies\\) A right granted to everyone in the world besides \\(i\\) (to… be a potential beneficiary of \\(d_i\\))\n\\(\\implies\\) rough measures of relative power in a contract:\n\n\\[\n\\frac{\\text{rights}_i}{\\text{rights}_j} = \\frac{\\text{obligations}_j}{\\text{rights}_j} = \\frac{\\text{rights}_i}{\\text{obligations}_j} = \\frac{\\text{obligations}_j}{\\text{obligations}_i}\n\\]"
+  },
+  {
+    "objectID": "w09/slides.html#descriptive-vs.-normative",
+    "href": "w09/slides.html#descriptive-vs.-normative",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Descriptive vs. Normative",
+    "text": "Descriptive vs. Normative\n\nMuch of Part 1 has been adjusting to weirdness of normative reasoning\nDescriptive reasoning looks like [Rules of math \\(\\implies \\theta^* = 2.5\\)], but [rules of math] part isn’t mentioned bc extraneous\n\n(Even if it was mentioned, intersubjective agreement not so hard, very few people fighting wars over “we should denote repeated addition with \\(\\otimes\\) not \\(\\times\\)!”)\n\nNormative reasoning looks like [Antecedent A \\(\\implies\\) Answer 1 but Antecedent B \\(\\implies\\) Answer 2], and people do fight wars over A vs. B (implicitly or explicitly)\nPart 2: Rapid cycling back and forth between normative and descriptive!\nOne new aspect: “Descriptive Ethics” (How do people act, not how should people act) \\(\\leadsto\\) Study of Power\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (Thucydides 2013, chap. 411 BC)"
+  },
+  {
+    "objectID": "w09/slides.html#recap-1-privacy-policies-take-a-long-time-to-read",
+    "href": "w09/slides.html#recap-1-privacy-policies-take-a-long-time-to-read",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Recap 1: Privacy Policies Take a Long Time to Read!",
+    "text": "Recap 1: Privacy Policies Take a Long Time to Read!"
+  },
+  {
+    "objectID": "w09/slides.html#recap-2-reading-privacy-policies-neq-understanding-privacy-policies",
+    "href": "w09/slides.html#recap-2-reading-privacy-policies-neq-understanding-privacy-policies",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Recap 2: Reading Privacy Policies \\(\\neq\\) Understanding Privacy Policies!",
+    "text": "Recap 2: Reading Privacy Policies \\(\\neq\\) Understanding Privacy Policies!\n\nReading vs. understanding implications / contingencies / ambiguities…\nNLP could (and should!) be helpful (“making privacy policies machine readable […] would help users match privacy preferences against policies offered by web services”), but mostly just reveals how bad the problem is:\n\n\nFigure 15 from Wagner (2023). “Obfuscatory words” are words like acceptable, significant, mainly, or predominantly, interpretated at the discretion of companies rather than users (see next slide!)"
+  },
+  {
+    "objectID": "w09/slides.html#conclusion",
+    "href": "w09/slides.html#conclusion",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Conclusion",
+    "text": "Conclusion"
+  },
+  {
+    "objectID": "w09/slides.html#real-conclusion",
+    "href": "w09/slides.html#real-conclusion",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Real Conclusion(?)",
+    "text": "Real Conclusion(?)"
+  },
+  {
+    "objectID": "w09/slides.html#wars-with-one-side",
+    "href": "w09/slides.html#wars-with-one-side",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Wars with One Side",
+    "text": "Wars with One Side\n\n\n\nIt would be ideal except for the Porto Ricans [sic]. They are beyond doubt the dirtiest, laziest, most degenerate and thievish race of men ever inhabiting this sphere. It makes you sick to inhabit the same island with them. They are even lower than Italians. What the island needs is not public health work but a tidal wave or something to totally exterminate the population. It might then be livable. I have done my best to further the process of extermination by killing off 8 and transplanting cancer into several more. (Cornelius Rhoads)\n\n\nBy 1930, the police had files on at least 135,000 individuals (about 3 percent of the island) suspected of favoring independence. (Source)"
+  },
+  {
+    "objectID": "w09/slides.html#wars-with-one-side-1",
+    "href": "w09/slides.html#wars-with-one-side-1",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Wars with One Side?",
+    "text": "Wars with One Side?\n\nGeorgetown Law School Center on Privacy and Technology, American Dragnet: Data-Driven Deportation in the 21st Century"
+  },
+  {
+    "objectID": "w09/slides.html#the-fundamental-problem-of-contracts-1",
+    "href": "w09/slides.html#the-fundamental-problem-of-contracts-1",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "The Fundamental Problem of Contracts",
+    "text": "The Fundamental Problem of Contracts\n\nJust as we can’t observe two simultaneous worlds \\(W_{X = 0}\\) and \\(W_{X = 1}\\) which differ only in the value of \\(X\\),\nWe can’t foresee all possible contingencies that need to be included in a contract\n\n(Hence use of obfuscatory words to minimize liability)\n\nSo, when a situation arises which is not covered by a clause in the contract, what happens? What principle determines whose interpretation wins out?\n\n(Hint: It is actually literally my legal middle name…)"
+  },
+  {
+    "objectID": "w09/slides.html#power-1",
+    "href": "w09/slides.html#power-1",
+    "title": "Week 9: Modeling Data Policies",
     "section": "…POWER!",
     "text": "…POWER!\n\nExamples from employment contracts (tooting own horn):\nIn a private, cooperatively-owned, democratic firm, outcome determined by conversation, majority vote, unanimity, etc.\n\nThese technically exist in the US! Employing 2,380 workers, \\(\\frac{2380}{127509000} \\approx 0.0019\\%\\) of US workforce\n\nOtherwise, in a non-unionized private firm (94% of total), the outcome is determined by organizational hierarchy\n\nThis is the case for \\(\\frac{125000000}{127509000} \\approx 98.03\\%\\) of US workforce"
   },
   {
     "objectID": "w09/slides.html#descriptive-and-normative-considerations",
     "href": "w09/slides.html#descriptive-and-normative-considerations",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "Descriptive and Normative Considerations",
     "text": "Descriptive and Normative Considerations\n\nThe combined effect of incomplete contracts and conflicts of interest is that the determination of outcomes depends on who exercises power in the transaction.\nPower is generally exercised by those who hold the residual rights of control, meaning the right to determine what is not specified contractually (Bowles 2009)\n\n\n[Step 1: Empirically measurable given antecedents] Who has power w.r.t. a given incomplete contract?\n[Step 2: Up to you and your ethical axioms; e.g., efficiency] Who ought to have power w.r.t. incomplete contracts?"
   },
   {
     "objectID": "w09/slides.html#working-definition-of-power",
     "href": "w09/slides.html#working-definition-of-power",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "Working Definition of Power",
     "text": "Working Definition of Power\n\n\n\n\n\n Defining (Dyadic) Power (Bowles and Gintis 1992, 326–27)\n\n\nFor agent \\(A\\) to have power over agent \\(B\\) it is sufficient that, by imposing or threatening to impose sanctions on \\(B\\), \\(A\\) is capable of affecting \\(B\\)’s actions in ways that further \\(A\\)’s interests, while \\(B\\) lacks this capacity with respect to \\(A\\)."
   },
   {
     "objectID": "w09/slides.html#prisoners-dilemma",
     "href": "w09/slides.html#prisoners-dilemma",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "Prisoners’ Dilemma",
     "text": "Prisoners’ Dilemma\n\n\n\n\n\n\\(B\\)\n\n\n\n\nSilent\nSnitch\n\n\n\\(A\\)\nSilent\n\\(-1,-1\\)\n\\(-3,\\phantom{-}0\\)\n\n\nSnitch\n\\(\\phantom{-}0, -3\\)\n\\(-10,-10\\)"
   },
   {
     "objectID": "w09/slides.html#assurance-game",
     "href": "w09/slides.html#assurance-game",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "Assurance Game",
     "text": "Assurance Game\nPalanpur, Gujarat, India\n\nThe farmers do not doubt that earlier planting would give them larger harvests, but no one, the farmer explained, is willing to be the first to plant, as the seeds on any lone plot would be quickly eaten by birds…\n[What if you all organized to plant on the same day, to reap rewards of earlier planting while minimizing bird losses (dividing by \\(N\\) instead of \\(1\\))?]\n“If we knew how to do that”, he said, looking up from his hoe at me, “we would not be poor.” (Bowles 2009)"
   },
   {
     "objectID": "w09/slides.html#assurance-game-in-normal-form",
     "href": "w09/slides.html#assurance-game-in-normal-form",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "Assurance Game in Normal Form",
     "text": "Assurance Game in Normal Form\n\n\n\n\n\n\\(B\\)\n\n\n\n\nEarly\nLate\n\n\n\\(A\\)\nEarly\n\\(4, 4\\)\n\\(0, 3\\)\n\n\nLate\n\\(3, 0\\)\n\\(2, 2\\)"
   },
   {
     "objectID": "w09/slides.html#invisible-hand-game-normal-form",
     "href": "w09/slides.html#invisible-hand-game-normal-form",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "Invisible Hand Game (Normal Form)",
     "text": "Invisible Hand Game (Normal Form)\n\n\n\n\n\n\\(B\\)\n\n\n\n\nCorn\nTomatoes\n\n\n\\(A\\)\nCorn\n\\(2, 4\\)\n\\(4, 3\\)\n\n\nTomatoes\n\\(5, 5\\)\n\\(3, 2\\)"
   },
   {
+    "objectID": "w09/slides.html#the-goal-of-policymaking",
+    "href": "w09/slides.html#the-goal-of-policymaking",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "The “Goal” of Policymaking!",
+    "text": "The “Goal” of Policymaking!\n\n\n\n\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nSilent\nSnitch\n\n\n\\(A\\)\nSilent\n\\(-1,-1\\)\n\\(-3,\\phantom{-}0\\)\n\n\nSnitch\n\\(\\phantom{-}0, -3\\)\n\\(-10,-10\\)\n\n\n\n\n\n\nFigure 1: Prisoners’ Dilemma\n\n\n\n\n\n\\(\\leadsto\\)\n\n\n\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nEarly\nLate\n\n\n\\(A\\)\nEarly\n\\(4, 4\\)\n\\(0, 3\\)\n\n\nLate\n\\(3, 0\\)\n\\(2, 2\\)\n\n\n\n\n\n\nFigure 2: Assurance Game\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nCorn\nTomatoes\n\n\n\\(A\\)\nCorn\n\\(2, 4\\)\n\\(4, 3\\)\n\n\nTomatoes\n\\(5, 5\\)\n\\(3, 2\\)\n\n\n\n\n\nFigure 3: Invisible Hand Game\n\n\n\n\n\n \n\n\n\n\nPrisoners’ Dilemma 😫 \\(\\prec\\) Assurance Game 🤨 \\(\\prec\\) Invisible Hand Game 🥳"
+  },
+  {
+    "objectID": "w09/slides.html#prisoners-dilemma-fishers-dilemma",
+    "href": "w09/slides.html#prisoners-dilemma-fishers-dilemma",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Prisoners’ Dilemma (Fishers’ Dilemma)",
+    "text": "Prisoners’ Dilemma (Fishers’ Dilemma)\n\nSingle, unique Nash equilibrium, and it’s Pareto inferior\n\n\n\n\nThe Game\n\n\n\n\n\n\n\\(j\\)\n\n\n\n\nFish 6 Hours\nFish 8 Hours\n\n\n\\(i\\)\nFish 6 Hours\n\\(1.0,1.0\\)\n\\(0.0,\\boxed{1.2}\\)\n\n\nFish 8 Hours\n\\(\\boxed{1.2}, 0.0\\)\n\\(\\boxed{0.4},\\boxed{0.4}\\)\n\n\n\n\nBoxes = Best Responses:\n\\(\\text{BR}_i(6\\textrm{ hr}) = 8\\textrm{ hr}\\), \\(\\text{BR}_i(8\\textrm{ hr}) = 8\\textrm{ hr}\\)\n\\(\\text{BR}_j(6\\textrm{ hr}) = 8\\textrm{ hr}\\), \\(\\text{BR}_j(8\\textrm{ hr}) = 8\\textrm{ hr}\\)\n\n\n\nPareto Dominance"
+  },
+  {
+    "objectID": "w09/slides.html#operationalizing-power",
+    "href": "w09/slides.html#operationalizing-power",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Operationalizing Power",
+    "text": "Operationalizing Power\n\nEqually good outside options \\(\\implies\\) can contract to Pareto-optimal point \\(o^P\\)\n\\(i\\) has better outside options \\(\\implies\\) can make take it or leave it offer to \\(j\\):\n\n“You (\\(j\\)) fish 6 hrs all the time. I (\\(i\\)) fish 6 hrs 41% of time, 8 hrs otherwise”\n\n\n\n\n\nEver so slightly better for \\(j\\) \\(\\implies\\) \\(j\\) accepts (Behavioral econ: \\(j\\) accepts if 41% meets subjective fairness threshold; observed across many many cultures!)\nLater / next week: observe policy with outcome \\(o^{C}_{i \\rightarrow j} \\iff\\) policy values \\(i\\)’s welfare more than \\(j\\)’s welfare (inferred social welfare weights \\(\\omega_i &gt; \\omega_j\\))"
+  },
+  {
+    "objectID": "w09/slides.html#policy-interventions-fish-dilemmas-mapsto-assurance-games",
+    "href": "w09/slides.html#policy-interventions-fish-dilemmas-mapsto-assurance-games",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Policy Interventions: Fish Dilemmas \\(\\mapsto\\) Assurance Games",
+    "text": "Policy Interventions: Fish Dilemmas \\(\\mapsto\\) Assurance Games\n\nNotice: To “escape” prisoners’ dilemma, we had to literally change the rules of the game (permanent intervention)\nFishers’ Dilemma:\n\nNo institutions: \\(a_i, a_j \\in \\{6\\text{ hr}, 8\\text{ hr}\\}\\)\nInstitutions (courts or social norms): \\(\\{\\text{Accept}, \\text{Reject}\\}\\)\n\nDriving “game”:\n\nNo institutions: \\(a_i, a_j \\in \\{\\text{Stop}, \\text{Drive}\\}\\)\nInstitutions (stoplights installed by govt or community agreement): \\(a_i, a_j \\in \\{\\text{Obey Light}, \\text{Run Light}\\}\\)\n\nWithin assurance games, only need to nudge (one-time intervention) \\(\\leadsto\\) new equilibrium (self-enforcing by definition)"
+  },
+  {
+    "objectID": "w09/slides.html#assurance-game-1",
+    "href": "w09/slides.html#assurance-game-1",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Assurance Game",
+    "text": "Assurance Game\n\nMultiple equilibria; the particular outcome we observe is a function of history (path dependency)\nDrive-on-left vs. drive-on-right: Assurance game where neither equilibrium Pareto-dominates other option\n\nSwedish Dagen H: Nudge from \\(a^*_{\\textsf{L}} = (\\textsf{L},\\textsf{L})\\) to \\(a^*_{\\textsf{R}} = (\\textsf{R},\\textsf{R})\\)\nEither eq is self-reinforcing! (Unless you want to crash out)\n\n\n\n\n\nQWERTY vs. DVORAK / Palanpur farmers: Assurance game where observed equilibrium Pareto inferior\n\n\n\n\n\n\n\n\n\\(j\\)\n\n\n\n\nEarly\nLate\n\n\n\\(i\\)\nEarly\n\\(\\boxed{4},\\boxed{4}\\)\n\\(0, \\, 3\\)\n\n\nLate\n\\(3, \\, 0\\)\n\\(\\boxed{2},\\boxed{2}\\)"
+  },
+  {
+    "objectID": "w09/slides.html#invisible-hand-game",
+    "href": "w09/slides.html#invisible-hand-game",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Invisible Hand Game",
+    "text": "Invisible Hand Game\n\nSingle, unique Nash equilibrium, and it’s Pareto efficient\n\\(\\Rightarrow\\) Acting in self interest \\(\\leadsto\\) best possible outcome\n\n\n\n\nIt is not from the benevolence of the butcher, the brewer, or the baker that we expect our meal, but from their regard to their own interest (Smith 1776)\n\n\n\n\n\n\n\n\\(j\\)\n\n\n\n\nCorn\nTomato\n\n\n\\(i\\)\nCorn\n\\(2, \\, 4\\)\n\\(4, \\, 3\\)\n\n\nTomato\n\\(\\boxed{5}, \\boxed{5}\\)\n\\(3, \\, 2\\)\n\n\n\n\n\nWealth of Nations SPOILER: The wealth comes from division of laborand also dumbleydore dies. semperus snake too. and even poor ron the weasel, who never deserved such a fate\n\n\nAn economic transaction is a solved political problem. Economics has gained the title “Queen of the Social Sciences” by choosing solved political problems as its domain. (Lerner 1972)"
+  },
+  {
+    "objectID": "w09/slides.html#first-fundamental-theorem-of-welfare-economics",
+    "href": "w09/slides.html#first-fundamental-theorem-of-welfare-economics",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "First Fundamental Theorem of Welfare Economics",
+    "text": "First Fundamental Theorem of Welfare Economics\nThm: [Antecedents (Coase Conditions)] \\(\\Rightarrow\\) markets produce Pareto-optimal outcomes\n\nEven Jeff finds proof (and corollaries) compelling / convincing / empirically-supported\n\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN 5300) built on what to do when GM Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, market-socialist nationalization"
+  },
+  {
+    "objectID": "w09/slides.html#part-2-suddenly-collides-with-part-1-property-rights",
+    "href": "w09/slides.html#part-2-suddenly-collides-with-part-1-property-rights",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Part 2 Suddenly Collides with Part 1: Property Rights",
+    "text": "Part 2 Suddenly Collides with Part 1: Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air"
+  },
+  {
+    "objectID": "w09/slides.html#externalities-leftrightarrow-costs-of-actions-paid-by-someone-else",
+    "href": "w09/slides.html#externalities-leftrightarrow-costs-of-actions-paid-by-someone-else",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Externalities \\(\\Leftrightarrow\\) Costs of Actions Paid by Someone Else!",
+    "text": "Externalities \\(\\Leftrightarrow\\) Costs of Actions Paid by Someone Else!\n\nFirm \\(S\\) produces amount of steel \\(s\\), pollution \\(x\\)\nFirm \\(F\\) “produces” amount of fish \\(f\\)\n\\(S\\) optimizes\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,x}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)"
+  },
+  {
+    "objectID": "w09/slides.html#functionals",
+    "href": "w09/slides.html#functionals",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Functionals?",
+    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)"
+  },
+  {
+    "objectID": "w09/slides.html#we-live-in-a-society-part-2",
+    "href": "w09/slides.html#we-live-in-a-society-part-2",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "We Live In A Society, Part 2",
+    "text": "We Live In A Society, Part 2\n\nUtilitarianism, Kantian Ethics, and Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\n\\(W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\). \\(\\omega_i\\) is \\(i\\)’s welfare weight\n(Preview) Decomposition: evaluate policies by estimating marginal utility \\(u'_i(x)\\) compared to \\(\\omega_i\\))"
+  },
+  {
+    "objectID": "w09/slides.html#alternative-swf-specifications",
+    "href": "w09/slides.html#alternative-swf-specifications",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Alternative SWF Specifications",
+    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)"
+  },
+  {
+    "objectID": "w09/slides.html#utilitarian-swf",
+    "href": "w09/slides.html#utilitarian-swf",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "Utilitarian SWF",
+    "text": "Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -\\infty\\)?"
+  },
+  {
+    "objectID": "w09/slides.html#the-hard-problem-of-utilitarian-swf",
+    "href": "w09/slides.html#the-hard-problem-of-utilitarian-swf",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "The Hard Problem of Utilitarian SWF",
+    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom?"
+  },
+  {
+    "objectID": "w09/slides.html#we-can-finally-understand-this-image-from-week-1",
+    "href": "w09/slides.html#we-can-finally-understand-this-image-from-week-1",
+    "title": "Week 9: Modeling Data Policies",
+    "section": "We Can Finally Understand This Image from Week 1!",
+    "text": "We Can Finally Understand This Image from Week 1!"
+  },
+  {
     "objectID": "w09/slides.html#references",
     "href": "w09/slides.html#references",
-    "title": "Week 9: From Data Ethics to Data Policy",
+    "title": "Week 9: Modeling Data Policies",
     "section": "References",
-    "text": "References\n\n\nBowles, Samuel. 2009. Microeconomics: Behavior, Institutions, and Evolution. Princeton University Press. https://books.google.com?id=HAiMDU4qv0IC.\n\n\nBowles, Samuel, and Herbert Gintis. 1992. “Power and Wealth in a Competitive Capitalist Economy.” Philosophy & Public Affairs 21 (4): 324–53. https://www.jstor.org/stable/2265369.\n\n\nFrank, Tom. 1994. “DARK AGE: Why Johnny Can’t Dissent.” The Baffler, no. 6: 5–192. https://www.jstor.org/stable/43555671.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152."
+    "text": "References\n\n\nBowles, Samuel. 2009. Microeconomics: Behavior, Institutions, and Evolution. Princeton University Press. https://books.google.com?id=HAiMDU4qv0IC.\n\n\nBowles, Samuel, and Herbert Gintis. 1992. “Power and Wealth in a Competitive Capitalist Economy.” Philosophy & Public Affairs 21 (4): 324–53. https://www.jstor.org/stable/2265369.\n\n\nHart, Oliver. 2017. “Incomplete Contracts and Control.” American Economic Review 107 (7): 1731–52. https://doi.org/10.1257/aer.107.7.1731.\n\n\nHohfeld, Wesley Newcomb. 1913. “Some Fundamental Legal Conceptions as Applied in Judicial Reasoning.” Yale Law Journal 23. https://heinonline.org/HOL/Page?handle=hein.journals/ylr23&id=24&div=&collection=.\n\n\nLerner, Abba P. 1972. “The Economics and Politics of Consumer Sovereignty.” The American Economic Review 62 (1/2): 258–66. https://www.jstor.org/stable/1821551.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSmith, Adam. 1776. The Wealth of Nations. Random House Publishing Group. https://books.google.com?id=Anwp7vTR1usC.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC.\n\n\nWagner, Isabel. 2023. “Privacy Policies Across the Ages: Content of Privacy Policies 1996–2021.” ACM Transactions on Privacy and Security 26 (3): 32:1–32. https://doi.org/10.1145/3590152."
   },
   {
     "objectID": "w01/index.html",

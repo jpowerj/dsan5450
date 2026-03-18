@@ -164,3 +164,74 @@ $$
   * It's a **stochastic system**, so can't say with certainty, but **can** derive results about which initial conditions maximize $\Pr(\omega_i^* = S \mid \omega_{i,0})$...
 
 ---
+
+## Project Management Tings {.smaller}
+
+| Ting | Pros | Cons | Verdict |
+| - | - | - | - |
+| [TasksBoard](https://tasksboard.com/app) | Integrated with Google Workspace (`@georgetown.edu` emails) | Free version useless (no share) | ❌ |
+| [Jira](https://dsan.atlassian.net/jira/) | Maybe most popular? | 30-day free trial | ❌ |
+| [Trello](https://trello.com/) | Simpler than Jira (both owned by Atlassian) | 14-day free trial | ❌ |
+| [Airtable](https://airtable.com/) | Jeff uses this every day | .edu plan doesn't include free users | ❌ |
+| [Notion](https://www.notion.so/) | Jeff uses this v often, .edu plan has hackish way to include users for free | Force yall to sign up for new ting | ✅ |
+
+<center>
+
+👉 [**Notion: Example 5450 Project**](https://jjacobs.notion.site/5450-template) 👈
+
+</center>
+
+---
+
+## The Adversarial-Sisyphusian Problem of Contracts {.crunch-title .title-07}
+
+* Recall Intuitive Problem of Causal Inference: Correlation $\nimplies$ Causation, **but** can do a bunch of work to overcome
+* Adversarial-Sisyphusian Problem is **one level worse** 😱
+  * IPCI: You vs. discovered correlation (inanimate)
+  * ASPC: You vs. companies investing **resources** 💰 into making the problem **harder and harder for you**
+* tldr: The moment you ($N=1$, \$) finally find and "fix" bad thing, company ($N \gg 1$, \$\$\$) adds more ambiguity to re-enable / sends your data to \"new\", \"different\" 3rd-party processor 🥸
+
+---
+
+## The Adversarial-Sisyphusian Problem of Contracts {.crunch-title .title-07 .crunch-ul .crunch-li-8 .text-90}
+
+* Recall Intuitive Problem of Causal Inference: Correlation $\nimplies$ Causation, **but** can do a bunch of work to overcome
+* Adversarial-Sisyphusian Problem is **one level worse** 😱
+  * IPCI: You vs. discovered correlation (inanimate)
+  * ASPC: You vs. companies investing **resources** 💰 into making the problem **harder and harder for you**
+* The moment you ($N=1$, \$) finally find and "fix" bad thing, company ($N \gg 1$, \$\$\$) adds more ambiguity to re-enable / sends your data to "new" 3rd-party processor 🥸
+* Analogy would be: someone making causal chains longer and longer as you're checking causality (map of dancing landscape)
+
+---
+
+## *No Logo* / Why Johnny Can't Dissent {.crunch-title .crunch-ul .crunch-blockquote .title-08}
+
+* Naomi Klein's *No Logo* (1999) sparked a nationwide boycott of companies employing sweatshop labor
+* Great success; all companies responded and (out of the kindness of their hearts) cut ties with all of the sweatshops
+* Instead, they established ties with supply chain management companies, who made the profit-maximizing decision to re-establish ties with all of the sweatshops
+
+> "You can't outrun them, or even stay ahead of them for very long: it's their racetrack, and that's them waiting at the finish line to congratulate you" [@frank_dark_1994]
+
+---
+
+## The Intuitive Problem of Contracts {.smaller .crunch-ul .crunch-title .crunch-quarto-figure .crunch-images}
+
+::: {layout="[60,40]"}
+::: {#intuitive-problem-left}
+
+* Hard to read, harder to understand, possibly rly bad stuff in them, won't know until you read + understand
+* Solution (in theory... in modern liberal market-based democracies): Collective action!
+* Option 1 (Exit): Find better platform, use it instead $\Rightarrow$ company dies (competitive market)
+* Option 2 (Voice): Raise a fuss, hoot and holler, make a big stink about it, etc.
+  * $\Rightarrow$ (2a) Company will change/remove it to avoid embarrassment and/or prevent Option 1 becoming an option
+  * $\Rightarrow$ (2b) Government intervention (hypothetical functional government)
+
+:::
+::: {#intuitive-problem-right}
+
+![](images/exit-voice-page.jpeg){fig-align="center" width="240"}
+
+![](images/corbyn_down.jpeg){fig-align="center" width="240"}
+
+:::
+:::
