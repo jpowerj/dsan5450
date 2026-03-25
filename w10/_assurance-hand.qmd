@@ -1,0 +1,17 @@
+
+<div id='fig-assurance'>
+
+<center>
+
+{{< include ../_components/_assurance.qmd >}}
+
+</center>
+
+Assurance Game
+</div>
+<div id='fig-invisible-hand'
+
+{{< include ../_components/_invisible-hand.qmd >}}
+
+Invisible Hand Game
+</div>

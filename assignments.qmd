@@ -113,7 +113,6 @@ gen_points_table(hw1_url)
 
 </div>
 
-
 ## HW2
 
 <div style="height: 400px !important; max-height: 400px !important; overflow-y: scroll !important;">
@@ -128,4 +127,19 @@ gen_points_table(hw2_url)
 
 </div>
 
+## HW3A
+
+<div style="height: 400px !important; max-height: 400px !important; overflow-y: scroll !important;">
+
+```{r}
+#| label: hw3-points-table
+#| warning: false
+#| echo: false
+hw3_url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6bHq2sBtMyL5TiOIl2zVqPdAL9B4tdNwlPdkm1QGnVuOFXb7GfYx-fCVTWxCepWtnQAQIvqAJvwSM/pub?output=csv"
+gen_points_table(hw3_url)
+```
+
+</div>
+
 :::
+Direct link to notebook: https://colab.research.google.com/drive/1k8xYScEUqh2Kg6Wdv_DCErIefP5ViqGI
