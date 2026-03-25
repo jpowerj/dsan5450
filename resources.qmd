@@ -3,6 +3,10 @@ title: "Resources"
 bibliography: "_DSAN5450.bib"
 ---
 
+## Observable Notebooks
+
+The observable notebooks used throughout the course (as in-class demos, extra writeups, etc.) can be found in the [DSAN 5450 Observable Notebook Collection](https://observablehq.com/collection/@jpowerj/data-ethics-and-policy).
+
 ## Previous Term Recordings
 
 * Recordings of all lectures from the *Spring 2025* semester can be found [here](https://georgetown.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=d240de45-5abb-4eea-8b13-b2590063001d)

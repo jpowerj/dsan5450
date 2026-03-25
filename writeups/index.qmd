@@ -19,3 +19,4 @@ listing:
   #date-format: "dddd MMM D, YYYY, HH:mm:ss"
 ---
 
+"Static" writeups written in Quarto live here; interactive Observable notebooks are collected in the [DSAN 5450 Observable Notebook Collection](https://observablehq.com/collection/@jpowerj/data-ethics-and-policy)

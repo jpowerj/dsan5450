@@ -251,6 +251,30 @@ Pareto Dominance
 
 > An economic transaction is a **solved political problem**. Economics has gained the title "Queen of the Social Sciences" by choosing solved political problems as its domain. [@lerner_economics_1972]
 
+## Since We've Already Opened the Pandora's Box of Utility... {.smaller .crunch-title}
+
+![From Ryan Safner's [*History of Economic Thought: Welfare Economics*](https://thoughtf22.classes.ryansafner.com/slides/3.7-slides.pdf)](images/single-utility.svg){fig-align="center"}
+
+* [Bluey]{style="color: blue;"} obtains **greater utility** within the **same budget** by moving from $E^1$ to $O^1$
+
+## Two Can Play This Game... {.smaller .crunch-title}
+
+![](images/dual-utility.svg){fig-align="center"}
+
+* [Bluey]{style="color: blue;"} obtains **greater utility** within the **same budget** by moving from $E^1$ to $O^1$
+* [Greenie]{style="color: limegreen;"} obtains **greater utility** within the **same budget** by moving from $E^2$ to $O^2$
+
+## The Edgeworth Box
+
+![Rotate [Greenie]{style="color: limegreen;"}'s box 180&deg; and superimpose onto [Bluey]{style="color: blue;"}'s](images/edgeworth.svg){fig-align="center"}
+
+## The Contract(!) Curve {.smaller .crunch-title}
+
+![](images/contract-curve.svg){fig-align="center"}
+
+* From **initial endowment** $E$, if allowed to trade, "rational" players can reach any **allocation** along dashed **contract curve** from $G$ to $B$... *(Why not $A$ or $H$?)*
+* So, what determines **which** of these points they end up at? [*(Middle name hint)*](./images/redacted.jpg)
+
 ## First Fundamental Theorem of Welfare Economics {.smaller .crunch-title .title-10 .crunch-p}
 
 <center>
@@ -454,8 +478,8 @@ $$
 
 | | |
 |:-:|:-:|
-| **Cluster 1**<br>The "Data-Ethical Toolkit"<br>(Christy) | **Cluster 2**<br>Fair Machine Learning<br>(Wendy) |
-| **Cluster 3**<br>Privacy<br>(Ellie) | **Cluster 4**<br>Policy Evaluation<br>(Jeff) |
+| **Cluster 1**<br>The "Data-Ethical Toolkit"<br>(Christy) | **Cluster 2**<br>Fair Machine Learning<br>(Ellie) |
+| **Cluster 3**<br>Privacy x Policy Evaluation<br>(Jeff) | |
 
 ## References
 

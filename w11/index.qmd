@@ -121,7 +121,7 @@ source("../dsan-globals/_globals.r")
 
 ::: {#pareto}
 
-> *[Economic inequality] is a social law, something in the nature of man.* [@pareto1896cours]
+> *[Economic inequality] is a social law, something in the nature of man.* [@pareto_cours_1896]
 
 :::
 ::: {#notpareto}
@@ -143,7 +143,7 @@ source("../dsan-globals/_globals.r")
 * Like how **Gauss-Markov Assumptions** $\Rightarrow$ OLS is BLUE, yet our whole field (at least, a whole class, DSAN5300) built on what to do when G-M Assumptions **don't hold**
 * For policy development, helpful to think through
   * <i class='bi bi-1-circle'></i> which cases "break" FFT ([more honored in the breach](https://en.wiktionary.org/wiki/more_honored_in_the_breach))
-  * <i class='bi bi-2-circle'></i> How each violation might be "fixed" through policy^[Recall W01: Earned Income Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation $\in \text{Policy Set}$; Black Panther Community Police Patrols, Blowing Up Oil Pipelines [@malm2021how], Bolshevik Revolution also $\in \text{Policy Set}$]
+  * <i class='bi bi-2-circle'></i> How each violation might be "fixed" through policy^[Recall W01: Earned Income Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation $\in \text{Policy Set}$; Black Panther Community Police Patrols, Blowing Up Oil Pipelines [@malm_how_2021], Bolshevik Revolution also $\in \text{Policy Set}$]
 * Our violation: **No externalities** assumption
   * Possible policy "fixes": property rights, market-socialist nationalization
 
