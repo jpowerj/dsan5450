@@ -1,0 +1,34 @@
+
+```{=html}
+<table class='game-table'>
+<thead>
+</thead>
+<tbody>
+<tr>
+  <td class='game-label'></td>
+  <td class='game-label'></td>
+  <td colspan="3" align="center" class='game-label'><span data-qmd="$\color{#e69f00}B$"></span></td>
+</tr>
+<tr>
+  <td class='game-label td-nb'></td>
+  <td class='game-label'></td>
+  <td class='game-label' align='center'>Corn</td>
+  <td></td>
+  <td class='game-label' align='center'>Taro</td>
+</tr>
+<tr class='td-nb'>
+  <td rowspan="2" style="vertical-align: middle;" class='game-label td-nb'><span data-qmd="$\color{#0072b2}A$"></span></td>
+  <td class='game-label'>Corn</td>
+  <td class='game-cell'><span data-qmd="$\color{#0072b2}\cancel{2}\color{black}{,} \color{#e69f00}\boxed{\mathbf{4}}$"></span></td>
+  <td></td>
+  <td class='game-cell'><span data-qmd="$\color{#0072b2}\boxed{\mathbf{4}}\color{black}{,} \color{#e69f00}\cancel{3}$"></span></td>
+</tr>
+<tr>
+  <td class='game-label'>Taro</td>
+  <td class='game-cell'><span data-qmd="$\color{#0072b2}\boxed{\mathbf{5}}\color{black}{,} \color{#e69f00}\boxed{\mathbf{5}}$"></span></td>
+  <td></td>
+  <td class='game-cell'><span data-qmd="$\color{#0072b2}\cancel{3}\color{black}{,} \color{#e69f00}\cancel{2}$"></span></td>
+</tr>
+</tbody>
+</table>
+```

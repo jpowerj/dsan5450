@@ -1169,7 +1169,7 @@
     "href": "w06/index.html#the-result-64-steps",
     "title": "Week 6: Context-Sensitive Fairness",
     "section": "The Result: 64 Steps",
-    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))",
+    "text": "The Result: 64 Steps\n\n\nCode\nlibrary(ggExtra)\nwp2 &lt;- gen_walkplot(5000,64,0.008) +\n  ylim(-30,30)\n\n\nScale for y is already present.\nAdding another scale for y, which will replace the existing scale.\n\n\nCode\nggMarginal(wp2, margins = \"y\", type = \"histogram\", yparams = list(binwidth = 1))\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).\n\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).",
     "crumbs": [
       "Week 6: {{< var w06.date-md >}}"
     ]
@@ -1589,18 +1589,67 @@
     ]
   },
   {
-    "objectID": "w11/slides.html#operationalizing-power",
-    "href": "w11/slides.html#operationalizing-power",
+    "objectID": "w11/slides.html#where-we-left-off",
+    "href": "w11/slides.html#where-we-left-off",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Operationalizing Power",
-    "text": "Operationalizing Power\n\nEqually good outside options \\(\\implies\\) can contract to Pareto-optimal point \\(o^P\\)\n\\(i\\) has better outside options \\(\\implies\\) can make take it or leave it offer to \\(j\\):\n\n“You (\\(j\\)) fish 6 hrs all the time. I (\\(i\\)) fish 6 hrs 41% of time, 8 hrs otherwise”\n\n\n\n\n\nEver so slightly better for \\(j\\) \\(\\implies\\) \\(j\\) accepts (Behavioral econ: \\(j\\) accepts if 41% meets subjective fairness threshold; observed across many many cultures!)\nLater / next week: observe policy with outcome \\(o^{C}_{i \\rightarrow j} \\iff\\) policy values \\(i\\)’s welfare more than \\(j\\)’s welfare (inferred social welfare weights \\(\\omega_i &gt; \\omega_j\\))"
+    "section": "Where We Left Off…",
+    "text": "Where We Left Off…\nPrisoners’ Dilemma feels like a silly math/econ problem at first… then you get brainwashed by pol econ PhD and suddenly see it at the “core” of 95% of global issues\n\n\\[\n\\DeclareMathOperator*{\\argmax}{argmax}\n\\DeclareMathOperator*{\\argmin}{argmin}\n\\newcommand{\\bigexp}[1]{\\exp\\mkern-4mu\\left[ #1 \\right]}\n\\newcommand{\\bigexpect}[1]{\\mathbb{E}\\mkern-4mu \\left[ #1 \\right]}\n\\newcommand{\\definedas}{\\overset{\\small\\text{def}}{=}}\n\\newcommand{\\definedalign}{\\overset{\\phantom{\\text{defn}}}{=}}\n\\newcommand{\\eqeventual}{\\overset{\\text{eventually}}{=}}\n\\newcommand{\\Err}{\\text{Err}}\n\\newcommand{\\expect}[1]{\\mathbb{E}[#1]}\n\\newcommand{\\expectsq}[1]{\\mathbb{E}^2[#1]}\n\\newcommand{\\fw}[1]{\\texttt{#1}}\n\\newcommand{\\given}{\\mid}\n\\newcommand{\\green}[1]{\\color{green}{#1}}\n\\newcommand{\\heads}{\\outcome{heads}}\n\\newcommand{\\iid}{\\overset{\\text{\\small{iid}}}{\\sim}}\n\\newcommand{\\lik}{\\mathcal{L}}\n\\newcommand{\\loglik}{\\ell}\n\\DeclareMathOperator*{\\maximize}{maximize}\n\\DeclareMathOperator*{\\minimize}{minimize}\n\\newcommand{\\mle}{\\textsf{ML}}\n\\newcommand{\\nimplies}{\\;\\not\\!\\!\\!\\!\\implies}\n\\newcommand{\\orange}[1]{\\color{orange}{#1}}\n\\newcommand{\\outcome}[1]{\\textsf{#1}}\n\\newcommand{\\param}[1]{{\\color{purple} #1}}\n\\newcommand{\\pgsamplespace}{\\{\\green{1},\\green{2},\\green{3},\\purp{4},\\purp{5},\\purp{6}\\}}\n\\newcommand{\\pedge}[2]{\\require{enclose}\\enclose{circle}{~{#1}~} \\rightarrow \\; \\enclose{circle}{\\kern.01em {#2}~\\kern.01em}}\n\\newcommand{\\pnode}[1]{\\require{enclose}\\enclose{circle}{\\kern.1em {#1} \\kern.1em}}\n\\newcommand{\\ponode}[1]{\\require{enclose}\\enclose{box}[background=lightgray]{{#1}}}\n\\newcommand{\\pnodesp}[1]{\\require{enclose}\\enclose{circle}{~{#1}~}}\n\\newcommand{\\purp}[1]{\\color{purple}{#1}}\n\\newcommand{\\sign}{\\text{Sign}}\n\\newcommand{\\spacecap}{\\; \\cap \\;}\n\\newcommand{\\spacewedge}{\\; \\wedge \\;}\n\\newcommand{\\tails}{\\outcome{tails}}\n\\newcommand{\\Var}[1]{\\text{Var}[#1]}\n\\newcommand{\\bigVar}[1]{\\text{Var}\\mkern-4mu \\left[ #1 \\right]}\n\\]\n\n\n\n\n\n\n\n\n\nBowles & Jayadev (2014), “One Nation Under Guard”, NYT\n\n\n\n\n\n\nNewfoundland: cod landings in tons (1851–2014): In the 1960s new fishing technologies allowed a dramatic increase in cod fishing, far outpacing the capacity of the fish to reproduce, and leading to total collapse by 1992 when the Canadian government banned fishing entirely. Restoration of fishing stocks to the sustainable levels of the past may occur by the 2030s."
   },
   {
-    "objectID": "w11/slides.html#since-weve-already-opened-the-pandoras-box-of-utility",
-    "href": "w11/slides.html#since-weve-already-opened-the-pandoras-box-of-utility",
+    "objectID": "w11/slides.html#fishers-dilemma-our-core-prisoners-dilemma",
+    "href": "w11/slides.html#fishers-dilemma-our-core-prisoners-dilemma",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Since We’ve Already Opened the Pandora’s Box of Utility…",
-    "text": "Since We’ve Already Opened the Pandora’s Box of Utility…\n\nFrom Ryan Safner’s History of Economic Thought: Welfare Economics\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)"
+    "section": "Fishers’ Dilemma (Our “Core” Prisoners’ Dilemma)",
+    "text": "Fishers’ Dilemma (Our “Core” Prisoners’ Dilemma)\nSingle, unique Nash equilibrium, and it’s Pareto inferior(looming in background: unsustainable if total hours/day &gt; 14)\n\n\n\nThe “Iterated Elimination” Result\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(\\color{#e69f00}B\\)\n\n\n\n\nFish 6h\n\nFish 8h\n\n\n\\(\\color{#0072b2}A\\)\nFish 6h\n\\(\\color{#0072b2}\\cancel{1}\\color{black}, \\,\\)\n\\(\\color{#e69f00}\\cancel{1}\\)\n\n\\(\\color{#0072b2}\\cancel{0}\\color{black},\\)\n\\(\\color{#e69f00}\\boxed{\\mathbf{1.2}}\\)\n\n\nFish 8h\n\\(\\color{#0072b2}\\boxed{\\color{#0072b2}\\mathbf{1.2}}\\color{black}, \\,\\)\n\\(\\color{#e69f00}\\cancel{0}\\)\n\n\\(\\color{#0072b2}\\boxed{\\color{#0072b2}\\mathbf{0.4}}\\color{black},\\)\n\\(\\color{#009e73}\\boxed{\\color{#e69f00}\\mathbf{0.4}}\\)\n\n\n\nBoxes = Best Responses:\n\n\\[\n\\begin{aligned}\n{\\color{#0072b2}\\text{BR}_A}({\\color{#e69f00}\\overset{B}{6\\textrm{h}}}) &= {\\color{#0072b2}8\\textrm{h}}, \\; {\\color{#0072b2}\\text{BR}_A}({\\color{#e69f00}\\overset{B}{8\\textrm{h}}}) = {\\color{#0072b2}8\\textrm{h}} \\\\\n{\\color{#e69f00}\\text{BR}_B}(\n  {\\color{#0072b2}\\underset{A}{6\\textrm{h}}}\n) &= {\\color{#e69f00}8\\textrm{h}}, \\; {\\color{#e69f00}\\text{BR}_B}(\n  {\\color{#0072b2}\\underset{A}{8\\textrm{h}}}\n) = {\\color{#e69f00}8\\textrm{h}}\n\\end{aligned}\n\\]\nBest response is always \\(\\text{8h}\\), no matter what other player does!\n\\[\n\\begin{aligned}\n\\implies &{\\color{#0072b2}\\mathbb{E}[u_A]} = {\\color{#e69f00}\\mathbb{E}[u_B]} = 0.4 \\text{ for now}, \\\\\n&\\leadsto \\; ? \\text{ once fishery collapses (}\\textstyle\\sum\\text{hrs} = 16\\text{)}\n\\end{aligned}\n\\]\n\n\nPareto Dominance"
+  },
+  {
+    "objectID": "w11/slides.html#policy-intervention-allow-contracts",
+    "href": "w11/slides.html#policy-intervention-allow-contracts",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Policy Intervention : Allow Contracts",
+    "text": "Policy Intervention : Allow Contracts\n\\(\\leadsto\\) Operationalizing Power as “second best” outside option(s)\n\nEqually good outside options \\(\\implies\\) can contract to Pareto-optimal point \\(o^P\\)\n\\(B\\) has better outside options \\(\\implies\\) can make take it or leave it offer to \\(A\\):\n\n“You (\\(A\\)) fish 6 hrs all the time. I (\\(B\\)) fish 6 hrs 41% of time, 8 hrs otherwise”\n\n\n\n\nSlightly better for \\(A\\) \\(\\implies\\) \\(A\\) accepts:\n\\[\n\\begin{aligned}\n\\mathbb{E}[u_A(a_A = \\textsf{Reject})] &= \\overset{\\text{STTP}}{\\boxed{0.4}} \\; \\text{ (prev slide) } \\overset{\\text{LTTP}}{\\color{#e69f00}\\boxed{\\color{black}\\leadsto -\\infty}} \\\\\n\\mathbb{E}[u_A(a_A = \\textsf{Accept})] &= 0.41\\cdot 1 + 0.59 \\cdot 0 = \\boxed{0.41} \\\\\n\\mathbb{E}[u_B(a_A = \\textsf{Reject})] &= \\boxed{0.4} \\; \\text{ (prev slide) } {\\color{#e69f00}\\boxed{\\color{black}\\leadsto 0.39}} \\\\\n\\mathbb{E}[u_B(a_A = \\textsf{Accept})] &= 0.41\\cdot 1 + 0.59 \\cdot 1.2 = \\boxed{1.118}\n\\end{aligned}\n\\]\n \\(B\\)’s offer = credible threat in both short and long term; same threat from \\(A\\) would not be credible (\\(B\\) knows \\(A\\) would eventually die: \\(u_A \\leadsto -\\infty\\))\n HW4: observe policy outcome \\(o^{\\text{TIOLI}}_{B \\rightarrow A}\\) \\(\\Leftrightarrow\\) social welfare weights \\(\\omega_B &gt; \\omega_A\\)"
+  },
+  {
+    "objectID": "w11/slides.html#policy-intervention-fines-for-overfishing",
+    "href": "w11/slides.html#policy-intervention-fines-for-overfishing",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Policy Intervention : Fines for Overfishing",
+    "text": "Policy Intervention : Fines for Overfishing\n\\(\\leadsto\\) Weber’s descriptive definition of “The State”: Agent with Monopoly on Legal Use of Force (Weber 1919) (remember him?)\n\nNotice: Previous “intervention” was actually self-enforcing! However, outcome was…\n\n Determined entirely by asymmetric power, and\n Took no account of anyone in society besides two fishers!\n(Thought experiment: if both had “good” outside options, best for them could be fish cod to extinction then move on to “second-best” option \\(u = 0.4 \\leadsto 0.39\\))\n\nIf we identify [asymmetry of power \\(\\leadsto\\) asymmetry of outcomes] as harm bc unfair (reflective equilibrium), one “follow-up” policy intervention is make \\(A\\)’s outside options better (welfare, job retraining, etc… but who sets these up?)\nIf we identify [ecological damage] as harm, this forms independent “dimension” of policy analysis: if coastal waters are “public good” of Canada, may need some sort of agent representing Canada, to govern use of resource 🤔 some sort of… representative government 🤔 with power to issue fines / ban fishing 🤔"
+  },
+  {
+    "objectID": "w11/slides.html#fines-are-easy-from-economic-perspective",
+    "href": "w11/slides.html#fines-are-easy-from-economic-perspective",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "…Fines are “Easy” from Economic Perspective",
+    "text": "…Fines are “Easy” from Economic Perspective\n\nAn economic transaction is a solved political problem. Economics has gained the title “Queen of the Social Sciences” by choosing solved political problems as its domain. (Lerner 1972)\n\n\nIf we assume a “well-functioning” state—power to enforce fines, no corruption, etc.—and that this state has “agreed” to use fines to resolve the issue…\nCalculation of “optimal fines” is a “solved” problem in economics (like encryption in CS): A Pigouvian tax just fines agent \\(B\\) an amount equal to the externality(!) their defection imposes on \\(A\\), then redistributes this collected fine back to \\(A\\):\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(\\color{#e69f00}B\\)\n\n\n\n\nFish 6h\n\nFish 8h\n\n\n\\(\\color{#0072b2}A\\)\nFish 6h\n\\(\\color{#0072b2}\\cancel{1}\\color{black}, \\,\\)\n\\(\\color{#e69f00}\\cancel{1}\\)\n\n\\(\\underset{(+1)}{\\color{#0072b2}\\cancel{0}\\color{black}}\\underset{\\; \\leftarrow\\vphantom{(+1)}}{,}\\)\n\\(\\underset{(-1)}{\\color{#e69f00}\\boxed{\\color{#e69f00}\\mathbf{1.2}}}\\)\n\n\nFish 8h\n\\(\\underset{(-1)}{\\color{#0072b2}\\boxed{\\color{#0072b2}\\mathbf{1.2}}}\\color{black}\\underset{\\rightarrow\\vphantom{(+1)}}{,} \\,\\)\n\\(\\underset{(+1)}{\\color{#e69f00}\\cancel{0}}\\)\n\n\\(\\color{#0072b2}\\boxed{\\mathbf{0.4}}\\color{black},\\)\n\\(\\color{#e69f00}\\boxed{\\mathbf{0.4}}\\)\n\n\n\n\n\nFigure 1: Original Fishers’ Dilemma, with Pigou fines in parentheses under “agreement-violating” outcomes\n\n\n\n\n\n\\(\\leadsto\\)New game with tax applied\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(\\color{#e69f00}B\\)\n\n\n\n\nFish 6h\n\nFish 8h\n\n\n\\(\\color{#0072b2}A\\)\nFish 6h\n\\(\\color{#0072b2}\\boxed{\\mathbf{1}}\\color{black}, \\,\\)\n\\(\\color{#e69f00}\\boxed{\\mathbf{1}}\\)\n\n\\(\\color{#0072b2}\\boxed{\\mathbf{1}}\\color{black},\\)\n\\(\\color{#e69f00}\\cancel{0.2}\\)\n\n\nFish 8h\n\\(\\color{#0072b2}\\cancel{0.2}, \\,\\)\n\\(\\color{#e69f00}\\boxed{\\mathbf{1}}\\)\n\n\\(\\color{#0072b2}\\cancel{0.4}\\color{black},\\)\n\\(\\color{#e69f00}\\cancel{0.4}\\)\n\n\n\n\n\nFigure 2: The Fishers’ Dilemma with a Pigou tax for unilaterally Fishing 8h"
+  },
+  {
+    "objectID": "w11/slides.html#policy-interventions-fish-dilemmas-leadsto-assurance-games",
+    "href": "w11/slides.html#policy-interventions-fish-dilemmas-leadsto-assurance-games",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Policy Interventions: Fish Dilemmas \\(\\leadsto\\) Assurance Games",
+    "text": "Policy Interventions: Fish Dilemmas \\(\\leadsto\\) Assurance Games\n\nTo “escape” prisoners’ dilemma, we had to change the rules of the game (permanently: a one-time fine would not work)\nFishers’ Dilemma:\n\nNo institutions: \\(a_A, a_B \\in \\{6\\text{ hr}, 8\\text{ hr}\\}\\)\nInstitutions (courts or social norms): \\(\\{\\text{Accept}, \\text{Reject}\\}\\)\n\nDriving “game” (two cars pull up at intersection):\n\nNo institutions: \\(a_A, a_B \\in \\{\\text{Stop}, \\text{Drive}\\}\\)\nInstitutions (stoplights installed by govt or community agreement): \\(a_A, a_B \\in \\{\\text{Obey Light}, \\text{Run Light}\\}\\)\n\nIf policy issue well-modeled by Assurance Game, however, may only need to “nudge” (one-time intervention) \\(\\leadsto\\) new permanent Pareto-optimal equilibrium (Nash \\(\\implies\\) self-enforcing!)"
+  },
+  {
+    "objectID": "w11/slides.html#assurance-game",
+    "href": "w11/slides.html#assurance-game",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Assurance Game",
+    "text": "Assurance Game\n\nMultiple equilibria; the particular outcome we observe is a function of history (path dependency)\nDrive-on-left vs. drive-on-right: Assurance game where neither equilibrium Pareto-dominates other option\n\nSwedish Dagen H: Nudge from \\(o^*_{\\textsf{L}} = o(\\textsf{L},\\textsf{L})\\) to \\(o^*_{\\textsf{R}} = o(\\textsf{R},\\textsf{R})\\)\nEither eq is self-reinforcing! (Unless you… like dying)\n\n\n\n\n\nQWERTY vs. DVORAK / Palanpur farmers: Assurance game where observed equilibrium Pareto inferior\n\n\n\n\n\n\n\n\n\\(\\color{#e69f00}B\\)\n\n\n\n\nEarly\nLate\n\n\n\\(\\color{#0072b2}A\\)\nEarly\n\\(\\color{#0072b2}\\boxed{\\mathbf{4}}\\color{black}{,} \\color{#e69f00}\\boxed{\\mathbf{4}}\\)\n\\(\\color{#0072b2}\\cancel{0}\\color{black}{,} \\color{#e69f00}\\cancel{3}\\)\n\n\nLate\n\\(\\color{#0072b2}\\cancel{3}\\color{black}{,} \\color{#e69f00}\\cancel{0}\\)\n\\(\\color{#0072b2}\\boxed{\\mathbf{2}}\\color{black}{,} \\color{#e69f00}\\boxed{\\mathbf{2}}\\)"
+  },
+  {
+    "objectID": "w11/slides.html#invisible-hand-game",
+    "href": "w11/slides.html#invisible-hand-game",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Invisible Hand Game",
+    "text": "Invisible Hand Game\n\nSingle, unique Nash equilibrium, and it’s Pareto efficient\n\\(\\Rightarrow\\) Acting in self interest \\(\\leadsto\\) best possible outcome\n\n\n\n\nIt is not from the benevolence of the butcher, the brewer, or the baker that we expect our meal, but from their regard to their own interest (Smith 1776)\n\n\n\n\n\n\n\n\\(\\color{#e69f00}B\\)\n\n\n\n\nCorn\n\nTaro\n\n\n\\(\\color{#0072b2}A\\)\nCorn\n\\(\\color{#0072b2}\\cancel{2}\\color{black}{,} \\color{#e69f00}\\boxed{\\mathbf{4}}\\)\n\n\\(\\color{#0072b2}\\boxed{\\mathbf{4}}\\color{black}{,} \\color{#e69f00}\\cancel{3}\\)\n\n\nTaro\n\\(\\color{#0072b2}\\boxed{\\mathbf{5}}\\color{black}{,} \\color{#e69f00}\\boxed{\\mathbf{5}}\\)\n\n\\(\\color{#0072b2}\\cancel{3}\\color{black}{,} \\color{#e69f00}\\cancel{2}\\)\n\n\n\n\n\nWealth of Nations SPOILER: The wealth comes from division of laborand also dumbleydore, and semperus snake, and even poor ron the weasel, who never deserved such a fate\n\n\n[…I am once again reminding you that] An economic transaction is a solved political problem. Economics gained the title “Queen of the Social Sciences” by choosing solved political problems as its domain"
+  },
+  {
+    "objectID": "w11/slides.html#utility-function-using-the-ordering-of-numbers-to-encode-the-ordering-of-preferences",
+    "href": "w11/slides.html#utility-function-using-the-ordering-of-numbers-to-encode-the-ordering-of-preferences",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Utility Function: Using the Ordering of Numbers to “Encode” the Ordering of Preferences",
+    "text": "Utility Function: Using the Ordering of Numbers to “Encode” the Ordering of Preferences\n\nFrom Ryan Safner’s History of Economic Thought: Welfare Economics\nBluey obtains greater utility despite paying the same cost by moving from \\(E\\) to \\(O\\)\n\\(E\\) denotes “Initial Endowment”, \\(O\\) denotes “Final Outcome”"
   },
   {
     "objectID": "w11/slides.html#two-can-play-this-game",
@@ -1614,21 +1663,21 @@
     "href": "w11/slides.html#the-edgeworth-box",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "The Edgeworth Box",
-    "text": "The Edgeworth Box\n\nRotate Greenie’s box 180° and superimpose onto Bluey’s"
+    "text": "The Edgeworth Box\nRotate Greenie’s box 180° and superimpose onto Bluey’s:"
   },
   {
-    "objectID": "w11/slides.html#the-contract-curve",
-    "href": "w11/slides.html#the-contract-curve",
+    "objectID": "w11/slides.html#pareto-frontier-contract-curve",
+    "href": "w11/slides.html#pareto-frontier-contract-curve",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "The Contract(!) Curve",
-    "text": "The Contract(!) Curve\n\n\nFrom initial endowment \\(E\\), if allowed to trade, “rational” players can reach any allocation along dashed contract curve from \\(G\\) to \\(B\\)… (Why not \\(A\\) or \\(H\\)?)\nSo, what determines which of these points they end up at? (Middle name hint)"
+    "section": "Pareto Frontier = Contract(!) Curve",
+    "text": "Pareto Frontier = Contract(!) Curve\n\n\nFrom initial endowment \\(E\\), if allowed to trade, “rational” players can reach any allocation along dashed contract curve from \\(G\\) to \\(B\\)… (Why not \\(A\\) or \\(H\\)?)\nSo, what determines which of these points they end up at? (Middle name hint)"
   },
   {
     "objectID": "w11/slides.html#first-fundamental-theorem-of-welfare-economics",
     "href": "w11/slides.html#first-fundamental-theorem-of-welfare-economics",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "First Fundamental Theorem of Welfare Economics",
-    "text": "First Fundamental Theorem of Welfare Economics\n\nTheorem: [Antecedents (Coase Conditions)] \\(\\Rightarrow\\) markets produce Pareto-optimal outcomes\n\n\nEven commie Jeff finds proof+corollaries compelling / convincing / empirically-supported\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations"
+    "text": "First Fundamental Theorem of Welfare Economics\n\n[Antecedents (Coase Conditions)] \\(\\Rightarrow\\) «markets produce Pareto-optimal outcomes»\n\n\nEven Jeff finds proof (and corollaries) compelling / convincing / empirically-supported\n\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN 5300) built on what to do when GM Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, market-socialist nationalization"
   },
   {
     "objectID": "w11/slides.html#payoff-from-jeff-pointing-at-things-saying-antecedents-500x",
@@ -1638,25 +1687,32 @@
     "text": "Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x\n Consequent only true if antecedents hold! Otherwise, proper answer becomes “It depends! Let’s see if data can help us find out!” (Will minimum wage hurt/help blah blah blah… “It depends! Tell me the details!”) (Will new condos blah blah blah yimby nimby…) (Will re-allocating welfare budget from \\(X\\) to \\(Y\\) blah blah blah… 👀 HW4)\n\n\n\n\n[Economic inequality] is a social law, something in the nature of man. (Pareto 1896)\n\n\n\n\nWe’ve got a [thing] made by men, isn’t that something we should be able to change? (Steinbeck 1939)\n\n\n\n\n Coase Antecedents \\(\\approx\\) equalized power!\n\nEx 1: Perfect Competition \\(\\Rightarrow\\) (\\(\\neg\\) monopoly) \\(\\wedge\\) (\\(\\neg\\) monopsony) \\(\\Rightarrow\\) everyone’s outside option equally good \\(\\Rightarrow\\) no take-it-or-leave-it coercion possible (try to coerce, I’ll say no and go to one of the other \\(\\infty\\) people offering equally good options)\nEx 2: No Informational Asymmetries \\(\\Rightarrow\\) Can’t “trick me” into buying defective product (Akerlof (1970), “Market for Lemons”)"
   },
   {
-    "objectID": "w11/slides.html#part-2-suddenly-collides-with-part-1-property-rights",
-    "href": "w11/slides.html#part-2-suddenly-collides-with-part-1-property-rights",
+    "objectID": "w11/slides.html#so-what-happens-when-antecedents-dont-hold",
+    "href": "w11/slides.html#so-what-happens-when-antecedents-dont-hold",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Part 2 Suddenly Collides with Part 1: Property Rights",
-    "text": "Part 2 Suddenly Collides with Part 1: Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air"
+    "section": "So… What Happens When Antecedents Don’t Hold?",
+    "text": "So… What Happens When Antecedents Don’t Hold?\n\n\\(\\neg\\)(Coase Antecedents) \\(\\Rightarrow\\) Unequal Power… Puts us in realm of Descriptive Ethics!\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. [Thucydides (2013); c. 411 BC] (Think of necessary vs. sufficient conditions!)\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN5300) built on what to do when G-M Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy1\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, Yugoslav nationalization\n\n\nRecall W01: [Earned Income Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation] \\(\\in \\text{Policy Set}\\); [Black Panther Community Police Patrols, Blowing Up Oil Pipelines (Malm 2021), Bolshevik Revolution] also \\(\\in \\text{Policy Set}\\)"
+  },
+  {
+    "objectID": "w11/slides.html#policy-intervention-property-rights",
+    "href": "w11/slides.html#policy-intervention-property-rights",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Policy Intervention : Property Rights",
+    "text": "Policy Intervention : Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air; From Varian (2006)"
   },
   {
     "objectID": "w11/slides.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
     "href": "w11/slides.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?",
-    "text": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?\n\nThe key: Forces agent \\(i\\) to pay a cost for inflicting disutility on agent \\(j\\)!\n(Here plz note: “\\(X\\) sometimes enables \\(Y\\)” does not mean \\(X\\) is a necessary or sufficient condition for \\(Y\\)! Think of walking into a dark room, trying different light switches until one turns on the overhead light)\nDear reader, I know what you’re thinking… But Jeff!! This is all so abstract and theoretical!! We’re sick of your ivory-tower musings, get your head out of the clouds and make it relevant to our day-to-day lives, by relating it back to Yugoslavia’s 1965 economic reforms!!\nDon’t worry, I’ve listened to your concerns, and the next slide is here for you 😌"
+    "text": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?\n\nThe key: Forces agent \\(i\\) to pay a cost for inflicting disutility on agent \\(j\\)!\n(Here please note: “\\(X\\) sometimes enables \\(Y\\)” does not mean \\(X\\) is a necessary or sufficient condition for \\(Y\\)! Think of walking into a dark room, trying different light switches until one turns on the overhead light)\nDear reader, I know what you’re thinking… But Jeff!! This is all so abstract and theoretical!! We’re sick of your ivory-tower musings, get your head out of the clouds and make it relevant to our day-to-day lives, by relating it back to Yugoslavia’s 1965 economic reforms!!\nDon’t worry, I’ve listened to your concerns, and the next slide is here for you 😌"
   },
   {
-    "objectID": "w11/slides.html#externalities-i-get-reward-others-pay-cost",
-    "href": "w11/slides.html#externalities-i-get-reward-others-pay-cost",
+    "objectID": "w11/slides.html#policy-intervention-yugoslav-nationalization",
+    "href": "w11/slides.html#policy-intervention-yugoslav-nationalization",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Externalities: I Get Reward, Others Pay Cost 🥳",
-    "text": "Externalities: I Get Reward, Others Pay Cost 🥳\n\nFirm \\(S\\) produces amount of steel \\(s\\), pollution \\(x\\)\nFirm \\(F\\) “produces” amount of fish \\(f\\)\n\\(S\\) optimizes\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,x}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)\nSo… what determines which agents get to ignore externalities? (Dead horse)"
+    "section": "Policy Intervention : “Yugoslav Nationalization”",
+    "text": "Policy Intervention : “Yugoslav Nationalization”\nLast reminder: Externalities \\(\\Leftrightarrow\\) I get reward, others pay costs 🥳\n\nSteel Mill \\(S\\) produces amount of steel \\(s\\) \\(\\leadsto\\) pollution \\(x\\), total cost \\(c_s(s,x)\\)\nFishery \\(F\\) “produces” amount of fish [\\(x \\leadsto\\)] \\(f\\), total cost \\(c_f(f,x)\\)\n\\(S\\) optimizes (price per steel \\(p_s\\))\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,\\small\\boxed{x}}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes (price per fish \\(p_f\\))\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)\nWhat determines which agents get to ignore externalities? (Dead horse/middle name)"
   },
   {
     "objectID": "w11/slides.html#functionals",
@@ -1666,11 +1722,11 @@
     "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)"
   },
   {
-    "objectID": "w11/slides.html#we-live-in-a-society-part-2",
-    "href": "w11/slides.html#we-live-in-a-society-part-2",
+    "objectID": "w11/slides.html#we-live-in-a-dang-society",
+    "href": "w11/slides.html#we-live-in-a-dang-society",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "We Live In A Society, Part 2",
-    "text": "We Live In A Society, Part 2\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯"
+    "section": "We Live In A Dang Society",
+    "text": "We Live In A Dang Society\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯"
   },
   {
     "objectID": "w11/slides.html#alternative-swf-specifications",
@@ -1691,7 +1747,7 @@
     "href": "w11/slides.html#remaining-challenging-details",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "Remaining (Challenging) Details",
-    "text": "Remaining (Challenging) Details\n\n\n\n\nWho gets included in the SWF?\nPeople in one household? One community? One state? One country?\nPeople in the future?\nAnimals?\n…OUR BEAUTIFUL ENVIRONMENT??? (Figure 1)\n\n\n\n\n\n\n\n\n\nFigure 1: Our beautiful environment"
+    "text": "Remaining (Challenging) Details\n\n\n\n\nWho gets included in the SWF?\nPeople in one household? One community? One state? One country?\nPeople in the future?\nAnimals?\n…OUR BEAUTIFUL ENVIRONMENT???\n\n\n\n\n\n\n\n\n\nFigure 3: Our beautiful environment"
   },
   {
     "objectID": "w11/slides.html#back-to-utilitarian-swf",
@@ -1708,32 +1764,32 @@
     "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom from [\\(X\\)]? Freedom to [\\(Y\\)]?"
   },
   {
-    "objectID": "w11/slides.html#externalities",
-    "href": "w11/slides.html#externalities",
+    "objectID": "w11/slides.html#utility-rightarrow-social-welfare-with-externalities",
+    "href": "w11/slides.html#utility-rightarrow-social-welfare-with-externalities",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Externalities",
-    "text": "Externalities\n\nJeef and Keef are roommates: Jeef loves listening to Tony Danza Tapdance Extravaganza, but Keef is normal and slowly dies inside with each additional song\n\n\n\n\n\n\n\n\n\nSongs\nJeef\nKeef\nTotal\n\n\n\n\n0\n0\n0\n0\n\n\n1\n13\n-2\n11\n\n\n2\n18\n-6\n12\n\n\n3\n24\n-13\n11\n\n\n4\n28\n-20\n8\n\n\n5\n30\n-42\n-12"
+    "section": "Utility \\(\\rightarrow\\) Social Welfare with Externalities",
+    "text": "Utility \\(\\rightarrow\\) Social Welfare with Externalities\n\nJeef and Keef are roommates: Jeef loves listening to Tony Danza Tapdance Extravaganza, but Keef is normal and slowly dies inside with each additional song\n\n\n\n\n\n\n\n\n\nSongs\nJeef\nKeef\nTotal\n\n\n\n\n0\n0\n0\n0\n\n\n1\n13\n-2\n11\n\n\n2\n18\n-6\n12\n\n\n3\n24\n-13\n11\n\n\n4\n28\n-20\n8\n\n\n5\n30\n-42\n-12"
   },
   {
     "objectID": "w11/slides.html#so-whats-the-issue",
     "href": "w11/slides.html#so-whats-the-issue",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "So What’s the Issue?",
-    "text": "So What’s the Issue?\n\nThese utility values are not observed\nIf we try to elicit them, both Jeef and Keef have strategic incentives to lie (over-exaggerate)\nJeef maximizes own utility by reporting \\(u_j(s) = \\infty\\)\nKeef maximizes own utility by reporting \\(u_k(s) = -\\infty\\)\n(…Second price auctions tho)"
+    "text": "So What’s the Issue?\n\nThese utility values are not observed\nIf we try to elicit them, both Jeef and Keef have strategic incentives to lie (over-exaggerate)\nJeef maximizes own utility by reporting \\(u_j(s) = \\infty\\)\n\n(“I will literally die if I can’t listen to Lil Wayne’s ”Peanuts 2 N Elephant” prod. Lin-Manuel Miranda all day”)\n\nKeef maximizes own utility by reporting \\(u_k(s) = -\\infty\\)\n\n(“I will literally die if I hear this elephant song again”)\n\n(…Quick mechanism design demo: Second price auctions)"
   },
   {
     "objectID": "w11/slides.html#now-with-scarce-resources",
     "href": "w11/slides.html#now-with-scarce-resources",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "Now with Scarce Resources",
-    "text": "Now with Scarce Resources\n\nIn a given week, Jeef and Keef have 14 meals and 7 aux hours to divide amongst them\n\n\\[\n\\begin{align*}\n\\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\\\\n\\text{s.t. }& m_1 + m_2 \\leq 14 \\\\\n\\phantom{\\text{s.t. }} & ~ \\, a_1 + a_2 \\; \\leq 7\n\\end{align*}\n\\]\n\nLet’s assume \\(u_i(m_i, a_i) = m_i + a_i\\) for both\n\\(\\Rightarrow\\) One solution: \\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\\)…\n\\(\\Rightarrow\\) Another: \\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\\)…\nWho decides? Any decision implies \\(\\omega_1, \\omega_2\\) (\\(\\omega_1 + \\omega_2 = 1\\))"
+    "text": "Now with Scarce Resources\n\nIn a given week, Jeef and Keef have 14 meals and 7 aux hours to divide amongst them\n\n\\[\n\\begin{align*}\n\\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\\\\n\\text{s.t. }& m_1 + m_2 \\leq 14 \\\\\n\\phantom{\\text{s.t. }} & ~ \\, a_1 + a_2 \\; \\leq 7\n\\end{align*}\n\\]\n\nLet’s assume \\(u_i(m_i, a_i) = m_i + a_i\\) for both\n\\(\\Rightarrow\\) One solution: \\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\\)…\n\\(\\Rightarrow\\) Another: \\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\\)…\nWho decides? Any decision implies \\(\\omega_1, \\omega_2\\) (\\(\\omega_1 + \\omega_2 = 1\\))(Last slide = last reminder…)"
   },
   {
     "objectID": "w11/slides.html#references",
     "href": "w11/slides.html#references",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "References",
-    "text": "References\n\n\nAkerlof, George A. 1970. “The Market for \"Lemons\": Quality Uncertainty and the Market Mechanism.” The Quarterly Journal of Economics 84 (3): 488–500. https://doi.org/10.2307/1879431.\n\n\nBecker, Gary S. 1957. The Economics of Discrimination. University of Chicago Press. https://books.google.com?id=50qHcSNVVEMC.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (New York, NY, USA), FAccT ’21, March 1, 576–86. https://doi.org/10.1145/3442188.3445919.\n\n\nMalm, Andreas. 2021. How to Blow Up a Pipeline. Verso Books. https://books.google.com?id=qUrSDwAAQBAJ.\n\n\nPareto, Vilfredo. 1896. Cours d’Économie politique. Librairie Droz. https://books.google.com?id=s249oYSJbVMC.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin. https://books.google.com?id=bhJgd3hGdxQC."
+    "text": "References\n\n\nAkerlof, George A. 1970. “The Market for \"Lemons\": Quality Uncertainty and the Market Mechanism.” The Quarterly Journal of Economics 84 (3): 488–500. https://doi.org/10.2307/1879431.\n\n\nBecker, Gary S. 1957. The Economics of Discrimination. University of Chicago Press. https://books.google.com?id=50qHcSNVVEMC.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (New York, NY, USA), FAccT ’21, March 1, 576–86. https://doi.org/10.1145/3442188.3445919.\n\n\nLerner, Abba P. 1972. “The Economics and Politics of Consumer Sovereignty.” The American Economic Review 62 (1/2): 258–66. https://www.jstor.org/stable/1821551.\n\n\nMalm, Andreas. 2021. How to Blow Up a Pipeline. Verso Books. https://books.google.com?id=qUrSDwAAQBAJ.\n\n\nPareto, Vilfredo. 1896. Cours d’Économie politique. Librairie Droz. https://books.google.com?id=s249oYSJbVMC.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSmith, Adam. 1776. The Wealth of Nations. Random House Publishing Group. https://books.google.com?id=Anwp7vTR1usC.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin. https://books.google.com?id=bhJgd3hGdxQC.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC.\n\n\nVarian, Hal R. 2006. Intermediate Microeconomics: A Modern Approach. W.W. Norton.\n\n\nWeber, Max. 1919. The Vocation Lectures. Hackett Publishing. https://books.google.com?id=V6t5EAAAQBAJ."
   },
   {
     "objectID": "w11/index.html",
@@ -1746,21 +1802,91 @@
     ]
   },
   {
-    "objectID": "w11/index.html#operationalizing-power",
-    "href": "w11/index.html#operationalizing-power",
+    "objectID": "w11/index.html#where-we-left-off",
+    "href": "w11/index.html#where-we-left-off",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Operationalizing Power",
-    "text": "Operationalizing Power\n\nEqually good outside options \\(\\implies\\) can contract to Pareto-optimal point \\(o^P\\)\n\\(i\\) has better outside options \\(\\implies\\) can make take it or leave it offer to \\(j\\):\n\n“You (\\(j\\)) fish 6 hrs all the time. I (\\(i\\)) fish 6 hrs 41% of time, 8 hrs otherwise”\n\n\n\n\n\nEver so slightly better for \\(j\\) \\(\\implies\\) \\(j\\) accepts (Behavioral econ: \\(j\\) accepts if 41% meets subjective fairness threshold; observed across many many cultures!)\nLater / next week: observe policy with outcome \\(o^{C}_{i \\rightarrow j} \\iff\\) policy values \\(i\\)’s welfare more than \\(j\\)’s welfare (inferred social welfare weights \\(\\omega_i &gt; \\omega_j\\))",
+    "section": "Where We Left Off…",
+    "text": "Where We Left Off…\nPrisoners’ Dilemma feels like a silly math/econ problem at first… then you get brainwashed by pol econ PhD and suddenly see it at the “core” of 95% of global issues\n\n\\[\n\\DeclareMathOperator*{\\argmax}{argmax}\n\\DeclareMathOperator*{\\argmin}{argmin}\n\\newcommand{\\bigexp}[1]{\\exp\\mkern-4mu\\left[ #1 \\right]}\n\\newcommand{\\bigexpect}[1]{\\mathbb{E}\\mkern-4mu \\left[ #1 \\right]}\n\\newcommand{\\definedas}{\\overset{\\small\\text{def}}{=}}\n\\newcommand{\\definedalign}{\\overset{\\phantom{\\text{defn}}}{=}}\n\\newcommand{\\eqeventual}{\\overset{\\text{eventually}}{=}}\n\\newcommand{\\Err}{\\text{Err}}\n\\newcommand{\\expect}[1]{\\mathbb{E}[#1]}\n\\newcommand{\\expectsq}[1]{\\mathbb{E}^2[#1]}\n\\newcommand{\\fw}[1]{\\texttt{#1}}\n\\newcommand{\\given}{\\mid}\n\\newcommand{\\green}[1]{\\color{green}{#1}}\n\\newcommand{\\heads}{\\outcome{heads}}\n\\newcommand{\\iid}{\\overset{\\text{\\small{iid}}}{\\sim}}\n\\newcommand{\\lik}{\\mathcal{L}}\n\\newcommand{\\loglik}{\\ell}\n\\DeclareMathOperator*{\\maximize}{maximize}\n\\DeclareMathOperator*{\\minimize}{minimize}\n\\newcommand{\\mle}{\\textsf{ML}}\n\\newcommand{\\nimplies}{\\;\\not\\!\\!\\!\\!\\implies}\n\\newcommand{\\orange}[1]{\\color{orange}{#1}}\n\\newcommand{\\outcome}[1]{\\textsf{#1}}\n\\newcommand{\\param}[1]{{\\color{purple} #1}}\n\\newcommand{\\pgsamplespace}{\\{\\green{1},\\green{2},\\green{3},\\purp{4},\\purp{5},\\purp{6}\\}}\n\\newcommand{\\pedge}[2]{\\require{enclose}\\enclose{circle}{~{#1}~} \\rightarrow \\; \\enclose{circle}{\\kern.01em {#2}~\\kern.01em}}\n\\newcommand{\\pnode}[1]{\\require{enclose}\\enclose{circle}{\\kern.1em {#1} \\kern.1em}}\n\\newcommand{\\ponode}[1]{\\require{enclose}\\enclose{box}[background=lightgray]{{#1}}}\n\\newcommand{\\pnodesp}[1]{\\require{enclose}\\enclose{circle}{~{#1}~}}\n\\newcommand{\\purp}[1]{\\color{purple}{#1}}\n\\newcommand{\\sign}{\\text{Sign}}\n\\newcommand{\\spacecap}{\\; \\cap \\;}\n\\newcommand{\\spacewedge}{\\; \\wedge \\;}\n\\newcommand{\\tails}{\\outcome{tails}}\n\\newcommand{\\Var}[1]{\\text{Var}[#1]}\n\\newcommand{\\bigVar}[1]{\\text{Var}\\mkern-4mu \\left[ #1 \\right]}\n\\]\n\n\n\nsource(\"../dsan-globals/_globals.r\")\n\n\n\n\n\n\n\nBowles & Jayadev (2014), “One Nation Under Guard”, NYT\n\n\n\n\n\n\nNewfoundland: cod landings in tons (1851–2014): In the 1960s new fishing technologies allowed a dramatic increase in cod fishing, far outpacing the capacity of the fish to reproduce, and leading to total collapse by 1992 when the Canadian government banned fishing entirely. Restoration of fishing stocks to the sustainable levels of the past may occur by the 2030s.",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
   },
   {
-    "objectID": "w11/index.html#since-weve-already-opened-the-pandoras-box-of-utility",
-    "href": "w11/index.html#since-weve-already-opened-the-pandoras-box-of-utility",
+    "objectID": "w11/index.html#fishers-dilemma-our-core-prisoners-dilemma",
+    "href": "w11/index.html#fishers-dilemma-our-core-prisoners-dilemma",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Since We’ve Already Opened the Pandora’s Box of Utility…",
-    "text": "Since We’ve Already Opened the Pandora’s Box of Utility…\n\n\n\nFrom Ryan Safner’s History of Economic Thought: Welfare Economics\n\n\n\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)",
+    "section": "Fishers’ Dilemma (Our “Core” Prisoners’ Dilemma)",
+    "text": "Fishers’ Dilemma (Our “Core” Prisoners’ Dilemma)\nSingle, unique Nash equilibrium, and it’s Pareto inferior(looming in background: unsustainable if total hours/day &gt; 14)\n\n\n\nThe “Iterated Elimination” Result\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(\\color{#e69f00}B\\)\n\n\n\n\nFish 6h\n\nFish 8h\n\n\n\\(\\color{#0072b2}A\\)\nFish 6h\n\\(\\color{#0072b2}\\cancel{1}\\color{black}, \\,\\)\n\\(\\color{#e69f00}\\cancel{1}\\)\n\n\\(\\color{#0072b2}\\cancel{0}\\color{black},\\)\n\\(\\color{#e69f00}\\boxed{\\mathbf{1.2}}\\)\n\n\nFish 8h\n\\(\\color{#0072b2}\\boxed{\\color{#0072b2}\\mathbf{1.2}}\\color{black}, \\,\\)\n\\(\\color{#e69f00}\\cancel{0}\\)\n\n\\(\\color{#0072b2}\\boxed{\\color{#0072b2}\\mathbf{0.4}}\\color{black},\\)\n\\(\\color{#009e73}\\boxed{\\color{#e69f00}\\mathbf{0.4}}\\)\n\n\n\nBoxes = Best Responses:\n\n\\[\n\\begin{aligned}\n{\\color{#0072b2}\\text{BR}_A}({\\color{#e69f00}\\overset{B}{6\\textrm{h}}}) &= {\\color{#0072b2}8\\textrm{h}}, \\; {\\color{#0072b2}\\text{BR}_A}({\\color{#e69f00}\\overset{B}{8\\textrm{h}}}) = {\\color{#0072b2}8\\textrm{h}} \\\\\n{\\color{#e69f00}\\text{BR}_B}(\n  {\\color{#0072b2}\\underset{A}{6\\textrm{h}}}\n) &= {\\color{#e69f00}8\\textrm{h}}, \\; {\\color{#e69f00}\\text{BR}_B}(\n  {\\color{#0072b2}\\underset{A}{8\\textrm{h}}}\n) = {\\color{#e69f00}8\\textrm{h}}\n\\end{aligned}\n\\]\nBest response is always \\(\\text{8h}\\), no matter what other player does!\n\\[\n\\begin{aligned}\n\\implies &{\\color{#0072b2}\\mathbb{E}[u_A]} = {\\color{#e69f00}\\mathbb{E}[u_B]} = 0.4 \\text{ for now}, \\\\\n&\\leadsto \\; ? \\text{ once fishery collapses (}\\textstyle\\sum\\text{hrs} = 16\\text{)}\n\\end{aligned}\n\\]\n\n\nPareto Dominance",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#policy-intervention-allow-contracts",
+    "href": "w11/index.html#policy-intervention-allow-contracts",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Policy Intervention : Allow Contracts",
+    "text": "Policy Intervention : Allow Contracts\n\\(\\leadsto\\) Operationalizing Power as “second best” outside option(s)\n\nEqually good outside options \\(\\implies\\) can contract to Pareto-optimal point \\(o^P\\)\n\\(B\\) has better outside options \\(\\implies\\) can make take it or leave it offer to \\(A\\):\n\n“You (\\(A\\)) fish 6 hrs all the time. I (\\(B\\)) fish 6 hrs 41% of time, 8 hrs otherwise”\n\n\n\n\nSlightly better for \\(A\\) \\(\\implies\\) \\(A\\) accepts:\n\\[\n\\begin{aligned}\n\\mathbb{E}[u_A(a_A = \\textsf{Reject})] &= \\overset{\\text{STTP}}{\\boxed{0.4}} \\; \\text{ (prev slide) } \\overset{\\text{LTTP}}{\\color{#e69f00}\\boxed{\\color{black}\\leadsto -\\infty}} \\\\\n\\mathbb{E}[u_A(a_A = \\textsf{Accept})] &= 0.41\\cdot 1 + 0.59 \\cdot 0 = \\boxed{0.41} \\\\\n\\mathbb{E}[u_B(a_A = \\textsf{Reject})] &= \\boxed{0.4} \\; \\text{ (prev slide) } {\\color{#e69f00}\\boxed{\\color{black}\\leadsto 0.39}} \\\\\n\\mathbb{E}[u_B(a_A = \\textsf{Accept})] &= 0.41\\cdot 1 + 0.59 \\cdot 1.2 = \\boxed{1.118}\n\\end{aligned}\n\\]\n \\(B\\)’s offer = credible threat in both short and long term; same threat from \\(A\\) would not be credible (\\(B\\) knows \\(A\\) would eventually die: \\(u_A \\leadsto -\\infty\\))\n HW4: observe policy outcome \\(o^{\\text{TIOLI}}_{B \\rightarrow A}\\) \\(\\Leftrightarrow\\) social welfare weights \\(\\omega_B &gt; \\omega_A\\)",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#policy-intervention-fines-for-overfishing",
+    "href": "w11/index.html#policy-intervention-fines-for-overfishing",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Policy Intervention : Fines for Overfishing",
+    "text": "Policy Intervention : Fines for Overfishing\n\\(\\leadsto\\) Weber’s descriptive definition of “The State”: Agent with Monopoly on Legal Use of Force (Weber 1919) (remember him?)\n\nNotice: Previous “intervention” was actually self-enforcing! However, outcome was…\n\n Determined entirely by asymmetric power, and\n Took no account of anyone in society besides two fishers!\n(Thought experiment: if both had “good” outside options, best for them could be fish cod to extinction then move on to “second-best” option \\(u = 0.4 \\leadsto 0.39\\))\n\nIf we identify [asymmetry of power \\(\\leadsto\\) asymmetry of outcomes] as harm bc unfair (reflective equilibrium), one “follow-up” policy intervention is make \\(A\\)’s outside options better (welfare, job retraining, etc… but who sets these up?)\nIf we identify [ecological damage] as harm, this forms independent “dimension” of policy analysis: if coastal waters are “public good” of Canada, may need some sort of agent representing Canada, to govern use of resource 🤔 some sort of… representative government 🤔 with power to issue fines / ban fishing 🤔",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#fines-are-easy-from-economic-perspective",
+    "href": "w11/index.html#fines-are-easy-from-economic-perspective",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "…Fines are “Easy” from Economic Perspective",
+    "text": "…Fines are “Easy” from Economic Perspective\n\nAn economic transaction is a solved political problem. Economics has gained the title “Queen of the Social Sciences” by choosing solved political problems as its domain. (Lerner 1972)\n\n\nIf we assume a “well-functioning” state—power to enforce fines, no corruption, etc.—and that this state has “agreed” to use fines to resolve the issue…\nCalculation of “optimal fines” is a “solved” problem in economics (like encryption in CS): A Pigouvian tax just fines agent \\(B\\) an amount equal to the externality(!) their defection imposes on \\(A\\), then redistributes this collected fine back to \\(A\\):\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(\\color{#e69f00}B\\)\n\n\n\n\nFish 6h\n\nFish 8h\n\n\n\\(\\color{#0072b2}A\\)\nFish 6h\n\\(\\color{#0072b2}\\cancel{1}\\color{black}, \\,\\)\n\\(\\color{#e69f00}\\cancel{1}\\)\n\n\\(\\underset{(+1)}{\\color{#0072b2}\\cancel{0}\\color{black}}\\underset{\\; \\leftarrow\\vphantom{(+1)}}{,}\\)\n\\(\\underset{(-1)}{\\color{#e69f00}\\boxed{\\color{#e69f00}\\mathbf{1.2}}}\\)\n\n\nFish 8h\n\\(\\underset{(-1)}{\\color{#0072b2}\\boxed{\\color{#0072b2}\\mathbf{1.2}}}\\color{black}\\underset{\\rightarrow\\vphantom{(+1)}}{,} \\,\\)\n\\(\\underset{(+1)}{\\color{#e69f00}\\cancel{0}}\\)\n\n\\(\\color{#0072b2}\\boxed{\\mathbf{0.4}}\\color{black},\\)\n\\(\\color{#e69f00}\\boxed{\\mathbf{0.4}}\\)\n\n\n\n\n\nFigure 1: Original Fishers’ Dilemma, with Pigou fines in parentheses under “agreement-violating” outcomes\n\n\n\n\n\n\\(\\leadsto\\)New game with tax applied\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(\\color{#e69f00}B\\)\n\n\n\n\nFish 6h\n\nFish 8h\n\n\n\\(\\color{#0072b2}A\\)\nFish 6h\n\\(\\color{#0072b2}\\boxed{\\mathbf{1}}\\color{black}, \\,\\)\n\\(\\color{#e69f00}\\boxed{\\mathbf{1}}\\)\n\n\\(\\color{#0072b2}\\boxed{\\mathbf{1}}\\color{black},\\)\n\\(\\color{#e69f00}\\cancel{0.2}\\)\n\n\nFish 8h\n\\(\\color{#0072b2}\\cancel{0.2}, \\,\\)\n\\(\\color{#e69f00}\\boxed{\\mathbf{1}}\\)\n\n\\(\\color{#0072b2}\\cancel{0.4}\\color{black},\\)\n\\(\\color{#e69f00}\\cancel{0.4}\\)\n\n\n\n\n\nFigure 2: The Fishers’ Dilemma with a Pigou tax for unilaterally Fishing 8h",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#policy-interventions-fish-dilemmas-leadsto-assurance-games",
+    "href": "w11/index.html#policy-interventions-fish-dilemmas-leadsto-assurance-games",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Policy Interventions: Fish Dilemmas \\(\\leadsto\\) Assurance Games",
+    "text": "Policy Interventions: Fish Dilemmas \\(\\leadsto\\) Assurance Games\n\nTo “escape” prisoners’ dilemma, we had to change the rules of the game (permanently: a one-time fine would not work)\nFishers’ Dilemma:\n\nNo institutions: \\(a_A, a_B \\in \\{6\\text{ hr}, 8\\text{ hr}\\}\\)\nInstitutions (courts or social norms): \\(\\{\\text{Accept}, \\text{Reject}\\}\\)\n\nDriving “game” (two cars pull up at intersection):\n\nNo institutions: \\(a_A, a_B \\in \\{\\text{Stop}, \\text{Drive}\\}\\)\nInstitutions (stoplights installed by govt or community agreement): \\(a_A, a_B \\in \\{\\text{Obey Light}, \\text{Run Light}\\}\\)\n\nIf policy issue well-modeled by Assurance Game, however, may only need to “nudge” (one-time intervention) \\(\\leadsto\\) new permanent Pareto-optimal equilibrium (Nash \\(\\implies\\) self-enforcing!)",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#assurance-game",
+    "href": "w11/index.html#assurance-game",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Assurance Game",
+    "text": "Assurance Game\n\nMultiple equilibria; the particular outcome we observe is a function of history (path dependency)\nDrive-on-left vs. drive-on-right: Assurance game where neither equilibrium Pareto-dominates other option\n\nSwedish Dagen H: Nudge from \\(o^*_{\\textsf{L}} = o(\\textsf{L},\\textsf{L})\\) to \\(o^*_{\\textsf{R}} = o(\\textsf{R},\\textsf{R})\\)\nEither eq is self-reinforcing! (Unless you… like dying)\n\n\n\n\n\nQWERTY vs. DVORAK / Palanpur farmers: Assurance game where observed equilibrium Pareto inferior\n\n\n\n\n\n\n\n\n\\(\\color{#e69f00}B\\)\n\n\n\n\nEarly\nLate\n\n\n\\(\\color{#0072b2}A\\)\nEarly\n\\(\\color{#0072b2}\\boxed{\\mathbf{4}}\\color{black}{,} \\color{#e69f00}\\boxed{\\mathbf{4}}\\)\n\\(\\color{#0072b2}\\cancel{0}\\color{black}{,} \\color{#e69f00}\\cancel{3}\\)\n\n\nLate\n\\(\\color{#0072b2}\\cancel{3}\\color{black}{,} \\color{#e69f00}\\cancel{0}\\)\n\\(\\color{#0072b2}\\boxed{\\mathbf{2}}\\color{black}{,} \\color{#e69f00}\\boxed{\\mathbf{2}}\\)",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#invisible-hand-game",
+    "href": "w11/index.html#invisible-hand-game",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Invisible Hand Game",
+    "text": "Invisible Hand Game\n\nSingle, unique Nash equilibrium, and it’s Pareto efficient\n\\(\\Rightarrow\\) Acting in self interest \\(\\leadsto\\) best possible outcome\n\n\n\n\nIt is not from the benevolence of the butcher, the brewer, or the baker that we expect our meal, but from their regard to their own interest (Smith 1776)\n\n\n\n\n\n\n\n\\(\\color{#e69f00}B\\)\n\n\n\n\nCorn\n\nTaro\n\n\n\\(\\color{#0072b2}A\\)\nCorn\n\\(\\color{#0072b2}\\cancel{2}\\color{black}{,} \\color{#e69f00}\\boxed{\\mathbf{4}}\\)\n\n\\(\\color{#0072b2}\\boxed{\\mathbf{4}}\\color{black}{,} \\color{#e69f00}\\cancel{3}\\)\n\n\nTaro\n\\(\\color{#0072b2}\\boxed{\\mathbf{5}}\\color{black}{,} \\color{#e69f00}\\boxed{\\mathbf{5}}\\)\n\n\\(\\color{#0072b2}\\cancel{3}\\color{black}{,} \\color{#e69f00}\\cancel{2}\\)\n\n\n\n\n\n\nWealth of Nations SPOILER: The wealth comes from division of laborand also dumbleydore, and semperus snake, and even poor ron the weasel, who never deserved such a fate\n\n\n[…I am once again reminding you that] An economic transaction is a solved political problem. Economics gained the title “Queen of the Social Sciences” by choosing solved political problems as its domain",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#utility-function-using-the-ordering-of-numbers-to-encode-the-ordering-of-preferences",
+    "href": "w11/index.html#utility-function-using-the-ordering-of-numbers-to-encode-the-ordering-of-preferences",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Utility Function: Using the Ordering of Numbers to “Encode” the Ordering of Preferences",
+    "text": "Utility Function: Using the Ordering of Numbers to “Encode” the Ordering of Preferences\n\n\n\nFrom Ryan Safner’s History of Economic Thought: Welfare Economics\n\n\n\nBluey obtains greater utility despite paying the same cost by moving from \\(E\\) to \\(O\\)\n\\(E\\) denotes “Initial Endowment”, \\(O\\) denotes “Final Outcome”",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
@@ -1780,17 +1906,17 @@
     "href": "w11/index.html#the-edgeworth-box",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "The Edgeworth Box",
-    "text": "The Edgeworth Box\n\n\n\nRotate Greenie’s box 180° and superimpose onto Bluey’s",
+    "text": "The Edgeworth Box\nRotate Greenie’s box 180° and superimpose onto Bluey’s:",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
   },
   {
-    "objectID": "w11/index.html#the-contract-curve",
-    "href": "w11/index.html#the-contract-curve",
+    "objectID": "w11/index.html#pareto-frontier-contract-curve",
+    "href": "w11/index.html#pareto-frontier-contract-curve",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "The Contract(!) Curve",
-    "text": "The Contract(!) Curve\n\n\n\n\n\n\nFrom initial endowment \\(E\\), if allowed to trade, “rational” players can reach any allocation along dashed contract curve from \\(G\\) to \\(B\\)… (Why not \\(A\\) or \\(H\\)?)\nSo, what determines which of these points they end up at? (Middle name hint)",
+    "section": "Pareto Frontier = Contract(!) Curve",
+    "text": "Pareto Frontier = Contract(!) Curve\n\n\n\n\n\n\nFrom initial endowment \\(E\\), if allowed to trade, “rational” players can reach any allocation along dashed contract curve from \\(G\\) to \\(B\\)… (Why not \\(A\\) or \\(H\\)?)\nSo, what determines which of these points they end up at? (Middle name hint)",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
@@ -1800,7 +1926,7 @@
     "href": "w11/index.html#first-fundamental-theorem-of-welfare-economics",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "First Fundamental Theorem of Welfare Economics",
-    "text": "First Fundamental Theorem of Welfare Economics\n\nTheorem: [Antecedents (Coase Conditions)] \\(\\Rightarrow\\) markets produce Pareto-optimal outcomes\n\n\nEven commie Jeff finds proof+corollaries compelling / convincing / empirically-supported\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations",
+    "text": "First Fundamental Theorem of Welfare Economics\n\n[Antecedents (Coase Conditions)] \\(\\Rightarrow\\) «markets produce Pareto-optimal outcomes»\n\n\nEven Jeff finds proof (and corollaries) compelling / convincing / empirically-supported\n\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN 5300) built on what to do when GM Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, market-socialist nationalization",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
@@ -1816,11 +1942,21 @@
     ]
   },
   {
-    "objectID": "w11/index.html#part-2-suddenly-collides-with-part-1-property-rights",
-    "href": "w11/index.html#part-2-suddenly-collides-with-part-1-property-rights",
+    "objectID": "w11/index.html#so-what-happens-when-antecedents-dont-hold",
+    "href": "w11/index.html#so-what-happens-when-antecedents-dont-hold",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Part 2 Suddenly Collides with Part 1: Property Rights",
-    "text": "Part 2 Suddenly Collides with Part 1: Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air",
+    "section": "So… What Happens When Antecedents Don’t Hold?",
+    "text": "So… What Happens When Antecedents Don’t Hold?\n\n\\(\\neg\\)(Coase Antecedents) \\(\\Rightarrow\\) Unequal Power… Puts us in realm of Descriptive Ethics!\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. [Thucydides (2013); c. 411 BC] (Think of necessary vs. sufficient conditions!)\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN5300) built on what to do when G-M Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy2\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, Yugoslav nationalization",
+    "crumbs": [
+      "Week 11: {{< var w11.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w11/index.html#policy-intervention-property-rights",
+    "href": "w11/index.html#policy-intervention-property-rights",
+    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
+    "section": "Policy Intervention : Property Rights",
+    "text": "Policy Intervention : Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air; From Varian (2006)",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
@@ -1830,17 +1966,17 @@
     "href": "w11/index.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?",
-    "text": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?\n\nThe key: Forces agent \\(i\\) to pay a cost for inflicting disutility on agent \\(j\\)!\n(Here plz note: “\\(X\\) sometimes enables \\(Y\\)” does not mean \\(X\\) is a necessary or sufficient condition for \\(Y\\)! Think of walking into a dark room, trying different light switches until one turns on the overhead light)\nDear reader, I know what you’re thinking… But Jeff!! This is all so abstract and theoretical!! We’re sick of your ivory-tower musings, get your head out of the clouds and make it relevant to our day-to-day lives, by relating it back to Yugoslavia’s 1965 economic reforms!!\nDon’t worry, I’ve listened to your concerns, and the next slide is here for you 😌",
+    "text": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?\n\nThe key: Forces agent \\(i\\) to pay a cost for inflicting disutility on agent \\(j\\)!\n(Here please note: “\\(X\\) sometimes enables \\(Y\\)” does not mean \\(X\\) is a necessary or sufficient condition for \\(Y\\)! Think of walking into a dark room, trying different light switches until one turns on the overhead light)\nDear reader, I know what you’re thinking… But Jeff!! This is all so abstract and theoretical!! We’re sick of your ivory-tower musings, get your head out of the clouds and make it relevant to our day-to-day lives, by relating it back to Yugoslavia’s 1965 economic reforms!!\nDon’t worry, I’ve listened to your concerns, and the next slide is here for you 😌",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
   },
   {
-    "objectID": "w11/index.html#externalities-i-get-reward-others-pay-cost",
-    "href": "w11/index.html#externalities-i-get-reward-others-pay-cost",
+    "objectID": "w11/index.html#policy-intervention-yugoslav-nationalization",
+    "href": "w11/index.html#policy-intervention-yugoslav-nationalization",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Externalities: I Get Reward, Others Pay Cost 🥳",
-    "text": "Externalities: I Get Reward, Others Pay Cost 🥳\n\nFirm \\(S\\) produces amount of steel \\(s\\), pollution \\(x\\)\nFirm \\(F\\) “produces” amount of fish \\(f\\)\n\\(S\\) optimizes\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,x}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)\nSo… what determines which agents get to ignore externalities? (Dead horse)",
+    "section": "Policy Intervention : “Yugoslav Nationalization”",
+    "text": "Policy Intervention : “Yugoslav Nationalization”\nLast reminder: Externalities \\(\\Leftrightarrow\\) I get reward, others pay costs 🥳\n\nSteel Mill \\(S\\) produces amount of steel \\(s\\) \\(\\leadsto\\) pollution \\(x\\), total cost \\(c_s(s,x)\\)\nFishery \\(F\\) “produces” amount of fish [\\(x \\leadsto\\)] \\(f\\), total cost \\(c_f(f,x)\\)\n\\(S\\) optimizes (price per steel \\(p_s\\))\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,\\small\\boxed{x}}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes (price per fish \\(p_f\\))\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)\nWhat determines which agents get to ignore externalities? (Dead horse/middle name)",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
@@ -1856,11 +1992,11 @@
     ]
   },
   {
-    "objectID": "w11/index.html#we-live-in-a-society-part-2",
-    "href": "w11/index.html#we-live-in-a-society-part-2",
+    "objectID": "w11/index.html#we-live-in-a-dang-society",
+    "href": "w11/index.html#we-live-in-a-dang-society",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "We Live In A Society, Part 2",
-    "text": "We Live In A Society, Part 2\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯",
+    "section": "We Live In A Dang Society",
+    "text": "We Live In A Dang Society\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
@@ -1890,7 +2026,7 @@
     "href": "w11/index.html#remaining-challenging-details",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "Remaining (Challenging) Details",
-    "text": "Remaining (Challenging) Details\n\n\n\n\nWho gets included in the SWF?\nPeople in one household? One community? One state? One country?\nPeople in the future?\nAnimals?\n…OUR BEAUTIFUL ENVIRONMENT??? (Figure 1)\n\n\n\n\n\n\n\n\n\nFigure 1: Our beautiful environment",
+    "text": "Remaining (Challenging) Details\n\n\n\n\nWho gets included in the SWF?\nPeople in one household? One community? One state? One country?\nPeople in the future?\nAnimals?\n…OUR BEAUTIFUL ENVIRONMENT???\n\n\n\n\n\n\n\n\n\nFigure 3: Our beautiful environment",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
@@ -1916,11 +2052,11 @@
     ]
   },
   {
-    "objectID": "w11/index.html#externalities",
-    "href": "w11/index.html#externalities",
+    "objectID": "w11/index.html#utility-rightarrow-social-welfare-with-externalities",
+    "href": "w11/index.html#utility-rightarrow-social-welfare-with-externalities",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Externalities",
-    "text": "Externalities\n\nJeef and Keef are roommates: Jeef loves listening to Tony Danza Tapdance Extravaganza, but Keef is normal and slowly dies inside with each additional song\n\n\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.3.0\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nmusic_df &lt;- tribble(\n  ~Songs, ~Jeef, ~Keef,\n  0, 0, 0,\n  1, 13, -2,\n  2, 18, -6,\n  3, 24, -13,\n  4, 28, -20,\n  5, 30, -42\n)\nmusic_df &lt;- music_df |&gt;\n  mutate(Total = Jeef + Keef)\nmusic_df\n\n\n\n\n\nSongs\nJeef\nKeef\nTotal\n\n\n\n\n0\n0\n0\n0\n\n\n1\n13\n-2\n11\n\n\n2\n18\n-6\n12\n\n\n3\n24\n-13\n11\n\n\n4\n28\n-20\n8\n\n\n5\n30\n-42\n-12\n\n\n\n\n\n\n\n\nlong_df &lt;- music_df |&gt;\n  pivot_longer(!Songs, names_to=\"Roommate\", values_to=\"Utility\")\nutil_df &lt;- long_df |&gt;\n  filter(Roommate != \"Total\")\nggplot(util_df, aes(x=Songs, y=Utility, color=Roommate)) +\n  geom_line(linewidth=g_linewidth) +\n  geom_point(size=g_pointsize) +\n  labs(\n    title=\"Individual Utility: Jeef vs. Keef\",\n    x=\"Number of Songs Played\",\n    y=\"Utility\"\n  ) +\n  theme_dsan(\"quarter\")\n\n\n\n\n\n\n\n\n\nwelfare_df &lt;- long_df |&gt;\n  filter(Roommate == \"Total\")\nggplot(welfare_df, aes(x=Songs, y=Utility, color=Roommate)) +\n  geom_line(linewidth=g_linewidth) +\n  geom_point(size=g_pointsize) +\n  labs(\n    title=\"Social Welfare: Jeef and Keef\",\n    x=\"Number of Songs Played\",\n    y=\"Social Welfare\"\n  ) +\n  scale_color_manual(values=c(cbPalette[3]), labels=c(\"Total      \")) +\n  theme_dsan(\"quarter\") +\n  remove_legend_title()",
+    "section": "Utility \\(\\rightarrow\\) Social Welfare with Externalities",
+    "text": "Utility \\(\\rightarrow\\) Social Welfare with Externalities\n\nJeef and Keef are roommates: Jeef loves listening to Tony Danza Tapdance Extravaganza, but Keef is normal and slowly dies inside with each additional song\n\n\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.3.0\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nmusic_df &lt;- tribble(\n  ~Songs, ~Jeef, ~Keef,\n  0, 0, 0,\n  1, 13, -2,\n  2, 18, -6,\n  3, 24, -13,\n  4, 28, -20,\n  5, 30, -42\n)\nmusic_df &lt;- music_df |&gt;\n  mutate(Total = Jeef + Keef)\nmusic_df\n\n\n\n\n\nSongs\nJeef\nKeef\nTotal\n\n\n\n\n0\n0\n0\n0\n\n\n1\n13\n-2\n11\n\n\n2\n18\n-6\n12\n\n\n3\n24\n-13\n11\n\n\n4\n28\n-20\n8\n\n\n5\n30\n-42\n-12\n\n\n\n\n\n\n\n\nlong_df &lt;- music_df |&gt;\n  pivot_longer(!Songs, names_to=\"Roommate\", values_to=\"Utility\")\nutil_df &lt;- long_df |&gt;\n  filter(Roommate != \"Total\")\nggplot(util_df, aes(x=Songs, y=Utility, color=Roommate)) +\n  geom_line(linewidth=g_linewidth) +\n  geom_point(size=g_pointsize) +\n  labs(\n    title=\"Individual Utility: Jeef vs. Keef\",\n    x=\"Number of Songs Played\",\n    y=\"Utility\"\n  ) +\n  theme_dsan(\"quarter\")\n\n\n\n\n\n\n\n\n\nwelfare_df &lt;- long_df |&gt;\n  filter(Roommate == \"Total\")\nggplot(welfare_df, aes(x=Songs, y=Utility, color=Roommate)) +\n  geom_line(linewidth=g_linewidth) +\n  geom_point(size=g_pointsize) +\n  labs(\n    title=\"Social Welfare: Jeef and Keef\",\n    x=\"Number of Songs Played\",\n    y=\"Social Welfare\"\n  ) +\n  scale_color_manual(values=c(cbPalette[3]), labels=c(\"Total      \")) +\n  theme_dsan(\"quarter\") +\n  remove_legend_title()",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
@@ -1930,7 +2066,7 @@
     "href": "w11/index.html#so-whats-the-issue",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "So What’s the Issue?",
-    "text": "So What’s the Issue?\n\nThese utility values are not observed\nIf we try to elicit them, both Jeef and Keef have strategic incentives to lie (over-exaggerate)\nJeef maximizes own utility by reporting \\(u_j(s) = \\infty\\)\nKeef maximizes own utility by reporting \\(u_k(s) = -\\infty\\)\n(…Second price auctions tho)",
+    "text": "So What’s the Issue?\n\nThese utility values are not observed\nIf we try to elicit them, both Jeef and Keef have strategic incentives to lie (over-exaggerate)\nJeef maximizes own utility by reporting \\(u_j(s) = \\infty\\)\n\n(“I will literally die if I can’t listen to Lil Wayne’s ”Peanuts 2 N Elephant” prod. Lin-Manuel Miranda all day”)\n\nKeef maximizes own utility by reporting \\(u_k(s) = -\\infty\\)\n\n(“I will literally die if I hear this elephant song again”)\n\n(…Quick mechanism design demo: Second price auctions)",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
@@ -1940,7 +2076,7 @@
     "href": "w11/index.html#now-with-scarce-resources",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "Now with Scarce Resources",
-    "text": "Now with Scarce Resources\n\nIn a given week, Jeef and Keef have 14 meals and 7 aux hours to divide amongst them\n\n\\[\n\\begin{align*}\n\\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\\\\n\\text{s.t. }& m_1 + m_2 \\leq 14 \\\\\n\\phantom{\\text{s.t. }} & ~ \\, a_1 + a_2 \\; \\leq 7\n\\end{align*}\n\\]\n\nLet’s assume \\(u_i(m_i, a_i) = m_i + a_i\\) for both\n\\(\\Rightarrow\\) One solution: \\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\\)…\n\\(\\Rightarrow\\) Another: \\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\\)…\nWho decides? Any decision implies \\(\\omega_1, \\omega_2\\) (\\(\\omega_1 + \\omega_2 = 1\\))",
+    "text": "Now with Scarce Resources\n\nIn a given week, Jeef and Keef have 14 meals and 7 aux hours to divide amongst them\n\n\\[\n\\begin{align*}\n\\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\\\\n\\text{s.t. }& m_1 + m_2 \\leq 14 \\\\\n\\phantom{\\text{s.t. }} & ~ \\, a_1 + a_2 \\; \\leq 7\n\\end{align*}\n\\]\n\nLet’s assume \\(u_i(m_i, a_i) = m_i + a_i\\) for both\n\\(\\Rightarrow\\) One solution: \\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\\)…\n\\(\\Rightarrow\\) Another: \\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\\)…\nWho decides? Any decision implies \\(\\omega_1, \\omega_2\\) (\\(\\omega_1 + \\omega_2 = 1\\))(Last slide = last reminder…)",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
@@ -1950,7 +2086,7 @@
     "href": "w11/index.html#references",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "References",
-    "text": "References\n\n\nAkerlof, George A. 1970. “The Market for \"Lemons\": Quality Uncertainty and the Market Mechanism.” The Quarterly Journal of Economics 84 (3): 488–500. https://doi.org/10.2307/1879431.\n\n\nBecker, Gary S. 1957. The Economics of Discrimination. University of Chicago Press. https://books.google.com?id=50qHcSNVVEMC.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (New York, NY, USA), FAccT ’21, March 1, 576–86. https://doi.org/10.1145/3442188.3445919.\n\n\nMalm, Andreas. 2021. How to Blow Up a Pipeline. Verso Books. https://books.google.com?id=qUrSDwAAQBAJ.\n\n\nPareto, Vilfredo. 1896. Cours d’Économie politique. Librairie Droz. https://books.google.com?id=s249oYSJbVMC.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin. https://books.google.com?id=bhJgd3hGdxQC.",
+    "text": "References\n\n\nAkerlof, George A. 1970. “The Market for \"Lemons\": Quality Uncertainty and the Market Mechanism.” The Quarterly Journal of Economics 84 (3): 488–500. https://doi.org/10.2307/1879431.\n\n\nBecker, Gary S. 1957. The Economics of Discrimination. University of Chicago Press. https://books.google.com?id=50qHcSNVVEMC.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (New York, NY, USA), FAccT ’21, March 1, 576–86. https://doi.org/10.1145/3442188.3445919.\n\n\nLerner, Abba P. 1972. “The Economics and Politics of Consumer Sovereignty.” The American Economic Review 62 (1/2): 258–66. https://www.jstor.org/stable/1821551.\n\n\nMalm, Andreas. 2021. How to Blow Up a Pipeline. Verso Books. https://books.google.com?id=qUrSDwAAQBAJ.\n\n\nPareto, Vilfredo. 1896. Cours d’Économie politique. Librairie Droz. https://books.google.com?id=s249oYSJbVMC.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSmith, Adam. 1776. The Wealth of Nations. Random House Publishing Group. https://books.google.com?id=Anwp7vTR1usC.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin. https://books.google.com?id=bhJgd3hGdxQC.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC.\n\n\nVarian, Hal R. 2006. Intermediate Microeconomics: A Modern Approach. W.W. Norton.\n\n\nWeber, Max. 1919. The Vocation Lectures. Hackett Publishing. https://books.google.com?id=V6t5EAAAQBAJ.",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
@@ -1960,7 +2096,7 @@
     "href": "w11/index.html#footnotes",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nRecall W01: Earned Income Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation \\(\\in \\text{Policy Set}\\); Black Panther Community Police Patrols, Blowing Up Oil Pipelines (Malm 2021), Bolshevik Revolution also \\(\\in \\text{Policy Set}\\)↩︎",
+    "text": "Footnotes\n\n\n(dw, they use the profits for innovation and thought leadership and def not to buy yachts so they can party with yacht friends on privately-owned Caribbean islands)↩︎\nRecall W01: [Earned Income Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation] \\(\\in \\text{Policy Set}\\); [Black Panther Community Police Patrols, Blowing Up Oil Pipelines (Malm 2021), Bolshevik Revolution] also \\(\\in \\text{Policy Set}\\)↩︎",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
@@ -5189,211 +5325,11 @@
     ]
   },
   {
-    "objectID": "w10/index.html#fishers-dilemma-fishers-dilemma",
-    "href": "w10/index.html#fishers-dilemma-fishers-dilemma",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Fishers’ Dilemma (Fishers’ Dilemma)",
-    "text": "Fishers’ Dilemma (Fishers’ Dilemma)\n\nSingle, unique Nash equilibrium, and it’s Pareto inferior\n\n\n\n\nThe “Iterated Elimination” Result\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nFish 6h\n\nFish 8h\n\n\n\\(A\\)\nFish 6h\n\\(\\color{#0072b2}\\cancel{\\color{black}1}, \\,\\)\n\\(\\color{#009e73}\\cancel{\\color{black}1}\\)\n\n\\(\\color{#0072b2}\\cancel{\\color{black}0},\\)\n\\(\\color{#009e73}\\boxed{\\color{black}\\mathbf{1.2}}\\)\n\n\nFish 8h\n\\(\\color{#0072b2}\\boxed{\\color{black}\\mathbf{1.2}}, \\,\\)\n\\(\\color{#009e73}\\cancel{\\color{black}0}\\)\n\n\\(\\color{#0072b2}\\boxed{\\color{black}\\mathbf{0.4}},\\)\n\\(\\color{#009e73}\\boxed{\\color{black}\\mathbf{0.4}}\\)\n\n\n\n\n\nBoxes = Best Responses:\n\\(\\text{BR}_A(\\overset{a_B}{6\\textrm{h}}) = 8\\textrm{h}\\), \\(\\text{BR}_A(\\overset{a_B}{8\\textrm{h}}) = 8\\textrm{h}\\)\n\\(\\text{BR}_B(\\underset{a_A}{6\\textrm{h}}) = 8\\textrm{h}\\), \\(\\text{BR}_B(\\underset{a_A}{8\\textrm{h}}) = 8\\textrm{h}\\)\n\n\n\nPareto Dominance",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#operationalizing-power",
-    "href": "w10/index.html#operationalizing-power",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Operationalizing Power",
-    "text": "Operationalizing Power\n\nEqually good outside options \\(\\implies\\) can contract to Pareto-optimal point \\(o^P\\)\n\\(A\\) has better outside options \\(\\implies\\) can make take it or leave it offer to \\(B\\):\n\n“You (\\(B\\)) fish 6 hrs all the time. I (\\(A\\)) fish 6 hrs 41% of time, 8 hrs otherwise”\n\n\n\n\n\nSlightly better for \\(B\\) \\(\\implies\\) \\(B\\) accepts(Behavioral econ: \\(B\\) accepts if 41% meets subjective fairness threshold; observed across many cultures!)\nLater / next week: observe policy with outcome \\(o^{C}_{A \\rightarrow B} \\iff\\) policy values \\(A\\)’s welfare more than \\(B\\)’s welfare (inferred social welfare weights \\(\\omega_A &gt; \\omega_B\\))",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#policy-interventions-fish-dilemmas-mapsto-assurance-games",
-    "href": "w10/index.html#policy-interventions-fish-dilemmas-mapsto-assurance-games",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Policy Interventions: Fish Dilemmas \\(\\mapsto\\) Assurance Games",
-    "text": "Policy Interventions: Fish Dilemmas \\(\\mapsto\\) Assurance Games\n\nNotice: To “escape” prisoners’ dilemma, we had to literally change the rules of the game (permanent intervention)\nFishers’ Dilemma:\n\nNo institutions: \\(a_A, a_B \\in \\{6\\text{ hr}, 8\\text{ hr}\\}\\)\nInstitutions (courts or social norms): \\(\\{\\text{Accept}, \\text{Reject}\\}\\)\n\nDriving “game”:\n\nNo institutions: \\(a_A, a_B \\in \\{\\text{Stop}, \\text{Drive}\\}\\)\nInstitutions (stoplights installed by govt or community agreement): \\(a_A, a_B \\in \\{\\text{Obey Light}, \\text{Run Light}\\}\\)\n\nWithin assurance games, only need to nudge (one-time intervention) \\(\\leadsto\\) new equilibrium (self-enforcing by definition)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#assurance-game",
-    "href": "w10/index.html#assurance-game",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Assurance Game",
-    "text": "Assurance Game\n\nMultiple equilibria; the particular outcome we observe is a function of history (path dependency)\nDrive-on-left vs. drive-on-right: Assurance game where neither equilibrium Pareto-dominates other option\n\nSwedish Dagen H: Nudge from \\(o^*_{\\textsf{L}} = o(\\textsf{L},\\textsf{L})\\) to \\(o^*_{\\textsf{R}} = o(\\textsf{R},\\textsf{R})\\)\nEither eq is self-reinforcing! (Unless you want to crash out)\n\n\n\n\n\nQWERTY vs. DVORAK / Palanpur farmers: Assurance game where observed equilibrium Pareto inferior\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nEarly\nLate\n\n\n\\(A\\)\nEarly\n\\(4, 4\\)\n\\(0, 3\\)\n\n\nLate\n\\(3, 0\\)\n\\(2, 2\\)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#invisible-hand-game",
-    "href": "w10/index.html#invisible-hand-game",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Invisible Hand Game",
-    "text": "Invisible Hand Game\n\nSingle, unique Nash equilibrium, and it’s Pareto efficient\n\\(\\Rightarrow\\) Acting in self interest \\(\\leadsto\\) best possible outcome\n\n\n\n\nIt is not from the benevolence of the butcher, the brewer, or the baker that we expect our meal, but from their regard to their own interest (Smith 1776)\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nCorn\nTaro\n\n\n\\(A\\)\nCorn\n\\(2, 4\\)\n\\(4, 3\\)\n\n\nTaro\n\\(5, 5\\)\n\\(3, 2\\)\n\n\n\n\n\n\nWealth of Nations SPOILER: The wealth comes from division of laborand also dumbleydore dies. semperus snake too. and even poor ron the weasel, who never deserved such a fate\n\n\nAn economic transaction is a solved political problem. Economics has gained the title “Queen of the Social Sciences” by choosing solved political problems as its domain. (Lerner 1972)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#since-weve-already-opened-the-pandoras-box-of-utility",
-    "href": "w10/index.html#since-weve-already-opened-the-pandoras-box-of-utility",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Since We’ve Already Opened the Pandora’s Box of Utility…",
-    "text": "Since We’ve Already Opened the Pandora’s Box of Utility…\n\n\n\nFrom Ryan Safner’s History of Economic Thought: Welfare Economics\n\n\n\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#two-can-play-this-game",
-    "href": "w10/index.html#two-can-play-this-game",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Two Can Play This Game…",
-    "text": "Two Can Play This Game…\n\n\n\n\n\n\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)\nGreenie obtains greater utility within the same budget by moving from \\(E^2\\) to \\(O^2\\)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#the-edgeworth-box",
-    "href": "w10/index.html#the-edgeworth-box",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "The Edgeworth Box",
-    "text": "The Edgeworth Box\n\n\n\nRotate Greenie’s box 180° and superimpose onto Bluey’s",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#the-contract-curve",
-    "href": "w10/index.html#the-contract-curve",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "The Contract(!) Curve",
-    "text": "The Contract(!) Curve\n\n\n\n\n\n\nFrom initial endowment \\(E\\), if allowed to trade, “rational” players can reach any allocation along dashed contract curve from \\(G\\) to \\(B\\)… (Why not \\(A\\) or \\(H\\)?)\nSo, what determines which of these points they end up at? (Middle name hint)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#first-fundamental-theorem-of-welfare-economics",
-    "href": "w10/index.html#first-fundamental-theorem-of-welfare-economics",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "First Fundamental Theorem of Welfare Economics",
-    "text": "First Fundamental Theorem of Welfare Economics\n\n[Antecedents (Coase Conditions)] \\(\\Rightarrow\\) markets produce Pareto-optimal outcomes\n\n\nEven Jeff finds proof (and corollaries) compelling / convincing / empirically-supported\n\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN 5300) built on what to do when GM Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, market-socialist nationalization",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#part-2-suddenly-collides-with-part-1-property-rights",
-    "href": "w10/index.html#part-2-suddenly-collides-with-part-1-property-rights",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Part 2 Suddenly Collides with Part 1: Property Rights",
-    "text": "Part 2 Suddenly Collides with Part 1: Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#externalities-leftrightarrow-costs-of-actions-paid-by-someone-else",
-    "href": "w10/index.html#externalities-leftrightarrow-costs-of-actions-paid-by-someone-else",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Externalities \\(\\Leftrightarrow\\) Costs of Actions Paid by Someone Else!",
-    "text": "Externalities \\(\\Leftrightarrow\\) Costs of Actions Paid by Someone Else!\n\nSteel Mill \\(S\\) produces amount of steel \\(s\\) \\(\\leadsto\\) pollution \\(x\\), total cost \\(c_s(s,x)\\)\nFishery \\(F\\) “produces” amount of fish [\\(x \\leadsto\\)] \\(f\\), total cost \\(c_f(f,x)\\)\n\\(S\\) optimizes (price per steel \\(p_s\\))\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,\\small\\boxed{x}}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes (price per fish \\(p_f\\))\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#functionals",
-    "href": "w10/index.html#functionals",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Functionals?",
-    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#we-live-in-a-society",
-    "href": "w10/index.html#we-live-in-a-society",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "We Live In A Society",
-    "text": "We Live In A Society\n\nUtilitarianism, Kantian Ethics, Rawls can all be modeled as Social Welfare Functionals\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\n\\(W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\). \\(\\omega_i\\) is \\(i\\)’s welfare weight\n(Preview) Decomposition: evaluate policies by estimating marginal utility \\(u'_i(x)\\) compared to \\(\\omega_i\\))",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#alternative-swf-specifications",
-    "href": "w10/index.html#alternative-swf-specifications",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Alternative SWF Specifications",
-    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Innovation}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#utilitarian-swf",
-    "href": "w10/index.html#utilitarian-swf",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Utilitarian SWF",
-    "text": "Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -99999999\\)?",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#the-hard-problem-of-utilitarian-swf",
-    "href": "w10/index.html#the-hard-problem-of-utilitarian-swf",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "The Hard Problem of Utilitarian SWF",
-    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom?",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#image-from-week-1",
-    "href": "w10/index.html#image-from-week-1",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Image from Week 1!",
-    "text": "Image from Week 1!",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#relevance-for-this-week-where-we-left-off",
-    "href": "w10/index.html#relevance-for-this-week-where-we-left-off",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Relevance for This Week (Where We Left Off)",
-    "text": "Relevance for This Week (Where We Left Off)\n\nCan we develop policy interventions that equalize power, so that world looks like normative ethics from W03-W08 (“what is right”)?\n(Hidden antecedent: non-Nietzschean ethical framework e.g. Utilitarianism/Kant)\nPoint of prev slide: From now til W14, keep in mind how definition of power (and hence “effectiveness” of policy intervention) depends on antecedent\n\nliberal definition \\(\\Rightarrow\\) focus on equilibria (no injustice if bad thing doesn’t happen in equilibrium)\nrepublican definition \\(\\Rightarrow\\) also take off-equilibrium possibilities into account (no injustice if bad thing doesn’t happen in equilibrium and doesn’t happen if one player deviates “on a whim”) (Jacobs and Naidu 2026 😉)\n\nPrisoners’ Dilemma 😫 \\(\\prec\\) Assurance Game 🤨 \\(\\prec\\) Invisible Hand Game 🥳",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w10/index.html#thucydides-and-the-kindly-slavemaster",
-    "href": "w10/index.html#thucydides-and-the-kindly-slavemaster",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Thucydides and the Kindly Slavemaster",
-    "text": "Thucydides and the Kindly Slavemaster\n\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (Thucydides 2013, chap. 411 BC) (Think of necessary vs. sufficient conditions!)\n\n\n\n\n\nliberalism\nrepublicanism\n\n\n\n\n\nDefinition of Injustice\nStrong do bad things (Berlin 1959)\nStrong can do bad things (Skinner 1998; Pettit 1997; Lovett 2022)\n\n\n\nThucydides Question\nStrong do as they please \\(\\overset{?}{\\Rightarrow}\\) Strong do bad things\nStrong do as they please \\(\\overset{?}{\\Rightarrow}\\) Strong can do bad things\n\n\n\nAnswer\nNo, not necessarily!\nYes, necessarily!\n\n\n\nFrederick Douglass\nMy feelings [towards slave masters] were not the result of any marked cruelty in the treatment I received…\n…they sprung from the consideration of my being a slave in the first place. It was slavery—not its mere incidents—that I despised. (Douglass 1855)\n\n\n\nA Doll’s House\nOur home is nothing but a playroom. I have been your doll-wife, just as at home I was papa’s doll-child; and here the children have been my dolls. (Ibsen 1879)\n\n\n\n\n\n(Plz notice the lowercase “l”, lowercase “r”!)",
-    "crumbs": [
-      "Week 10: {{< var w10.date-md >}}"
-    ]
-  },
-  {
     "objectID": "w10/index.html#references",
     "href": "w10/index.html#references",
     "title": "Week 10: Welfare Economics and Policy Evaluation",
     "section": "References",
-    "text": "References\n\n\nBerlin, Isaiah. 1959. Two Concepts of Liberty: An Inaugural Lecture Delivered Before the University of Oxford on 31 October 1958. Clarendon Press. https://books.google.com?id=cLaGAAAAMAAJ.\n\n\nDouglass, Frederick. 1855. My Bondage and My Freedom. Yale University Press. https://books.google.com?id=G8t0AgAAQBAJ.\n\n\nIbsen, Henrik. 1879. The Doll’s House: A Play. D. Appleton & Company. https://books.google.com?id=afgNAAAAYAAJ.\n\n\nJacobs, Jeff, and Suresh Naidu. 2026. “Operationalizing Freedom as Non-Domination in the Labor Market.” In Perspectives on Labor Republicanism, edited by Philip Pettit. Cambridge University Press.\n\n\nLerner, Abba P. 1972. “The Economics and Politics of Consumer Sovereignty.” The American Economic Review 62 (1/2): 258–66. https://www.jstor.org/stable/1821551.\n\n\nLovett, Frank. 2022. The Well-Ordered Republic. Oxford University Press. https://books.google.com?id=CdZ2EAAAQBAJ.\n\n\nPettit, Philip. 1997. Republicanism: A Theory of Freedom and Government. Oxford University Press.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSkinner, Quentin. 1998. Liberty Before Liberalism. Cambridge University Press. https://books.google.com?id=w1VyEwGpKGEC.\n\n\nSmith, Adam. 1776. The Wealth of Nations. Random House Publishing Group. https://books.google.com?id=Anwp7vTR1usC.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC.",
+    "text": "References",
     "crumbs": [
       "Week 10: {{< var w10.date-md >}}"
     ]
@@ -5406,151 +5342,11 @@
     "text": "The “Goal” of Policymaking!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nFish 6h\n\nFish 8h\n\n\n\\(A\\)\nFish 6h\n\\(1, \\,\\)\n\\(1\\)\n\n\\(0,\\)\n\\(1.2\\)\n\n\nFish 8h\n\\(1.2, \\,\\)\n\\(0\\)\n\n\\(0.4,\\)\n\\(0.4\\)\n\n\n\n\n\n\nFigure 1: Prisoners’ Dilemma 😫\n\n\n\n\n\n    \n\n\n🔫       🏆\n\n\n\n\nEasy Mode\n\n\n\nHard Mode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nEarly\nLate\n\n\n\\(A\\)\nEarly\n\\(4, 4\\)\n\\(0, 3\\)\n\n\nLate\n\\(3, 0\\)\n\\(2, 2\\)\n\n\n\n\n\n\nFigure 2: Assurance Game 🤨\n\n\n\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nCorn\nTaro\n\n\n\\(A\\)\nCorn\n\\(2, 4\\)\n\\(4, 3\\)\n\n\nTaro\n\\(5, 5\\)\n\\(3, 2\\)\n\n\n\n\n\nFigure 3: Invisible Hand Game 🥳\n\n\n\n\n\n\n\nFishers’ Dilemma 😫 \\(\\prec\\) Assurance Game 🤨 \\(\\prec\\) Invisible Hand Game 🥳"
   },
   {
-    "objectID": "w10/slides.html#fishers-dilemma-fishers-dilemma",
-    "href": "w10/slides.html#fishers-dilemma-fishers-dilemma",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Fishers’ Dilemma (Fishers’ Dilemma)",
-    "text": "Fishers’ Dilemma (Fishers’ Dilemma)\n\nSingle, unique Nash equilibrium, and it’s Pareto inferior\n\n\n\n\nThe “Iterated Elimination” Result\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nFish 6h\n\nFish 8h\n\n\n\\(A\\)\nFish 6h\n\\(\\color{#0072b2}\\cancel{\\color{black}1}, \\,\\)\n\\(\\color{#009e73}\\cancel{\\color{black}1}\\)\n\n\\(\\color{#0072b2}\\cancel{\\color{black}0},\\)\n\\(\\color{#009e73}\\boxed{\\color{black}\\mathbf{1.2}}\\)\n\n\nFish 8h\n\\(\\color{#0072b2}\\boxed{\\color{black}\\mathbf{1.2}}, \\,\\)\n\\(\\color{#009e73}\\cancel{\\color{black}0}\\)\n\n\\(\\color{#0072b2}\\boxed{\\color{black}\\mathbf{0.4}},\\)\n\\(\\color{#009e73}\\boxed{\\color{black}\\mathbf{0.4}}\\)\n\n\n\n\n\nBoxes = Best Responses:\n\\(\\text{BR}_A(\\overset{a_B}{6\\textrm{h}}) = 8\\textrm{h}\\), \\(\\text{BR}_A(\\overset{a_B}{8\\textrm{h}}) = 8\\textrm{h}\\)\n\\(\\text{BR}_B(\\underset{a_A}{6\\textrm{h}}) = 8\\textrm{h}\\), \\(\\text{BR}_B(\\underset{a_A}{8\\textrm{h}}) = 8\\textrm{h}\\)\n\n\n\nPareto Dominance"
-  },
-  {
-    "objectID": "w10/slides.html#operationalizing-power",
-    "href": "w10/slides.html#operationalizing-power",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Operationalizing Power",
-    "text": "Operationalizing Power\n\nEqually good outside options \\(\\implies\\) can contract to Pareto-optimal point \\(o^P\\)\n\\(A\\) has better outside options \\(\\implies\\) can make take it or leave it offer to \\(B\\):\n\n“You (\\(B\\)) fish 6 hrs all the time. I (\\(A\\)) fish 6 hrs 41% of time, 8 hrs otherwise”\n\n\n\n\n\nSlightly better for \\(B\\) \\(\\implies\\) \\(B\\) accepts(Behavioral econ: \\(B\\) accepts if 41% meets subjective fairness threshold; observed across many cultures!)\nLater / next week: observe policy with outcome \\(o^{C}_{A \\rightarrow B} \\iff\\) policy values \\(A\\)’s welfare more than \\(B\\)’s welfare (inferred social welfare weights \\(\\omega_A &gt; \\omega_B\\))"
-  },
-  {
-    "objectID": "w10/slides.html#policy-interventions-fish-dilemmas-mapsto-assurance-games",
-    "href": "w10/slides.html#policy-interventions-fish-dilemmas-mapsto-assurance-games",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Policy Interventions: Fish Dilemmas \\(\\mapsto\\) Assurance Games",
-    "text": "Policy Interventions: Fish Dilemmas \\(\\mapsto\\) Assurance Games\n\nNotice: To “escape” prisoners’ dilemma, we had to literally change the rules of the game (permanent intervention)\nFishers’ Dilemma:\n\nNo institutions: \\(a_A, a_B \\in \\{6\\text{ hr}, 8\\text{ hr}\\}\\)\nInstitutions (courts or social norms): \\(\\{\\text{Accept}, \\text{Reject}\\}\\)\n\nDriving “game”:\n\nNo institutions: \\(a_A, a_B \\in \\{\\text{Stop}, \\text{Drive}\\}\\)\nInstitutions (stoplights installed by govt or community agreement): \\(a_A, a_B \\in \\{\\text{Obey Light}, \\text{Run Light}\\}\\)\n\nWithin assurance games, only need to nudge (one-time intervention) \\(\\leadsto\\) new equilibrium (self-enforcing by definition)"
-  },
-  {
-    "objectID": "w10/slides.html#assurance-game",
-    "href": "w10/slides.html#assurance-game",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Assurance Game",
-    "text": "Assurance Game\n\nMultiple equilibria; the particular outcome we observe is a function of history (path dependency)\nDrive-on-left vs. drive-on-right: Assurance game where neither equilibrium Pareto-dominates other option\n\nSwedish Dagen H: Nudge from \\(o^*_{\\textsf{L}} = o(\\textsf{L},\\textsf{L})\\) to \\(o^*_{\\textsf{R}} = o(\\textsf{R},\\textsf{R})\\)\nEither eq is self-reinforcing! (Unless you want to crash out)\n\n\n\n\n\nQWERTY vs. DVORAK / Palanpur farmers: Assurance game where observed equilibrium Pareto inferior\n\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nEarly\nLate\n\n\n\\(A\\)\nEarly\n\\(4, 4\\)\n\\(0, 3\\)\n\n\nLate\n\\(3, 0\\)\n\\(2, 2\\)"
-  },
-  {
-    "objectID": "w10/slides.html#invisible-hand-game",
-    "href": "w10/slides.html#invisible-hand-game",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Invisible Hand Game",
-    "text": "Invisible Hand Game\n\nSingle, unique Nash equilibrium, and it’s Pareto efficient\n\\(\\Rightarrow\\) Acting in self interest \\(\\leadsto\\) best possible outcome\n\n\n\n\nIt is not from the benevolence of the butcher, the brewer, or the baker that we expect our meal, but from their regard to their own interest (Smith 1776)\n\n\n\n\n\n\n\n\\(B\\)\n\n\n\n\nCorn\nTaro\n\n\n\\(A\\)\nCorn\n\\(2, 4\\)\n\\(4, 3\\)\n\n\nTaro\n\\(5, 5\\)\n\\(3, 2\\)\n\n\n\n\n\nWealth of Nations SPOILER: The wealth comes from division of laborand also dumbleydore dies. semperus snake too. and even poor ron the weasel, who never deserved such a fate\n\n\nAn economic transaction is a solved political problem. Economics has gained the title “Queen of the Social Sciences” by choosing solved political problems as its domain. (Lerner 1972)"
-  },
-  {
-    "objectID": "w10/slides.html#since-weve-already-opened-the-pandoras-box-of-utility",
-    "href": "w10/slides.html#since-weve-already-opened-the-pandoras-box-of-utility",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Since We’ve Already Opened the Pandora’s Box of Utility…",
-    "text": "Since We’ve Already Opened the Pandora’s Box of Utility…\n\nFrom Ryan Safner’s History of Economic Thought: Welfare Economics\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)"
-  },
-  {
-    "objectID": "w10/slides.html#two-can-play-this-game",
-    "href": "w10/slides.html#two-can-play-this-game",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Two Can Play This Game…",
-    "text": "Two Can Play This Game…\n\n\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)\nGreenie obtains greater utility within the same budget by moving from \\(E^2\\) to \\(O^2\\)"
-  },
-  {
-    "objectID": "w10/slides.html#the-edgeworth-box",
-    "href": "w10/slides.html#the-edgeworth-box",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "The Edgeworth Box",
-    "text": "The Edgeworth Box\n\nRotate Greenie’s box 180° and superimpose onto Bluey’s"
-  },
-  {
-    "objectID": "w10/slides.html#the-contract-curve",
-    "href": "w10/slides.html#the-contract-curve",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "The Contract(!) Curve",
-    "text": "The Contract(!) Curve\n\n\nFrom initial endowment \\(E\\), if allowed to trade, “rational” players can reach any allocation along dashed contract curve from \\(G\\) to \\(B\\)… (Why not \\(A\\) or \\(H\\)?)\nSo, what determines which of these points they end up at? (Middle name hint)"
-  },
-  {
-    "objectID": "w10/slides.html#first-fundamental-theorem-of-welfare-economics",
-    "href": "w10/slides.html#first-fundamental-theorem-of-welfare-economics",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "First Fundamental Theorem of Welfare Economics",
-    "text": "First Fundamental Theorem of Welfare Economics\n\n[Antecedents (Coase Conditions)] \\(\\Rightarrow\\) markets produce Pareto-optimal outcomes\n\n\nEven Jeff finds proof (and corollaries) compelling / convincing / empirically-supported\n\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN 5300) built on what to do when GM Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, market-socialist nationalization"
-  },
-  {
-    "objectID": "w10/slides.html#part-2-suddenly-collides-with-part-1-property-rights",
-    "href": "w10/slides.html#part-2-suddenly-collides-with-part-1-property-rights",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Part 2 Suddenly Collides with Part 1: Property Rights",
-    "text": "Part 2 Suddenly Collides with Part 1: Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air"
-  },
-  {
-    "objectID": "w10/slides.html#externalities-leftrightarrow-costs-of-actions-paid-by-someone-else",
-    "href": "w10/slides.html#externalities-leftrightarrow-costs-of-actions-paid-by-someone-else",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Externalities \\(\\Leftrightarrow\\) Costs of Actions Paid by Someone Else!",
-    "text": "Externalities \\(\\Leftrightarrow\\) Costs of Actions Paid by Someone Else!\n\nSteel Mill \\(S\\) produces amount of steel \\(s\\) \\(\\leadsto\\) pollution \\(x\\), total cost \\(c_s(s,x)\\)\nFishery \\(F\\) “produces” amount of fish [\\(x \\leadsto\\)] \\(f\\), total cost \\(c_f(f,x)\\)\n\\(S\\) optimizes (price per steel \\(p_s\\))\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,\\small\\boxed{x}}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes (price per fish \\(p_f\\))\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)"
-  },
-  {
-    "objectID": "w10/slides.html#functionals",
-    "href": "w10/slides.html#functionals",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Functionals?",
-    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)"
-  },
-  {
-    "objectID": "w10/slides.html#we-live-in-a-society",
-    "href": "w10/slides.html#we-live-in-a-society",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "We Live In A Society",
-    "text": "We Live In A Society\n\nUtilitarianism, Kantian Ethics, Rawls can all be modeled as Social Welfare Functionals\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\n\\(W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\). \\(\\omega_i\\) is \\(i\\)’s welfare weight\n(Preview) Decomposition: evaluate policies by estimating marginal utility \\(u'_i(x)\\) compared to \\(\\omega_i\\))"
-  },
-  {
-    "objectID": "w10/slides.html#alternative-swf-specifications",
-    "href": "w10/slides.html#alternative-swf-specifications",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Alternative SWF Specifications",
-    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Innovation}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)"
-  },
-  {
-    "objectID": "w10/slides.html#utilitarian-swf",
-    "href": "w10/slides.html#utilitarian-swf",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Utilitarian SWF",
-    "text": "Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -99999999\\)?"
-  },
-  {
-    "objectID": "w10/slides.html#the-hard-problem-of-utilitarian-swf",
-    "href": "w10/slides.html#the-hard-problem-of-utilitarian-swf",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "The Hard Problem of Utilitarian SWF",
-    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom?"
-  },
-  {
-    "objectID": "w10/slides.html#image-from-week-1",
-    "href": "w10/slides.html#image-from-week-1",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Image from Week 1!",
-    "text": "Image from Week 1!"
-  },
-  {
-    "objectID": "w10/slides.html#relevance-for-this-week-where-we-left-off",
-    "href": "w10/slides.html#relevance-for-this-week-where-we-left-off",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Relevance for This Week (Where We Left Off)",
-    "text": "Relevance for This Week (Where We Left Off)\n\nCan we develop policy interventions that equalize power, so that world looks like normative ethics from W03-W08 (“what is right”)?\n(Hidden antecedent: non-Nietzschean ethical framework e.g. Utilitarianism/Kant)\nPoint of prev slide: From now til W14, keep in mind how definition of power (and hence “effectiveness” of policy intervention) depends on antecedent\n\nliberal definition \\(\\Rightarrow\\) focus on equilibria (no injustice if bad thing doesn’t happen in equilibrium)\nrepublican definition \\(\\Rightarrow\\) also take off-equilibrium possibilities into account (no injustice if bad thing doesn’t happen in equilibrium and doesn’t happen if one player deviates “on a whim”) (Jacobs and Naidu 2026 😉)\n\nPrisoners’ Dilemma 😫 \\(\\prec\\) Assurance Game 🤨 \\(\\prec\\) Invisible Hand Game 🥳"
-  },
-  {
-    "objectID": "w10/slides.html#thucydides-and-the-kindly-slavemaster",
-    "href": "w10/slides.html#thucydides-and-the-kindly-slavemaster",
-    "title": "Week 10: Welfare Economics and Policy Evaluation",
-    "section": "Thucydides and the Kindly Slavemaster",
-    "text": "Thucydides and the Kindly Slavemaster\n\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. (Thucydides 2013, chap. 411 BC) (Think of necessary vs. sufficient conditions!)\n\n\n\n\n\nliberalism\nrepublicanism\n\n\n\n\n\nDefinition of Injustice\nStrong do bad things (Berlin 1959)\nStrong can do bad things (Skinner 1998; Pettit 1997; Lovett 2022)\n\n\n\nThucydides Question\nStrong do as they please \\(\\overset{?}{\\Rightarrow}\\) Strong do bad things\nStrong do as they please \\(\\overset{?}{\\Rightarrow}\\) Strong can do bad things\n\n\n\nAnswer\nNo, not necessarily!\nYes, necessarily!\n\n\n\nFrederick Douglass\nMy feelings [towards slave masters] were not the result of any marked cruelty in the treatment I received…\n…they sprung from the consideration of my being a slave in the first place. It was slavery—not its mere incidents—that I despised. (Douglass 1855)\n\n\n\nA Doll’s House\nOur home is nothing but a playroom. I have been your doll-wife, just as at home I was papa’s doll-child; and here the children have been my dolls. (Ibsen 1879)\n\n\n\n\n\n(Plz notice the lowercase “l”, lowercase “r”!)"
-  },
-  {
     "objectID": "w10/slides.html#references",
     "href": "w10/slides.html#references",
     "title": "Week 10: Welfare Economics and Policy Evaluation",
     "section": "References",
-    "text": "References\n\n\nBerlin, Isaiah. 1959. Two Concepts of Liberty: An Inaugural Lecture Delivered Before the University of Oxford on 31 October 1958. Clarendon Press. https://books.google.com?id=cLaGAAAAMAAJ.\n\n\nDouglass, Frederick. 1855. My Bondage and My Freedom. Yale University Press. https://books.google.com?id=G8t0AgAAQBAJ.\n\n\nIbsen, Henrik. 1879. The Doll’s House: A Play. D. Appleton & Company. https://books.google.com?id=afgNAAAAYAAJ.\n\n\nJacobs, Jeff, and Suresh Naidu. 2026. “Operationalizing Freedom as Non-Domination in the Labor Market.” In Perspectives on Labor Republicanism, edited by Philip Pettit. Cambridge University Press.\n\n\nLerner, Abba P. 1972. “The Economics and Politics of Consumer Sovereignty.” The American Economic Review 62 (1/2): 258–66. https://www.jstor.org/stable/1821551.\n\n\nLovett, Frank. 2022. The Well-Ordered Republic. Oxford University Press. https://books.google.com?id=CdZ2EAAAQBAJ.\n\n\nPettit, Philip. 1997. Republicanism: A Theory of Freedom and Government. Oxford University Press.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSkinner, Quentin. 1998. Liberty Before Liberalism. Cambridge University Press. https://books.google.com?id=w1VyEwGpKGEC.\n\n\nSmith, Adam. 1776. The Wealth of Nations. Random House Publishing Group. https://books.google.com?id=Anwp7vTR1usC.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC."
+    "text": "References"
   },
   {
     "objectID": "w07/index.html",

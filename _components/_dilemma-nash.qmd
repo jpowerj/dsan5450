@@ -16,7 +16,7 @@
 <tr>
   <td class='game-label'></td>
   <td class='game-label'></td>
-  <td colspan="5" align="center" class='game-label-crunch'><span data-qmd="$B$"></span></td>
+  <td colspan="5" align="center" class='game-label-crunch'><span data-qmd="$\color{#e69f00}B$"></span></td>
 </tr>
 <tr>
   <td class='game-label'></td>
@@ -26,21 +26,21 @@
   <td colspan='2' class='game-label-crunch'>Fish 8h</td>
 </tr>
 <tr class='td-nb'>
-  <td rowspan="2" style="vertical-align: middle;" class='game-label td-nb'><span data-qmd="$A$"></span></td>
+  <td rowspan="2" style="vertical-align: middle;" class='game-label td-nb'><span data-qmd="$\color{#0072b2}A$"></span></td>
   <td class='game-label-crunch'>Fish 6h</td>
-  <td class='game-cell' align='center'><span data-qmd="$\color{#0072b2}\cancel{\color{black}1}, \,$"></span></td>
-  <td class='game-cell' align='left'><span data-qmd="$\color{#009e73}\cancel{\color{black}1}$"></span></td>
+  <td class='game-cell' align='center'><span data-qmd="$\color{#0072b2}\cancel{1}\color{black}, \,$"></span></td>
+  <td class='game-cell' align='left'><span data-qmd="$\color{#e69f00}\cancel{1}$"></span></td>
   <td class='game-cell'></td>
-  <td class='game-cell' align='center'><span data-qmd="$\color{#0072b2}\cancel{\color{black}0},$"></span></td>
-  <td class='game-cell'><span data-qmd="$\color{#009e73}\boxed{\color{black}\mathbf{1.2}}$"></span></td>
+  <td class='game-cell' align='center'><span data-qmd="$\color{#0072b2}\cancel{0}\color{black},$"></span></td>
+  <td class='game-cell'><span data-qmd="$\color{#e69f00}\boxed{\mathbf{1.2}}$"></span></td>
 </tr>
 <tr>
   <td class='game-label-crunch'>Fish 8h</td>
-  <td class='game-cell' align='center'><span data-qmd="$\color{#0072b2}\boxed{\color{black}\mathbf{1.2}}, \,$"></span></td>
-  <td class='game-cell' align='left'><span data-qmd="$\color{#009e73}\cancel{\color{black}0}$"></span></td>
+  <td class='game-cell' align='center'><span data-qmd="$\color{#0072b2}\boxed{\color{#0072b2}\mathbf{1.2}}\color{black}, \,$"></span></td>
+  <td class='game-cell' align='left'><span data-qmd="$\color{#e69f00}\cancel{0}$"></span></td>
   <td class='game-cell'></td>
-  <td class='game-cell' align='center'><span data-qmd="$\color{#0072b2}\boxed{\color{black}\mathbf{0.4}},$"></span></td>
-  <td class='game-cell'><span data-qmd="$\color{#009e73}\boxed{\color{black}\mathbf{0.4}}$"></span></td>
+  <td class='game-cell' align='center'><span data-qmd="$\color{#0072b2}\boxed{\color{#0072b2}\mathbf{0.4}}\color{black},$"></span></td>
+  <td class='game-cell'><span data-qmd="$\color{#009e73}\boxed{\color{#e69f00}\mathbf{0.4}}$"></span></td>
 </tr>
 </tbody>
 </table>

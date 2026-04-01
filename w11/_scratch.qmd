@@ -1,3 +1,34 @@
 <!-- $$
 \max_{m_1,m_2,a_1,a_2}W(u_1(m_1,a_1),u_2(m_2,a_2))
 $$ -->
+
+Old PD:
+     || 6hrs   || 8hrs     ||
+6hrs || 1, 1   || 0, 1.2   ||
+8hrs || 1.2, 0 || 0.4, 0.4 ||
+
+Generalized:
+     || 6hrs       || 8hrs     ||
+6hrs || b=1, b=1   || d=0, a=1.2   ||
+8hrs || a=1.2, d=0 || c=0.4, c=0.4 ||
+
+Liability law, generalized:
+     || 6hrs       || 8hrs     ||
+6hrs || b, b   || d + (b-d), a - (b-d)   ||
+8hrs || a - (b-d), d + (b-d) || c, c ||
+
+cost inflicted = b-d
+
+This case:
+
+cost inflicted = 1 - 0 = 1
+
+Liability law, this case:
+     || 6hrs       || 8hrs     ||
+6hrs || b=1, b=1   || d=0 + (1-0), a=1.2 - (1-0)   ||
+8hrs || a=1.2 - (1-0), d=0 + (1-0) || c=0.4, c=0.4 ||
+
+Result:
+     || 6hrs       || 8hrs     ||
+6hrs || b=1, b=1   || d=1, a=0.2   ||
+8hrs || a=0.2, d=1 || c=0.4, c=0.4 ||
