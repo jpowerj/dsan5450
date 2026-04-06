@@ -65,13 +65,13 @@ w12:
   date-md: "Apr 8"
 w13:
   weeknum: 13
-  title: "Applications: Race, Class, Gender, Sexuality, and Disability (Data Feminism)"
+  title: "Identity Formation: Race, Class, Gender, Sexuality, and Disability (Data Feminism)"
   footer: "Data Feminism"
   date-md: "Apr 15"
 w14:
   weeknum: 14
-  title: "Final Project In-Class Office Hours"
-  footer: "In-Class Office Hours"
+  title: "AI, Freedom, and the 'Kindly Slavemaster'"
+  footer: "AI, Freedom, and the 'Kindly Slavemaster'"
   date-md: "Apr 22"
 hw1:
   title: "Nuts and Bolts for Fairness in AI"

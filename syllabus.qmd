@@ -126,7 +126,7 @@ The following is a rough map of what we will work through together throughout th
     <td><span data-qmd="*No Class (Spring Break)*"></span></td>
 </tr>
 <tr class='new-unit'>
-    <td><span data-qmd="**Unit 3:** Policy Frameworks"></span></td>
+    <td><span data-qmd="**Unit 3:** Privacy Policies and Data Externalities"></span></td>
     <td>8</td>
     <td><span data-qmd="{{< var w08.date-md >}}"></span></td>
     <td><span data-qmd="[{{< var w08.title >}}](./w08/)"></span></td>
@@ -151,12 +151,11 @@ The following is a rough map of what we will work through together throughout th
 </tr>
 <tr>
   <td></td>
-  <td colspan="3" class='text-85' style='padding-top: 0px;'><div data-qmd="1. On the three basic 'policy structures' we'll use to capture what kinds of policy interventions may be necessary: @bowles_microeconomics_2009, pgs. 23-55
-1. On the *legal* background for data externalities: @maccarthy_new_2015 (Especially pgs. 423-470)
+  <td colspan="3" class='text-85' style='padding-top: 0px;'><div data-qmd="1. On the *legal* background for data externalities: @maccarthy_new_2015 (Especially pgs. 423-470)
 1. The specific *economic model* of data externalities we'll look at: @acemoglu_too_2022 (only Sections 1-3 and Appendix B-3)"></div></td>
 </tr>
-<tr class='td-nb'>
-    <td></td>
+<tr class='new-unit td-nb'>
+    <td><span data-qmd="**Unit 4:** Policy Evaluation and Inverse Fairness"></span></td>
     <td>10</td>
     <td><span data-qmd="{{< var w10.date-md >}}"></span></td>
     <td><span data-qmd="[{{< var w10.title >}}](./w10/)"></span></td>
@@ -167,18 +166,25 @@ The following is a rough map of what we will work through together throughout th
 </tr>
 <tr>
   <td></td>
-  <td colspan="3" class='text-85' style='padding-top: 0px;'><div data-qmd="1. On the role of bargaining power in determining policy choice when the Pareto frontier has been reached: @bowles_microeconomics_2009, pgs. 167-183
-1. The paper utilizing ML (Causal Random Forests) to derive *welfare weights* from the algorithmically-determined choices made by Mexico's PROGRESA program: @bjorkegren_what_2025 (Though an earlier version, @bjorkegren_machine_2022, has more details on the ML-based estimation)"></div></td>
+  <td colspan="3" class='text-85' style='padding-top: 0px;'><div data-qmd="On the three basic 'policy structures' we'll use to capture what kinds of policy interventions may be necessary: @bowles_microeconomics_2009, pgs. 23-55"></div></td>
 </tr>
-<tr>
+<tr class='td-nb'>
     <td></td>
     <td>11</td>
     <td><span data-qmd="{{< var w11.date-md >}}"></span></td>
     <td><span data-qmd="[{{< var w11.title >}}](./w11/)"></span></td>
 </tr>
-<tr class='new-unit'>
-    <td><span data-qmd="**Unit 4**: Applications"></span></td>
-    <td>12</td>
+<tr class='td-nb'>
+  <td class='td-nb'></td>
+  <td colspan="3" align="center" class='td-nb'>Recommended Readings</td>
+</tr>
+<tr>
+  <td></td>
+  <td colspan="3" class='text-85' style='padding-top: 0px;'><div data-qmd="On the role of bargaining power in determining policy choice when the Pareto frontier has been reached: @bowles_microeconomics_2009, pgs. 167-183"></div></td>
+</tr>
+<tr class='td-nb'>
+    <td class='td-nb'></td>
+    <td class='td-nb'>12</td>
     <td><span data-qmd="{{< var w12.date-md >}}"></span></td>
     <td><span data-qmd="{{< var w12.title >}}"></span></td>
 </tr>
@@ -188,19 +194,38 @@ The following is a rough map of what we will work through together throughout th
 </tr>
 <tr>
   <td></td>
-  <td colspan="3" class='text-85' style='padding-top: 0px;'><div data-qmd="As we move into this unit on 'applications' of the frameworks we've learned throughout the course to various social issues, a crucial paper which we'll unpack first and foremost is @hu_what_2023"></div></td>
+  <td colspan="3" class='text-85' style='padding-top: 0px;'><div data-qmd="1. *Social Welfare Functionals (SWFs)*, the tool we're adding to our toolkit this week to evaluate policies along the Pareto frontier at an *aggregate* level (as opposed to the game-theoretic models from last week, which model how interacting *individuals* might reach or fail to reach certain Pareto-optimal outcomes), are discussed in exactly the detail you'll need in @adler_measuring_2019: Chapter 4 starts to get pretty in-the-weeds, so Chapters 1-3 (which are also shorter) are more than enough!
+1. The core paper you'll look at in HW4, which utilizes ML (Causal Random Forests) to derive *SWF weights* from the algorithmically-determined choices made by Mexico's PROGRESA program, is @bjorkegren_what_2025 (An earlier version, @bjorkegren_machine_2022, has more details on the ML-based estimation)"></div></td>
 </tr>
-<tr>
-    <td></td>
+<tr class='new-unit td-nb'>
+    <td><span data-qmd="**Unit 5**: Discourse Ethics and Identity Formation"></span></td>
     <td>13</td>
     <td><span data-qmd="{{< var w13.date-md >}}"></span></td>
     <td><span data-qmd="{{< var w13.title >}}"></span></td>
 </tr>
+<tr class='td-nb'>
+  <td class='td-nb'></td>
+  <td colspan="3" align="center" class='td-nb'>Recommended Readings</td>
+</tr>
 <tr>
+  <td></td>
+  <td colspan="3" class='text-85' style='padding-top: 0px;'><div data-qmd="As we move into this unit on 'applications' of the frameworks we've learned throughout the course to various social issues, a crucial paper which we'll unpack first and foremost is @hu_what_2023"></div></td>
+</tr>
+<tr class='td-nb'>
     <td></td>
     <td>14</td>
     <td><span data-qmd="{{< var w14.date-md >}}"></span></td>
     <td><span data-qmd="{{< var w14.title >}}"></span></td>
+</tr>
+<tr class='td-nb'>
+  <td class='td-nb'></td>
+  <td colspan="3" align="center" class='td-nb'>Recommended Readings</td>
+</tr>
+<tr>
+  <td></td>
+  <td colspan="3" class='text-85' style='padding-top: 0px;'><div data-qmd="1. There are many theoretical/historical overviews of liberal vs. republican conceptions of liberty [@pettit_republican_2008; @skinner_liberty_1998], and [fewer] applied works exploring how these might relate to AI and data collection [@hamilton_digital_2025].
+2. For a book which does *both* (lays out the tenets of republican liberty while exploring its applications to technology-focused power struggles), my recommendation is @gourevitch_slavery_2015! Given its focus on 19th century labor activism, it may not seem *explicitly* relevant at first, but read it with the [Jacquard loom](https://en.wikipedia.org/wiki/Jacquard_machine) analogy from Week 1 in mind and the connection should be clear!
+3. Chapters 6 through 10 of @acemoglu_power_2023 also focus on how imbalances of economic power impact technological development in general and AI in particular"></div></td>
 </tr>
 <tr>
     <td></td>
@@ -244,3 +269,8 @@ Excused lateness exceptions will be grounded in a policy where you can "pause" t
 ![Maslow's Hierarchy of Needs, from [Wikimedia](https://commons.wikimedia.org/wiki/File:Maslow%27s_Hierarchy_of_Needs_Pyramid_(original_five-level_model).png)](images/maslow.png){#fig-maslow fig-align="center" width="70%"}
 
 Learning data ethics is way up there in the blue triangle, so, it's important that you feel like the first four levels are solidified before you turn your focus back to classwork. And, it's a win-win, because it means that once you're back in action you can be more engaged and receptive to new topics, rather than being forced to "simulate" being in the blue triangle while in reality struggling in other spots!
+
+## References
+
+::: {#refs}
+:::
