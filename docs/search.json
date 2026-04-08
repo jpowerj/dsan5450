@@ -91,14 +91,14 @@
     "href": "w12/slides.html#functionals",
     "title": "Week 12: (Machine) Learning What Policies Value",
     "section": "Functionals?",
-    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)"
+    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nFor our purposes, they “work the same way” as regular functions1, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)\n\nIn general, doing math with functions-of-functions = “calculus of variations”"
   },
   {
     "objectID": "w12/slides.html#we-live-in-a-dang-society",
     "href": "w12/slides.html#we-live-in-a-dang-society",
     "title": "Week 12: (Machine) Learning What Policies Value",
     "section": "We Live In A Dang Society",
-    "text": "We Live In A Dang Society\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯"
+    "text": "We Live In A Dang Society\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\underbrace{\\mathcal{X} \\rightarrow \\mathbb{R}}_{u_i(\\cdot)})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯"
   },
   {
     "objectID": "w12/slides.html#alternative-swf-specifications",
@@ -106,6 +106,13 @@
     "title": "Week 12: (Machine) Learning What Policies Value",
     "section": "Alternative SWF Specifications",
     "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)"
+  },
+  {
+    "objectID": "w12/slides.html#inferring-swf-from-surveys",
+    "href": "w12/slides.html#inferring-swf-from-surveys",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Inferring SWF from Surveys",
+    "text": "Inferring SWF from Surveys\n“Conjoint Study”!"
   },
   {
     "objectID": "w12/slides.html#the-conveniently-left-out-detail",
@@ -161,7 +168,7 @@
     "href": "w12/slides.html#now-with-moral-responsibility-vs.-moral-luck",
     "title": "Week 12: (Machine) Learning What Policies Value",
     "section": "Now With Moral Responsibility vs. Moral Luck!",
-    "text": "Now With Moral Responsibility vs. Moral Luck!\nWhat is the overall social welfare of a policy \\(x\\) (as opposed to another policy \\(y\\), e.g., “do nothing”)?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEffort Class \\(\\rightarrow\\)\n\\(e^{(1)}\\)\n\\(e^{(2)}\\)\n\\(e^{(3)}\\)\n\\(e^{(4)}\\)\n\\(e^{(5)}\\)\n\n\n\n\nPercentile Range \\(\\rightarrow\\)\n\\([P_0, P_{20}]\\)\n\\([P_{20}, P_{40}]\\)\n\\([P_{40}, P_{60}]\\)\n\\([P_{60}, P_{80}]\\)\n\\([P_{80}, P_{100}]\\)\n\n\nCircumstance Class \\(c^{(1)}\\)\n\\(N_{11}\\), \\(W(1,1)(x)\\)\n\\(N_{12}\\), \\(W(1,2)(x)\\)\n\\(N_{13}\\), \\(W(1,3)(x)\\)\n\\(N_{14}\\), \\(W(1,4)(x)\\)\n\\(N_{15}\\), \\(W(1,5)(x)\\)\n\n\nCircumstance Class \\(c^{(2)}\\)\n\\(N_{21}\\), \\(W(2,1)(x)\\)\n\\(N_{22}\\), \\(W(2,2)(x)\\)\n\\(N_{23}\\), \\(W(2,3)(x)\\)\n\\(N_{24}\\), \\(W(2,4)(x)\\)\n\\(N_{25}\\), \\(W(2,5)(x)\\)\n\n\nCircumstance Class \\(c^{(3)}\\)\n\\(N_{31}\\), \\(W(3,1)(x)\\)\n\\(N_{32}\\), \\(W(3,2)(x)\\)\n\\(N_{33}\\), \\(W(3,3)(x)\\)\n\\(N_{34}\\), \\(W(3,4)(x)\\)\n\\(N_{35}\\), \\(W(3,5)(x)\\)\n\n\n\n\n\nFigure 2: Roemerian “Circumstance-Effort Matrix” (Roemer 1998)\n\n\n\n\n\\(N_{ij}\\) = Number of people in Circumstance Class \\(i\\) who exert effort \\(j\\)\n\\(W(i,j)\\) = Social Welfare Functional evaluated w.r.t. people in Circumstance Class \\(i\\) who exert effort \\(j\\)"
+    "text": "Now With Moral Responsibility vs. Moral Luck!\nWhat is the overall social welfare of a policy \\(x\\) (as opposed to another policy \\(y\\), e.g., “do nothing”)?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEffort Class \\(\\rightarrow\\)\n\\(e^{(1)}\\)\n\\(e^{(2)}\\)\n\\(e^{(3)}\\)\n\\(e^{(4)}\\)\n\\(e^{(5)}\\)\n\n\n\n\nPercentile Range \\(\\rightarrow\\)\n\\([P_0, P_{20}]\\)\n\\([P_{20}, P_{40}]\\)\n\\([P_{40}, P_{60}]\\)\n\\([P_{60}, P_{80}]\\)\n\\([P_{80}, P_{100}]\\)\n\n\nCircumstance Class \\(c^{(1)}\\)\n\\(N_{11}\\), \\(W(1,1)(x)\\)\n\\(N_{12}\\), \\(W(1,2)(x)\\)\n\\(N_{13}\\), \\(W(1,3)(x)\\)\n\\(N_{14}\\), \\(W(1,4)(x)\\)\n\\(N_{15}\\), \\(W(1,5)(x)\\)\n\n\nCircumstance Class \\(c^{(2)}\\)\n\\(N_{21}\\), \\(W(2,1)(x)\\)\n\\(N_{22}\\), \\(W(2,2)(x)\\)\n\\(N_{23}\\), \\(W(2,3)(x)\\)\n\\(N_{24}\\), \\(W(2,4)(x)\\)\n\\(N_{25}\\), \\(W(2,5)(x)\\)\n\n\nCircumstance Class \\(c^{(3)}\\)\n\\(N_{31}\\), \\(W(3,1)(x)\\)\n\\(N_{32}\\), \\(W(3,2)(x)\\)\n\\(N_{33}\\), \\(W(3,3)(x)\\)\n\\(N_{34}\\), \\(W(3,4)(x)\\)\n\\(N_{35}\\), \\(W(3,5)(x)\\)\n\n\n\n\n\nFigure 2: Roemerian “Circumstance-Effort Matrix” (Roemer 1998)\n\n\n\n\n\\(N_{ij}\\) = Number of people in Circumstance Class \\(i\\) who exert effort \\(j\\)\n\\(W(i,j)\\) = SWFL evaluated w.r.t. people in Circumstance Class \\(i\\) who exert effort \\(j\\)"
   },
   {
     "objectID": "w12/slides.html#references",
@@ -295,7 +302,7 @@
     "href": "w12/index.html#functionals",
     "title": "Week 12: (Machine) Learning What Policies Value",
     "section": "Functionals?",
-    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)",
+    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nFor our purposes, they “work the same way” as regular functions2, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
@@ -305,7 +312,7 @@
     "href": "w12/index.html#we-live-in-a-dang-society",
     "title": "Week 12: (Machine) Learning What Policies Value",
     "section": "We Live In A Dang Society",
-    "text": "We Live In A Dang Society\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯",
+    "text": "We Live In A Dang Society\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\underbrace{\\mathcal{X} \\rightarrow \\mathbb{R}}_{u_i(\\cdot)})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
@@ -316,6 +323,16 @@
     "title": "Week 12: (Machine) Learning What Policies Value",
     "section": "Alternative SWF Specifications",
     "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)",
+    "crumbs": [
+      "Week 12: {{< var w12.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w12/index.html#inferring-swf-from-surveys",
+    "href": "w12/index.html#inferring-swf-from-surveys",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Inferring SWF from Surveys",
+    "text": "Inferring SWF from Surveys\n“Conjoint Study”!",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
@@ -395,7 +412,7 @@
     "href": "w12/index.html#now-with-moral-responsibility-vs.-moral-luck",
     "title": "Week 12: (Machine) Learning What Policies Value",
     "section": "Now With Moral Responsibility vs. Moral Luck!",
-    "text": "Now With Moral Responsibility vs. Moral Luck!\nWhat is the overall social welfare of a policy \\(x\\) (as opposed to another policy \\(y\\), e.g., “do nothing”)?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEffort Class \\(\\rightarrow\\)\n\\(e^{(1)}\\)\n\\(e^{(2)}\\)\n\\(e^{(3)}\\)\n\\(e^{(4)}\\)\n\\(e^{(5)}\\)\n\n\n\n\nPercentile Range \\(\\rightarrow\\)\n\\([P_0, P_{20}]\\)\n\\([P_{20}, P_{40}]\\)\n\\([P_{40}, P_{60}]\\)\n\\([P_{60}, P_{80}]\\)\n\\([P_{80}, P_{100}]\\)\n\n\nCircumstance Class \\(c^{(1)}\\)\n\\(N_{11}\\), \\(W(1,1)(x)\\)\n\\(N_{12}\\), \\(W(1,2)(x)\\)\n\\(N_{13}\\), \\(W(1,3)(x)\\)\n\\(N_{14}\\), \\(W(1,4)(x)\\)\n\\(N_{15}\\), \\(W(1,5)(x)\\)\n\n\nCircumstance Class \\(c^{(2)}\\)\n\\(N_{21}\\), \\(W(2,1)(x)\\)\n\\(N_{22}\\), \\(W(2,2)(x)\\)\n\\(N_{23}\\), \\(W(2,3)(x)\\)\n\\(N_{24}\\), \\(W(2,4)(x)\\)\n\\(N_{25}\\), \\(W(2,5)(x)\\)\n\n\nCircumstance Class \\(c^{(3)}\\)\n\\(N_{31}\\), \\(W(3,1)(x)\\)\n\\(N_{32}\\), \\(W(3,2)(x)\\)\n\\(N_{33}\\), \\(W(3,3)(x)\\)\n\\(N_{34}\\), \\(W(3,4)(x)\\)\n\\(N_{35}\\), \\(W(3,5)(x)\\)\n\n\n\n\n\nFigure 2: Roemerian “Circumstance-Effort Matrix” (Roemer 1998)\n\n\n\n\n\\(N_{ij}\\) = Number of people in Circumstance Class \\(i\\) who exert effort \\(j\\)\n\\(W(i,j)\\) = Social Welfare Functional evaluated w.r.t. people in Circumstance Class \\(i\\) who exert effort \\(j\\)",
+    "text": "Now With Moral Responsibility vs. Moral Luck!\nWhat is the overall social welfare of a policy \\(x\\) (as opposed to another policy \\(y\\), e.g., “do nothing”)?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEffort Class \\(\\rightarrow\\)\n\\(e^{(1)}\\)\n\\(e^{(2)}\\)\n\\(e^{(3)}\\)\n\\(e^{(4)}\\)\n\\(e^{(5)}\\)\n\n\n\n\nPercentile Range \\(\\rightarrow\\)\n\\([P_0, P_{20}]\\)\n\\([P_{20}, P_{40}]\\)\n\\([P_{40}, P_{60}]\\)\n\\([P_{60}, P_{80}]\\)\n\\([P_{80}, P_{100}]\\)\n\n\nCircumstance Class \\(c^{(1)}\\)\n\\(N_{11}\\), \\(W(1,1)(x)\\)\n\\(N_{12}\\), \\(W(1,2)(x)\\)\n\\(N_{13}\\), \\(W(1,3)(x)\\)\n\\(N_{14}\\), \\(W(1,4)(x)\\)\n\\(N_{15}\\), \\(W(1,5)(x)\\)\n\n\nCircumstance Class \\(c^{(2)}\\)\n\\(N_{21}\\), \\(W(2,1)(x)\\)\n\\(N_{22}\\), \\(W(2,2)(x)\\)\n\\(N_{23}\\), \\(W(2,3)(x)\\)\n\\(N_{24}\\), \\(W(2,4)(x)\\)\n\\(N_{25}\\), \\(W(2,5)(x)\\)\n\n\nCircumstance Class \\(c^{(3)}\\)\n\\(N_{31}\\), \\(W(3,1)(x)\\)\n\\(N_{32}\\), \\(W(3,2)(x)\\)\n\\(N_{33}\\), \\(W(3,3)(x)\\)\n\\(N_{34}\\), \\(W(3,4)(x)\\)\n\\(N_{35}\\), \\(W(3,5)(x)\\)\n\n\n\n\n\nFigure 2: Roemerian “Circumstance-Effort Matrix” (Roemer 1998)\n\n\n\n\n\\(N_{ij}\\) = Number of people in Circumstance Class \\(i\\) who exert effort \\(j\\)\n\\(W(i,j)\\) = SWFL evaluated w.r.t. people in Circumstance Class \\(i\\) who exert effort \\(j\\)",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
@@ -415,7 +432,7 @@
     "href": "w12/index.html#footnotes",
     "title": "Week 12: (Machine) Learning What Policies Value",
     "section": "Footnotes",
-    "text": "Footnotes\n\n\nRecall: [Do Nothing, Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation] \\(\\in \\text{Policy Set}\\); [“Socialize the Data Centres!”, Blowing Up Oil Pipelines (Malm 2021), Bolshevik Revolution] also \\(\\in \\text{Policy Set}\\)↩︎",
+    "text": "Footnotes\n\n\nRecall: [Do Nothing, Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation] \\(\\in \\text{Policy Set}\\); [“Socialize the Data Centres!”, Blowing Up Oil Pipelines (Malm 2021), Bolshevik Revolution] also \\(\\in \\text{Policy Set}\\)↩︎\nIn general, doing math with functions-of-functions = “calculus of variations”↩︎",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]

@@ -252,13 +252,45 @@ $$
 * Can prove that $o(s^*_{\text{Yugo}}, f^*_{\text{Yugo}}, x^*_{\text{Yugo}})$ Pareto-dominates $o(s^*_{\text{Priv}}, x^*_{\text{Priv}}, f^*_{\text{Priv}})$
 * What determines which agents get to ignore externalities? *(Dead horse/middle name)*
 
-# Social Welfare Functionals {data-stack-name="Social Welfare Functionals"}
+# Social Welfare Functionals {.smaller .title-11 .crunch-p .crunch-img .crunch-quarto-figure .crunch-quarto-layout-panel data-stack-name="Social Welfare Functionals"}
+
+:::: {layout="[72,28]" layout-valign="center"}
+::: {#swf}
+
+*(Fun notation:)*
+
+* SWF $w(x)$ = Social Welfare Function:
+  * Plug in a **Policy** $x$, obtain a Welfare "Level" $y \in \mathbb{R}$
+  * Policy $x_1$ "better than" policy $x_0$ iff $w(x_1) > w(x_0)$
+
+:::
+::: {#swf-img}
+
+![You omnisciently evaluating SWF](images/alex-grey.jpg){fig-align="center" width="180px"}
+
+:::
+::::
+
+:::: {layout="[72,28]" layout-valign="center"}
+::: {#swfl}
+
+* SWF**L** $W(\mathbf{u})$ = Social Welfare Function**al**: Captures fact that society = collection of individuals!
+  * Plug in **Utility profile** $(u_1(\cdot), \ldots, u_n(\cdot))$, obtain **SWF** $w(x)$
+* $W(\mathbf{u})(x)$ = Aggregate individual preferences via $W(\mathbf{u})$, then evaluate this aggregation at $x$
+
+:::
+::: {#swfl-img}
+
+![You registering your discontent in the SWFL via $u_i(x)$](images/corbyn_down.jpeg){fig-align="center" width="200px"}
+
+:::
+::::
 
 ## Function*al*s?
 
 * You probably know what a **function** $f(x)$ is; a **functional** is a function of functions: $\mathscr{G}(f)$
 * It's from math, which is scary, but it's just notation to remind us that we're analyzing **functions of functions**
-* In our case, they "work the same way" as regular functions, e.g., $\mathscr{G}(f,g) = f^2 + g^2$, so $f(x) = x, g(x) = 2x \Rightarrow \mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2$
+* For our purposes, they "work the same way" as regular functions^[In general, doing math with functions-of-functions = ["calculus of variations"](https://en.wikipedia.org/wiki/Calculus_of_variations)], e.g., $\mathscr{G}(f,g) = f^2 + g^2$, so $f(x) = x, g(x) = 2x \Rightarrow \mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2$
 
 ## We Live In A Dang Society {.crunch-title .crunch-ul .crunch-math .crunch-p .crunch-ul-top .inline-90 .math-90 .smaller}
 
@@ -269,7 +301,7 @@ W(\mathbf{u}) = W(u_1, \ldots, u_n) \Rightarrow W(\mathbf{u})(x) = W(u_1(x), \ld
 $$
 
 * $u_i(x)$: Given bundle of resources $x$, how much utility does $i$ experience? $u_i: \mathcal{X} \rightarrow \mathbb{R}$
-* $W(\mathbf{u})$: **Aggregates** $u_i(x)$ over all $i$, to produce measure of **overall welfare of society**. For $N$ people, $W: (\mathcal{X} \rightarrow \mathbb{R})^N \rightarrow \mathbb{R}$.
+* $W(\mathbf{u})$: **Aggregates** $u_i(x)$ over all $i$, to produce measure of **overall welfare of society**. For $N$ people, $W: (\underbrace{\mathcal{X} \rightarrow \mathbb{R}}_{u_i(\cdot)})^N \rightarrow \mathbb{R}$.
 * Standard assumption: $W$ *additive* $\Rightarrow W(\mathbf{u}) = \sum_{i=1}^n \omega_iu_i(x)$
   * $\omega_i \equiv \frac{\partial W}{\partial u_i}$ is $i$'s **welfare weight** (❗️)
 * Welfare-Economic definition of **Utilitarianism**: Literally just $\omega_i = 1 \; \forall i$
@@ -292,6 +324,18 @@ W(\underbrace{s_1, \ldots, s_n}_{\text{Stakeholders}})(x) = \omega_1\underbrace{
 $$
 
 * (Adapted from this <a href='https://www.youtube.com/watch?v=9VQw5N4qkhM&list=PLL6RiAl2WHXH1AdhB3fT5dxKIRbijvl34&index=18' target='_blank'>great intro video</a>!)
+
+## Inferring SWF from Surveys {.smaller .crunch-title .crunch-p}
+
+*"Conjoint Study"!*
+
+:::: {layout="[1,1]" layout-valign="center"}
+
+![](images/conjoint-welfare.jpeg){.lightbox fig-align="center" width="410px"}
+
+![](images/conjoint-impact.jpeg){.lightbox fig-align="center" width="410px"}
+
+::::
 
 ## The Conveniently-Left-Out Detail {.crunch-title .crunch-ul .inline-90 .crunch-math .text-90}
 
@@ -462,7 +506,7 @@ Roemerian "Circumstance-Effort Matrix" [@roemer_equality_1998]
 :::
 
 * $N_{ij}$ = Number of people in Circumstance Class $i$ who exert effort $j$
-* $W(i,j)$ = Social Welfare Functional evaluated w.r.t. people in Circumstance Class $i$ who exert effort $j$
+* $W(i,j)$ = SWFL evaluated w.r.t. people in Circumstance Class $i$ who exert effort $j$
 
 ## References
 

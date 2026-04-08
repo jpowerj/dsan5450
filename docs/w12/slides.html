@@ -7,7 +7,10 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-46f66b053e56abd73bb6e954d61a315b.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.35">
 
   <meta name="author" content="Jeff Jacobs">
@@ -475,18 +478,60 @@ s^*_{\text{Yugo}}, f^*_{\text{Yugo}}, x^*_{\text{Yugo}} = \argmax_{s, f, x}\left
 </ul>
 </section></section>
 <section>
-<section id="social-welfare-functionals" class="title-slide slide level1 center" data-stack-name="Social Welfare Functionals">
+<section id="social-welfare-functionals" class="title-slide slide level1 smaller title-11 crunch-p crunch-img crunch-quarto-figure crunch-quarto-layout-panel center" data-stack-name="Social Welfare Functionals">
 <h1>Social Welfare Functionals</h1>
-
+<div class="quarto-layout-panel" data-layout="[72,28]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="swf" class="quarto-layout-cell" style="flex-basis: 72.0%;justify-content: flex-start;">
+<p><em>(Fun notation:)</em></p>
+<ul>
+<li>SWF <span class="math inline">\(w(x)\)</span> = Social Welfare Function:
+<ul>
+<li>Plug in a <strong>Policy</strong> <span class="math inline">\(x\)</span>, obtain a Welfare “Level” <span class="math inline">\(y \in \mathbb{R}\)</span></li>
+<li>Policy <span class="math inline">\(x_1\)</span> “better than” policy <span class="math inline">\(x_0\)</span> iff <span class="math inline">\(w(x_1) &gt; w(x_0)\)</span></li>
+</ul></li>
+</ul>
+</div>
+<div id="swf-img" class="quarto-layout-cell" style="flex-basis: 28.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/alex-grey.jpg" width="180"></p>
+<figcaption>You omnisciently evaluating SWF</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div class="quarto-layout-panel" data-layout="[72,28]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="swfl" class="quarto-layout-cell" style="flex-basis: 72.0%;justify-content: flex-start;">
+<ul>
+<li>SWF<strong>L</strong> <span class="math inline">\(W(\mathbf{u})\)</span> = Social Welfare Function<strong>al</strong>: Captures fact that society = collection of individuals!
+<ul>
+<li>Plug in <strong>Utility profile</strong> <span class="math inline">\((u_1(\cdot), \ldots, u_n(\cdot))\)</span>, obtain <strong>SWF</strong> <span class="math inline">\(w(x)\)</span></li>
+</ul></li>
+<li><span class="math inline">\(W(\mathbf{u})(x)\)</span> = Aggregate individual preferences via <span class="math inline">\(W(\mathbf{u})\)</span>, then evaluate this aggregation at <span class="math inline">\(x\)</span></li>
+</ul>
+</div>
+<div id="swfl-img" class="quarto-layout-cell" style="flex-basis: 28.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/corbyn_down.jpeg" width="200"></p>
+<figcaption>You registering your discontent in the SWFL via <span class="math inline">\(u_i(x)\)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="functionals" class="slide level2">
+<section id="functionals" class="slide level2 scrollable">
 <h2>Function<em>al</em>s?</h2>
 <ul>
 <li>You probably know what a <strong>function</strong> <span class="math inline">\(f(x)\)</span> is; a <strong>functional</strong> is a function of functions: <span class="math inline">\(\mathscr{G}(f)\)</span></li>
 <li>It’s from math, which is scary, but it’s just notation to remind us that we’re analyzing <strong>functions of functions</strong></li>
-<li>In our case, they “work the same way” as regular functions, e.g., <span class="math inline">\(\mathscr{G}(f,g) = f^2 + g^2\)</span>, so <span class="math inline">\(f(x) = x, g(x) = 2x \Rightarrow \mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\)</span></li>
+<li>For our purposes, they “work the same way” as regular functions<sup>1</sup>, e.g., <span class="math inline">\(\mathscr{G}(f,g) = f^2 + g^2\)</span>, so <span class="math inline">\(f(x) = x, g(x) = 2x \Rightarrow \mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\)</span></li>
 </ul>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>In general, doing math with functions-of-functions = <a href="https://en.wikipedia.org/wiki/Calculus_of_variations">“calculus of variations”</a></p></li></ol></aside></section>
 <section id="we-live-in-a-dang-society" class="slide level2 crunch-title crunch-ul crunch-math crunch-p crunch-ul-top inline-90 math-90 smaller">
 <h2>We Live In A Dang Society</h2>
 <ul>
@@ -497,7 +542,7 @@ W(\mathbf{u}) = W(u_1, \ldots, u_n) \Rightarrow W(\mathbf{u})(x) = W(u_1(x), \ld
 \]</span></p>
 <ul>
 <li><span class="math inline">\(u_i(x)\)</span>: Given bundle of resources <span class="math inline">\(x\)</span>, how much utility does <span class="math inline">\(i\)</span> experience? <span class="math inline">\(u_i: \mathcal{X} \rightarrow \mathbb{R}\)</span></li>
-<li><span class="math inline">\(W(\mathbf{u})\)</span>: <strong>Aggregates</strong> <span class="math inline">\(u_i(x)\)</span> over all <span class="math inline">\(i\)</span>, to produce measure of <strong>overall welfare of society</strong>. For <span class="math inline">\(N\)</span> people, <span class="math inline">\(W: (\mathcal{X} \rightarrow \mathbb{R})^N \rightarrow \mathbb{R}\)</span>.</li>
+<li><span class="math inline">\(W(\mathbf{u})\)</span>: <strong>Aggregates</strong> <span class="math inline">\(u_i(x)\)</span> over all <span class="math inline">\(i\)</span>, to produce measure of <strong>overall welfare of society</strong>. For <span class="math inline">\(N\)</span> people, <span class="math inline">\(W: (\underbrace{\mathcal{X} \rightarrow \mathbb{R}}_{u_i(\cdot)})^N \rightarrow \mathbb{R}\)</span>.</li>
 <li>Standard assumption: <span class="math inline">\(W\)</span> <em>additive</em> <span class="math inline">\(\Rightarrow W(\mathbf{u}) = \sum_{i=1}^n \omega_iu_i(x)\)</span>
 <ul>
 <li><span class="math inline">\(\omega_i \equiv \frac{\partial W}{\partial u_i}\)</span> is <span class="math inline">\(i\)</span>’s <strong>welfare weight</strong> (❗️)</li>
@@ -527,6 +572,28 @@ W(\underbrace{s_1, \ldots, s_n}_{\text{Stakeholders}})(x) = \omega_1\underbrace{
 <ul>
 <li>(Adapted from this <a href="https://www.youtube.com/watch?v=9VQw5N4qkhM&amp;list=PLL6RiAl2WHXH1AdhB3fT5dxKIRbijvl34&amp;index=18" target="_blank">great intro video</a>!)</li>
 </ul>
+</section>
+<section id="inferring-swf-from-surveys" class="slide level2 smaller crunch-title crunch-p">
+<h2>Inferring SWF from Surveys</h2>
+<p><em>“Conjoint Study”!</em></p>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/conjoint-welfare.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="images/conjoint-welfare.jpeg" class="quarto-figure quarto-figure-center" width="410"></a></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/conjoint-impact.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="images/conjoint-impact.jpeg" class="quarto-figure quarto-figure-center" width="410"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="the-conveniently-left-out-detail" class="slide level2 crunch-title crunch-ul inline-90 crunch-math text-90">
 <h2>The Conveniently-Left-Out Detail</h2>
@@ -600,7 +667,7 @@ W(u_1, \ldots, u_n)(x) = \frac{1}{n}u_1(x) + \cdots + \frac{1}{n}u_n(x)
 <ul>
 <li><strong>Jeef</strong> and <strong>Keef</strong> are roommates: Jeef loves listening to <a href="https://www.youtube.com/watch?v=OlQTn7gI8cw" target="_blank">Tony Danza Tapdance Extravaganza</a>, but Keef is normal and slowly dies inside with each additional song</li>
 </ul>
-<div class="quarto-layout-panel" data-layout="[1,1]" data-layout-align="center">
+<div class="quarto-layout-panel" data-layout-align="center" data-layout="[1,1]">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <center>
@@ -784,7 +851,7 @@ Figure&nbsp;2: Roemerian “Circumstance-Effort Matrix” <span class="citation"
 </div>
 <ul>
 <li><span class="math inline">\(N_{ij}\)</span> = Number of people in Circumstance Class <span class="math inline">\(i\)</span> who exert effort <span class="math inline">\(j\)</span></li>
-<li><span class="math inline">\(W(i,j)\)</span> = Social Welfare Functional evaluated w.r.t. people in Circumstance Class <span class="math inline">\(i\)</span> who exert effort <span class="math inline">\(j\)</span></li>
+<li><span class="math inline">\(W(i,j)\)</span> = SWFL evaluated w.r.t. people in Circumstance Class <span class="math inline">\(i\)</span> who exert effort <span class="math inline">\(j\)</span></li>
 </ul>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
@@ -1261,6 +1328,38 @@ Varian, Hal R. 2006. <em>Intermediate <span>Microeconomics</span>: <span>A Moder
         }
       });
       </script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
     
 
 </body></html>
