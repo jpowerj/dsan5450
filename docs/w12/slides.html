@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.9.35">
 
   <meta name="author" content="Jeff Jacobs">
-  <title>DSAN 5450 – Week 12: Final Projects, Causality and Racecraft</title>
+  <title>DSAN 5450 – Week 12: (Machine) Learning What Policies Value</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -153,7 +153,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Week 12: Final Projects, Causality and Racecraft</h1>
+  <h1 class="title">Week 12: (Machine) Learning What Policies Value</h1>
   <p class="subtitle"><em>DSAN 5450: Data Ethics and Policy</em><br><span class="subsubtitle">Spring 2026, Georgetown University</span></p>
 
 <div class="quarto-title-authors">
@@ -169,419 +169,672 @@ Jeff Jacobs
 
   <p class="date">Wednesday, April 8, 2026</p>
 </section>
-<section>
-<section id="making-projects-less-scary" class="title-slide slide level1 smaller title-12 center" data-stack-name="Final Projects">
-<h1>Making Projects Less Scary</h1>
-
-<img data-src="images/final_project.jpg" class="r-stretch quarto-figure-center"><p class="caption">Gemini image prompt: A final report that’s scary and eats all the students but is also somehow cute</p></section>
-<section id="how-do-i-pick-a-topic" class="slide level2">
-<h2>How Do I Pick A Topic?</h2>
-<ul>
-<li>I know that “whatever is interesting to you” can be way overly-vague!</li>
-<li>So, one approach is: imagine yourself in a job interview for your <strong>dream job</strong>, and they bring up DSAN 5450: “Interesting, what did you do in that class?”</li>
-<li>[Insert project elevator pitch] “Wow, that’s such a cool project, we really want someone who can [say] take a data-driven approach to a policy question like that. Ur hired!”</li>
-<li>(Jeff gets a commission: 10% of your salary)</li>
-</ul>
-</section>
-<section id="the-rating-system-science-based" class="slide level2 crunch-title smaller crunch-images title-12 crunch-quarto-figure crunch-img">
-<h2>The Rating System (Science-Based)</h2>
-<div id="fig-ratings" class="quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-ratings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<p><a href="https://jpj.georgetown.domains/dsan5450-scratch/cinema.mp4" target="_blank"><img data-src="images/rating.png"></a></p>
+<section id="schedule" class="title-slide slide level1 smaller center" data-stack-name="Fishers' Dilemma">
+<h1>Schedule</h1>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Start</th>
+<th style="text-align: left;">End</th>
+<th style="text-align: left;">Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Lecture</strong></td>
+<td style="text-align: left;">3:30pm</td>
+<td style="text-align: left;">4:00pm</td>
+<td style="text-align: left;"><a href="#/so-weve-opened-the-pandoras-box-of-utility...">Utility Functions and the Edgeworth Box</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">4:00pm</td>
+<td style="text-align: left;">4:30pm</td>
+<td style="text-align: left;"><a href="#/policy-intervention-i-classbi-bi-3-circlei-property-rights">Policy Intervention <i class="bi bi-3-circle"></i>: Data Property Rights</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">4:30pm</td>
+<td style="text-align: left;">5:00pm</td>
+<td style="text-align: left;"><a href="#/policy-intervention-i-classbi-bi-4-circlei-yugoslav-nationalization">Policy Intervention <i class="bi bi-4-circle"></i>: “Internalizing” Externalities</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Break!</strong></td>
+<td style="text-align: left;">5:00pm</td>
+<td style="text-align: left;">5:10pm</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">5:10pm</td>
+<td style="text-align: left;">6:00pm</td>
+<td style="text-align: left;"><a href="#/policy-evaluation-via-inverse-fairness">(Machine) Learning What Policies Value <span class="math inline">\(\leadsto\)</span> HW4</a></td>
+</tr>
+</tbody>
+</table>
+<div class="hidden">
+<div class="hidden">
+<p><span class="math display">\[
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\newcommand{\bigexp}[1]{\exp\mkern-4mu\left[ #1 \right]}
+\newcommand{\bigexpect}[1]{\mathbb{E}\mkern-4mu \left[ #1 \right]}
+\newcommand{\definedas}{\overset{\small\text{def}}{=}}
+\newcommand{\definedalign}{\overset{\phantom{\text{defn}}}{=}}
+\newcommand{\eqeventual}{\overset{\text{eventually}}{=}}
+\newcommand{\Err}{\text{Err}}
+\newcommand{\expect}[1]{\mathbb{E}[#1]}
+\newcommand{\expectsq}[1]{\mathbb{E}^2[#1]}
+\newcommand{\fw}[1]{\texttt{#1}}
+\newcommand{\given}{\mid}
+\newcommand{\green}[1]{\color{green}{#1}}
+\newcommand{\heads}{\outcome{heads}}
+\newcommand{\iid}{\overset{\text{\small{iid}}}{\sim}}
+\newcommand{\lik}{\mathcal{L}}
+\newcommand{\loglik}{\ell}
+\DeclareMathOperator*{\maximize}{maximize}
+\DeclareMathOperator*{\minimize}{minimize}
+\newcommand{\mle}{\textsf{ML}}
+\newcommand{\nimplies}{\;\not\!\!\!\!\implies}
+\newcommand{\orange}[1]{\color{orange}{#1}}
+\newcommand{\outcome}[1]{\textsf{#1}}
+\newcommand{\param}[1]{{\color{purple} #1}}
+\newcommand{\pgsamplespace}{\{\green{1},\green{2},\green{3},\purp{4},\purp{5},\purp{6}\}}
+\newcommand{\pedge}[2]{\require{enclose}\enclose{circle}{~{#1}~} \rightarrow \; \enclose{circle}{\kern.01em {#2}~\kern.01em}}
+\newcommand{\pnode}[1]{\require{enclose}\enclose{circle}{\kern.1em {#1} \kern.1em}}
+\newcommand{\ponode}[1]{\require{enclose}\enclose{box}[background=lightgray]{{#1}}}
+\newcommand{\pnodesp}[1]{\require{enclose}\enclose{circle}{~{#1}~}}
+\newcommand{\purp}[1]{\color{purple}{#1}}
+\newcommand{\sign}{\text{Sign}}
+\newcommand{\spacecap}{\; \cap \;}
+\newcommand{\spacewedge}{\; \wedge \;}
+\newcommand{\tails}{\outcome{tails}}
+\newcommand{\Var}[1]{\text{Var}[#1]}
+\newcommand{\bigVar}[1]{\text{Var}\mkern-4mu \left[ #1 \right]}
+\]</span></p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ratings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: <a href="https://jpj.georgetown.domains/dsan5450-scratch/cinema.mp4" target="_blank">On Cinema at the Cinema S1E09 <i class="bi bi-box-arrow-up-right ps-1"></i></a>
-</figcaption>
+</div>
+</section>
+
+<section>
+<section id="where-we-left-off" class="title-slide slide level1 crunch-title title-12 text-80 center" data-stack-name="Externalities and Rights">
+<h1>Where We Left Off</h1>
+<ul>
+<li>✅ Policy Intervention <i class="bi bi-1-circle"></i>: <strong>Contracting</strong> Along the Pareto Frontier
+<ul>
+<li>👍 No “external coercion” required: <strong>Nash equilibrium</strong> <span class="math inline">\(\Rightarrow\)</span> <strong>Self-enforcing</strong> (no possible gain from breaking contract, for any agent)</li>
+<li>👎 Actual contract reached decided entirely by <strong>power imbalance</strong> 💪🔫</li>
+</ul></li>
+<li>✅ Policy Intervention <i class="bi bi-2-circle"></i>: <strong>Pigou Taxes</strong> (Law + Fine for violation = externality from violation)
+<ul>
+<li>👍 Solves all externality problems! (No need for HW3B 🙌)</li>
+<li>👎 People implementing/enforcing fines have their own incentives, biases, constraints, etc. (<a href="https://wjla.com/news/local/dc-traffic-safety-tickets-violations-unpaid-ticket-fines-reckless-streets-safety-concerns-washington-traffic-laws-vehicles-metropolitan-police-citations-cracking-down-fatalities-04-23-2025">&gt;$1 billion</a> in unpaid DC tickets…)</li>
+</ul></li>
+</ul>
+<p><em>(Remember for projects: Econ antecedent = already-solved political problem!)</em></p>
+</section>
+<section id="opening-the-pandoras-box-of-utility" class="slide level2 crunch-title title-09 smaller">
+<h2>Opening the Pandora’s Box of Utility…</h2>
+<p>…We need to dive a bit more to get to:</p>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="snek" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<center>
+<p>Policy Intervention <i class="bi bi-3-circle"></i>:<br><strong>Property Rights</strong></p>
+</center>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/hiss.jpg" class="quarto-figure quarto-figure-center" width="440"></p>
 </figure>
 </div>
-</section>
-<section id="discussing-fairness" class="slide level2 crunch-title title-11 smaller">
-<h2>Discussing Fairness</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Below Expectations</strong><br>
-<img data-src="images/1_bag.png" width="50"></td>
-<td>"This algorithm is unfair"</td>
-</tr>
-<tr class="even">
-<td><strong>Meets Expectations</strong><br>
-<img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"></td>
-<td>"This algorithm violates the Predictive Parity criterion of fairness when run on this dataset"</td>
-</tr>
-<tr class="odd">
-<td><strong>Exceeds Expectations</strong><br>
-<img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"></td>
-<td>"This algorithm violates the Predictive Parity criterion when run on this dataset, but that’s because [other mitigating factor]. It still satisfies Within-<span class="math inline">\(\varepsilon\)</span> Predictive Parity, for <span class="math inline">\(\varepsilon = 0.02\)</span>"</td>
-</tr>
-<tr class="even">
-<td><strong>Doing Too Much</strong><br>
-<img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"> <img data-src="images/soda.png" width="20"> <img data-src="images/soda.png" width="20"></td>
-<td>All of the above, plus I developed a new better algorithm that is more fair</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="evaluating-policy" class="slide level2 crunch-title title-11 smaller crunch-p">
-<h2>Evaluating Policy</h2>
-<table class="caption-top">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Below Expectations</strong><br>
-<img data-src="images/1_bag.png" width="50"></td>
-<td>"This policy is bad"</td>
-</tr>
-<tr class="even">
-<td><strong>Meets Expectations</strong><br>
-<img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"></td>
-<td>"This policy is bad bc it's biased towards [group 1], and doesn't take sufficient account of the welfare of [group 2]"</td>
-</tr>
-<tr class="odd">
-<td><strong>Exceeds Expectations</strong><br>
-<img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"></td>
-<td>"This policy is bad bc it's biased towards [group 1], and doesn't take sufficient account of the welfare of [group 2], which violates the Rawlsian notion of what would be chosen by rational agents behind a 'veil of ignorance'"</td>
-</tr>
-<tr class="even">
-<td><strong>Doing Too Much</strong><br>
-<img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"><img data-src="images/1_bag.png" width="50"> <img data-src="images/soda.png" width="20"> <img data-src="images/soda.png" width="20"></td>
-<td>"This policy is bad bc the inferred welfare weights <span class="math inline">\(\omega_i\)</span> are <span class="math inline">\(0.1632\)</span> off from the optimal welfare weights <span class="math inline">\(\omega_i^*\)</span>"</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="frequently-awesome-questions" class="slide level2 smaller crunch-title crunch-ul crunch-li-8">
-<h2>Frequently Awesome Questions</h2>
-<ul>
-<li><em>How much data-processing/R/Python is required?</em> None!
-<ul>
-<li>You can think of it like: In every other DSAN class, we plop a dataset in front of you and say “do the thing”</li>
-<li>Here you can (and should) first ask, “is [the thing] an <strong>effective way to address</strong> this issue?”</li>
-</ul></li>
-<li>Example: <strong>archive of missing datasets</strong></li>
-<li>Sometimes the problem is not “We haven’t trained a hyperboosted 70-layer quantum neural net on this yet!”</li>
-<li>Sometimes it’s “nobody with power cares enough about this to make a dataset in the first place [or they purposefully prevent it]”</li>
-<li>Other times it’s “people with power <em>did</em> care enough about this to make a dataset, and <a href="https://www.theguardian.com/world/2014/may/23/chile-student-loan-debts-fried-potatoes">it should be destroyed</a>”</li>
-<li>May require… exploratory “meta-analysis” of datasets: finding data not necessarily for analysis but, to see what is/isn’t out there!</li>
-</ul>
-<!-- ## Fruitfully Asked Questions {.crunch-title .crunch-ul .crunch-li-6}
 
-* * -->
+</div>
+<div id="yugo" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<center>
+<p>Policy Intervention <i class="bi bi-4-circle"></i>:<br><strong>Yugoslavia-Style Mergers</strong></p>
+</center>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/tito_crop_ext.jpg" class="quarto-figure quarto-figure-center" width="340"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="getting-from-here-to-there" class="slide level2">
-<h2>Getting From Here to There</h2>
-<style>
-.honk-honk {
-  font-size: 180% !important;
-  /* font-family: "Bungee Spice", sans-serif; */
-  font-family: "Honk", sans-serif;
-  /* font-optical-sizing: auto; */
-  font-weight: 400;
-  font-style: normal;
-}
-</style>
-<ul>
-<li><span class="honk-honk"><strong>Minimum Viable Product</strong></span> (<strong>MVP</strong>)</li>
-<li><span class="math inline">\(\leadsto\)</span> Final Product (but… Hofstadter’s Law)</li>
+<section id="utility-function-using-the-ordering-of-numbers-to-encode-the-ordering-of-preferences" class="slide level2 smaller crunch-title title-09">
+<h2>Utility Function: Using the <em>Ordering</em> of Numbers to “Encode” the <em>Ordering</em> of Preferences</h2>
+
+<img data-src="images/single-utility.svg" class="r-stretch quarto-figure-center"><p class="caption">From Ryan Safner’s <a href="https://thoughtf22.classes.ryansafner.com/slides/3.7-slides.pdf"><em>History of Economic Thought: Welfare Economics</em></a></p><ul>
+<li><span style="color: blue;">Bluey</span> obtains <strong>greater utility</strong> despite paying the <strong>same cost</strong> by moving from <span class="math inline">\(E\)</span> to <span class="math inline">\(O\)</span></li>
+<li><span class="math inline">\(E\)</span> denotes “Initial <strong>E</strong>ndowment”, <span class="math inline">\(O\)</span> denotes “Final <strong>O</strong>utcome”</li>
 </ul>
-<div title="<i class='bi bi-info-circle pe-1'></i> Hofstadter's Law (Paraphrase)">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong><i class="bi bi-info-circle pe-1"></i> Hofstadter’s Law (Paraphrase)</strong></p>
+</section>
+<section id="two-can-play-this-game" class="slide level2 smaller crunch-title">
+<h2>Two Can Play This Game…</h2>
+
+<img data-src="images/dual-utility.svg" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li><span style="color: blue;">Bluey</span> obtains <strong>greater utility</strong> within the <strong>same budget</strong> by moving from <span class="math inline">\(E^1\)</span> to <span class="math inline">\(O^1\)</span></li>
+<li><span style="color: limegreen;">Greenie</span> obtains <strong>greater utility</strong> within the <strong>same budget</strong> by moving from <span class="math inline">\(E^2\)</span> to <span class="math inline">\(O^2\)</span></li>
+</ul>
+</section>
+<section id="the-edgeworth-box" class="slide level2 smaller crunch-title">
+<h2>The Edgeworth Box</h2>
+<p><em>Rotate <span style="color: limegreen;">Greenie</span>’s box 180° and superimpose onto <span style="color: blue;">Bluey</span>’s:</em></p>
+
+<img data-src="images/edgeworth.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="pareto-frontier-contract-curve" class="slide level2 smaller crunch-title title-11">
+<h2>Pareto Frontier = Contract(!) Curve</h2>
+
+<img data-src="images/contract-curve.svg" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li>From <strong>initial endowment</strong> <span class="math inline">\(E\)</span>, if allowed to trade, “rational” players can reach any <strong>allocation</strong> along dashed <strong>contract curve</strong> from <span class="math inline">\(G\)</span> to <span class="math inline">\(B\)</span>… <strong><em>(Why not <span class="math inline">\(A\)</span> or <span class="math inline">\(H\)</span>?)</em></strong></li>
+<li>So, what determines <strong>which</strong> of these points they end up at? <a href="./images/redacted_crop.jpg"><em>(Middle name hint)</em></a></li>
+</ul>
+</section>
+<section id="first-fundamental-theorem-of-welfare-economics" class="slide level2 smaller crunch-title title-10 crunch-quarto-layout-panel crunch-blockquote crunch-img">
+<h2>First Fundamental Theorem of Welfare Economics</h2>
+<center>
+<p><span class="boxed-cb1">[Antecedents (Coase Conditions)] <span class="math inline">\(\Rightarrow\)</span> «<strong>markets</strong> produce <strong>Pareto-optimal outcomes</strong>»</span></p>
+<em>(Foundation for “Neoclassical” paradigm)</em>
+</center>
+<div class="quarto-layout-panel" data-layout="[1,1,1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/friedman_crop.jpg" style="width:65.0%"></p>
+<figcaption>Milton “Rhodesia Rocks!” Friedman, UChicago, 1976 “Nobel Prize” in Economics</figcaption>
+</figure>
 </div>
-<div class="callout-content">
-<p>The pieces of your DSAN final project will take longer than you expect, even if you take Hofstadter’s Law into account</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/sheridan.jpg" style="width:50.0%"></p>
+<figcaption>Ron “Pinochet Rocks!” Coase, UChicago, 1991 “Nobel Prize” in Economics</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/reagan.png" style="width:90.0%"></p>
+<figcaption>Ronnie “Jelly Beans Rock!” Reagan, University of Tasty Treats, 2004 “Nobel Prize” in Jelly Bean Eating</figcaption>
+</figure>
 </div>
 </div>
 </div>
 </div>
+<blockquote>
+<p>Rhodesia has a freer press, a more democratic form of government, a greater sympathy with Western ideals than most if not all of the states of Black Africa. Yet we play straight into the hands of our Communist enemies by imposing sanctions on it! <span class="citation" data-cites="friedman_rhodesia_1976">(<a href="#/references" role="doc-biblioref" onclick="">Friedman 1976</a>)</span></p>
+</blockquote>
+</section>
+<section id="payoff-from-jeff-pointing-at-things-saying-antecedents-500x" class="slide level2 smaller crunch-title title-08 crunch-ul crunch-blockquote">
+<h2>Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x</h2>
+<p><i class="bi bi-1-circle"></i> <strong>Consequent only true if antecedents hold!</strong> Otherwise, proper answer becomes “It depends! Let’s see if data can help us find out!” (<em>Will minimum wage hurt/help blah blah blah…</em> “It depends! Tell me the details!”) (<em>Will new condos blah blah blah yimby nimby…</em>) (<em>Will re-allocating welfare budget from <span class="math inline">\(X\)</span> to <span class="math inline">\(Y\)</span> blah blah blah…</em> 👀 <strong>HW4</strong>)</p>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div id="pareto" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<blockquote>
+<p><em>[Economic inequality] is a social law, something in the nature of man.</em> <span class="citation" data-cites="pareto_cours_1896">(<a href="#/references" role="doc-biblioref" onclick="">Pareto 1896</a>)</span></p>
+</blockquote>
+</div>
+<div id="notpareto" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<blockquote>
+<p><em>We’ve got a [thing] made by men, isn’t that something we should be able to change?</em> <span class="citation" data-cites="steinbeck_grapes_1939">(<a href="#/references" role="doc-biblioref" onclick="">Steinbeck 1939</a>)</span></p>
+</blockquote>
+</div>
+</div>
+</div>
+<p><i class="bi bi-2-circle"></i> <strong>Coase Antecedents <span class="math inline">\(\approx\)</span> equalized power!</strong></p>
+<ul>
+<li>Ex 1: <strong>Perfect Competition</strong> <span class="math inline">\(\Rightarrow\)</span> (<span class="math inline">\(\neg\)</span> monopoly) <span class="math inline">\(\wedge\)</span> (<span class="math inline">\(\neg\)</span> monopsony) <span class="math inline">\(\Rightarrow\)</span> everyone’s outside option equally good <span class="math inline">\(\Rightarrow\)</span> no take-it-or-leave-it coercion possible (try to coerce, I’ll say no and go to one of the other <span class="math inline">\(\infty\)</span> people offering equally good options)</li>
+<li>Ex 2: <strong>No Informational Asymmetries</strong> <span class="math inline">\(\Rightarrow\)</span> Can’t “trick me” into buying defective product (<span class="citation" data-cites="akerlof_market_1970">Akerlof (<a href="#/references" role="doc-biblioref" onclick="">1970</a>)</span>, <em>“Market for Lemons”</em>)</li>
+</ul>
+</section>
+<section id="so-what-happens-when-antecedents-dont-hold" class="slide level2 text-65 crunch-title title-10 crunch-blockquote crunch-ul crunch-li-8 scrollable">
+<h2>So… What Happens When Antecedents Don’t Hold?</h2>
+<ul>
+<li><p><span class="math inline">\(\neg\)</span>(Coase Antecedents) <span class="math inline">\(\Rightarrow\)</span> Unequal Power… Puts us in realm of <strong>Descriptive Ethics!</strong></p>
+<blockquote>
+<p>[What is] right, as the world goes, is only in question between <strong>equals in power</strong>; otherwise, the strong do as they please and the weak suffer what they must. [<span class="citation" data-cites="thucydides_war_2013">Thucydides (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span>; c.&nbsp;411 BC] <em>(Think of <strong>necessary</strong> vs.&nbsp;<strong>sufficient</strong> conditions!)</em></p>
+</blockquote></li>
+<li><p>Think of how <strong>Gauss-Markov Assumptions</strong> <span class="math inline">\(\Rightarrow\)</span> OLS is BLUE, but DSAN 5300 = what to do when G-M Assumptions <strong>don’t hold</strong></p></li>
+<li><p>Final project brainstorming protip! Think through:</p>
+<ul>
+<li><i class="bi bi-1-circle"></i> Which cases “break” Coase Axioms? (<a href="https://en.wiktionary.org/wiki/more_honored_in_the_breach">more honored in the breach</a>)</li>
+<li><i class="bi bi-2-circle"></i> How might we tackle resulting “imperfections” through policy<sup>1</sup>? (DSAN metaphor: perhaps as simple as heteroskedasticity-robust SEs 🤔 usually not!)</li>
+</ul></li>
+<li><p>Our violation (HW3B): <strong>Data externalities!</strong></p>
+<ul>
+<li>“Auto-fixed” if we have a genie who can grant perfect Pigou Tax…</li>
+<li>More feasible policies <span class="citation" data-cites="acemoglu_power_2023">(<a href="#/references" role="doc-biblioref" onclick="">Acemoglu and Johnson 2023</a>)</span>: property rights in data, Yugoslav nationalization <span class="math inline">\(\leadsto\)</span> [<span style="text-decoration: line-through;">Walmart</span> People’s Republic of Walmart]</li>
+</ul></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Recall: [Do Nothing, Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation] <span class="math inline">\(\in \text{Policy Set}\)</span>;<br> [<a href="https://newleftreview.org/issues/ii91/articles/evgeny-morozov-socialize-the-data-centres">“Socialize the Data Centres!”</a>, Blowing Up Oil Pipelines <span class="citation" data-cites="malm_how_2021">(<a href="#/references" role="doc-biblioref" onclick="">Malm 2021</a>)</span>, Bolshevik Revolution] also <span class="math inline">\(\in \text{Policy Set}\)</span></p></li></ol></aside></section>
+<section id="policy-intervention-property-rights" class="slide level2 smaller crunch-title title-09 crunch-ul crunch-quarto-figure crunch-p crunch-li-8">
+<h2>Policy Intervention <i class="bi bi-3-circle"></i>: <em>Property</em> Rights</h2>
+<ul>
+<li>Rawlsian <strong>Rights</strong>: Vetos on societal decisions; Constitution can make some <strong>inalienable</strong> (can’t sell self into slavery), some <strong>alienable</strong></li>
+<li>Property rights: <strong>alienable</strong>. You can <strong>gift</strong> or <strong>sell</strong> the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Case <i class="bi bi-1-circle"></i>: Society decides <strong>Right to Clean Air <span class="math inline">\(\prec\)</span> Right to Smoke</strong> <span class="math inline">\(\Rightarrow\)</span> Start at <span class="math inline">\(E\)</span></p>
+<ul>
+<li><span class="math inline">\(A\)</span> can <strong>pay <span class="math inline">\(B\)</span></strong> to <strong>alienate</strong> right (Pay $50/month, can smoke 5 ciggies) <span class="math inline">\(\leadsto\)</span> <span class="math inline">\(X\)</span></li>
+<li>Movement along light blue curve: giving up <span class="math inline">\(x\)</span> <strong>money</strong> for <span class="math inline">\(y\)</span> <strong>smoke</strong>, <strong>equally happy</strong>. <span class="math inline">\(u_A(p)\)</span> identical for <span class="math inline">\(p\)</span> on curve</li>
+<li>Movement to higher light blue curve (<i class="bi bi-arrow-up-right"></i>) <span class="math inline">\(\Rightarrow\)</span> greater utility <span class="math inline">\(u_A' &gt; u_A\)</span></li>
+</ul>
+<p>Case <i class="bi bi-2-circle"></i> Society decides <strong>Smoke <span class="math inline">\(\prec\)</span> Clean Air</strong> <span class="math inline">\(\Rightarrow\)</span> Repeat for <span class="math inline">\(E' \leadsto X'\)</span></p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/varian_35_1_crop.svg"></p>
+<figcaption>“Edgeworth Box” for <strong>Right to Smoke</strong> vs.&nbsp;<strong>Right to Clean Air</strong>: <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> are roommates; <span class="math inline">\(A\)</span> loves smokin, <span class="math inline">\(B\)</span> loves clean air; From <span class="citation" data-cites="varian_intermediate_2006">Varian (<a href="#/references" role="doc-biblioref" onclick="">2006</a>)</span></figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities" class="slide level2 smaller title-09">
+<h2><em>Why</em> Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?</h2>
+<ul>
+<li>The key: Forces agent <span class="math inline">\(i\)</span> to <strong>pay a cost</strong> for <strong>inflicting disutility</strong> on agent <span class="math inline">\(j\)</span>!</li>
+<li>(Here please note: “<span class="math inline">\(X\)</span> <em>sometimes enables</em> <span class="math inline">\(Y\)</span>” does not mean <span class="math inline">\(X\)</span> is a necessary or sufficient condition for <span class="math inline">\(Y\)</span>! Think of walking into a dark room, trying different light switches until one turns on the overhead light)</li>
+<li>Dear reader, I know what you’re thinking… <em>But Jeff!! This is all so abstract and theoretical!! We’re sick of your ivory-tower musings, get your head out of the clouds and make it relevant to our day-to-day lives, by relating it back to <a href="https://www.aeaweb.org/articles?id=10.1257/jep.5.4.187">Yugoslavia’s 1965 economic reforms</a>!!</em></li>
+<li>Don’t worry, I’ve listened to your concerns, and the next slide is here for you 😌</li>
+</ul>
+</section>
+<section id="policy-intervention-yugoslav-nationalization" class="slide level2 smaller crunch-title crunch-ul crunch-math title-09 crunch-p crunch-li-8 math-90">
+<h2>Policy Intervention <i class="bi bi-4-circle"></i>: “Yugoslav Nationalization”</h2>
+<p><em>Last reminder: Externalities <span class="math inline">\(\Leftrightarrow\)</span> I get reward, others pay costs 🥳</em></p>
+<ul>
+<li>Steel Mill <span class="math inline">\(S\)</span> produces amount of steel <span class="math inline">\(s\)</span> <span class="math inline">\(\leadsto\)</span> pollution <span class="math inline">\(x\)</span>, total cost <span class="math inline">\(c_s(s,x)\)</span></li>
+<li>Fishery <span class="math inline">\(F\)</span> “produces” amount of fish [<span class="math inline">\(x \leadsto\)</span>] <span class="math inline">\(f\)</span>, total cost <span class="math inline">\(c_f(f,x)\)</span></li>
+<li><span class="math inline">\(S\)</span> optimizes (price per steel <span class="math inline">\(p_s\)</span>)</li>
+</ul>
+<p><span class="math display">\[
+s^*_{\text{Priv}}, x^*_{\text{Priv}} = \argmax_{s,\small\boxed{x}}\left[ p_s s - c_s(s, x) \right]
+\]</span></p>
+<ul>
+<li>While <span class="math inline">\(F\)</span> optimizes (price per fish <span class="math inline">\(p_f\)</span>)</li>
+</ul>
+<p><span class="math display">\[
+f^*_{\text{Priv}} = \argmax_{f}\left[ p_f f - c_f(f, x) \right]
+\]</span></p>
+<ul>
+<li>If [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is</li>
+</ul>
+<p><span class="math display">\[
+s^*_{\text{Yugo}}, f^*_{\text{Yugo}}, x^*_{\text{Yugo}} = \argmax_{s, f, x}\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \right]
+\]</span></p>
+<ul>
+<li>Can prove that <span class="math inline">\(o(s^*_{\text{Yugo}}, f^*_{\text{Yugo}}, x^*_{\text{Yugo}})\)</span> Pareto-dominates <span class="math inline">\(o(s^*_{\text{Priv}}, x^*_{\text{Priv}}, f^*_{\text{Priv}})\)</span></li>
+<li>What determines which agents get to ignore externalities? <em>(Dead horse/middle name)</em></li>
+</ul>
 </section></section>
 <section>
-<section id="causality-and-identity-formation" class="title-slide slide level1 center" data-stack-name="Racecraft">
-<h1>Causality and Identity Formation</h1>
-<ul>
-<li>Race as a <strong>Noun</strong> vs.&nbsp;Race as a <strong>Verb</strong> (“Racecraft”)</li>
-<li>Race as a static property vs.&nbsp;race as a <strong>social practice</strong></li>
-<li>Subject-Object Distinction (Next slide + W13)</li>
-</ul>
-</section>
-<section id="but-first-phenomenology" class="slide level2 crunch-title title-11 crunch-blockquote smaller crunch-ul crunch-quarto-figure">
-<h2>But First… Phenomenology</h2>
-<ul>
-<li>“Objective” account: Roquentin sits down on a bus seat; <a href="https://jpj.georgetown.domains/dsan5450-scratch/nausea.mp3" target="_blank">“Subjective” account</a>:</li>
-</ul>
-<blockquote>
-<p>I lean my hand on <strong>the seat</strong> but pull it back hurriedly: it exists. This thing I’m sitting on, leaning my hand on, is called a seat. They made it purposely for people to sit on, they took leather, springs and cloth, they went to work with the idea of making a seat and when they finished, that was what they had made. They carried it here, into this car and the car is now rolling and jolting with its rattling windows, carrying this red thing in its bosom. I murmur: “It’s a seat” […] But the word stays on my lips: it refuses to go and put itself on the thing. It stays what it is, with its red plush, thousands of little red paws in the air, all still, little dead paws…</p>
-</blockquote>
+<section id="social-welfare-functionals" class="title-slide slide level1 center" data-stack-name="Social Welfare Functionals">
+<h1>Social Welfare Functionals</h1>
 
-<img data-src="images/train_seat.webp" class="r-stretch quarto-figure-center"><p class="caption">(Image from <a href="https://eternalisedofficial.com/2021/04/21/book-review-nausea-jean-paul-sartre/">“Book Review: Nausea - Jean-Paul Sartre”</a>)</p></section>
-<section id="w.e.b.-du-bois-and-the-epistemological-one-way-mirror" class="slide level2 smaller crunch-title title-08 crunch-blockquote text-65">
-<h2><span class="lumos-jj">W.E.B. Du Bois and the Epistemological One-Way Mirror</span></h2>
-<blockquote>
-<p>Black people in America are […] born with a veil […] in this American world—a world which yields him no true self-consciousness, but only lets him see himself through the revelation of the other world. It is a peculiar sensation, this double-consciousness, this sense of <strong>always looking at oneself through the eyes of others</strong>, of measuring one’s soul by the tape of a world that looks on in amused contempt and pity. One ever feels his two-ness—an American, a Negro; two souls, two thoughts, two unreconciled strivings; two warring ideals in one dark body. <span class="citation" data-cites="dubois_souls_1903">(<a href="#/references" role="doc-biblioref" onclick="">Du Bois 1903</a>)</span></p>
-</blockquote>
+</section>
+<section id="functionals" class="slide level2">
+<h2>Function<em>al</em>s?</h2>
 <ul>
-<li>The veil: the world is seen and <strong>experienced differently</strong> on either side of the color line</li>
-<li><strong>One-way mirror</strong>: Whites project their constructions of Blacks onto the veil and see their projections reflected on it <span class="math inline">\(\Rightarrow\)</span> the power to <strong>define themselves and others</strong></li>
-<li>The projections of whites onto the veil <strong>become realities</strong> (reification!) that Black subjects have to contend with in their self-formation.</li>
-<li><strong>Twoness</strong>: in process of self-formation, the racialized subject <strong>must account for</strong> the views of two different social worlds—the Black world, constructed behind the veil, and the white world, which dehumanizes via lack of recognition of their humanity.</li>
+<li>You probably know what a <strong>function</strong> <span class="math inline">\(f(x)\)</span> is; a <strong>functional</strong> is a function of functions: <span class="math inline">\(\mathscr{G}(f)\)</span></li>
+<li>It’s from math, which is scary, but it’s just notation to remind us that we’re analyzing <strong>functions of functions</strong></li>
+<li>In our case, they “work the same way” as regular functions, e.g., <span class="math inline">\(\mathscr{G}(f,g) = f^2 + g^2\)</span>, so <span class="math inline">\(f(x) = x, g(x) = 2x \Rightarrow \mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\)</span></li>
 </ul>
 </section>
-<section id="textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct" class="slide level2 crunch-title crunch-ul">
-<h2><span class="math inline">\(\textsf{Race}_{\textsf{Variable}}\)</span> vs.&nbsp;<span class="math inline">\(\textsf{Race}_{\textsf{Construct}}\)</span></h2>
+<section id="we-live-in-a-dang-society" class="slide level2 crunch-title crunch-ul crunch-math crunch-p crunch-ul-top inline-90 math-90 smaller">
+<h2>We Live In A Dang Society</h2>
 <ul>
-<li>Careful scientific, causal studies measure the effect that <strong>changing <span class="math inline">\(X\)</span></strong> (<span class="math inline">\(do(X)\)</span>) has on <span class="math inline">\(Y\)</span>, controlling for <span class="math inline">\(C\)</span> (via, at least under the hood, “Do-Calculus”)</li>
-<li>But, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into “race” and “not race”</li>
-<li>Keep in back of your mind as we look at example of how (measured by thorough, statistically-principled experiment), <strong>race can have direct, measurable, causal impacts on important aspects of our everyday lives</strong></li>
+<li>Utilitarianism, Kant, Rawls can all be modeled as <strong>Social Welfare Functionals</strong></li>
+</ul>
+<p><span class="math display">\[
+W(\mathbf{u}) = W(u_1, \ldots, u_n) \Rightarrow W(\mathbf{u})(x) = W(u_1(x), \ldots, u_n(x))
+\]</span></p>
+<ul>
+<li><span class="math inline">\(u_i(x)\)</span>: Given bundle of resources <span class="math inline">\(x\)</span>, how much utility does <span class="math inline">\(i\)</span> experience? <span class="math inline">\(u_i: \mathcal{X} \rightarrow \mathbb{R}\)</span></li>
+<li><span class="math inline">\(W(\mathbf{u})\)</span>: <strong>Aggregates</strong> <span class="math inline">\(u_i(x)\)</span> over all <span class="math inline">\(i\)</span>, to produce measure of <strong>overall welfare of society</strong>. For <span class="math inline">\(N\)</span> people, <span class="math inline">\(W: (\mathcal{X} \rightarrow \mathbb{R})^N \rightarrow \mathbb{R}\)</span>.</li>
+<li>Standard assumption: <span class="math inline">\(W\)</span> <em>additive</em> <span class="math inline">\(\Rightarrow W(\mathbf{u}) = \sum_{i=1}^n \omega_iu_i(x)\)</span>
+<ul>
+<li><span class="math inline">\(\omega_i \equiv \frac{\partial W}{\partial u_i}\)</span> is <span class="math inline">\(i\)</span>’s <strong>welfare weight</strong> (❗️)</li>
+</ul></li>
+<li>Welfare-Economic definition of <strong>Utilitarianism</strong>: Literally just <span class="math inline">\(\omega_i = 1 \; \forall i\)</span></li>
+<li>(HW4) Decomposition to evaluate <strong>bias in policy impacts</strong>: from observed allocation <span class="math inline">\(x_i\)</span> and <strong>marginal utility</strong> <span class="math inline">\(u'_i(x)\)</span>, can…
+<ul>
+<li>Infer <span class="math inline">\(\widehat{\omega}_i\)</span> (how much policy <strong>does</strong> value person <span class="math inline">\(i\)</span>), then</li>
+<li>Compare with <span class="math inline">\(\omega_i^*\)</span> (how much policy <strong>should</strong> value person <span class="math inline">\(i\)</span>… <strong>conjoint survey</strong>) 🤯</li>
+</ul></li>
 </ul>
 </section>
-<section id="racial-discrimination" class="slide level2 smaller crunch-title title-12 crunch-ul crunch-blockquote crunch-li-5">
-<h2>Racial Discrimination</h2>
+<section id="alternative-swf-specifications" class="slide level2 crunch-title crunch-ul smaller">
+<h2>Alternative SWF Specifications</h2>
 <ul>
-<li>Marianne Bertrand and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” <em>American Economic Review</em>. <span class="citation" data-cites="bertrand_are_2004">(<a href="#/references" role="doc-biblioref" onclick="">Bertrand and Mullainathan 2004</a>)</span></li>
+<li>Social values</li>
 </ul>
-<blockquote>
-<p>We study <strong>race</strong> in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are <strong>randomly assigned</strong> African-American- or White-sounding <strong>names</strong>. <strong>White names</strong> receive <strong>50 percent more callbacks</strong> for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U.S. labor market.</p>
-</blockquote>
+<p><span class="math display">\[
+W(\underbrace{v_1, \ldots, v_n}_{\text{Values}})(x) \overset{\text{e.g.}}{=} \omega_1\underbrace{v_1(x)}_{\text{Privacy}} + \omega_2\underbrace{v_2(x)}_{\mathclap{\text{Public Health}}}
+\]</span></p>
 <ul>
-<li>So… Is [Solved-ness of problem] = [Closeness of racial gap to 0%]?</li>
-<li>Even on solely empirical, ahistorical basis (meaning, even without reparations for past harms in antecedents), there are reasons why 0% gap may not be the goal…</li>
-<li>To see why, we have to dig into <strong>race as a verb</strong> rather than a noun</li>
+<li>Stakeholder Analysis</li>
 </ul>
-</section>
-<section id="controlling-for-everything-besides-race" class="slide level2 smaller crunch-title title-11 crunch-quarto-figure">
-<h2>“Controlling for” Everything Besides Race</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/resume_greg_baker.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/resume_jamal_jones.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
+<p><span class="math display">\[
+W(\underbrace{s_1, \ldots, s_n}_{\text{Stakeholders}})(x) = \omega_1\underbrace{u_{s_1}(x)}_{\text{Teachers}} + \omega_2\underbrace{u_{s_2}(x)}_{\text{Parents}} + \omega_3\underbrace{u_{s_3}(x)}_{\text{Students}} + \omega_4\underbrace{u_{s_4}(x)}_{\mathclap{\text{Community}}}
+\]</span></p>
 <ul>
-<li>Economist assertion: everything is “same” except for [<strong>name</strong> <span class="math inline">\(\leadsto\)</span> <strong>race</strong>]</li>
-<li>Weird part of assertion: only true if the “everything” is <strong>stripped of context</strong>… But, stripped of context, how would we get [name <span class="math inline">\(\leadsto\)</span> race] in the first place?</li>
+<li>(Adapted from this <a href="https://www.youtube.com/watch?v=9VQw5N4qkhM&amp;list=PLL6RiAl2WHXH1AdhB3fT5dxKIRbijvl34&amp;index=18" target="_blank">great intro video</a>!)</li>
 </ul>
 </section>
-<section id="age-discrimination" class="slide level2 smaller crunch-title crunch-ul crunch-li-8 crunch-img">
-<h2>Age Discrimination?</h2>
-<div id="fig-age" class="quarto-float quarto-figure quarto-figure-center">
+<section id="the-conveniently-left-out-detail" class="slide level2 crunch-title crunch-ul inline-90 crunch-math text-90">
+<h2>The Conveniently-Left-Out Detail</h2>
+<ul>
+<li>Recall, e.g., <strong>predictive parity</strong>:</li>
+</ul>
+<p><span class="math display">\[
+\mathbb{E}[Y \mid D = 1, A = 1] = \mathbb{E}[Y \mid D = 1, A = 0]
+\]</span></p>
+<ul>
+<li>Who decides which <span class="math inline">\(Y\)</span> to pick? <span class="citation" data-cites="kasy_fairness_2021">(<a href="#/references" role="doc-biblioref" onclick="">Kasy and Abebe 2021</a>)</span></li>
+<li>Answer: Whoever picks the <strong>objective function</strong>!</li>
+<li><strong>Profit-maximizing firm</strong>: <span class="math inline">\(\max\left\{ \mathbb{E}[D (Y - c)]\right\} \Rightarrow\)</span> (Discrimination if and only if bad at profit-maximizing)</li>
+<li><strong>Welfare-maximizing policymaker</strong>: <span class="math inline">\(\max\{ W(u_1(D), \ldots, u_n(D)) \}\)</span></li>
+<li>Do these align? Sometimes yes, sometimes no (See: Welfare Theorems and their antecedents, and/or <span class="citation" data-cites="becker_economics_1957">Becker (<a href="#/references" role="doc-biblioref" onclick="">1957</a>)</span>)</li>
+</ul>
+</section>
+<section id="remaining-challenging-details" class="slide level2 crunch-title crunch-ul crunch-quarto-figure crunch-li-8">
+<h2>Remaining (Challenging) Details</h2>
+<div class="quarto-layout-panel" data-layout="[56,44]">
+<div class="quarto-layout-row">
+<div id="challenge-text" class="quarto-layout-cell" style="flex-basis: 56.0%;justify-content: flex-start;">
+<ul>
+<li><strong>Who gets included in the SWF?</strong></li>
+<li>People in one household? One community? One state? One country?</li>
+<li>People in the future?</li>
+<li>Animals?</li>
+<li>…OUR BEAUTIFUL ENVIRONMENT???</li>
+</ul>
+</div>
+<div id="challenge-pic" class="quarto-layout-cell" style="flex-basis: 44.0%;justify-content: flex-start;">
+<div id="fig-snoop" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row quarto-layout-valign-center">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/resume_age_12.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
+<div aria-describedby="fig-snoop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/snoop.png">
 </div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/resume_age_22.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-age-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Based on Lily Hu, <a href="https://www.youtube.com/watch?v=8qMC1fZJMi4" target="_blank"><em>What is ‘Race’ in Algorithmic Discrimination on the Basis of Race? - UCLA IPAM</em></a> (YouTube)
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-snoop-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Our beautiful environment
 </figcaption>
 </figure>
 </div>
+</div>
+</div>
+</div>
+</section>
+<section id="back-to-utilitarian-swf" class="slide level2">
+<h2>Back to Utilitarian SWF</h2>
+<ul>
+<li>Easy mode (possibly/probably your intuition?): Everyone’s welfare weight should be <strong>equal</strong>, <span class="math inline">\(\omega_i = \frac{1}{n}\)</span></li>
+</ul>
+<p><span class="math display">\[
+W(u_1, \ldots, u_n)(x) = \frac{1}{n}u_1(x) + \cdots + \frac{1}{n}u_n(x)
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\implies\)</span> <strong>Utilitarian</strong> Social Welfare Functional!</li>
+<li>The Silly Problem of Utilitarian SWF: What if everyone is made happy by <span class="math inline">\(u_{\text{Jeef}} = -999999999\)</span>?</li>
+</ul>
+</section>
+<section id="the-hard-problem-of-utilitarian-swf" class="slide level2 crunch-title title-09 crunch-ul crunch-blockquote text-90">
+<h2>The Hard Problem of Utilitarian SWF</h2>
+<blockquote>
+<p>While the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that <strong>equal consideration for all</strong> may demand very <strong>unequal treatment in favour of the disadvantaged</strong> <span class="citation" data-cites="sen_inequality_1992">(<a href="#/references" role="doc-biblioref" onclick="">Sen 1992</a>)</span></p>
+</blockquote>
+<ul>
+<li><span class="math inline">\(\implies\)</span> <strong><em>“Equality of What?”</em></strong></li>
+<li>What is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): <strong>Utility</strong>? <strong>Opportunity</strong>? <strong>Resources</strong>? <strong>Money</strong>? <strong>Freedom <em>from</em> [<span class="math inline">\(X\)</span>]</strong>? <strong>Freedom <em>to</em> [<span class="math inline">\(Y\)</span>]</strong>?</li>
+</ul>
+</section>
+<section id="utility-rightarrow-social-welfare-with-externalities" class="slide level2 crunch-title title-11 smaller crunch-quarto-figure">
+<h2>Utility <span class="math inline">\(\rightarrow\)</span> Social Welfare with Externalities</h2>
+<ul>
+<li><strong>Jeef</strong> and <strong>Keef</strong> are roommates: Jeef loves listening to <a href="https://www.youtube.com/watch?v=OlQTn7gI8cw" target="_blank">Tony Danza Tapdance Extravaganza</a>, but Keef is normal and slowly dies inside with each additional song</li>
+</ul>
+<div class="quarto-layout-panel" data-layout="[1,1]" data-layout-align="center">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <center>
-<p>Fair <span class="math inline">\(\iff\)</span> [<span class="math inline">\(\Pr(\text{Admit Presley}_{12}) = \Pr(\text{Admit Presley}_{22})\)</span>]?</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="kable-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: right;">Songs</th>
+<th style="text-align: right;">Jeef</th>
+<th style="text-align: right;">Keef</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">-6</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">-13</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">-20</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">-42</td>
+<td style="text-align: right;">-12</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </center>
-<ul>
-<li>Root of issue: [BA Stats, UCLA, 3.7] has no “free-floating” meaning—it’s <strong>attached to a person</strong> <span class="math inline">\(\Rightarrow\)</span> affected by/interpreted w.r.t. their “protected” characteristics</li>
-</ul>
-</section>
-<section id="general-fairness-definition" class="slide level2 smaller crunch-title crunch-quarto-figure crunch-ul crunch-img inline-90 text-68">
-<h2>General Fairness Definition?</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>Pessimistic conjecture: like bias-variance tradeoff (no free lunch), may be a “generality-[loophole-avoidance] tradeoff”…</li>
-<li>May need to “descend” from <strong>👆Platonic</strong> ideal fairness to <strong>👇Aristotelian</strong> topic-specific fairness 🤔 <em>Hence W12-13!</em></li>
-<li>We saw this issue before, in different form! Rawls on “correct” ranking of <strong>rights</strong></li>
-<li>[<strong>Rawls</strong>: No “correct” ordering; Different societies <span class="math inline">\(\leadsto\)</span> different social value systems, power struggles <span class="math inline">\(\leadsto\)</span> different orderings]</li>
-</ul>
-</div><div class="column" style="width:50%;">
+</div><div class="column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/raphael_anno.jpg" style="width:80.0%"></p>
-<figcaption>Raphael, <a href="https://en.wikipedia.org/wiki/The_School_of_Athens"><em>The School of Athens</em> (1511)</a> <span style="font-size: 60%">v rare 16th-century use of Georgia!</span></figcaption>
+<p><img data-src="index_files/figure-revealjs/roommate-plot-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
 </figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="index_files/figure-revealjs/welfare-plot-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
 </div>
 </div></div>
-<ul>
-<li>[<strong>Me, I guess? 🙈</strong>: No “correct” fairness defn for racial discrimination; Different societies <span class="math inline">\(\leadsto\)</span> different racial/caste/identity formations, power struggles <span class="math inline">\(\leadsto\)</span> different fairness defns]</li>
-</ul>
-</section>
-<section id="cool-theory-i-guess" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-ul crunch-li-8 crunch-quarto-figure">
-<h2>“Cool Theory, I Guess…”</h2>
-<ul>
-<li>Less pessimistic result of pessimistic conjecture: Some hope from Fodor-Sperber model (disclaimer: also terrifying, Philip K. Dick <em>Minority Report</em>-style dystopian possibilities)</li>
-<li>“Good luck measuring ideas inside of people’s heads… I’ll be over here measuring <em>real</em> things and doing <em>real</em> data science!” -My innumerable Wile E. Coyote-style opps</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/representations.jpeg" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/sperber.jpg" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="cool-theory-i-guess-1" class="slide level2 smaller crunch-title">
-<h2>“Cool Theory, I Guess…”</h2>
-<p><em>(Brace yourself: Jeff’s Trying-My-Best Fodor-Sperber model of socially-constructed “race” on next few slides… I’m sorry in advance 🙈🙈🙈 Did you know you can italicize emojis)</em></p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/representations_bilingual.jpeg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/sunny.webp" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="opening-a-big-can-of-worms" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell crunch-ul text-65">
-<h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div id="worms1-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<ul>
-<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
-</ul>
-</div>
-<div id="worms-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/race_graph_step1.svg" class="quarto-figure quarto-figure-center" width="500"></p>
-</figure>
-</div>
-</div>
-</div>
 </div>
 </section>
-<section id="opening-a-big-can-of-worms-1" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell crunch-ul text-65">
-<h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div id="worms2-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<section id="so-whats-the-issue" class="slide level2 crunch-title text-95">
+<h2>So What’s the Issue?</h2>
 <ul>
-<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
-<li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
+<li>These utility values are <strong>not observed</strong></li>
+<li>If we try to <strong>elicit</strong> them, both Jeef and Keef have <strong>strategic incentives</strong> to <strong>lie</strong> (over-exaggerate)</li>
+<li>Jeef maximizes own utility by reporting <span class="math inline">\(u_j(s) = \infty\)</span>
+<ul>
+<li><em>(“I will literally die if I can’t listen to Lil Wayne’s <a href="https://www.youtube.com/watch?v=MGb5VUeartE">”Peanuts 2 N Elephant”</a> prod. Lin-Manuel Miranda all day”)</em></li>
+</ul></li>
+<li>Keef maximizes own utility by reporting <span class="math inline">\(u_k(s) = -\infty\)</span>
+<ul>
+<li><em>(“I will literally die if I hear this elephant song again”)</em></li>
+</ul></li>
+<li>(…Quick mechanism design demo: <strong>Second price auctions</strong>)</li>
 </ul>
-</div>
-<div id="worms2-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/race_graph_step2.svg" class="quarto-figure quarto-figure-center" width="500"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
 </section>
-<section id="opening-a-big-can-of-worms-2" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell crunch-ul text-65">
-<h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div id="worms3-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<section id="now-with-scarce-resources" class="slide level2 crunch-title crunch-ul crunch-math math-90 inline-90 text-90">
+<h2>Now with Scarce Resources</h2>
 <ul>
-<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
-<li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
-<li>Each person <span class="math inline">\(x\)</span> forming their own <strong>internal representations</strong> <span class="math inline">\(\widetilde{t^x_0}\)</span>, <span class="math inline">\(\widetilde{t^x_1}\)</span>, <span class="math inline">\(\widetilde{t^x_2}\)</span> of one another based on <strong>patterns of interaction</strong>, then</li>
-<li>Generalizing to an internal representation of a <strong>“type of person” <span class="math inline">\(\widetilde{t^x_9}\)</span></strong>…</li>
+<li>In a given week, Jeef and Keef have <strong>14 meals</strong> and <strong>7 aux hours</strong> to divide amongst them</li>
 </ul>
-</div>
-<div id="worms3-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/race_graph_step3.svg" class="quarto-figure quarto-figure-center" width="600"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
+<p><span class="math display">\[
+\begin{align*}
+\max_{m_1,m_2,a_1,a_2}&amp; W(u_1(m_1,a_1),u_2(m_2,a_2)) \\
+\text{s.t. }&amp; m_1 + m_2 \leq 14 \\
+\phantom{\text{s.t. }} &amp; ~ \, a_1 + a_2 \; \leq 7
+\end{align*}
+\]</span></p>
+<ul>
+<li>Let’s assume <span class="math inline">\(u_i(m_i, a_i) = m_i + a_i\)</span> for both</li>
+<li><span class="math inline">\(\Rightarrow\)</span> One solution: <span class="math inline">\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\)</span>…</li>
+<li><span class="math inline">\(\Rightarrow\)</span> Another: <span class="math inline">\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\)</span>…</li>
+<li>Who decides? Any decision implies <span class="math inline">\(\omega_1, \omega_2\)</span> (<span class="math inline">\(\omega_1 + \omega_2 = 1\)</span>)<br><em>(Last slide = <a href="./images/redacted_crop.jpg" target="_blank">last reminder</a>…)</em></li>
+</ul>
 </section>
-<section id="opening-a-big-can-of-worms-3" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-quarto-figure crunch-quarto-layout-cell crunch-ul text-65">
-<h2>Opening A Big Can Of Worms</h2>
-<div class="quarto-layout-panel" data-layout="[1,1]">
-<div class="quarto-layout-row">
-<div id="worms4-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<ul>
-<li>Social interactions among <span class="math inline">\(t^e_0\)</span>, <span class="math inline">\(t^e_1\)</span>, <span class="math inline">\(t^e_2\)</span>…</li>
-<li><strong>Mediated</strong> by external things <span class="math inline">\(o^e_3\)</span> to <span class="math inline">\(o^e_8\)</span> (giving rise to <strong>patterns of interaction</strong>)…</li>
-<li>Each person <span class="math inline">\(x\)</span> forming their own <strong>internal representations</strong> <span class="math inline">\(\widetilde{t^x_0}\)</span>, <span class="math inline">\(\widetilde{t^x_1}\)</span>, <span class="math inline">\(\widetilde{t^x_2}\)</span> of one another based on <strong>patterns of interaction</strong>, then</li>
-<li>Generalizing to an internal representation of a <strong>“type of person” <span class="math inline">\(\widetilde{t^x_9}\)</span></strong>…</li>
-<li>Which they then <strong>externalize</strong> as <span class="math inline">\(t^x_9\)</span>.</li>
-<li><span class="math inline">\(t^0_9\)</span>, <span class="math inline">\(t^1_9\)</span>, <span class="math inline">\(t^2_9\)</span> “congeal” into a <strong>shared external representation</strong> <span class="math inline">\(t_9^e\)</span> via social mechanism (discussion, media, culture, propaganda, parenting, religion, education, …) <span class="math inline">\(\Rightarrow t^e_9\)</span> <strong>“reified”</strong> (causal effects on <span class="math inline">\(t_0\)</span>, <span class="math inline">\(t_1\)</span>, <span class="math inline">\(t_2\)</span>)</li>
-</ul>
+<section id="now-with-moral-responsibility-vs.-moral-luck" class="slide level2 text-60 crunch-title title-10 inline-90 crunch-p">
+<h2>Now With <em>Moral Responsibility vs.&nbsp;Moral Luck!</em></h2>
+<p>What is the <strong>overall social welfare</strong> of a policy <span class="math inline">\(x\)</span> (as opposed to another policy <span class="math inline">\(y\)</span>, e.g., “do nothing”)?</p>
+<div id="fig-roemer-table" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-roemer-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Effort Class <span class="math inline">\(\rightarrow\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(e^{(1)}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(e^{(2)}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(e^{(3)}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(e^{(4)}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(e^{(5)}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>Percentile Range</strong> <span class="math inline">\(\rightarrow\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([P_0, P_{20}]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([P_{20}, P_{40}]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([P_{40}, P_{60}]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([P_{60}, P_{80}]\)</span></td>
+<td style="text-align: center;"><span class="math inline">\([P_{80}, P_{100}]\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Circumstance Class <span class="math inline">\(c^{(1)}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{11}\)</span>, <span class="math inline">\(W(1,1)(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{12}\)</span>, <span class="math inline">\(W(1,2)(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{13}\)</span>, <span class="math inline">\(W(1,3)(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{14}\)</span>, <span class="math inline">\(W(1,4)(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{15}\)</span>, <span class="math inline">\(W(1,5)(x)\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Circumstance Class <span class="math inline">\(c^{(2)}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{21}\)</span>, <span class="math inline">\(W(2,1)(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{22}\)</span>, <span class="math inline">\(W(2,2)(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{23}\)</span>, <span class="math inline">\(W(2,3)(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{24}\)</span>, <span class="math inline">\(W(2,4)(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{25}\)</span>, <span class="math inline">\(W(2,5)(x)\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Circumstance Class <span class="math inline">\(c^{(3)}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{31}\)</span>, <span class="math inline">\(W(3,1)(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{32}\)</span>, <span class="math inline">\(W(3,2)(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{33}\)</span>, <span class="math inline">\(W(3,3)(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{34}\)</span>, <span class="math inline">\(W(3,4)(x)\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(N_{35}\)</span>, <span class="math inline">\(W(3,5)(x)\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="worms4-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/race_graph_step4.svg" class="quarto-figure quarto-figure-center" width="600"></p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-roemer-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Roemerian “Circumstance-Effort Matrix” <span class="citation" data-cites="roemer_equality_1998">(<a href="#/references" role="doc-biblioref" onclick="">Roemer 1998</a>)</span>
+</figcaption>
 </figure>
 </div>
-</div>
-</div>
-</div>
+<ul>
+<li><span class="math inline">\(N_{ij}\)</span> = Number of people in Circumstance Class <span class="math inline">\(i\)</span> who exert effort <span class="math inline">\(j\)</span></li>
+<li><span class="math inline">\(W(i,j)\)</span> = Social Welfare Functional evaluated w.r.t. people in Circumstance Class <span class="math inline">\(i\)</span> who exert effort <span class="math inline">\(j\)</span></li>
+</ul>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-bertrand_are_2004" class="csl-entry" role="listitem">
-Bertrand, Marianne, and Sendhil Mullainathan. 2004. <span>“Are <span>Emily</span> and <span>Greg More Employable Than Lakisha</span> and <span>Jamal</span>? <span>A Field Experiment</span> on <span>Labor Market Discrimination</span>.”</span> <em>American Economic Review</em> 94 (4): 991–1013. <a href="https://doi.org/10.1257/0002828042002561">https://doi.org/10.1257/0002828042002561</a>.
+<div id="ref-acemoglu_power_2023" class="csl-entry" role="listitem">
+Acemoglu, Daron, and Simon Johnson. 2023. <em>Power and <span>Progress</span>: <span>Our Thousand-Year Struggle Over Technology</span> and <span>Prosperity</span></em>. PublicAffairs. <a href="https://www.dropbox.com/scl/fi/d9tsmbsyff3xpz597lzc5/PowerandProgress_OurThousand-YearStruggleover-DaronAcemoglu-SimonJohnson.pdf?rlkey=2cntwyavjtawbpnnyutjhas3y&amp;dl=1">https://www.dropbox.com/scl/fi/d9tsmbsyff3xpz597lzc5/PowerandProgress_OurThousand-YearStruggleover-DaronAcemoglu-SimonJohnson.pdf?rlkey=2cntwyavjtawbpnnyutjhas3y&amp;dl=1</a>.
 </div>
-<div id="ref-dubois_souls_1903" class="csl-entry" role="listitem">
-Du Bois, W. E. B. 1903. <em>The <span>Souls</span> of <span>Black Folk</span>: <span>Essays</span> and <span>Sketches</span></em>. A. C. McClurg. <a href="https://books.google.com?id=lTXYAAAAMAAJ">https://books.google.com?id=lTXYAAAAMAAJ</a>.
+<div id="ref-akerlof_market_1970" class="csl-entry" role="listitem">
+Akerlof, George A. 1970. <span>“The <span>Market</span> for "<span>Lemons</span>": <span>Quality Uncertainty</span> and the <span>Market Mechanism</span>.”</span> <em>The Quarterly Journal of Economics</em> 84 (3): 488–500. <a href="https://doi.org/10.2307/1879431">https://doi.org/10.2307/1879431</a>.
+</div>
+<div id="ref-becker_economics_1957" class="csl-entry" role="listitem">
+Becker, Gary S. 1957. <em>The <span>Economics</span> of <span>Discrimination</span></em>. University of Chicago Press. <a href="https://books.google.com?id=50qHcSNVVEMC">https://books.google.com?id=50qHcSNVVEMC</a>.
+</div>
+<div id="ref-friedman_rhodesia_1976" class="csl-entry" role="listitem">
+Friedman, Milton. 1976. <span>“Rhodesia.”</span> <em>Newsweek</em>, May 3. <a href="https://advance.lexis.com/document/?pdmfid=1519360&amp;crid=a4ca71c1-c361-4ea3-89c7-049738ac7f81&amp;pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A3SJ4-F1S0-0008-X3KG-00000-00&amp;pdcontentcomponentid=5774&amp;pdteaserkey=sr0&amp;pditab=allpods&amp;ecomp=hc-yk&amp;earg=sr0&amp;prid=4aa60292-a9ad-4ade-8214-34bdc1346a6d">https://advance.lexis.com/document/?pdmfid=1519360&amp;crid=a4ca71c1-c361-4ea3-89c7-049738ac7f81&amp;pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A3SJ4-F1S0-0008-X3KG-00000-00&amp;pdcontentcomponentid=5774&amp;pdteaserkey=sr0&amp;pditab=allpods&amp;ecomp=hc-yk&amp;earg=sr0&amp;prid=4aa60292-a9ad-4ade-8214-34bdc1346a6d</a>.
+</div>
+<div id="ref-kasy_fairness_2021" class="csl-entry" role="listitem">
+Kasy, Maximilian, and Rediet Abebe. 2021. <span>“Fairness, <span>Equality</span>, and <span>Power</span> in <span>Algorithmic Decision-Making</span>.”</span> <em>Proceedings of the 2021 <span>ACM Conference</span> on <span>Fairness</span>, <span>Accountability</span>, and <span>Transparency</span></em> (New York, NY, USA), <span>FAccT</span> ’21, March 1, 576–86. <a href="https://doi.org/10.1145/3442188.3445919">https://doi.org/10.1145/3442188.3445919</a>.
+</div>
+<div id="ref-malm_how_2021" class="csl-entry" role="listitem">
+Malm, Andreas. 2021. <em>How to <span>Blow Up</span> a <span>Pipeline</span></em>. Verso Books. <a href="https://books.google.com?id=qUrSDwAAQBAJ">https://books.google.com?id=qUrSDwAAQBAJ</a>.
+</div>
+<div id="ref-pareto_cours_1896" class="csl-entry" role="listitem">
+Pareto, Vilfredo. 1896. <em>Cours d’Économie politique</em>. Librairie Droz. <a href="https://books.google.com?id=s249oYSJbVMC">https://books.google.com?id=s249oYSJbVMC</a>.
+</div>
+<div id="ref-roemer_equality_1998" class="csl-entry" role="listitem">
+Roemer, John E. 1998. <em>Equality of <span>Opportunity</span></em>. Harvard University Press. <a href="https://books.google.com?id=2LfA_KjvOAsC">https://books.google.com?id=2LfA_KjvOAsC</a>.
+</div>
+<div id="ref-sen_inequality_1992" class="csl-entry" role="listitem">
+Sen, Amartya. 1992. <em>Inequality <span>Reexamined</span></em>. Clarendon Press.
+</div>
+<div id="ref-steinbeck_grapes_1939" class="csl-entry" role="listitem">
+Steinbeck, John. 1939. <em>The <span>Grapes</span> of <span>Wrath</span></em>. Penguin. <a href="https://books.google.com?id=bhJgd3hGdxQC">https://books.google.com?id=bhJgd3hGdxQC</a>.
+</div>
+<div id="ref-thucydides_war_2013" class="csl-entry" role="listitem">
+Thucydides. 2013. <em>The <span>War</span> of the <span>Peloponnesians</span> and the <span>Athenians</span></em>. Cambridge University Press. <a href="https://books.google.com?id=dSYnCTf3rSAC">https://books.google.com?id=dSYnCTf3rSAC</a>.
+</div>
+<div id="ref-varian_intermediate_2006" class="csl-entry" role="listitem">
+Varian, Hal R. 2006. <em>Intermediate <span>Microeconomics</span>: <span>A Modern Approach</span></em>. W.W. Norton.
 </div>
 </div>
 
 
 </section></section>
+
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>DSAN 5450 Week 12: Projects, Causality and Identity Formation</p>
+<p>DSAN 5450 Week 12: (Machine) Learning What Policies Value</p>
 </div>
 </div></div>
 
@@ -795,6 +1048,44 @@ Du Bois, W. E. B. 1903. <em>The <span>Souls</span> of <span>Black Folk</span>: <
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

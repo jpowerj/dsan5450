@@ -1,5 +1,5 @@
 ---
-title: "Week 12: Final Projects, Causality and Racecraft"
+title: "Week 12: (Machine) Learning What Policies Value"
 subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2026, Georgetown University</span>"
 author: "Jeff Jacobs"
 institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
@@ -45,317 +45,424 @@ format:
 
 :::
 
-# Making Projects Less Scary {.smaller .title-12 data-stack-name="Final Projects"}
+# Schedule {.smaller data-stack-name="Fishers' Dilemma"}
 
-![Gemini image prompt: A final report that's scary and eats all the students but is also somehow cute](images/final_project.jpg){fig-align="center"}
+| | Start | End | Topic |
+|:- |:- |:- |:- |
+| **Lecture** | 3:30pm | 4:00pm | [Utility Functions and the Edgeworth Box](#so-weve-opened-the-pandoras-box-of-utility...) |
+| | 4:00pm | 4:30pm | [Policy Intervention <i class='bi bi-3-circle'></i>: Data Property Rights](#policy-intervention-i-classbi-bi-3-circlei-property-rights) |
+| | 4:30pm | 5:00pm | [Policy Intervention <i class='bi bi-4-circle'></i>: "Internalizing" Externalities](#policy-intervention-i-classbi-bi-4-circlei-yugoslav-nationalization) |
+| **Break!** | 5:00pm | 5:10pm | |
+| | 5:10pm | 6:00pm | [(Machine) Learning What Policies Value $\leadsto$ HW4](#policy-evaluation-via-inverse-fairness) |
 
-## How Do I Pick A Topic?
+::: {.hidden}
 
-* I know that "whatever is interesting to you" can be way overly-vague!
-* So, one approach is: imagine yourself in a job interview for your **dream job**, and they bring up DSAN 5450: "Interesting, what did you do in that class?" 
-* [Insert project elevator pitch] "Wow, that's such a cool project, we really want someone who can [say] take a data-driven approach to a policy question like that. Ur hired!"
-* (Jeff gets a commission: 10% of your salary)
-
-## The Rating System (Science-Based) {.crunch-title .smaller .crunch-images .title-12 .crunch-quarto-figure .crunch-img}
-
-::: {#fig-ratings}
-
-<a href='https://jpj.georgetown.domains/dsan5450-scratch/cinema.mp4' target='_blank'>![](images/rating.png)</a>
-
-<a href='https://jpj.georgetown.domains/dsan5450-scratch/cinema.mp4' target='_blank'>On Cinema at the Cinema S1E09 <i class='bi bi-box-arrow-up-right ps-1'></i></a>
-:::
-
-## Discussing Fairness {.crunch-title .title-11 .smaller}
-
-```{=html}
-<table>
-<thead>
-</thead>
-<tbody>
-<tr>
-    <td><span data-qmd="**Below Expectations**"></span><br><span data-qmd="![](images/1_bag.png){width='50'}"></span></td>
-    <td>"This algorithm is unfair"</td>
-</tr>
-<tr>
-    <td><span data-qmd="**Meets Expectations**"></span><br><span data-qmd="![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}"></span></td>
-    <td>"This algorithm violates the Predictive Parity criterion of fairness when run on this dataset"</td>
-</tr>
-<tr>
-    <td><span data-qmd="**Exceeds Expectations**"></span><br><span data-qmd="![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}"></span></td>
-    <td>"<span data-qmd="This algorithm violates the Predictive Parity criterion when run on this dataset, but that's because [other mitigating factor]. It still satisfies Within-$\varepsilon$ Predictive Parity, for $\varepsilon = 0.02$"></span>"</td>
-</tr>
-<tr>
-    <td><span data-qmd="**Doing Too Much**"></span><br><span data-qmd="![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'} ![](images/soda.png){width='20'} ![](images/soda.png){width='20'}"></span></td>
-    <td>All of the above, plus I developed a new better algorithm that is more fair</td>
-</tr>
-</tbody>
-</table>
+```{r}
+#| label: source-globals
+source("../dsan-globals/_globals.r")
 ```
 
-## Evaluating Policy {.crunch-title .title-11 .smaller .crunch-p}
-
-```{=html}
-<table>
-<thead>
-</thead>
-<tbody>
-<tr>
-    <td><span data-qmd="**Below Expectations**"></span><br><span data-qmd="![](images/1_bag.png){width='50'}"></span></td>
-    <td>"This policy is bad"</td>
-</tr>
-<tr>
-    <td><span data-qmd="**Meets Expectations**"></span><br><span data-qmd="![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}"></span></td>
-    <td>"This policy is bad bc it's biased towards [group 1], and doesn't take sufficient account of the welfare of [group 2]"</td>
-</tr>
-<tr>
-    <td><span data-qmd="**Exceeds Expectations**"></span><br><span data-qmd="![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}"></span></td>
-    <td>"This policy is bad bc it's biased towards [group 1], and doesn't take sufficient account of the welfare of [group 2], which violates the Rawlsian notion of what would be chosen by rational agents behind a 'veil of ignorance'"</td>
-</tr>
-<tr>
-    <td><span data-qmd="**Doing Too Much**"></span><br><span data-qmd="![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'}![](images/1_bag.png){width='50'} ![](images/soda.png){width='20'} ![](images/soda.png){width='20'}"></span></td>
-    <td>"<span data-qmd="This policy is bad bc the inferred welfare weights $\omega_i$ are $0.1632$ off from the optimal welfare weights $\omega_i^*$"></span>"</td>
-</tr>
-</tbody>
-</table>
-```
-
-## Frequently Awesome Questions {.smaller .crunch-title .crunch-ul .crunch-li-8}
-
-* *How much data-processing/R/Python is required?* None!
-  * You can think of it like: In every other DSAN class, we plop a dataset in front of you and say "do the thing"
-  * Here you can (and should) first ask, "is [the thing] an **effective way to address** this issue?"
-* Example: **archive of missing datasets**
-* Sometimes the problem is not "We haven't trained a hyperboosted 70-layer quantum neural net on this yet!"
-* Sometimes it's "nobody with power cares enough about this to make a dataset in the first place [or they purposefully prevent it]"
-* Other times it's "people with power *did* care enough about this to make a dataset, and [it should be destroyed](https://www.theguardian.com/world/2014/may/23/chile-student-loan-debts-fried-potatoes)"
-* May require... exploratory "meta-analysis" of datasets: finding data not necessarily for analysis but, to see what is/isn't out there!
-
-<!-- ## Fruitfully Asked Questions {.crunch-title .crunch-ul .crunch-li-6}
-
-* * -->
-
-## Getting From Here to There
-
-```{=html}
-<style>
-.honk-honk {
-  font-size: 180% !important;
-  /* font-family: "Bungee Spice", sans-serif; */
-  font-family: "Honk", sans-serif;
-  /* font-optical-sizing: auto; */
-  font-weight: 400;
-  font-style: normal;
-}
-</style>
-```
-
-* [**Minimum Viable Product**]{.honk-honk} (**MVP**) 
-* $\leadsto$ Final Product (but... Hofstadter's Law)
-
-::: {.callout-note title="<i class='bi bi-info-circle pe-1'></i> Hofstadter's Law (Paraphrase)" icon="false"}
-
-The pieces of your DSAN final project will take longer than you expect, even if you take Hofstadter's Law into account
+{{< include ../dsan-globals/_globals-tex.qmd >}}
 
 :::
 
-# Causality and Identity Formation {data-stack-name="Racecraft"}
+# Where We Left Off {.crunch-title .title-12 .text-80 data-stack-name="Externalities and Rights"}
 
-* Race as a **Noun** vs. Race as a **Verb** ("Racecraft")
-* Race as a static property vs. race as a **social practice**
-* Subject-Object Distinction (Next slide + W13)
+* ✅ Policy Intervention <i class='bi bi-1-circle'></i>: **Contracting** Along the Pareto Frontier
+  * 👍 No "external coercion" required: **Nash equilibrium** $\Rightarrow$ **Self-enforcing** (no possible gain from breaking contract, for any agent)
+  * 👎 Actual contract reached decided entirely by **power imbalance** 💪🔫
+* ✅ Policy Intervention <i class='bi bi-2-circle'></i>: **Pigou Taxes** (Law + Fine for violation = externality from violation)
+  * 👍 Solves all externality problems! (No need for HW3B 🙌)
+  * 👎 People implementing/enforcing fines have their own incentives, biases, constraints, etc. ([>$1 billion](https://wjla.com/news/local/dc-traffic-safety-tickets-violations-unpaid-ticket-fines-reckless-streets-safety-concerns-washington-traffic-laws-vehicles-metropolitan-police-citations-cracking-down-fatalities-04-23-2025) in unpaid DC tickets...)
 
-## But First... Phenomenology {.crunch-title .title-11 .crunch-blockquote .smaller .crunch-ul .crunch-quarto-figure}
+*(Remember for projects: Econ antecedent = already-solved political problem!)*
 
-* "Objective" account: Roquentin sits down on a bus seat; <a href='https://jpj.georgetown.domains/dsan5450-scratch/nausea.mp3' target='_blank'>"Subjective" account</a>:
+## Opening the Pandora's Box of Utility... {.crunch-title .title-09 .smaller}
 
-> I lean my hand on **the seat** but pull it back hurriedly: it exists. This thing I’m sitting on, leaning my hand on, is called a seat. They made it purposely for people to sit on, they took leather, springs and cloth, they went to work with the idea of making a seat and when they finished, that was what they had made. They carried it here, into this car and the car is now rolling and jolting with its rattling windows, carrying this red thing in its bosom. I murmur: "It's a seat" [...] But the word stays on my lips: it refuses to go and put itself on the thing. It stays what it is, with its red plush, thousands of little red paws in the air, all still, little dead paws...
+...We need to dive a bit more to get to:
 
-![(Image from ["Book Review: Nausea - Jean-Paul Sartre"](https://eternalisedofficial.com/2021/04/21/book-review-nausea-jean-paul-sartre/))](images/train_seat.webp){fig-align="center"}
-
-## [W.E.B. Du Bois and the Epistemological One-Way Mirror]{.lumos-jj} {.smaller .crunch-title .title-08 .crunch-blockquote .text-65}
-
-> Black people in America are [...] born with a veil [...] in this American world---a world which yields him no true self-consciousness, but only lets him see himself through the revelation of the other world. It is a peculiar sensation, this double-consciousness, this sense of **always looking at oneself through the eyes of others**, of measuring one’s soul by the tape of a world that looks on in amused contempt and pity. One ever feels his two-ness—an American, a Negro; two souls, two thoughts, two unreconciled strivings; two warring ideals in one dark body. [@dubois_souls_1903]
-
-* The veil: the world is seen and **experienced differently** on either side of the color line
-* **One-way mirror**: Whites project their constructions of Blacks onto the veil and see their projections reflected on it $\Rightarrow$ the power to **define themselves and others**
-* The projections of whites onto the veil **become realities** (reification!) that Black subjects have to contend with in their self-formation.
-* **Twoness**: in process of self-formation, the racialized subject **must account for** the views of two different social worlds—the Black world, constructed behind the veil, and the white world, which dehumanizes via lack of recognition of their humanity. 
-
-## $\textsf{Race}_{\textsf{Variable}}$ vs. $\textsf{Race}_{\textsf{Construct}}$ {.crunch-title .crunch-ul}
-
-* Careful scientific, causal studies measure the effect that **changing $X$** ($do(X)$) has on $Y$, controlling for $C$ (via, at least under the hood, "Do-Calculus")
-* But, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into "race" and "not race"
-* Keep in back of your mind as we look at example of how (measured by thorough, statistically-principled experiment), **race can have direct, measurable, causal impacts on important aspects of our everyday lives**
-
-## Racial Discrimination {.smaller .crunch-title .title-12 .crunch-ul .crunch-blockquote .crunch-li-5}
-
-* Marianne Bertrand and Sendhil Mullainathan. 2004. "Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination." *American Economic Review*. [@bertrand_are_2004]
-
-> We study **race** in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are **randomly assigned** African-American- or White-sounding **names**. **White names** receive **50 percent more callbacks** for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U.S. labor market.
-
-* So... Is [Solved-ness of problem] = [Closeness of racial gap to 0%]?
-* Even on solely empirical, ahistorical basis (meaning, even without reparations for past harms in antecedents), there are reasons why 0% gap may not be the goal...
-* To see why, we have to dig into **race as a verb** rather than a noun
-
-## "Controlling for" Everything Besides Race {.smaller .crunch-title .title-11 .crunch-quarto-figure}
-
-::: {layout="[1,1]" layout-valign="center"}
-
-![](images/resume_greg_baker.jpeg){fig-align="center"}
-
-![](images/resume_jamal_jones.jpeg){fig-align="center"}
-
-:::
-
-* Economist assertion: everything is "same" except for [**name** $\leadsto$ **race**]
-* Weird part of assertion: only true if the "everything" is **stripped of context**... But, stripped of context, how would we get [name $\leadsto$ race] in the first place?
-
-## Age Discrimination? {.smaller .crunch-title .crunch-ul .crunch-li-8 .crunch-img}
-
-::: {#fig-age}
-::: {layout="[1,1]" layout-valign="center"}
-
-![](images/resume_age_12.jpeg){fig-align="center"}
-
-![](images/resume_age_22.jpeg){fig-align="center"}
-
-:::
-
-Based on Lily Hu, <a href='https://www.youtube.com/watch?v=8qMC1fZJMi4' target='_blank'>*What is 'Race' in Algorithmic Discrimination on the Basis of Race? - UCLA IPAM*</a> (YouTube)
-:::
+:::: {layout="[1,1]" layout-valign="center"}
+::: {#snek}
 
 <center>
 
-Fair $\iff$ [$\Pr(\text{Admit Presley}_{12}) = \Pr(\text{Admit Presley}_{22})$]?
+Policy Intervention <i class='bi bi-3-circle'></i>:<br>**Property Rights**
 
 </center>
 
-* Root of issue: [BA Stats, UCLA, 3.7] has no "free-floating" meaning---it's **attached to a person** $\Rightarrow$ affected by/interpreted w.r.t. their "protected" characteristics
+![](images/hiss.jpg){fig-align="center" width="440px"}
 
-## General Fairness Definition? {.smaller .crunch-title .crunch-quarto-figure .crunch-ul .crunch-img .inline-90 .text-68}
-
-:::: {.columns}
-::: {.column width="50%"}
-
-* Pessimistic conjecture: like bias-variance tradeoff (no free lunch), may be a "generality-[loophole-avoidance] tradeoff"...
-* May need to "descend" from **👆Platonic** ideal fairness to **👇Aristotelian** topic-specific fairness 🤔 *Hence W12-13!*
-* We saw this issue before, in different form! Rawls on "correct" ranking of **rights**
-* [**Rawls**: No "correct" ordering; Different societies $\leadsto$ different social value systems, power struggles $\leadsto$ different orderings]
+</center>
 
 :::
-::: {.column width="50%"}
+::: {#yugo}
 
-![Raphael, [*The School of Athens* (1511)](https://en.wikipedia.org/wiki/The_School_of_Athens) [v rare 16th-century use of Georgia!]{style='font-size: 60%'}](images/raphael_anno.jpg){fig-align="center" width="80%"}
+<center>
+
+Policy Intervention <i class='bi bi-4-circle'></i>:<br>**Yugoslavia-Style Mergers**
+
+</center>
+
+![](images/tito_crop_ext.jpg){fig-align="center" width="340px"}
 
 :::
 ::::
 
-* [**Me, I guess? 🙈**: No "correct" fairness defn for racial discrimination; Different societies $\leadsto$ different racial/caste/identity formations, power struggles $\leadsto$ different fairness defns]
+## Utility Function: Using the *Ordering* of Numbers to "Encode" the *Ordering* of Preferences {.smaller .crunch-title .title-09}
 
-## "Cool Theory, I Guess..." {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-ul .crunch-li-8 .crunch-quarto-figure}
+![From Ryan Safner's [*History of Economic Thought: Welfare Economics*](https://thoughtf22.classes.ryansafner.com/slides/3.7-slides.pdf)](images/single-utility.svg){fig-align="center"}
 
-* Less pessimistic result of pessimistic conjecture: Some hope from Fodor-Sperber model (disclaimer: also terrifying, Philip K. Dick *Minority Report*-style dystopian possibilities)
-* "Good luck measuring ideas inside of people's heads... I'll be over here measuring *real* things and doing *real* data science!" -My innumerable Wile E. Coyote-style opps
+* [Bluey]{style="color: blue;"} obtains **greater utility** despite paying the **same cost** by moving from $E$ to $O$
+* $E$ denotes "Initial **E**ndowment", $O$ denotes "Final **O**utcome"
+
+## Two Can Play This Game... {.smaller .crunch-title}
+
+![](images/dual-utility.svg){fig-align="center"}
+
+* [Bluey]{style="color: blue;"} obtains **greater utility** within the **same budget** by moving from $E^1$ to $O^1$
+* [Greenie]{style="color: limegreen;"} obtains **greater utility** within the **same budget** by moving from $E^2$ to $O^2$
+
+## The Edgeworth Box {.smaller .crunch-title}
+
+*Rotate [Greenie]{style="color: limegreen;"}'s box 180&deg; and superimpose onto [Bluey]{style="color: blue;"}'s:*
+
+![](images/edgeworth.svg){fig-align="center"}
+
+## Pareto Frontier = Contract(!) Curve {.smaller .crunch-title .title-11}
+
+![](images/contract-curve.svg){fig-align="center"}
+
+* From **initial endowment** $E$, if allowed to trade, "rational" players can reach any **allocation** along dashed **contract curve** from $G$ to $B$... ***(Why not $A$ or $H$?)***
+* So, what determines **which** of these points they end up at? [*(Middle name hint)*](./images/redacted_crop.jpg)
+
+## First Fundamental Theorem of Welfare Economics {.smaller .crunch-title .title-10 .crunch-quarto-layout-panel .crunch-blockquote .crunch-img}
+
+<center>
+
+<span class='boxed-cb1'>[Antecedents (Coase Conditions)] $\Rightarrow$ «**markets** produce **Pareto-optimal outcomes**»</span>
+
+*(Foundation for "Neoclassical" paradigm)*
+</center>
+
+:::: {layout="[1,1,1]" layout-valign="center"}
+
+![Milton "Rhodesia Rocks!" Friedman, UChicago, 1976 "Nobel Prize" in Economics](images/friedman_crop.jpg){width="65%"}
+
+![Ron "Pinochet Rocks!" Coase, UChicago, 1991 "Nobel Prize" in Economics](images/sheridan.jpg){width="50%"}
+
+![Ronnie "Jelly Beans Rock!" Reagan, University of Tasty Treats, 2004 "Nobel Prize" in Jelly Bean Eating](images/reagan.png){width="90%"}
+
+::::
+
+> Rhodesia has a freer press, a more democratic form of government, a greater sympathy with Western ideals than most if not all of the states of Black Africa. Yet we play straight into the hands of our Communist enemies by imposing sanctions on it! [@friedman_rhodesia_1976]
+
+## Payoff from Jeff Pointing at Things Saying "Antecedents!" 500x {.smaller .crunch-title .title-08 .crunch-ul .crunch-blockquote}
+
+<i class='bi bi-1-circle'></i> **Consequent only true if antecedents hold!** Otherwise, proper answer becomes "It depends! Let's see if data can help us find out!" (*Will minimum wage hurt/help blah blah blah...* "It depends! Tell me the details!") (*Will new condos blah blah blah yimby nimby...*) (*Will re-allocating welfare budget from $X$ to $Y$ blah blah blah...* 👀 **HW4**)
+
+:::: {layout="[1,1]"}
+
+::: {#pareto}
+
+> *[Economic inequality] is a social law, something in the nature of man.* [@pareto_cours_1896]
+
+:::
+::: {#notpareto}
+
+> *We've got a [thing] made by men, isn't that something we should be able to change?* [@steinbeck_grapes_1939]
+
+:::
+
+::::
+
+<i class='bi bi-2-circle'></i> **Coase Antecedents $\approx$ equalized power!**
+
+* Ex 1: **Perfect Competition** $\Rightarrow$ ($\neg$ monopoly) $\wedge$ ($\neg$ monopsony) $\Rightarrow$ everyone's outside option equally good $\Rightarrow$ no take-it-or-leave-it coercion possible (try to coerce, I'll say no and go to one of the other $\infty$ people offering equally good options)
+* Ex 2: **No Informational Asymmetries** $\Rightarrow$ Can't "trick me" into buying defective product (@akerlof_market_1970, *"Market for Lemons"*)
+
+## So... What Happens When Antecedents Don't Hold? {.text-65 .crunch-title .title-10 .crunch-blockquote .crunch-ul .crunch-li-8}
+
+* $\neg$(Coase Antecedents) $\Rightarrow$ Unequal Power... Puts us in realm of **Descriptive Ethics!**
+
+  > [What is] right, as the world goes, is only in question between **equals in power**; otherwise, the strong do as they please and the weak suffer what they must. [@thucydides_war_2013; c. 411 BC] *(Think of **necessary** vs. **sufficient** conditions!)*
+
+* Think of how **Gauss-Markov Assumptions** $\Rightarrow$ OLS is BLUE, but DSAN 5300 = what to do when G-M Assumptions **don't hold**
+* Final project brainstorming protip! Think through:
+  * <i class='bi bi-1-circle'></i> Which cases "break" Coase Axioms? ([more honored in the breach](https://en.wiktionary.org/wiki/more_honored_in_the_breach))
+  * <i class='bi bi-2-circle'></i> How might we tackle resulting "imperfections" through policy^[Recall: [Do Nothing, Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation] $\in \text{Policy Set}$;<br> [["Socialize the Data Centres!"](https://newleftreview.org/issues/ii91/articles/evgeny-morozov-socialize-the-data-centres), Blowing Up Oil Pipelines [@malm_how_2021], Bolshevik Revolution] also $\in \text{Policy Set}$]? (DSAN metaphor: perhaps as simple as heteroskedasticity-robust SEs 🤔 usually not!)
+* Our violation (HW3B): **Data externalities!**
+  * "Auto-fixed" if we have a genie who can grant perfect Pigou Tax...
+  * More feasible policies [@acemoglu_power_2023]: property rights in data, Yugoslav nationalization $\leadsto$ [[Walmart]{style="text-decoration: line-through;"} People's Republic of Walmart]
+
+## Policy Intervention <i class='bi bi-3-circle'></i>: *Property* Rights {.smaller .crunch-title .title-09 .crunch-ul .crunch-quarto-figure .crunch-p .crunch-li-8}
+
+* Rawlsian **Rights**: Vetos on societal decisions; Constitution can make some **inalienable** (can't sell self into slavery), some **alienable**
+* Property rights: **alienable**. You can **gift** or **sell** the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)
 
 :::: {.columns}
 ::: {.column width="50%"}
 
-![](images/representations.jpeg){fig-align="center" width="90%"}
+Case <i class='bi bi-1-circle'></i>: Society decides **Right to Clean Air $\prec$ Right to Smoke** $\Rightarrow$ Start at $E$
+
+* $A$ can **pay $B$** to **alienate** right (Pay $50/month, can smoke 5 ciggies) $\leadsto$ $X$
+* Movement along light blue curve: giving up $x$ **money** for $y$ **smoke**, **equally happy**. $u_A(p)$ identical for $p$ on curve
+* Movement to higher light blue curve (<i class='bi bi-arrow-up-right'></i>) $\Rightarrow$ greater utility $u_A' > u_A$
+
+Case <i class='bi bi-2-circle'></i> Society decides **Smoke $\prec$ Clean Air** $\Rightarrow$ Repeat for $E' \leadsto X'$
 
 :::
 ::: {.column width="50%"}
 
-![](images/sperber.jpg){fig-align="center" width="50%"}
+!["Edgeworth Box" for **Right to Smoke** vs. **Right to Clean Air**: $A$, $B$ are roommates; $A$ loves smokin, $B$ loves clean air; From @varian_intermediate_2006](images/varian_35_1_crop.svg){fig-align="center"}
 
 :::
 ::::
 
-## "Cool Theory, I Guess..." {.smaller .crunch-title}
+## *Why* Exactly Does [Commodifying Rights] Sometimes Enable ["Cancelling Out" Externalities]? {.smaller .title-09}
 
-*(Brace yourself: Jeff's Trying-My-Best Fodor-Sperber model of socially-constructed "race" on next few slides... I'm sorry in advance 🙈🙈🙈 Did you know you can italicize emojis)*
+* The key: Forces agent $i$ to **pay a cost** for **inflicting disutility** on agent $j$!
+* (Here please note: "$X$ *sometimes enables* $Y$" does not mean $X$ is a necessary or sufficient condition for $Y$! Think of walking into a dark room, trying different light switches until one turns on the overhead light)
+* Dear reader, I know what you're thinking... *But Jeff!! This is all so abstract and theoretical!! We're sick of your ivory-tower musings, get your head out of the clouds and make it relevant to our day-to-day lives, by relating it back to [Yugoslavia's 1965 economic reforms](https://www.aeaweb.org/articles?id=10.1257/jep.5.4.187)!!*
+* Don't worry, I've listened to your concerns, and the next slide is here for you 😌
 
-:::: {.columns}
-::: {.column width="50%"}
+## Policy Intervention <i class='bi bi-4-circle'></i>: "Yugoslav Nationalization" {.smaller .crunch-title .crunch-ul .crunch-math .title-09 .crunch-p .crunch-li-8 .math-90}
 
-![](images/representations_bilingual.jpeg){fig-align="center"}
+*Last reminder: Externalities $\Leftrightarrow$ I get reward, others pay costs 🥳*
+
+* Steel Mill $S$ produces amount of steel $s$ $\leadsto$ pollution $x$, total cost $c_s(s,x)$
+* Fishery $F$ "produces" amount of fish [$x \leadsto$] $f$, total cost $c_f(f,x)$
+* $S$ optimizes (price per steel $p_s$)
+
+$$
+s^*_{\text{Priv}}, x^*_{\text{Priv}} = \argmax_{s,\small\boxed{x}}\left[ p_s s - c_s(s, x) \right]
+$$
+
+* While $F$ optimizes (price per fish $p_f$)
+
+$$
+f^*_{\text{Priv}} = \argmax_{f}\left[ p_f f - c_f(f, x) \right]
+$$
+
+* If [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is
+
+$$
+s^*_{\text{Yugo}}, f^*_{\text{Yugo}}, x^*_{\text{Yugo}} = \argmax_{s, f, x}\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \right]
+$$
+
+* Can prove that $o(s^*_{\text{Yugo}}, f^*_{\text{Yugo}}, x^*_{\text{Yugo}})$ Pareto-dominates $o(s^*_{\text{Priv}}, x^*_{\text{Priv}}, f^*_{\text{Priv}})$
+* What determines which agents get to ignore externalities? *(Dead horse/middle name)*
+
+# Social Welfare Functionals {data-stack-name="Social Welfare Functionals"}
+
+## Function*al*s?
+
+* You probably know what a **function** $f(x)$ is; a **functional** is a function of functions: $\mathscr{G}(f)$
+* It's from math, which is scary, but it's just notation to remind us that we're analyzing **functions of functions**
+* In our case, they "work the same way" as regular functions, e.g., $\mathscr{G}(f,g) = f^2 + g^2$, so $f(x) = x, g(x) = 2x \Rightarrow \mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2$
+
+## We Live In A Dang Society {.crunch-title .crunch-ul .crunch-math .crunch-p .crunch-ul-top .inline-90 .math-90 .smaller}
+
+* Utilitarianism, Kant, Rawls can all be modeled as **Social Welfare Functionals**
+
+$$
+W(\mathbf{u}) = W(u_1, \ldots, u_n) \Rightarrow W(\mathbf{u})(x) = W(u_1(x), \ldots, u_n(x))
+$$
+
+* $u_i(x)$: Given bundle of resources $x$, how much utility does $i$ experience? $u_i: \mathcal{X} \rightarrow \mathbb{R}$
+* $W(\mathbf{u})$: **Aggregates** $u_i(x)$ over all $i$, to produce measure of **overall welfare of society**. For $N$ people, $W: (\mathcal{X} \rightarrow \mathbb{R})^N \rightarrow \mathbb{R}$.
+* Standard assumption: $W$ *additive* $\Rightarrow W(\mathbf{u}) = \sum_{i=1}^n \omega_iu_i(x)$
+  * $\omega_i \equiv \frac{\partial W}{\partial u_i}$ is $i$'s **welfare weight** (❗️)
+* Welfare-Economic definition of **Utilitarianism**: Literally just $\omega_i = 1 \; \forall i$
+* (HW4) Decomposition to evaluate **bias in policy impacts**: from observed allocation $x_i$ and **marginal utility** $u'_i(x)$, can...
+  * Infer $\widehat{\omega}_i$ (how much policy **does** value person $i$), then
+  * Compare with $\omega_i^*$ (how much policy **should** value person $i$... **conjoint survey**) 🤯
+
+## Alternative SWF Specifications {.crunch-title .crunch-ul .smaller}
+
+* Social values
+
+$$
+W(\underbrace{v_1, \ldots, v_n}_{\text{Values}})(x) \overset{\text{e.g.}}{=} \omega_1\underbrace{v_1(x)}_{\text{Privacy}} + \omega_2\underbrace{v_2(x)}_{\mathclap{\text{Public Health}}}
+$$
+
+* Stakeholder Analysis
+
+$$
+W(\underbrace{s_1, \ldots, s_n}_{\text{Stakeholders}})(x) = \omega_1\underbrace{u_{s_1}(x)}_{\text{Teachers}} + \omega_2\underbrace{u_{s_2}(x)}_{\text{Parents}} + \omega_3\underbrace{u_{s_3}(x)}_{\text{Students}} + \omega_4\underbrace{u_{s_4}(x)}_{\mathclap{\text{Community}}}
+$$
+
+* (Adapted from this <a href='https://www.youtube.com/watch?v=9VQw5N4qkhM&list=PLL6RiAl2WHXH1AdhB3fT5dxKIRbijvl34&index=18' target='_blank'>great intro video</a>!)
+
+## The Conveniently-Left-Out Detail {.crunch-title .crunch-ul .inline-90 .crunch-math .text-90}
+
+* Recall, e.g., **predictive parity**:
+
+$$
+\mathbb{E}[Y \mid D = 1, A = 1] = \mathbb{E}[Y \mid D = 1, A = 0]
+$$
+
+* Who decides which $Y$ to pick? [@kasy_fairness_2021]
+* Answer: Whoever picks the **objective function**!
+* **Profit-maximizing firm**: $\max\left\{ \mathbb{E}[D (Y - c)]\right\} \Rightarrow$ (Discrimination if and only if bad at profit-maximizing) 
+* **Welfare-maximizing policymaker**: $\max\{ W(u_1(D), \ldots, u_n(D)) \}$
+* Do these align? Sometimes yes, sometimes no (See: Welfare Theorems and their antecedents, and/or @becker_economics_1957)
+
+## Remaining (Challenging) Details {.crunch-title .crunch-ul .crunch-quarto-figure .crunch-li-8}
+
+:::: {layout="[56,44]"}
+::: {#challenge-text}
+
+* **Who gets included in the SWF?**
+* People in one household? One community? One state? One country?
+* People in the future?
+* Animals?
+* ...OUR BEAUTIFUL ENVIRONMENT???
 
 :::
-::: {.column width="50%"}
+::: {#challenge-pic}
 
-![](images/sunny.webp){fig-align="center"}
+![Our beautiful environment](images/snoop.png){#fig-snoop}
 
 :::
 ::::
 
-## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell .crunch-ul .text-65}
+## Back to Utilitarian SWF
 
-::: {layout="[1,1]"}
+* Easy mode (possibly/probably your intuition?): Everyone's welfare weight should be **equal**, $\omega_i = \frac{1}{n}$
 
-::: {#worms1-left}
+$$
+W(u_1, \ldots, u_n)(x) = \frac{1}{n}u_1(x) + \cdots + \frac{1}{n}u_n(x)
+$$
 
-* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
+* $\implies$ **Utilitarian** Social Welfare Functional!
+* The Silly Problem of Utilitarian SWF: What if everyone is made happy by $u_{\text{Jeef}} = -999999999$?
 
-:::
-::: {#worms-right}
 
-![](images/race_graph_step1.svg){fig-align="center" width="500"}
+## The Hard Problem of Utilitarian SWF {.crunch-title .title-09 .crunch-ul .crunch-blockquote .text-90}
 
-:::
-:::
+> While the rhetoric of "all men [sic] are born equal" is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that **equal consideration for all** may demand very **unequal treatment in favour of the disadvantaged** [@sen_inequality_1992]
 
-## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell .crunch-ul .text-65}
+* $\implies$ ***"Equality of What?"***
+* What is the "thing" that egalitarianism obligates us to equalize (the equilisandum/equilisanda): **Utility**? **Opportunity**? **Resources**? **Money**? **Freedom *from* [$X$]**? **Freedom *to* [$Y$]**?
 
-::: {layout="[1,1]"}
-::: {#worms2-left}
+## Utility $\rightarrow$ Social Welfare with Externalities {.crunch-title .title-11 .smaller .crunch-quarto-figure}
 
-* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
-* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
+* **Jeef** and **Keef** are roommates: Jeef loves listening to <a href='https://www.youtube.com/watch?v=OlQTn7gI8cw' target='_blank'>Tony Danza Tapdance Extravaganza</a>, but Keef is normal and slowly dies inside with each additional song
 
-:::
-::: {#worms2-right}
+:::: {layout="[1,1]" layout-valign="center" layout-align="center"}
+::: {.column width="50%"}
 
-![](images/race_graph_step2.svg){fig-align="center" width="500"}
+<center>
 
-:::
-:::
+```{r}
+#| label: externalities
+#| fig-align: center
+library(tidyverse)
+music_df <- tribble(
+  ~Songs, ~Jeef, ~Keef,
+  0, 0, 0,
+  1, 13, -2,
+  2, 18, -6,
+  3, 24, -13,
+  4, 28, -20,
+  5, 30, -42
+)
+music_df <- music_df |>
+  mutate(Total = Jeef + Keef)
+music_df
+```
 
-## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell .crunch-ul .text-65}
-
-::: {layout="[1,1]"}
-::: {#worms3-left}
-
-* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
-* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
-* Each person $x$ forming their own **internal representations** $\widetilde{t^x_0}$, $\widetilde{t^x_1}$, $\widetilde{t^x_2}$ of one another based on **patterns of interaction**, then
-* Generalizing to an internal representation of a **"type of person" $\widetilde{t^x_9}$**...
-
-:::
-::: {#worms3-right}
-
-![](images/race_graph_step3.svg){fig-align="center" width="600"}
-
-:::
-:::
-
-## Opening A Big Can Of Worms {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-quarto-layout-cell .crunch-ul .text-65}
-
-::: {layout="[1,1]"}
-::: {#worms4-left}
-
-* Social interactions among $t^e_0$, $t^e_1$, $t^e_2$...
-* **Mediated** by external things $o^e_3$ to $o^e_8$ (giving rise to **patterns of interaction**)...
-* Each person $x$ forming their own **internal representations** $\widetilde{t^x_0}$, $\widetilde{t^x_1}$, $\widetilde{t^x_2}$ of one another based on **patterns of interaction**, then
-* Generalizing to an internal representation of a **"type of person" $\widetilde{t^x_9}$**...
-* Which they then **externalize** as $t^x_9$.
-* $t^0_9$, $t^1_9$, $t^2_9$ "congeal" into a **shared external representation** $t_9^e$ via social mechanism (discussion, media, culture, propaganda, parenting, religion, education, ...) $\Rightarrow t^e_9$ **"reified"** (causal effects on $t_0$, $t_1$, $t_2$)
+</center>
 
 :::
-::: {#worms4-right}
+::: {.column width="50%"}
 
-![](images/race_graph_step4.svg){fig-align="center" width="600"}
+```{r}
+#| label: roommate-plot
+#| fig-height: 4.5
+long_df <- music_df |>
+  pivot_longer(!Songs, names_to="Roommate", values_to="Utility")
+util_df <- long_df |>
+  filter(Roommate != "Total")
+ggplot(util_df, aes(x=Songs, y=Utility, color=Roommate)) +
+  geom_line(linewidth=g_linewidth) +
+  geom_point(size=g_pointsize) +
+  labs(
+    title="Individual Utility: Jeef vs. Keef",
+    x="Number of Songs Played",
+    y="Utility"
+  ) +
+  theme_dsan("quarter")
+```
+
+```{r}
+#| label: welfare-plot
+#| fig-height: 4.5
+welfare_df <- long_df |>
+  filter(Roommate == "Total")
+ggplot(welfare_df, aes(x=Songs, y=Utility, color=Roommate)) +
+  geom_line(linewidth=g_linewidth) +
+  geom_point(size=g_pointsize) +
+  labs(
+    title="Social Welfare: Jeef and Keef",
+    x="Number of Songs Played",
+    y="Social Welfare"
+  ) +
+  scale_color_manual(values=c(cbPalette[3]), labels=c("Total      ")) +
+  theme_dsan("quarter") +
+  remove_legend_title()
+```
 
 :::
+::::
+
+## So What's the Issue? {.crunch-title .text-95}
+
+* These utility values are **not observed**
+* If we try to **elicit** them, both Jeef and Keef have **strategic incentives** to **lie** (over-exaggerate)
+* Jeef maximizes own utility by reporting $u_j(s) = \infty$
+  * *("I will literally die if I can't listen to Lil Wayne's ["Peanuts 2 N Elephant"](https://www.youtube.com/watch?v=MGb5VUeartE) prod. Lin-Manuel Miranda all day")*
+* Keef maximizes own utility by reporting $u_k(s) = -\infty$
+  * *("I will literally die if I hear this elephant song again")*
+* (...Quick mechanism design demo: **Second price auctions**)
+
+## Now with Scarce Resources {.crunch-title .crunch-ul .crunch-math .math-90 .inline-90 .text-90}
+
+* In a given week, Jeef and Keef have **14 meals** and **7 aux hours** to divide amongst them
+
+$$
+\begin{align*}
+\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\
+\text{s.t. }& m_1 + m_2 \leq 14 \\
+\phantom{\text{s.t. }} & ~ \, a_1 + a_2 \; \leq 7
+\end{align*}
+$$
+
+* Let's assume $u_i(m_i, a_i) = m_i + a_i$ for both
+* $\Rightarrow$ One solution: $m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0$...
+* $\Rightarrow$ Another: $m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7$...
+* Who decides? Any decision implies $\omega_1, \omega_2$ ($\omega_1 + \omega_2 = 1$)<br>*(Last slide = [last reminder](./images/redacted_crop.jpg){target='_blank'}...)*
+
+## Now With *Moral Responsibility vs. Moral Luck!* {.text-60 .crunch-title .title-10 .inline-90 .crunch-p}
+
+What is the **overall social welfare** of a policy $x$ (as opposed to another policy $y$, e.g., "do nothing")?
+
+::: {#fig-roemer-table}
+
+| Effort Class $\rightarrow$ | $e^{(1)}$ | $e^{(2)}$ | $e^{(3)}$ | $e^{(4)}$ | $e^{(5)}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| **Percentile Range** $\rightarrow$ | $[P_0, P_{20}]$ | $[P_{20}, P_{40}]$ | $[P_{40}, P_{60}]$ | $[P_{60}, P_{80}]$ | $[P_{80}, P_{100}]$ | 
+| Circumstance Class $c^{(1)}$ | $N_{11}$, $W(1,1)(x)$ | $N_{12}$, $W(1,2)(x)$ | $N_{13}$, $W(1,3)(x)$ | $N_{14}$, $W(1,4)(x)$ | $N_{15}$, $W(1,5)(x)$ |
+| Circumstance Class $c^{(2)}$ | $N_{21}$, $W(2,1)(x)$ | $N_{22}$, $W(2,2)(x)$ | $N_{23}$, $W(2,3)(x)$ | $N_{24}$, $W(2,4)(x)$ | $N_{25}$, $W(2,5)(x)$ |
+| Circumstance Class $c^{(3)}$ | $N_{31}$, $W(3,1)(x)$ |  $N_{32}$, $W(3,2)(x)$ | $N_{33}$, $W(3,3)(x)$ | $N_{34}$, $W(3,4)(x)$ | $N_{35}$, $W(3,5)(x)$ |
+
+: {tbl-colwidths="[25,15,15,15,15,15]"}
+
+Roemerian "Circumstance-Effort Matrix" [@roemer_equality_1998]
 :::
+
+* $N_{ij}$ = Number of people in Circumstance Class $i$ who exert effort $j$
+* $W(i,j)$ = Social Welfare Functional evaluated w.r.t. people in Circumstance Class $i$ who exert effort $j$
 
 ## References
 

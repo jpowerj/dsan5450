@@ -10,149 +10,170 @@
     ]
   },
   {
-    "objectID": "w12/slides.html#how-do-i-pick-a-topic",
-    "href": "w12/slides.html#how-do-i-pick-a-topic",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "How Do I Pick A Topic?",
-    "text": "How Do I Pick A Topic?\n\nI know that “whatever is interesting to you” can be way overly-vague!\nSo, one approach is: imagine yourself in a job interview for your dream job, and they bring up DSAN 5450: “Interesting, what did you do in that class?”\n[Insert project elevator pitch] “Wow, that’s such a cool project, we really want someone who can [say] take a data-driven approach to a policy question like that. Ur hired!”\n(Jeff gets a commission: 10% of your salary)"
+    "objectID": "w12/slides.html#opening-the-pandoras-box-of-utility",
+    "href": "w12/slides.html#opening-the-pandoras-box-of-utility",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Opening the Pandora’s Box of Utility…",
+    "text": "Opening the Pandora’s Box of Utility…\n…We need to dive a bit more to get to:\n\n\n\n\nPolicy Intervention :Property Rights\n\n\n\n\n\n\n\n\n\n\nPolicy Intervention :Yugoslavia-Style Mergers"
   },
   {
-    "objectID": "w12/slides.html#the-rating-system-science-based",
-    "href": "w12/slides.html#the-rating-system-science-based",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "The Rating System (Science-Based)",
-    "text": "The Rating System (Science-Based)\n\n\n\n\n\n\nFigure 1: On Cinema at the Cinema S1E09"
+    "objectID": "w12/slides.html#utility-function-using-the-ordering-of-numbers-to-encode-the-ordering-of-preferences",
+    "href": "w12/slides.html#utility-function-using-the-ordering-of-numbers-to-encode-the-ordering-of-preferences",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Utility Function: Using the Ordering of Numbers to “Encode” the Ordering of Preferences",
+    "text": "Utility Function: Using the Ordering of Numbers to “Encode” the Ordering of Preferences\n\nFrom Ryan Safner’s History of Economic Thought: Welfare Economics\nBluey obtains greater utility despite paying the same cost by moving from \\(E\\) to \\(O\\)\n\\(E\\) denotes “Initial Endowment”, \\(O\\) denotes “Final Outcome”"
   },
   {
-    "objectID": "w12/slides.html#discussing-fairness",
-    "href": "w12/slides.html#discussing-fairness",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Discussing Fairness",
-    "text": "Discussing Fairness\n\n\n\n\n\n\n\nBelow Expectations\n\n\"This algorithm is unfair\"\n\n\nMeets Expectations\n\n\"This algorithm violates the Predictive Parity criterion of fairness when run on this dataset\"\n\n\nExceeds Expectations\n\n\"This algorithm violates the Predictive Parity criterion when run on this dataset, but that’s because [other mitigating factor]. It still satisfies Within-\\(\\varepsilon\\) Predictive Parity, for \\(\\varepsilon = 0.02\\)\"\n\n\nDoing Too Much\n  \nAll of the above, plus I developed a new better algorithm that is more fair"
+    "objectID": "w12/slides.html#two-can-play-this-game",
+    "href": "w12/slides.html#two-can-play-this-game",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Two Can Play This Game…",
+    "text": "Two Can Play This Game…\n\n\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)\nGreenie obtains greater utility within the same budget by moving from \\(E^2\\) to \\(O^2\\)"
   },
   {
-    "objectID": "w12/slides.html#evaluating-policy",
-    "href": "w12/slides.html#evaluating-policy",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Evaluating Policy",
-    "text": "Evaluating Policy\n\n\n\n\n\n\n\nBelow Expectations\n\n\"This policy is bad\"\n\n\nMeets Expectations\n\n\"This policy is bad bc it's biased towards [group 1], and doesn't take sufficient account of the welfare of [group 2]\"\n\n\nExceeds Expectations\n\n\"This policy is bad bc it's biased towards [group 1], and doesn't take sufficient account of the welfare of [group 2], which violates the Rawlsian notion of what would be chosen by rational agents behind a 'veil of ignorance'\"\n\n\nDoing Too Much\n  \n\"This policy is bad bc the inferred welfare weights \\(\\omega_i\\) are \\(0.1632\\) off from the optimal welfare weights \\(\\omega_i^*\\)\""
+    "objectID": "w12/slides.html#the-edgeworth-box",
+    "href": "w12/slides.html#the-edgeworth-box",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "The Edgeworth Box",
+    "text": "The Edgeworth Box\nRotate Greenie’s box 180° and superimpose onto Bluey’s:"
   },
   {
-    "objectID": "w12/slides.html#frequently-awesome-questions",
-    "href": "w12/slides.html#frequently-awesome-questions",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Frequently Awesome Questions",
-    "text": "Frequently Awesome Questions\n\nHow much data-processing/R/Python is required? None!\n\nYou can think of it like: In every other DSAN class, we plop a dataset in front of you and say “do the thing”\nHere you can (and should) first ask, “is [the thing] an effective way to address this issue?”\n\nExample: archive of missing datasets\nSometimes the problem is not “We haven’t trained a hyperboosted 70-layer quantum neural net on this yet!”\nSometimes it’s “nobody with power cares enough about this to make a dataset in the first place [or they purposefully prevent it]”\nOther times it’s “people with power did care enough about this to make a dataset, and it should be destroyed”\nMay require… exploratory “meta-analysis” of datasets: finding data not necessarily for analysis but, to see what is/isn’t out there!"
+    "objectID": "w12/slides.html#pareto-frontier-contract-curve",
+    "href": "w12/slides.html#pareto-frontier-contract-curve",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Pareto Frontier = Contract(!) Curve",
+    "text": "Pareto Frontier = Contract(!) Curve\n\n\nFrom initial endowment \\(E\\), if allowed to trade, “rational” players can reach any allocation along dashed contract curve from \\(G\\) to \\(B\\)… (Why not \\(A\\) or \\(H\\)?)\nSo, what determines which of these points they end up at? (Middle name hint)"
   },
   {
-    "objectID": "w12/slides.html#getting-from-here-to-there",
-    "href": "w12/slides.html#getting-from-here-to-there",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Getting From Here to There",
-    "text": "Getting From Here to There\n\n\nMinimum Viable Product (MVP)\n\\(\\leadsto\\) Final Product (but… Hofstadter’s Law)\n\n\n\n\n\n Hofstadter’s Law (Paraphrase)\n\n\nThe pieces of your DSAN final project will take longer than you expect, even if you take Hofstadter’s Law into account"
+    "objectID": "w12/slides.html#first-fundamental-theorem-of-welfare-economics",
+    "href": "w12/slides.html#first-fundamental-theorem-of-welfare-economics",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "First Fundamental Theorem of Welfare Economics",
+    "text": "First Fundamental Theorem of Welfare Economics\n\n[Antecedents (Coase Conditions)] \\(\\Rightarrow\\) «markets produce Pareto-optimal outcomes»\n(Foundation for “Neoclassical” paradigm)\n\n\n\n\n\n\n\nMilton “Rhodesia Rocks!” Friedman, UChicago, 1976 “Nobel Prize” in Economics\n\n\n\n\n\n\n\nRon “Pinochet Rocks!” Coase, UChicago, 1991 “Nobel Prize” in Economics\n\n\n\n\n\n\n\nRonnie “Jelly Beans Rock!” Reagan, University of Tasty Treats, 2004 “Nobel Prize” in Jelly Bean Eating\n\n\n\n\n\n\nRhodesia has a freer press, a more democratic form of government, a greater sympathy with Western ideals than most if not all of the states of Black Africa. Yet we play straight into the hands of our Communist enemies by imposing sanctions on it! (Friedman 1976)"
   },
   {
-    "objectID": "w12/slides.html#but-first-phenomenology",
-    "href": "w12/slides.html#but-first-phenomenology",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "But First… Phenomenology",
-    "text": "But First… Phenomenology\n\n“Objective” account: Roquentin sits down on a bus seat; “Subjective” account:\n\n\nI lean my hand on the seat but pull it back hurriedly: it exists. This thing I’m sitting on, leaning my hand on, is called a seat. They made it purposely for people to sit on, they took leather, springs and cloth, they went to work with the idea of making a seat and when they finished, that was what they had made. They carried it here, into this car and the car is now rolling and jolting with its rattling windows, carrying this red thing in its bosom. I murmur: “It’s a seat” […] But the word stays on my lips: it refuses to go and put itself on the thing. It stays what it is, with its red plush, thousands of little red paws in the air, all still, little dead paws…\n\n\n(Image from “Book Review: Nausea - Jean-Paul Sartre”)"
+    "objectID": "w12/slides.html#payoff-from-jeff-pointing-at-things-saying-antecedents-500x",
+    "href": "w12/slides.html#payoff-from-jeff-pointing-at-things-saying-antecedents-500x",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x",
+    "text": "Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x\n Consequent only true if antecedents hold! Otherwise, proper answer becomes “It depends! Let’s see if data can help us find out!” (Will minimum wage hurt/help blah blah blah… “It depends! Tell me the details!”) (Will new condos blah blah blah yimby nimby…) (Will re-allocating welfare budget from \\(X\\) to \\(Y\\) blah blah blah… 👀 HW4)\n\n\n\n\n[Economic inequality] is a social law, something in the nature of man. (Pareto 1896)\n\n\n\n\nWe’ve got a [thing] made by men, isn’t that something we should be able to change? (Steinbeck 1939)\n\n\n\n\n Coase Antecedents \\(\\approx\\) equalized power!\n\nEx 1: Perfect Competition \\(\\Rightarrow\\) (\\(\\neg\\) monopoly) \\(\\wedge\\) (\\(\\neg\\) monopsony) \\(\\Rightarrow\\) everyone’s outside option equally good \\(\\Rightarrow\\) no take-it-or-leave-it coercion possible (try to coerce, I’ll say no and go to one of the other \\(\\infty\\) people offering equally good options)\nEx 2: No Informational Asymmetries \\(\\Rightarrow\\) Can’t “trick me” into buying defective product (Akerlof (1970), “Market for Lemons”)"
   },
   {
-    "objectID": "w12/slides.html#w.e.b.-du-bois-and-the-epistemological-one-way-mirror",
-    "href": "w12/slides.html#w.e.b.-du-bois-and-the-epistemological-one-way-mirror",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "W.E.B. Du Bois and the Epistemological One-Way Mirror",
-    "text": "W.E.B. Du Bois and the Epistemological One-Way Mirror\n\nBlack people in America are […] born with a veil […] in this American world—a world which yields him no true self-consciousness, but only lets him see himself through the revelation of the other world. It is a peculiar sensation, this double-consciousness, this sense of always looking at oneself through the eyes of others, of measuring one’s soul by the tape of a world that looks on in amused contempt and pity. One ever feels his two-ness—an American, a Negro; two souls, two thoughts, two unreconciled strivings; two warring ideals in one dark body. (Du Bois 1903)\n\n\nThe veil: the world is seen and experienced differently on either side of the color line\nOne-way mirror: Whites project their constructions of Blacks onto the veil and see their projections reflected on it \\(\\Rightarrow\\) the power to define themselves and others\nThe projections of whites onto the veil become realities (reification!) that Black subjects have to contend with in their self-formation.\nTwoness: in process of self-formation, the racialized subject must account for the views of two different social worlds—the Black world, constructed behind the veil, and the white world, which dehumanizes via lack of recognition of their humanity."
+    "objectID": "w12/slides.html#so-what-happens-when-antecedents-dont-hold",
+    "href": "w12/slides.html#so-what-happens-when-antecedents-dont-hold",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "So… What Happens When Antecedents Don’t Hold?",
+    "text": "So… What Happens When Antecedents Don’t Hold?\n\n\\(\\neg\\)(Coase Antecedents) \\(\\Rightarrow\\) Unequal Power… Puts us in realm of Descriptive Ethics!\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. [Thucydides (2013); c. 411 BC] (Think of necessary vs. sufficient conditions!)\n\nThink of how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, but DSAN 5300 = what to do when G-M Assumptions don’t hold\nFinal project brainstorming protip! Think through:\n\n Which cases “break” Coase Axioms? (more honored in the breach)\n How might we tackle resulting “imperfections” through policy1? (DSAN metaphor: perhaps as simple as heteroskedasticity-robust SEs 🤔 usually not!)\n\nOur violation (HW3B): Data externalities!\n\n“Auto-fixed” if we have a genie who can grant perfect Pigou Tax…\nMore feasible policies (Acemoglu and Johnson 2023): property rights in data, Yugoslav nationalization \\(\\leadsto\\) [Walmart People’s Republic of Walmart]\n\n\nRecall: [Do Nothing, Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation] \\(\\in \\text{Policy Set}\\); [“Socialize the Data Centres!”, Blowing Up Oil Pipelines (Malm 2021), Bolshevik Revolution] also \\(\\in \\text{Policy Set}\\)"
   },
   {
-    "objectID": "w12/slides.html#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct",
-    "href": "w12/slides.html#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)",
-    "text": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)\n\nCareful scientific, causal studies measure the effect that changing \\(X\\) (\\(do(X)\\)) has on \\(Y\\), controlling for \\(C\\) (via, at least under the hood, “Do-Calculus”)\nBut, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into “race” and “not race”\nKeep in back of your mind as we look at example of how (measured by thorough, statistically-principled experiment), race can have direct, measurable, causal impacts on important aspects of our everyday lives"
+    "objectID": "w12/slides.html#policy-intervention-property-rights",
+    "href": "w12/slides.html#policy-intervention-property-rights",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Policy Intervention : Property Rights",
+    "text": "Policy Intervention : Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air; From Varian (2006)"
   },
   {
-    "objectID": "w12/slides.html#racial-discrimination",
-    "href": "w12/slides.html#racial-discrimination",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Racial Discrimination",
-    "text": "Racial Discrimination\n\nMarianne Bertrand and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” American Economic Review. (Bertrand and Mullainathan 2004)\n\n\nWe study race in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are randomly assigned African-American- or White-sounding names. White names receive 50 percent more callbacks for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U.S. labor market.\n\n\nSo… Is [Solved-ness of problem] = [Closeness of racial gap to 0%]?\nEven on solely empirical, ahistorical basis (meaning, even without reparations for past harms in antecedents), there are reasons why 0% gap may not be the goal…\nTo see why, we have to dig into race as a verb rather than a noun"
+    "objectID": "w12/slides.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
+    "href": "w12/slides.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?",
+    "text": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?\n\nThe key: Forces agent \\(i\\) to pay a cost for inflicting disutility on agent \\(j\\)!\n(Here please note: “\\(X\\) sometimes enables \\(Y\\)” does not mean \\(X\\) is a necessary or sufficient condition for \\(Y\\)! Think of walking into a dark room, trying different light switches until one turns on the overhead light)\nDear reader, I know what you’re thinking… But Jeff!! This is all so abstract and theoretical!! We’re sick of your ivory-tower musings, get your head out of the clouds and make it relevant to our day-to-day lives, by relating it back to Yugoslavia’s 1965 economic reforms!!\nDon’t worry, I’ve listened to your concerns, and the next slide is here for you 😌"
   },
   {
-    "objectID": "w12/slides.html#controlling-for-everything-besides-race",
-    "href": "w12/slides.html#controlling-for-everything-besides-race",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "“Controlling for” Everything Besides Race",
-    "text": "“Controlling for” Everything Besides Race\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEconomist assertion: everything is “same” except for [name \\(\\leadsto\\) race]\nWeird part of assertion: only true if the “everything” is stripped of context… But, stripped of context, how would we get [name \\(\\leadsto\\) race] in the first place?"
+    "objectID": "w12/slides.html#policy-intervention-yugoslav-nationalization",
+    "href": "w12/slides.html#policy-intervention-yugoslav-nationalization",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Policy Intervention : “Yugoslav Nationalization”",
+    "text": "Policy Intervention : “Yugoslav Nationalization”\nLast reminder: Externalities \\(\\Leftrightarrow\\) I get reward, others pay costs 🥳\n\nSteel Mill \\(S\\) produces amount of steel \\(s\\) \\(\\leadsto\\) pollution \\(x\\), total cost \\(c_s(s,x)\\)\nFishery \\(F\\) “produces” amount of fish [\\(x \\leadsto\\)] \\(f\\), total cost \\(c_f(f,x)\\)\n\\(S\\) optimizes (price per steel \\(p_s\\))\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,\\small\\boxed{x}}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes (price per fish \\(p_f\\))\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)\nWhat determines which agents get to ignore externalities? (Dead horse/middle name)"
   },
   {
-    "objectID": "w12/slides.html#age-discrimination",
-    "href": "w12/slides.html#age-discrimination",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Age Discrimination?",
-    "text": "Age Discrimination?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Based on Lily Hu, What is ‘Race’ in Algorithmic Discrimination on the Basis of Race? - UCLA IPAM (YouTube)\n\n\n\n\nFair \\(\\iff\\) [\\(\\Pr(\\text{Admit Presley}_{12}) = \\Pr(\\text{Admit Presley}_{22})\\)]?\n\n\nRoot of issue: [BA Stats, UCLA, 3.7] has no “free-floating” meaning—it’s attached to a person \\(\\Rightarrow\\) affected by/interpreted w.r.t. their “protected” characteristics"
+    "objectID": "w12/slides.html#functionals",
+    "href": "w12/slides.html#functionals",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Functionals?",
+    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)"
   },
   {
-    "objectID": "w12/slides.html#general-fairness-definition",
-    "href": "w12/slides.html#general-fairness-definition",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "General Fairness Definition?",
-    "text": "General Fairness Definition?\n\n\n\nPessimistic conjecture: like bias-variance tradeoff (no free lunch), may be a “generality-[loophole-avoidance] tradeoff”…\nMay need to “descend” from 👆Platonic ideal fairness to 👇Aristotelian topic-specific fairness 🤔 Hence W12-13!\nWe saw this issue before, in different form! Rawls on “correct” ranking of rights\n[Rawls: No “correct” ordering; Different societies \\(\\leadsto\\) different social value systems, power struggles \\(\\leadsto\\) different orderings]\n\n\n\n\n\nRaphael, The School of Athens (1511) v rare 16th-century use of Georgia!\n\n\n\n\n[Me, I guess? 🙈: No “correct” fairness defn for racial discrimination; Different societies \\(\\leadsto\\) different racial/caste/identity formations, power struggles \\(\\leadsto\\) different fairness defns]"
+    "objectID": "w12/slides.html#we-live-in-a-dang-society",
+    "href": "w12/slides.html#we-live-in-a-dang-society",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "We Live In A Dang Society",
+    "text": "We Live In A Dang Society\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯"
   },
   {
-    "objectID": "w12/slides.html#cool-theory-i-guess",
-    "href": "w12/slides.html#cool-theory-i-guess",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "“Cool Theory, I Guess…”",
-    "text": "“Cool Theory, I Guess…”\n\nLess pessimistic result of pessimistic conjecture: Some hope from Fodor-Sperber model (disclaimer: also terrifying, Philip K. Dick Minority Report-style dystopian possibilities)\n“Good luck measuring ideas inside of people’s heads… I’ll be over here measuring real things and doing real data science!” -My innumerable Wile E. Coyote-style opps"
+    "objectID": "w12/slides.html#alternative-swf-specifications",
+    "href": "w12/slides.html#alternative-swf-specifications",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Alternative SWF Specifications",
+    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)"
   },
   {
-    "objectID": "w12/slides.html#cool-theory-i-guess-1",
-    "href": "w12/slides.html#cool-theory-i-guess-1",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "“Cool Theory, I Guess…”",
-    "text": "“Cool Theory, I Guess…”\n(Brace yourself: Jeff’s Trying-My-Best Fodor-Sperber model of socially-constructed “race” on next few slides… I’m sorry in advance 🙈🙈🙈 Did you know you can italicize emojis)"
+    "objectID": "w12/slides.html#the-conveniently-left-out-detail",
+    "href": "w12/slides.html#the-conveniently-left-out-detail",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "The Conveniently-Left-Out Detail",
+    "text": "The Conveniently-Left-Out Detail\n\nRecall, e.g., predictive parity:\n\n\\[\n\\mathbb{E}[Y \\mid D = 1, A = 1] = \\mathbb{E}[Y \\mid D = 1, A = 0]\n\\]\n\nWho decides which \\(Y\\) to pick? (Kasy and Abebe 2021)\nAnswer: Whoever picks the objective function!\nProfit-maximizing firm: \\(\\max\\left\\{ \\mathbb{E}[D (Y - c)]\\right\\} \\Rightarrow\\) (Discrimination if and only if bad at profit-maximizing)\nWelfare-maximizing policymaker: \\(\\max\\{ W(u_1(D), \\ldots, u_n(D)) \\}\\)\nDo these align? Sometimes yes, sometimes no (See: Welfare Theorems and their antecedents, and/or Becker (1957))"
   },
   {
-    "objectID": "w12/slides.html#opening-a-big-can-of-worms",
-    "href": "w12/slides.html#opening-a-big-can-of-worms",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Opening A Big Can Of Worms",
-    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…"
+    "objectID": "w12/slides.html#remaining-challenging-details",
+    "href": "w12/slides.html#remaining-challenging-details",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Remaining (Challenging) Details",
+    "text": "Remaining (Challenging) Details\n\n\n\n\nWho gets included in the SWF?\nPeople in one household? One community? One state? One country?\nPeople in the future?\nAnimals?\n…OUR BEAUTIFUL ENVIRONMENT???\n\n\n\n\n\n\n\n\n\nFigure 1: Our beautiful environment"
   },
   {
-    "objectID": "w12/slides.html#opening-a-big-can-of-worms-1",
-    "href": "w12/slides.html#opening-a-big-can-of-worms-1",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Opening A Big Can Of Worms",
-    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…\nMediated by external things \\(o^e_3\\) to \\(o^e_8\\) (giving rise to patterns of interaction)…"
+    "objectID": "w12/slides.html#back-to-utilitarian-swf",
+    "href": "w12/slides.html#back-to-utilitarian-swf",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Back to Utilitarian SWF",
+    "text": "Back to Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -999999999\\)?"
   },
   {
-    "objectID": "w12/slides.html#opening-a-big-can-of-worms-2",
-    "href": "w12/slides.html#opening-a-big-can-of-worms-2",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Opening A Big Can Of Worms",
-    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…\nMediated by external things \\(o^e_3\\) to \\(o^e_8\\) (giving rise to patterns of interaction)…\nEach person \\(x\\) forming their own internal representations \\(\\widetilde{t^x_0}\\), \\(\\widetilde{t^x_1}\\), \\(\\widetilde{t^x_2}\\) of one another based on patterns of interaction, then\nGeneralizing to an internal representation of a “type of person” \\(\\widetilde{t^x_9}\\)…"
+    "objectID": "w12/slides.html#the-hard-problem-of-utilitarian-swf",
+    "href": "w12/slides.html#the-hard-problem-of-utilitarian-swf",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "The Hard Problem of Utilitarian SWF",
+    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom from [\\(X\\)]? Freedom to [\\(Y\\)]?"
   },
   {
-    "objectID": "w12/slides.html#opening-a-big-can-of-worms-3",
-    "href": "w12/slides.html#opening-a-big-can-of-worms-3",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Opening A Big Can Of Worms",
-    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…\nMediated by external things \\(o^e_3\\) to \\(o^e_8\\) (giving rise to patterns of interaction)…\nEach person \\(x\\) forming their own internal representations \\(\\widetilde{t^x_0}\\), \\(\\widetilde{t^x_1}\\), \\(\\widetilde{t^x_2}\\) of one another based on patterns of interaction, then\nGeneralizing to an internal representation of a “type of person” \\(\\widetilde{t^x_9}\\)…\nWhich they then externalize as \\(t^x_9\\).\n\\(t^0_9\\), \\(t^1_9\\), \\(t^2_9\\) “congeal” into a shared external representation \\(t_9^e\\) via social mechanism (discussion, media, culture, propaganda, parenting, religion, education, …) \\(\\Rightarrow t^e_9\\) “reified” (causal effects on \\(t_0\\), \\(t_1\\), \\(t_2\\))"
+    "objectID": "w12/slides.html#utility-rightarrow-social-welfare-with-externalities",
+    "href": "w12/slides.html#utility-rightarrow-social-welfare-with-externalities",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Utility \\(\\rightarrow\\) Social Welfare with Externalities",
+    "text": "Utility \\(\\rightarrow\\) Social Welfare with Externalities\n\nJeef and Keef are roommates: Jeef loves listening to Tony Danza Tapdance Extravaganza, but Keef is normal and slowly dies inside with each additional song\n\n\n\n\n\n\n\n\n\n\n\nSongs\nJeef\nKeef\nTotal\n\n\n\n\n0\n0\n0\n0\n\n\n1\n13\n-2\n11\n\n\n2\n18\n-6\n12\n\n\n3\n24\n-13\n11\n\n\n4\n28\n-20\n8\n\n\n5\n30\n-42\n-12"
+  },
+  {
+    "objectID": "w12/slides.html#so-whats-the-issue",
+    "href": "w12/slides.html#so-whats-the-issue",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "So What’s the Issue?",
+    "text": "So What’s the Issue?\n\nThese utility values are not observed\nIf we try to elicit them, both Jeef and Keef have strategic incentives to lie (over-exaggerate)\nJeef maximizes own utility by reporting \\(u_j(s) = \\infty\\)\n\n(“I will literally die if I can’t listen to Lil Wayne’s ”Peanuts 2 N Elephant” prod. Lin-Manuel Miranda all day”)\n\nKeef maximizes own utility by reporting \\(u_k(s) = -\\infty\\)\n\n(“I will literally die if I hear this elephant song again”)\n\n(…Quick mechanism design demo: Second price auctions)"
+  },
+  {
+    "objectID": "w12/slides.html#now-with-scarce-resources",
+    "href": "w12/slides.html#now-with-scarce-resources",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Now with Scarce Resources",
+    "text": "Now with Scarce Resources\n\nIn a given week, Jeef and Keef have 14 meals and 7 aux hours to divide amongst them\n\n\\[\n\\begin{align*}\n\\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\\\\n\\text{s.t. }& m_1 + m_2 \\leq 14 \\\\\n\\phantom{\\text{s.t. }} & ~ \\, a_1 + a_2 \\; \\leq 7\n\\end{align*}\n\\]\n\nLet’s assume \\(u_i(m_i, a_i) = m_i + a_i\\) for both\n\\(\\Rightarrow\\) One solution: \\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\\)…\n\\(\\Rightarrow\\) Another: \\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\\)…\nWho decides? Any decision implies \\(\\omega_1, \\omega_2\\) (\\(\\omega_1 + \\omega_2 = 1\\))(Last slide = last reminder…)"
+  },
+  {
+    "objectID": "w12/slides.html#now-with-moral-responsibility-vs.-moral-luck",
+    "href": "w12/slides.html#now-with-moral-responsibility-vs.-moral-luck",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Now With Moral Responsibility vs. Moral Luck!",
+    "text": "Now With Moral Responsibility vs. Moral Luck!\nWhat is the overall social welfare of a policy \\(x\\) (as opposed to another policy \\(y\\), e.g., “do nothing”)?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEffort Class \\(\\rightarrow\\)\n\\(e^{(1)}\\)\n\\(e^{(2)}\\)\n\\(e^{(3)}\\)\n\\(e^{(4)}\\)\n\\(e^{(5)}\\)\n\n\n\n\nPercentile Range \\(\\rightarrow\\)\n\\([P_0, P_{20}]\\)\n\\([P_{20}, P_{40}]\\)\n\\([P_{40}, P_{60}]\\)\n\\([P_{60}, P_{80}]\\)\n\\([P_{80}, P_{100}]\\)\n\n\nCircumstance Class \\(c^{(1)}\\)\n\\(N_{11}\\), \\(W(1,1)(x)\\)\n\\(N_{12}\\), \\(W(1,2)(x)\\)\n\\(N_{13}\\), \\(W(1,3)(x)\\)\n\\(N_{14}\\), \\(W(1,4)(x)\\)\n\\(N_{15}\\), \\(W(1,5)(x)\\)\n\n\nCircumstance Class \\(c^{(2)}\\)\n\\(N_{21}\\), \\(W(2,1)(x)\\)\n\\(N_{22}\\), \\(W(2,2)(x)\\)\n\\(N_{23}\\), \\(W(2,3)(x)\\)\n\\(N_{24}\\), \\(W(2,4)(x)\\)\n\\(N_{25}\\), \\(W(2,5)(x)\\)\n\n\nCircumstance Class \\(c^{(3)}\\)\n\\(N_{31}\\), \\(W(3,1)(x)\\)\n\\(N_{32}\\), \\(W(3,2)(x)\\)\n\\(N_{33}\\), \\(W(3,3)(x)\\)\n\\(N_{34}\\), \\(W(3,4)(x)\\)\n\\(N_{35}\\), \\(W(3,5)(x)\\)\n\n\n\n\n\nFigure 2: Roemerian “Circumstance-Effort Matrix” (Roemer 1998)\n\n\n\n\n\\(N_{ij}\\) = Number of people in Circumstance Class \\(i\\) who exert effort \\(j\\)\n\\(W(i,j)\\) = Social Welfare Functional evaluated w.r.t. people in Circumstance Class \\(i\\) who exert effort \\(j\\)"
   },
   {
     "objectID": "w12/slides.html#references",
     "href": "w12/slides.html#references",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
+    "title": "Week 12: (Machine) Learning What Policies Value",
     "section": "References",
-    "text": "References\n\n\nBertrand, Marianne, and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” American Economic Review 94 (4): 991–1013. https://doi.org/10.1257/0002828042002561.\n\n\nDu Bois, W. E. B. 1903. The Souls of Black Folk: Essays and Sketches. A. C. McClurg. https://books.google.com?id=lTXYAAAAMAAJ."
+    "text": "References\n\n\nAcemoglu, Daron, and Simon Johnson. 2023. Power and Progress: Our Thousand-Year Struggle Over Technology and Prosperity. PublicAffairs. https://www.dropbox.com/scl/fi/d9tsmbsyff3xpz597lzc5/PowerandProgress_OurThousand-YearStruggleover-DaronAcemoglu-SimonJohnson.pdf?rlkey=2cntwyavjtawbpnnyutjhas3y&dl=1.\n\n\nAkerlof, George A. 1970. “The Market for \"Lemons\": Quality Uncertainty and the Market Mechanism.” The Quarterly Journal of Economics 84 (3): 488–500. https://doi.org/10.2307/1879431.\n\n\nBecker, Gary S. 1957. The Economics of Discrimination. University of Chicago Press. https://books.google.com?id=50qHcSNVVEMC.\n\n\nFriedman, Milton. 1976. “Rhodesia.” Newsweek, May 3. https://advance.lexis.com/document/?pdmfid=1519360&crid=a4ca71c1-c361-4ea3-89c7-049738ac7f81&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A3SJ4-F1S0-0008-X3KG-00000-00&pdcontentcomponentid=5774&pdteaserkey=sr0&pditab=allpods&ecomp=hc-yk&earg=sr0&prid=4aa60292-a9ad-4ade-8214-34bdc1346a6d.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (New York, NY, USA), FAccT ’21, March 1, 576–86. https://doi.org/10.1145/3442188.3445919.\n\n\nMalm, Andreas. 2021. How to Blow Up a Pipeline. Verso Books. https://books.google.com?id=qUrSDwAAQBAJ.\n\n\nPareto, Vilfredo. 1896. Cours d’Économie politique. Librairie Droz. https://books.google.com?id=s249oYSJbVMC.\n\n\nRoemer, John E. 1998. Equality of Opportunity. Harvard University Press. https://books.google.com?id=2LfA_KjvOAsC.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin. https://books.google.com?id=bhJgd3hGdxQC.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC.\n\n\nVarian, Hal R. 2006. Intermediate Microeconomics: A Modern Approach. W.W. Norton."
   },
   {
     "objectID": "w12/index.html",
     "href": "w12/index.html",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
+    "title": "Week 12: (Machine) Learning What Policies Value",
     "section": "",
     "text": "Open slides in new window →",
     "crumbs": [
@@ -160,191 +181,221 @@
     ]
   },
   {
-    "objectID": "w12/index.html#how-do-i-pick-a-topic",
-    "href": "w12/index.html#how-do-i-pick-a-topic",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "How Do I Pick A Topic?",
-    "text": "How Do I Pick A Topic?\n\nI know that “whatever is interesting to you” can be way overly-vague!\nSo, one approach is: imagine yourself in a job interview for your dream job, and they bring up DSAN 5450: “Interesting, what did you do in that class?”\n[Insert project elevator pitch] “Wow, that’s such a cool project, we really want someone who can [say] take a data-driven approach to a policy question like that. Ur hired!”\n(Jeff gets a commission: 10% of your salary)",
+    "objectID": "w12/index.html#opening-the-pandoras-box-of-utility",
+    "href": "w12/index.html#opening-the-pandoras-box-of-utility",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Opening the Pandora’s Box of Utility…",
+    "text": "Opening the Pandora’s Box of Utility…\n…We need to dive a bit more to get to:\n\n\n\n\nPolicy Intervention :Property Rights\n\n\n\n\n\n\n\n\n\n\nPolicy Intervention :Yugoslavia-Style Mergers",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#the-rating-system-science-based",
-    "href": "w12/index.html#the-rating-system-science-based",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "The Rating System (Science-Based)",
-    "text": "The Rating System (Science-Based)\n\n\n\n\n\n\nFigure 1: On Cinema at the Cinema S1E09",
+    "objectID": "w12/index.html#utility-function-using-the-ordering-of-numbers-to-encode-the-ordering-of-preferences",
+    "href": "w12/index.html#utility-function-using-the-ordering-of-numbers-to-encode-the-ordering-of-preferences",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Utility Function: Using the Ordering of Numbers to “Encode” the Ordering of Preferences",
+    "text": "Utility Function: Using the Ordering of Numbers to “Encode” the Ordering of Preferences\n\n\n\nFrom Ryan Safner’s History of Economic Thought: Welfare Economics\n\n\n\nBluey obtains greater utility despite paying the same cost by moving from \\(E\\) to \\(O\\)\n\\(E\\) denotes “Initial Endowment”, \\(O\\) denotes “Final Outcome”",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#discussing-fairness",
-    "href": "w12/index.html#discussing-fairness",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Discussing Fairness",
-    "text": "Discussing Fairness\n\n\n\n\n\n\n\nBelow Expectations\n\n\"This algorithm is unfair\"\n\n\nMeets Expectations\n\n\"This algorithm violates the Predictive Parity criterion of fairness when run on this dataset\"\n\n\nExceeds Expectations\n\n\"This algorithm violates the Predictive Parity criterion when run on this dataset, but that’s because [other mitigating factor]. It still satisfies Within-\\(\\varepsilon\\) Predictive Parity, for \\(\\varepsilon = 0.02\\)\"\n\n\nDoing Too Much\n  \nAll of the above, plus I developed a new better algorithm that is more fair",
+    "objectID": "w12/index.html#two-can-play-this-game",
+    "href": "w12/index.html#two-can-play-this-game",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Two Can Play This Game…",
+    "text": "Two Can Play This Game…\n\n\n\n\n\n\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)\nGreenie obtains greater utility within the same budget by moving from \\(E^2\\) to \\(O^2\\)",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#evaluating-policy",
-    "href": "w12/index.html#evaluating-policy",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Evaluating Policy",
-    "text": "Evaluating Policy\n\n\n\n\n\n\n\nBelow Expectations\n\n\"This policy is bad\"\n\n\nMeets Expectations\n\n\"This policy is bad bc it's biased towards [group 1], and doesn't take sufficient account of the welfare of [group 2]\"\n\n\nExceeds Expectations\n\n\"This policy is bad bc it's biased towards [group 1], and doesn't take sufficient account of the welfare of [group 2], which violates the Rawlsian notion of what would be chosen by rational agents behind a 'veil of ignorance'\"\n\n\nDoing Too Much\n  \n\"This policy is bad bc the inferred welfare weights \\(\\omega_i\\) are \\(0.1632\\) off from the optimal welfare weights \\(\\omega_i^*\\)\"",
+    "objectID": "w12/index.html#the-edgeworth-box",
+    "href": "w12/index.html#the-edgeworth-box",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "The Edgeworth Box",
+    "text": "The Edgeworth Box\nRotate Greenie’s box 180° and superimpose onto Bluey’s:",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#frequently-awesome-questions",
-    "href": "w12/index.html#frequently-awesome-questions",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Frequently Awesome Questions",
-    "text": "Frequently Awesome Questions\n\nHow much data-processing/R/Python is required? None!\n\nYou can think of it like: In every other DSAN class, we plop a dataset in front of you and say “do the thing”\nHere you can (and should) first ask, “is [the thing] an effective way to address this issue?”\n\nExample: archive of missing datasets\nSometimes the problem is not “We haven’t trained a hyperboosted 70-layer quantum neural net on this yet!”\nSometimes it’s “nobody with power cares enough about this to make a dataset in the first place [or they purposefully prevent it]”\nOther times it’s “people with power did care enough about this to make a dataset, and it should be destroyed”\nMay require… exploratory “meta-analysis” of datasets: finding data not necessarily for analysis but, to see what is/isn’t out there!",
+    "objectID": "w12/index.html#pareto-frontier-contract-curve",
+    "href": "w12/index.html#pareto-frontier-contract-curve",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Pareto Frontier = Contract(!) Curve",
+    "text": "Pareto Frontier = Contract(!) Curve\n\n\n\n\n\n\nFrom initial endowment \\(E\\), if allowed to trade, “rational” players can reach any allocation along dashed contract curve from \\(G\\) to \\(B\\)… (Why not \\(A\\) or \\(H\\)?)\nSo, what determines which of these points they end up at? (Middle name hint)",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#getting-from-here-to-there",
-    "href": "w12/index.html#getting-from-here-to-there",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Getting From Here to There",
-    "text": "Getting From Here to There\n\n\nMinimum Viable Product (MVP)\n\\(\\leadsto\\) Final Product (but… Hofstadter’s Law)\n\n\n\n\n\n\n\nNote Hofstadter’s Law (Paraphrase)\n\n\n\nThe pieces of your DSAN final project will take longer than you expect, even if you take Hofstadter’s Law into account",
+    "objectID": "w12/index.html#first-fundamental-theorem-of-welfare-economics",
+    "href": "w12/index.html#first-fundamental-theorem-of-welfare-economics",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "First Fundamental Theorem of Welfare Economics",
+    "text": "First Fundamental Theorem of Welfare Economics\n\n[Antecedents (Coase Conditions)] \\(\\Rightarrow\\) «markets produce Pareto-optimal outcomes»\n(Foundation for “Neoclassical” paradigm)\n\n\n\n\n\n\n\nMilton “Rhodesia Rocks!” Friedman, UChicago, 1976 “Nobel Prize” in Economics\n\n\n\n\n\n\n\nRon “Pinochet Rocks!” Coase, UChicago, 1991 “Nobel Prize” in Economics\n\n\n\n\n\n\n\nRonnie “Jelly Beans Rock!” Reagan, University of Tasty Treats, 2004 “Nobel Prize” in Jelly Bean Eating\n\n\n\n\n\n\nRhodesia has a freer press, a more democratic form of government, a greater sympathy with Western ideals than most if not all of the states of Black Africa. Yet we play straight into the hands of our Communist enemies by imposing sanctions on it! (Friedman 1976)",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#but-first-phenomenology",
-    "href": "w12/index.html#but-first-phenomenology",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "But First… Phenomenology",
-    "text": "But First… Phenomenology\n\n“Objective” account: Roquentin sits down on a bus seat; “Subjective” account:\n\n\nI lean my hand on the seat but pull it back hurriedly: it exists. This thing I’m sitting on, leaning my hand on, is called a seat. They made it purposely for people to sit on, they took leather, springs and cloth, they went to work with the idea of making a seat and when they finished, that was what they had made. They carried it here, into this car and the car is now rolling and jolting with its rattling windows, carrying this red thing in its bosom. I murmur: “It’s a seat” […] But the word stays on my lips: it refuses to go and put itself on the thing. It stays what it is, with its red plush, thousands of little red paws in the air, all still, little dead paws…\n\n\n\n\n(Image from “Book Review: Nausea - Jean-Paul Sartre”)",
+    "objectID": "w12/index.html#payoff-from-jeff-pointing-at-things-saying-antecedents-500x",
+    "href": "w12/index.html#payoff-from-jeff-pointing-at-things-saying-antecedents-500x",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x",
+    "text": "Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x\n Consequent only true if antecedents hold! Otherwise, proper answer becomes “It depends! Let’s see if data can help us find out!” (Will minimum wage hurt/help blah blah blah… “It depends! Tell me the details!”) (Will new condos blah blah blah yimby nimby…) (Will re-allocating welfare budget from \\(X\\) to \\(Y\\) blah blah blah… 👀 HW4)\n\n\n\n\n[Economic inequality] is a social law, something in the nature of man. (Pareto 1896)\n\n\n\n\nWe’ve got a [thing] made by men, isn’t that something we should be able to change? (Steinbeck 1939)\n\n\n\n\n Coase Antecedents \\(\\approx\\) equalized power!\n\nEx 1: Perfect Competition \\(\\Rightarrow\\) (\\(\\neg\\) monopoly) \\(\\wedge\\) (\\(\\neg\\) monopsony) \\(\\Rightarrow\\) everyone’s outside option equally good \\(\\Rightarrow\\) no take-it-or-leave-it coercion possible (try to coerce, I’ll say no and go to one of the other \\(\\infty\\) people offering equally good options)\nEx 2: No Informational Asymmetries \\(\\Rightarrow\\) Can’t “trick me” into buying defective product (Akerlof (1970), “Market for Lemons”)",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#w.e.b.-du-bois-and-the-epistemological-one-way-mirror",
-    "href": "w12/index.html#w.e.b.-du-bois-and-the-epistemological-one-way-mirror",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "W.E.B. Du Bois and the Epistemological One-Way Mirror",
-    "text": "W.E.B. Du Bois and the Epistemological One-Way Mirror\n\nBlack people in America are […] born with a veil […] in this American world—a world which yields him no true self-consciousness, but only lets him see himself through the revelation of the other world. It is a peculiar sensation, this double-consciousness, this sense of always looking at oneself through the eyes of others, of measuring one’s soul by the tape of a world that looks on in amused contempt and pity. One ever feels his two-ness—an American, a Negro; two souls, two thoughts, two unreconciled strivings; two warring ideals in one dark body. (Du Bois 1903)\n\n\nThe veil: the world is seen and experienced differently on either side of the color line\nOne-way mirror: Whites project their constructions of Blacks onto the veil and see their projections reflected on it \\(\\Rightarrow\\) the power to define themselves and others\nThe projections of whites onto the veil become realities (reification!) that Black subjects have to contend with in their self-formation.\nTwoness: in process of self-formation, the racialized subject must account for the views of two different social worlds—the Black world, constructed behind the veil, and the white world, which dehumanizes via lack of recognition of their humanity.",
+    "objectID": "w12/index.html#so-what-happens-when-antecedents-dont-hold",
+    "href": "w12/index.html#so-what-happens-when-antecedents-dont-hold",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "So… What Happens When Antecedents Don’t Hold?",
+    "text": "So… What Happens When Antecedents Don’t Hold?\n\n\\(\\neg\\)(Coase Antecedents) \\(\\Rightarrow\\) Unequal Power… Puts us in realm of Descriptive Ethics!\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. [Thucydides (2013); c. 411 BC] (Think of necessary vs. sufficient conditions!)\n\nThink of how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, but DSAN 5300 = what to do when G-M Assumptions don’t hold\nFinal project brainstorming protip! Think through:\n\n Which cases “break” Coase Axioms? (more honored in the breach)\n How might we tackle resulting “imperfections” through policy1? (DSAN metaphor: perhaps as simple as heteroskedasticity-robust SEs 🤔 usually not!)\n\nOur violation (HW3B): Data externalities!\n\n“Auto-fixed” if we have a genie who can grant perfect Pigou Tax…\nMore feasible policies (Acemoglu and Johnson 2023): property rights in data, Yugoslav nationalization \\(\\leadsto\\) [Walmart People’s Republic of Walmart]",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct",
-    "href": "w12/index.html#textsfrace_textsfvariable-vs.-textsfrace_textsfconstruct",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)",
-    "text": "\\(\\textsf{Race}_{\\textsf{Variable}}\\) vs. \\(\\textsf{Race}_{\\textsf{Construct}}\\)\n\nCareful scientific, causal studies measure the effect that changing \\(X\\) (\\(do(X)\\)) has on \\(Y\\), controlling for \\(C\\) (via, at least under the hood, “Do-Calculus”)\nBut, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into “race” and “not race”\nKeep in back of your mind as we look at example of how (measured by thorough, statistically-principled experiment), race can have direct, measurable, causal impacts on important aspects of our everyday lives",
+    "objectID": "w12/index.html#policy-intervention-property-rights",
+    "href": "w12/index.html#policy-intervention-property-rights",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Policy Intervention : Property Rights",
+    "text": "Policy Intervention : Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air; From Varian (2006)",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#racial-discrimination",
-    "href": "w12/index.html#racial-discrimination",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Racial Discrimination",
-    "text": "Racial Discrimination\n\nMarianne Bertrand and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” American Economic Review. (Bertrand and Mullainathan 2004)\n\n\nWe study race in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are randomly assigned African-American- or White-sounding names. White names receive 50 percent more callbacks for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U.S. labor market.\n\n\nSo… Is [Solved-ness of problem] = [Closeness of racial gap to 0%]?\nEven on solely empirical, ahistorical basis (meaning, even without reparations for past harms in antecedents), there are reasons why 0% gap may not be the goal…\nTo see why, we have to dig into race as a verb rather than a noun",
+    "objectID": "w12/index.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
+    "href": "w12/index.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?",
+    "text": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?\n\nThe key: Forces agent \\(i\\) to pay a cost for inflicting disutility on agent \\(j\\)!\n(Here please note: “\\(X\\) sometimes enables \\(Y\\)” does not mean \\(X\\) is a necessary or sufficient condition for \\(Y\\)! Think of walking into a dark room, trying different light switches until one turns on the overhead light)\nDear reader, I know what you’re thinking… But Jeff!! This is all so abstract and theoretical!! We’re sick of your ivory-tower musings, get your head out of the clouds and make it relevant to our day-to-day lives, by relating it back to Yugoslavia’s 1965 economic reforms!!\nDon’t worry, I’ve listened to your concerns, and the next slide is here for you 😌",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#controlling-for-everything-besides-race",
-    "href": "w12/index.html#controlling-for-everything-besides-race",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "“Controlling for” Everything Besides Race",
-    "text": "“Controlling for” Everything Besides Race\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEconomist assertion: everything is “same” except for [name \\(\\leadsto\\) race]\nWeird part of assertion: only true if the “everything” is stripped of context… But, stripped of context, how would we get [name \\(\\leadsto\\) race] in the first place?",
+    "objectID": "w12/index.html#policy-intervention-yugoslav-nationalization",
+    "href": "w12/index.html#policy-intervention-yugoslav-nationalization",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Policy Intervention : “Yugoslav Nationalization”",
+    "text": "Policy Intervention : “Yugoslav Nationalization”\nLast reminder: Externalities \\(\\Leftrightarrow\\) I get reward, others pay costs 🥳\n\nSteel Mill \\(S\\) produces amount of steel \\(s\\) \\(\\leadsto\\) pollution \\(x\\), total cost \\(c_s(s,x)\\)\nFishery \\(F\\) “produces” amount of fish [\\(x \\leadsto\\)] \\(f\\), total cost \\(c_f(f,x)\\)\n\\(S\\) optimizes (price per steel \\(p_s\\))\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,\\small\\boxed{x}}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes (price per fish \\(p_f\\))\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)\nWhat determines which agents get to ignore externalities? (Dead horse/middle name)",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#age-discrimination",
-    "href": "w12/index.html#age-discrimination",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Age Discrimination?",
-    "text": "Age Discrimination?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Based on Lily Hu, What is ‘Race’ in Algorithmic Discrimination on the Basis of Race? - UCLA IPAM (YouTube)\n\n\n\n\nFair \\(\\iff\\) [\\(\\Pr(\\text{Admit Presley}_{12}) = \\Pr(\\text{Admit Presley}_{22})\\)]?\n\n\nRoot of issue: [BA Stats, UCLA, 3.7] has no “free-floating” meaning—it’s attached to a person \\(\\Rightarrow\\) affected by/interpreted w.r.t. their “protected” characteristics",
+    "objectID": "w12/index.html#functionals",
+    "href": "w12/index.html#functionals",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Functionals?",
+    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#general-fairness-definition",
-    "href": "w12/index.html#general-fairness-definition",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "General Fairness Definition?",
-    "text": "General Fairness Definition?\n\n\n\nPessimistic conjecture: like bias-variance tradeoff (no free lunch), may be a “generality-[loophole-avoidance] tradeoff”…\nMay need to “descend” from 👆Platonic ideal fairness to 👇Aristotelian topic-specific fairness 🤔 Hence W12-13!\nWe saw this issue before, in different form! Rawls on “correct” ranking of rights\n[Rawls: No “correct” ordering; Different societies \\(\\leadsto\\) different social value systems, power struggles \\(\\leadsto\\) different orderings]\n\n\n\n\n\nRaphael, The School of Athens (1511) v rare 16th-century use of Georgia!\n\n\n\n\n\n[Me, I guess? 🙈: No “correct” fairness defn for racial discrimination; Different societies \\(\\leadsto\\) different racial/caste/identity formations, power struggles \\(\\leadsto\\) different fairness defns]",
+    "objectID": "w12/index.html#we-live-in-a-dang-society",
+    "href": "w12/index.html#we-live-in-a-dang-society",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "We Live In A Dang Society",
+    "text": "We Live In A Dang Society\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#cool-theory-i-guess",
-    "href": "w12/index.html#cool-theory-i-guess",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "“Cool Theory, I Guess…”",
-    "text": "“Cool Theory, I Guess…”\n\nLess pessimistic result of pessimistic conjecture: Some hope from Fodor-Sperber model (disclaimer: also terrifying, Philip K. Dick Minority Report-style dystopian possibilities)\n“Good luck measuring ideas inside of people’s heads… I’ll be over here measuring real things and doing real data science!” -My innumerable Wile E. Coyote-style opps",
+    "objectID": "w12/index.html#alternative-swf-specifications",
+    "href": "w12/index.html#alternative-swf-specifications",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Alternative SWF Specifications",
+    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#cool-theory-i-guess-1",
-    "href": "w12/index.html#cool-theory-i-guess-1",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "“Cool Theory, I Guess…”",
-    "text": "“Cool Theory, I Guess…”\n(Brace yourself: Jeff’s Trying-My-Best Fodor-Sperber model of socially-constructed “race” on next few slides… I’m sorry in advance 🙈🙈🙈 Did you know you can italicize emojis)",
+    "objectID": "w12/index.html#the-conveniently-left-out-detail",
+    "href": "w12/index.html#the-conveniently-left-out-detail",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "The Conveniently-Left-Out Detail",
+    "text": "The Conveniently-Left-Out Detail\n\nRecall, e.g., predictive parity:\n\n\\[\n\\mathbb{E}[Y \\mid D = 1, A = 1] = \\mathbb{E}[Y \\mid D = 1, A = 0]\n\\]\n\nWho decides which \\(Y\\) to pick? (Kasy and Abebe 2021)\nAnswer: Whoever picks the objective function!\nProfit-maximizing firm: \\(\\max\\left\\{ \\mathbb{E}[D (Y - c)]\\right\\} \\Rightarrow\\) (Discrimination if and only if bad at profit-maximizing)\nWelfare-maximizing policymaker: \\(\\max\\{ W(u_1(D), \\ldots, u_n(D)) \\}\\)\nDo these align? Sometimes yes, sometimes no (See: Welfare Theorems and their antecedents, and/or Becker (1957))",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#opening-a-big-can-of-worms",
-    "href": "w12/index.html#opening-a-big-can-of-worms",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Opening A Big Can Of Worms",
-    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…",
+    "objectID": "w12/index.html#remaining-challenging-details",
+    "href": "w12/index.html#remaining-challenging-details",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Remaining (Challenging) Details",
+    "text": "Remaining (Challenging) Details\n\n\n\n\nWho gets included in the SWF?\nPeople in one household? One community? One state? One country?\nPeople in the future?\nAnimals?\n…OUR BEAUTIFUL ENVIRONMENT???\n\n\n\n\n\n\n\n\n\nFigure 1: Our beautiful environment",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#opening-a-big-can-of-worms-1",
-    "href": "w12/index.html#opening-a-big-can-of-worms-1",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Opening A Big Can Of Worms",
-    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…\nMediated by external things \\(o^e_3\\) to \\(o^e_8\\) (giving rise to patterns of interaction)…",
+    "objectID": "w12/index.html#back-to-utilitarian-swf",
+    "href": "w12/index.html#back-to-utilitarian-swf",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Back to Utilitarian SWF",
+    "text": "Back to Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -999999999\\)?",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#opening-a-big-can-of-worms-2",
-    "href": "w12/index.html#opening-a-big-can-of-worms-2",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Opening A Big Can Of Worms",
-    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…\nMediated by external things \\(o^e_3\\) to \\(o^e_8\\) (giving rise to patterns of interaction)…\nEach person \\(x\\) forming their own internal representations \\(\\widetilde{t^x_0}\\), \\(\\widetilde{t^x_1}\\), \\(\\widetilde{t^x_2}\\) of one another based on patterns of interaction, then\nGeneralizing to an internal representation of a “type of person” \\(\\widetilde{t^x_9}\\)…",
+    "objectID": "w12/index.html#the-hard-problem-of-utilitarian-swf",
+    "href": "w12/index.html#the-hard-problem-of-utilitarian-swf",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "The Hard Problem of Utilitarian SWF",
+    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom from [\\(X\\)]? Freedom to [\\(Y\\)]?",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
   },
   {
-    "objectID": "w12/index.html#opening-a-big-can-of-worms-3",
-    "href": "w12/index.html#opening-a-big-can-of-worms-3",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
-    "section": "Opening A Big Can Of Worms",
-    "text": "Opening A Big Can Of Worms\n\n\n\n\nSocial interactions among \\(t^e_0\\), \\(t^e_1\\), \\(t^e_2\\)…\nMediated by external things \\(o^e_3\\) to \\(o^e_8\\) (giving rise to patterns of interaction)…\nEach person \\(x\\) forming their own internal representations \\(\\widetilde{t^x_0}\\), \\(\\widetilde{t^x_1}\\), \\(\\widetilde{t^x_2}\\) of one another based on patterns of interaction, then\nGeneralizing to an internal representation of a “type of person” \\(\\widetilde{t^x_9}\\)…\nWhich they then externalize as \\(t^x_9\\).\n\\(t^0_9\\), \\(t^1_9\\), \\(t^2_9\\) “congeal” into a shared external representation \\(t_9^e\\) via social mechanism (discussion, media, culture, propaganda, parenting, religion, education, …) \\(\\Rightarrow t^e_9\\) “reified” (causal effects on \\(t_0\\), \\(t_1\\), \\(t_2\\))",
+    "objectID": "w12/index.html#utility-rightarrow-social-welfare-with-externalities",
+    "href": "w12/index.html#utility-rightarrow-social-welfare-with-externalities",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Utility \\(\\rightarrow\\) Social Welfare with Externalities",
+    "text": "Utility \\(\\rightarrow\\) Social Welfare with Externalities\n\nJeef and Keef are roommates: Jeef loves listening to Tony Danza Tapdance Extravaganza, but Keef is normal and slowly dies inside with each additional song\n\nlibrary(tidyverse)\nmusic_df &lt;- tribble(\n  ~Songs, ~Jeef, ~Keef,\n  0, 0, 0,\n  1, 13, -2,\n  2, 18, -6,\n  3, 24, -13,\n  4, 28, -20,\n  5, 30, -42\n)\nmusic_df &lt;- music_df |&gt;\n  mutate(Total = Jeef + Keef)\nmusic_df\nlong_df &lt;- music_df |&gt;\n  pivot_longer(!Songs, names_to=\"Roommate\", values_to=\"Utility\")\nutil_df &lt;- long_df |&gt;\n  filter(Roommate != \"Total\")\nggplot(util_df, aes(x=Songs, y=Utility, color=Roommate)) +\n  geom_line(linewidth=g_linewidth) +\n  geom_point(size=g_pointsize) +\n  labs(\n    title=\"Individual Utility: Jeef vs. Keef\",\n    x=\"Number of Songs Played\",\n    y=\"Utility\"\n  ) +\n  theme_dsan(\"quarter\")\nwelfare_df &lt;- long_df |&gt;\n  filter(Roommate == \"Total\")\nggplot(welfare_df, aes(x=Songs, y=Utility, color=Roommate)) +\n  geom_line(linewidth=g_linewidth) +\n  geom_point(size=g_pointsize) +\n  labs(\n    title=\"Social Welfare: Jeef and Keef\",\n    x=\"Number of Songs Played\",\n    y=\"Social Welfare\"\n  ) +\n  scale_color_manual(values=c(cbPalette[3]), labels=c(\"Total      \")) +\n  theme_dsan(\"quarter\") +\n  remove_legend_title()\n\n\n\n\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.3.0\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\n\n\n\nSongs\nJeef\nKeef\nTotal\n\n\n\n\n0\n0\n0\n0\n\n\n1\n13\n-2\n11\n\n\n2\n18\n-6\n12\n\n\n3\n24\n-13\n11\n\n\n4\n28\n-20\n8\n\n\n5\n30\n-42\n-12",
+    "crumbs": [
+      "Week 12: {{< var w12.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w12/index.html#so-whats-the-issue",
+    "href": "w12/index.html#so-whats-the-issue",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "So What’s the Issue?",
+    "text": "So What’s the Issue?\n\nThese utility values are not observed\nIf we try to elicit them, both Jeef and Keef have strategic incentives to lie (over-exaggerate)\nJeef maximizes own utility by reporting \\(u_j(s) = \\infty\\)\n\n(“I will literally die if I can’t listen to Lil Wayne’s ”Peanuts 2 N Elephant” prod. Lin-Manuel Miranda all day”)\n\nKeef maximizes own utility by reporting \\(u_k(s) = -\\infty\\)\n\n(“I will literally die if I hear this elephant song again”)\n\n(…Quick mechanism design demo: Second price auctions)",
+    "crumbs": [
+      "Week 12: {{< var w12.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w12/index.html#now-with-scarce-resources",
+    "href": "w12/index.html#now-with-scarce-resources",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Now with Scarce Resources",
+    "text": "Now with Scarce Resources\n\nIn a given week, Jeef and Keef have 14 meals and 7 aux hours to divide amongst them\n\n\\[\n\\begin{align*}\n\\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\\\\n\\text{s.t. }& m_1 + m_2 \\leq 14 \\\\\n\\phantom{\\text{s.t. }} & ~ \\, a_1 + a_2 \\; \\leq 7\n\\end{align*}\n\\]\n\nLet’s assume \\(u_i(m_i, a_i) = m_i + a_i\\) for both\n\\(\\Rightarrow\\) One solution: \\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\\)…\n\\(\\Rightarrow\\) Another: \\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\\)…\nWho decides? Any decision implies \\(\\omega_1, \\omega_2\\) (\\(\\omega_1 + \\omega_2 = 1\\))(Last slide = last reminder…)",
+    "crumbs": [
+      "Week 12: {{< var w12.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w12/index.html#now-with-moral-responsibility-vs.-moral-luck",
+    "href": "w12/index.html#now-with-moral-responsibility-vs.-moral-luck",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Now With Moral Responsibility vs. Moral Luck!",
+    "text": "Now With Moral Responsibility vs. Moral Luck!\nWhat is the overall social welfare of a policy \\(x\\) (as opposed to another policy \\(y\\), e.g., “do nothing”)?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEffort Class \\(\\rightarrow\\)\n\\(e^{(1)}\\)\n\\(e^{(2)}\\)\n\\(e^{(3)}\\)\n\\(e^{(4)}\\)\n\\(e^{(5)}\\)\n\n\n\n\nPercentile Range \\(\\rightarrow\\)\n\\([P_0, P_{20}]\\)\n\\([P_{20}, P_{40}]\\)\n\\([P_{40}, P_{60}]\\)\n\\([P_{60}, P_{80}]\\)\n\\([P_{80}, P_{100}]\\)\n\n\nCircumstance Class \\(c^{(1)}\\)\n\\(N_{11}\\), \\(W(1,1)(x)\\)\n\\(N_{12}\\), \\(W(1,2)(x)\\)\n\\(N_{13}\\), \\(W(1,3)(x)\\)\n\\(N_{14}\\), \\(W(1,4)(x)\\)\n\\(N_{15}\\), \\(W(1,5)(x)\\)\n\n\nCircumstance Class \\(c^{(2)}\\)\n\\(N_{21}\\), \\(W(2,1)(x)\\)\n\\(N_{22}\\), \\(W(2,2)(x)\\)\n\\(N_{23}\\), \\(W(2,3)(x)\\)\n\\(N_{24}\\), \\(W(2,4)(x)\\)\n\\(N_{25}\\), \\(W(2,5)(x)\\)\n\n\nCircumstance Class \\(c^{(3)}\\)\n\\(N_{31}\\), \\(W(3,1)(x)\\)\n\\(N_{32}\\), \\(W(3,2)(x)\\)\n\\(N_{33}\\), \\(W(3,3)(x)\\)\n\\(N_{34}\\), \\(W(3,4)(x)\\)\n\\(N_{35}\\), \\(W(3,5)(x)\\)\n\n\n\n\n\nFigure 2: Roemerian “Circumstance-Effort Matrix” (Roemer 1998)\n\n\n\n\n\\(N_{ij}\\) = Number of people in Circumstance Class \\(i\\) who exert effort \\(j\\)\n\\(W(i,j)\\) = Social Welfare Functional evaluated w.r.t. people in Circumstance Class \\(i\\) who exert effort \\(j\\)",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
@@ -352,9 +403,19 @@
   {
     "objectID": "w12/index.html#references",
     "href": "w12/index.html#references",
-    "title": "Week 12: Final Projects, Causality and Racecraft",
+    "title": "Week 12: (Machine) Learning What Policies Value",
     "section": "References",
-    "text": "References\n\n\nBertrand, Marianne, and Sendhil Mullainathan. 2004. “Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination.” American Economic Review 94 (4): 991–1013. https://doi.org/10.1257/0002828042002561.\n\n\nDu Bois, W. E. B. 1903. The Souls of Black Folk: Essays and Sketches. A. C. McClurg. https://books.google.com?id=lTXYAAAAMAAJ.",
+    "text": "References\n\n\nAcemoglu, Daron, and Simon Johnson. 2023. Power and Progress: Our Thousand-Year Struggle Over Technology and Prosperity. PublicAffairs. https://www.dropbox.com/scl/fi/d9tsmbsyff3xpz597lzc5/PowerandProgress_OurThousand-YearStruggleover-DaronAcemoglu-SimonJohnson.pdf?rlkey=2cntwyavjtawbpnnyutjhas3y&dl=1.\n\n\nAkerlof, George A. 1970. “The Market for \"Lemons\": Quality Uncertainty and the Market Mechanism.” The Quarterly Journal of Economics 84 (3): 488–500. https://doi.org/10.2307/1879431.\n\n\nBecker, Gary S. 1957. The Economics of Discrimination. University of Chicago Press. https://books.google.com?id=50qHcSNVVEMC.\n\n\nFriedman, Milton. 1976. “Rhodesia.” Newsweek, May 3. https://advance.lexis.com/document/?pdmfid=1519360&crid=a4ca71c1-c361-4ea3-89c7-049738ac7f81&pddocfullpath=%2Fshared%2Fdocument%2Fnews%2Furn%3AcontentItem%3A3SJ4-F1S0-0008-X3KG-00000-00&pdcontentcomponentid=5774&pdteaserkey=sr0&pditab=allpods&ecomp=hc-yk&earg=sr0&prid=4aa60292-a9ad-4ade-8214-34bdc1346a6d.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (New York, NY, USA), FAccT ’21, March 1, 576–86. https://doi.org/10.1145/3442188.3445919.\n\n\nMalm, Andreas. 2021. How to Blow Up a Pipeline. Verso Books. https://books.google.com?id=qUrSDwAAQBAJ.\n\n\nPareto, Vilfredo. 1896. Cours d’Économie politique. Librairie Droz. https://books.google.com?id=s249oYSJbVMC.\n\n\nRoemer, John E. 1998. Equality of Opportunity. Harvard University Press. https://books.google.com?id=2LfA_KjvOAsC.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin. https://books.google.com?id=bhJgd3hGdxQC.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC.\n\n\nVarian, Hal R. 2006. Intermediate Microeconomics: A Modern Approach. W.W. Norton.",
+    "crumbs": [
+      "Week 12: {{< var w12.date-md >}}"
+    ]
+  },
+  {
+    "objectID": "w12/index.html#footnotes",
+    "href": "w12/index.html#footnotes",
+    "title": "Week 12: (Machine) Learning What Policies Value",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nRecall: [Do Nothing, Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation] \\(\\in \\text{Policy Set}\\); [“Socialize the Data Centres!”, Blowing Up Oil Pipelines (Malm 2021), Bolshevik Revolution] also \\(\\in \\text{Policy Set}\\)↩︎",
     "crumbs": [
       "Week 12: {{< var w12.date-md >}}"
     ]
@@ -404,7 +465,7 @@
     "href": "syllabus.html#schedule",
     "title": "Syllabus",
     "section": "Schedule",
-    "text": "Schedule\nThe following is a rough map of what we will work through together throughout the semester; given that everyone learns at a different pace, my aim is to leave us with a good amount of flexibility in terms of how much time we spend on each topic: if I find that it takes me longer than a week to convey a certain topic in sufficient depth, for example, then I view it as a strength rather than a weakness of the course that we can then rearrange the calendar below by adding an extra week on that particular topic! Similarly, if it seems like I am spending too much time on a topic, to the point that students seem bored or impatient to move onto the next topic, we can move a topic intended for the next week to the current week!\n\n\n\n\n\n\n\n\n\nUnit\nWeek\nDate\nTopic\n\n\n\n\nUnit 1: Ethical Frameworks\n1\nJan 14\nIntroduction to the Course\n\n\n\n2\nJan 21\nMachine Learning, Training Data, and Bias\n\n\nUnit 2: Fairness in AI\n3\nJan 28\nEthical Frameworks\n\n\n\n4\nFeb 4\nRights, Policies, and Fairness in AI\n\n\n\n5\nFeb 11\nContext-Free Fairness\n\n\n\n6\nFeb 18\nContext-Sensitive Fairness\n\n\nMidterm\n7\nFeb 25\nIn-Class Midterm: Data Ethics, Fairness, Privacy\n\n\n\n\nMar 6\nNo Class (Spring Break)\n\n\nUnit 3: Privacy Policies and Data Externalities\n8\nMar 11\nPrivacy Policies, Privacy Regulation, and You\n\n\n\nRecommended Readings\n\n\n\nWe start this unit by framing privacy policies as contracts, as a simplifying assumption. Across judicial systems, however, there are nuances in terms of how different courts might interpret different ‘pieces’ of a privacy policy as legally-binding. These nuances are covered in incredibly-helpful depth in Hartzog and Solove (2026)!\n\n\n\n9\nMar 18\nModeling Data Policies: From Prisoners Dilemmas to Invisible Hand Games\n\n\n\nRecommended Readings\n\n\n\n\nOn the legal background for data externalities: MacCarthy (2015) (Especially pgs. 423-470)\nThe specific economic model of data externalities we’ll look at: Acemoglu et al. (2022) (only Sections 1-3 and Appendix B-3)\n\n\n\nUnit 4: Policy Evaluation and Inverse Fairness\n10\nMar 25\nWelfare Economics and Policy Evaluation\n\n\n\nRecommended Readings\n\n\n\nOn the three basic ‘policy structures’ we’ll use to capture what kinds of policy interventions may be necessary: Bowles (2009), pgs. 23-55\n\n\n\n11\nApr 1\nFear and Loathing on the Pareto Frontier\n\n\n\nRecommended Readings\n\n\n\nOn the role of bargaining power in determining policy choice when the Pareto frontier has been reached: Bowles (2009), pgs. 167-183\n\n\n\n12\nApr 8\nProjects, Causality and Identity Formation\n\n\n\nRecommended Readings\n\n\n\n\nSocial Welfare Functionals (SWFs), the tool we’re adding to our toolkit this week to evaluate policies along the Pareto frontier at an aggregate level (as opposed to the game-theoretic models from last week, which model how interacting individuals might reach or fail to reach certain Pareto-optimal outcomes), are discussed in exactly the detail you’ll need in Adler (2019): Chapter 4 starts to get pretty in-the-weeds, so Chapters 1-3 (which are also shorter) are more than enough!\nThe core paper you’ll look at in HW4, which utilizes ML (Causal Random Forests) to derive SWF weights from the algorithmically-determined choices made by Mexico’s PROGRESA program, is Björkegren, Blumenstock, and Knight (2025) (An earlier version, Björkegren, Blumenstock, and Knight (2022), has more details on the ML-based estimation)\n\n\n\nUnit 5: Discourse Ethics and Identity Formation\n13\nApr 15\nIdentity Formation: Race, Class, Gender, Sexuality, and Disability (Data Feminism)\n\n\n\nRecommended Readings\n\n\n\nAs we move into this unit on ‘applications’ of the frameworks we’ve learned throughout the course to various social issues, a crucial paper which we’ll unpack first and foremost is Hu (2023)\n\n\n\n14\nApr 22\nAI, Freedom, and the ‘Kindly Slavemaster’\n\n\n\nRecommended Readings\n\n\n\n\nThere are many theoretical/historical overviews of liberal vs. republican conceptions of liberty (Pettit 2008; Skinner 1998), and [fewer] applied works exploring how these might relate to AI and data collection (Hamilton 2025).\nFor a book which does both (lays out the tenets of republican liberty while exploring its applications to technology-focused power struggles), my recommendation is Gourevitch (2015)! Given its focus on 19th century labor activism, it may not seem explicitly relevant at first, but read it with the Jacquard loom analogy from Week 1 in mind and the connection should be clear!\nChapters 6 through 10 of Acemoglu and Johnson (2023) also focus on how imbalances of economic power impact technological development in general and AI in particular\n\n\n\n\n\nMay 10 (Friday)\n[Deliverable] Policy Whitepaper",
+    "text": "Schedule\nThe following is a rough map of what we will work through together throughout the semester; given that everyone learns at a different pace, my aim is to leave us with a good amount of flexibility in terms of how much time we spend on each topic: if I find that it takes me longer than a week to convey a certain topic in sufficient depth, for example, then I view it as a strength rather than a weakness of the course that we can then rearrange the calendar below by adding an extra week on that particular topic! Similarly, if it seems like I am spending too much time on a topic, to the point that students seem bored or impatient to move onto the next topic, we can move a topic intended for the next week to the current week!\n\n\n\n\n\n\n\n\n\nUnit\nWeek\nDate\nTopic\n\n\n\n\nUnit 1: Ethical Frameworks\n1\nJan 14\nIntroduction to the Course\n\n\n\n2\nJan 21\nMachine Learning, Training Data, and Bias\n\n\nUnit 2: Fairness in AI\n3\nJan 28\nEthical Frameworks\n\n\n\n4\nFeb 4\nRights, Policies, and Fairness in AI\n\n\n\n5\nFeb 11\nContext-Free Fairness\n\n\n\n6\nFeb 18\nContext-Sensitive Fairness\n\n\nMidterm\n7\nFeb 25\nIn-Class Midterm: Data Ethics, Fairness, Privacy\n\n\n\n\nMar 6\nNo Class (Spring Break)\n\n\nUnit 3: Privacy Policies and Data Externalities\n8\nMar 11\nPrivacy Policies, Privacy Regulation, and You\n\n\n\nRecommended Readings\n\n\n\nWe start this unit by framing privacy policies as contracts, as a simplifying assumption. Across judicial systems, however, there are nuances in terms of how different courts might interpret different ‘pieces’ of a privacy policy as legally-binding. These nuances are covered in incredibly-helpful depth in Hartzog and Solove (2026)!\n\n\n\n9\nMar 18\nModeling Data Policies: From Prisoners Dilemmas to Invisible Hand Games\n\n\n\nRecommended Readings\n\n\n\n\nOn the legal background for data externalities: MacCarthy (2015) (Especially pgs. 423-470)\nThe specific economic model of data externalities we’ll look at: Acemoglu et al. (2022) (only Sections 1-3 and Appendix B-3)\n\n\n\nUnit 4: Policy Evaluation and Inverse Fairness\n10\nMar 25\nWelfare Economics and Policy Evaluation\n\n\n\nRecommended Readings\n\n\n\nOn the three basic ‘policy structures’ we’ll use to capture what kinds of policy interventions may be necessary: Bowles (2009), pgs. 23-55\n\n\n\n11\nApr 1\nFear and Loathing on the Pareto Frontier\n\n\n\nRecommended Readings\n\n\n\nOn the role of bargaining power in determining policy choice when the Pareto frontier has been reached: Bowles (2009), pgs. 167-183\n\n\n\n12\nApr 8\n(Machine) Learning What Policies Value\n\n\n\nRecommended Readings\n\n\n\n\nSocial Welfare Functionals (SWFs), the tool we’re adding to our toolkit this week to evaluate policies along the Pareto frontier at an aggregate level (as opposed to the game-theoretic models from last week, which model how interacting individuals might reach or fail to reach certain Pareto-optimal outcomes), are discussed in exactly the detail you’ll need in Adler (2019): Chapter 4 starts to get pretty in-the-weeds, so Chapters 1-3 (which are also shorter) are more than enough!\nThe core paper you’ll look at in HW4, which utilizes ML (Causal Random Forests) to derive SWF weights from the algorithmically-determined choices made by Mexico’s PROGRESA program, is Björkegren, Blumenstock, and Knight (2025) (An earlier version, Björkegren, Blumenstock, and Knight (2022), has more details on the ML-based estimation)\n\n\n\nUnit 5: Discourse Ethics and Identity Formation\n13\nApr 15\nIdentity Formation: Race, Class, Gender, Sexuality, and Disability (Data Feminism)\n\n\n\nRecommended Readings\n\n\n\nAs we move into this unit on ‘applications’ of the frameworks we’ve learned throughout the course to various social issues, a crucial paper which we’ll unpack first and foremost is Hu (2023)\n\n\n\n14\nApr 22\nAI, Freedom, and the ‘Kindly Slavemaster’\n\n\n\nRecommended Readings\n\n\n\n\nThere are many theoretical/historical overviews of liberal vs. republican conceptions of liberty (Pettit 2008; Skinner 1998), and [fewer] applied works exploring how these might relate to AI and data collection (Hamilton 2025).\nFor a book which does both (lays out the tenets of republican liberty while exploring its applications to technology-focused power struggles), my recommendation is Gourevitch (2015)! Given its focus on 19th century labor activism, it may not seem explicitly relevant at first, but read it with the Jacquard loom analogy from Week 1 in mind and the connection should be clear!\nChapters 6 through 10 of Acemoglu and Johnson (2023) also focus on how imbalances of economic power impact technological development in general and AI in particular\n\n\n\n\n\nMay 10 (Friday)\n[Deliverable] Policy Whitepaper",
     "crumbs": [
       "Syllabus"
     ]
@@ -1593,7 +1654,7 @@
     "href": "index.html",
     "title": "DSAN 5450: Data Ethics and Policy",
     "section": "",
-    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2026 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 14\n\n\n\n\n\n\nWeek 2: Machine Learning, Training Data, and Biases\n\n\nJanuary 21\n\n\n\n\n\n\nWeek 3: Ethical Frameworks, Rights, and Discrimination\n\n\nJanuary 28\n\n\n\n\n\n\nWeek 4: Rights, Policies, and Fairness in AI\n\n\nFebruary 4\n\n\n\n\n\n\nWeek 5: Context-Free Fairness\n\n\nFebruary 11\n\n\n\n\n\n\nWeek 6: Context-Sensitive Fairness\n\n\nFebruary 18\n\n\n\n\n\n\nWeek 7: In-Class Midterm\n\n\nFebruary 25\n\n\n\n\n\n\nWeek 8: Privacy Policies, Incomplete Contracts, and Power\n\n\nMarch 11\n\n\n\n\n\n\nWeek 9: Modeling Data Policies\n\n\nMarch 18\n\n\n\n\n\n\nWeek 10: Welfare Economics and Policy Evaluation\n\n\nMarch 25\n\n\n\n\n\n\nWeek 11: Fear and Loathing on the Pareto Frontier\n\n\nApril 1\n\n\n\n\n\n\nWeek 12: Final Projects, Causality and Racecraft\n\n\nApril 8\n\n\n\n\n\n\nWeek 13: Standpoint Epistemology, Data Feminism\n\n\nApril 15\n\n\n\n\n\n\nWeek 14: In-Class Office Hours\n\n\nApril 22\n\n\n\n\n\n\nNo matching items\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits.",
+    "text": "Welcome to the homepage for DSAN 5450: Data Ethics and Policy at Georgetown University, for the Spring 2026 semester!\nThe course meets on Wednesdays from 3:30pm to 6:00pm in the Walsh Building, Room 498.\nCheck out the syllabus (or any other link in the sidebar) for more info! Or, use the following links to view notes for individual weeks:\n\n\n\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\nWeek 1: Introduction to the Course\n\n\nJanuary 14\n\n\n\n\n\n\nWeek 2: Machine Learning, Training Data, and Biases\n\n\nJanuary 21\n\n\n\n\n\n\nWeek 3: Ethical Frameworks, Rights, and Discrimination\n\n\nJanuary 28\n\n\n\n\n\n\nWeek 4: Rights, Policies, and Fairness in AI\n\n\nFebruary 4\n\n\n\n\n\n\nWeek 5: Context-Free Fairness\n\n\nFebruary 11\n\n\n\n\n\n\nWeek 6: Context-Sensitive Fairness\n\n\nFebruary 18\n\n\n\n\n\n\nWeek 7: In-Class Midterm\n\n\nFebruary 25\n\n\n\n\n\n\nWeek 8: Privacy Policies, Incomplete Contracts, and Power\n\n\nMarch 11\n\n\n\n\n\n\nWeek 9: Modeling Data Policies\n\n\nMarch 18\n\n\n\n\n\n\nWeek 10: Welfare Economics and Policy Evaluation\n\n\nMarch 25\n\n\n\n\n\n\nWeek 11: Fear and Loathing on the Pareto Frontier\n\n\nApril 1\n\n\n\n\n\n\nWeek 12: (Machine) Learning What Policies Value\n\n\nApril 8\n\n\n\n\n\n\nWeek 13: Standpoint Epistemology, Data Feminism\n\n\nApril 15\n\n\n\n\n\n\nWeek 14: In-Class Office Hours\n\n\nApril 22\n\n\n\n\n\n\nNo matching items\n\nCourse Description:\nThis graduate-level course will train students to navigate the landscape of ethical issues which arise at each step of the data science process, with an eye towards developing policy recommendations for governments and organizations seeking expert advice on how to tackle these issues from a regulatory perspective. Students will explore and critically evaluate a range of data-related issues in contemporary society, such as responsible data collection, algorithmic bias, privacy, transparency, accountability, democratic participation in data usage and data-driven decisions, and the ethical implications of emerging technologies like artificial intelligence and machine learning (self-driving cars, ChatGPT, crowd-sourced training data, etc.).\nBeginning with a set of historical case studies—instances in which scientists, engineers, and policymakers have been forced to re-evaluate their ethical intuitions in light of technological developments (nuclear power, use of social media platforms to organize protests and influence political outcomes, deployment of facial recognition software and predictive AI by police and military forces)—the course then introduces a set of general ethical frameworks (consequentialism, deontological ethics, and virtue ethics), challenging students to consider their relative strengths and weaknesses for addressing modern technological-ethical dilemmas faced by businesses, healthcare organizations, governments, and academic institutions. After a final portion of the course linking these ethical frameworks with practical regulatory and policy considerations, students will write and present a policy whitepaper analyzing a data-ethical issue of particular interest to them, integrating ethical perspectives, regulatory principles, and domain knowledge into a recommendation of best practices for the relevant agency, firm, or institution.\nThe course will thus equip students with a robust ethical “toolbox” for conscientiously gathering, interpreting, and extracting meaning from data throughout their careers as data scientists, while respecting privacy, fairness, transparency, democratic accountability, and other social concerns. Prerequisites: None. 3 credits.",
     "crumbs": [
       "<i class='bi bi-house pe-1'></i> Home"
     ]
@@ -1655,151 +1716,11 @@
     "text": "Invisible Hand Game\n\nSingle, unique Nash equilibrium, and it’s Pareto efficient\n\\(\\Rightarrow\\) Acting in self interest \\(\\leadsto\\) best possible outcome\n\n\n\n\nIt is not from the benevolence of the butcher, the brewer, or the baker that we expect our meal, but from their regard to their own interest (Smith 1776)\n\n\n\n\n\n\n\n\\(\\color{#e69f00}B\\)\n\n\n\n\nCorn\n\nTaro\n\n\n\\(\\color{#0072b2}A\\)\nCorn\n\\(\\color{#0072b2}\\cancel{2}\\color{black}{,} \\color{#e69f00}\\boxed{\\mathbf{4}}\\)\n\n\\(\\color{#0072b2}\\boxed{\\mathbf{4}}\\color{black}{,} \\color{#e69f00}\\cancel{3}\\)\n\n\nTaro\n\\(\\color{#0072b2}\\boxed{\\mathbf{5}}\\color{black}{,} \\color{#e69f00}\\boxed{\\mathbf{5}}\\)\n\n\\(\\color{#0072b2}\\cancel{3}\\color{black}{,} \\color{#e69f00}\\cancel{2}\\)\n\n\n\n\n\nWealth of Nations SPOILER: The wealth comes from division of laborand also dumbleydore, and semperus snake, and even poor ron the weasel, who never deserved such a fate\n\n\n[…I am once again reminding you that] An economic transaction is a solved political problem. Economics gained the title “Queen of the Social Sciences” by choosing solved political problems as its domain"
   },
   {
-    "objectID": "w11/slides.html#utility-function-using-the-ordering-of-numbers-to-encode-the-ordering-of-preferences",
-    "href": "w11/slides.html#utility-function-using-the-ordering-of-numbers-to-encode-the-ordering-of-preferences",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Utility Function: Using the Ordering of Numbers to “Encode” the Ordering of Preferences",
-    "text": "Utility Function: Using the Ordering of Numbers to “Encode” the Ordering of Preferences\n\nFrom Ryan Safner’s History of Economic Thought: Welfare Economics\nBluey obtains greater utility despite paying the same cost by moving from \\(E\\) to \\(O\\)\n\\(E\\) denotes “Initial Endowment”, \\(O\\) denotes “Final Outcome”"
-  },
-  {
-    "objectID": "w11/slides.html#two-can-play-this-game",
-    "href": "w11/slides.html#two-can-play-this-game",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Two Can Play This Game…",
-    "text": "Two Can Play This Game…\n\n\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)\nGreenie obtains greater utility within the same budget by moving from \\(E^2\\) to \\(O^2\\)"
-  },
-  {
-    "objectID": "w11/slides.html#the-edgeworth-box",
-    "href": "w11/slides.html#the-edgeworth-box",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "The Edgeworth Box",
-    "text": "The Edgeworth Box\nRotate Greenie’s box 180° and superimpose onto Bluey’s:"
-  },
-  {
-    "objectID": "w11/slides.html#pareto-frontier-contract-curve",
-    "href": "w11/slides.html#pareto-frontier-contract-curve",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Pareto Frontier = Contract(!) Curve",
-    "text": "Pareto Frontier = Contract(!) Curve\n\n\nFrom initial endowment \\(E\\), if allowed to trade, “rational” players can reach any allocation along dashed contract curve from \\(G\\) to \\(B\\)… (Why not \\(A\\) or \\(H\\)?)\nSo, what determines which of these points they end up at? (Middle name hint)"
-  },
-  {
-    "objectID": "w11/slides.html#first-fundamental-theorem-of-welfare-economics",
-    "href": "w11/slides.html#first-fundamental-theorem-of-welfare-economics",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "First Fundamental Theorem of Welfare Economics",
-    "text": "First Fundamental Theorem of Welfare Economics\n\n[Antecedents (Coase Conditions)] \\(\\Rightarrow\\) «markets produce Pareto-optimal outcomes»\n\n\nEven Jeff finds proof (and corollaries) compelling / convincing / empirically-supported\n\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN 5300) built on what to do when GM Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, market-socialist nationalization"
-  },
-  {
-    "objectID": "w11/slides.html#payoff-from-jeff-pointing-at-things-saying-antecedents-500x",
-    "href": "w11/slides.html#payoff-from-jeff-pointing-at-things-saying-antecedents-500x",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x",
-    "text": "Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x\n Consequent only true if antecedents hold! Otherwise, proper answer becomes “It depends! Let’s see if data can help us find out!” (Will minimum wage hurt/help blah blah blah… “It depends! Tell me the details!”) (Will new condos blah blah blah yimby nimby…) (Will re-allocating welfare budget from \\(X\\) to \\(Y\\) blah blah blah… 👀 HW4)\n\n\n\n\n[Economic inequality] is a social law, something in the nature of man. (Pareto 1896)\n\n\n\n\nWe’ve got a [thing] made by men, isn’t that something we should be able to change? (Steinbeck 1939)\n\n\n\n\n Coase Antecedents \\(\\approx\\) equalized power!\n\nEx 1: Perfect Competition \\(\\Rightarrow\\) (\\(\\neg\\) monopoly) \\(\\wedge\\) (\\(\\neg\\) monopsony) \\(\\Rightarrow\\) everyone’s outside option equally good \\(\\Rightarrow\\) no take-it-or-leave-it coercion possible (try to coerce, I’ll say no and go to one of the other \\(\\infty\\) people offering equally good options)\nEx 2: No Informational Asymmetries \\(\\Rightarrow\\) Can’t “trick me” into buying defective product (Akerlof (1970), “Market for Lemons”)"
-  },
-  {
-    "objectID": "w11/slides.html#so-what-happens-when-antecedents-dont-hold",
-    "href": "w11/slides.html#so-what-happens-when-antecedents-dont-hold",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "So… What Happens When Antecedents Don’t Hold?",
-    "text": "So… What Happens When Antecedents Don’t Hold?\n\n\\(\\neg\\)(Coase Antecedents) \\(\\Rightarrow\\) Unequal Power… Puts us in realm of Descriptive Ethics!\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. [Thucydides (2013); c. 411 BC] (Think of necessary vs. sufficient conditions!)\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN5300) built on what to do when G-M Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy1\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, Yugoslav nationalization\n\n\nRecall W01: [Earned Income Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation] \\(\\in \\text{Policy Set}\\); [Black Panther Community Police Patrols, Blowing Up Oil Pipelines (Malm 2021), Bolshevik Revolution] also \\(\\in \\text{Policy Set}\\)"
-  },
-  {
-    "objectID": "w11/slides.html#policy-intervention-property-rights",
-    "href": "w11/slides.html#policy-intervention-property-rights",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Policy Intervention : Property Rights",
-    "text": "Policy Intervention : Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air; From Varian (2006)"
-  },
-  {
-    "objectID": "w11/slides.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
-    "href": "w11/slides.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?",
-    "text": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?\n\nThe key: Forces agent \\(i\\) to pay a cost for inflicting disutility on agent \\(j\\)!\n(Here please note: “\\(X\\) sometimes enables \\(Y\\)” does not mean \\(X\\) is a necessary or sufficient condition for \\(Y\\)! Think of walking into a dark room, trying different light switches until one turns on the overhead light)\nDear reader, I know what you’re thinking… But Jeff!! This is all so abstract and theoretical!! We’re sick of your ivory-tower musings, get your head out of the clouds and make it relevant to our day-to-day lives, by relating it back to Yugoslavia’s 1965 economic reforms!!\nDon’t worry, I’ve listened to your concerns, and the next slide is here for you 😌"
-  },
-  {
-    "objectID": "w11/slides.html#policy-intervention-yugoslav-nationalization",
-    "href": "w11/slides.html#policy-intervention-yugoslav-nationalization",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Policy Intervention : “Yugoslav Nationalization”",
-    "text": "Policy Intervention : “Yugoslav Nationalization”\nLast reminder: Externalities \\(\\Leftrightarrow\\) I get reward, others pay costs 🥳\n\nSteel Mill \\(S\\) produces amount of steel \\(s\\) \\(\\leadsto\\) pollution \\(x\\), total cost \\(c_s(s,x)\\)\nFishery \\(F\\) “produces” amount of fish [\\(x \\leadsto\\)] \\(f\\), total cost \\(c_f(f,x)\\)\n\\(S\\) optimizes (price per steel \\(p_s\\))\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,\\small\\boxed{x}}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes (price per fish \\(p_f\\))\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)\nWhat determines which agents get to ignore externalities? (Dead horse/middle name)"
-  },
-  {
-    "objectID": "w11/slides.html#functionals",
-    "href": "w11/slides.html#functionals",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Functionals?",
-    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)"
-  },
-  {
-    "objectID": "w11/slides.html#we-live-in-a-dang-society",
-    "href": "w11/slides.html#we-live-in-a-dang-society",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "We Live In A Dang Society",
-    "text": "We Live In A Dang Society\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯"
-  },
-  {
-    "objectID": "w11/slides.html#alternative-swf-specifications",
-    "href": "w11/slides.html#alternative-swf-specifications",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Alternative SWF Specifications",
-    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)"
-  },
-  {
-    "objectID": "w11/slides.html#the-conveniently-left-out-detail",
-    "href": "w11/slides.html#the-conveniently-left-out-detail",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "The Conveniently-Left-Out Detail",
-    "text": "The Conveniently-Left-Out Detail\n\nRecall, e.g., predictive parity:\n\n\\[\n\\mathbb{E}[Y \\mid D = 1, A = 1] = \\mathbb{E}[Y \\mid D = 1, A = 0]\n\\]\n\nWho decides which \\(Y\\) to pick? (Kasy and Abebe 2021)\nAnswer: Whoever picks the objective function!\nProfit-maximizing firm: \\(\\max\\left\\{ \\mathbb{E}[D (Y - c)]\\right\\} \\Rightarrow\\) (Discrimination if and only if bad at profit-maximizing)\nWelfare-maximizing policymaker: \\(\\max\\{ W(u_1(D), \\ldots, u_n(D)) \\}\\)\nDo these align? Sometimes yes, sometimes no (See: Welfare Theorems and their antecedents, and/or Becker (1957))"
-  },
-  {
-    "objectID": "w11/slides.html#remaining-challenging-details",
-    "href": "w11/slides.html#remaining-challenging-details",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Remaining (Challenging) Details",
-    "text": "Remaining (Challenging) Details\n\n\n\n\nWho gets included in the SWF?\nPeople in one household? One community? One state? One country?\nPeople in the future?\nAnimals?\n…OUR BEAUTIFUL ENVIRONMENT???\n\n\n\n\n\n\n\n\n\nFigure 3: Our beautiful environment"
-  },
-  {
-    "objectID": "w11/slides.html#back-to-utilitarian-swf",
-    "href": "w11/slides.html#back-to-utilitarian-swf",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Back to Utilitarian SWF",
-    "text": "Back to Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -999999999\\)?"
-  },
-  {
-    "objectID": "w11/slides.html#the-hard-problem-of-utilitarian-swf",
-    "href": "w11/slides.html#the-hard-problem-of-utilitarian-swf",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "The Hard Problem of Utilitarian SWF",
-    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom from [\\(X\\)]? Freedom to [\\(Y\\)]?"
-  },
-  {
-    "objectID": "w11/slides.html#utility-rightarrow-social-welfare-with-externalities",
-    "href": "w11/slides.html#utility-rightarrow-social-welfare-with-externalities",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Utility \\(\\rightarrow\\) Social Welfare with Externalities",
-    "text": "Utility \\(\\rightarrow\\) Social Welfare with Externalities\n\nJeef and Keef are roommates: Jeef loves listening to Tony Danza Tapdance Extravaganza, but Keef is normal and slowly dies inside with each additional song\n\n\n\n\n\n\n\n\n\nSongs\nJeef\nKeef\nTotal\n\n\n\n\n0\n0\n0\n0\n\n\n1\n13\n-2\n11\n\n\n2\n18\n-6\n12\n\n\n3\n24\n-13\n11\n\n\n4\n28\n-20\n8\n\n\n5\n30\n-42\n-12"
-  },
-  {
-    "objectID": "w11/slides.html#so-whats-the-issue",
-    "href": "w11/slides.html#so-whats-the-issue",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "So What’s the Issue?",
-    "text": "So What’s the Issue?\n\nThese utility values are not observed\nIf we try to elicit them, both Jeef and Keef have strategic incentives to lie (over-exaggerate)\nJeef maximizes own utility by reporting \\(u_j(s) = \\infty\\)\n\n(“I will literally die if I can’t listen to Lil Wayne’s ”Peanuts 2 N Elephant” prod. Lin-Manuel Miranda all day”)\n\nKeef maximizes own utility by reporting \\(u_k(s) = -\\infty\\)\n\n(“I will literally die if I hear this elephant song again”)\n\n(…Quick mechanism design demo: Second price auctions)"
-  },
-  {
-    "objectID": "w11/slides.html#now-with-scarce-resources",
-    "href": "w11/slides.html#now-with-scarce-resources",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Now with Scarce Resources",
-    "text": "Now with Scarce Resources\n\nIn a given week, Jeef and Keef have 14 meals and 7 aux hours to divide amongst them\n\n\\[\n\\begin{align*}\n\\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\\\\n\\text{s.t. }& m_1 + m_2 \\leq 14 \\\\\n\\phantom{\\text{s.t. }} & ~ \\, a_1 + a_2 \\; \\leq 7\n\\end{align*}\n\\]\n\nLet’s assume \\(u_i(m_i, a_i) = m_i + a_i\\) for both\n\\(\\Rightarrow\\) One solution: \\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\\)…\n\\(\\Rightarrow\\) Another: \\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\\)…\nWho decides? Any decision implies \\(\\omega_1, \\omega_2\\) (\\(\\omega_1 + \\omega_2 = 1\\))(Last slide = last reminder…)"
-  },
-  {
     "objectID": "w11/slides.html#references",
     "href": "w11/slides.html#references",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "References",
-    "text": "References\n\n\nAkerlof, George A. 1970. “The Market for \"Lemons\": Quality Uncertainty and the Market Mechanism.” The Quarterly Journal of Economics 84 (3): 488–500. https://doi.org/10.2307/1879431.\n\n\nBecker, Gary S. 1957. The Economics of Discrimination. University of Chicago Press. https://books.google.com?id=50qHcSNVVEMC.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (New York, NY, USA), FAccT ’21, March 1, 576–86. https://doi.org/10.1145/3442188.3445919.\n\n\nLerner, Abba P. 1972. “The Economics and Politics of Consumer Sovereignty.” The American Economic Review 62 (1/2): 258–66. https://www.jstor.org/stable/1821551.\n\n\nMalm, Andreas. 2021. How to Blow Up a Pipeline. Verso Books. https://books.google.com?id=qUrSDwAAQBAJ.\n\n\nPareto, Vilfredo. 1896. Cours d’Économie politique. Librairie Droz. https://books.google.com?id=s249oYSJbVMC.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSmith, Adam. 1776. The Wealth of Nations. Random House Publishing Group. https://books.google.com?id=Anwp7vTR1usC.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin. https://books.google.com?id=bhJgd3hGdxQC.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC.\n\n\nVarian, Hal R. 2006. Intermediate Microeconomics: A Modern Approach. W.W. Norton.\n\n\nWeber, Max. 1919. The Vocation Lectures. Hackett Publishing. https://books.google.com?id=V6t5EAAAQBAJ."
+    "text": "References\n\n\nLerner, Abba P. 1972. “The Economics and Politics of Consumer Sovereignty.” The American Economic Review 62 (1/2): 258–66. https://www.jstor.org/stable/1821551.\n\n\nSmith, Adam. 1776. The Wealth of Nations. Random House Publishing Group. https://books.google.com?id=Anwp7vTR1usC.\n\n\nWeber, Max. 1919. The Vocation Lectures. Hackett Publishing. https://books.google.com?id=V6t5EAAAQBAJ."
   },
   {
     "objectID": "w11/index.html",
@@ -1892,221 +1813,11 @@
     ]
   },
   {
-    "objectID": "w11/index.html#utility-function-using-the-ordering-of-numbers-to-encode-the-ordering-of-preferences",
-    "href": "w11/index.html#utility-function-using-the-ordering-of-numbers-to-encode-the-ordering-of-preferences",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Utility Function: Using the Ordering of Numbers to “Encode” the Ordering of Preferences",
-    "text": "Utility Function: Using the Ordering of Numbers to “Encode” the Ordering of Preferences\n\n\n\nFrom Ryan Safner’s History of Economic Thought: Welfare Economics\n\n\n\nBluey obtains greater utility despite paying the same cost by moving from \\(E\\) to \\(O\\)\n\\(E\\) denotes “Initial Endowment”, \\(O\\) denotes “Final Outcome”",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#two-can-play-this-game",
-    "href": "w11/index.html#two-can-play-this-game",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Two Can Play This Game…",
-    "text": "Two Can Play This Game…\n\n\n\n\n\n\nBluey obtains greater utility within the same budget by moving from \\(E^1\\) to \\(O^1\\)\nGreenie obtains greater utility within the same budget by moving from \\(E^2\\) to \\(O^2\\)",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#the-edgeworth-box",
-    "href": "w11/index.html#the-edgeworth-box",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "The Edgeworth Box",
-    "text": "The Edgeworth Box\nRotate Greenie’s box 180° and superimpose onto Bluey’s:",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#pareto-frontier-contract-curve",
-    "href": "w11/index.html#pareto-frontier-contract-curve",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Pareto Frontier = Contract(!) Curve",
-    "text": "Pareto Frontier = Contract(!) Curve\n\n\n\n\n\n\nFrom initial endowment \\(E\\), if allowed to trade, “rational” players can reach any allocation along dashed contract curve from \\(G\\) to \\(B\\)… (Why not \\(A\\) or \\(H\\)?)\nSo, what determines which of these points they end up at? (Middle name hint)",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#first-fundamental-theorem-of-welfare-economics",
-    "href": "w11/index.html#first-fundamental-theorem-of-welfare-economics",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "First Fundamental Theorem of Welfare Economics",
-    "text": "First Fundamental Theorem of Welfare Economics\n\n[Antecedents (Coase Conditions)] \\(\\Rightarrow\\) «markets produce Pareto-optimal outcomes»\n\n\nEven Jeff finds proof (and corollaries) compelling / convincing / empirically-supported\n\n(It’s a full-on proof, in the mathematical sense, so doesn’t rly matter what I think; I just mean, imo, important and helpful to think through for class on policy!)\nEx: Conditional on antecedents [(Coase) minus (perfect competition) plus (thing must be allocated via markets)], \\(\\uparrow\\) Competition \\(\\leadsto\\) More efficient allocations\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN 5300) built on what to do when GM Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, market-socialist nationalization",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#payoff-from-jeff-pointing-at-things-saying-antecedents-500x",
-    "href": "w11/index.html#payoff-from-jeff-pointing-at-things-saying-antecedents-500x",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x",
-    "text": "Payoff from Jeff Pointing at Things Saying “Antecedents!” 500x\n Consequent only true if antecedents hold! Otherwise, proper answer becomes “It depends! Let’s see if data can help us find out!” (Will minimum wage hurt/help blah blah blah… “It depends! Tell me the details!”) (Will new condos blah blah blah yimby nimby…) (Will re-allocating welfare budget from \\(X\\) to \\(Y\\) blah blah blah… 👀 HW4)\n\n\n\n\n[Economic inequality] is a social law, something in the nature of man. (Pareto 1896)\n\n\n\n\nWe’ve got a [thing] made by men, isn’t that something we should be able to change? (Steinbeck 1939)\n\n\n\n\n Coase Antecedents \\(\\approx\\) equalized power!\n\nEx 1: Perfect Competition \\(\\Rightarrow\\) (\\(\\neg\\) monopoly) \\(\\wedge\\) (\\(\\neg\\) monopsony) \\(\\Rightarrow\\) everyone’s outside option equally good \\(\\Rightarrow\\) no take-it-or-leave-it coercion possible (try to coerce, I’ll say no and go to one of the other \\(\\infty\\) people offering equally good options)\nEx 2: No Informational Asymmetries \\(\\Rightarrow\\) Can’t “trick me” into buying defective product (Akerlof (1970), “Market for Lemons”)",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#so-what-happens-when-antecedents-dont-hold",
-    "href": "w11/index.html#so-what-happens-when-antecedents-dont-hold",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "So… What Happens When Antecedents Don’t Hold?",
-    "text": "So… What Happens When Antecedents Don’t Hold?\n\n\\(\\neg\\)(Coase Antecedents) \\(\\Rightarrow\\) Unequal Power… Puts us in realm of Descriptive Ethics!\n\n[What is] right, as the world goes, is only in question between equals in power; otherwise, the strong do as they please and the weak suffer what they must. [Thucydides (2013); c. 411 BC] (Think of necessary vs. sufficient conditions!)\n\nLike how Gauss-Markov Assumptions \\(\\Rightarrow\\) OLS is BLUE, yet our whole field (at least, a whole class, DSAN5300) built on what to do when G-M Assumptions don’t hold\nFor policy development, helpful to think through\n\n which cases “break” FFT (more honored in the breach)\n How each violation might be “fixed” through policy2\n\nOur violation: No externalities assumption\n\nPossible policy “fixes”: property rights, Yugoslav nationalization",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#policy-intervention-property-rights",
-    "href": "w11/index.html#policy-intervention-property-rights",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Policy Intervention : Property Rights",
-    "text": "Policy Intervention : Property Rights\n\nRawlsian Rights: Vetos on societal decisions; Constitution can make some inalienable (can’t sell self into slavery), some alienable\nProperty rights: alienable. You can gift or sell the rights if you want (veto is over society just, like, taking your property if someone else would be happier with it)\n\n\n\nCase : Society decides Right to Clean Air \\(\\prec\\) Right to Smoke \\(\\Rightarrow\\) Start at \\(E\\)\n\n\\(A\\) can pay \\(B\\) to alienate right (Pay $50/month, can smoke 5 ciggies) \\(\\leadsto\\) \\(X\\)\nMovement along light blue curve: giving up \\(x\\) money for \\(y\\) smoke, equally happy. \\(u_A(p)\\) identical for \\(p\\) on curve\nMovement to higher light blue curve () \\(\\Rightarrow\\) greater utility \\(u_A' &gt; u_A\\)\n\nCase  Society decides Smoke \\(\\prec\\) Clean Air \\(\\Rightarrow\\) Repeat for \\(E' \\leadsto X'\\)\n\n\n\n\n“Edgeworth Box” for Right to Smoke vs. Right to Clean Air: \\(A\\), \\(B\\) are roommates; \\(A\\) loves smokin, \\(B\\) loves clean air; From Varian (2006)",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
-    "href": "w11/index.html#why-exactly-does-commodifying-rights-sometimes-enable-cancelling-out-externalities",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?",
-    "text": "Why Exactly Does [Commodifying Rights] Sometimes Enable [“Cancelling Out” Externalities]?\n\nThe key: Forces agent \\(i\\) to pay a cost for inflicting disutility on agent \\(j\\)!\n(Here please note: “\\(X\\) sometimes enables \\(Y\\)” does not mean \\(X\\) is a necessary or sufficient condition for \\(Y\\)! Think of walking into a dark room, trying different light switches until one turns on the overhead light)\nDear reader, I know what you’re thinking… But Jeff!! This is all so abstract and theoretical!! We’re sick of your ivory-tower musings, get your head out of the clouds and make it relevant to our day-to-day lives, by relating it back to Yugoslavia’s 1965 economic reforms!!\nDon’t worry, I’ve listened to your concerns, and the next slide is here for you 😌",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#policy-intervention-yugoslav-nationalization",
-    "href": "w11/index.html#policy-intervention-yugoslav-nationalization",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Policy Intervention : “Yugoslav Nationalization”",
-    "text": "Policy Intervention : “Yugoslav Nationalization”\nLast reminder: Externalities \\(\\Leftrightarrow\\) I get reward, others pay costs 🥳\n\nSteel Mill \\(S\\) produces amount of steel \\(s\\) \\(\\leadsto\\) pollution \\(x\\), total cost \\(c_s(s,x)\\)\nFishery \\(F\\) “produces” amount of fish [\\(x \\leadsto\\)] \\(f\\), total cost \\(c_f(f,x)\\)\n\\(S\\) optimizes (price per steel \\(p_s\\))\n\n\\[\ns^*_{\\text{Priv}}, x^*_{\\text{Priv}} = \\argmax_{s,\\small\\boxed{x}}\\left[ p_s s - c_s(s, x) \\right]\n\\]\n\nWhile \\(F\\) optimizes (price per fish \\(p_f\\))\n\n\\[\nf^*_{\\text{Priv}} = \\argmax_{f}\\left[ p_f f - c_f(f, x) \\right]\n\\]\n\nIf [Yugoslavia-style] nationalized, new optimization of joint steel-fish venture is\n\n\\[\ns^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}} = \\argmax_{s, f, x}\\left[ p_s s + p_f f - c_s(s, x) - c_f(f, x) \\right]\n\\]\n\nCan prove/“prove” that \\(o(s^*_{\\text{Yugo}}, f^*_{\\text{Yugo}}, x^*_{\\text{Yugo}})\\) Pareto-dominates \\(o(s^*_{\\text{Priv}}, x^*_{\\text{Priv}}, f^*_{\\text{Priv}})\\)\nWhat determines which agents get to ignore externalities? (Dead horse/middle name)",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#functionals",
-    "href": "w11/index.html#functionals",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Functionals?",
-    "text": "Functionals?\n\nYou probably know what a function \\(f(x)\\) is; a functional is a function of functions: \\(\\mathscr{G}(f)\\)\nIt’s from math, which is scary, but it’s just notation to remind us that we’re analyzing functions of functions\nIn our case, they “work the same way” as regular functions, e.g., \\(\\mathscr{G}(f,g) = f^2 + g^2\\), so \\(f(x) = x, g(x) = 2x \\Rightarrow \\mathscr{G}(f,g)(x) = x^2 + 4x^2 = 5x^2\\)",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#we-live-in-a-dang-society",
-    "href": "w11/index.html#we-live-in-a-dang-society",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "We Live In A Dang Society",
-    "text": "We Live In A Dang Society\n\nUtilitarianism, Kant, Rawls can all be modeled as Social Welfare Functionals\n\n\\[\nW(\\mathbf{u}) = W(u_1, \\ldots, u_n) \\Rightarrow W(\\mathbf{u})(x) = W(u_1(x), \\ldots, u_n(x))\n\\]\n\n\\(u_i(x)\\): Given bundle of resources \\(x\\), how much utility does \\(i\\) experience? \\(u_i: \\mathcal{X} \\rightarrow \\mathbb{R}\\)\n\\(W(\\mathbf{u})\\): Aggregates \\(u_i(x)\\) over all \\(i\\), to produce measure of overall welfare of society. For \\(N\\) people, \\(W: (\\mathcal{X} \\rightarrow \\mathbb{R})^N \\rightarrow \\mathbb{R}\\).\nStandard assumption: \\(W\\) additive \\(\\Rightarrow W(\\mathbf{u}) = \\sum_{i=1}^n \\omega_iu_i(x)\\)\n\n\\(\\omega_i \\equiv \\frac{\\partial W}{\\partial u_i}\\) is \\(i\\)’s welfare weight (❗️)\n\nWelfare-Economic definition of Utilitarianism: Literally just \\(\\omega_i = 1 \\; \\forall i\\)\n(HW4) Decomposition to evaluate bias in policy impacts: from observed allocation \\(x_i\\) and marginal utility \\(u'_i(x)\\), can…\n\nInfer \\(\\widehat{\\omega}_i\\) (how much policy does value person \\(i\\)), then\nCompare with \\(\\omega_i^*\\) (how much policy should value person \\(i\\)… conjoint survey) 🤯",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#alternative-swf-specifications",
-    "href": "w11/index.html#alternative-swf-specifications",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Alternative SWF Specifications",
-    "text": "Alternative SWF Specifications\n\nSocial values\n\n\\[\nW(\\underbrace{v_1, \\ldots, v_n}_{\\text{Values}})(x) \\overset{\\text{e.g.}}{=} \\omega_1\\underbrace{v_1(x)}_{\\text{Privacy}} + \\omega_2\\underbrace{v_2(x)}_{\\mathclap{\\text{Public Health}}}\n\\]\n\nStakeholder Analysis\n\n\\[\nW(\\underbrace{s_1, \\ldots, s_n}_{\\text{Stakeholders}})(x) = \\omega_1\\underbrace{u_{s_1}(x)}_{\\text{Teachers}} + \\omega_2\\underbrace{u_{s_2}(x)}_{\\text{Parents}} + \\omega_3\\underbrace{u_{s_3}(x)}_{\\text{Students}} + \\omega_4\\underbrace{u_{s_4}(x)}_{\\mathclap{\\text{Community}}}\n\\]\n\n(Adapted from this great intro video!)",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#the-conveniently-left-out-detail",
-    "href": "w11/index.html#the-conveniently-left-out-detail",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "The Conveniently-Left-Out Detail",
-    "text": "The Conveniently-Left-Out Detail\n\nRecall, e.g., predictive parity:\n\n\\[\n\\mathbb{E}[Y \\mid D = 1, A = 1] = \\mathbb{E}[Y \\mid D = 1, A = 0]\n\\]\n\nWho decides which \\(Y\\) to pick? (Kasy and Abebe 2021)\nAnswer: Whoever picks the objective function!\nProfit-maximizing firm: \\(\\max\\left\\{ \\mathbb{E}[D (Y - c)]\\right\\} \\Rightarrow\\) (Discrimination if and only if bad at profit-maximizing)\nWelfare-maximizing policymaker: \\(\\max\\{ W(u_1(D), \\ldots, u_n(D)) \\}\\)\nDo these align? Sometimes yes, sometimes no (See: Welfare Theorems and their antecedents, and/or Becker (1957))",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#remaining-challenging-details",
-    "href": "w11/index.html#remaining-challenging-details",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Remaining (Challenging) Details",
-    "text": "Remaining (Challenging) Details\n\n\n\n\nWho gets included in the SWF?\nPeople in one household? One community? One state? One country?\nPeople in the future?\nAnimals?\n…OUR BEAUTIFUL ENVIRONMENT???\n\n\n\n\n\n\n\n\n\nFigure 3: Our beautiful environment",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#back-to-utilitarian-swf",
-    "href": "w11/index.html#back-to-utilitarian-swf",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Back to Utilitarian SWF",
-    "text": "Back to Utilitarian SWF\n\nEasy mode (possibly/probably your intuition?): Everyone’s welfare weight should be equal, \\(\\omega_i = \\frac{1}{n}\\)\n\n\\[\nW(u_1, \\ldots, u_n)(x) = \\frac{1}{n}u_1(x) + \\cdots + \\frac{1}{n}u_n(x)\n\\]\n\n\\(\\implies\\) Utilitarian Social Welfare Functional!\nThe Silly Problem of Utilitarian SWF: What if everyone is made happy by \\(u_{\\text{Jeef}} = -999999999\\)?",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#the-hard-problem-of-utilitarian-swf",
-    "href": "w11/index.html#the-hard-problem-of-utilitarian-swf",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "The Hard Problem of Utilitarian SWF",
-    "text": "The Hard Problem of Utilitarian SWF\n\nWhile the rhetoric of “all men [sic] are born equal” is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that equal consideration for all may demand very unequal treatment in favour of the disadvantaged (Sen 1992)\n\n\n\\(\\implies\\) “Equality of What?”\nWhat is the “thing” that egalitarianism obligates us to equalize (the equilisandum/equilisanda): Utility? Opportunity? Resources? Money? Freedom from [\\(X\\)]? Freedom to [\\(Y\\)]?",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#utility-rightarrow-social-welfare-with-externalities",
-    "href": "w11/index.html#utility-rightarrow-social-welfare-with-externalities",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Utility \\(\\rightarrow\\) Social Welfare with Externalities",
-    "text": "Utility \\(\\rightarrow\\) Social Welfare with Externalities\n\nJeef and Keef are roommates: Jeef loves listening to Tony Danza Tapdance Extravaganza, but Keef is normal and slowly dies inside with each additional song\n\n\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.3.0\n✔ purrr     1.0.4     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nmusic_df &lt;- tribble(\n  ~Songs, ~Jeef, ~Keef,\n  0, 0, 0,\n  1, 13, -2,\n  2, 18, -6,\n  3, 24, -13,\n  4, 28, -20,\n  5, 30, -42\n)\nmusic_df &lt;- music_df |&gt;\n  mutate(Total = Jeef + Keef)\nmusic_df\n\n\n\n\n\nSongs\nJeef\nKeef\nTotal\n\n\n\n\n0\n0\n0\n0\n\n\n1\n13\n-2\n11\n\n\n2\n18\n-6\n12\n\n\n3\n24\n-13\n11\n\n\n4\n28\n-20\n8\n\n\n5\n30\n-42\n-12\n\n\n\n\n\n\n\n\nlong_df &lt;- music_df |&gt;\n  pivot_longer(!Songs, names_to=\"Roommate\", values_to=\"Utility\")\nutil_df &lt;- long_df |&gt;\n  filter(Roommate != \"Total\")\nggplot(util_df, aes(x=Songs, y=Utility, color=Roommate)) +\n  geom_line(linewidth=g_linewidth) +\n  geom_point(size=g_pointsize) +\n  labs(\n    title=\"Individual Utility: Jeef vs. Keef\",\n    x=\"Number of Songs Played\",\n    y=\"Utility\"\n  ) +\n  theme_dsan(\"quarter\")\n\n\n\n\n\n\n\n\n\nwelfare_df &lt;- long_df |&gt;\n  filter(Roommate == \"Total\")\nggplot(welfare_df, aes(x=Songs, y=Utility, color=Roommate)) +\n  geom_line(linewidth=g_linewidth) +\n  geom_point(size=g_pointsize) +\n  labs(\n    title=\"Social Welfare: Jeef and Keef\",\n    x=\"Number of Songs Played\",\n    y=\"Social Welfare\"\n  ) +\n  scale_color_manual(values=c(cbPalette[3]), labels=c(\"Total      \")) +\n  theme_dsan(\"quarter\") +\n  remove_legend_title()",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#so-whats-the-issue",
-    "href": "w11/index.html#so-whats-the-issue",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "So What’s the Issue?",
-    "text": "So What’s the Issue?\n\nThese utility values are not observed\nIf we try to elicit them, both Jeef and Keef have strategic incentives to lie (over-exaggerate)\nJeef maximizes own utility by reporting \\(u_j(s) = \\infty\\)\n\n(“I will literally die if I can’t listen to Lil Wayne’s ”Peanuts 2 N Elephant” prod. Lin-Manuel Miranda all day”)\n\nKeef maximizes own utility by reporting \\(u_k(s) = -\\infty\\)\n\n(“I will literally die if I hear this elephant song again”)\n\n(…Quick mechanism design demo: Second price auctions)",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#now-with-scarce-resources",
-    "href": "w11/index.html#now-with-scarce-resources",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Now with Scarce Resources",
-    "text": "Now with Scarce Resources\n\nIn a given week, Jeef and Keef have 14 meals and 7 aux hours to divide amongst them\n\n\\[\n\\begin{align*}\n\\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\\\\n\\text{s.t. }& m_1 + m_2 \\leq 14 \\\\\n\\phantom{\\text{s.t. }} & ~ \\, a_1 + a_2 \\; \\leq 7\n\\end{align*}\n\\]\n\nLet’s assume \\(u_i(m_i, a_i) = m_i + a_i\\) for both\n\\(\\Rightarrow\\) One solution: \\(m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0\\)…\n\\(\\Rightarrow\\) Another: \\(m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7\\)…\nWho decides? Any decision implies \\(\\omega_1, \\omega_2\\) (\\(\\omega_1 + \\omega_2 = 1\\))(Last slide = last reminder…)",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
     "objectID": "w11/index.html#references",
     "href": "w11/index.html#references",
     "title": "Week 11: Fear and Loathing on the Pareto Frontier",
     "section": "References",
-    "text": "References\n\n\nAkerlof, George A. 1970. “The Market for \"Lemons\": Quality Uncertainty and the Market Mechanism.” The Quarterly Journal of Economics 84 (3): 488–500. https://doi.org/10.2307/1879431.\n\n\nBecker, Gary S. 1957. The Economics of Discrimination. University of Chicago Press. https://books.google.com?id=50qHcSNVVEMC.\n\n\nKasy, Maximilian, and Rediet Abebe. 2021. “Fairness, Equality, and Power in Algorithmic Decision-Making.” Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (New York, NY, USA), FAccT ’21, March 1, 576–86. https://doi.org/10.1145/3442188.3445919.\n\n\nLerner, Abba P. 1972. “The Economics and Politics of Consumer Sovereignty.” The American Economic Review 62 (1/2): 258–66. https://www.jstor.org/stable/1821551.\n\n\nMalm, Andreas. 2021. How to Blow Up a Pipeline. Verso Books. https://books.google.com?id=qUrSDwAAQBAJ.\n\n\nPareto, Vilfredo. 1896. Cours d’Économie politique. Librairie Droz. https://books.google.com?id=s249oYSJbVMC.\n\n\nSen, Amartya. 1992. Inequality Reexamined. Clarendon Press.\n\n\nSmith, Adam. 1776. The Wealth of Nations. Random House Publishing Group. https://books.google.com?id=Anwp7vTR1usC.\n\n\nSteinbeck, John. 1939. The Grapes of Wrath. Penguin. https://books.google.com?id=bhJgd3hGdxQC.\n\n\nThucydides. 2013. The War of the Peloponnesians and the Athenians. Cambridge University Press. https://books.google.com?id=dSYnCTf3rSAC.\n\n\nVarian, Hal R. 2006. Intermediate Microeconomics: A Modern Approach. W.W. Norton.\n\n\nWeber, Max. 1919. The Vocation Lectures. Hackett Publishing. https://books.google.com?id=V6t5EAAAQBAJ.",
-    "crumbs": [
-      "Week 11: {{< var w11.date-md >}}"
-    ]
-  },
-  {
-    "objectID": "w11/index.html#footnotes",
-    "href": "w11/index.html#footnotes",
-    "title": "Week 11: Fear and Loathing on the Pareto Frontier",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\n(dw, they use the profits for innovation and thought leadership and def not to buy yachts so they can party with yacht friends on privately-owned Caribbean islands)↩︎\nRecall W01: [Earned Income Tax Credits, Emissions Markets, Climate Engineering, Antitrust Legistlation] \\(\\in \\text{Policy Set}\\); [Black Panther Community Police Patrols, Blowing Up Oil Pipelines (Malm 2021), Bolshevik Revolution] also \\(\\in \\text{Policy Set}\\)↩︎",
+    "text": "References\n\n\nLerner, Abba P. 1972. “The Economics and Politics of Consumer Sovereignty.” The American Economic Review 62 (1/2): 258–66. https://www.jstor.org/stable/1821551.\n\n\nSmith, Adam. 1776. The Wealth of Nations. Random House Publishing Group. https://books.google.com?id=Anwp7vTR1usC.\n\n\nWeber, Max. 1919. The Vocation Lectures. Hackett Publishing. https://books.google.com?id=V6t5EAAAQBAJ.",
     "crumbs": [
       "Week 11: {{< var w11.date-md >}}"
     ]
