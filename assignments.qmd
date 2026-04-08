@@ -85,6 +85,7 @@ gen_points_table <- function(hw_url) {
   # print(colnames(hw_df))
   hw_df <- hw_df |> select(part, qid, points, part_total)
   hw_df <- hw_df |> drop_na(points)
+  hw_df$part <- as.character(hw_df$part)
   hw_df$points <- as.character(hw_df$points)
   hw_df$part_total <- as.character(hw_df$part_total)
   hw_df <- hw_df |> mutate(
@@ -123,6 +124,34 @@ gen_points_table(hw1_url)
 #| echo: false
 hw2_url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vSXfrHQ-97mYEytKsoQkU_yg2Z9Byj2Jlu_nNMHoUDfVLkpudJw4FD1TprWuT9A_walWOSHuDsY6uwV/pub?output=csv"
 gen_points_table(hw2_url)
+```
+
+</div>
+
+## HW3A
+
+<div style="height: 400px !important; max-height: 400px !important; overflow-y: scroll !important;">
+
+```{r}
+#| label: hw3a-points-table
+#| warning: false
+#| echo: false
+hw3a_url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6bHq2sBtMyL5TiOIl2zVqPdAL9B4tdNwlPdkm1QGnVuOFXb7GfYx-fCVTWxCepWtnQAQIvqAJvwSM/pub?output=csv"
+gen_points_table(hw3a_url)
+```
+
+</div>
+
+## HW3B
+
+<div style="height: 400px !important; max-height: 400px !important; overflow-y: scroll !important;">
+
+```{r}
+#| label: hw3b-points-table
+#| warning: false
+#| echo: false
+hw3b_url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vRDbhYjSy8X7LSJhm9xRtRTT2EN2Sn0D9qhSKqU3W2PwfHnCXod8jqK1CVxtorG4N0hN3EjYObnFPfQ/pub?output=csv"
+gen_points_table(hw3b_url)
 ```
 
 </div>
