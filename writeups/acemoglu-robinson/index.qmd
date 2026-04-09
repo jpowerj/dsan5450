@@ -4,6 +4,7 @@ author: "Jeff Jacobs"
 sidebar: mainnav
 date: 2026-04-08
 bibliography: "../../_DSAN5450.bib"
+csl: "../../chicago-17-no-url.csl"
 relevance: "Final Project"
 categories:
   - "Extra Writeups"
@@ -64,7 +65,7 @@ Of course, success to date should not be exaggerated. There are still many areas
 
 Nevertheless, from the point of view of the challenge of digital technologies, there is much we can learn from how technology is being redirected in the energy sector. The same combination—altering the narrative, building countervailing powers, and developing and implementing specific policies to deal with the most important issues—can work in redirecting digital technology.
 
-## Remaking Digital Technologies
+## Remaking Digital Technologies (pg. 392)
 
 Our current problems are rooted in the enormous economic,  political, and social power of corporations, especially in the tech industry. The concentrated **power** of business undercuts shared prosperity because it limits the **sharing of gains** from technological change. But its most pernicious impact is via the direction of technology, which is moving excessively toward **automation**, **surveillance**, **data collection**, and **advertising**. To regain shared prosperity, we must redirect technology, and this means activating a version of the same approach that worked more than a century ago for the Progressives.
 
