@@ -21,6 +21,7 @@
   {
     "listing": "/writeups/index.html",
     "items": [
+      "/writeups/acemoglu-robinson/index.html",
       "/writeups/necessary-sufficient/index.html",
       "/writeups/intuitions-vs-antecedents/index.html",
       "/writeups/berkson/index.html",
