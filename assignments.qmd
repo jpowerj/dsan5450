@@ -128,6 +128,20 @@ gen_points_table(hw2_url)
 
 </div>
 
+## Midterm
+
+<div style="height: 400px !important; max-height: 400px !important; overflow-y: scroll !important;">
+
+```{r}
+#| label: midterm-points-table
+#| warning: false
+#| echo: false
+midterm_url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vRdYl1AeFsA85mZhriWi5x5tKJ6Rp4KWO6a-Rk8qZmPEXdVkyE9Ray-KQIyg0nsaGoHMxC2SvBxSA9W/pub?output=csv"
+gen_points_table(midterm_url)
+```
+
+</div>
+
 ## HW3A
 
 <div style="height: 400px !important; max-height: 400px !important; overflow-y: scroll !important;">

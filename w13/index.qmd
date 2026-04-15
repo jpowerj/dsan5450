@@ -1,5 +1,5 @@
 ---
-title: "Week 13: Standpoint Epistemology, Data Feminism"
+title: "Week 13: SWFLs, Identity Formation, and Discourse Ethics"
 subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2026, Georgetown University</span>"
 author: "Jeff Jacobs"
 institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
@@ -44,10 +44,459 @@ format:
 
 :::
 
-# Picking Up From Last Week...
+# Last Week: Social Welfare Functionals {.text-65 .title-11 .crunch-p .crunch-img .crunch-quarto-figure .crunch-quarto-layout-panel .inline-95 data-stack-name="Social Welfare Functionals"}
+
+:::: {layout="[78,22]" layout-valign="center"}
+::: {#swf}
+
+*(Fun notation:)*
+
+* [SWF $w(x)$]{.boxed-cb1} = Social Welfare Function:
+  * Plug in a **Policy** $x$, obtain a Welfare "Level" $y \in \mathbb{R}$
+  * Policy $x_1$ "better than" policy $x_0$ iff $w(x_1) > w(x_0)$
+* But how do we **construct** this function? Two antecedents:
+  * <i class='bi bi-1-circle'></i> **Methodological individualism**: groups don't have "preferences" as such; individuals do (if you ask a group for their opinion, how is answer generated? Discussion? Voting? Dictatorship?)
+  * <i class='bi bi-2-circle'></i> **Ideal speech situation**: @habermas_moral_1990 (later/next week)
+
+* [SWF**L** $W(\mathbf{u})$]{.boxed-cb2} = Social Welfare Function**al** [@sen_collective_1970]: Explicit account of "social preference" as **aggregation** of individual preferences!
+  * Plug in **Utility profile** $(u_1(\cdot), \ldots, u_n(\cdot))$, obtain **SWF** $w(x)$
+* $W(\mathbf{u})(x)$ = Aggregate individual preferences via $W(\mathbf{u})$ (producing a SWF), then evaluate this aggregation at $x$
+
+:::
+::: {#swf-img}
+
+![You somehow omnisciently evaluating SWF](images/alex-grey.jpg){fig-align="center" width="180px"}
+
+![You adding your discontent to SWFL via $u_i(x)$](images/corbyn_down.jpeg){fig-align="center" width="190px"}
+
+:::
+::::
+
+::: {.hidden}
+
+```{r}
+#| label: r-source-globals
+source("../dsan-globals/_globals.r")
+```
+
+:::
+
+## Function*al*s? {.crunch-title .title-12 .text-95 .crunch-math}
+
+* You probably know what a **function** $f(x)$ is; a **functional** is a function of functions: $\mathscr{G}(f)$
+* Letters get bigger/curlier, which is scary, but the notation is there to remind us that we need to consider **two steps**: What are the "base level" functions $f$, and how are they aggregated?
+* For our purposes, they "work the same" as regular functions
+* Ex: If $\mathscr{G}(f,g) = f^2 + g^2, f(x) = x, g(x) = 2x$, then we can obtain $\mathscr{G}(f,g)(x)$ by evaluating $f(x)$, $g(x)$, and combining:
+
+$$
+\mathscr{G}(f,g)(2) = (\underbrace{2}_{\mathclap{f(2)}})^2 + (\underbrace{2(2)}_{\mathclap{g(2)}})^2 = 20
+$$
+
+## We Live In A Dang Society {.crunch-title .crunch-ul .crunch-math .crunch-p .crunch-ul-top .inline-90 .math-90 .smaller}
+
+* Utilitarianism, Kant, Rawls can all be modeled as **Social Welfare Functionals**
+
+$$
+W(\mathbf{u}) = W(u_1, \ldots, u_n) \Rightarrow W(\mathbf{u})(x) = W(u_1(x), \ldots, u_n(x))
+$$
+
+* $u_i(x)$: Given bundle of resources $x$, how much utility does $i$ experience? $u_i: \mathcal{X} \rightarrow \mathbb{R}$
+* $W(\mathbf{u})$: **Aggregates** $u_i(x)$ over all $i$, to produce measure of **overall welfare of society**. For $N$ people, $W: (\underbrace{\mathcal{X} \rightarrow \mathbb{R}}_{u_i(\cdot)})^N \rightarrow \mathbb{R}$.
+* Standard assumption: $W$ *additive* $\Rightarrow W(\mathbf{u}) = \sum_{i=1}^n \omega_iu_i(x)$
+  * $\omega_i \equiv \frac{\partial W}{\partial u_i}$ is $i$'s **welfare weight** (❗️)
+* Welfare-Economic definition of **Utilitarianism**: Literally just $\omega_i = \frac{1}{n} \; \forall i$
+* (HW4) Decomposition to evaluate **bias in policy impacts**: from observed allocation $x_i$ and **marginal utility** $u'_i(x)$, can...
+  * Infer $\widehat{\omega}_i$ (how much policy **does** value person $i$: descriptive), then
+  * Compare with $\omega_i^*$ (how much policy **should** value person $i$: normative 🤯)
+
+## Alternative SWF Specifications {.crunch-title .crunch-ul .smaller}
+
+* Social values
+
+$$
+W(\underbrace{v_1, \ldots, v_n}_{\text{Values}})(x) \overset{\text{e.g.}}{=} \omega_1\underbrace{v_1(x)}_{\text{Privacy}} + \omega_2\underbrace{v_2(x)}_{\mathclap{\text{Public Health}}}
+$$
+
+* Stakeholder Analysis
+
+$$
+W(\underbrace{s_1, \ldots, s_n}_{\text{Stakeholders}})(x) = \omega_1\underbrace{u_{s_1}(x)}_{\text{Teachers}} + \omega_2\underbrace{u_{s_2}(x)}_{\text{Parents}} + \omega_3\underbrace{u_{s_3}(x)}_{\text{Students}} + \omega_4\underbrace{u_{s_4}(x)}_{\mathclap{\text{Community}}}
+$$
+
+* (Adapted from this <a href='https://www.youtube.com/watch?v=9VQw5N4qkhM&list=PLL6RiAl2WHXH1AdhB3fT5dxKIRbijvl34&index=18' target='_blank'>great intro video</a>!)
+
+## Inferring SWF from Surveys {.smaller .crunch-title .crunch-p}
+
+*"Conjoint Study"!*
+
+:::: {layout="[1,1]" layout-valign="center"}
+
+![](images/conjoint-welfare.jpeg){.lightbox fig-align="center" width="410px"}
+
+![](images/conjoint-impact.jpeg){.lightbox fig-align="center" width="410px"}
+
+::::
+
+## The Conveniently-Left-Out Detail {.crunch-title .crunch-ul .inline-90 .crunch-math .text-90}
+
+* Recall, e.g., **predictive parity**:
+
+$$
+\mathbb{E}[Y \mid D = 1, A = 1] = \mathbb{E}[Y \mid D = 1, A = 0]
+$$
+
+* Who decides which $Y$ to pick? [@kasy_fairness_2021]
+* Answer: Whoever picks the **objective function**!
+* **Profit-maximizing firm**: $\max\left\{ \mathbb{E}[D (Y - c)]\right\} \Rightarrow$ (Discrimination if and only if bad at profit-maximizing) 
+* **Welfare-maximizing policymaker**: $\max\{ W(u_1(D), \ldots, u_n(D)) \}$
+* Do these align? ...Think of past two lectures! Fishers' Dilemma with unequal power: **No**, Invisible Hand Game: **Yes**
+
+## Remaining (But Most Challenging) Details {.crunch-title .title-08 .crunch-ul .crunch-quarto-figure .crunch-li-8}
+
+:::: {layout="[56,44]"}
+::: {#challenge-text}
+
+* **Who gets included in the SWF?**
+* People in one household? One community? One state? One country?
+* People in the future?
+* Animals?
+* ...OUR BEAUTIFUL ENVIRONMENT???
+
+:::
+::: {#challenge-pic}
+
+![Our beautiful environment](images/snoop.png){#fig-snoop}
+
+:::
+::::
+
+## Back to Utilitarian SWF
+
+* Easy mode (possibly your intuition?): Everyone's welfare weight should be **equal**, $\omega_i = \frac{1}{n}$
+
+$$
+W(u_1, \ldots, u_n)(x) = \frac{1}{n}u_1(x) + \cdots + \frac{1}{n}u_n(x)
+$$
+
+* $\implies$ **Utilitarian** Social Welfare Functional!
+* The Silly Problem of Utilitarian SWF: What if everyone is made happy by $u_{\text{Jeef}} = -999999999$?
 
 
-## "Controlling for" Everything Besides Race {.smaller .crunch-title .title-11 .crunch-quarto-figure}
+## The Hard Problem of Utilitarian SWF {.crunch-title .title-09 .crunch-ul .crunch-blockquote .text-90}
+
+> While the rhetoric of "all men [sic] are born equal" is typically taken to be part and parcel of egalitarianism, the effect of ignoring the interpersonal variations can, in fact, be deeply inegalitarian, in hiding the fact that **equal consideration for all** may demand very **unequal treatment in favour of the disadvantaged** [@sen_inequality_1992]
+
+* $\implies$ ***"Equality of What?"***
+* What is the "thing" that egalitarianism obligates us to equalize (the equilisandum/equilisanda): **Utility**? **Opportunity**? **Resources**? **Money**? **Freedom *from* [$X$]**? **Freedom *to* [$Y$]**?
+
+## Utility $\rightarrow$ Social Welfare with Externalities {.crunch-title .title-11 .smaller .crunch-quarto-figure}
+
+* **Jeef** and **Keef** are roommates: Jeef loves listening to <a href='https://www.youtube.com/watch?v=OlQTn7gI8cw' target='_blank'>Tony Danza Tapdance Extravaganza</a>, but Keef is normal and slowly dies inside with each additional song
+
+:::: {layout="[1,1]" layout-valign="center" layout-align="center"}
+::: {.column width="50%"}
+
+<center>
+
+```{r}
+#| label: externalities
+#| fig-align: center
+library(tidyverse)
+music_df <- tribble(
+  ~Songs, ~Jeef, ~Keef,
+  0, 0, 0,
+  1, 13, -2,
+  2, 18, -6,
+  3, 24, -13,
+  4, 28, -20,
+  5, 30, -42
+)
+music_df <- music_df |>
+  mutate(Total = Jeef + Keef)
+music_df
+```
+
+</center>
+
+:::
+::: {.column width="50%"}
+
+```{r}
+#| label: roommate-plot
+#| fig-height: 4.5
+long_df <- music_df |>
+  pivot_longer(!Songs, names_to="Roommate", values_to="Utility")
+util_df <- long_df |>
+  filter(Roommate != "Total")
+ggplot(util_df, aes(x=Songs, y=Utility, color=Roommate)) +
+  geom_line(linewidth=g_linewidth) +
+  geom_point(size=g_pointsize) +
+  labs(
+    title="Individual Utility: Jeef vs. Keef",
+    x="Number of Songs Played",
+    y="Utility"
+  ) +
+  theme_dsan("quarter")
+```
+
+```{r}
+#| label: welfare-plot
+#| fig-height: 4.5
+welfare_df <- long_df |>
+  filter(Roommate == "Total")
+ggplot(welfare_df, aes(x=Songs, y=Utility, color=Roommate)) +
+  geom_line(linewidth=g_linewidth) +
+  geom_point(size=g_pointsize) +
+  labs(
+    title="Social Welfare: Jeef and Keef",
+    x="Number of Songs Played",
+    y="Social Welfare"
+  ) +
+  scale_color_manual(values=c(cbPalette[3]), labels=c("Total      ")) +
+  theme_dsan("quarter") +
+  remove_legend_title()
+```
+
+:::
+::::
+
+## So What's the Issue? {.crunch-title .text-95}
+
+* These utility values are **not observed**
+* If we try to **elicit** them, both Jeef and Keef have **strategic incentives** to **lie** (over-exaggerate)
+* Jeef maximizes own utility by reporting $u_j(s) = \infty$
+  * *("I will literally die if I can't listen to Lil Wayne's ["Peanuts 2 N Elephant"](https://www.youtube.com/watch?v=MGb5VUeartE) prod. Lin-Manuel Miranda all day")*
+* Keef maximizes own utility by reporting $u_k(s) = -\infty$
+  * *("I will literally die if I hear this elephant song again")*
+* (...Quick mechanism design demo: **Second price auctions**)
+
+## Now with Scarce Resources {.crunch-title .crunch-ul .crunch-math .math-90 .inline-90 .text-90}
+
+* In a given week, Jeef and Keef have **14 meals** and **7 aux hours** to divide amongst them
+
+$$
+\begin{align*}
+\max_{m_1,m_2,a_1,a_2}& W(u_1(m_1,a_1),u_2(m_2,a_2)) \\
+\text{s.t. }& m_1 + m_2 \leq 14 \\
+\phantom{\text{s.t. }} & ~ \, a_1 + a_2 \; \leq 7
+\end{align*}
+$$
+
+* Let's assume $u_i(m_i, a_i) = m_i + a_i$ for both
+* $\Rightarrow$ One solution: $m_1 = 14, m_2 = 0, a_1 = 7, a_2 = 0$...
+* $\Rightarrow$ Another: $m_1 = 0, m_2 = 14, a_1 = 0, a_2 = 7$...
+* Who decides? Any decision implies $\omega_1, \omega_2$ ($\omega_1 + \omega_2 = 1$)<br>*(Last slide = [last reminder](./images/redacted_crop.jpg){target='_blank'}...)*
+
+## Now With *Moral Responsibility vs. Moral Luck!* {.text-60 .crunch-title .title-10 .inline-90 .crunch-p}
+
+What is the **overall social welfare** of a policy $x$ (as opposed to another policy $y$, e.g., "do nothing")?
+
+::: {#fig-roemer-table}
+
+| Effort Class $\rightarrow$ | $e^{(1)}$ | $e^{(2)}$ | $e^{(3)}$ | $e^{(4)}$ | $e^{(5)}$ |
+|:-:|:-:|:-:|:-:|:-:|:-:|
+| **Percentile Range** $\rightarrow$ | $[P_0, P_{20}]$ | $[P_{20}, P_{40}]$ | $[P_{40}, P_{60}]$ | $[P_{60}, P_{80}]$ | $[P_{80}, P_{100}]$ | 
+| Circumstance Class $c^{(1)}$ | $N_{11}$, $W(1,1)(x)$ | $N_{12}$, $W(1,2)(x)$ | $N_{13}$, $W(1,3)(x)$ | $N_{14}$, $W(1,4)(x)$ | $N_{15}$, $W(1,5)(x)$ |
+| Circumstance Class $c^{(2)}$ | $N_{21}$, $W(2,1)(x)$ | $N_{22}$, $W(2,2)(x)$ | $N_{23}$, $W(2,3)(x)$ | $N_{24}$, $W(2,4)(x)$ | $N_{25}$, $W(2,5)(x)$ |
+| Circumstance Class $c^{(3)}$ | $N_{31}$, $W(3,1)(x)$ |  $N_{32}$, $W(3,2)(x)$ | $N_{33}$, $W(3,3)(x)$ | $N_{34}$, $W(3,4)(x)$ | $N_{35}$, $W(3,5)(x)$ |
+
+: {tbl-colwidths="[25,15,15,15,15,15]"}
+
+Roemerian "Circumstance-Effort Matrix" [@roemer_equality_1998]
+:::
+
+* $N_{ij}$ = Number of people in Circumstance Class $i$ who exert effort $j$
+* $W(i,j)$ = SWFL evaluated w.r.t. people in Circumstance Class $i$ who exert effort $j$
+
+# Disaggregating Social Welfare: Group Representation {.smaller .title-12 data-stack-name="Identity and Epistemology"}
+
+```{=html}
+<table>
+<thead>
+<tr>
+  <th rowspan="2" align="center" style="vertical-align: bottom;">Ethnic Group</th>
+  <th colspan="4" align="center">Census Administrator</th>
+</tr>
+<tr>
+  <th align="right">Bulgaria</th>
+  <th align="right">Serbia</th>
+  <th align="right">Greece</th>
+  <th align="right">Turkey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><b>Bulgarian</b></td>
+  <td align="right">52.3%</td>
+  <td align="right">2.0%</td>
+  <td align="right">19.3%</td>
+  <td align="right">30.8%</td>
+</tr>
+<tr>
+  <td><b>Serbian</b></td>
+  <td align="right">0.0%</td>
+  <td align="right">71.4%</td>
+  <td align="right">0.0%</td>
+  <td align="right">3.4%</td>
+</tr>
+<tr>
+  <td><b>Greek</b></td>
+  <td align="right">10.1%</td>
+  <td align="right">7.0%</td>
+  <td align="right">37.9%</td>
+  <td align="right">10.6%</td>
+</tr>
+<tr>
+  <td><b>Albanian</b></td>
+  <td align="right">5.7%</td>
+  <td align="right">5.8%</td>
+  <td align="right">0.0%</td>
+  <td align="right">0.0%</td>
+</tr>
+<tr>
+  <td><b>Turkish</b></td>
+  <td align="right">22.1%</td>
+  <td align="right">8.1%</td>
+  <td align="right">36.8%</td>
+  <td align="right">51.8%</td>
+</tr>
+<tr>
+  <td><b>Other</b></td>
+  <td align="right">9.7%</td>
+  <td align="right">5.9%</td>
+  <td align="right">6.1%</td>
+  <td align="right">3.4%</td>
+</tr>
+</tbody>
+</table>
+```
+
+<center>
+
+Estimates of ethnic composition of **Macedonia**, 1889-1905 [@friedman_comprehensive_1994]
+
+</center>
+
+## Data-Ethical Toolkit: Implementation 👀 {.text-60 .crunch-title .title-12 .crunch-img .crunch-quarto-figure}
+
+:::: {.columns}
+::: {.column width="60%"}
+
+```{r}
+#| label: canadian-census
+#| echo: true
+#| code-fold: true
+#| fig-width: 12
+#| fig-height: 5
+library(tidyverse) |> suppressPackageStartupMessages()
+canada_df <- tibble::tribble(
+  ~Ethnicity, ~Year, ~`Percent of Total`,
+  "Canadian", 1991, 3.3,
+  "Canadian", 1996, 30.9,
+  "Canadian", 2001, 39.4,
+  "Canadian", 2006, 32.2,
+  "Canadian", 2011, 32.2,
+  "Canadian", 2016, 32.3,
+  "Canadian", 2021, 15.6,
+  "British", 1991, 20.8,
+  "British", 1996, 35.9,
+  "British", 2001, 33.6,
+  "British", 2006, 52.8,
+  "British", 2011, 34.5,
+  "British", 2016, 32.5,
+  "British", 2021, 42.7,
+  "French", 1991, 22.8,
+  "French", 1996, 19.0,
+  "French", 2001, 15.8,
+  "French", 2006, 16.1,
+  "French", 2011, 15.5,
+  "French", 2016, 13.6,
+  "French", 2021, 11.0,
+  "Aboriginal", 1991, 1.7,
+  "Aboriginal", 1996, 3.7,
+  "Aboriginal", 2001, 4.5,
+  "Aboriginal", 2006, 5.5,
+  "Aboriginal", 2011, 5.6,
+  "Aboriginal", 2016, 6.2,
+  "Aboriginal", 2021, 4.9,
+)
+canada_df |> ggplot(aes(x=Year, y=`Percent of Total`, color=Ethnicity)) +
+  geom_point() +
+  geom_line() +
+  theme_dsan(base_size=24) +
+  ylim(0, 60) +
+  labs(title="Canadian Census Responses, 1991-2021")
+```
+
+* **1991**: *"Count Me Canadian!"* ad campaign in *Toronto Sun* $\leadsto$ 3.3% write in "Canadian" $\leadsto$ 5th largest "ethnicity" in Canada
+* **1996**: Legally, "Canadian" must be listed 5th in examples $\leadsto$ 24.1% respond "Canadian" $\leadsto$ 1st largest ethnicity
+* **2001-2021**: Legally, "Canadian" must be listed 1st in examples
+* **2021**: "French Canadian" added as option (previously recorded as two responses: "French", "Canadian")
+
+:::
+::: {.column width="40%"}
+
+![](images/canada_screenshot.png){fig-align="center"}
+
+:::
+::::
+
+## Some Ethnicies with >20K Responses, 2021 {.text-525 .crunch-title .title-09 .crunch-p .crunch-quarto-layout-panel}
+
+[Full listing](https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?LANG=E&GENDERlist=1&STATISTIClist=1,4&DGUIDlist=2021A000011124&HEADERlist=31&SearchText=Canada#Note125) *(Note: None of these are aggregated into 2021 counts on previous page)*
+
+:::: {layout="[1,1]" layout-align="center"}
+::: {#table-left}
+
+| Ethnicity | Count | % |
+| - | -:| -:|
+| Québécois | 981,635 | 2.7 |
+| French Canadian | 906,315 | 2.5 |
+| Caucasian (White), n.o.s. | 691,260 | 1.9 |
+| European, n.o.s. | 551,910 | 1.5 |
+| Jewish | 282,015 | 0.8 |
+| Punjabi | 279,950 | 0.8 |
+| Arab, n.o.s. | 263,710 | 0.7 |
+| Asian, n.o.s. | 226,220 | 0.6 |
+| Iranian | 200,465 | 0.6 |
+| Christian | 200,340 | 0.6 |
+| Sikh | 194,640 | 0.5 |
+| Hindu | 166,160 | 0.5 |
+| Mennonite | 155,095 | 0.4 |
+| South Asian, n.o.s. | 120,125 | 0.3 |
+| Muslim | 105,620 | 0.3 |
+| Tamil | 102,170 | 0.3 |
+
+: {tbl-colwidths="[48,26,20]"}
+
+:::
+::: {#table-right}
+
+| Ethnicity | Count | % |
+| - | -:| -:|
+| Czech | 98,925 | 0.3 |
+| Black, n.o.s. | 94,585 | 0.3 |
+| Newfoundlander | 91,670 | 0.3 |
+| Ontarian | 80,555 | 0.2 |
+| Persian | 80,340 | 0.2 |
+| Slovak | 68,210 | 0.2 |
+| Congolese | 45,260 | 0.1 |
+| Nova Scotian | 44,720 | 0.1 |
+| Czechoslovakian | 33,135 | 0.1 |
+| African American | 31,430 | 0.1 |
+| Yugoslavian | 30,565 | 0.1 |
+| Slavic | 30,220 | 0.1 |
+| Northern Irish | 25,200 | 0.1 |
+| Celtic | 24,420 | 0.1 |
+| Franco Ontarian | 24,110 | 0.1 |
+| North American | 22,785 | 0.1 |
+
+: {tbl-colwidths="[48,26,20]"}
+
+:::
+::::
+
+## "Controlling for" Everything Besides Race {.smaller .crunch-title .title-11 .crunch-quarto-figure .crunch-quarto-layout-panel}
 
 ::: {layout="[1,1]" layout-valign="center"}
 
@@ -82,29 +531,102 @@ Fair $\iff$ [$\Pr(\text{Admit Presley}_{12}) = \Pr(\text{Admit Presley}_{22})$]?
 
 * Root of issue: [BA Stats, UCLA, 3.7] has no "free-floating" meaning---it's **attached to a person** $\Rightarrow$ affected by/interpreted w.r.t. their "protected" characteristics
 
-## General Fairness Definition? {.smaller .crunch-title .crunch-quarto-figure .crunch-ul .crunch-img .inline-90 .text-68}
+## A "General" Fairness Definition? {.smaller .crunch-title .crunch-quarto-figure .crunch-ul .crunch-img .inline-90 .text-68}
 
 :::: {.columns}
-::: {.column width="50%"}
+::: {.column width="52%"}
 
-* Pessimistic conjecture: like bias-variance tradeoff (no free lunch), may be a "generality-[loophole-avoidance] tradeoff"...
-* May need to "descend" from **👆Platonic** ideal fairness to **👇Aristotelian** topic-specific fairness 🤔 *Hence W12-13!*
+* May need to "descend" from **👆Platonic** ideal fairness to **👇Aristotelian** context-sensitive case-specific fairness 🤔
+* (Hard enough to find "general" groupings in Canada, now do *allocations of resources* among them... and then the whole world)
 * We saw this issue before, in different form! Rawls on "correct" ranking of **rights**
 * [**Rawls**: No "correct" ordering; Different societies $\leadsto$ different social value systems, power struggles $\leadsto$ different orderings]
 
 :::
-::: {.column width="50%"}
+::: {.column width="48%"}
 
-![Raphael, [*The School of Athens* (1511)](https://en.wikipedia.org/wiki/The_School_of_Athens) [v rare 16th-century use of Georgia!]{style='font-size: 60%'}](images/raphael_anno.jpg){fig-align="center" width="80%"}
+![Raphael, [*The School of Athens* (1511)](https://en.wikipedia.org/wiki/The_School_of_Athens) [rare 16th-century use of Georgia!]{style='font-size: 60%'}](images/raphael_anno_circles.jpg){fig-align="center" width="80%"}
 
 :::
 ::::
 
 * [**Me, I guess? 🙈**: No "correct" fairness defn for racial discrimination; Different societies $\leadsto$ different racial/caste/identity formations, power struggles $\leadsto$ different fairness defns]
 
+## ...But Wait! Here's a German Guy! {.text-65 .crunch-title .title-11 .crunch-img .crunch-p .crunch-ul .crunch-blockquote .crunch-quarto-layout-panel}
+
+* Speech Act Theory + Pragmatics $\leadsto$ "Theory of Communicative Action" [@habermas_moral_1990]
+* Whether "globally" or (more realistically) in specific cases, what **discursive settings** might best enable "fusing of horizons"?
+
+:::: {layout="[64,36]" layout-valign="center"}
+::: {#habermas-left}
+
+> <i class='bi bi-0-circle'></i> We must distinguish between the social fact that a norm **is** intersubjectively recognized and its **worthiness** to be recognized. [**ought**]
+> 
+> When we discuss moral-practical questions of the form **"What ought I to do?"** we presuppose that the answers need not be arbitrary; we trust our ability to distinguish in principle between right norms or commands and wrong ones. [**Reflective Equilibrium**]
+> 
+> [What structure undergirds this ability to distinguish?] What kind(s) of argument, what form(s) of reasoning is it proper for us to accept in support of moral decisions?
+
+:::
+::: {#habermas-pic}
+
+![@habermas_cambridge_1997 (Sole living person with a *Cambridge Companion*... until 1 month ago 😭)](images/habermas.jpg){fig-align="center" width="60%"}
+
+:::
+::::
+
+## Belief Formation: Coercive vs. Consensual {.text-65 .crunch-title .title-10 .crunch-blockquote}
+
+> <i class='bi bi-1-circle'></i> Beliefs derive from a complex mixture of **rational insight** and **coercive force**.
+> 
+> I distinguish between **communicative** and **strategic action**. Whereas in strategic action one actor seeks to **influence** the behavior of another by means of the threat of sanctions or the prospect of gratification in order to cause the interaction to [go in a direction that] the first actor desires, communicative acts [instead involve] communication oriented to **reaching understanding** [W02: **fusing horizons!**]
+> 
+> <i class='bi bi-2-circle'></i> Only those norms can claim to be valid that meet (or could meet) with the approval of **all affected** in their capacity as **participants** in a discourse.
+> 
+> Like Kant, Rawls operationalizes 👀 "impartiality" in such a way that every individual can undertake to justify basic norms **on his [sic] own** [via "veil of ignorance" thought experiment]. The problems to be resolved in moral argumentation [however] cannot be handled monologically but require **cooperation**.
+> 
+> <i class='bi bi-3-circle'></i> The categorical imperative needs to be reformulated as follows: "Rather than ascribing as valid to all others any maxim that **I** can will to be universal [HW1], I must **submit my maxim to all *others*** for purposes of **discursively testing its claim to universality**.
+
+# Causality and Identity Formation {data-stack-name="Racecraft"}
+
+* Race as a **Noun** vs. Race as a **Verb** ("Racecraft")
+* Race as a static property vs. race as a **social practice**
+* Subject-Object Distinction
+
+## But First... Phenomenology {.crunch-title .title-11 .crunch-blockquote .text-60 .crunch-ul .crunch-quarto-figure}
+
+* "Objective" account: Roquentin sits down on a bus seat; <a href='https://jpj.georgetown.domains/dsan5450-scratch/nausea.mp3' target='_blank'>"Subjective" account</a>:
+
+> I lean my hand on **the seat** but pull it back hurriedly: it exists. This thing I'm sitting on, leaning my hand on, is **called a seat**. They made it purposely for people to sit on, they took leather, springs and cloth, they went to work with the idea of making a seat and when they finished, that was what they had made. They carried it here, into this car and the car is now rolling and jolting with its rattling windows, carrying this red thing in its bosom. I murmur: "It's a seat" [...] But the word stays on my lips: **it refuses to go and put itself on the thing**. It stays what it is, with its red plush, thousands of little red paws in the air, all still, little dead paws...
+
+![(Image from ["Book Review: Nausea - Jean-Paul Sartre"](https://eternalisedofficial.com/2021/04/21/book-review-nausea-jean-paul-sartre/))](images/train_seat.webp){fig-align="center"}
+
+## [W.E.B. Du Bois and the Epistemological One-Way Mirror]{.lumos-jj} {.smaller .crunch-title .title-08 .crunch-blockquote .text-65}
+
+> Black people in America are [...] born with a veil [...] in this American world---a world which yields him no true self-consciousness, but only lets him see himself through the revelation of the other world. It is a peculiar sensation, this double-consciousness, this sense of **always looking at oneself through the eyes of others**, of measuring one’s soul by the tape of a world that looks on in amused contempt and pity. One ever feels his two-ness—an American, a Negro; two souls, two thoughts, two unreconciled strivings; two warring ideals in one dark body. [@dubois_souls_1903]
+
+* The veil: the world is seen and **experienced differently** on either side of the color line
+* **One-way mirror**: Whites project their constructions of Blacks onto the veil and see their projections reflected on it $\Rightarrow$ the power to **define themselves and others**
+* The projections of whites onto the veil **become realities** (reification!) that Black subjects have to contend with in their self-formation.
+* **Twoness**: in process of self-formation, the racialized subject **must account for** the views of two different social worlds—the Black world, constructed behind the veil, and the white world, which dehumanizes via lack of recognition of their humanity. 
+
+## $\textsf{Race}_{\textsf{Variable}}$ vs. $\textsf{Race}_{\textsf{Construct}}$ {.crunch-title .crunch-ul}
+
+* Careful scientific, causal studies measure the effect that **changing $X$** ($\text{do}(X)$) has on $Y$, controlling for $C$ (via, at least under the hood, "$\text{do}$-Calculus")
+* But, even the most careful, controlled (and thus informative!) experiments must, at some level, partition variables into "race" and "not race"
+* Keep in back of your mind as we look at example of how (measured by thorough, statistically-principled experiment), **race can have direct, measurable, causal impacts on important aspects of our everyday lives**
+
+## Racial Discrimination {.smaller .crunch-title .title-12 .crunch-ul .crunch-blockquote .crunch-li-5}
+
+* Marianne Bertrand and Sendhil Mullainathan. 2004. "Are Emily and Greg More Employable Than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination." *American Economic Review*. [@bertrand_are_2004]
+
+> We study **race** in the labor market by sending fictitious resumes to help-wanted ads in Boston and Chicago newspapers. To manipulate perceived race, resumes are **randomly assigned** African-American- or White-sounding **names**. **White names** receive **50 percent more callbacks** for interviews. Callbacks are also more responsive to resume quality for White names than for African-American ones. The racial gap is uniform across occupation, industry, and employer size. We also find little evidence that employers are inferring social class from the names. Differential treatment by race still appears to still be prominent in the U.S. labor market.
+
+* So... Is [Solved-ness of problem] = [Closeness of racial gap to 0%]?
+* Even on solely empirical, ahistorical basis (meaning, even without reparations for past harms in antecedents), there are reasons why 0% gap may not be the goal...
+* To see why, we have to dig into **race as a verb** rather than a noun
+
 ## "Cool Theory, I Guess..." {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-ul .crunch-li-8 .crunch-quarto-figure}
 
-* Less pessimistic result of pessimistic conjecture: Some hope from Fodor-Sperber model (disclaimer: also terrifying, Philip K. Dick *Minority Report*-style dystopian possibilities)
+* Less pessimistic result of pessimistic conjecture: Some hope from [Fodor-Sperber model](#appendix-fodor-sperber-model) (disclaimer: also terrifying *Minority Report*-style dystopian possibilities)
 * "Good luck measuring ideas inside of people's heads... I'll be over here measuring *real* things and doing *real* data science!" -My innumerable Wile E. Coyote-style opps
 
 :::: {.columns}
@@ -119,6 +641,130 @@ Fair $\iff$ [$\Pr(\text{Admit Presley}_{12}) = \Pr(\text{Admit Presley}_{22})$]?
 
 :::
 ::::
+
+# *Ordering* of Topics is Important Here! {data-stack-name="Data Feminism"}
+
+* Unfortunate-ness of white male teaching about race
+* Unfortunate-ness of white male teaching about gender
+* But, a counterpoint: Diversity / representation of marginalized voices $\overset{?}{\longleftrightarrow}$ Labor of "speaking for" one's identity group
+
+## The Standpoint Problem Revisited {.crunch-title .crunch-ul}
+
+* Problem statement: Jeff can't possibly "teach" data-ethical issues, w.r.t. how they affect women, in the same manner he can teach e.g. how to take a derivative
+* Solution 1: Have a woman teach a guest lecture $\rightarrow$ (Possibility) Problem solved; (Possibility) Forcing additional labor onto women (see: 3 slides from now)
+* Solution 2: Utilize the immense labor women have already put into trying to explain these issues to men with power, and amplify these already-existing products of this already-expended labor **(next slide &rarr;)**
+
+## Specifically-Chosen Examples {.crunch-title .crunch-quarto-figure .title-11}
+
+::: {layout="[1,1,1]"}
+::: {#labor-left}
+
+![](images/lebron.jpg){fig-align="center" width="340"}
+
+:::
+::: {#labor-center}
+
+![](images/racist.jpg){fig-align="center" width="340"}
+
+:::
+::: {#labor-right}
+
+![](images/invisible_women.jpg){fig-align="center" width="340"}
+
+:::
+:::
+
+## With Great Privilege Comes Great Responsibility {.crunch-title .crunch-blockquote .title-07}
+
+> What is **the most damage I can do**, given my biography, abilities, and commitments, to the racial order and rule of capital? (<a href='https://en.wikipedia.org/wiki/Joel_Olson' target='_blank'>Joel Olson</a>)
+
+![](images/race_traitor_jacket.jpg){fig-align="center" width="300"}
+
+## The "Diversity in Tech"-Industrial Complex {.crunch-title .title-08 .crunch-li-6}
+
+* Problem: Not enough diversity in tech
+* Solution 1: Intervene on the causal pathways leading to this outcome (incl. studying/tracing causal pathways)
+    * Costs borne by tech companies; benefits accrue to marginalized ppl ❌🙅‍♂️⏹️
+* Solution 2: Make marginalized ppl in tech jobs do tech jobs plus also extra job of explaining their marginalization to non-marginalized ppl (Third Shift?), who go home feeling good that they went to the diversity in tech panel (Brecht)
+    * Costs borne by marginalized ppl; benefits accrue to tech companies ✅🎰🤑
+
+## (See Also) {.crunch-title}
+
+![](images/mlk_dream.jpg){fig-align="center"}
+
+## "Diversity" vs. Fairness / Justice {.crunch-title .title-09 .crunch-ul .text-90 .crunch-img .crunch-quarto-figure}
+
+* In this class (e.g., HW1), we essentially reduced "race" down to "black" vs. "white"
+* Diversity has (at least) **two** aspects: (1) **Inclusion** of different groups, and (2) **Balance** of representation between those groups
+
+::: {layout="[1,1]" layout-valign="center"}
+::: {#diversity-left}
+
+![What city is this? Hint: *Yaddadamean*](images/oakland_small.jpeg)
+
+:::
+::: {#diversity-right}
+
+![What city is this? Hint: *Bammas*](images/dc.jpeg)
+
+:::
+:::
+
+## Diversity vs. Fairness / Justice
+
+::: {layout="[1,1]" layout-valign="center"}
+
+![](images/oakland_map2.jpeg)
+
+![](images/dc_map.jpeg)
+
+:::
+
+## Data Feminism (Epistemological One-Way Mirror 2.0)
+
+> Representation of the world, like the world itself, is the work of men; they describe it from their own point of view, which they confuse with the absolute truth.<br><div style='float: right;'>[@beauvoir_second_1949]</div>
+
+## "It Goes Without Saying" {.crunch-title .crunch-blockquote .crunch-p .text-90}
+
+>  Whiteness and maleness are implicit. They are unquestioned. They are the default. And this reality is inescapable for anyone whose identity does not go without saying [...] For anyone who is used to jarring up against a world that has not been designed around them and their needs.
+
+> Belief in the objectivity, the rationality, the, as Catherine Mackinnon has it, "point-of-viewlessness" of the white, male perspective. Because this perspective is not articulated as white and male (because it doesn’t need to be), because it is the norm, it is presumed not to be subjective. [@perez_invisible_2019]
+
+## People = Male, Animal = Male {.crunch-title .crunch-ul .title-11 .text-90}
+
+* *"When I say 'he' I really mean 'he or she', obviously"*
+* Except... irrespective of what you really mean, or whether it's 'obvious', it goes out into the world and has effects (**reification!**),
+* From <a href='https://www.sciencedirect.com/science/article/abs/pii/S0001879113000304' target='_blank'>childhood</a> [@vervecken_changing_2013]
+* To <a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1559-1816.1973.tb01290.x' target='_blank'>job-hunting</a> [@bem_does_1973]
+* <a href='https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2016.00025/full#B111' target='_blank'>And beyond</a> [@sczesny_can_2016]
+* A stuffed animal must be "super-feminine" before "even close to half of participants will refer to it as she rather than he". [@lambdin_animal_2003]
+
+
+## The Cowan Paradox {.crunch-title .smaller .title-11 .crunch-quarto-figure}
+
+::: {layout="[55,45]"}
+::: {#cowan-left}
+
+> For many ages to come the old Adam will be so strong in us that everybody will need to do some work if he [sic] is to be contented [...] But beyond this, we shall endeavour to spread the bread thin on the butter---to make what work there is still to be done to be as widely
+shared as possible. Three-hour shifts or a fifteen-hour week may put off the
+problem for a great while. For three hours a day is quite enough to satisfy the old Adam in most of us!
+
+(John Maynard Keynes, <a href='http://www.econ.yale.edu/smith/econ116a/keynes1.pdf' target='_blank'>"Economic Possibilities for our Grandchildren"</a>, 1930)
+
+:::
+::: {#cowan-right}
+
+![@cowan_more_1983](images/more_work.jpg){fig-align="center" width="350"}
+
+:::
+:::
+
+## References
+
+::: {#refs}
+:::
+
+# Appendix: Fodor-Sperber Model
 
 ## "Cool Theory, I Guess..." {.smaller .crunch-title}
 
@@ -206,148 +852,3 @@ Fair $\iff$ [$\Pr(\text{Admit Presley}_{12}) = \Pr(\text{Admit Presley}_{22})$]?
 
 :::
 :::
-
-# *Ordering* of Topics is Important Here! {data-stack-name="Standpoint Epistemology"}
-
-* Last week: Unfortunate-ness of white male teaching about race
-* This week: Unfortunate-ness of white male teaching about gender
-* But, also this week, a counterpoint: "Diversity in tech" $\overset{?}{\longleftrightarrow}$ The burden of "speaking for" one's identity group
-
-## The Standpoint Problem Revisited {.crunch-title .crunch-ul}
-
-* Problem statement: Jeff can't possibly "teach" data-ethical issues, w.r.t. how they affect women, in the same manner he can teach e.g. how to take a derivative
-* Solution 1: Have a woman teach a guest lecture $\rightarrow$ (Possibility) Problem solved; (Possibility) Forcing additional labor onto women (see: 3 slides from now)
-* Solution 2: Utilize the immense labor women have already put into trying to explain these issues to men with power, and amplify these already-existing products of this already-expended labor
-
-## Specifically-Chosen Examples {.crunch-title .crunch-quarto-figure .title-11}
-
-::: {layout="[1,1,1]"}
-::: {#labor-left}
-
-![](images/lebron.jpg){fig-align="center" width="340"}
-
-:::
-::: {#labor-center}
-
-![](images/racist.jpg){fig-align="center" width="340"}
-
-:::
-::: {#labor-right}
-
-![](images/invisible_women.jpg){fig-align="center" width="340"}
-
-:::
-:::
-
-## With Great Privilege Comes Great Responsibility {.crunch-title .crunch-blockquote .title-07}
-
-> What is **the most damage I can do**, given my biography, abilities, and commitments, to the racial order and rule of capital? (<a href='https://en.wikipedia.org/wiki/Joel_Olson' target='_blank'>Joel Olson</a>)
-
-![](images/race_traitor_jacket.jpg){fig-align="center" width="300"}
-
-## The "Diversity in Tech"-Industrial Complex {.crunch-title .title-08 .crunch-li-6}
-
-* Problem: Not enough diversity in tech
-* Solution 1: Intervene on the causal pathways leading to this outcome (incl. studying/tracing causal pathways)
-    * Costs borne by tech companies; benefits accrue to marginalized ppl ❌🙅‍♂️⏹️
-* Solution 2: Make marginalized ppl in tech jobs do tech jobs plus also extra job of explaining their marginalization to non-marginalized ppl (Third Shift?), who go home feeling good that they went to the diversity in tech panel (Brecht)
-    * Costs borne by marginalized ppl; benefits accrue to tech companies ✅🎰🤑
-
-## (See Also) {.crunch-title}
-
-![](images/mlk_dream.jpg){fig-align="center"}
-
-## "Diversity" vs. Fairness / Justice {.crunch-title .title-09 .crunch-ul .text-90 .crunch-img .crunch-quarto-figure}
-
-* In this class (e.g., HW1), we essentially reduced "race" down to "black" vs. "white"
-* Diversity has (at least) **two** aspects: (1) **Inclusion** of different groups, and (2) **Balance** of representation between those groups
-
-::: {layout="[1,1]" layout-valign="center"}
-::: {#diversity-left}
-
-![What city is this? Hint: *Yaddadamean*](images/oakland_small.jpeg)
-
-:::
-::: {#diversity-right}
-
-![What city is this? Hint: *Bammas*](images/dc.jpeg)
-
-:::
-:::
-
-## Diversity vs. Fairness / Justice
-
-::: {layout="[1,1]" layout-valign="center"}
-
-![](images/oakland_map2.jpeg)
-
-![](images/dc_map.jpeg)
-
-:::
-
-# Data Feminism {data-stack-name="Data Feminism"}
-
-## Epistemological One-Way Mirror 2: Electric Boogaloo
-
-> Representation of the world, like the world itself, is the work of men; they describe it from their own point of view, which they confuse with the absolute truth.<br><div style='float: right;'>[@beauvoir_second_1949]</div>
-
-## "It Goes Without Saying" {.crunch-title .crunch-blockquote .crunch-p .text-90}
-
->  Whiteness and maleness are implicit. They are unquestioned. They are the default. And this reality is inescapable for anyone whose identity does not go without saying [...] For anyone who is used to jarring up against a world that has not been designed around them and their needs.
-
-> Belief in the objectivity, the rationality, the, as Catherine Mackinnon has it, "point-of-viewlessness" of the white, male perspective. Because this perspective is not articulated as white and male (because it doesn’t need to be), because it is the norm, it is presumed not to be subjective. [@perez_invisible_2019]
-
-## People = Male, Animal = Male {.crunch-title .crunch-ul .title-11}
-
-* *"When I say 'he' I really mean 'he or she', obviously"*
-* Except... irrespective of what you really mean, or whether it's 'obvious', it goes out into the world and has effects (reification),
-* From <a href='https://www.sciencedirect.com/science/article/abs/pii/S0001879113000304' target='_blank'>childhood</a> [@vervecken_changing_2013]
-* To <a href='https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1559-1816.1973.tb01290.x' target='_blank'>job-hunting</a> [@bem_does_1973]
-* <a href='https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2016.00025/full#B111' target='_blank'>And beyond</a> [@sczesny_can_2016]
-* A stuffed animal must be "super-feminine" before "even close to half of participants will refer to it as she rather than he". [@lambdin_animal_2003]
-
-
-## The Cowan Paradox {.crunch-title .smaller .title-11 .crunch-quarto-figure}
-
-::: {layout="[55,45]"}
-::: {#cowan-left}
-
-> For many ages to come the old Adam will be so strong in us that everybody will need to do some work if he [sic] is to be contented [...] But beyond this, we shall endeavour to spread the bread thin on the butter---to make what work there is still to be done to be as widely
-shared as possible. Three-hour shifts or a fifteen-hour week may put off the
-problem for a great while. For three hours a day is quite enough to satisfy the old Adam in most of us!
-
-(John Maynard Keynes, <a href='http://www.econ.yale.edu/smith/econ116a/keynes1.pdf' target='_blank'>"Economic Possibilities for our Grandchildren"</a>, 1930)
-
-:::
-::: {#cowan-right}
-
-![@cowan_more_1983](images/more_work.jpg){fig-align="center" width="350"}
-
-:::
-:::
-
-# Solving All the Problems {data-stack-name="Solving All the Problems"}
-
-## Solutions via Causal Historical Analysis
-
-* The data: historical cases of attempts to end oppression
-* Dependent variable: Did they succeed or were they successfully repressed?
-* (You're not gonna like this one either...)
-
-## Instances of Oppression and their Termination
-
-* US Chattel Slavery (1865)?
-* Colonialism (e.g., Algeria, 1962)?
-* Apartheid in Rhodesia (1980) / Namibia (1990) / South Africa (1994)?
-* The Ethnic Cleansing of Palestine?
-* Thankfully, all of these were ended peacefully, and in ways that were agreeable to everyone involved, especially those who benefitted from them!!! 🥳🕺
-
-## Great Moments in Peaceful Protest History {.crunch-title .title-11 .smaller}
-
-![From The Nib (<a href='https://thenib.com/great-moments-in-peaceful-protest-history-44bdadb44cf/' target='_blank'>*The Revolution WILL Be Given Permission*</a>)](images/great-moments-in-peaceful-protest-history.jpg){fig-align="center"}
-
-## References
-
-::: {#refs}
-:::
-

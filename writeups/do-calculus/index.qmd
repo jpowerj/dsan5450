@@ -210,7 +210,7 @@ So, private schools can justifiably claim, in this (hypothetical) case, that att
 
 ## The $\textsf{do}$ Operator
 
-Now, let's see why having the operator $\textsf{do}(\cdot)$ launches us **beyond** this fallacy, a fallacy that we invetiably fall into no matter how carefully/thoughfully we use the tools given to us by probability theory, since (given an **antecedent** argued for in, e.g., @elster2015explaining) "associations" are pretty much never what we actually care about! The "point" of science (again, under antecedents argued for in that book) is to hypothesize and then evaluate **causal** claims! So, let's see how the $\textsf{do}$ operator helps us here. Now, we'll add a third value to our collection of things we can compute to try and evaluate the $E \rightarrow Y$ relationship:
+Now, let's see why having the operator $\textsf{do}(\cdot)$ launches us **beyond** this fallacy, a fallacy that we invetiably fall into no matter how carefully/thoughfully we use the tools given to us by probability theory, since (given an **antecedent** argued for in, e.g., @elster_explaining_2015) "associations" are pretty much never what we actually care about! The "point" of science (again, under antecedents argued for in that book) is to hypothesize and then evaluate **causal** claims! So, let's see how the $\textsf{do}$ operator helps us here. Now, we'll add a third value to our collection of things we can compute to try and evaluate the $E \rightarrow Y$ relationship:
 
 * $s_{\text{overall}} = \Pr(Y = 1) = \frac{1}{6}$ ✅
 * $s_{\text{private}} = \Pr(Y = 1 \mid E = 1) = \frac{1}{3}$ ✅
