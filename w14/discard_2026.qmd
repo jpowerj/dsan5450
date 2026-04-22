@@ -1,0 +1,27 @@
+## "Diversity" vs. Fairness / Justice {.crunch-title .title-09 .crunch-ul .text-90 .crunch-img .crunch-quarto-figure}
+
+* In this class (e.g., HW1), we essentially reduced "race" down to "black" vs. "white"
+* Diversity has (at least) **two** aspects: (1) **Inclusion** of different groups, and (2) **Balance** of representation between those groups
+
+::: {layout="[1,1]" layout-valign="center"}
+::: {#diversity-left}
+
+![What city is this? Hint: *Yaddadamean*](images/oakland_small.jpeg)
+
+:::
+::: {#diversity-right}
+
+![What city is this? Hint: *Bammas*](images/dc.jpeg)
+
+:::
+:::
+
+## Diversity vs. Fairness / Justice
+
+::: {layout="[1,1]" layout-valign="center"}
+
+![](images/oakland_map2.jpeg)
+
+![](images/dc_map.jpeg)
+
+:::
