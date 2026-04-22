@@ -312,16 +312,17 @@ problem for a great while. For three hours a day is quite enough to satisfy the 
 
 # A Kindly Slavemaster is Still a Slavemaster {data-stack-name="Kindly Slavemaster"}
 
-## Relevance for This Week (Where We Left Off) {.smaller .crunch-title .title-10}
+> [What is] right, as the world goes, is only in question between **equals in power**; otherwise, the strong do as they please and the weak suffer what they must. [@thucydides_war_2013 c. 411 BC]
 
-* Can we develop **policy interventions** that **equalize power**, so that world looks like normative ethics from W03-W08 ("what is right")?
-* (Hidden antecedent: non-Nietzschean ethical framework e.g. Utilitarianism/Kant)
-* Point of prev slide: From now til W14, keep in mind how **definition of power** (and hence "effectiveness" of policy intervention) depends on **antecedent**
-  * [liberal]{.honk-honk} definition $\Rightarrow$ focus on equilibria (no injustice if bad thing doesn't happen in equilibrium)
-  * [republican]{.honk-honk} definition $\Rightarrow$ also take **off-equilibrium** possibilities into account (no injustice if bad thing doesn't happen in equilibrium **and** doesn't happen if one player deviates "on a whim") [@jacobs_operationalizing_2026 😉]
-* Prisoners' Dilemma 😫 $\prec$ Assurance Game 🤨 $\prec$ Invisible Hand Game 🥳
+## Operationalizing "Slavemaster": $\frac{\mathcal{P}(A)}{\mathcal{P}(B)} \rightarrow \infty$ {.smaller .crunch-title .title-10 .crunch-blockquote}
 
----
+> [What is] right, as the world goes, is only in question between **equals in power**; otherwise, the strong do as they please and the weak suffer what they must. [@thucydides_war_2013 c. 411 BC]
+
+* Can we develop **policy interventions** that **equalize power**, so that **normative** ethics ("what is right") is relevant?
+* **Definition of power** ($\leadsto$ "effectiveness" of policy intervention) depends on **antecedents**, which have changed from Thucydides ("ancient") to present ("modern") [@constant_liberty_1819]
+  * "Modern" definition: Focus on **equilibria** (no injustice if bad thing doesn't happen in equilibrium)
+  * "Ancient" definition: Also take **off-equilibrium** possibilities into account (no injustice if bad thing doesn't happen in equilibrium **and** doesn't happen if one player deviates "on a whim") [@jacobs_operationalizing_2026 😉🤑]
+* Prisoners' Dilemma 😫 $\overset{(?)}{\prec}$ Prisoners' Dilemma with *Contracting* 🤨 $\prec$ Invisible Hand Game 🥳
 
 
 
@@ -346,8 +347,8 @@ problem for a great while. For three hours a day is quite enough to satisfy the 
 <thead>
 <tr>
   <th></th>
-  <th align="center"><span class='honk-honk'>liberalism</span></th>
-  <th align="center"><span class='honk-honk'>republicanism</span></th>
+  <th align="center"><span class='honk-honk'>"liberal"</span></th>
+  <th align="center"><span class='honk-honk'>"republicanism"</span></th>
 </tr>
 </thead>
 <tbody>
