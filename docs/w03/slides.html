@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<link href="../favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
+
+  <meta name="author" content="Jeff Jacobs">
+  <title>DSAN 5450 – Week 3: Ethical Frameworks, Rights, and Discrimination</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-66f9af542dd46d3f093285690bf59aa5.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/simplemenu/simplemenu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Week 3: Ethical Frameworks, Rights, and Discrimination</h1>
+  <p class="subtitle"><em>DSAN 5450: Data Ethics and Policy</em><br><span class="subsubtitle">Spring 2026, Georgetown University</span></p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Jeff Jacobs
+</div>
+        <p class="quarto-title-affiliation">
+            <a href="mailto:jj1088@georgetown.edu" target="_blank"><code>jj1088@georgetown.edu</code></a>
+          </p>
+    </div>
+</div>
+
+  <p class="date">Wednesday, January 28, 2026</p>
+</section>
+<section id="schedule" class="title-slide slide level1 smaller small-title crunch-title crunch-callout center">
+<h1>Schedule</h1>
+<p>Today’s Planned Schedule:</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 62%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">Start</th>
+<th style="text-align: left;">End</th>
+<th style="text-align: left;">Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">3:30pm</td>
+<td style="text-align: left;">4:00pm</td>
+<td style="text-align: left;"><a href="#/where-we-left-off">More Toolkit →</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">4:00pm</td>
+<td style="text-align: left;">4:20pm</td>
+<td style="text-align: left;"><a href="#/recap-three-component-parts-of-machine-learning">Training Data = Human Labor →</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">4:20pm</td>
+<td style="text-align: left;">5:00pm</td>
+<td style="text-align: left;"><a href="#/metaethics">Metaethics →</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Break!</strong></td>
+<td style="text-align: left;">5:00pm</td>
+<td style="text-align: left;">5:10pm</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">5:10pm</td>
+<td style="text-align: left;">5:30pm</td>
+<td style="text-align: left;"><a href="#/individual-vs.-social-morality">Individual <span class="math inline">\(\leadsto\)</span> Social Ethics →</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;">5:30pm</td>
+<td style="text-align: left;">6:00pm</td>
+<td style="text-align: left;"><a href="#/enter-game-theory">Game Theory! →</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section>
+<section id="where-we-left-off" class="title-slide slide level1 text-90 center">
+<h1>Where We Left Off:</h1>
+<style>
+@font-face {
+    font-family: Monsters;
+    src: url('./assets/ScaryHorror-Regular.ttf');
+}
+.monsters-jj {
+    font-family: "Monsters", serif;
+    font-size: 120%;
+    color: red;
+}
+</style>
+<p><i class="bi bi-1-circle"></i> Data Science for Who? ✅</p>
+<p><i class="bi bi-2-circle"></i> No more <span class="monsters-jj">Humans vs.&nbsp;Computers</span> (<span class="math inline">\(\leadsto\)</span> Humans vs.&nbsp;Humans) ✅</p>
+<p><i class="bi bi-3-circle"></i> Operationalization ✅</p>
+<p><i class="bi bi-4-circle"></i> Apples-to-Apples Comparisons</p>
+<p><i class="bi bi-5-circle"></i> Implementation</p>
+<p><i class="bi bi-6-circle"></i> “Someone else’s problem”?</p>
+</section>
+<section id="operationalization" class="slide level2 smaller crunch-title crunch-li">
+<h2>Operationalization</h2>
+<div class="columns">
+<div class="column" style="width:68%;">
+<ul>
+<li>Think of claims commonly made based on “data”:
+<ul>
+<li>Markets create economic prosperity</li>
+<li>A glass of wine in the evening prevents cancer</li>
+<li>Policing makes communities safer</li>
+</ul></li>
+<li>How exactly are “prosperity”, “preventing cancer”, “policing”, “community safety” being <strong>measured</strong>? <strong>Who</strong> is measuring? Mechanisms for <strong>feedback</strong> <span class="math inline">\(\leadsto\)</span> <strong>change</strong>?</li>
+</ul>
+<center>
+<video id="video_shortcode_videojs_video1" height="300" class="video-js vjs-default-skin vjs-big-play-centered " controls="" preload="auto" data-setup="{}" title=""><source src="https://jpj.georgetown.domains/dsan5450-scratch/huey_trim.mp4"></video>
+</center>
+</div><div class="column" style="width:32%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/mismeasuring.jpg"></p>
+<figcaption><span class="citation" data-cites="stiglitz_mismeasuring_2010">Stiglitz et al. (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span></figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="what-is-being-compared" class="slide level2 smaller crunch-title title-11 crunch-ul table-80">
+<h2>What Is Being Compared? 🍎 🍊 🍐</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 26%">
+<col style="width: 32%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>🍎 Apples 🍎</th>
+<th>🍊 Oranges 🍊</th>
+<th>🍐 Pears 🍐</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>“Countries” in General</strong></td>
+<td>Polities w/250-500M people (US 335M, UP 250M, EU 450M)</td>
+<td>LatAm Polities w/10-30M people (Venezuela, Cuba, Haiti)</td>
+<td>Polities w/over 1 billion people (China 1.4B, India 1.4B, Africa 1.4B, N+S America 1B)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Polities independent since 1776 (US)</td>
+<td>Polities independent since 1990 (Namibia)</td>
+<td><a href="https://www.un.org/dppa/decolonization/en/nsgt">Non-self-governing</a> polities (Puerto Rico, Palestine, New Caledonia)</td>
+</tr>
+<tr class="odd">
+<td><strong>“Self-Sufficiency”</strong></td>
+<td>Colonizing polities (US)</td>
+<td>Polities colonized by them (Philippines)</td>
+<td>Non-colonized polities (Ethiopia, Thailand)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Polities w/infrastructure built up over <a href="https://www.nps.gov/articles/000/arrival-of-the-first-africans-in-1619.htm">250 yrs</a> via slave labor (US 🇺🇸)</td>
+<td>Polities populated by former slaves (Liberia 🇱🇷)</td>
+<td>Polities that <a href="https://en.wikipedia.org/wiki/Reparations_Agreement_between_Israel_and_the_Federal_Republic_of_Germany">paid reparations</a> to descendants of [certain] enslaved groups (Germany)</td>
+</tr>
+<tr class="odd">
+<td><strong>Political Systems</strong></td>
+<td>Democracies (US)</td>
+<td>Democracies til they democratically elected someone US didn’t like (Iran 1953, Guatemala 1954, Chile 1973)</td>
+<td>Non-democracies that violently repress democratic movements w/US arms (Saudi Arabia)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Polities enforcing 66 yr embargo on Cuba (US)</td>
+<td>Polities with 66 yr embargo imposed on them by US (Cuba)</td>
+<td>Polities without 66 yr embargo imposed on them by US (…)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="how-are-they-being-compared" class="slide level2 crunch-title title-09 text-75 crunch-quarto-layout-panel crunch-quarto-figure crunch-img crunch-blockquote">
+<h2>How Are They Being Compared?</h2>
+<div class="quarto-layout-panel" data-layout="[32,68]">
+<div class="quarto-layout-row">
+<div id="india-china-left" class="quarto-layout-cell" style="flex-basis: 32.0%;justify-content: flex-start;">
+<ul>
+<li>What metric? Over what timespan?</li>
+<li>What unit of obs? Agg function? Level of aggregation?</li>
+</ul>
+</div>
+<div id="india-china-right" class="quarto-layout-cell" style="flex-basis: 68.0%;justify-content: flex-start;">
+<div id="sen-quote" style="font-size: 64%;">
+<blockquote>
+<p>Comparing India’s death rate of 12 per thousand with China’s of 7 per thousand, and applying that difference to the Indian population of 781 million in 1986, we get an estimate of <strong>excess normal mortality</strong> in India of 3.9 million per year. This implies that every six years or so more people die in India because of its higher regular death rate than died in China in the gigantic famine of 1958-61. <strong>India fills its cupboard with more skeletons every six years than China put there in its years of shame.</strong> <span class="citation" data-cites="dreze_china_1991">(<a href="#/references" role="doc-biblioref" onclick="">Drèze and Sen 1991</a>)</span></p>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
+<div id="fig-life-expectancy" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-life-expectancy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/china_india.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Data from UN World Population Prospects (WPP) 2024"><img data-src="images/china_india.svg" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/china_india_adjusted.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: Data from UN World Population Prospects (WPP) 2024"><img data-src="images/china_india_adjusted.svg" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-life-expectancy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Data from <a href="https://population.un.org/wpp/">UN World Population Prospects (WPP) 2024</a>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="appleorange-criteria" class="slide level2">
+<h2>Apple/Orange Criteria</h2>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/china_india_us.svg"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/china_india_us_japan.svg"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="there-is-still-hope-i-promise" class="slide level2 smaller crunch-title crunch-ul crunch-blockquote crunch-li-8">
+<h2>…There is Still Hope! I Promise!</h2>
+<ul>
+<li>Apples-to-applies comparison via <strong>Statistical Matching</strong>:</li>
+<li><span class="citation" data-cites="lyall_divided_2020">Lyall (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span>: “Treating certain ethnic groups as second-class citizens […] leads victimized soldiers to subvert military authorities once war begins. The higher an army’s inequality, the greater its rates of desertion, side-switching, and casualties”</li>
+</ul>
+<blockquote>
+<p>Matching constructs <strong>pairs of belligerents</strong> that are <strong>similar</strong> across a wide range of traits thought to dictate battlefield performance but that <strong>vary</strong> in levels of prewar inequality. The more similar the belligerents, the better our estimate of inequality’s effects, as all other traits are shared and thus cannot explain observed differences in performance, helping assess how battlefield performance <strong>would have</strong> improved (declined) if the belligerent had a lower (higher) level of prewar inequality.</p>
+<p>Since [non-matched] cases are <strong>dropped</strong> […] selected cases are more representative of average belligerents/wars than outliers with few or no matches, [providing] surer ground for testing generalizability of the book’s claims than focusing solely on canonical but unrepresentative usual suspects (Germany, the United States, Israel)</p>
+</blockquote>
+</section>
+<section id="does-inequality-cause-poor-military-performance" class="slide level2 smaller crunch-title title-10 table-80">
+<h2>Does Inequality Cause Poor Military Performance?</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 35%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><br>Covariates</th>
+<th>Sultanate of Morocco<br> <em>Spanish-Moroccan War, 1859-60</em></th>
+<th>Khanate of Kokand<br> <em>War with Russia, 1864-65</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong><span class="math inline">\(X\)</span>: Military Inequality</strong></td>
+<td>Low (0.01)</td>
+<td>Extreme (0.70)</td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(\mathbf{Z}\)</span>: Matched Covariates:</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Initial relative power</td>
+<td>66%</td>
+<td>66%</td>
+</tr>
+<tr class="even">
+<td>Total fielded force</td>
+<td>55,000</td>
+<td>50,000</td>
+</tr>
+<tr class="odd">
+<td>Regime type</td>
+<td>Absolutist Monarchy (−6)</td>
+<td>Absolute Monarchy (−7)</td>
+</tr>
+<tr class="even">
+<td>Distance from capital</td>
+<td>208km</td>
+<td>265km</td>
+</tr>
+<tr class="odd">
+<td>Standing army</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Composite military</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Initiator</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Joiner</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>Democratic opponent</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Great Power</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>Civil war</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Combined arms</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Doctrine</td>
+<td>Offensive</td>
+<td>Offensive</td>
+</tr>
+<tr class="even">
+<td>Superior weapons</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>Fortifications</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Foreign advisors</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Terrain</td>
+<td>Semiarid coastal plain</td>
+<td>Semiarid grassland plain</td>
+</tr>
+<tr class="even">
+<td>Topography</td>
+<td>Rugged</td>
+<td>Rugged</td>
+</tr>
+<tr class="odd">
+<td>War duration</td>
+<td>126 days</td>
+<td>378 days</td>
+</tr>
+<tr class="even">
+<td>Recent war history w/opp</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Facing colonizer</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Identity dimension</td>
+<td>Sunni Islam/Christian</td>
+<td>Sunni Islam/Christian</td>
+</tr>
+<tr class="odd">
+<td>New leader</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Population</td>
+<td>8–8.5 million</td>
+<td>5–6 million</td>
+</tr>
+<tr class="odd">
+<td>Ethnoling fractionalization (ELF)</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr class="even">
+<td>Civ-mil relations</td>
+<td>Ruler as commander</td>
+<td>Ruler as commander</td>
+</tr>
+<tr class="odd">
+<td><strong><span class="math inline">\(Y\)</span>: Battlefield Performance:</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Loss-exchange ratio</td>
+<td>0.43</td>
+<td>0.02</td>
+</tr>
+<tr class="odd">
+<td>Mass desertion</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Mass defection</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr class="odd">
+<td>Fratricidal violence</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bro-snapped" class="slide level2 smaller p-80 cols-va">
+<h2>Bro Snapped</h2>
+<p><em>(I have no dog in this fight, I’m not trying to improve military performance of an army, but got damn)</em></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/lakers.gif" class="quarto-figure quarto-figure-center" width="500"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/tuck_em_in.jpg" class="quarto-figure quarto-figure-center" width="400"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="implementation" class="slide level2 smaller crunch-title title-11 crunch-quarto-layout-panel crunch-quarto-figure crunch-figcaption crunch-images">
+<h2>Implementation</h2>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clery.jpg"></p>
+<figcaption>From <span class="citation" data-cites="dignazio_data_2020">D’Ignazio and Klein (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span>, Ch. 6 (<a href="https://www.insidehighered.com/news/2014/07/17/colleges-often-win-reduction-fines-federal-campus-safety-violations">see also</a>)</figcaption>
+</figure>
+</div>
+</div>
+<div id="implementation-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/arresting_citizenship.jpeg" class="quarto-figure quarto-figure-center" width="410"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/weaver_fig62.jpeg" width="410"></p>
+<figcaption>From <span class="citation" data-cites="lerman_arresting_2014">Lerman and Weaver (<a href="#/references" role="doc-biblioref" onclick="">2014</a>)</span> (<a href="https://www.aeaweb.org/articles?id=10.1257/aer.101.7.3221">see also</a>)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="ethics-of-eliciting-sensitive-linguistic-data" class="slide level2 smaller crunch-title title-11">
+<h2>Ethics of Eliciting Sensitive Linguistic Data</h2>
+<div class="quarto-layout-panel" data-layout="[1,1]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="labov-left" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/labov_interview.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="From @labov_language_2013, pg. 4"><img data-src="images/labov_interview.jpeg" class="quarto-figure quarto-figure-center" alt="From Labov (2013), pg. 4"></a></p>
+</figure>
+</div>
+<figcaption>From <span class="citation" data-cites="labov_language_2013">Labov (<a href="#/references" role="doc-biblioref" onclick="">2013</a>)</span>, pg. 4</figcaption>
+</figure>
+</div>
+</div>
+<div id="labov-right" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/parsley.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="From “80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre”, NPR Parallels, 7 Oct 2017 [@bishop_80_2017]"><img data-src="images/parsley.jpeg" class="quarto-figure quarto-figure-center" alt="From “80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre”, NPR Parallels, 7 Oct 2017 (Bishop and Fernandez 2017)"></a></p>
+</figure>
+</div>
+<figcaption>From “80 Years On, Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre”, <em>NPR Parallels</em>, 7 Oct 2017 <span class="citation" data-cites="bishop_80_2017">(<a href="#/references" role="doc-biblioref" onclick="">Bishop and Fernandez 2017</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="privacy" class="slide level2 smaller crunch-title title-12 crunch-img crop-quarto-figure">
+<h2>Privacy</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/accuracy-privacy-tradeoff.svg" width="420"></p>
+<figcaption>Fig 1.3: “Accuracy-Privacy Loss Tradeoff”, from US Census Bureau (2021), <em><a href="https://www2.census.gov/library/publications/decennial/2020/2020-census-disclosure-avoidance-handbook.pdf">Disclosure Avoidance for the 2020 Census</a></em></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/census_epsilon_crop.svg" width="420"></p>
+<figcaption>“Privacy-Loss Budget (<span class="math inline">\(\varepsilon\)</span>) Acts as a Dial on Level of Noise”</figcaption>
+</figure>
+</div>
+</div></div>
+<div class="quarto-figure quarto-figure-center" style="margin-top: 20px;">
+<figure>
+<p><img data-src="images/seurat.jpg" width="390"></p>
+<figcaption>Seurat, <em>A Sunday Afternoon on the Island of La Grande Jatte</em>, <a href="https://commons.wikimedia.org/wiki/File:A_Sunday_on_La_Grande_Jatte,_Georges_Seurat,_1884.jpg">Wikimedia Commons</a></figcaption>
+</figure>
+</div>
+</section></section>
+<section>
+<section id="ethical-issues-in-applying-ml-to-particular-problems" class="title-slide slide level1 crunch-title smaller title-09 not-title-slide crunch-quarto-layout-panel crunch-quarto-figure center" data-stack-name="Applications">
+<h1>Ethical Issues in <em>Applying</em> ML to <em>Particular</em> Problems</h1>
+<p><em>(Ethical sanity check: what <strong>problem</strong> is this AI thing supposed to be a <strong>solution</strong> to?)</em></p>
+<center>
+<img data-src="images/airobot.jpeg" class="quarto-figure quarto-figure-center" width="800">
+</center>
+</section>
+<section id="facial-recognition-algorithms" class="slide level2 crunch-title smaller crunch-quarto-layout-panel crunch-img crunch-quarto-figure crunch-figcaption crunch-quarto-layout-cell crunch-p p-75">
+<h2>Facial Recognition Algorithms</h2>
+<p><em>(aka AI eugenics… but I didn’t say that out loud)</em></p>
+<div class="quarto-layout-panel" data-layout="[[1,1],[1,1]]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/facial-recognition.webp" width="400"></p>
+<figcaption><span class="citation" data-cites="facia.ai_facial_2023">Facia.ai (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/wellcome_jewish_type_crop.jpeg" width="340"></p>
+<figcaption><span class="citation" data-cites="wellcomecollection_composite_1890">Wellcome Collection (<a href="#/references" role="doc-biblioref" onclick="">1890</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pixel-face-unlock.webp" width="380"></p>
+<figcaption><span class="citation" data-cites="ouz_google_2023">Ouz (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/deep_learning_gay_detection_crop.jpeg" width="350"></p>
+<figcaption><span class="citation" data-cites="wang_deep_2018">Wang and Kosinski (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="llms-encode-existing-biases" class="slide level2 smaller crunch-title crunch-img cols-va crunch-quarto-figure">
+<h2>LLMs Encode Existing Biases</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/pronouns.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="From @schiebinger_machine_2020"><img data-src="images/pronouns.jpg" class="quarto-figure quarto-figure-center" style="width:75.0%" alt="From Schiebinger et al. (2020)"></a></p>
+</figure>
+</div>
+<figcaption>From <span class="citation" data-cites="schiebinger_machine_2020">Schiebinger et al. (<a href="#/references" role="doc-biblioref" onclick="">2020</a>)</span></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/gtranslate_2025.jpg"></p>
+<figcaption>From <a href="https://translate.google.com/?sl=en&amp;tl=de&amp;text=A%20nurse%0AA%20defendant&amp;op=translate">Google Translate</a> (22 Jan 2025)</figcaption>
+</figure>
+</div>
+</div></div>
+<div id="fig-chatgpt-gender" class="text-90 quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-chatgpt-gender-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 65%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Prompt</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>“Generate a reference letter for <strong>Kelly</strong>, a 22 year old <strong>female</strong> student at UCLA”</td>
+<td>“She is an engaged <strong>participant</strong> in group projects, demonstrating exceptional teamwork and collaboration skills […] a <strong>well-liked member</strong> of our community.”</td>
+</tr>
+<tr class="even">
+<td>“Generate a reference letter for <strong>Joseph</strong>, a 22 year old <strong>male</strong> student at UCLA”</td>
+<td>His enthusiasm and dedication have had a positive impact on those around him, making him a natural <strong>leader</strong> and <strong>role model</strong> for his peers.”</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-chatgpt-gender-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: <span class="citation" data-cites="wan_kelly_2023">Wan et al. (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span>, “Gender Biases in LLM-Generated Reference Letters”
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-is-to-be-done" class="slide level2 crunch-title smaller cols-va">
+<h2>What Is To Be Done?</h2>
+<p>&nbsp;<br></p>
+<div class="columns">
+<div class="column" style="width:35%;">
+<center>
+When to <strong>retain</strong> biases…
+</center>
+</div><div class="column" style="width:65%;">
+<center>
+…and when to <strong>debias</strong>
+</center>
+</div></div>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div id="fig-pronouns" class="lightbox quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-pronouns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/kozlowski_crop.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;3: From @kozlowski_geometry_2019"><img data-src="images/kozlowski_crop.jpeg" class="quarto-figure quarto-figure-center"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pronouns-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: From <span class="citation" data-cites="kozlowski_geometry_2019">Kozlowski et al. (<a href="#/references" role="doc-biblioref" onclick="">2019</a>)</span>
+</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<div id="fig-embedding-bias-right" class="lightbox quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-embedding-bias-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/neutralizing.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;4: From DeepLearning.AI’s Deep Learning course"><img data-src="images/neutralizing.png" class="quarto-figure quarto-figure-center"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-embedding-bias-right-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: From DeepLearning.AI’s <a href="https://www.coursera.org/lecture/nlp-sequence-models/debiasing-word-embeddings-zHASj" target="_blank">Deep Learning course</a>
+</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="recall-military-and-police-applications-of-ai" class="slide level2 crunch-title smaller title-11 text-65">
+<h2>Recall: Military and Police Applications of AI</h2>
+<p><a href="https://www.972mag.com/lavender-ai-israeli-army-gaza/">The AI Systems Directing Israel’s Bombing Spree in Gaza</a>: <strong>Lavender</strong> / <strong>Where’s Daddy?</strong></p>
+<blockquote>
+<p>For every junior Hamas operative that Lavender marked, it was permissible to kill up to <strong>15 or 20 civilians</strong>. […] In the event that the target was a senior Hamas official with the rank of battalion or brigade commander […] <strong>more than 100 civilians</strong></p>
+</blockquote>
+<blockquote>
+<p>During the early stages of the war, the army gave sweeping approval for officers to adopt Lavender’s kill lists, with no requirement to thoroughly check <strong>why the machine made those choices</strong> or to examine the raw intelligence data on which they were based. One source stated that human personnel often served only as a “rubber stamp” for the machine’s decisions, adding that, normally, they would personally devote only about <strong>“20 seconds” to each target</strong> before authorizing a bombing</p>
+</blockquote>
+</section>
+<section id="your-job-policy-whitepaper" class="slide level2 crunch-title crunch-ul">
+<h2>Your Job: Policy Whitepaper</h2>
+<ul>
+<li>So is technology/data science/machine learning…
+<ul>
+<li>“Bad” in and of itself?</li>
+<li>“Good” in and of itself? or</li>
+<li>A tool that can be used to both “good” and “bad” ends?</li>
+</ul></li>
+<li><em>“The master’s tools will never dismantle the master’s house”</em>… Who decided that the master “owns” the tools?</li>
+<li>How can we <strong>curtail</strong> some uses and/or <strong>encourage</strong> others?</li>
+<li>If only we had some sort of… institution… for <strong>governing</strong> its use in society… some sort of… <strong>govern</strong>… ment?</li>
+</ul>
+</section>
+<section id="from-week-7-on-you-work-at-a-think-tank" class="slide level2 smaller crunch-title title-10 crunch-images crunch-quarto-figure">
+<h2>From Week 7 On, You Work At A Think Tank</h2>
+<div class="quarto-layout-panel" data-layout="[3,4]">
+<div class="quarto-layout-row quarto-layout-valign-center">
+<div id="think-tank-left" class="quarto-layout-cell" style="flex-basis: 42.9%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/aei_crop.jpeg" class="quarto-figure quarto-figure-center" width="360"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/aei2_crop.jpeg" class="quarto-figure quarto-figure-center" width="360"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/morozov2.jpeg" width="360"></p>
+<figcaption><span class="citation" data-cites="morozov_socialize_2015">Morozov (<a href="#/references" role="doc-biblioref" onclick="">2015</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+<div id="think-tank-right" class="quarto-layout-cell" style="flex-basis: 57.1%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/techtopus.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="From @ames_techtopus_2014"><img data-src="images/techtopus.jpeg" class="quarto-figure quarto-figure-center" alt="From Ames (2014)"></a></p>
+</figure>
+</div>
+<figcaption>From <span class="citation" data-cites="ames_techtopus_2014">Ames (<a href="#/references" role="doc-biblioref" onclick="">2014</a>)</span></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="whatever-you-do-dont-be-bored" class="slide level2 smaller crunch-title title-12">
+<h2>“Whatever You Do… Don’t Be Bored”</h2>
+
+<img data-src="images/waking_life_dreamers.jpg" class="r-stretch quarto-figure-center"><p class="caption">Clip from Richard Linklater’s <em><a href="https://www.youtube.com/watch?v=J8jQuOjtPSQ">Waking Life</a></em></p></section></section>
+<section>
+<section id="machine-learning-at-30000-feet" class="title-slide slide level1 center" data-stack-name="Fair ML">
+<h1>Machine Learning at 30,000 Feet</h1>
+
+</section>
+<section id="three-component-parts-of-machine-learning" class="slide level2 scrollable">
+<h2>Three Component Parts of Machine Learning</h2>
+<ol type="1">
+<li>A cool algorithm 😎😍</li>
+<li>[Possibly benign but possibly biased] Training data ❓🧐</li>
+<li>Exploitation of below-minimum-wage human labor 😞🤐 <span class="citation" data-cites="dube_monopsony_2020">(<a href="#/references" role="doc-biblioref" onclick="">Dube et al. 2020</a>, like and subscribe yall ❤️)</span></li>
+</ol>
+</section>
+<section id="a-cool-algorithm" class="slide level2 smaller crunch-title">
+<h2>A Cool Algorithm 😎😍</h2>
+
+<img data-src="images/neural_network.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="context-free-fairness" class="slide level2 smaller title-12 crunch-title">
+<h2>Context-Free Fairness</h2>
+<ul>
+<li>Who Remembers <strong>🎉<em>Confusion Matrices!!!</em>🎉</strong></li>
+<li>Terrifyingly higher stakes than in DSAN 5000! Now <span class="math inline">\(D = 1\)</span> could literally mean <em>“shoot this person”</em> or <em>“throw this person in jail for life”</em></li>
+</ul>
+
+<img data-src="images/mitchell_et_al.svg" class="r-stretch quarto-figure-center"><p class="caption">From <span class="citation" data-cites="mitchell_algorithmic_2021">Mitchell et al. (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></p></section>
+<section id="categories-of-fairness-criteria" class="slide level2 smaller crunch-title">
+<h2>Categories of Fairness Criteria</h2>
+<style>
+#fairness-box .columns {
+  display: flex !important;
+  height: 100% !important;
+}
+
+#fairness-box .column {
+  /* border: 2px solid black !important; */
+  padding: 14px !important;
+  box-sizing: border-box !important;
+  /* height: 100% !important; */
+}
+</style>
+<p>Roughly, approaches to fairness/bias in AI can be categorized as follows:</p>
+<div id="fairness-box" style="border: 2px solid black !important; box-sizing: border-box !important;">
+<center>
+<strong>Fairness</strong>
+</center>
+<!-- start columns -->
+<div class="columns">
+<div class="column" style="width:46%;">
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center>
+<strong>Context-Free</strong>
+</center>
+<ul>
+<li>Single-Threshold Fairness</li>
+<li>Equal Prediction</li>
+<li>Equal Decision</li>
+</ul>
+</div>
+</div><div class="column" style="width:8%;">
+<center>
+<span style="font-size: 180% !important;"><i class="bi bi-repeat"></i>
+</span></center>
+</div><div class="column" style="width:46%;">
+<div style="border: 2px solid black !important; height: 100% !important;">
+<center style="margin: 0px !important;">
+<strong>Context-Sensitive</strong>
+</center>
+<ul>
+<li>Fairness via Similarity Metric(s)</li>
+<li>Causal Definitions</li>
+</ul>
+</div>
+</div></div>
+</div>
+<!-- end quarto box -->
+<ul>
+<li>[Week 3-4] <strong>Context-Free</strong> Fairness: Easier to grasp from CS/data science perspective; rooted in “language” of ML (you already know much of it, given DSAN 5000!)</li>
+<li>But <strong>easy-to-grasp notion</strong> <span class="math inline">\(\neq\)</span> <strong>“good” notion</strong>!</li>
+<li>Your job: push yourself to (a) consider what is getting <strong>left out of</strong> the context-free definitions, and (b) the <strong>loopholes</strong> that are thus introduced into them, whereby people/computers can discriminate while remaining “technically fair”</li>
+</ul>
+</section>
+<section id="laws-often-perfectly-technically-fair-context-free-fairness" class="slide level2 title-09">
+<h2>Laws: Often Perfectly “Technically Fair” (Context-Free Fairness)</h2>
+<blockquote>
+<p><em>Ah, la majestueuse égalité des lois, qui interdit au riche comme au pauvre de coucher sous les ponts, de mendier dans les rues et de voler du pain!</em></p>
+<p>(Ah, the majestic equality of the law, which prohibits rich and poor alike from sleeping under bridges, begging in the streets, and stealing loaves of bread!)</p>
+</blockquote>
+<p>Anatole France, <em>Le Lys Rouge</em> <span class="citation" data-cites="france_lys_1894">(<a href="#/references" role="doc-biblioref" onclick="">France 1894</a>)</span></p>
+</section>
+<section id="context-sensitive-fairness" class="slide level2 smaller crunch-title crunch-quarto-layout-panel crunch-images crunch-quarto-figure crunch-figcaption cols-va">
+<h2>Context-Sensitive Fairness… 🧐</h2>
+<div id="fig-amazon" class="quarto-float quarto-figure quarto-figure-center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-amazon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><em>Decisions at Individual Level (Micro)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/dc-big-inset.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:4%;">
+<p><span class="math inline">\(\leadsto\)</span></p>
+</div><div class="column" style="width:48%;">
+<p><em>Emergent Properties (Macro)</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/dc-big-chart.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-amazon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Figures from <span class="citation" data-cites="ingold_amazon_2016">Ingold and Soper (<a href="#/references" role="doc-biblioref" onclick="">2016</a>)</span>, <a href="https://www.bloomberg.com/graphics/2016-amazon-same-day/">“Amazon Doesn’t Consider the Race of its Customers. Should It?”</a>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="enables-inverse-fairness" class="slide level2 smaller crunch-title title-11 cols-va">
+<h2>…Enables INVERSE Fairness 🤯</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div id="fig-kasy" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-kasy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/kasy_abebe.jpeg" class="quarto-figure quarto-figure-center" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kasy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: From <span class="citation" data-cites="kasy_fairness_2021">Kasy and Abebe (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>, “Fairness, Equality, and Power in Algorithmic Decision-Making”
+</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div id="fig-bjorkegren" class="quarto-float quarto-figure quarto-figure-center" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-bjorkegren-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img data-src="images/inverse_fairness.jpeg" class="quarto-figure quarto-figure-center" style="width:95.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bjorkegren-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: From <span class="citation" data-cites="bjorkegren_machine_2022">Björkegren et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>, “(Machine) Learning What Policymakers Value”
+</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="context-sensitive-fairness-leftrightarrow-unraveling-history" class="slide level2 smaller crunch-title title-10 crunch-ul crunch-quarto-figure crunch-p crunch-blockquote cols-va crunch-li-8">
+<h2>Context-Sensitive Fairness <span class="math inline">\(\Leftrightarrow\)</span> Unraveling History</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li><p>News: <em>“A litany of events with no beginning or end, thrown together because they occurred at the same time, cut off from <strong>antecedents</strong> and <strong>consequences</strong>”</em> <span class="citation" data-cites="bourdieu_sociology_2010">(<a href="#/references" role="doc-biblioref" onclick="">Bourdieu 2010</a>)</span></p></li>
+<li><p>Do media outlets optimize for <strong>explaining</strong>? <strong>Understanding</strong>?</p></li>
+<li><p>Even in the eyes of the most responsible journalist I know, all media can do is point to things and say <em>“please, you need to study, understand, and [possibly] intervene here”</em>:</p>
+<blockquote>
+<p>If we [journalists] have any reason for our existence, it must be our ability to report history as it happens, so that no one will be able to say, “We’re sorry, we didn’t know—no one told us.” <span class="citation" data-cites="fisk_great_2005">(<a href="#/references" role="doc-biblioref" onclick="">Fisk 2005</a>)</span></p>
+</blockquote></li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/al_durrah.jpg" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/time_1982.jpg" class="quarto-figure quarto-figure-center" width="300"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="unraveling-history" class="slide level2 smaller crunch-title title-12 crunch-blockquote cols-va crunch-p">
+<h2>Unraveling History</h2>
+<p><span style="margin-bottom: 50px;"><em>(Someday I will do something with <a href="https://unravelhistory.com/">this</a>)</em></span></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<blockquote>
+<p>In the long evenings in West Beirut, there was time enough to consider where the core of the tragedy lay. In the age of Assyrians, the Empire of Rome, in the 1860s perhaps? In the French Mandate? In Auschwitz? In Palestine? In the rusting front-door keys now buried deep in the rubble of Shatila? In the 1978 Israeli invasion? In the 1982 invasion? Was there a point where one could have said: Stop, beyond this point there is no future? Did I witness the point of no return in 1976? That 12-year-old on the broken office chair in the ruins of the Beirut front line? Now he was, in his mid-twenties (if he was still alive), a gunboy no more. A gunman, no doubt… <span class="citation" data-cites="fisk_pity_1990">(<a href="#/references" role="doc-biblioref" onclick="">Fisk 1990</a>)</span></p>
+</blockquote>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/pflp_child.jpg"></p>
+<figcaption><a href="https://www.akg-images.co.uk/CS.aspx?VP3=SearchResult&amp;ITEMID=2UMEBM5U4433K&amp;POPUPPN=1&amp;POPUPIID=2UMEBM5U4433K">Image Source</a></figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="context-sensitive-fairness-leftrightarrow-unraveling-history-1" class="slide level2 smaller crunch-title title-10 crunch-ul crunch-quarto-figure crunch-p">
+<h2>Context-Sensitive Fairness <span class="math inline">\(\Leftrightarrow\)</span> Unraveling History</h2>
+<p><em><a href="#/ontology-individuals-and-structures">(Reminder: Miracle of Immaculate Genocide)</a></em></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="images/cheng_plane.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="From @cheng_art_2018 The Art of Logic [plz watch if you can!]"><img data-src="images/cheng_plane.jpg" class="quarto-figure quarto-figure-center" width="360" alt="From Cheng (2018) The Art of Logic [plz watch if you can!]"></a></p>
+</figure>
+</div>
+<figcaption>From <span class="citation" data-cites="cheng_art_2018">Cheng (<a href="#/references" role="doc-biblioref" onclick="">2018</a>)</span> <a href="https://www.youtube.com/watch?v=YHZKX0H6cUE"><em>The Art of Logic</em></a> [plz watch if you can!]</figcaption>
+</figure>
+</div>
+<!-- 17m 58s -->
+</div><div class="column" style="width:50%;">
+<!-- ![@giddens_central_1979](images/giddens.jpg){fig-align="center"} -->
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fight_you_for_it.webp" width="380"></p>
+<figcaption><span class="citation" data-cites="sandburg_selected_1926">Sandburg (<a href="#/references" role="doc-biblioref" onclick="">1926</a>)</span></figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="loose-ends" class="slide level2 smaller crunch-title">
+<h2>Loose Ends</h2>
+<ul>
+<li>Normative vs.&nbsp;Descriptive <strong>“Exploitation”</strong>: How can we disentangle these in our understanding of the term? <span class="citation" data-cites="roemer_free_1988">(<a href="#/references" role="doc-biblioref" onclick="">Roemer 1988</a>)</span>
+<ul>
+<li>Under descriptive definition, one can “exploit” <strong>corn</strong> or <strong>land</strong> in the exact same way one “exploits” <strong>human labor</strong> (just another type of input into the production process)</li>
+<li>Utility-wise, an economy <strong>with</strong> exploitation can be <strong>unambiguously better</strong> than one <strong>without</strong> exploitation: if 10 people <span class="math inline">\(H\)</span> own means of production, and 990 people <span class="math inline">\(S\)</span> own only their labor power (landless peasants, for example), allowing <span class="math inline">\(H\)</span> to exploit <span class="math inline">\(S\)</span> for a wage increases utility for both: <span class="math inline">\(H\)</span> acquires profits, <span class="math inline">\(S\)</span> doesn’t starve to death</li>
+</ul></li>
+<li>“Tracing back” causes / <strong>unraveling history</strong>
+<ul>
+<li><em>“The result [of modern 24-hour news cycles] is a litany of events with no beginning and no real end, thrown together only because they occurred at the same time[,] cut off from their <strong>antecedents</strong> and <strong>consequenes</strong>”</em> <span class="citation" data-cites="bourdieu_sociology_2010">(<a href="#/references" role="doc-biblioref" onclick="">Bourdieu 2010</a>)</span></li>
+</ul></li>
+</ul>
+<!-- ## Minimizing Loss Function Penalizing (Only) These Errors $\iff$ Single-Threshold Fairness {.smaller .crunch-title .title-09}
+
+* Loss function: $\ell(d, \widehat{d})$
+* An **optimal classifier** minimizes the expected loss: $\mathbb{E}[\ell(\widehat{d},d)]$
+* A **decision** is considered to be fair if individuals with the same score $s_i = \psi(v_i)$ are treated equally, regardless of group membership (Corbett-Davies & Goel 2018). -->
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-ames_techtopus_2014" class="csl-entry" role="listitem">
+Ames, Mark. 2014. <em>The <span>Techtopus</span>: <span>How Silicon Valley</span>’s Most Celebrated <span>CEOs</span> Conspired to Drive down 100,000 Tech Engineers’ Wages</em>. January 23. <a href="http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/">http://web.archive.org/web/20200920042121/https://pando.com/2014/01/23/the-techtopus-how-silicon-valleys-most-celebrated-ceos-conspired-to-drive-down-100000-tech-engineers-wages/</a>.
+</div>
+<div id="ref-bishop_80_2017" class="csl-entry" role="listitem">
+Bishop, Marlon, and Tatiana Fernandez. 2017. <span>“80 <span>Years On</span>, <span>Dominicans And Haitians Revisit Painful Memories Of Parsley Massacre</span>.”</span> <em>NPR: Parallels</em>, October 7. <a href="https://www.npr.org/sections/parallels/2017/10/07/555871670/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre">https://www.npr.org/sections/parallels/2017/10/07/555871670/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre</a>.
+</div>
+<div id="ref-bjorkegren_machine_2022" class="csl-entry" role="listitem">
+Björkegren, Daniel, Joshua E. Blumenstock, and Samsun Knight. 2022. <span>“(<span>Machine</span>) <span>Learning What Policies Value</span>.”</span> Pre-published. <a href="https://doi.org/10.48550/arXiv.2206.00727">https://doi.org/10.48550/arXiv.2206.00727</a>.
+</div>
+<div id="ref-bourdieu_sociology_2010" class="csl-entry" role="listitem">
+Bourdieu, Pierre. 2010. <em>Sociology Is a <span>Martial Art</span>: <span>Political Writings</span> by <span>Pierre Bourdieu</span></em>. New Press. <a href="https://books.google.com?id=Wi6PQwAACAAJ">https://books.google.com?id=Wi6PQwAACAAJ</a>.
+</div>
+<div id="ref-cheng_art_2018" class="csl-entry" role="listitem">
+Cheng, Eugenia. 2018. <em>The <span>Art</span> of <span>Logic</span> in an <span>Illogical World</span></em>. Basic Books. <a href="https://books.google.com?id=1QpHDwAAQBAJ">https://books.google.com?id=1QpHDwAAQBAJ</a>.
+</div>
+<div id="ref-dignazio_data_2020" class="csl-entry" role="listitem">
+D’Ignazio, Catherine, and Lauren F. Klein. 2020. <em>Data <span>Feminism</span></em>. MIT Press. <a href="https://books.google.com?id=zZnSDwAAQBAJ">https://books.google.com?id=zZnSDwAAQBAJ</a>.
+</div>
+<div id="ref-dreze_china_1991" class="csl-entry" role="listitem">
+Drèze, Jean, and Amartya Sen. 1991. <span>“China and <span>India</span>.”</span> In <em>Hunger and <span>Public Action</span></em>. Oxford University Press. <a href="https://doi.org/10.1093/0198283652.003.0011">https://doi.org/10.1093/0198283652.003.0011</a>.
+</div>
+<div id="ref-dube_monopsony_2020" class="csl-entry" role="listitem">
+Dube, Arindrajit, Jeff Jacobs, Suresh Naidu, and Siddharth Suri. 2020. <span>“Monopsony in <span>Online Labor Markets</span>.”</span> <em>American Economic Review: Insights</em> 2 (1): 33–46. <a href="https://doi.org/10.1257/aeri.20180150">https://doi.org/10.1257/aeri.20180150</a>.
+</div>
+<div id="ref-facia.ai_facial_2023" class="csl-entry" role="listitem">
+Facia.ai. 2023. <span>“Facial <span>Recognition Helps Vendors</span> in <span>Healthcare</span>.”</span> Facia.ai, June 26. <a href="https://facia.ai/blog/facial-recognition-healthcare/">https://facia.ai/blog/facial-recognition-healthcare/</a>.
+</div>
+<div id="ref-fisk_pity_1990" class="csl-entry" role="listitem">
+Fisk, Robert. 1990. <em>Pity the <span>Nation</span>: <span>Lebanon</span> at <span>War</span></em>. OUP Oxford. <a href="https://books.google.com?id=jAXrdqxcAaAC">https://books.google.com?id=jAXrdqxcAaAC</a>.
+</div>
+<div id="ref-fisk_great_2005" class="csl-entry" role="listitem">
+Fisk, Robert. 2005. <em>The <span>Great War</span> for <span>Civilisation</span>: <span>The Conquest</span> of the <span>Middle East</span></em>. Knopf Doubleday Publishing Group. <a href="https://books.google.com?id=jp2mZr7BoGsC">https://books.google.com?id=jp2mZr7BoGsC</a>.
+</div>
+<div id="ref-france_lys_1894" class="csl-entry" role="listitem">
+France, Anatole. 1894. <em>Le <span>Lys Rouge</span> (<span>The Red Lily</span>)</em>. G. Wells. <a href="https://books.google.com?id=sLLFz0rSakgC">https://books.google.com?id=sLLFz0rSakgC</a>.
+</div>
+<div id="ref-ingold_amazon_2016" class="csl-entry" role="listitem">
+Ingold, David, and Spencer Soper. 2016. <span>“Amazon <span>Doesn</span>’t <span>Consider</span> the <span>Race</span> of <span>Its Customers</span>. <span>Should It</span>?”</span> <em>Bloomberg</em>, April 21. <a href="http://www.bloomberg.com/graphics/2016-amazon-same-day/">http://www.bloomberg.com/graphics/2016-amazon-same-day/</a>.
+</div>
+<div id="ref-kasy_fairness_2021" class="csl-entry" role="listitem">
+Kasy, Maximilian, and Rediet Abebe. 2021. <span>“Fairness, <span>Equality</span>, and <span>Power</span> in <span>Algorithmic Decision-Making</span>.”</span> <em>Proceedings of the 2021 <span>ACM Conference</span> on <span>Fairness</span>, <span>Accountability</span>, and <span>Transparency</span></em> (New York, NY, USA), <span>FAccT</span> ’21, March 1, 576–86. <a href="https://doi.org/10.1145/3442188.3445919">https://doi.org/10.1145/3442188.3445919</a>.
+</div>
+<div id="ref-kozlowski_geometry_2019" class="csl-entry" role="listitem">
+Kozlowski, Austin C., Matt Taddy, and James A. Evans. 2019. <span>“The <span>Geometry</span> of <span>Culture</span>: <span>Analyzing</span> the <span>Meanings</span> of <span>Class</span> Through <span>Word Embeddings</span>.”</span> <em>American Sociological Review</em> 84 (5): 905–49. <a href="https://doi.org/10.1177/0003122419877135">https://doi.org/10.1177/0003122419877135</a>.
+</div>
+<div id="ref-labov_language_2013" class="csl-entry" role="listitem">
+Labov, William. 2013. <em>The <span>Language</span> of <span>Life</span> and <span>Death</span>: <span>The Transformation</span> of <span>Experience</span> in <span>Oral Narrative</span></em>. Cambridge University Press. <a href="https://books.google.com?id=1u6W7JoO2uIC">https://books.google.com?id=1u6W7JoO2uIC</a>.
+</div>
+<div id="ref-lerman_arresting_2014" class="csl-entry" role="listitem">
+Lerman, Amy E., and Vesla M. Weaver. 2014. <em>Arresting <span>Citizenship</span>: <span>The Democratic Consequences</span> of <span>American Crime Control</span></em>. University of Chicago Press. <a href="https://books.google.com?id=CWyXAwAAQBAJ">https://books.google.com?id=CWyXAwAAQBAJ</a>.
+</div>
+<div id="ref-lyall_divided_2020" class="csl-entry" role="listitem">
+Lyall, Jason. 2020. <em>Divided <span>Armies</span>: <span>Inequality</span> and <span>Battlefield Performance</span> in <span>Modern War</span></em>. Princeton University Press. <a href="https://books.google.com?id=A32pDwAAQBAJ">https://books.google.com?id=A32pDwAAQBAJ</a>.
+</div>
+<div id="ref-mitchell_algorithmic_2021" class="csl-entry" role="listitem">
+Mitchell, Shira, Eric Potash, Solon Barocas, Alexander D’Amour, and Kristian Lum. 2021. <span>“Algorithmic <span>Fairness</span>: <span>Choices</span>, <span>Assumptions</span>, and <span>Definitions</span>.”</span> <em>Annual Review of Statistics and Its Application</em> 8 (1): 141–63. <a href="https://doi.org/10.1146/annurev-statistics-042720-125902">https://doi.org/10.1146/annurev-statistics-042720-125902</a>.
+</div>
+<div id="ref-morozov_socialize_2015" class="csl-entry" role="listitem">
+Morozov, Evgeny. 2015. <span>“Socialize the <span>Data Centres</span>!”</span> <em>New Left Review</em>, no. 91 (February): 45–66.
+</div>
+<div id="ref-ouz_google_2023" class="csl-entry" role="listitem">
+Ouz. 2023. <span>“Google <span>Pixel</span> 8 <span>Face Unlock Vulnerability Discovered</span>, <span>Allowing Others</span> to <span>Unlock Devices</span>.”</span> Gizmochina, October 16. <a href="https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/">https://www.gizmochina.com/2023/10/16/google-pixel-8-face-unlock/</a>.
+</div>
+<div id="ref-roemer_free_1988" class="csl-entry" role="listitem">
+Roemer, John E. 1988. <em>Free to <span>Lose</span>: <span>An Introduction</span> to <span>Marxist Economic Philosophy</span></em>. Harvard University Press.
+</div>
+<div id="ref-sandburg_selected_1926" class="csl-entry" role="listitem">
+Sandburg, Carl. 1926. <em>Selected <span>Poems</span></em>. Houghton Mifflin Harcourt. <a href="https://books.google.com?id=NmUWLxwhsWMC">https://books.google.com?id=NmUWLxwhsWMC</a>.
+</div>
+<div id="ref-schiebinger_machine_2020" class="csl-entry" role="listitem">
+Schiebinger, Londa, Ineke Klinga, Hee Young Paik, Inés Sánchez de Madariaga, Martina Schraudner, and Marcia Stefanick. 2020. <em>Machine <span>Translation</span>: <span>Gendered Innovations</span></em>. <a href="http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2">http://genderedinnovations.stanford.edu/case-studies/nlp.html#tabs-2</a>.
+</div>
+<div id="ref-stiglitz_mismeasuring_2010" class="csl-entry" role="listitem">
+Stiglitz, Joseph E., Amartya Sen, and Jean-Paul Fitoussi. 2010. <em>Mismeasuring <span>Our Lives</span>: <span>Why GDP Doesn</span>’t <span>Add Up</span></em>. The New Press.
+</div>
+<div id="ref-wan_kelly_2023" class="csl-entry" role="listitem">
+Wan, Yixin, George Pu, Jiao Sun, Aparna Garimella, Kai-Wei Chang, and Nanyun Peng. 2023. <span>“<span>‘<span>Kelly</span> Is a <span>Warm Person</span>, <span>Joseph</span> Is a <span>Role Model</span>’</span>: <span>Gender Biases</span> in <span>LLM-Generated Reference Letters</span>.”</span> <em><span>EMNLP</span> 2023</em> (Singapore), December, 3730–48. <a href="https://doi.org/10.18653/v1/2023.findings-emnlp.243">https://doi.org/10.18653/v1/2023.findings-emnlp.243</a>.
+</div>
+<div id="ref-wang_deep_2018" class="csl-entry" role="listitem">
+Wang, Yilun, and Michal Kosinski. 2018. <span>“Deep Neural Networks Are More Accurate Than Humans at Detecting Sexual Orientation from Facial Images.”</span> <em>Journal of Personality and Social Psychology</em> 114 (2): 246–57. <a href="https://doi.org/10.1037/pspa0000098">https://doi.org/10.1037/pspa0000098</a>.
+</div>
+<div id="ref-wellcomecollection_composite_1890" class="csl-entry" role="listitem">
+Wellcome Collection. 1890. <em>Composite <span>Photographs</span>: "<span>The Jewish Type</span>"</em>. <a href="https://wellcomecollection.org/works/ngq29vyw">https://wellcomecollection.org/works/ngq29vyw</a>.
+</div>
+</div>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p>DSAN 5450 Week 3: Ethical Frameworks</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/simplemenu/simplemenu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'simplemenu': {"menubarclass":"menubar","menuclass":"menu","activeclass":"active","activeelement":"li","flat":true,"barhtml":{"header":"<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>","footer":""},"scale":0.5},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, Simplemenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+                // target, if specified
+                link.setAttribute("target", "_blank");
+                if (link.getAttribute("rel") === null) {
+                  link.setAttribute("rel", "noopener");
+                }
+                // default icon
+                link.classList.add("external");
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <script>videojs(video_shortcode_videojs_video1);</script>
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+    (function() {
+      let previousOnload = window.onload;
+      window.onload = () => {
+        if (previousOnload) {
+          previousOnload();
+        }
+        lightboxQuarto.on('slide_before_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          const href = trigger.getAttribute('href');
+          if (href !== null) {
+            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+            if (imgEl !== null) {
+              const srcAttr = imgEl.getAttribute("src");
+              if (srcAttr && srcAttr.startsWith("data:")) {
+                slideConfig.href = srcAttr;
+              }
+            }
+          } 
+        });
+      
+        lightboxQuarto.on('slide_after_load', (data) => {
+          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(slideNode);
+          }
+        });
+      
+      };
+      
+    })();
+              </script>
+    
+
+</body></html>

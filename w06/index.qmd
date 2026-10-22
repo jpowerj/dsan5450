@@ -46,7 +46,6 @@ format:
 
 :::
 
-
 # Schedule {.smaller .small-title .crunch-title .crunch-callout data-name="Schedule"}
 
 Today's Planned Schedule:
@@ -351,8 +350,6 @@ all individuals $x$ and $y$, we have
 
 ## Eureka Moment (for Midterm Prep Purposes) {.not-title-slide .title-09 .crunch-title .crunch-ul}
 
-{{< include ../dsan-globals/_globals-gg.qmd >}}
-
 * I totally forgot to mention: John Stuart Mill, the progenitor of what we today identify as **utilitarianism**, was himself tortured mercilessly, by his father John Mill (bffs with Jeremy Bentham) for the "greater good of society"!
 
 ![](images/js-mill-eureka.jpg){fig-align="center"}
@@ -378,11 +375,12 @@ all individuals $x$ and $y$, we have
 ```{r}
 #| label: random-walk-16
 #| code-fold: true
-library(tibble)
-library(ggplot2)
-library(ggExtra)
-library(dplyr)
-library(tidyr)
+source("../dsan-globals/_globals.r")
+library(tibble) |> suppressPackageStartupMessages()
+library(ggplot2) |> suppressPackageStartupMessages()
+library(ggExtra) |> suppressPackageStartupMessages()
+library(dplyr) |> suppressPackageStartupMessages()
+library(tidyr) |> suppressPackageStartupMessages()
 # From McElreath!
 gen_histo <- function(reps, num_steps) {
   support <- c(-1,1)

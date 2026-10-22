@@ -58,8 +58,6 @@ Today's Planned Schedule:
 
 {{< include ../dsan-globals/_globals-tex.qmd >}}
 
-{{< include ../dsan-globals/_globals-gg.qmd >}}
-
 # <i class='bi bi-1-circle'></i> Context-Free <br>[$\rightarrow$ <i class='bi bi-2-circle'></i> Context-Sensitive]{.cbg-darker} {.title-12 data-stack-name="Context-Free Fairness"}
 
 ## First: Imm[a]{.boxed-crunch}nent Critique {.crunch-title .crunch-ul .text-90}
