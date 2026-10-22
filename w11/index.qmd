@@ -1,0 +1,276 @@
+---
+title: "Week 11: Fear and Loathing on the Pareto Frontier"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2026, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
+bibliography: "../_DSAN5450.bib"
+date: 2026-04-01
+date-format: full
+lecnum: 11
+categories:
+  - "Class Sessions"
+format:
+  revealjs:
+    df-print: kable
+    footer: "DSAN 5450 Week 11: {{< var w11.footer >}}"
+    output-file: "slides.html"
+    html-math-method: mathjax
+    link-external-icon: true
+    link-external-newwindow: true
+    theme: [default, "../dsan-globals/jjquarto.scss"]
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css'>"
+    scrollable: true
+    slide-number: true
+    simplemenu:
+      flat: true
+      barhtml:
+        header: "<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>"
+      scale: 0.5
+    revealjs-plugins:
+      - simplemenu
+  html:
+    df-print: kable
+    css: "../dsan-globals/jjstyles.css"
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
+
+# Schedule {.smaller data-stack-name="Fishers' Dilemma"}
+
+| | Start | End | Topic |
+|:- |:- |:- |:- |
+| **Lecture** | 3:30pm | 4:00pm | [A Whirlwind Tour of Prisoners' Dilemmas](#policy-evaluation-via-inverse-fairness) |
+| | 4:00pm | 4:50pm | [Policy Interventions: Transforming Prisoners' Dilemmas into Assurance/Invisible Hand Games](#policy-interventions-fish-dilemmas-mapsto-assurance-games)
+| **Break!** | 5:00pm | 5:10pm | |
+| | 5:10pm | 6:00pm | ["Inverse Fairness"(!): Machine-Learning What Policies Value](#policy-evaluation-via-inverse-fairness) |
+
+## Where We Left Off... {.smaller .crunch-title .title-11}
+
+*Prisoners' Dilemma feels like a silly math/econ problem at first... then you get brainwashed by pol econ PhD and suddenly see it at the "core" of 95% of global issues*
+
+{{< include ../dsan-globals/_globals-tex.qmd >}}
+
+::: {.hidden}
+
+```{r}
+#| label: source-globals
+source("../dsan-globals/_globals.r")
+```
+
+:::
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![Bowles & Jayadev (2014), ["One Nation Under Guard"](https://archive.nytimes.com/opinionator.blogs.nytimes.com/2014/02/15/one-nation-under-guard/), *NYT*](images/one-nation-under-guard.jpeg){fig-align="center" width="70%"}
+
+:::
+::: {.column width="50%"}
+
+![**Newfoundland: cod landings in tons (1851–2014):** In the 1960s new fishing technologies allowed a dramatic increase in cod fishing, far outpacing the capacity of the fish to reproduce, and leading to total collapse by 1992 when the Canadian government banned fishing entirely. Restoration of fishing stocks to the sustainable levels of the past may occur by the 2030s.](images/cod.svg){fig-align="center"}
+
+:::
+::::
+
+## Fishers' Dilemma (Our "Core" Prisoners' Dilemma) {.smaller .title-10 .crunch-title .crunch-ul .crunch-p .crunch-quarto-figure .crunch-quarto-layout-cell .crunch-quarto-layout-panel .crunch-math}
+
+*Single, **unique** Nash equilibrium, and it's **Pareto inferior**<br>(looming in background: **unsustainable** if total hours/day > 14)*
+
+:::: {.columns}
+::: {.column width="45%"}
+
+<center>
+
+The "Iterated Elimination" Result
+
+{{< include ../_components/_dilemma-nash.qmd >}}
+
+Boxes = **B**est **R**esponses:
+
+</center>
+
+$$
+\begin{aligned}
+{\color{#0072b2}\text{BR}_A}({\color{#e69f00}\overset{B}{6\textrm{h}}}) &= {\color{#0072b2}8\textrm{h}}, \; {\color{#0072b2}\text{BR}_A}({\color{#e69f00}\overset{B}{8\textrm{h}}}) = {\color{#0072b2}8\textrm{h}} \\
+{\color{#e69f00}\text{BR}_B}(
+  {\color{#0072b2}\underset{A}{6\textrm{h}}}
+) &= {\color{#e69f00}8\textrm{h}}, \; {\color{#e69f00}\text{BR}_B}(
+  {\color{#0072b2}\underset{A}{8\textrm{h}}}
+) = {\color{#e69f00}8\textrm{h}}
+\end{aligned}
+$$
+
+Best response is **always** $\text{8h}$, no matter what other player does!
+
+$$
+\begin{aligned}
+\implies &{\color{#0072b2}\mathbb{E}[u_A]} = {\color{#e69f00}\mathbb{E}[u_B]} = 0.4 \text{ for now}, \\
+&\leadsto \; ? \text{ once fishery collapses (}\textstyle\sum\text{hrs} = 16\text{)}
+\end{aligned}
+$$
+
+:::
+::: {.column width="55%"}
+
+<center>
+
+Pareto Dominance
+
+</center>
+
+![](images/pd_pareto.svg){fig-align="center" width="95%"}
+
+:::
+::::
+
+
+## Policy Intervention <i class='bi bi-1-circle'></i>: Allow *Contracts* {.text-65 .math-80 .crunch-title .title-10 .crunch-ul .crunch-quarto-figure .crunch-li-8 .crunch-p}
+
+*$\leadsto$ Operationalizing* [[[Power]{.alg}](./images/redacted_crop.jpg){target='_blank'}]{.boxed-cb1} *as "second best" **outside option(s)***
+
+* **Equally** good **outside options** $\implies$ can **contract** to Pareto-optimal point $o^P$
+* $B$ has [**better outside options**]{.boxed-cb1} $\implies$ can make **take it or leave it** offer to $A$:
+  * "You ($A$) fish 6 hrs **all the time**. I ($B$) fish 6 hrs **41% of time**, 8 hrs otherwise"
+
+:::: {.columns}
+::: {.column width="48%"}
+
+Slightly better for $A$ $\implies$ $A$ accepts:
+
+$$
+\begin{aligned}
+\mathbb{E}[u_A(a_A = \textsf{Reject})] &= \overset{\text{STTP}}{\boxed{0.4}} \; \text{ (prev slide) } \overset{\text{LTTP}}{\color{#e69f00}\boxed{\color{black}\leadsto -\infty}} \\
+\mathbb{E}[u_A(a_A = \textsf{Accept})] &= 0.41\cdot 1 + 0.59 \cdot 0 = \boxed{0.41} \\
+\mathbb{E}[u_B(a_A = \textsf{Reject})] &= \boxed{0.4} \; \text{ (prev slide) } {\color{#e69f00}\boxed{\color{black}\leadsto 0.39}} \\
+\mathbb{E}[u_B(a_A = \textsf{Accept})] &= 0.41\cdot 1 + 0.59 \cdot 1.2 = \boxed{1.118}
+\end{aligned}
+$$
+
+<i class="bi bi-exclamation-circle"></i> *$B$'s offer = **credible threat** in both short and long term; same threat from $A$ would **not** be credible ($B$ knows $A$ would eventually die: $u_A \leadsto -\infty$)*
+
+<i class="bi bi-exclamation-circle"></i> *HW4: **observe** policy outcome $o^{\text{TIOLI}}_{B \rightarrow A}$ $\Leftrightarrow$ social welfare weights $\omega_B > \omega_A$*
+
+:::
+::: {.column width="52%"}
+
+![](images/pd_contracts.svg){fig-align="center" width="90%"}
+
+:::
+::::
+
+## Policy Intervention <i class='bi bi-2-circle'></i>: *Fines* for Overfishing {.smaller .crunch-title .title-11 .crunch-p .crunch-li-8}
+
+*$\leadsto$ Weber's **descriptive** definition of "The State": Agent with **Monopoly on Legal Use of Force*** [@weber_vocation_1919] *(remember him?)*
+
+* Notice: Previous "intervention" was actually **self-enforcing**! However, outcome was...
+  * <i class='bi bi-1-circle'></i> Determined entirely by **asymmetric power**, and
+  * <i class='bi bi-2-circle'></i> **Took no account** of anyone in society besides two fishers!
+  * *(Thought experiment: if **both** had "good" outside options, best for them could be fish cod to extinction then move on to "second-best" option $u = 0.4 \leadsto 0.39$)*
+* If we identify [**asymmetry of power** $\leadsto$ asymmetry of outcomes] as harm bc **unfair** (reflective equilibrium), one "follow-up" policy intervention is **make $A$'s outside options better** (welfare, job retraining, etc... but who sets these up?)
+* If we identify [**ecological damage**] as harm, this forms independent "dimension" of policy analysis: if coastal waters are "public good" of Canada, may need some sort of agent **representing** Canada, to **govern** use of resource 🤔 some sort of... **representative government** 🤔 with [power]{.boxed-cb1} to issue fines / ban fishing 🤔
+
+## ...Fines are "Easy" from Economic Perspective {.smaller .crunch-title .title-10 .crunch-blockquote .crunch-ul .crunch-p}
+
+> An economic transaction is a **solved political problem**. Economics has gained the title "Queen of the Social Sciences" by choosing solved political problems as its domain. [@lerner_economics_1972]
+
+* If we *assume* a "well-functioning" state—power to enforce fines, no corruption, etc.—and that this state has "agreed" to use fines to resolve the issue...
+* Calculation of "optimal fines" is a "solved" problem in economics (like encryption in CS): A [**Pigouvian tax**](https://en.wikipedia.org/wiki/Pigouvian_tax) just **fines agent $B$** an amount equal to the **externality(!)** their defection imposes on $A$, then **redistributes** this collected fine **back to $A$**:
+
+:::: {.columns}
+::: {.column width="45%"}
+::: {#fig-dilemma-notax}
+
+{{< include ../_components/_dilemma-nofines.qmd >}}
+
+Original Fishers' Dilemma, with Pigou fines in parentheses under "agreement-violating" outcomes
+:::
+:::
+::: {.column width="10%"}
+
+<center>
+
+$\leadsto$<br>*New game with tax applied*
+
+</center>
+
+:::
+::: {.column width="45%"}
+::: {#fig-dilemma-pigou}
+
+{{< include ../_components/_dilemma-pigou.qmd >}}
+
+The Fishers' Dilemma with a **Pigou tax** for unilaterally Fishing 8h
+:::
+:::
+::::
+
+## Policy Interventions: Fish Dilemmas $\leadsto$ Assurance Games {.title-07 .crunch-title .inline-90 .crunch-li-5 .text-85}
+
+* To "escape" prisoners' dilemma, we had to **change the rules of the game** (*permanently*: a **one-time** fine would **not** work)
+* Fishers' Dilemma:
+  * No [institutions](https://www.youtube.com/watch?v=LoF_a0-7xVQ): $a_A, a_B \in \{6\text{ hr}, 8\text{ hr}\}$
+  * Institutions (courts **or** social norms): $\{\text{Accept}, \text{Reject}\}$
+* Driving "game" (two cars pull up at intersection):
+  * No institutions: $a_A, a_B \in \{\text{Stop}, \text{Drive}\}$
+  * Institutions (stoplights installed by govt **or** community agreement): $a_A, a_B \in \{\text{Obey Light}, \text{Run Light}\}$
+* If policy issue well-modeled by **Assurance Game**, however, may only need to **"nudge"** (**one-time** intervention) $\leadsto$ new permanent Pareto-optimal equilibrium (Nash $\implies$ **self-enforcing!**)
+
+## Assurance Game {.crunch-title .title-11 .crunch-ul .inline-90 .text-90 .crunch-li-8}
+
+* **Multiple** equilibria; the particular outcome we observe is a function of **history** (path dependency)
+* Drive-on-left vs. drive-on-right: Assurance game where **neither** equilibrium Pareto-dominates other option
+  * Swedish [*Dagen H*](https://en.wikipedia.org/wiki/Dagen_H): Nudge from $o^*_{\textsf{L}} = o(\textsf{L},\textsf{L})$ to $o^*_{\textsf{R}} = o(\textsf{R},\textsf{R})$
+  * Either eq is self-reinforcing! (Unless you... like dying)
+
+:::: {.columns}
+::: {.column width="48%"}
+
+* QWERTY vs. DVORAK / Palanpur farmers: Assurance game where observed equilibrium **Pareto inferior**
+
+:::
+::: {.column width="52%"}
+
+<center>
+
+{{< include ../_components/_assurance-nash.qmd >}}
+
+</center>
+
+:::
+::::
+
+## Invisible Hand Game {.crunch-title .title-09 .text-80 .crunch-blockquote .crunch-ul .crunch-li-8}
+
+* Single, **unique** Nash equilibrium, and it's **Pareto efficient**
+* $\Rightarrow$ Acting in self interest $\leadsto$ best possible outcome
+
+:::: {.columns}
+::: {.column width="50%"}
+
+> It is not from the benevolence of the butcher, the brewer, or the baker that we expect our meal, but from their regard to their own interest [@smith_wealth_1776]
+
+:::
+::: {.column width="50%"}
+
+{{< include ../_components/_invisible-hand-nash.qmd >}}
+
+:::
+::::
+
+* *Wealth of Nations* **SPOILER**: The wealth comes from **division of labor**<br>[and also dumbleydore, and semperus snake, and even poor ron the weasel, who never deserved such a fate]{style="font-size: 50%; line-height: 0.5;"}
+
+> [...I am once again reminding you that] An economic transaction is a **solved political problem**. Economics gained the title "Queen of the Social Sciences" by choosing solved political problems as its domain
+
+## References
+
+::: {#refs}
+:::

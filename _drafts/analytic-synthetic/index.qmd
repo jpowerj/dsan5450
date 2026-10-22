@@ -1,0 +1,28 @@
+---
+title: "HW1 Detail: The Analytic-Synthetic Distinction"
+author: "Jeff Jacobs"
+sidebar: mainnav
+date: 2026-02-05
+bibliography: "../../_DSAN5450.bib"
+relevance: "HW1"
+categories:
+  - "Extra Writeups"
+format:
+  html:
+    cache: true
+    df-print: kable
+    html-math-method: mathjax
+    toc: true
+    link-external-newwindow: true
+    link-external-icon: true
+    echo: true
+    code-fold: show
+---
+
+[Analytic-Synthetic Distinction](https://en.wikipedia.org/wiki/Analytic%E2%80%93synthetic_distinction), Wikipedia
+
+## References
+
+::: {#refs}
+:::
+

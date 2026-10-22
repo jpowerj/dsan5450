@@ -1,0 +1,67 @@
+---
+title: "Essentially Contested Concepts"
+author: "Jeff Jacobs"
+sidebar: mainnav
+date: 2025-01-29
+bibliography: "../../_DSAN5450.bib"
+relevance: "Weeks 1-3"
+categories:
+  - "Extra Writeups"
+format:
+  html:
+    df-print: kable
+    html-math-method: mathjax
+---
+
+Since I know that I often mention things in passing and quickly jump to the next topic, I hope this writeup can serve to (a) take the time that some of yall's in-class comments deserve(!), and (b) tie together the "core" class content (the stuff on the slides and in the homework) with this "peripheral" class content (the stuff that comes up during sidebars/questions/comments)
+
+## Achieving Intersubjective "Truth"
+
+I (thankfully) remembered to describe Quine's "gavagai" problem in class today, where the takeaway was that we never technically "know" the meaning of a word in a definitive sense---we are always "triangulating" the meaning by collecting more and more "data" in the form of **contexts** in which we observe the word being used. In the gavagai example from class, we have the following process of narrowing-in on the meaning of "gavagai":
+
+1. A **rabbit** runs by, and a member of the group whose language we don't know points at the rabbit and says "gavagai!" $\leadsto$ "gavagai" could mean "rabbit", or "furry animal", or "thing with legs", or "thing with less than 5 legs", or "thing with less than 6 legs", or "thing with less than 7 legs", etc... (an infinitude of possible meanings)
+2. Later that day, someone from the same linguistic community points at a **table** with **6 legs** and says "gavagai!" $\leadsto$ we can now eliminate the "rabbit" and "furry animal" hypotheses, as well as the "thing with less than 5 legs" and "thing with less than 6 legs" hypotheses.
+3. We continue this (when it comes to our first language, it's a process running from early childhood onwards), such that we (asymptotically) converge to a fairly stable distribution of how likely and unlikely we think the different hypotheses are.
+
+One thing that emerges, though, is that we can also start to "mark out" different classes of words, spanning from:
+
+* Those which are **easiest to achieve intersubjective agreement** on, such as the words in a sentence like: *"this table is taller than that table"*, which can be intersubjectively verified by allowing all the subjects to e.g. use their depth perception and/or a meter stick to measure the two tables (our distribution of hypotheses around these words converge to a stable state pretty quickly), to
+* Those which are more difficult because we **don't have an intersubjectively-agreed meter stick**, like *"I love you more than they love you"*: words whose subjective meanings (i.e., our distributions of hypotheses about what these words refer to or demarcate in the world) are frequently challenged and updated as we grow and have more experiences; these latter cases are why I wish I could've played this full video that I summarized in class!
+
+  {{< video https://www.youtube.com/watch?v=iDGMS_tjRxU >}}
+
+## Essentially-Contested Terms
+
+If this was just a class on the **language** of ethics, we could in a sense stop there (for example, the range of language covered in the above two bullet points corresponds to a large chunk of the linguistic theory in @hare_language_1952). But, in a class where the point of all this is to build up frameworks for **ethics and policy**, we can posit a **third** type of word, which @connolly_terms_1974 calls an **"essentially contested"** word or concept.
+
+The easiest way to understand what might qualify as an "essentially contested" word is probably through example. So, as the first example that comes to my mind, consider how US schools usually ask students to stand up at the beginning of each school day, put their hands to their hearts, and recite the [Pledge of Allegiance](https://en.wikipedia.org/wiki/Pledge_of_Allegiance), which ends with the phrase:
+
+> With **liberty** and **justice** for all.
+
+So, we can take the two bolded words there, and we can think about how it's probably going to be **more difficult** to achieve intersubjective agreement about what these terms mean to people in the US than, say, "fish" or "pencil", precisely because there are **higher stakes**: intersubjective disagreements about what "liberty" and "justice" mean cut straight to the core of what it means to be "American" in a way that disagreements about "fish" or "pencil" do not.
+
+This idea can also help shed light on how, for example, the relationship between **political power** and the **degree of linkage** one can establish between one's own political program and the meanings of these words. To put it in a less wordy way: the success of a political party often correlates with how well it can "fit" its own program to particular subjective meanings of these terms held among constituents. So that, in the US, there are political struggles in which debates (usually implicitly, but sometimes explicitly) are waged over how the politician will uphold the "liberty" and "justice" that is in constituents' heads better than their opponents.
+
+Or, to make it less US-centric, someone in China may succeed or fail to succeed in enacting some sort of change in the system to the extent that they can link their program with a particular meaning of **中国特色社会主义** or **[socialism (社会主义) with Chinese characteristics (中国特色)](https://en.wikipedia.org/wiki/Socialism_with_Chinese_characteristics)**---a term which appears many times in this famous [2013 speech](https://syss.12371.cn/2015/05/18/ARTI1431918530288642.shtml) from Xi Jinping, for example, which has the title (using my terrible Chinese translation skills but I think I got this bc I cross-checked it with the English translation):
+
+> 毫不动摇坚持和发展**中国特色社会主义**
+> 
+> (Uphold and Extend **Socialism with Chinese Characteristics**)
+
+and which makes the argument that (using my terrible Chinese comprehension skills to their maximum degree here, since I didn't cross-check the whole thing), the tenets of Xi Jinping Thought that are outlined in the speech are a "best" implementation of 中国特色社会主义, among ideas/proposals being discussed at the end of Hu Jintao's term as CCP General Secretary in 2012.
+
+## Policy Whitepaper Takeaway: *Operationalize*!
+
+The takeaway from these two examples to your policy whitepapers, therefore, can be summarized like: you're going to make your task harder than it needs to be if you say that (e.g.) your policy is better than existing policies because it better upholds "liberty", or "justice", or "Socialism with Chinese Characteristics", as such... For someone to accept that type of argument, they would probably also have to share a whole lot of other "background" antecedents with you in the first place, about what these terms mean, which would kind of undercut the point of making the argument (you would be ["preaching to the choir"](https://www.merriam-webster.com/dictionary/preach%20to%20the%20choir)).
+
+So, this means that I might circle some part(s) of your proposals for example and write "essentially contested concept!", meaning, you probably need to **operationalize** what you mean, more concretely, by specifying a **metric** on which your policy might be better, if you want to convince people in your audience who don't already agree with you!
+
+As a final two-bullet-point example, consider the @dreze_china_1991 example from the Week 2 slides, where we looked at this passage:
+
+![](images/china_india.png){fig-align="center"}
+
+The point there was that, if you want to say e.g. that your policy would **increase freedom**, then you can first specify **freedom from hunger** to "decouple" this type of freedom from "freedom" writ large. But, even then, you should also specify whether your **operationalization** of "hunger" is:
+
+* Literal starvation, in the form of e.g. deaths that occur over a short period of time due to acute famine conditions (like the Great Famine referenced in the above passage), or
+* Nutritional deprivation, in the form of e.g. the longer-term effects of subsistence-level food and water, and the deaths that occur over a longer span of time that wouldn't have otherwise occurred with an above-subsistence-level food and water intake.
+

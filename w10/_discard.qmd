@@ -1,0 +1,139 @@
+
+# Foreshadowing Week 14 (Kindly Slavemaster) {.smaller .title-11}
+
+```{=html}
+<style>
+.honk-honk {
+  font-size: 180% !important;
+  /* font-family: "Bungee Spice", sans-serif; */
+  font-family: "Honk", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
+```
+
+> [What is] right, as the world goes, is only in question between **equals in power**; otherwise, the strong do as they please and the weak suffer what they must. [@thucydides2013war c. 411 BC]
+
+*(Think of **necessary** vs. **sufficient** conditions!)*
+
+
+
+:::: {.columns}
+::: {.column width="50%"}
+
+<center>
+
+**liberal** Definition of Injustice [@berlin_two_1959]
+
+</center>
+
+* Strong do as they please $\overset{?}{\Rightarrow}$ Strong do bad things (No, not necessarily... @ibsen)
+
+:::
+::: {.column width="50%"}
+
+<center>
+
+**republican** Definition of Injustice [@pettit1997republicanism]
+
+</center>
+
+:::
+::::
+
+---
+
+## Why Call It "Econometric" Policy Evaluation? {.crunch-title .title-08 .crunch-ul}
+
+* In the same way that data science can be used for good or for not-so-good...
+* Economics provides methods that allow us to **evaluate** a policy with respect to an **ethical framework**
+* Typically **efficiency** and/or **profit maximization**, but just as easily **Rawlsian** or **Roemerian**
+* "The master's tools will never dismantle the master's house"❓❓❓
+* ("It's certainly true that the master uses the tool of [data science], but that doesn't mean he owns it.")
+
+---
+
+
+```{=html}
+<table>
+<thead>
+<tr>
+  <th></th>
+  <th>No Institutions</th>
+  <th>Institutions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td></td>
+  <td colspan="2" align="center">Fishers' Dilemma</td>
+</tr>
+</tbody>
+</table>
+```
+
+---
+
+## The Tools of Economics as Wielded by Economists {.smaller .crunch-title .title-11}
+
+* Fun in-class pop quiz!
+
+![](images/economist1.jpeg){fig-align="center"}
+
+## The Tools of Economics as Wielded by Economists {.smaller .crunch-title .title-11}
+
+* Did you answer correctly???
+
+![](images/economist2.jpeg){fig-align="center"}
+
+## The Tools of Economics as Wielded by Economists {.smaller .crunch-title .title-11}
+
+* Addendum / reminder (<a href='https://psmag.com/magazine/cellphone-revolutionary-objects' target='_blank'>see also</a>)
+
+![](images/no_iphone.png){fig-align="center"}
+
+## EAAMO 2023 Accepted Papers {.smaller .crunch-title .crunch-ul}
+
+* <a href='https://conference2023.eaamo.org/papers/' target='_blank'>Equity and Access in Algorithms, Mechanisms, and Optimization</a>
+* <a href='https://arxiv.org/abs/2305.14537' target='_blank'>"Disincentivizing Polarization in Social Networks"</a>
+* <a href='https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4603146' target='_blank'>"30 Million Canvas Grading Records Reveal Widespread Sequential Bias and System-Induced Surname Initial Disparity"</a>
+
+  > Assignments graded later in the sequence tend to (1) receive lower grades, (2) receive comments that are notably more negative and less polite, and (3) exhibit lower grading quality measured by post-grade complaints.
+* <a href='https://guaguakai.github.io/aasg2022/assets/AASG2022_paper_8.pdf' target='_blank'>"Potty Parity: Process Flexibility via Unisex Restroom"</a>
+
+  > Having a one-unit unisex restroom, either by converting a unit of the men's restroom or building an additional one, goes a long way toward improving wait time or user utility, and reducing their disparities
+* <a href='https://www.youtube.com/watch?v=FpaRGZkdnWo' target='_blank'>"Overbooking with Priority-Respecting Reassignment"</a>
+
+## Co-Founder of MD4SG $\rightarrow$ EAAMO: Rediet Abebe
+
+![From <a href='https://aclanthology.org/2023.emnlp-main.415/'>"When the Majority is Wrong: Modeling Annotator Disagreement for Subjective Tasks"</a>, *EMNLP* 2023](images/abebe.jpeg)
+
+---
+
+
+# Welfare Economics: Utility *Functions* $\leadsto$ Social Welfare *Functionals* {data-stack-name="The Master's Tools"}
+
+## Lily Hu {.smaller .crunch-title .crunch-ul .crunch-quarto-layout-panel}
+
+::: {layout="[4,3]"}
+::: {#hu-left}
+
+* CS excludes ethical considerations "by design", via focus on how computers **do** work, not how they **ought to work**.
+* The latter "falls within the purview of the normative disciplines, most notably ethics, a subfield of philosophy. For students to succeed at learning not only how to build innovative computing systems, but also how to determine whether they should build those systems or how ethical considerations should constrain their design, it is imperative that these two disciplines work together. To this end, Harvard CS and Philosophy faculty have been partnering to develop the Embedded EthiCS curriculum."
+
+:::
+::: {#hu-right}
+
+![<a href='https://dl.acm.org/doi/pdf/10.1145/3330794' target='_blank'>Embedded EthiCS</a>](images/hu.jpeg){fig-align="center" width="380"}
+
+:::
+:::
+
+## Ninja Coder Hackerz / Think It! Dream It! Do It!
+
+* CS: Learn The Coolest, Newest Stuff, Move Fast And Break Things!!!
+* Ethics: Listen to a man in a tweed jacket with elbow pads pontificate about Kant for 3 hours
+* The <a href='https://www.youtube.com/watch?v=KTJn_DBTnrY' target='_blank'>TED Talk Circuit</a>
+

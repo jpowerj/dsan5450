@@ -1,0 +1,174 @@
+---
+title: "Week 8: Privacy Policies, Incomplete Contracts, and Power"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2026, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
+bibliography: "../_DSAN5450.bib"
+date: 2026-03-11
+date-format: full
+lecnum: 8
+categories:
+  - "Class Sessions"
+format:
+  revealjs:
+    df-print: kable
+    footer: "DSAN 5450 Week 8: {{< var w08.footer >}}"
+    output-file: "slides.html"
+    html-math-method: mathjax
+    link-external-icon: true
+    link-external-newwindow: true
+    theme: [default, "../dsan-globals/jjquarto.scss"]
+    scrollable: true
+    slide-number: true
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css'>"
+    simplemenu:
+      flat: true
+      barhtml:
+        header: "<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>"
+      scale: 0.5
+    revealjs-plugins:
+      - simplemenu
+  html:
+    df-print: kable
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
+
+# Privacy Regulations, Privacy Policies, and You {.title-11 .smaller}
+
+::: {.hidden}
+
+{{< include ../dsan-globals/_globals-tex.qmd >}}
+
+:::
+
+![[Image credit](https://www.chosun.com/site/data/html_dir/2019/04/15/2019041503012.html)](images/shrimp_whales.jpg){fig-align="center"}
+
+## Regulations: *Comparative* Perspective {.crunch-title .crunch-ul .crunch-li-8 .text-80}
+
+* No single, "universal" data privacy law $\implies$ compare and contrast various country/state/org attempts to tackle data policy issues
+* Important to retain **descriptive/normative distinction**! They'll become harder to distinguish as we discuss:
+* What **are** the regulations currently in existence? (Descriptive)
+  * Do we see a *trend?* ([California Effect](https://en.wikipedia.org/wiki/California_effect) vs. [Delaware Effect](https://kluwerlawonline.com/journalarticle/European+Business+Law+Review/15.6/EULR2004058))
+* What are their **drawbacks**? (Normative)
+  * Fundamental problem of contracts
+* Which drawbacks **could** be addressed "easily" via policy? (requires understanding **processes of policy formation**)
+* Which ones **could not?** (*Prisoner's Dilemma!*)
+
+# Present-Day Policy Framework: *Notice* and *Consent* {data-stack-name="Notice and Consent"}
+
+<center>
+
+OECD 1980 $\rightarrow$ EU 1995 $\rightarrow$ GDPR 2018
+
+</center>
+
+## OECD *Guidelines*, 1980
+
+* "The basis for most modern privacy laws" [@sugimoto_big_2016]
+* **Collection Limitation Principle**: data may be collected "where appropriate, with the knowledge or **consent** of the data subject." [@oecd_oecd_1980, 14]
+* **Use Limitation Principle**: "Personal data should not be disclosed, made available or otherwise used for purposes other than those specified [at time of collection] except with the **consent** of the data subject" [@oecd_oecd_1980, 15]
+
+## EU Data Protection Directive, 1995 {.title-08 .crunch-title .text-95}
+
+* Art. 7: Processing allowed when "the data subject **has unambiguously given his [sic] consent**."
+* Art. 8: Use of sensitive data is restricted, except where "the data subject **has given his [sic] explicit consent** to the processing of those data."
+* Art. 26: Prohibits export of personal data to non-Euro countries lacking "adequate data protection", except when "the data subject **has given his [sic] consent** unambiguously to the proposed transfer" [@europeanunion_directive_1995]
+* Superceded by **GDPR** in **2018**
+
+## EU General Data Protection Regulation (GDPR), 2018 {.smaller .crunch-title .title-09}
+
+![](images/gdpr_2026.jpeg){fig-align="center"}
+
+## Effects of GDPR... {.smaller}
+
+![From @demirer_data_2024](images/demirer.svg){fig-align="center" width="80%"}
+
+* Need to be careful about *interpretation!*
+* Could be due to *less tracking*, could also be due to *monopolization*
+
+## Effects of GDPR: Effect on *Who*? {.smaller .crunch-title .title-10 .crunch-p .crunch-quarto-layout-panel .crunch-quarto-layout-cell .crunch-quarto-figure .crunch-blockquote}
+
+:::: {layout="[1,1]"}
+::: {#gdpr-tracking}
+
+<i class='bi bi-1-circle'></i> Consumers: Reduced tracking
+
+> The GDPR lowered the average number of trackers by about four trackers per publisher
+
+![From @miller_impact_2025](images/miller_2025.svg){fig-align="center" width="100%"}
+
+:::
+::: {#gdpr-firms}
+
+<i class='bi bi-2-circle'></i> Firms: Harsher impact on small firms
+
+> Despite data minimization successes, GDPR had the unintended consequence of increasing relative concentration
+
+![From @frey_privacy_2024](images/frey_2024.jpeg){fig-align="center" width="100%"}
+
+:::
+::::
+
+## Distributional Effects
+
+![From @demirer_data_2024](images/demirer_fines.svg){fig-align="center"}
+
+## Going Beyond Just GDPR... {.smaller .crunch-title .title-11}
+
+![From Piwik.pro, ["17 Privacy Laws Around the Globe"](https://piwik.pro/privacy-laws-around-globe/)](images/piwik.jpeg){fig-align="center"}
+
+## Easy Mode: Policy Diffusion
+
+![From @romanosky_data_2011](images/breach_by_state.jpeg){fig-align="center"}
+
+## (Policy Diffusion Curve!) {.smaller .crunch-quarto-layout-cell}
+
+:::: {layout="[60,5,35]" layout-valign="center"}
+::: {#romanosky-diffusion}
+
+![From @romanosky_data_2011](images/romanosky.svg){fig-align="center" width="120%"}
+
+:::
+::: {#diffusion-eyes}
+
+[👀]{.img-flip style="display: inline-block;"}
+
+:::
+::: {#rogers-diffusion}
+
+![Original (theoretical) "adoption curve", from @rogers_diffusion_2003](images/Diffusion_of_ideas.svg){fig-align="center"}
+
+:::
+::::
+
+## Hard Mode: *Impact* of Policy Diffusion {.smaller .crunch-title .title-12 .crunch-p .table-80}
+
+Result *(Note the **explicitly-identified** independent $\rightarrow$ dependent vars!)*:
+
+| Dep Var: `log(idtheft)` | Basic | Basic + Controls |
+| -:|:-:|:-:|
+| `hasLaw` | –0.050*<br>(0.026) | –0.061***<br>(0.023) |
+| Income per capita | | 0.000<br>(0.000) |
+| Unemployment rate | | 0.003<br>(0.010) |
+| Log(population) | | –0.268<br>(0.343) |
+| State and time fixed effects | Y | Y |
+| Constant | 6.852***<br>(0.014) | 11.248**<br>(5.317) |
+| R-squared | 0.848 | 0.850 |
+| ***: $p < 0.01$ | **: $p < 0.05$ | *: $p < 0.1$ |
+
+: Table 5. Effect of law on identity theft
+
+## References
+
+::: {#refs}
+:::

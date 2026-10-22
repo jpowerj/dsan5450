@@ -1,0 +1,154 @@
+---
+title: "Week 10: Welfare Economics and Policy Evaluation"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2026, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
+bibliography: "../_DSAN5450.bib"
+date: 2026-03-25
+date-format: full
+lecnum: 10
+categories:
+  - "Class Sessions"
+format:
+  revealjs:
+    df-print: kable
+    footer: "DSAN 5450 Week 10: {{< var w10.footer >}}"
+    output-file: "slides.html"
+    html-math-method: mathjax
+    link-external-icon: true
+    link-external-newwindow: true
+    theme: [default, "../dsan-globals/jjquarto.scss"]
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css'><link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Honk&display=swap' rel='stylesheet'>"
+    scrollable: true
+    slide-number: true
+    simplemenu:
+      flat: true
+      barhtml:
+        header: "<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>"
+      scale: 0.5
+    revealjs-plugins:
+      - simplemenu
+  html:
+    df-print: kable
+    css: "../dsan-globals/jjstyles.css"
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
+
+# Schedule
+
+| | Start | End | Topic |
+|:- |:- |:- |:- |
+| **Lecture** | 3:30pm | 5:00pm | [Policy Evaluation &rarr;](#policy-evaluation-via-inverse-fairness) |
+| **Break!** | 5:00pm | 5:10pm | |
+| | 5:10pm | 6:00pm | [Group Brainstorming for Final Projects 🧠](#group-brainstorming-time) |
+
+: {tbl-colwidths="[12,12,12,64]"}
+
+::: {.hidden}
+
+{{< include ../dsan-globals/_globals-tex.qmd >}}
+
+:::
+
+
+## The "Goal" of Policymaking! {.smaller}
+
+:::: {layout="[47,2,2,2,47]" layout-valign="center" layout-align="center"}
+::: {#fig-dilemma}
+
+<center>
+
+{{< include ../_components/_dilemma.qmd >}}
+
+</center>
+
+Prisoners' Dilemma 😫
+:::
+::: {#left-arrows}
+
+<i class="bi bi-emoji-angry text-75"></i>
+<i class='bi bi-arrow-up-right'></i>
+<i class='bi bi-arrow-right'></i>
+<i class='bi bi-arrow-down-right'></i>
+<i class="bi bi-peace text-75"></i>
+
+:::
+::: {#middle-tools}
+
+[🔫]{.flip-lr}
+<i class="bi bi-sign-stop-fill"></i>
+<i class="bi bi-megaphone"></i>
+<i class="bi bi-wind"></i>
+<i class="bi bi-wrench-adjustable"></i>
+<i class="bi bi-watch"></i>
+<i class="bi bi-cash"></i>
+🏆
+
+:::
+::: {#middle-arrows}
+
+```{=html}
+<center>
+<i class="bi bi-arrow-90deg-right"></i>
+<span class='text-80'>Easy Mode</span>
+<hr />
+<i class="bi bi-sliders" style='border: 2px solid grey; padding: 2px;'></i>
+<hr />
+<span class='text-80'>Hard Mode</span>
+<br>
+<div style='text-align: right;'>
+<i class="bi bi-arrow-90deg-right upside-down-flip"></i>
+</center>
+```
+
+:::
+::: {#col-assurance-hand}
+
+
+<div id='fig-assurance'>
+
+<center>
+
+{{< include ../_components/_assurance.qmd >}}
+
+</center>
+
+Assurance Game 🤨
+</div>
+<div id='fig-invisible-hand'>
+
+{{< include ../_components/_invisible-hand.qmd >}}
+
+Invisible Hand Game 🥳
+</div>
+
+:::
+::::
+
+<center>
+
+Fishers' Dilemma 😫 $\prec$ Assurance Game 🤨 $\prec$ Invisible Hand Game 🥳
+
+</center>
+
+# Group Brainstorming Time {.title-12 data-stack-name="Group Brainstorming"}
+
+| | |
+|:-:|:-:|
+| **Cluster 1**<br>The "Data-Ethical Toolkit"<br>(Christy) | **Cluster 2**<br>Fair Machine Learning<br>(Ellie) |
+| **Cluster 3**<br>Privacy x Policy Evaluation<br>(Jeff) | |
+
+## References
+
+::: {#refs}
+:::

@@ -1,0 +1,27 @@
+---
+title: "Gadamer and the 'Fusing of Horizons'"
+author: "Jeff Jacobs"
+sidebar: mainnav
+date: 2025-02-17
+bibliography: "../../_DSAN5450.bib"
+relevance: "HW2"
+categories:
+  - "Extra Writeups"
+format:
+  html:
+    df-print: kable
+    html-math-method: mathjax
+    toc: true
+    link-external-icon: true
+    link-external-newwindow: true
+---
+
+
+
+Oddly, despite its relevance for this class, the only DSAN class where I have talked about this topic was when I taught **DSAN5200: Advanced Data Visualization**. There, we were thinking through the question of ["how much context do I need to provide for my audience?"](https://jjacobs.me/dsan5200-03/w02/slides.html#/but-how-much-context-do-i-need-to-provide), and Gadamer's notion of "fusing horizons" felt like the appropriate answer to that question.
+
+Here, in DSAN 5450, it's all the more relevant since we're discussing exactly how to **bring context into** our notions of fairness.
+
+So, let's start with this video
+
+{{< video https://www.youtube.com/watch?v=CJ7MlTdC_aQ >}}

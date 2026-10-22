@@ -1,0 +1,105 @@
+zoom_url: https://georgetown.zoom.us/j/99423558865?pwd=C8U3NyVCigaA3rqt7ZJyAPvDl534Ad.1
+feedback_url: https://forms.gle/fgDwTMG5GUUvfafTA
+recording_url: https://georgetown.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=0d0e28b0-3d26-485e-9be9-b3ba00328718
+space_url: https://chat.google.com/room/AAQAGKIb8ow?cls=7
+classroom_url: https://classroom.google.com/c/ODM3MzMwNDEzNTIw?cjc=4yx2vpzn
+w01:
+  weeknum: 1
+  title: "Introduction to the Course"
+  footer: "Introduction to the Course"
+  date-md: "Jan 14"
+w02:
+  weeknum: 2
+  title: "Machine Learning, Training Data, and Bias"
+  footer: "Machine Learning, Training Data, and Bias"
+  date-md: "Jan 21"
+w03:
+  weeknum: 3
+  title: "Ethical Frameworks"
+  footer: "Ethical Frameworks"
+  date-md: "Jan 28"
+w04:
+  weeknum: 4
+  title: "Rights, Policies, and Fairness in AI"
+  footer: "Rights, Policies, Fairness"
+  date-md: "Feb 4"
+w05:
+  weeknum: 5
+  title: "Context-Free Fairness"
+  footer: "Context-Free Fairness"
+  date-md: "Feb 11"
+w06:
+  weeknum: 6
+  title: "Context-Sensitive Fairness"
+  footer: "Context-Sensitive Fairness"
+  date-md: "Feb 18"
+w07:
+  weeknum: 7
+  title: "In-Class Midterm: Data Ethics, Fairness, Privacy"
+  footer: "In-Class Midterm"
+  date-md: "Feb 25"
+w08:
+  weeknum: 8
+  title: "Privacy Policies, Privacy Regulation, and You"
+  footer: "Privacy Policies, Privacy Regulation, and You"
+  date-md: "Mar 11"
+w09:
+  weeknum: 9
+  title: "Modeling Data Policies: From Prisoners Dilemmas to Invisible Hand Games"
+  footer: "Modeling Data Policies"
+  date-md: "Mar 18"
+w10:
+  weeknum: 10
+  title: "Welfare Economics and Policy Evaluation"
+  footer: "Welfare Economics and Policy Evaluation"
+  date-md: "Mar 25"
+w11:
+  weeknum: 11
+  title: "Fear and Loathing on the Pareto Frontier"
+  footer: "Welfare Weights and Inverse Fairness"
+  date-md: "Apr 1"
+w12:
+  weeknum: 12
+  title: "(Machine) Learning What Policies Value"
+  footer: "(Machine) Learning What Policies Value"
+  date-md: "Apr 8"
+w13:
+  weeknum: 13
+  title: "SWFLS, Discourse Ethics, and Identity Formation"
+  footer: "SWFLs, Discourse Ethics, and Identity Formation"
+  date-md: "Apr 15"
+w14:
+  weeknum: 14
+  title: "AI, Freedom, and the 'Kindly Slavemaster'"
+  footer: "AI, Freedom, and the 'Kindly Slavemaster'"
+  date-md: "Apr 22"
+hw1:
+  title: "Nuts and Bolts for Fairness in AI"
+  date-md: "Feb 9 (Friday), 5:59pm EST"
+  date-full: "Friday, **February 9**"
+  url: "#"
+hw2:
+  title: "Context-Sensitive Fairness"
+  date-md: "Feb 21 (Friday), 5:59pm EST"
+  date-full: "Friday, **February 21**"
+  url: "#"
+hw3:
+  title: "Privacy Policies as Incomplete Contracts"
+  date-md: "Apr 12 (Friday), 5:59pm EDT"
+  date-full: "Friday, **April 12**"
+  url: "#"
+hw4:
+  title: "Policy Evaluation"
+  date-md: "Apr 26 (Friday), 5:59pm EDT"
+  date-full: "Friday, **April 26**"
+  url: "#"
+hw5:
+  title: "Inverse Fairness"
+  date-md: "TBD"
+  date-full: "TBD"
+  url: "#"
+final:
+  title: "Final Policy Whitepaper"
+  date-md: "May 10 (Friday), 5:59pm EDT"
+  date-full: "Friday, **May 10**"
+  url: "#"

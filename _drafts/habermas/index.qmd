@@ -1,0 +1,15 @@
+---
+title: "Habermas and the 'Discourse Theory of Law and Democracy'"
+author: "Jeff Jacobs"
+sidebar: mainnav
+date: 2025-02-18
+bibliography: "../../_DSAN5450.bib"
+relevance: "W03 (Reflective Equilibrium)"
+categories:
+  - "Extra Writeups"
+format:
+  html:
+    df-print: kable
+    html-math-method: mathjax
+    toc: true
+---

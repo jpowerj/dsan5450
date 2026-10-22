@@ -1,0 +1,14 @@
+
+## HW3A
+
+<div style="height: 400px !important; max-height: 400px !important; overflow-y: scroll !important;">
+
+```{r}
+#| label: hw3-points-table
+#| warning: false
+#| echo: false
+hw3_url <- "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6bHq2sBtMyL5TiOIl2zVqPdAL9B4tdNwlPdkm1QGnVuOFXb7GfYx-fCVTWxCepWtnQAQIvqAJvwSM/pub?output=csv"
+gen_points_table(hw3_url)
+```
+
+</div>

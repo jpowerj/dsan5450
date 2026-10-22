@@ -1,0 +1,327 @@
+---
+title: "Week 1: Introduction to the Course"
+subtitle: "*DSAN 5450: Data Ethics and Policy*<br><span class='subsubtitle'>Spring 2026, Georgetown University</span>"
+author: "Jeff Jacobs"
+institute: "[`jj1088@georgetown.edu`](mailto:jj1088@georgetown.edu)"
+bibliography: "../_DSAN5450.bib"
+date: 2026-01-14
+date-format: full
+cache: true
+lecnum: 1
+categories:
+  - "Class Sessions"
+format:
+  revealjs:
+    df-print: kable
+    footer: "DSAN 5450 Week 1: {{< var w01.footer >}}"
+    output-file: "slides.html"
+    html-math-method: katex
+    scrollable: true
+    link-external-icon: true
+    link-external-newwindow: true
+    theme: [default, "../dsan-globals/jjquarto.scss"]
+    include-in-header:
+      text: "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'><link rel='stylesheet' type='text/css' href='https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css'>"
+    slide-number: true
+    simplemenu:
+      flat: true
+      barhtml:
+        header: "<div class='menubar'><span style='position: absolute; left: 8; padding-left: 8px;'><a href='./index.html'>&larr; Return to Notes</a></span><ul class='menu'></ul></div>"
+      scale: 0.5
+    revealjs-plugins:
+      - simplemenu
+  html:
+    df-print: kable
+    output-file: "index.html"
+    html-math-method: mathjax
+---
+
+::: {.content-visible unless-format="revealjs"}
+
+<center>
+<a class="h2" href="./slides.html" target="_blank">Open slides in new window &rarr;</a>
+</center>
+
+:::
+
+# Who Am I? Why Is Georgetown Having Me Teach This? {data-stack-name="Intro"}
+
+{{< include ../dsan-globals/_globals-py.qmd >}}
+
+{{< include ../dsan-globals/_globals-tex.qmd >}}
+
+## Prof. Jeff Introduction! {.crunch-title}
+
+* Born and raised in **NW DC** &rarr; high school in **Rockville, MD**
+* **University of Maryland**: Computer Science, Math, Economics *(2008-2012)*
+
+![](images/jj_dc_map.png){fig-align="center"}
+
+## Grad School {.crunch-title}
+
+* Studied abroad in **Beijing** (Peking University/北大) &rarr; internship with Huawei in **Hong Kong** (HKUST)
+
+::: columns
+::: {.column width="55%"}
+* **Stanford** for MS in Computer Science *(2012-2014)*
+* Research Economist at **UC Berkeley** *(2014-2015)*
+
+:::
+::: {.column width="45%"}
+
+![](images/bay_area_crop.png)
+
+:::
+:::
+
+* **Columbia** for PhD[+Postdoc] in Political Science *(2015-2023)*
+
+## Dissertation (Political Science + History) {.title-09}
+
+*"Our Word is Our Weapon": Text-Analyzing Wars of Ideas from the French Revolution to the First Intifada*
+
+![](images/diss.png){fig-align="center"}
+
+## Why Is Georgetown Having Me Teach This? {.text-65 .title-09 .crunch-title .crunch-ul .crunch-quarto-layout-panel .crunch-quarto-figure}
+
+::: {layout="[1,1]" layout-align="center" layout-valign="center"}
+::: {#why-background-left}
+
+* Quanty things, but then PhD major was **Political Philosophy** (concentration in **International Relations**)
+* What most interested me: <a href='https://unravelhistory.com/' target='_blank'>**unraveling history**</a>; Easy to get lost in "present-day" details of e.g. **debiasing** algorithms and **fairness in AI**, but these questions go back literally thousands of years!
+* Pol philosophers distinguish "ancients" and "moderns" based on a crucial **shift in perspective**: ancients sought perfection, while @rousseau_social_1762 "took men [sic] as they are, and laws as they could be".
+
+:::
+::: {#fig-background-right}
+<center>
+
+```{python}
+#| label: bg-sunburst
+#| fig-align: center
+#| align: center
+import plotly.express as px
+import plotly.io as pio
+pio.renderers.default = "notebook"
+import pandas as pd
+year_df = pd.DataFrame({
+  'field': ['Math<br>(BS)','CS<br>(BS,MS)','Pol Phil<br>(PhD Pt 1)','Econ<br>(BS+Job)','Pol Econ<br>(PhD Pt 2)'],
+  'cat': ['Quant','Quant','Humanities','Social Sci','Social Sci'],
+  'yrs': [4, 6, 3, 6, 5]
+})
+fig = px.sunburst(
+    year_df, path=['cat','field'], values='yrs',
+    width=450, height=400, color='cat',
+    color_discrete_map={'Quant': cb_palette[0], 'Humanities': cb_palette[1], 'Social Sci': cb_palette[2]},
+    hover_data=[]
+)
+fig.update_traces(
+   hovertemplate=None,
+   hoverinfo='skip'
+)
+# Update layout for tight margin
+# See https://plotly.com/python/creating-and-updating-figures/
+fig.update_layout(margin = dict(t=0, l=0, r=0, b=0))
+fig.show()
+```
+</center>
+
+Years spent questing in various dungeons of academia
+:::
+:::
+
+* But is separation of ethics from politics possible? [@bowles_moral_2016] Should we accept "human nature" as immutable/eternal? My answer: yes AND no simultaneously...
+
+<!-- Might seem boring+abstract (and it is), but... -->
+
+## Dialectics {.smaller .crunch-title}
+
+![](images/angela_davis.webp){fig-align="center"}
+
+## My Biases {.smaller .crunch-title .crunch-ul .crunch-quarto-layout-figure .crunch-quarto-figure}
+
+::: {layout="[4,3]" layout-valign="center"}
+::: {#biases-left}
+
+* Upbringing: religious Jewish, right-wing (Revisionist Zionist) Republican environment
+* "Encouraged" to emigrate to Israel for IDF service, but after learning history I renounced citizenship etc., family no longer big fans of me (Traumatic and scary to talk about, tbh 🙈)
+* 2015-present: Teach CS + design thinking in refugee camps in West Bank and Gaza each summer (Code for Palestine)
+* Metaethics: Learn about the world, challenge+update prior beliefs (Bayes' rule!); I hope to challenge+update them throughout semester, with your help 🙂
+
+:::
+::: {#biases-right}
+
+![](images/land_map.png){fig-align="center" width="420"}
+
+:::
+:::
+
+## On the One Hand... {.smaller .crunch-title .crunch-quarto-layout-panel .crunch-images .crunch-quarto-figure}
+
+::: {layout="[1,1]"}
+::: {#emails-left}
+
+![](images/JJHATESPREADER.jpg){fig-align="center" width="240"}
+
+![](images/columbia_email.png){fig-align="center" width="300"}
+
+:::
+::: {#emails-right}
+
+![](images/palestine_legal_crop.png){width="440" fig-align="center"}
+
+:::
+:::
+
+## On the Other Hand... {.smaller .crunch-title .crunch-quarto-layout-panel}
+
+::: {layout="[1,1]"}
+
+![](images/2019-07-28%2015.26.49-1.jpg){fig-align="center" width="400"}
+
+![](images/aya_and_leen_crop.jpeg){fig-align="center" width="340"}
+
+:::
+
+## Remembering Why It Matters
+
+<center>
+{{< video https://www.youtube.com/watch?v=Dq6Y6LSjulU width="100%" height="550" align="center" >}}
+</center>
+
+## Rules of Thumb {.crunch-title .crunch-quarto-layout-panel .crunch-quarto-figure .crunch-img .crunch-figcaption .crunch-li-4 .crunch-figures}
+
+:::: {layout="[60,40]"}
+::: {#approach-text}
+
+* Ask questions about **power** $\leadsto$ **inequities**, but especially about **structures/processes** that give rise to them!
+* "Philosophers have hitherto only tried to *understand* the world; the point, however, is to *change* it." [@marx_thesen_1845]
+* Dialectical implication: the more we understand it the better we'll be at changing it
+
+:::
+
+![<a href='https://www.rlmartstudio.com/product/paradox/' target='_blank'>Ricardo Morales Art Studio</a>](images/camara3.jpg){fig-align="center" width="320"}
+
+::::
+
+# Ethics as an Axiomatic System {data-stack-name="Axioms" .crunch-title .crunch-figcaption .crunch-images}
+
+## Axiomatics {.smaller .crunch-title .crunch-images .crunch-figcaption .crunch-quarto-layout-panel .crunch-quarto-figure}
+
+::: {layout="[1,1]" layout-valign="top"}
+
+::: {#axioms-text}
+
+<!-- * In the field of math before the 20th century (and in our general understanding of math today), math was (is) a domain dealing with **truths**
+* Thanks to figures like Georg Cantor, David Hilbert, and especially Bertrand Russell and Alfred North Whitehead, mathematicians no longer believe that theorems of mathematics are "true" in an **absolute sense** -->
+
+* *Popular understanding of math*: Deals with **Facts**, statements are **true** or **false**
+  * Ex: $1 + 1 = 2$ is "true"
+* *Reality*: No statements in math are **absolutely true!** Only **conditional statements** are possible to prove!
+* We cannot prove **atomic** statements $q$, only implicational statements: $p \implies q$ for some **axiom(s)** $p$.
+* $1 + 1 = 2$ is **indeterminate** without definitions of $1$, $+$, $=$, and $2$!
+  * (Easy counterexample for math/CS majors: $1 + 1 = 0$ in $\mathbb{Z}_2$)
+
+
+<!-- * That is: mathematicians today recognize that **we cannot prove non-implicational statements**! We will never be able to prove an (atomic) statement $q$, only implicational statements: $p \implies q$ for some **axiom(s)** $q$. -->
+
+:::
+::: {#axioms-book}
+
+![@steingart_axiomatics_2023](images/axiomatics.jpg){fig-align="center" width="360"}
+
+:::
+
+:::
+
+## Example: $1 + 1 = 2$ {.crunch-title}
+
+::: {layout="[55,45]" layout-valign="center"}
+
+::: {#one-one-text}
+
+* How it's taught: this is a **rule**, and if you **don't follow it** you will be **banished to eternal hellfire**
+* How it's proved: $ZFC \implies [1 + 1 = 2]$, where $ZFC$ stands for the **<a href='https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory' target='_blank'>Zermelo-Fraenkel Axioms with the Axiom of Choice</a>!**
+
+:::
+::: {#one-one-image}
+
+![@whitehead_principia_1910, p. 83. See <a href='https://archive.org/details/dli.ernet.285563/page/83/mode/2up' target='_blank'>here</a> for page in context](images/principia.jpeg){.lightbox}
+
+:::
+:::
+
+## Proving $1 + 1 = 2$ {.text-65 .crunch-title .title-11 .crunch-p .math-09}
+
+*(A non-formal proof that still captures the gist:)*
+
+* Axiom 1: There is a type of thing that can hold other things, which we'll call a **set**. We'll represent it like: $\{ \langle \text{\text{stuff in the set}} \rangle \}$.
+* Axiom 2: Start with the set with **nothing** in it, $\{\}$, and call it "$0$".
+* Axiom 3: If we put this set $0$ **inside of** an empty set, we get a new set $\{0\} = \{\{\}\}$, which we'll call "$1$".
+* Axiom 4: If we put this set $1$ **inside of** another set, we get another new set $\{1\} = \{\{\{\}\}\}$, which we'll call "$2$".
+* Axiom 5: This operation (creating a "next number" by placing a given number inside an empty set) we'll call **succession**: $S(x) = \{x\}$
+* Axiom 6: We'll define **addition**, $a + b$, as applying this **succession** operation $S$ to $a$, $b$ times. Thus $a + b = \underbrace{S(S(\cdots (S(}_{b\text{ times}}a))\cdots ))$
+* Result: (Axioms 1-6) $\implies 1 + 1 = S(1) = S(\{\{\}\}) = \{\{\{\}\}\} = 2. \; \blacksquare$ 
+
+## How Is This Relevant to Ethics? {.smaller .crunch-math-3 .crunch-ul .crunch-li-4 .crunch-title .crunch-p}
+
+*(Thank you for bearing with me on that 😅)*
+
+* Just as mathematicians slowly came to the realization that
+
+$$
+\textbf{mathematical results} \neq \textbf{(non-implicational) truths}
+$$
+
+* I hope to help you see how
+
+$$
+\textbf{ethical conclusions} \neq \textbf{(non-implicational) truths}
+$$
+
+* When someone says $1 + 1 = 2$, you are allowed to **question them**, and ask, **"On what basis? Please explain..."**.
+  * Here the only valid answer is a **collection of axioms** which **entail** $1 + 1 = 2$
+* When someone says **Israel has the right to defend itself**, you are allowed to **question them**, and ask, **"On what basis? Please explain..."**
+  * Here the only valid answer is an **ethical framework** which **entails** that **Israel has the right to defend itself**.
+
+## Axiomatic Systems: Statements Can Be True *And* False {.smaller .title-09 .crunch-quarto-layout-panel .crunch-title .crunch-ul}
+
+* Let $T$ be sum of interior angles of a triangle. We're taught $[T = 180^\circ]$ as a "rule"
+* **Euclid's Fifth Postulate** $P_5$: Given a line and a [point](https://en.wikipedia.org/wiki/Hilbert%27s_axioms) not on it, exactly one line parallel to the given line can be drawn through the point.
+
+<!-- Technically, when phrased in this way, this axiom is called <a href='https://en.wikipedia.org/wiki/Playfair%27s_axiom' target='_blank'>Playfair's Axiom</a>. But it is **logically equivalent** to Euclid's Fifth Postulate! -->
+
+::: {layout="[1,1]" layout-align="center"}
+
+::: {#euclidean}
+<center>
+$P_5 \implies T = 180^\circ$
+</center>
+<center>
+*(Euclidean Geometry)*
+</center>
+:::
+
+::: {#non-euclidean}
+<center>
+$\neg P_5 \implies T \neq 180^\circ$
+</center>
+<center>
+*(Non-Euclidean Geometry)*
+</center>
+:::
+:::
+
+::: {layout="[1,1]" layout-valign="center"}
+
+![](images/playfair.png)
+
+![](images/geodesicsOnSphere.png){fig-align="center" width="360"}
+
+:::
+
+## References
+
+::: {#refs}
+:::
+
+<!-- ![@senor_startup_2011](images/startup-nation.jpg){fig-align="center" width="300"} -->

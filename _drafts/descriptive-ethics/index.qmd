@@ -1,0 +1,42 @@
+---
+title: "Descriptive Ethics and the Kindly Slavemaster"
+author: "Jeff Jacobs"
+sidebar: mainnav
+date: 2025-03-24
+bibliography: "../../_DSAN5450.bib"
+relevance: "Policy Frameworks"
+categories:
+  - "Extra Writeups"
+format:
+  html:
+    cache: true
+    df-print: kable
+    html-math-method: mathjax
+    toc: true
+    link-external-newwindow: true
+    link-external-icon: true
+    echo: true
+    code-fold: show
+---
+
+In class I read a rather dramatic passage from *History of the Pelopponesian War* by Thucydides, and mentioned how it "captures" the esssence of **descriptive** ethics, in contrast with the **normative** ethics we covered in the weeks before the midterm:
+
+> 
+
+The reason why I use this quote to situate **descriptive** ethics specifically is because, as the "only between equals" reveals, the normative-ethical frameworks we've covered (utilitarianism, Kantian ethics, Rawlsian rights-as-vetos, etc.) really only come into play when people have the chance to **actually do** what these frameworks say they **ought** to do.
+
+As imbalances of power grow larger and larger, however, it's not that these normative frameworks go away *entirely*, but more that one has to consider "what should I do, given [constraints induced by power asymmetries]".
+
+To use the extreme thought experiment often used in this case, if someone puts a gun to your head and tells you to do something, the power asymmetry is so large that the range of options you would consider when thinking "what *should* I do here" becomes quite narrow.
+
+Thus, when I use the term **"descriptive" ethics**, I am essentially referring to a particular "face" of power @lukes1975power, the power to narrow others' decision sets.
+
+## Berlin, Two Forms of Liberty
+
+## Republicanism and the Kindly Slavemaster
+
+## References
+
+::: {#refs}
+:::
+

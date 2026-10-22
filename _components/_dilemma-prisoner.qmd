@@ -1,0 +1,31 @@
+
+```{=html}
+<table class='game-table'>
+<thead>
+</thead>
+<tbody>
+<tr>
+  <td class='game-label'></td>
+  <td class='game-label'></td>
+  <td colspan="2" align="center" class='game-label'><span data-qmd="$B$"></span></td>
+</tr>
+<tr>
+  <td class='game-label'></td>
+  <td class='game-label'></td>
+  <td class='game-label'>Silent</td>
+  <td class='game-label'>Snitch</td>
+</tr>
+<tr class='td-nb'>
+  <td rowspan="2" style="vertical-align: middle;" class='game-label td-nb'><span data-qmd="$A$"></span></td>
+  <td class='game-label'>Silent</td>
+  <td class='game-cell'><span data-qmd="$-1,-1$"></span></td>
+  <td class='game-cell'><span data-qmd="$-3,\phantom{-}0$"></span></td>
+</tr>
+<tr>
+  <td class='game-label'>Snitch</td>
+  <td class='game-cell'><span data-qmd="$\phantom{-}0, -3$"></span></td>
+  <td class='game-cell'><span data-qmd="$-10,-10$"></span></td>
+</tr>
+</tbody>
+</table>
+```
